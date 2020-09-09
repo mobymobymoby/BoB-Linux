@@ -1,0 +1,38 @@
+## 2020-09-09 20:00 회의
+### 회의 내용 요약
+#### 멘토님의 피드백
+- 계획서와 WBS를 수정할 필요가 있다
+  - 환경 구성과 프로젝트 개요의 수정
+    - Kernel, Bash로 이루어진 Ver 0.0.1에서 구성 요소를 추가하며 버전을 상승 시킴
+  - 버전 별로 관리하여 WBS 작성
+- 목표 사양과 프로젝트 목표를 가시화
+
+#### 프로젝트 개요
+- Ver 0.0.1
+  - Kernel build & bash build
+  - 부팅할 수 있는 상태
+- Ver 0.0.2 
+  - Kernel, bash, sshd 
+  - RC(Release Candidate) 1
+- Ver 0.0.3
+  - Kernel, bash, sshd, login
+  - RC 2
+- Ver 0.0.4
+  - Kernel, bash, sshd, login, deb
+  - RC 3
+- Ver 0.1.0
+  - Kernel, bash, sshd, login, deb, init account installer
+  - R1
+  - 기본적인 사용자 계정과 기능들이 구현된 상태
+  - 9월 말 ~ 10월 초까지 구현
+- Ver 0.2.0 
+  - initRC, systemd, libC, gcc, gdb, openssl, etc
+  - 프로젝트에서 원하는 기능을 넣기 위한 베이스를 구축
+  - 1차 평가(10.17)까지 구현
+- Ver 0.3.0
+  - apt 설정
+  - 추가 응용프로그램 패키지
+- Ver 1.0.0
+  - 완성된 배포판
+  - BoB Linux 프로젝트의 최종 산출물
+
