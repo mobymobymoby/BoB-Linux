@@ -1,0 +1,58 @@
+## 2020-09-12 20:00 회의
+### 회의 내용 요약
+#### 멘토링 : 커널
+
+#### PL 실습 : LFS 최종 단계에서 부팅 시스템 구축
+- LFS는 10.3 까지 정상적으로 진행되었다고 가정 : 9번 대는 해줄 필요 없음
+  - mount --bind /boot /mnt/lfs/boot 필요
+- 매뉴얼의 10.4 부터는 따라 가지 않음
+- 현재 LFS가 있는 가상 디스크를 sdb라고 가정
+  - 전원을 끄고 새로운 가상 디스크를 추가함(sdc)
+  - 저장소 -> 컨트롤러(SATA) -> 새 하드디스크 추가 -> 동적 할당 -> 10G~30G
+  - 재부팅
+- chroot는 이제부터 사용하지 않음
+  - 그냥 root로 로그인
+  - fdisk -l로 가상 디스크 확인(아까 추가한 sdc)
+  - fidsk /dev/sdc -> n -> 파티션 1 -> 디폴트 -> 디폴트 : 전체를 다 할당
+    - a : 파티션을 액티브 시킴 -> 파티션이 하나이므로 자동으로 부터블로 바뀜 
+    - t : type 변경 -> 83(Linux)
+    - w : 저장
+  - fdisk -l로 변경 사항 확인 : sdc 밑에 sdc1이 생성된 것을 확인
+- 파일 시스템을 만들어 줌
+  - mkfs.ext4 /dev/sdc1
+  - mkdir /mnt/new로 만들어줌
+  - mount /dev/sdc1 /mnt/new
+  - grub-install --boot-directory=/mnt/new/boot /dev/sdc
+    - 오류가 뜰 수 있음
+- sdb에 있는 파일을 복사함
+  - mount /dev/sdb /mnt/lfs
+  - 디렉토리 이동 : cd /mnt/lfs
+    - cp -avp bin/ dev/ etc/ home/ lib/ lib64 media/ mnt/ opt/ proc/ root/ run/ sbin/ sources/ srv/ sys/ tmp/ usr/ var/ /mnt/new/ : sdb 파티션의 모든 파일을 sdc1로 이동
+    - 현재 재부팅으로 /boot가 비었으므로, mount --bind /boot /mnt/lfs/boot을 통해 전에 했던 작업물을 바인드
+    - boot/* /mnt/new/boot
+      - boot/grub에서는 오류가 뜰 수 있음
+    - mnt/new 디렉토리로 이동
+  - cd boot
+  - cd grub
+  - cp  /boot/initrd.img-5.4.0-47-generic  /mnt/new/boot/
+    - initrd.img-<버전> 부분에서 버전은 tab을 이용한 자동완성으로 완성
+  - nano grub.cfg
+'''
+## Begin /boot/grub/grub.cfg
+set default=0
+set timeout=5
+
+insmod ext2
+set root=(hd2,1)
+
+menuentry "GNU/Linux, Linux vmlinuz-5.8.3-lfs-10.0" {
+            linux   /boot/vmlinuz-5.8.3-lfs-10.0 root=/dev/sdc1 ro
+            initrd  /boot/initrd.img-5.4.0-47-generic
+}
+EOF
+'''
+- 재부팅 하면서 f12 연타 후 3번째 하드 디스크로 접근하여 실행하면 부팅 완료
+  - 이전 단계에서 지정한 계정 : root / password로 진행
+  
+  
+  
