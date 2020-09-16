@@ -85,7 +85,7 @@ bash version-check.sh
 ### 2.6
 - ```export LFS=/mnt/lfs``` : 계정이 변경될 때마다 이를 입력하여 $LFS=/mnt/lfs가 되게 해주어야 함
  - 잘 설정되어있는지는 ```echo $LFS```를 통해 가능. /mnt/lfs가 출력되면 정상
- 
+- 여기서부터 /mnt/lfs == $LFS의 의미를 가짐. 혼용된다면 같은 의미로 받아들일것
 ### 2.7
 - ```mkdir -pv $LFS : /mnt/lfs``` 디렉토리를 생성. 
  - -p 옵션은 /lfs 아래의 디렉토리인 /mnt까지 함께 생성
@@ -136,3 +136,43 @@ esac
 ㄴ lfs에게 $LFS 디렉토리의 전체 엑세스 권한 부여
 - ```chown -v lfs $LFS/sources``` : $LFS/sources에 대한 소유권 부여
 - ```su - lfs``` : lfs로 유저 변경
+- **```export LFS=/mnt/lfs``` 재실행** 후 echo $LFS로 확인
+### 4.4 : lfs 유저로 진행
+```
+cat > ~/.bash_profile << "EOF"
+exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
+EOF
+```
+ㄴ 배쉬 쉘에 대한 파일을 만들어 줌
+```
+cat > ~/.bashrc << "EOF"
+set +h
+umask 022
+LFS=/mnt/lfs
+LC_ALL=POSIX
+LFS_TGT=$(uname -m)-lfs-linux-gnu
+PATH=/usr/bin
+if [ ! -L /bin ]; then PATH=/bin:$PATH; fi
+PATH=$LFS/tools/bin:$PATH
+export LFS LC_ALL LFS_TGT PATH
+EOF
+```
+ㄴ bashrc 설정
+- ```source ~/.bash_profile``` : 계정 프로필 소싱
+
+### 4.5
+- ```export MAKEFLAGS='-j4'``` : make를 할 때 자동으로 -j4 옵션으로 실행
+- ```make -j4``` : make 관련 명령어에 붙여 여러 프로세서(코어)를 사용하게 함
+ - 명시적으로 -j4 외의 옵션이 달려있는 패키지 외엔 -j4 옵션을 붙여서 빌드하는 것이 좋음
+ 
+### 패키지 빌드 지침 
+- 반드시 ```echo $LFS```를 통해 ```export LFS=/mnt/lfs```로 되어 있는지 확인
+ - 계정 전환 시 반드시 확인
+- 모든 패키지 컴파일은 /mnt/lfs/sources에서 이루어짐
+- tar를 통해 해당하는 패키지의 압축을 푼 후 해당 패키지의 이름을 가진 디렉토리로 이동
+- 하나의 패키지 빌드가 끝나면 다시 $LFS/sources로 이동하여 rm -rf를 통해 방금 작업한 디렉토리 전체를 삭제해줌
+- 중간에 계정 전환이 여러 번 이루어지므로, 이를 유의하여 진행
+ - 잘못된 계정으로 빌드 시 Snapshot을 통해 다시 진행해야함
+
+### 5.2~5.6
+- 패키지 빌드 지침에 따라 진행
