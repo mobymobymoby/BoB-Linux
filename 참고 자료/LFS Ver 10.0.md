@@ -176,3 +176,8 @@ EOF
 
 ### 5.2~5.6
 - 패키지 빌드 지침에 따라 진행
+- 여기서는 예시를 위해 5.2 빌드
+ - ```tar -xvf binutils-2.35.tar.xz```를 통해 binutils 패키지를 빌드할 준비를 함
+ - ```mkdir -v build
+cd       build
+```
