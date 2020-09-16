@@ -194,4 +194,5 @@ cd       build
 ㄴ make 전의 환경 설정. 앞으로의 컴파일은 대부분 환경 설정 -> make -> make install의 순서로 이루어질 것임
  - ```make``` : make를 통해 패키지를 컴파일 함
  - ```make install``` : 패키지를 설치함
- 
+ - ```cd $LFS/sources``` : $LFS/sources 경로로 이동하여 다음 빌드를 준비
+ - ```rm -rf binutils-2.35``` : 방금 빌드가 이루어진 디렉토리를 삭제함. 나중에 다시 빌드할때는 tar를 통해 다시 압축해제 후 진행
