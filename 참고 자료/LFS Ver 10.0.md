@@ -178,6 +178,19 @@ EOF
 - 패키지 빌드 지침에 따라 진행
 - 여기서는 예시를 위해 5.2 빌드
  - ```tar -xvf binutils-2.35.tar.xz```를 통해 binutils 패키지를 빌드할 준비를 함
- - ```mkdir -v build
+```
+mkdir -v build
 cd       build
 ```
+ㄴ 빌드를 위한 디렉토리인 'build' 디렉토리를 생성 후 이동
+```
+../configure --prefix=$LFS/tools       \
+             --with-sysroot=$LFS        \
+             --target=$LFS_TGT          \
+             --disable-nls              \
+             --disable-werror
+```
+ㄴ make 전의 환경 설정. 앞으로의 컴파일은 대부분 환경 설정 -> make -> make install의 순서로 이루어질 것임
+ - ```make``` : make를 통해 패키지를 컴파일 함
+ - ```make install``` : 패키지를 설치함
+ 
