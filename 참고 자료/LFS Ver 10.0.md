@@ -50,5 +50,6 @@ mkdir -pv $LFS/{bin,etc,lib,sbin,usr,var}
 case $(uname -m) in
   x86_64) mkdir -pv $LFS/lib64 ;;
 esac
-```필요한 디렉토리 레이아웃 생성
+```
+ㄴ 필요한 디렉토리 레이아웃 생성
 - ```mkdir -pv $LFS/tools``` tools 디렉토리 생성
