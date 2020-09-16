@@ -14,6 +14,8 @@
 - 우분투 설정 -> power -> Blank Screen : Never
 - 우분투 설정 -> privacy -> Screen Lock : Off
 
+### 참고 매뉴얼 : http://www.linuxfromscratch.org/lfs/view/stable/index.html
+
 ### 2.2
 ```
 cat > version-check.sh << "EOF"
@@ -196,3 +198,10 @@ cd       build
  - ```make install``` : 패키지를 설치함
  - ```cd $LFS/sources``` : $LFS/sources 경로로 이동하여 다음 빌드를 준비
  - ```rm -rf binutils-2.35``` : 방금 빌드가 이루어진 디렉토리를 삭제함. 나중에 다시 빌드할때는 tar를 통해 다시 압축해제 후 진행
+
+### 5.3~5.6 / 6.1~6.18까지 동일하게 진행
+- 6.7.1 : ```make DESTDIR=$LFS install``` 명령어 시 warning 발생
+ - libtool: warning: remember to run 'libtool --finish /usr/lib'
+ - libtool: warning: 'libmagic.la' has not been installed in '/usr/lib'
+ - 이 두개의 경고가 떠도 진행되므로, 무시하고 진행
+ 
