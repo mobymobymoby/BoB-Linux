@@ -358,3 +358,190 @@ make[1]: Leaving directory '/sources/glibc-2.32'
 make: *** [Makefile:9: check] Error 2
 
 ```
+
+- 8.26 su tester -c "PATH=$PATH make -k check" 결과
+
+```
+skipping test framework tests, CHECK_TEST_FRAMEWORK is not defined
+
+		=== gcc Summary ===
+
+# of expected passes		112898
+# of unexpected failures	7
+# of expected failures		550
+# of unsupported tests		1393
+/sources/gcc-10.2.0/build/gcc/xgcc  version 10.2.0 (GCC) 
+
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/x86_64/abi/callabi/callabi.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/x86_64/abi/ms-sysv/ms-sysv.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/xstormy16/xstormy16.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/xtensa/xtensa.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.test-framework/test-framework.exp ...
+skipping test framework tests, CHECK_TEST_FRAMEWORK is not defined
+
+		=== gcc Summary ===
+
+# of expected passes		10200
+# of expected failures		55
+# of unsupported tests		190
+/sources/gcc-10.2.0/build/gcc/xgcc  version 10.2.0 (GCC) 
+
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/xstormy16/xstormy16.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/xtensa/xtensa.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.test-framework/test-framework.exp ...
+skipping test framework tests, CHECK_TEST_FRAMEWORK is not defined
+
+		=== gcc Summary ===
+
+# of expected passes		17635
+# of expected failures		57
+# of unsupported tests		521
+/sources/gcc-10.2.0/build/gcc/xgcc  version 10.2.0 (GCC) 
+
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/xstormy16/xstormy16.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.target/xtensa/xtensa.exp ...
+Running /sources/gcc-10.2.0/gcc/testsuite/gcc.test-framework/test-framework.exp ...
+skipping test framework tests, CHECK_TEST_FRAMEWORK is not defined
+
+		=== gcc Summary ===
+
+# of expected passes		8555
+# of expected failures		33
+# of unsupported tests		117
+/sources/gcc-10.2.0/build/gcc/xgcc  version 10.2.0 (GCC) 
+
+make[3]: Leaving directory '/sources/gcc-10.2.0/build/gcc'
+make[2]: Leaving directory '/sources/gcc-10.2.0/build/gcc'
+make[1]: Target 'check-host' not remade because of errors.
+make[1]: Leaving directory '/sources/gcc-10.2.0/build'
+make: *** [Makefile:2350: do-check] Error 2
+make: Target 'check' not remade because of errors.
+(lfs chroot) root:/sources/gcc-10.2.0/build# 
+```
+
+- ../contrib/test_summary 결과
+```
+(lfs chroot) root:/sources/gcc-10.2.0/build# ../contrib/test_summary
+cat <<'EOF' |
+LAST_UPDATED: Obtained from git: releases/gcc-10.2.0 revision ee5c3db6c5b2c3332912fb4c9cfa2864569ebd9a
+
+Native configuration is x86_64-pc-linux-gnu
+
+		=== g++ tests ===
+
+
+Running target unix
+FAIL: g++.dg/asan/asan_test.C   -O2  (test for excess errors)
+UNRESOLVED: g++.dg/asan/asan_test.C   -O2  compilation failed to produce executable
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -O0  execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -O1  execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -O2  execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -O3 -g  execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -Os  execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: g++.dg/coroutines/torture/co-ret-17-void-ret-coro.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -O0  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -O1  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -O2  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -O3 -g  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -Os  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: g++.dg/coroutines/torture/pr95519-05-gro.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+
+		=== g++ Summary ===
+
+# of expected passes		191448
+# of unexpected failures	17
+# of expected failures		709
+# of unresolved testcases	1
+# of unsupported tests		7994
+/sources/gcc-10.2.0/build/gcc/xg++  version 10.2.0 (GCC) 
+
+		=== gcc tests ===
+
+
+Running target unix
+FAIL: gcc.dg/asan/pr80166.c   -O0  (test for excess errors)
+FAIL: gcc.dg/asan/pr80166.c   -O1  (test for excess errors)
+FAIL: gcc.dg/asan/pr80166.c   -O2  (test for excess errors)
+FAIL: gcc.dg/asan/pr80166.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/asan/pr80166.c   -Os  (test for excess errors)
+FAIL: gcc.dg/asan/pr80166.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/asan/pr80166.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+
+		=== gcc Summary ===
+
+# of expected passes		149288
+# of unexpected failures	7
+# of expected failures		695
+# of unsupported tests		2221
+/sources/gcc-10.2.0/build/gcc/xgcc  version 10.2.0 (GCC) 
+
+		=== libatomic tests ===
+
+
+Running target unix
+
+		=== libatomic Summary ===
+
+# of expected passes		54
+		=== libgomp tests ===
+
+
+Running target unix
+
+		=== libgomp Summary ===
+
+# of expected passes		2664
+# of expected failures		2
+# of unsupported tests		302
+		=== libitm tests ===
+
+
+Running target unix
+
+		=== libitm Summary ===
+
+# of expected passes		42
+# of expected failures		3
+# of unsupported tests		1
+		=== libstdc++ tests ===
+
+
+Running target unix
+FAIL: 22_locale/time_get/get_time/char/2.cc execution test
+FAIL: 22_locale/time_get/get_time/char/wrapped_env.cc execution test
+FAIL: 22_locale/time_get/get_time/char/wrapped_locale.cc execution test
+FAIL: 22_locale/time_get/get_time/wchar_t/2.cc execution test
+FAIL: 22_locale/time_get/get_time/wchar_t/wrapped_env.cc execution test
+FAIL: 22_locale/time_get/get_time/wchar_t/wrapped_locale.cc execution test
+
+		=== libstdc++ Summary ===
+
+# of expected passes		14140
+# of unexpected failures	6
+# of expected failures		93
+# of unsupported tests		390
+
+Compiler version: 10.2.0 (GCC) 
+Platform: x86_64-pc-linux-gnu
+configure flags: --prefix=/usr LD=ld --enable-languages=c,c++ --disable-multilib --disable-bootstrap --with-system-zlib
+EOF
+Mail -s "Results for 10.2.0 (GCC) testsuite on x86_64-pc-linux-gnu" gcc-testresults@gcc.gnu.org &&
+mv /sources/gcc-10.2.0/build/./gcc/testsuite/g++/g++.sum /sources/gcc-10.2.0/build/./gcc/testsuite/g++/g++.sum.sent &&
+mv /sources/gcc-10.2.0/build/./gcc/testsuite/gcc/gcc.sum /sources/gcc-10.2.0/build/./gcc/testsuite/gcc/gcc.sum.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libatomic/testsuite/libatomic.sum /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libatomic/testsuite/libatomic.sum.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libgomp/testsuite/libgomp.sum /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libgomp/testsuite/libgomp.sum.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libitm/testsuite/libitm.sum /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libitm/testsuite/libitm.sum.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libstdc++-v3/testsuite/libstdc++.sum /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libstdc++-v3/testsuite/libstdc++.sum.sent &&
+mv /sources/gcc-10.2.0/build/./gcc/testsuite/g++/g++.log /sources/gcc-10.2.0/build/./gcc/testsuite/g++/g++.log.sent &&
+mv /sources/gcc-10.2.0/build/./gcc/testsuite/gcc/gcc.log /sources/gcc-10.2.0/build/./gcc/testsuite/gcc/gcc.log.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libatomic/testsuite/libatomic.log /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libatomic/testsuite/libatomic.log.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libgomp/testsuite/libgomp.log /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libgomp/testsuite/libgomp.log.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libitm/testsuite/libitm.log /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libitm/testsuite/libitm.log.sent &&
+mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libstdc++-v3/testsuite/libstdc++.log /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libstdc++-v3/testsuite/libstdc++.log.sent &&
+true
+(lfs chroot) root:/sources/gcc-10.2.0/build# 
+```
