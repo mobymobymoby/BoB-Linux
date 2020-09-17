@@ -339,12 +339,16 @@ chmod -v 600  /var/log/btmp
 ### 7.14 
 - ```find /usr/{lib,libexec} -name \*.la -delete``` : libtool 관련 파일 제거
 - ```rm -rf /usr/share/{info,man,doc}/*``` : 임시 도구의 문서 제거
-- **중요 : 아래에 있는 것들은 백업을 위한 명령어들인데, 이것을 하기 위해서는 chroot 환경에서 나가야 함
+- **중요 : 7.14 아래에 있는 것들은 백업을 위한 명령어들인데, 이것을 하기 위해서는 chroot 환경에서 나가야 함**
  - 하지만 스냅샷을 이용해 진행하므로, chroot에서 빠져나가지 않고 무시하여 챕터 8로 진행함
  - 8.3으로 이동하여 다시 패키지 설치
 
 ### 8.3~8.75
-- 8.8 make check시 
+- 앞에서와 같이 진행해주면 됨. 단 chroot 상태에서 진행해야함
+- 또한 몇 개의 패키지는 오류가 뜨는 경우가 있으나, 그냥 진행하여도 되는 경우가 있음. 보통 매뉴얼에서 명시됨
+ - 하지만 어떤 패키지는 뜬금 없이 오류가 뜨는데, 다시 make와 make test(check)를 해주면 오류가 사라질 것임
+ - 명시되지 않은 오류가 남아있다면 반드시 해결하고 갈 것. 이후에 큰 문제를 일으킬 수 있음
+### 8.8 make check시 
 
 ```
 Summary of test results:
@@ -359,7 +363,7 @@ make: *** [Makefile:9: check] Error 2
 
 ```
 
-- 8.26 su tester -c "PATH=$PATH make -k check" 결과
+### 8.26 su tester -c "PATH=$PATH make -k check" 결과
 
 ```
 skipping test framework tests, CHECK_TEST_FRAMEWORK is not defined
@@ -545,3 +549,5 @@ mv /sources/gcc-10.2.0/build/./x86_64-pc-linux-gnu/libstdc++-v3/testsuite/libstd
 true
 (lfs chroot) root:/sources/gcc-10.2.0/build# 
 ```
+
+### 8.43
