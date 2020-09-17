@@ -557,3 +557,68 @@ true
 ### 8.67
 - 오류 하나 발생 : 223: capabilities: binary store/restore              FAILED (capabs_raw01.at:28)
  - 매뉴얼에도 명시된 오류
+
+### 8.77
+- 잡 파일을 지우는 선택사항
+
+### 8.78
+- 지금까지 작업하면서 생긴 임시 파일을 삭제
+- 테스터 계정을 삭제
+
+### 9.2 
+- source로 들어가서 tar -xvf lfs-bootscripts의 압축을 풀고 ```make install```
+
+### 9.6
+- System V 관련 설정
+
+### 9.8
+- etc/inputrc 파일 만들기
+
+### 9.9 
+- etc/shells 파일 만들기
+
+### 10.2 
+- /etc/fstab 파일 설정
+```
+cat > /etc/fstab << "EOF"
+# Begin /etc/fstab
+
+# file system  mount-point  type     options             dump  fsck
+#                                                              order
+
+/dev/<xxx>     /            <fff>    defaults            1     1
+/dev/<yyy>     swap         swap     pri=1               0     0
+proc           /proc        proc     nosuid,noexec,nodev 0     0
+sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
+devpts         /dev/pts     devpts   gid=5,mode=620      0     0
+tmpfs          /run         tmpfs    defaults            0     0
+devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
+
+# End /etc/fstab
+EOF
+```
+ㄴ 이러한 형식으로 저장. 맨 위에는 루트 파티션을 입력하면 됨
+
+### 10.3 
+- sources에서 linux-5.8.3의 압축을 풀고 진행
+- ```mount --bind /boot /mnt/lfs/boot``` : **중요 : 반드시 chroot에서 logout 하여 root로 진행한 뒤 다시 chroot로 돌아와야 함**
+- 다시 chroot로 돌아와서, sources/linux-5.8.3로 이동하여 cp를 진행해야함
+- 나머지는 그대로 진행. 커널 파일인 vmlinuz ...를 만드는 과정
+
+### 10.4
+- ```grub-install /dev/sda``` : grub을 설치할 위치를 정함
+- grub 설정
+```
+cat > /boot/grub/grub.cfg << "EOF"
+# Begin /boot/grub/grub.cfg
+set default=0
+set timeout=5
+
+insmod ext2
+set root=(hd1,1) // sda1 -> (hd0,1) sdb1 -> (hd1,1) sdb3 -> (hd2,3) ...
+
+menuentry "GNU/Linux, Linux 5.8.3-lfs-10.0" {
+        linux   /boot/vmlinuz-5.8.3-lfs-10.0 root=/dev/sdb1 ro // set root와 맞춰줌
+}
+EOF
+```
