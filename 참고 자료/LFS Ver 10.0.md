@@ -553,3 +553,7 @@ true
 ### 8.43
 - make test를 하지 않는 것을 추천
  - 시간도 훨씬 오래 걸리고, FAIL이 많이 뜨게 됨(bash와 libtool 관련) : 매뉴얼에 명시되어 있음 
+ 
+### 8.67
+- 오류 하나 발생 : 223: capabilities: binary store/restore              FAILED (capabs_raw01.at:28)
+ - 매뉴얼에도 명시된 오류
