@@ -344,4 +344,17 @@ chmod -v 600  /var/log/btmp
  - 8.3으로 이동하여 다시 패키지 설치
 
 ### 8.3~8.75
-- 
+- 8.8 make check시 
+
+```
+Summary of test results:
+      3 FAIL
+   4233 PASS
+     28 UNSUPPORTED
+     17 XFAIL
+      2 XPASS
+make[1]: *** [Makefile:633: tests] Error 1
+make[1]: Leaving directory '/sources/glibc-2.32'
+make: *** [Makefile:9: check] Error 2
+
+```
