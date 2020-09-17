@@ -208,3 +208,140 @@ cd       build
  - libtool: warning: '../../src/liblzma/liblzma.la' has not been installed in '/usr/lib'
  - libtool: warning: '../../src/liblzma/liblzma.la' has not been installed in '/usr/lib'
  - 이 경고 시 진행이 되는지는 다시 확인
+
+### 7.1
+- 7.1~7.4까지는 lfs에서 logout하여 root에서 진행
+- 꼭 echo $LFS를 확인하여 환경변수가 잘 설정되었는지 확인
+
+### 7.2
+```
+chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}
+case $(uname -m) in
+  x86_64) chown -R root:root $LFS/lib64 ;;
+esac
+```
+ㄴ Root user로 실행
+
+### 7.3
+- ```mkdir -pv $LFS/{dev,proc,sys,run}``` : 파일시스템이 마운트 될 디렉토리 생성
+- ```mknod -m 600 $LFS/dev/console c 5 1```
+- ```mknod -m 666 $LFS/dev/null c 1 3``` 
+ㄴ 커널이 시스템을 부팅할 때 사용될 장치 노드
+- ```mount -v --bind /dev $LFS/dev``` : /dev를 $LFS/dev에 마운트함
+```
+mount -v --bind /dev/pts $LFS/dev/pts
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run
+```
+ㄴ 가상 커널 파일 시스템 마운트
+```
+if [ -h $LFS/dev/shm ]; then
+  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+fi
+```
+ㄴ 일부 시스템을 위한 if
+
+### 7.4
+```
+chroot "$LFS" /usr/bin/env -i   \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    PS1='(lfs chroot) \u:\w\$ ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+    /bin/bash --login +h
+```
+ㄴ 다음을 실행하여 chroot로 진행. **다시 부팅 전까지 앞으로 쭉 chroot로 진행됨**
+
+### 7.5
+- ```mkdir -pv /{boot,home,mnt,opt,srv}``` : 루트에 다양한 디렉토리 생성
+```
+mkdir -pv /etc/{opt,sysconfig}
+mkdir -pv /lib/firmware
+mkdir -pv /media/{floppy,cdrom}
+mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}
+mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}
+mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}
+mkdir -pv /usr/{,local/}share/man/man{1..8}
+mkdir -pv /var/{cache,local,log,mail,opt,spool}
+mkdir -pv /var/lib/{color,misc,locate}
+
+ln -sfv /run /var/run
+ln -sfv /run/lock /var/lock
+
+install -dv -m 0750 /root
+install -dv -m 1777 /tmp /var/tmp
+```
+ㄴ 하위 디렉토리 생성
+
+### 7.6
+- ```ln -sv /proc/self/mounts /etc/mtab```
+- ```echo "127.0.0.1 localhost $(hostname)" > /etc/hosts```
+```
+cat > /etc/passwd << "EOF"
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/dev/null:/bin/false
+daemon:x:6:6:Daemon User:/dev/null:/bin/false
+messagebus:x:18:18:D-Bus Message Daemon User:/var/run/dbus:/bin/false
+nobody:x:99:99:Unprivileged User:/dev/null:/bin/false
+EOF
+```
+ㄴ passwd 파일 생성
+```
+cat > /etc/group << "EOF"
+root:x:0:
+bin:x:1:daemon
+sys:x:2:
+kmem:x:3:
+tape:x:4:
+tty:x:5:
+daemon:x:6:
+floppy:x:7:
+disk:x:8:
+lp:x:9:
+dialout:x:10:
+audio:x:11:
+video:x:12:
+utmp:x:13:
+usb:x:14:
+cdrom:x:15:
+adm:x:16:
+messagebus:x:18:
+input:x:24:
+mail:x:34:
+kvm:x:61:
+wheel:x:97:
+nogroup:x:99:
+users:x:999:
+EOF
+``` 
+ㄴ group 파일 생성
+
+```
+echo "tester:x:$(ls -n $(tty) | cut -d" " -f3):101::/home/tester:/bin/bash" >> /etc/passwd
+echo "tester:x:101:" >> /etc/group
+install -o tester -d /home/tester
+```
+ㄴ 테스터 계정 생성
+- ```exec /bin/bash --login +h``` : I have no name -> root로 표시됨
+```
+touch /var/log/{btmp,lastlog,faillog,wtmp}
+chgrp -v utmp /var/log/lastlog
+chmod -v 664  /var/log/lastlog
+chmod -v 600  /var/log/btmp
+```
+ㄴ 여러 로그인과 관련된 로그 기록
+
+### 7.7~7.13
+- 빌드 진행(chroot로)
+ - 7.13 make install에서 libtool과 관련된 warning 다수 발생
+ - 영향 없는지는 확인 필요
+### 7.14 
+- ```find /usr/{lib,libexec} -name \*.la -delete``` : libtool 관련 파일 제거
+- ```rm -rf /usr/share/{info,man,doc}/*``` : 임시 도구의 문서 제거
+- **중요 : 아래에 있는 것들은 백업을 위한 명령어들인데, 이것을 하기 위해서는 chroot 환경에서 나가야 함
+ - 하지만 스냅샷을 이용해 진행하므로, chroot에서 빠져나가지 않고 무시하여 챕터 8로 진행함
+ - 8.3으로 이동하여 다시 패키지 설치
+
+### 8.3~8.75
+- 
