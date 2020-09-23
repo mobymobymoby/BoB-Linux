@@ -119,14 +119,11 @@ sudo docker run --detach \
     - 크레덴셜은 퍼블릭일 때 필요없는 듯 함
   - 빌드 유발 : GitHub hook trigger for GITScm polling 체크
 
-
-
-
-
 ### Reference
 - https://docs.gitlab.com/omnibus/docker/ 
 - https://devyurim.github.io/development%20environment/docker/2018/06/27/docker-1.html
 - https://wiserloner.tistory.com/171
+- https://galid1.tistory.com/466
 
 
 
