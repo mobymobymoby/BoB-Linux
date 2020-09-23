@@ -126,6 +126,7 @@ sudo docker run --detach \
 - https://wiserloner.tistory.com/171
 - https://galid1.tistory.com/466
 - https://medium.com/hgmin/jenkins-github-webhook-3dc13efd2437 \# ```http://호스트 IP:포트번호/github-webhook/```로 지정하게 된 근거인듯
+- https://yaboong.github.io/jenkins/2018/05/14/github-webhook-jenkins/ \# 이것도 위와 
 
 
 
