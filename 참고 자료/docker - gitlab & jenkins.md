@@ -117,7 +117,7 @@ sudo docker run --detach \
   - 소스 코드 관리 : git
     - 레포지토리 URL에 주소 입력
     - 크레덴셜은 퍼블릭일 때 필요없는 듯 함
-  - **github 레포지토리 -> 세팅 -> Webhooks -> ```http://호스트 IP:포트번호/github-webhook/```로 지정** : 퍼블릭에서는 이것만 해줘도 됨
+  - **github 레포지토리 -> 세팅 -> Webhooks -> ```http://호스트 IP:포트번호/github-webhook/```로 지정** : 퍼블릭에서는 이것과 빌드 유발만 해줘도 됨
   - 빌드 유발 : GitHub hook trigger for GITScm polling 체크.
 
 ### Reference
@@ -125,7 +125,7 @@ sudo docker run --detach \
 - https://devyurim.github.io/development%20environment/docker/2018/06/27/docker-1.html
 - https://wiserloner.tistory.com/171
 - https://galid1.tistory.com/466
-- https://medium.com/hgmin/jenkins-github-webhook-3dc13efd2437 \# ```http://호스트 IP:포트번호/github-webhook/```로 지정하게 된 근거인듯
+- https://medium.com/hgmin/jenkins-github-webhook-3dc13efd2437 
 - https://yaboong.github.io/jenkins/2018/05/14/github-webhook-jenkins/
 
 
