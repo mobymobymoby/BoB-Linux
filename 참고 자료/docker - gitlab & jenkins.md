@@ -36,6 +36,7 @@ sudo docker run --detach \
 
 - ```sudo docker logs -f gitlab``` : 초기화 프로세스 확인
   - 백그라운드에서 진행되는 초기화 과정을 확인할 수 있음
+  - 5분 정도의 초기화 시간이 필요함
 - 깃랩 도커 이미지 구성이 완료 되었다면, ```sudo docker exec -it gitlab /bin/bash```을 입력하여 컨테이너로 접속할 수 있음
 - 포트포워딩을 위해 포트를 지정해줌
   - VirtualBox 기준  'NAT 네트워크(NAT 아님)'로 설정
@@ -66,6 +67,7 @@ sudo docker run --detach \
   - 정상적으로 따라왔다면, 위의 과정에서 설치한 gitlab과 jenkins(TAG : lts)의 이미지가 존재할 것임
 - ```docker run -d -p 48080:8080 -p 50000:50000 -v /jenkins:/var/jenkins_home --name jenkins -u root jenkins/jenkins:latest```
   - 임의로 48080(변경 가능)라는 포트 번호를 할당함. 48080으로 접속하면 8080으로 포워딩 됨
+  - 뒤의 포트번호는 slave 포트 번호로 추정
   - \-v 옵션을 통해 젠킨스 내부를 도커를 돌리는 호스트(버추어박스를 통한 가상머신 리눅스)에 공개함
   - \-u 옵션을 통해 계정을 root로 설정
   - 사실 위에서 docker pull을 통해 이미지를 다운로드 받지 않아도, 이 명령어를 실행하면 저절로 다운로드 받아짐
@@ -77,7 +79,7 @@ sudo docker run --detach \
   - 초기 비밀번호를 입력하는 창이 뜸
   - ```docker exec -it jenkins /bin/bash```을 통해 jenkins 컨테이너에 접속
   - /var/jenkins_home/secrets/ 디렉토리로 이동하여 ```cat initialAdminPassword```으로 초기 비밀번호 확인 후 로그인
-- "install suggested.."를 선택하여 플러그인을 설치함 : 5분 정도 소요
+- "install suggested plugins"를 선택하여 플러그인을 설치함 : 5분 정도 소요
 - 몇 개의 항목은 설치가 안될 수 있음
   - Workspace Cleanup / Pipeline / Email Extension 3개가 설치 안된 것을 확인
 - continue를 통해 진행하고, "Create First Admin User"에서는 skip and continue as admin으로 징행
@@ -85,8 +87,26 @@ sudo docker run --detach \
 - Instance Configuration에서는 자동으로 설정된 URL로 하고, Save and Finish
 - '설정' 탭으로 가서 Password를 바꾸어줌
   - 바꾼 비밀번호로 재 로그인
-- 'jenkins 관리' 탭 -> '플러그인 관리' -> 플러그인 다운로드 후 재시작 -> "설치가 끝나고 실행중인 작업이 없으면 Jenkins 재시작" 체크
-- 
+- 'jenkins 관리' 탭 -> '플러그인 관리' -> gitlab 플러그인 체크 -> 플러그인 다운로드 후 재시작 -> "설치가 끝나고 실행중인 작업이 없으면 Jenkins 재시작" 체크
+- "새로운 item" 탭
+  - item 이름 정함
+  - Freestyle Project 
+  - 소스 코드 관리 : git -> 
+  - Repository URL : 깃랩의 프로젝트 주소 
+  - 크레덴셜 add -> jenkins 선택 -> username : gitlab의 아이디(root) / password : gitlab의 비밀번호 -> credential에서 추가된 것으로 바꾸기 -> 빨간 글씨 사라짐
+  - Build when a change is pushed to GitLab 선택
+    - URL 주소가 나와있는데, 이를 따로 메모 http://61.74.24.208:48080/project/test
+  - 아래에 "고급" 클릭 -> Secret token에서 Generate 후 발생한 키를 메모 2cdcbc4ee73c3fd6c04df4e8b4818d0d
+    - URL 주소와 시크릿 토큰을 이용함
+- 저장
+- gitlab으로 이동
+  - Settings -> Webhooks 탭
+  - URL : 위에서 나온 URL 주소 입력
+  - Secret token : 위에서 나온 Secert token 입력 
+  - Add webhook
+- 아무 것이나 커밋해보면 젠킨스에서 이것이 기록되는 것을 확인 가능
+  - 시간 동기화 문제는 해결해야함
+
 
 
 ### Reference
