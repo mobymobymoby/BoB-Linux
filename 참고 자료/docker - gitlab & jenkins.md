@@ -63,6 +63,7 @@ sudo docker run --detach \
   - lts 버전과 latest 버전을 취사 선택
   - 여기서는 lts 버전으로 진행한다고 가정.
 - ```docker pull jenkins/jenkins:latest``` : jenkins latest 이미지를 다운로드 받음
+  - LTS 버전으로 다운로드 받았을 때 gitlab 플러그인이 설치되지 않는 이슈 발생(우연인지는 모르겠으나, 다시 latest로 설치했을 땐 동작)
   - ```docker images``` 명령어를 통해 이미지가 잘 다운로드 받아졌는지 확인 가능
   - 정상적으로 따라왔다면, 위의 과정에서 설치한 gitlab과 jenkins(TAG : lts)의 이미지가 존재할 것임
 - ```docker run -d -p 48080:8080 -p 50000:50000 -v /jenkins:/var/jenkins_home --name jenkins -u root jenkins/jenkins:latest```
@@ -82,6 +83,7 @@ sudo docker run --detach \
 - "install suggested plugins"를 선택하여 플러그인을 설치함 : 5분 정도 소요
 - 몇 개의 항목은 설치가 안될 수 있음
   - Workspace Cleanup / Pipeline / Email Extension 3개가 설치 안된 것을 확인
+  - JUnit이 설치되지 않는 문제 확인(해결 X)
 - continue를 통해 진행하고, "Create First Admin User"에서는 skip and continue as admin으로 징행
   - 추후 admin의 패스워드를 바꿔주어야 함
 - Instance Configuration에서는 자동으로 설정된 URL로 하고, Save and Finish
