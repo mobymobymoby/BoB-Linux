@@ -114,7 +114,7 @@ sudo docker run --detach \
   - jenkins에서 jenkins 관리 -> 시스템 설정 -> add github server -> add credentials -> kind를 secret text로 설정 -> add
 - 새로운 item
   - GitHub project에 체크 : 레포지토리 주소 입력
-  - 소스코드 관리 : git
+  - 소스 코드 관리 : git
     - 레포지토리 URL에 주소 입력
     - 크레덴셜은 퍼블릭일 때 필요없는 듯 함
   - 빌드 유발 : GitHub hook trigger for GITScm polling 체크
