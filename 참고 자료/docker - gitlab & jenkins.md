@@ -105,7 +105,7 @@ sudo docker run --detach \
   - Secret token : 위에서 나온 Secert token 입력 
   - Add webhook
 - 아무 것이나 커밋해보면 젠킨스에서 이것이 기록되는 것을 확인 가능
-  - 시간 동기화 문제는 해결해야함
+  - 시간 동기화 : 사용자 설정 -> User Defined Time Zone을 Asia/Seoul로 변경
 
 
 
