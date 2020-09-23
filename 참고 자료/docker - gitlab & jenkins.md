@@ -117,7 +117,7 @@ sudo docker run --detach \
   - 소스 코드 관리 : git
     - 레포지토리 URL에 주소 입력
     - 크레덴셜은 퍼블릭일 때 필요없는 듯 함
-  - 빌드 유발 : GitHub hook trigger for GITScm polling 체크
+  - 빌드 유발 : GitHub hook trigger for GITScm polling 체크.
 
 ### Reference
 - https://docs.gitlab.com/omnibus/docker/ 
