@@ -109,9 +109,16 @@ sudo docker run --detach \
 - 아무 것이나 커밋해보면 젠킨스에서 이것이 기록되는 것을 확인 가능
   - 시간 동기화 : 사용자 설정 -> User Defined Time Zone을 Asia/Seoul로 변경
 ### github with jenkins
-- github에서 settings -> Developer settings -> Personal access tokens -> Generate New Token을 통해 토큰을 발급받음
-- jenkins에서 jenkins 관리 -> 시스템 설정 -> add credentials -> kind를 secret text로 설정 -> add
-  - 이를 이용해 gitlab 처럼 진행
+- Private일 때 설정(테스트 해보진 않음)
+  - github에서 settings -> Developer settings -> Personal access tokens -> Generate New Token을 통해 토큰을 발급받음
+  - jenkins에서 jenkins 관리 -> 시스템 설정 -> add github server -> add credentials -> kind를 secret text로 설정 -> add
+- 새로운 item
+  - GitHub project에 체크 : 레포지토리 주소 입력
+  - 소스코드 관리 : git
+    - 레포지토리 URL에 주소 입력
+    - 크레덴셜은 퍼블릭일 때 필요없는 듯 함
+  - 빌드 유발 : GitHub hook trigger for GITScm polling 체크
+
 
 
 
