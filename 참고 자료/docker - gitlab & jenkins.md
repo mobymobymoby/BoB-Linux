@@ -55,7 +55,31 @@ sudo docker run --detach \
   - sudo systemctl start docker -> sudo docker start gitlab
 
 ### jenkins on docker with gitlab
-- 
+- 위의 과정이 완벽히 되었다고 가정함
+- 편의상 root로 진행(docker 안이 아닌, 버추어박스 가상머신의 root)
+- https://hub.docker.com/ 로 이동하여 jenkins 검색
+  - 맨 위에 있는 것은 가장 최신 버전이지만, 불안정할 수 있으므로 2번째 것을 선택
+  - lts 버전과 latest 버전을 취사 선택
+  - 여기서는 lts 버전으로 진행한다고 가정.
+- ```docker pull jenkins/jenkins:lts``` : jenkins LTS 이미지를 다운로드 받음
+  - ```docker images``` 명령어를 통해 이미지가 잘 다운로드 받아졌는지 확인 가능
+  - 정상적으로 따라왔다면, 위의 과정에서 설치한 gitlab과 jenkins(TAG : lts)의 이미지가 존재할 것임
+- ```docker run -d -p 48080:8080 -p 50000:50000 -v /jenkins:/var/jenkins_home --name jenkins -u root jenkins/jenkins:lts```
+  - 임의로 48080(변경 가능)라는 포트 번호를 할당함. 48080으로 접속하면 8080으로 포워딩 됨
+  - \-v 옵션을 통해 젠킨스 내부를 도커를 돌리는 호스트(버추어박스를 통한 가상머신 리눅스)에 공개함
+  - \-u 옵션을 통해 계정을 root로 설정
+  - 사실 위에서 docker pull을 통해 이미지를 다운로드 받지 않아도, 이 명령어를 실행하면 저절로 다운로드 받아짐
+- ```docker ps``` 명령어를 통해 컨테이너가 잘 실행되고 있는지 확인할 수 있음
+  - STATUS 열이 "UP (시간)"으로 되어있다면 성공
+- 포트포워딩 설정
+  - gitlab을 도커에 올릴 때의 과정과 동일하며, 호스트 포트 번호 48080로, 게스트 포트 번호를 8080으로 해주면 됨
+- ```HOST IP:48080```을 주소창에 입력하여 접속. 단 여기서 HOST IP는 가상머신을 돌리고 있는 호스트임
+  - 초기 비밀번호를 입력하는 창이 뜸
+  - ```docker exec -it jenkins /bin/bash```을 통해 jenkins 컨테이너에 접속
+  - /var/jenkins_home/secrets/ 디렉토리로 이동하여 ```cat initialAdminPassword```으로 초기 비밀번호 확인 후 로그인
+- "install suggested.."를 선택하여 플러그인을 설치함
+- 몇 개의 항목은 설치가 안될 수 있음
+
 
 
 
