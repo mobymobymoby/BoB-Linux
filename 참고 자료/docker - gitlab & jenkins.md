@@ -61,10 +61,10 @@ sudo docker run --detach \
   - 맨 위에 있는 것은 가장 최신 버전이지만, 불안정할 수 있으므로 2번째 것을 선택
   - lts 버전과 latest 버전을 취사 선택
   - 여기서는 lts 버전으로 진행한다고 가정.
-- ```docker pull jenkins/jenkins:lts``` : jenkins LTS 이미지를 다운로드 받음
+- ```docker pull jenkins/jenkins:latest``` : jenkins latest 이미지를 다운로드 받음
   - ```docker images``` 명령어를 통해 이미지가 잘 다운로드 받아졌는지 확인 가능
   - 정상적으로 따라왔다면, 위의 과정에서 설치한 gitlab과 jenkins(TAG : lts)의 이미지가 존재할 것임
-- ```docker run -d -p 48080:8080 -p 50000:50000 -v /jenkins:/var/jenkins_home --name jenkins -u root jenkins/jenkins:lts```
+- ```docker run -d -p 48080:8080 -p 50000:50000 -v /jenkins:/var/jenkins_home --name jenkins -u root jenkins/jenkins:latest```
   - 임의로 48080(변경 가능)라는 포트 번호를 할당함. 48080으로 접속하면 8080으로 포워딩 됨
   - \-v 옵션을 통해 젠킨스 내부를 도커를 돌리는 호스트(버추어박스를 통한 가상머신 리눅스)에 공개함
   - \-u 옵션을 통해 계정을 root로 설정
@@ -77,8 +77,22 @@ sudo docker run --detach \
   - 초기 비밀번호를 입력하는 창이 뜸
   - ```docker exec -it jenkins /bin/bash```을 통해 jenkins 컨테이너에 접속
   - /var/jenkins_home/secrets/ 디렉토리로 이동하여 ```cat initialAdminPassword```으로 초기 비밀번호 확인 후 로그인
-- "install suggested.."를 선택하여 플러그인을 설치함
+- "install suggested.."를 선택하여 플러그인을 설치함 : 5분 정도 소요
 - 몇 개의 항목은 설치가 안될 수 있음
+  - Workspace Cleanup / Pipeline / Email Extension 3개가 설치 안된 것을 확인
+- continue를 통해 진행하고, "Create First Admin User"에서는 skip and continue as admin으로 징행
+  - 추후 admin의 패스워드를 바꿔주어야 함
+- Instance Configuration에서는 자동으로 설정된 URL로 하고, Save and Finish
+- '설정' 탭으로 가서 Password를 바꾸어줌
+  - 바꾼 비밀번호로 재 로그인
+- 'jenkins 관리' 탭 -> '플러그인 관리' -> 플러그인 다운로드 후 재시작 -> "설치가 끝나고 실행중인 작업이 없으면 Jenkins 재시작" 체크
+- 
+
+
+### Reference
+- https://docs.gitlab.com/omnibus/docker/ 
+- https://devyurim.github.io/development%20environment/docker/2018/06/27/docker-1.html
+- https://wiserloner.tistory.com/171
 
 
 
