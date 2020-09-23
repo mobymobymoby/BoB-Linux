@@ -111,6 +111,7 @@ sudo docker run --detach \
 ### github with jenkins
 - Private일 때 설정(테스트 해보진 않음)
   - github에서 settings -> Developer settings -> Personal access tokens -> Generate New Token을 통해 토큰을 발급받음
+  - github 레포지토리 -> 세팅 -> Webhooks -> http://호스트 IP:포트번호/github-webhook/로 지정 \# 왜 이런식으로 해야하는지는 의문. 이것저것 만지다보니 되어 있었음
   - jenkins에서 jenkins 관리 -> 시스템 설정 -> add github server -> add credentials -> kind를 secret text로 설정 -> add
 - 새로운 item
   - GitHub project에 체크 : 레포지토리 주소 입력
