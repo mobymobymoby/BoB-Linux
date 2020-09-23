@@ -108,6 +108,11 @@ sudo docker run --detach \
   - Add webhook
 - 아무 것이나 커밋해보면 젠킨스에서 이것이 기록되는 것을 확인 가능
   - 시간 동기화 : 사용자 설정 -> User Defined Time Zone을 Asia/Seoul로 변경
+### github with jenkins
+- github에서 settings -> Developer settings -> Personal access tokens -> Generate New Token을 통해 토큰을 발급받음
+- jenkins에서 jenkins 관리 -> 시스템 설정 -> add credentials -> kind를 secret text로 설정 -> add
+  - 이를 이용해 gitlab 처럼 진행
+
 
 
 
