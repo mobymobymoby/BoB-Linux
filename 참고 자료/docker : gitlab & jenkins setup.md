@@ -97,8 +97,8 @@ sudo docker run --detach \
   - Repository URL : 깃랩의 프로젝트 주소 
   - 크레덴셜 add -> jenkins 선택 -> username : gitlab의 아이디(root) / password : gitlab의 비밀번호 -> credential에서 추가된 것으로 바꾸기 -> 빨간 글씨 사라짐
   - Build when a change is pushed to GitLab 선택
-    - URL 주소가 나와있는데, 이를 따로 메모 http://61.74.24.208:48080/project/test
-  - 아래에 "고급" 클릭 -> Secret token에서 Generate 후 발생한 키를 메모 2cdcbc4ee73c3fd6c04df4e8b4818d0d
+    - URL 주소가 나와있는데, 이를 따로 메모 
+  - 아래에 "고급" 클릭 -> Secret token에서 Generate 후 발생한 키를 메모 
     - URL 주소와 시크릿 토큰을 이용함
 - 저장
 - gitlab으로 이동
