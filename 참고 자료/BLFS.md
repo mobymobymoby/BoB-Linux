@@ -22,3 +22,8 @@ ONBOOT="yes"
 IFACE="enp0s3"
 SERVICE="dhcpcd"
 ```
+
+### SSH
+- BLFS에서 OpenSSH 설치
+  - **BLFS 부트 스크립트를 통해 make install-sshd**
+  - 위에 것 안해주면 /etc/init.d/sshd가 없음
