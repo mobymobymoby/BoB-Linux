@@ -9,3 +9,6 @@
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;(init 설치, resolv.conf, interfaces, fstab 파일 설정)
 <br>
+[3. 우분투 베이스(Ubuntu Base) tty 콘솔에서  자동 로그인하기](https://blog.naver.com/nms200299/222105790449)
+&nbsp;&nbsp;&nbsp;&nbsp;(getty 설정)
+<br>
