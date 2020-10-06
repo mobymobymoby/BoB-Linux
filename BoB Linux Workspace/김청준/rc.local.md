@@ -4,7 +4,7 @@
 cd /etc
 find *rc.local*
 ```
-- 파일이 존재하지 않으면 rc.local 파일을 생성한다
+- 파일이 존재하지 않으면 rc.local 파일을 생성한다<br>
 ```vim /etc/rc.local```
 - 다음 내용 삽입
 ```
