@@ -57,22 +57,22 @@ int command(void)
         char  buff[BUFF_SIZE];
         FILE *fp;
         char cmd[10];
-        scanf("%[^\n]s", ds);
-
-        system(cmd);
-/*
-        fp = popen(ds, "r");
-        if (NULL == fp)
+        
+        while(1)
         {
-               perror("failed\n");
-               return -1;
+            scanf("%[^\n]s", cmd);
+            // 입력값 검증 부분
+            if(!strcmp(cmd,"ls")) 
+            {
+                printf("OK\n"); 
+                system(cmd);
+                break;
+            }
+            else 
+                printf("Please Input 'ls'\n"); 
+                // 입력 버퍼 지우기
+                getchar(); 
         }
- 
-        while (fgets(buff, BUFF_SIZE, fp))
-               printf("%s", buff);
- 
-        pclose(fp);
-*/
         return 0;
 }
 
@@ -86,7 +86,9 @@ int main(void)
 }
 ```
 - 해당 코드를 이용해 사용자의 입력으로 리눅스의 명령어 실행 가능
-- int system(const char &#42;string) : &#42;string의 값을
+- int system(const char &#42;string) : &#42;string의 값을 리눅스 명령어로 실행함
+- scanf("%[^\n]s", cmd) : 개행 문자인 \n을 제외하고 모든 문자를 입력받음
+- scanf 이후에 입력 값 검증을 이용해 다른 명령어의 개입을 막을 수 있음
 
 
 
