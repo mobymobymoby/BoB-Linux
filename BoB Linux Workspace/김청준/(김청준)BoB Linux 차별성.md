@@ -52,26 +52,24 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BUFF_SIZE 1024
+#define CMD_SIZE 20
 
-int command(void)
+int run_command(char valid_cmd[])
 {
-        char  buff[BUFF_SIZE];
-        FILE *fp;
-        char cmd[10];
+        char cmd[CMD_SIZE];
         
         while(1)
         {
             scanf("%[^\n]s", cmd);
             // 입력값 검증 부분
-            if(!strcmp(cmd,"ls")) 
+            if(!strcmp(cmd, valid_cmd)) 
             {
                 printf("OK\n"); 
                 system(cmd);
                 break;
             }
             else 
-                printf("Please Input 'ls'\n"); 
+                printf("Please Input '%s'\n", valid_cmd); 
                 // 입력 버퍼 지우기
                 getchar(); 
         }
@@ -82,7 +80,7 @@ int main(void)
 {
         printf("'ls' is show current directory's files\nPlease Input 'ls'\n"); 
 
-        command();
+        run_command("ls");
 
         return 0;
 }
