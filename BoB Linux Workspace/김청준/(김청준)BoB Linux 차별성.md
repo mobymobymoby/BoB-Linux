@@ -46,7 +46,50 @@
 - 트레이닝 기능을 어떻게 구현할 것인가?
   - 일단, C언어를 통해 표준 입출력을 이용해 진행 예정
   - C언어 프로그램 상에서 입력한 명령어를 OS에 전달할 수 있는 방법을 찾아야 함
-  - 예를 들어 ls를 입력하세요. 라는 출력에 대해서 ls를 입력한다면 실제 OS 상에서 ls가 입력되도록 해서 해당 디렉토리의 내용을 보여줘야 함
+  - 예를 들어 ls를 입력하세요. 라는 출력에 대해서 ls를 입력한다면 실제 OS 상에서 ls가 입력되도록 해서 해당 디렉토리의 내용을 보여줘야 함(해결)
+```
+#include <stdio.h>
+#include <stdlib.h>
+#define BUFF_SIZE 1024
+
+int command(void)
+{
+        char  buff[BUFF_SIZE];
+        FILE *fp;
+        char cmd[10];
+        scanf("%[^\n]s", ds);
+
+        system(cmd);
+/*
+        fp = popen(ds, "r");
+        if (NULL == fp)
+        {
+               perror("failed\n");
+               return -1;
+        }
+ 
+        while (fgets(buff, BUFF_SIZE, fp))
+               printf("%s", buff);
+ 
+        pclose(fp);
+*/
+        return 0;
+}
+
+int main(void)
+{
+        printf("'ls' is show current directory's files\nPlease Input 'ls'\n"); 
+
+        command();
+
+        return 0;
+}
+```
+- 해당 코드를 이용해 사용자의 입력으로 리눅스의 명령어 실행 가능
+- int system(const char &#42;string) : &#42;string의 값을
+
+
+
 - 심화 과정에서 어떤 분야를 채택할 것인가?
   - 본인의 입장에서는 네트워크 분야가 가장 무난하게 느껴짐
   - 하지만 팀원들의 다양한 의견에 따라 커리큘럼과 심화 분야를 결정할 예정
