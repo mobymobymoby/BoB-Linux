@@ -39,6 +39,7 @@ void training_mkdir(void)
 	n = read_txt(buf, n);
 	
 	fclose(fp);
+	printf("\n");
 }
 
 int main()
