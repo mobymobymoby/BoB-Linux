@@ -72,5 +72,5 @@ int main(){
     printf("시스템을 종료하는 명령어로는 'shutdown', 'half', 'reboot' 명령어가 있습니다.\n");
     printf("\n");
     sleep(4);
-    printf("수고하셨습니다!");
+    printf("고생하셨습니다!");
 }
