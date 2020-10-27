@@ -29,9 +29,12 @@ int main(){
     
     training();
 
+    printf("잘 하셨습니다!\n");
     sleep(2);
     printf("왼쪽에 표기된 것이 이전의 런레벌이고, \n");
     sleep(2);
     printf("오른쪽에 표기된 것이 현재 런레벨 입니다.\n");
+    printf("\n");
     sleep(3);
+    printf("고생하셨습니다!\n");
 }
