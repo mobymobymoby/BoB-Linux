@@ -1,5 +1,23 @@
 #include <stdio.h>
 #include <unistd.h> // sleep 함수
+
+void training(){
+    char cmd[6]={};
+    char d_buf[30]={};
+    printf("[실습] init 명령어를 이용해 시스템을 종료하도록 하십시오.\n");
+    printf("        ('init {숫자}' 명령어 입력을 통해 {숫자} 런레벨로 바꿀 수 있습니다.)\n");
+    printf("        (실습 환경에서의 가상 입력으로, 실제 시스템에 적용되지는 않습니다.)\n"); 
+    printf("\n");
+
+    getcwd(d_buf, sizeof(d_buf));
+	printf("Trainer@BoB:%s$ ", d_buf);
+    fgets(cmd,7,stdin);
+    
+    if (strncmp(cmd,"init 0",6)!=0){
+        training();
+    }
+}
+
 int main(){
     printf("init 명령어는 런레벨(RunLevel)을 변경하는 명령어입니다.\n");
     printf("\n\n");
@@ -41,16 +59,18 @@ int main(){
     printf("[주요 런레벨 정리]\n");
     sleep(1);
         printf("0 (시스템 종료), 6 (시스템 재부팅)\n");
-        sleep(1);
+        sleep(3);
         printf("3 (CLI 다중 사용자), 5 (GUI 다중 사용자)\n\n");
         sleep(3);
         printf("\n\n");
-    
-    printf("'init [숫자]' 명령어 입력을 통해 런레벨을 바꿀 수 있습니다.\n");
-    printf("\n");
+
+    training();
+    printf("잘 하셨습니다! 앞으로도 이런 식으로 런레벨을 바꾸면 됩니다.\n");
     sleep(4);
-    printf("현재 런레벨을 확인하는 방법으로 'runlevel' 명령어와 'who -r' 명령어가 있습니다.\n");
+    printf("현재 런레벨을 확인하는 방법으로 'runlevel' 명령어와 'who -r' 명령어가 있으며,\n");
     sleep(4);
     printf("시스템을 종료하는 명령어로는 'shutdown', 'half', 'reboot' 명령어가 있습니다.\n");
+    printf("\n");
     sleep(4);
+    printf("수고하셨습니다!");
 }
