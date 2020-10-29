@@ -4,8 +4,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#define CMD_SIZE 20
-#define DIR_SIZE 30
+#define CMD_SIZE 20 // 최대 19개의 문자 입력
+#define DIR_SIZE 30 // 최대 29개의 문자 입력
 #define BUF_SIZE 102400
 
 void hint(char valid_cmd[])
@@ -24,7 +24,7 @@ int run_command(char valid_cmd[])
 		getcwd(dir_buf, sizeof(dir_buf));
 		printf("Trainer@BoB:%s$ ", dir_buf);
 		int valid_len = strlen(valid_cmd);
-		fgets(cmd, CMD_SIZE, stdin);
+		fgets(cmd, sizeof(cmd), stdin);
 		
 		// 나머지 입력 값 제거
         	cmd[strlen(cmd)-1] = '\0';
