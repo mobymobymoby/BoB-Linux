@@ -1,5 +1,5 @@
 ### touch.c
------
+```
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -117,9 +117,10 @@ int main()
     printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
     return 0;
 }
+```
 
 ### touch.txt
------
+```
 이번에 학습할 명령어는 'touch' 입니다.
 touch는 특정 파일의 날짜 및 시간 정보를 변경하는 명령어입니다.
 아무런 옵션을 주지 않고 사용하면 서버의 현재 시간으로 파일의 최근 사용 시간(access time), 최근 수정 시간(modify time), 최근 변경 시간(change time)을 변경합니다.
@@ -172,3 +173,4 @@ $ touch [디렉토리에 없는 파일명]
 
 touch 명령어에 대한 학습이 끝났습니다.
 @
+```
