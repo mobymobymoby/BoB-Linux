@@ -14,46 +14,46 @@ void hint(char valid_cmd[])
 
 int run_command(char valid_cmd[])
 {
-	
-        char cmd[CMD_SIZE];
-        char d_buf[30];
-        while(1)
-        {
-	    printf("\n");
-	    getcwd(d_buf, sizeof(d_buf));
-	    printf("Trainer@BoB:%s$ ", d_buf);
-            scanf("%[^\n]s", cmd);
-            // 입력 버퍼 삭제
-            getchar();
-            // 입력값 검증 부분
-            if(!strcmp(cmd, valid_cmd)) 
-            {
-                printf("잘 입력하셨습니다.");
-                // 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
-                system(valid_cmd);
-                break;
-            }
-            // 사용자가 help를 입력했을 때 힌트
-            else if(!strcmp(cmd, "help"))
-            {
-              // 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
-            	hint(valid_cmd);
-            }
-            else 
-            {
-               printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
-	    }
-                
-        }
-        return 0;
+
+	char cmd[CMD_SIZE];
+	char d_buf[30];
+	while (1)
+	{
+		printf("\n");
+		getcwd(d_buf, sizeof(d_buf));
+		printf("Trainer@BoB:%s$ ", d_buf);
+		scanf("%[^\n]s", cmd);
+		// 입력 버퍼 삭제
+		getchar();
+		// 입력값 검증 부분
+		if (!strcmp(cmd, valid_cmd))
+		{
+			printf("잘 입력하셨습니다.");
+			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
+			system(valid_cmd);
+			break;
+		}
+		// 사용자가 help를 입력했을 때 힌트
+		else if (!strcmp(cmd, "help"))
+		{
+			// 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
+			hint(valid_cmd);
+		}
+		else
+		{
+			printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
+		}
+
+	}
+	return 0;
 }
 
 int read_txt(char buf[], int n)
 {
-  // txt 파일을 읽어온 'buf' array에서 한 글자씩 읽어옴
-  // 글자를 읽는 것은 '@'를 만나거나 파일의 끝(NULL)이 될 때 까지
-  // 즉 @를 한 문단을 끝내는 플래그로 사용
-	for(; buf[n] != '@' && buf[n] != '\0'; n++)
+	// txt 파일을 읽어온 'buf' array에서 한 글자씩 읽어옴
+	// 글자를 읽는 것은 '@'를 만나거나 파일의 끝(NULL)이 될 때 까지
+	// 즉 @를 한 문단을 끝내는 플래그로 사용
+	for (; buf[n] != '@' && buf[n] != '\0'; n++)
 	{
 		printf("%c", buf[n]);
 		// 출력 버퍼 비우기. 출력 버퍼를 비우지 않으면 한 글자씩 출력되지 
@@ -61,50 +61,50 @@ int read_txt(char buf[], int n)
 		// 한 글자씩 출력되는 효과를 위한 sleep. 0으로 한다면 한번에 출력됨
 		usleep(30000);
 	}
-  // 다음 배열의 인덱스로 넘어가기 위해 n+1을 리턴
-	return n+1;
+	// 다음 배열의 인덱스로 넘어가기 위해 n+1을 리턴
+	return n + 1;
 }
-	
+
 
 void training_mkdir(void)
 {
-	FILE *fp;
+	FILE* fp;
 	fp = fopen("mkdir.txt", "r");
-	char buf[BUF_SIZE] = {0,};
+	char buf[BUF_SIZE] = { 0, };
 	fread(buf, sizeof(buf), 1, fp);
-	
+
 	int n = 0;
 	n = read_txt(buf, n);
-  // run_command의 인자로 특정 명령어를 넘겨주어 그 외의 입력값에 대해서 실행시키지 않음
+	// run_command의 인자로 특정 명령어를 넘겨주어 그 외의 입력값에 대해서 실행시키지 않음
 	run_command("mkdir test_dir");
 	n = read_txt(buf, n);
 	run_command("mkdir -m 752 test_dir2");
 	n = read_txt(buf, n);
 	run_command("mkdir -p fruits/apple");
-  n = read_txt(buf, n);
+	n = read_txt(buf, n);
 	fclose(fp);
 	printf("\n");
 }
 
 void next_quit()
 {
-  char cmd[CMD_SIZE];
-  printf("\n다음 명령어를 학습하시려면 'next'를, 종료하시려면 'quit'를 입력하세요.\n");
-  scanf("%s", cmd);
-  if(!strcmp(cmd, "next"))
-    return;
-  else
-    exit(0);
+	char cmd[CMD_SIZE];
+	printf("\n다음 명령어를 학습하시려면 'next'를, 종료하시려면 'quit'를 입력하세요.\n");
+	scanf("%s", cmd);
+	if (!strcmp(cmd, "next"))
+		return;
+	else
+		exit(0);
 }
 
 int main()
 {
-  // main 함수는 training_명령어 이름()과 next_quit() 함수로 구성됨
-  // 각 명령어 학습 단계를 마친 후 마지막에 트레이닝을 계속 할건지, 그만 할건지 여부를 물어본 후 입력 값에 따라 종료 또는 진행
+	// main 함수는 training_명령어 이름()과 next_quit() 함수로 구성됨
+	// 각 명령어 학습 단계를 마친 후 마지막에 트레이닝을 계속 할건지, 그만 할건지 여부를 물어본 후 입력 값에 따라 종료 또는 진행
 	training_mkdir();
-  next_quit();
-  // training_ls(); 
-  printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
+	next_quit();
+	// training_ls(); 
+	printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
 	return 0;
 }
 ```
