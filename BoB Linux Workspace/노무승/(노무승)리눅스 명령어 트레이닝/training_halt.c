@@ -54,7 +54,7 @@ int main(){
 
     printf("비슷하게 시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'poweroff' 가 있으며,\n");
     sleep(5);
-    printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'이 있습니다.\n");
+    printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'가 있습니다.\n");
     sleep(5);
     printf("\n");
 
