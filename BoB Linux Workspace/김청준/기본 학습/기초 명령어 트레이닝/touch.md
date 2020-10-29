@@ -5,47 +5,49 @@
 #include <stdlib.h>
 #include <string.h>
 #define CMD_SIZE 20
+#define DIR_SIZE 30
 #define BUF_SIZE 102400
 
 void hint(char valid_cmd[])
 {
-    printf("'%s'를 입력하세요.", valid_cmd);
+	printf("'%s'를 입력하세요.", valid_cmd);
 }
 
 int run_command(char valid_cmd[])
 {
 
-    char cmd[CMD_SIZE];
-    char d_buf[30];
-    while (1)
-    {
-        printf("\n");
-        getcwd(d_buf, sizeof(d_buf));
-        printf("Trainer@BoB:%s$ ", d_buf);
-        scanf("%[^\n]s", cmd);
-        // 입력 버퍼 삭제
-        getchar();
-        // 입력값 검증 부분
-        if (!strcmp(cmd, valid_cmd))
-        {
-            printf("잘 입력하셨습니다.");
-            // 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
-            system(valid_cmd);
-            break;
-        }
-        // 사용자가 help를 입력했을 때 힌트
-        else if (!strcmp(cmd, "help"))
-        {
-            // 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
-            hint(valid_cmd);
-        }
-        else
-        {
-            printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
-        }
+	char cmd[CMD_SIZE];
+	char dir_buf[DIR_SIZE];
+	while (1)
+	{
+		printf("\n");
+		getcwd(dir_buf, sizeof(dir_buf));
+		printf("Trainer@BoB:%s$ ", dir_buf);
+		int valid_len = strlen(valid_cmd);
+		fgets(cmd, valid_len+1, stdin);
+		// 입력 버퍼 삭제
+		__fpurge(stdin);
+		// 입력값 검증 부분
+		if (!strcmp(cmd, valid_cmd))
+		{
+			printf("잘 입력하셨습니다.");
+			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
+			system(valid_cmd);
+			break;
+		}
+		// 사용자가 help를 입력했을 때 힌트
+		else if (!strcmp(cmd, "help\n"))
+		{
+			// 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
+			hint(valid_cmd);
+		}
+		else
+		{
+			printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
+		}
 
-    }
-    return 0;
+	}
+	return 0;
 }
 
 int read_txt(char buf[], int n)
