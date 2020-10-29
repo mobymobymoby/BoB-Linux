@@ -4,8 +4,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#define CMD_SIZE 20 // 최대 19개의 문자 입력
-#define DIR_SIZE 30 // 최대 29개의 문자 입력
+#define CMD_SIZE 40 // 최대 39개의 문자 입력
+#define DIR_SIZE 40 // 최대 39개의 문자 입력
 #define BUF_SIZE 102400
 
 void hint(char valid_cmd[])
