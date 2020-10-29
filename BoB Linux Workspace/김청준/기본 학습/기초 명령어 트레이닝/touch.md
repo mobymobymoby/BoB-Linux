@@ -24,9 +24,11 @@ int run_command(char valid_cmd[])
 		getcwd(dir_buf, sizeof(dir_buf));
 		printf("Trainer@BoB:%s$ ", dir_buf);
 		int valid_len = strlen(valid_cmd);
-		fgets(cmd, valid_len+1, stdin);
-		// 입력 버퍼 삭제
-		__fpurge(stdin);
+		fgets(cmd, CMD_SIZE, stdin);
+		
+		// 나머지 입력 값 제거
+        	cmd[strlen(cmd)-1] = '\0';
+		
 		// 입력값 검증 부분
 		if (!strcmp(cmd, valid_cmd))
 		{
