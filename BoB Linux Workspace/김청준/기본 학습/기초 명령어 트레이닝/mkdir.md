@@ -63,7 +63,7 @@ int read_txt(char buf[], int n)
 		// 출력 버퍼 비우기. 출력 버퍼를 비우지 않으면 한 글자씩 출력되지 
 		fflush(stdout);
 		// 한 글자씩 출력되는 효과를 위한 sleep. 0으로 한다면 한번에 출력됨
-		usleep(3000);
+		usleep(300);
 	}
 	// 다음 배열의 인덱스로 넘어가기 위해 n+1을 리턴
 	return n + 1;
@@ -92,13 +92,14 @@ void training_mkdir(void)
 
 void next_quit()
 {
-	char cmd[CMD_SIZE];
-	printf("\n다음 명령어를 학습하시려면 'next'를, 종료하시려면 'quit'를 입력하세요.\n");
-	scanf("%s", cmd);
-	if (!strcmp(cmd, "next"))
-		return;
-	else
+	char select[CMD_SIZE];
+	printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
+	fgets(select, sizeof(select), stdin);
+	select[strlen(select)-1] = '\0';
+	if (!strcmp(select, "q"))
 		exit(0);
+	else
+		return;
 }
 
 int main()
