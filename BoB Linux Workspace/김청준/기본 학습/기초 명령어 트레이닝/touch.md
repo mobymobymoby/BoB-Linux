@@ -38,7 +38,7 @@ int run_command(char valid_cmd[])
 			break;
 		}
 		// 사용자가 help를 입력했을 때 힌트
-		else if (!strcmp(cmd, "help\n"))
+		else if (!strcmp(cmd, "help"))
 		{
 			// 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
 			hint(valid_cmd);
