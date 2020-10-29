@@ -65,6 +65,8 @@ int main(){
     sleep(5);
     printf("[사용 옵션]은 시스템 종료와 동일합니다.\n");
     sleep(3);
+    printf("시스템 강제 종료는 'shutdown -P [사용 옵션]'를 입력하면 됩니다.\n");
+    sleep(3);
     printf("\n");
 
     training("shutdown -r 5","shutdown 명령어를 사용하여 5분 후 시스템이 재부팅 되게 해보세요.\n (실제 반영되지는 않습니다.)");
