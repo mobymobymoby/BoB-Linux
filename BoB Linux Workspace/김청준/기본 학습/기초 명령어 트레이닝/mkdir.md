@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define CMD_SIZE 20
+#define DIR_SIZE 30
 #define BUF_SIZE 102400
 
 void hint(char valid_cmd[])
@@ -16,15 +17,16 @@ int run_command(char valid_cmd[])
 {
 
 	char cmd[CMD_SIZE];
-	char d_buf[30];
+	char dir_buf[DIR_SIZE];
 	while (1)
 	{
 		printf("\n");
-		getcwd(d_buf, sizeof(d_buf));
-		printf("Trainer@BoB:%s$ ", d_buf);
-		scanf("%[^\n]s", cmd);
+		getcwd(dir_buf, sizeof(dir_buf));
+		printf("Trainer@BoB:%s$ ", dir_buf);
+		int valid_len = strlen(valid_cmd);
+		fgets(cmd, valid_len+1, stdin);
 		// 입력 버퍼 삭제
-		getchar();
+		__fpurge(stdin);
 		// 입력값 검증 부분
 		if (!strcmp(cmd, valid_cmd))
 		{
@@ -34,7 +36,7 @@ int run_command(char valid_cmd[])
 			break;
 		}
 		// 사용자가 help를 입력했을 때 힌트
-		else if (!strcmp(cmd, "help"))
+		else if (!strcmp(cmd, "help\n"))
 		{
 			// 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
 			hint(valid_cmd);
@@ -59,7 +61,7 @@ int read_txt(char buf[], int n)
 		// 출력 버퍼 비우기. 출력 버퍼를 비우지 않으면 한 글자씩 출력되지 
 		fflush(stdout);
 		// 한 글자씩 출력되는 효과를 위한 sleep. 0으로 한다면 한번에 출력됨
-		usleep(30000);
+		usleep(3000);
 	}
 	// 다음 배열의 인덱스로 넘어가기 위해 n+1을 리턴
 	return n + 1;
