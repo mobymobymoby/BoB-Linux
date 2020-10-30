@@ -97,6 +97,8 @@ void training_cat(void)
 	// 디폴트 디렉토리로 change directory
 	chdir(def_dir);
 
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	system("echo 'Hello' > hello.txt");
 	system("echo 'BoB-Linux' > bob.txt");
 	int n = 0;

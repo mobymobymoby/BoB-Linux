@@ -96,6 +96,8 @@ void training_touch(void)
 	// 디폴트 디렉토리로 change directory
 	chdir(def_dir);
 
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	int n = 0;
 	system("touch test");
 	n = read_txt(buf, n);
