@@ -14,7 +14,7 @@ void hint(char valid_cmd[])
 }
 
 int run_command(char valid_cmd[])
-{	
+{
 	char cmd[CMD_SIZE];
 	char dir_buf[DIR_SIZE];
 	while (1)
@@ -24,10 +24,10 @@ int run_command(char valid_cmd[])
 		printf("Trainer@BoB:%s$ ", dir_buf);
 		int valid_len = strlen(valid_cmd);
 		fgets(cmd, sizeof(cmd), stdin);
-		
+
 		// 나머지 입력 값 제거
-        	cmd[strlen(cmd)-1] = '\0';
-		
+		cmd[strlen(cmd) - 1] = '\0';
+
 		// 입력값 검증 부분
 		if (!strcmp(cmd, valid_cmd))
 		{
@@ -96,13 +96,13 @@ void training_cat(void)
 
 	// 디폴트 디렉토리로 change directory
 	chdir(def_dir);
-	
-    system("echo 'Hello' > hello.txt");
-    system("echo 'BoB-Linux' > bob.txt");
+
+	system("echo 'Hello' > hello.txt");
+	system("echo 'BoB-Linux' > bob.txt");
 	int n = 0;
 	n = read_txt(buf, n);
-    system("ls");
-    n = read_txt(buf, n);
+	system("ls");
+	n = read_txt(buf, n);
 
 	// run_command의 인자로 특정 명령어를 넘겨주어 그 외의 입력값에 대해서 실행시키지 않음
 	run_command("cat hello.txt");
@@ -111,8 +111,8 @@ void training_cat(void)
 	n = read_txt(buf, n);
 	run_command("cat hello.txt bob.txt > test.txt");
 	n = read_txt(buf, n);
-    system("cat test.txt");
-    n = read_txt(buf, n);
+	system("cat test.txt");
+	n = read_txt(buf, n);
 
 	fclose(fp);
 	printf("\n");
@@ -123,7 +123,7 @@ void next_quit()
 	char select[CMD_SIZE];
 	printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
 	fgets(select, sizeof(select), stdin);
-	select[strlen(select)-1] = '\0';
+	select[strlen(select) - 1] = '\0';
 	if (!strcmp(select, "q"))
 		exit(0);
 	else
