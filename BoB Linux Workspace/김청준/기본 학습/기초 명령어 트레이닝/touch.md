@@ -10,46 +10,45 @@
 
 void hint(char valid_cmd[])
 {
-	printf("'%s'를 입력하세요.", valid_cmd);
+    printf("'%s'를 입력하세요.", valid_cmd);
 }
 
 int run_command(char valid_cmd[])
 {
+    char cmd[CMD_SIZE];
+    char dir_buf[DIR_SIZE];
+    while (1)
+    {
+        printf("\n");
+        getcwd(dir_buf, sizeof(dir_buf));
+        printf("Trainer@BoB:%s$ ", dir_buf);
+        int valid_len = strlen(valid_cmd);
+        fgets(cmd, sizeof(cmd), stdin);
 
-	char cmd[CMD_SIZE];
-	char dir_buf[DIR_SIZE];
-	while (1)
-	{
-		printf("\n");
-		getcwd(dir_buf, sizeof(dir_buf));
-		printf("Trainer@BoB:%s$ ", dir_buf);
-		int valid_len = strlen(valid_cmd);
-		fgets(cmd, sizeof(cmd), stdin);
-		
-		// 나머지 입력 값 제거
-        	cmd[strlen(cmd)-1] = '\0';
-		
-		// 입력값 검증 부분
-		if (!strcmp(cmd, valid_cmd))
-		{
-			printf("잘 입력하셨습니다.");
-			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
-			system(valid_cmd);
-			break;
-		}
-		// 사용자가 help를 입력했을 때 힌트
-		else if (!strcmp(cmd, "help"))
-		{
-			// 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
-			hint(valid_cmd);
-		}
-		else
-		{
-			printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
-		}
+        // 나머지 입력 값 제거
+        cmd[strlen(cmd) - 1] = '\0';
 
-	}
-	return 0;
+        // 입력값 검증 부분
+        if (!strcmp(cmd, valid_cmd))
+        {
+            printf("잘 입력하셨습니다.");
+            // 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
+            system(valid_cmd);
+            break;
+        }
+        // 사용자가 help를 입력했을 때 힌트
+        else if (!strcmp(cmd, "help"))
+        {
+            // 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
+            hint(valid_cmd);
+        }
+        else
+        {
+            printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
+        }
+
+    }
+    return 0;
 }
 
 int read_txt(char buf[], int n)
@@ -77,6 +76,26 @@ void training_touch(void)
     char buf[BUF_SIZE] = { 0, };
     fread(buf, sizeof(buf), 1, fp);
 
+    // 초기 작업 디렉토리 설정
+    char def_dir[40];
+    char rst_dir[40];
+
+    // 현재 사용자 계정을 %s 위치에 삽입하여 디폴트 디렉토리 설정
+    sprintf(def_dir, "/home/%s/tr", getlogin());
+
+    // 디폴트 디렉토리가 이미 있을 경우를 대비하여 삭제하는 명령어
+    // rm -rf [디폴트 디렉토리]의 문자열을 rst_dir에 입력
+    sprintf(rst_dir, "rm -rf %s", def_dir);
+    system(rst_dir);
+
+    // 디폴트 디렉토리를 생성
+    // mkdir [디폴트 디렉토리]의 문자열을 rst_dir에 입력
+    sprintf(rst_dir, "mkdir %s", def_dir);
+    system(rst_dir);
+
+    // 디폴트 디렉토리로 change directory
+    chdir(def_dir);
+
     int n = 0;
     system("touch test");
     n = read_txt(buf, n);
@@ -102,14 +121,14 @@ void training_touch(void)
 
 void next_quit()
 {
-	char select[CMD_SIZE];
-	printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
-	fgets(select, sizeof(select), stdin);
-	select[strlen(select)-1] = '\0';
-	if (!strcmp(select, "q"))
-		exit(0);
-	else
-		return;
+    char select[CMD_SIZE];
+    printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
+    fgets(select, sizeof(select), stdin);
+    select[strlen(select) - 1] = '\0';
+    if (!strcmp(select, "q"))
+        exit(0);
+    else
+        return;
 }
 
 int main()
@@ -176,6 +195,7 @@ $ touch [디렉토리에 없는 파일명]
 @
 
 아래는 현재 디렉토리에 있는 파일 목록입니다. testfile이라는 빈 파일이 생성된 것을 확인할 수 있습니다.
+@
 
 touch 명령어에 대한 학습이 끝났습니다.
 @

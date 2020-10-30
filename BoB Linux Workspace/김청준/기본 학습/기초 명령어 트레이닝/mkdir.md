@@ -14,8 +14,7 @@ void hint(char valid_cmd[])
 }
 
 int run_command(char valid_cmd[])
-{
-
+{	
 	char cmd[CMD_SIZE];
 	char dir_buf[DIR_SIZE];
 	while (1)
@@ -76,6 +75,27 @@ void training_mkdir(void)
 	fp = fopen("mkdir.txt", "r");
 	char buf[BUF_SIZE] = { 0, };
 	fread(buf, sizeof(buf), 1, fp);
+
+	// 초기 작업 디렉토리 설정
+    	char def_dir[40];
+    	char rst_dir[40];
+
+	// 현재 사용자 계정을 %s 위치에 삽입하여 디폴트 디렉토리 설정
+    	sprintf(def_dir, "/home/%s/tr", getlogin());
+
+    	// 디폴트 디렉토리가 이미 있을 경우를 대비하여 삭제하는 명령어
+    	// rm -rf [디폴트 디렉토리]의 문자열을 rst_dir에 입력
+    	sprintf(rst_dir, "rm -rf %s", def_dir);
+    	system(rst_dir);
+
+    	// 디폴트 디렉토리를 생성
+    	// mkdir [디폴트 디렉토리]의 문자열을 rst_dir에 입력
+    	sprintf(rst_dir, "mkdir %s", def_dir);
+    	system(rst_dir);
+
+    	// 디폴트 디렉토리로 change directory
+    	chdir(def_dir);
+	
 
 	int n = 0;
 	n = read_txt(buf, n);
