@@ -10,136 +10,136 @@
 
 void hint(char valid_cmd[])
 {
-    printf("'%s'를 입력하세요.", valid_cmd);
+	printf("'%s'를 입력하세요.", valid_cmd);
 }
 
 int run_command(char valid_cmd[])
 {
-    char cmd[CMD_SIZE];
-    char dir_buf[DIR_SIZE];
-    while (1)
-    {
-        printf("\n");
-        getcwd(dir_buf, sizeof(dir_buf));
-        printf("Trainer@BoB:%s$ ", dir_buf);
-        int valid_len = strlen(valid_cmd);
-        fgets(cmd, sizeof(cmd), stdin);
+	char cmd[CMD_SIZE];
+	char dir_buf[DIR_SIZE];
+	while (1)
+	{
+		printf("\n");
+		getcwd(dir_buf, sizeof(dir_buf));
+		printf("Trainer@BoB:%s$ ", dir_buf);
+		int valid_len = strlen(valid_cmd);
+		fgets(cmd, sizeof(cmd), stdin);
 
-        // 나머지 입력 값 제거
-        cmd[strlen(cmd) - 1] = '\0';
+		// 나머지 입력 값 제거
+		cmd[strlen(cmd) - 1] = '\0';
 
-        // 입력값 검증 부분
-        if (!strcmp(cmd, valid_cmd))
-        {
-            printf("잘 입력하셨습니다.");
-            // 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
-            system(valid_cmd);
-            break;
-        }
-        // 사용자가 help를 입력했을 때 힌트
-        else if (!strcmp(cmd, "help"))
-        {
-            // 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
-            hint(valid_cmd);
-        }
-        else
-        {
-            printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
-        }
-
-    }
-    return 0;
+		// 입력값 검증 부분
+		if (!strcmp(cmd, valid_cmd))
+		{
+			printf("잘 입력하셨습니다.");
+			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
+			system(valid_cmd);
+			break;
+		}
+		// 사용자가 help를 입력했을 때 힌트
+		else if (!strcmp(cmd, "help"))
+		{
+			// 힌트 출력, 힌트는 배열 valid_cmd를 출력하여 올바른 입력 값을 유도 
+			hint(valid_cmd);
+		}
+		else
+		{
+			printf("잘못된 명령어를 입력하셨습니다.\n힌트를 보려면 'help'를 입력해주세요.");
+		}
+	}
+	return 0;
 }
 
 int read_txt(char buf[], int n)
 {
-    // txt 파일을 읽어온 'buf' array에서 한 글자씩 읽어옴
-    // 글자를 읽는 것은 '@'를 만나거나 파일의 끝(NULL)이 될 때 까지
-    // 즉 @를 한 문단을 끝내는 플래그로 사용
-    for (; buf[n] != '@' && buf[n] != '\0'; n++)
-    {
-        printf("%c", buf[n]);
-        // 출력 버퍼 비우기. 출력 버퍼를 비우지 않으면 한 글자씩 출력되지 
-        fflush(stdout);
-        // 한 글자씩 출력되는 효과를 위한 sleep. 0으로 한다면 한번에 출력됨
-        usleep(300);
-    }
-    // 다음 배열의 인덱스로 넘어가기 위해 n+1을 리턴
-    return n + 1;
+	// txt 파일을 읽어온 'buf' array에서 한 글자씩 읽어옴
+	// 글자를 읽는 것은 '@'를 만나거나 파일의 끝(NULL)이 될 때 까지
+	// 즉 @를 한 문단을 끝내는 플래그로 사용
+	for (; buf[n] != '@' && buf[n] != '\0'; n++)
+	{
+		printf("%c", buf[n]);
+		// 출력 버퍼 비우기. 출력 버퍼를 비우지 않으면 한 글자씩 출력되지 
+		fflush(stdout);
+		// 한 글자씩 출력되는 효과를 위한 sleep. 0으로 한다면 한번에 출력됨
+		usleep(300);
+	}
+	// 다음 배열의 인덱스로 넘어가기 위해 n+1을 리턴
+	return n + 1;
 }
 
 
 void training_touch(void)
 {
-    FILE* fp;
-    fp = fopen("touch.txt", "r");
-    char buf[BUF_SIZE] = { 0, };
-    fread(buf, sizeof(buf), 1, fp);
+	FILE* fp;
+	fp = fopen("touch.txt", "r");
+	char buf[BUF_SIZE] = { 0, };
+	fread(buf, sizeof(buf), 1, fp);
 
-    // 초기 작업 디렉토리 설정
-    char def_dir[40];
-    char rst_dir[40];
+	// 초기 작업 디렉토리 설정
+	char def_dir[DIR_SIZE];
+	// rst_dir은 앞에 mkdir, rm -rf의 명령어가 더 들어가기 때문에 문자열의 길이를 10 늘려줌
+	char rst_dir[DIR_SIZE + 10];
 
-    // 현재 사용자 계정을 %s 위치에 삽입하여 디폴트 디렉토리 설정
-    sprintf(def_dir, "/home/%s/tr", getlogin());
+	// 현재 사용자 계정을 %s 위치에 삽입하여 디폴트 디렉토리 설정
+	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
 
-    // 디폴트 디렉토리가 이미 있을 경우를 대비하여 삭제하는 명령어
-    // rm -rf [디폴트 디렉토리]의 문자열을 rst_dir에 입력
-    sprintf(rst_dir, "rm -rf %s", def_dir);
-    system(rst_dir);
+	// 디폴트 디렉토리가 이미 있을 경우를 대비하여 삭제하는 명령어
+	// rm -rf [디폴트 디렉토리]의 문자열을 rst_dir에 입력
+	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
+	system(rst_dir);
 
-    // 디폴트 디렉토리를 생성
-    // mkdir [디폴트 디렉토리]의 문자열을 rst_dir에 입력
-    sprintf(rst_dir, "mkdir %s", def_dir);
-    system(rst_dir);
+	// 디폴트 디렉토리를 생성
+	// mkdir [디폴트 디렉토리]의 문자열을 rst_dir에 입력
+	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
+	system(rst_dir);
 
-    // 디폴트 디렉토리로 change directory
-    chdir(def_dir);
+	// 디폴트 디렉토리로 change directory
+	chdir(def_dir);
 
-    int n = 0;
-    system("touch test");
-    n = read_txt(buf, n);
-    system("stat test");
-    n = read_txt(buf, n);
-    // run_command의 인자로 특정 명령어를 넘겨주어 그 외의 입력값에 대해서 실행시키지 않음
-    run_command("touch test");
+	int n = 0;
+	system("touch test");
+	n = read_txt(buf, n);
+	system("stat test");
+	n = read_txt(buf, n);
+	// run_command의 인자로 특정 명령어를 넘겨주어 그 외의 입력값에 대해서 실행시키지 않음
+	run_command("touch test");
 
-    n = read_txt(buf, n);
-    system("stat test");
-    n = read_txt(buf, n);
-    run_command("touch -t 209901010101.01 test");
-    n = read_txt(buf, n);
-    system("stat test");
-    n = read_txt(buf, n);
-    run_command("touch testfile");
-    n = read_txt(buf, n);
-    system("ls");
-    n = read_txt(buf, n);
-    fclose(fp);
-    printf("\n");
+	n = read_txt(buf, n);
+	system("stat test");
+	n = read_txt(buf, n);
+	run_command("touch -t 209901010101.01 test");
+	n = read_txt(buf, n);
+	system("stat test");
+	n = read_txt(buf, n);
+	run_command("touch testfile");
+	n = read_txt(buf, n);
+	system("ls");
+	n = read_txt(buf, n);
+	fclose(fp);
+	printf("\n");
 }
 
 void next_quit()
 {
-    char select[CMD_SIZE];
-    printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
-    fgets(select, sizeof(select), stdin);
-    select[strlen(select) - 1] = '\0';
-    if (!strcmp(select, "q"))
-        exit(0);
-    else
-        return;
+	char select[CMD_SIZE];
+	printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
+	fgets(select, sizeof(select), stdin);
+	select[strlen(select) - 1] = '\0';
+	if (!strcmp(select, "q"))
+		exit(0);
+	else
+		return;
 }
 
 int main()
 {
-    // main 함수는 training_명령어 이름()과 next_quit() 함수로 구성됨
-    // 각 명령어 학습 단계를 마친 후 마지막에 트레이닝을 계속 할건지, 그만 할건지 여부를 물어본 후 입력 값에 따라 종료 또는 진행
-    training_touch();
-    next_quit();
-    // training_ls(); 
-    printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
-    return 0;
+	// main 함수는 training_명령어 이름()과 next_quit() 함수로 구성됨
+	// 각 명령어 학습 단계를 마친 후 마지막에 트레이닝을 계속 할건지, 그만 할건지 여부를 물어본 후 입력 값에 따라 종료 또는 진행
+	training_touch();
+	next_quit();
+	// training_ls(); 
+	printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
+	return 0;
 }
 ```
 
