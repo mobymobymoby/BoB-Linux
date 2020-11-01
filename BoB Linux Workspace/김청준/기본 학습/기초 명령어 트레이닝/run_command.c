@@ -21,7 +21,6 @@ int run_command(char valid_cmd[])
 			printf("잘 입력하셨습니다.\n\n");
 			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
 			system(valid_cmd);
-			printf("\n");
 			break;
 		}
 		else

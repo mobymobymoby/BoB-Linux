@@ -55,7 +55,7 @@ void training_cat(void)
 	
 	printf("$ cat [옵션] [파일1] [파일2] [파일3] ...\nhello.txt 파일과 bob.txt 파일을 한 번에 출력해보세요.(hello.txt 다음에 bob.txt를 쓰세요)\n");
 	run_command("cat hello.txt bob.txt");
-	
+	printf("\n");
 	printf("hello.txt의 내용인 \"Hello\"와 bob.txt의 내용인 \"BoB-Linux\"가 출력됩니다.\n");
 	getchar();
 	
