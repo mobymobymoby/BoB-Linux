@@ -1,5 +1,3 @@
-### mkdir.c 파일
-```
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -13,16 +11,16 @@ void training_mkdir(void)
 	// rst_dir은 앞에 mkdir, rm -rf의 명령어가 더 들어가기 때문에 문자열의 길이를 10 늘려줌
 	char rst_dir[DIR_SIZE + 10];
 	char rm_dir[DIR_SIZE + 10];
-	
+
 	// 현재 사용자 계정을 %s 위치에 삽입하여 디폴트 디렉토리 설정
 	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
-	
+
 	// 디폴트 디렉토리가 이미 있을 경우를 대비하여 삭제하는 명령어
 	// rm -rf [디폴트 디렉토리]의 문자열을 rst_dir에 입력
 	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
 	system(rst_dir);
-	strncpy(rst_dir, rm_dir, sizeof(rm_dir));
-	
+	strncpy(rm_dir, rst_dir, sizeof(rm_dir));
+
 	// 디폴트 디렉토리를 생성
 	// mkdir [디폴트 디렉토리]의 문자열을 rst_dir에 입력
 	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
@@ -30,7 +28,7 @@ void training_mkdir(void)
 
 	// 디폴트 디렉토리로 change directory
 	chdir(def_dir);
-	
+
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	int n = 0;
@@ -48,15 +46,14 @@ void training_mkdir(void)
 	getchar();
 	printf("mkdir -m 명령어를 이용해 'drwxr-x-w-' 권한을 가진 디렉토리 'test_dir2'를 생성해보세요.\n$ mkdir -m [권한] [생성할 디렉토리 이름]\n");
 	run_command("mkdir -m 752 test_dir2");
-	printf("-p 옵션은 하위 디렉토리를 함께 생성할 때 사용합니다.\n예를 들어 mkdir 명령어를 통해 '과일'이라는 디렉토리를 생성하고, 그 안에 '사과'라는 하위 디렉토리를 생성하고 싶을 때 사용합니다.");
+	printf("-p 옵션은 하위 디렉토리를 함께 생성할 때 사용합니다.\n예를 들어 mkdir 명령어를 통해 '과일'이라는 디렉토리를 생성하고, 그 안에 '사과'라는 하위 디렉토리를 생성하고 싶을 때 사용합니다.\n");
 	getchar();
 	printf("위의 예시처럼 생성하기 위해서는 'mkdir -p 과일/사과'를 입력하면 됩니다.\nmkdir -p 명령어를 이용해 'fruits' 디렉토리 안에 'apple' 디렉토리를 생성해보세요.\n");
 	run_command("mkdir -p fruits/apple");
-	
+
 	printf("mkdir 명령어에 대한 학습이 끝났습니다. \n");
-	
+
 	chdir(def_dir);
 	chdir("..");
 	system(rm_dir);
 }
-```
