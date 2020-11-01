@@ -1,4 +1,3 @@
-```
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -58,4 +57,3 @@ void training_mkdir(void)
 	chdir("..");
 	system(rm_dir);
 }
-```
