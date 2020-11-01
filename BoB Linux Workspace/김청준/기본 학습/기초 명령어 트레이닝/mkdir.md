@@ -53,15 +53,4 @@ void training_mkdir(void)
 	
 	printf("mkdir 명령어에 대한 학습이 끝났습니다. \n");
 }
-
-int main()
-{
-	// main 함수는 training_명령어 이름()과 next_quit() 함수로 구성됨
-	// 각 명령어 학습 단계를 마친 후 마지막에 트레이닝을 계속 할건지, 그만 할건지 여부를 물어본 후 입력 값에 따라 종료 또는 진행
-	training_mkdir();
-	next_quit();
-	// training_ls(); 
-	printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
-	return 0;
-}
 ```
