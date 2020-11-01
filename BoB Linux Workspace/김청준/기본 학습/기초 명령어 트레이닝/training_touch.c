@@ -47,9 +47,9 @@ void training_touch(void)
 	printf("먼저 미리 생성한 'test'라는 파일의 타임 스탬프 정보를 보여드리겠습니다.\n");
 	getchar();
 	printf("타임 스탬프를 보는 명령어는 'stat' 명령어 입니다. 이에 대해서는 '심화 명령어 트레이닝' 파트에서 다루게 됩니다.");
-	
+	getchar();
 	system("stat test");
-	printf("\n");
+	getchar();
 	
 	printf("Access, Modify, Change 다음에 있는 값이 각각 atime, mtime, ctime을 나타냅니다.\n");
 	getchar();
@@ -62,9 +62,9 @@ void training_touch(void)
 	run_command("touch test");
 	
 	printf("아래는 변경된 'test' 파일의 타임스탬프 입니다.\n");
-	
+	getchar();
 	system("stat test");
-	printf("\n");
+	getchar();
 	
 	printf("옵션 없이 사용하여 해당 파일을 현재 시간으로 변경할 수도 있지만, 자신이 원하는 시간으로 타임스탬프 값을 변경할 수도 있습니다.\n");
 	getchar();
@@ -95,9 +95,9 @@ void training_touch(void)
 	run_command("touch -t 209901010101.01 test");
 	
 	printf("아래는 변경된 'test' 파일의 타임스탬프 입니다.\n");
-	
+	getchar();
 	system("stat test");
-	printf("\n");
+	getchar();
 	
 	printf("-a 옵션은 현재 시간으로 파일의 atime과 mtime을 변경합니다.\n");
 	getchar();
@@ -116,7 +116,7 @@ void training_touch(void)
 	
 	printf("아래는 현재 디렉토리에 있는 파일 목록입니다. testfile이라는 빈 파일이 생성된 것을 확인할 수 있습니다.\n");
 	system("ls");
-	printf("\n");
+	getchar();
 	
 	printf("touch 명령어에 대한 학습이 끝났습니다.\n");
 	
