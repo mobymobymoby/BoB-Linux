@@ -70,9 +70,11 @@ void training_cat(void)
 	printf("cat 명령어를 이용하여 hello.txt와 bob.txt 파일의 내용을 test.txt로 합쳐보세요.\n");
 	run_command("cat hello.txt bob.txt > test.txt");
 	
-	printf("아래의 내용은 새로 만들어진 test.txt 파일을 cat 명령어를 통해 출력한 내용입니다.\n두 파일의 내용이 합쳐졌음을 알 수 있습니다. 즉, cat hello.txt bob.txt의 출력 결과가 test.txt 파일에 저장(연결)됩니다.\n");
-	
+	printf("아래의 내용은 새로 만들어진 test.txt 파일을 cat 명령어를 통해 출력한 내용입니다.\n");
 	system("cat test.txt");
+	getchar();
+	
+	printf("두 파일의 내용이 합쳐졌음을 알 수 있습니다. 즉, cat hello.txt bob.txt의 출력 결과가 test.txt 파일에 저장(연결)됩니다.\n");
 	getchar();
 	
 	printf("cat을 이용해 이미 존재하는 파일에 덮어쓰는게 아닌, 내용을 추가해 덧붙일 수 있습니다.\n");
