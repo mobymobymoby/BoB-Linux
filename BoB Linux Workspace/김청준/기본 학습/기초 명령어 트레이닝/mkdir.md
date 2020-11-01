@@ -4,41 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#define CMD_SIZE 40 // 최대 39개의 문자 입력
-#define DIR_SIZE 40 // 최대 39개의 문자 입력
-#define BUF_SIZE 102400
-
-int run_command(char valid_cmd[])
-{	
-	char cmd[CMD_SIZE];
-	char dir_buf[DIR_SIZE];
-	while (1)
-	{
-		printf("\n");
-		getcwd(dir_buf, sizeof(dir_buf));
-		printf("Trainer@BoB:%s$ ", dir_buf);
-		int valid_len = strlen(valid_cmd);
-		fgets(cmd, sizeof(cmd), stdin);
-		
-		// 나머지 입력 값 제거
-        	cmd[strlen(cmd)-1] = '\0';
-		
-		// 입력값 검증 부분
-		if (!strcmp(cmd, valid_cmd))
-		{
-			printf("잘 입력하셨습니다.\n");
-			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
-			system(valid_cmd);
-			break;
-		}
-		else
-		{
-			printf("잘못된 명령어를 입력하셨습니다.\n");
-		}
-
-	}
-	return 0;
-}
+#include "common_func.h"
 
 void training_mkdir(void)
 {
@@ -88,18 +54,6 @@ void training_mkdir(void)
 	printf("mkdir 명령어에 대한 학습이 끝났습니다. \n");
 }
 
-void next_quit()
-{
-	char select[CMD_SIZE];
-	printf("\n다음 명령어를 학습하시려면 Enter를, 종료하시려면 'q'를 입력하세요.\n");
-	fgets(select, sizeof(select), stdin);
-	select[strlen(select)-1] = '\0';
-	if (!strcmp(select, "q"))
-		exit(0);
-	else
-		return;
-}
-
 int main()
 {
 	// main 함수는 training_명령어 이름()과 next_quit() 함수로 구성됨
@@ -110,9 +64,4 @@ int main()
 	printf("이 메시지가 출력된다면 next 기능이 정상적으로 실행된 것\n");
 	return 0;
 }
-```
-
-### mkdir.txt
-```
-
 ```
