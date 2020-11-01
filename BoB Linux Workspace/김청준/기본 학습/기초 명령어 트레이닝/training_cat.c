@@ -34,9 +34,11 @@ void training_cat(void)
 	system("echo 'BoB-Linux' > bob.txt");
 	int n = 0;
 	printf("이번에 학습할 명령어는 'cat'입니다.\ncat 명령어는 'concatenate'의 약자로, 두 개 이상의 파일을 연결(concatenate)하여 출력할 때 사용합니다.\n");
+	getchar();
 	printf("간단하게 생각하면, 여러 파일의 내용을 터미널로 연결시켜 출력한다고 보면 됩니다.\n");
 	getchar();
 	printf("기본 사용법은 다음과 같습니다.\n$ cat [옵션] [파일명]\n");
+	getchar();
 	printf("다음은 현재 디렉토리에 있는 파일들의 목록입니다.\n");
 	system("ls");
 	getchar();
@@ -45,6 +47,7 @@ void training_cat(void)
 	run_command("cat hello.txt");
 
 	printf("hello.txt의 내용인 "Hello"가 출력되었습니다.");
+	printf("\n");
 	printf("cat 명령어는 한 번에 두 개의 파일을 연결해서 출력할 수도 있습니다.\n그럴 때에는 간단히 파일명을 띄어쓰기로 구분해서 나열하면 됩니다.\n");
 	getchar();
 	
@@ -69,6 +72,7 @@ void training_cat(void)
 	printf("아래의 내용은 새로 만들어진 test.txt 파일을 cat 명령어를 통해 출력한 내용입니다.\n두 파일의 내용이 합쳐졌음을 알 수 있습니다. 즉, cat hello.txt bob.txt의 출력 결과가 test.txt 파일에 저장(연결)됩니다.\n");
 	
 	system("cat test.txt");
+	getchar();
 	
 	printf("cat을 이용해 이미 존재하는 파일에 덮어쓰는게 아닌, 내용을 추가해 덧붙일 수 있습니다.\n");
 	getchar();
