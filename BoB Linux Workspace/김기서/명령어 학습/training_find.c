@@ -19,5 +19,7 @@ void training_find()
     n = read_txt(buf, n);
 	fclose(fp);
 
+	system("rm find_test_file");
+
 	printf("\n");
 }

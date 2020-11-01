@@ -1,21 +1,18 @@
 #include <stdio.h>
 
-#define BUF_SIZE 1024
-
 void training_clear()
 {
-	FILE*  fp = NULL;
-    int    n  = 0;
-	char   buf[BUF_SIZE] = {0,};
-
-	fp = fopen("clear.txt", "r");
-	fread(buf, sizeof(buf), 1, fp);
-
-	n = read_txt(buf, n);
+	printf("이번에 학습할 명령어는 'clear' 입니다. 말그대로 지우다(clear), 터미널 화면을 싹 지워줍니다.");
+	getchar();
+	printf("바로 clear를 입력해봅시다.");
 	run_command("clear");
 
-    n = read_txt(buf, n);
-	fclose(fp);
+	printf("위에 있던 내용들이 다 지워졌나요? 어떤가요, 정말 쉽죠?");
+	getchar();
+	printf("항상 새 것과 같은 터미널에서 작업하고 싶다면 clear를 기억해주세요!");
+	gethar();
+	printf("Ctrl + L 로도 지울 수 있답니다.");
+	getchar();
 
-	printf("\n");
+	printf("clear 명령어에 대한 학습이 끝났습니다.\n");
 }
