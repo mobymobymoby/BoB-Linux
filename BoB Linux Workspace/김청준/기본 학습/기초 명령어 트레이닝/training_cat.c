@@ -46,7 +46,7 @@ void training_cat(void)
 	printf("hello.txt 파일의 내용을 cat 명령어를 이용해 출력해보세요.\n");
 	run_command("cat hello.txt");
 
-	printf("hello.txt의 내용인 "Hello"가 출력되었습니다.");
+	printf("hello.txt의 내용인 \"Hello\"가 출력되었습니다.");
 	printf("\n");
 	printf("cat 명령어는 한 번에 두 개의 파일을 연결해서 출력할 수도 있습니다.\n그럴 때에는 간단히 파일명을 띄어쓰기로 구분해서 나열하면 됩니다.\n");
 	getchar();
@@ -54,7 +54,7 @@ void training_cat(void)
 	printf("$ cat [옵션] [파일1] [파일2] [파일3] ...\nhello.txt 파일과 bob.txt 파일을 한 번에 출력해보세요.(hello.txt 다음에 bob.txt를 쓰세요)\n");
 	run_command("cat hello.txt bob.txt");
 	
-	printf("hello.txt의 내용인 "Hello"와 bob.txt의 내용인 "BoB-Linux"가 출력됩니다.\n");
+	printf("hello.txt의 내용인 \"Hello\"와 bob.txt의 내용인 \"BoB-Linux\"가 출력됩니다.\n");
 	getchar();
 	
 	printf("cat은 보통 '리다이렉션(redirection)' 이라는 기호 '>'와 함께 자주 쓰입니다.\n지금까지는 간단히 터미널에 파일의 내용을 출력시켰지만, > 기호를 이용하면 특정 파일의 내용을 다른 파일에 연결할 수 있습니다.\n");
