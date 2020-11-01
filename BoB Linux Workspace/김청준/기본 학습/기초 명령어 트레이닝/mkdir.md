@@ -55,6 +55,8 @@ void training_mkdir(void)
 	
 	printf("mkdir 명령어에 대한 학습이 끝났습니다. \n");
 	
+	chdir(def_dir);
+	chdir("..");
 	system(rm_dir);
 }
 ```
