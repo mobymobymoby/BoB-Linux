@@ -76,7 +76,7 @@ void training_cat(void)
 	printf("사용법은 다음과 같습니다.\n$ cat [파일 1] >> [대상 파일]\n");
 	getchar();
 
-	printf("만약 [파일 1]의 내용이 "Linux"고, [대상 파일]의 내용이 "BoB"이라면 명령어를 실행 후 [대상 파일]의 내용은\n");
+	printf("만약 [파일 1]의 내용이 \"Linux\"고, [대상 파일]의 내용이 \"BoB\"이라면 명령어를 실행 후 [대상 파일]의 내용은\n");
 	getchar();
 	
 	printf("\"BoB\"\n\"Linux\"\n가 됩니다. 여기서 주의할 점은 \"BoBLinux\"나 \"BoB Linux\"가 아닌, '개행(new line)'으로 두 파일이 구분된다는 점 입니다.\n");
