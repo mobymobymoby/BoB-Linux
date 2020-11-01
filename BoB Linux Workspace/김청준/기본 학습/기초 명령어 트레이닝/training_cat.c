@@ -41,6 +41,7 @@ void training_cat(void)
 	printf("기본 사용법은 다음과 같습니다.\n$ cat [옵션] [파일명]\n");
 	getchar();
 	printf("다음은 현재 디렉토리에 있는 파일들의 목록입니다.\n");
+	printf("\n");
 	system("ls");
 	getchar();
 	
@@ -71,6 +72,7 @@ void training_cat(void)
 	run_command("cat hello.txt bob.txt > test.txt");
 	
 	printf("아래의 내용은 새로 만들어진 test.txt 파일을 cat 명령어를 통해 출력한 내용입니다.\n");
+	printf("\n");
 	system("cat test.txt");
 	getchar();
 	
