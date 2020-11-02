@@ -33,7 +33,7 @@ void training_cat(void)
 
 	system("echo 'Hello' > hello.txt");
 	system("echo 'BoB-Linux' > bob.txt");
-	int n = 0;
+
 	printf("이번에 학습할 명령어는 'cat'입니다.\ncat 명령어는 'concatenate'의 약자로, 두 개 이상의 파일을 연결(concatenate)하여 출력할 때 사용합니다.\n");
 	getchar();
 	printf("간단하게 생각하면, 여러 파일의 내용을 터미널로 연결시켜 출력한다고 보면 됩니다.\n");
