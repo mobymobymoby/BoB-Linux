@@ -1,3 +1,5 @@
+#include "common_func.h"
+
 void training_instruction(void)
 {
 	// 초기 작업 디렉토리 설정
