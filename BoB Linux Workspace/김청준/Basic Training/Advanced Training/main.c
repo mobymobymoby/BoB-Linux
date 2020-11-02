@@ -1,4 +1,4 @@
 int main()
 {
-    training_passwd();
+    training_lsblk();
 }
