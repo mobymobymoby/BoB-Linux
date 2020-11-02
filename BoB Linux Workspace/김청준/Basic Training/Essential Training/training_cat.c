@@ -47,7 +47,7 @@ void training_cat(void)
 	
 	printf("hello.txt 파일의 내용을 cat 명령어를 이용해 출력해보세요.\n");
 	run_command("cat hello.txt");
-
+	printf("\n");
 	printf("hello.txt의 내용인 \"Hello\"가 출력되었습니다.");
 	printf("\n");
 	printf("cat 명령어는 한 번에 두 개의 파일을 연결해서 출력할 수도 있습니다.\n그럴 때에는 간단히 파일명을 띄어쓰기로 구분해서 나열하면 됩니다.\n");
