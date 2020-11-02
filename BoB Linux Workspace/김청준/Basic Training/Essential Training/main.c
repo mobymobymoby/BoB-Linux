@@ -1,4 +1,28 @@
 int main()
 {
-    training_passwd();
+    /*
+    training_whoami();
+    next_quit();
+    training_pwd();
+    next_quit();
+    training_ls();
+    next_quit();
+    */
+    training_mkdir();
+    next_quit();
+    training_touch();
+    next_quit();
+    training_cat();
+    /*
+    next_quit();
+    training_cd();
+    next_quit();
+    training_mv();
+    next_quit();
+    training_cp();
+    next_quit();
+    training_rm();
+    next_quit();
+    training_clear();
+    */
 }
