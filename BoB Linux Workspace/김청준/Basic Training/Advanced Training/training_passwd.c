@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "common_func.h"
 
 void training_passwd(void)
@@ -43,7 +44,7 @@ void training_passwd(void)
     getchar();
     printf("기본적인 사용법은 다음과 같습니다.\n");
     getchar();
-    printf("$ adduser [옵션] [생성할 계정 이름]");
+    printf("# adduser [옵션] [생성할 계정 이름]");
     getchar();
     printf("아무런 옵션을 주지 않고, adduser [생성할 계정 이름]의 문법으로 사용하면 지정한 이름으로 계정을 생성합니다.\n");
     getchar();
@@ -123,7 +124,7 @@ void training_passwd(void)
     getchar();
     
     printf("아래는 adduser의 옵션입니다.\n");
-    printf("$ adduser [옵션] [생성할 계정 이름]\n");
+    printf("# adduser [옵션] [생성할 계정 이름]\n");
     printf("-u : 사용자 계정의 UID를 지정하여 생성합니다. 앞에서는 이 옵션을 주지 않아 UID가 자동 할당 되었습니다.\n");
     printf("-g : 사용자 계정의 GID를 지정합니다. 앞에서는 이 옵션을 주지 않아 UID가 자동 할당 되었습니다.\n");
     printf("-d : 사용자의 홈 디렉토리를 지정합니다. 이 옵션을 주지 않으면 '/home/[사용자 계정명]' 디렉토리로 지정됩니다.\n");
@@ -136,8 +137,16 @@ void training_passwd(void)
     getchar();
     printf("기본 사용법은 다음과 같습니다.\n");
     getchar();
+    printf("# userdel [옵션] [삭제할 계정명]");
+    getchar();
+    printf("-r 옵션을 추가하면 삭제할 때 해당 사용자의 홈 디렉토리까지 삭제합니다.\n");
+    getchar();
 
+    printf("위에서 생성한 'user1'은 passwd 부분에서 사용할 것이기 때문에 지우지 않고 진행하곘습니다.\n");
+    getchar();
 
+    printf("계정을 생성하고 삭제하는 방법을 익혔습니다.\n다음으로는 계정을 관리하는 passwd 명령어 입니다.\n");
+    getchar();
     printf("passwd 명령어는 'password'의 약자로, 계정의 비밀번호와 관련된 명령어입니다.\n");
     getchar();
     printf("기본적인 사용법은 아무런 옵션도 주지 않고 사용하는 것입니다.\n");
@@ -155,7 +164,7 @@ void training_passwd(void)
     getchar();
     printf("옵션과 함께 사용할 때 기본 문법은 다음과 같습니다.\n");
     getchar();
-    printf("$ passwd [옵션] [사용자 계정]\n");
+    printf("$ passwd [옵션] [사용자 계정명]\n");
     getchar();
 
     printf("옵션을 주지 않고 passwd [사용자 계정]으로 사용하면 [사용자 계정]에 해당하는 계정의 비밀번호를 변경할 수 있습니다.\n");
@@ -170,7 +179,59 @@ void training_passwd(void)
 
     printf("다시 passwd 명령어로 돌아와서, 사용자의 정보을 보기 위해서는 -S(status의 약자) 옵션을 사용합니다.\n");
     getchar();
-    
+    printf("passwd 명령어와 -S 옵션을 이용해 앞에서 생성한 'user1' 계정의 정보를 확인해보세요.\n");
+    getchar();
+    printf("$ passwd [옵션] [사용자 계정명]\n");
+    fake_run_command("passwd -S user1");
+
+    // 현재 날짜를 출력하기 위한 코드
+    // 위에서 user1이라는 계정을 생성한 것처럼 보이도록 했으므로, 최근 패스워드 변경 날짜는 오늘이 됨
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+
+    printf("user1 P %02d/%02d/%d 0 99999 7 -1", tm.tm_mon+1, tm.tm_mday, tm.tm_year+1900);
+    printf("\n");
+    printf("출력 결과는 총 7개의 필드로 나누어집니다.\n");
+    getchar();
+    printf("첫번째 필드는 'user1'에 해당하며 계정의 이름을 표시합니다.\n");
+    getchar();
+    printf("두번째 필드는 'P'에 해당하며 패스워드의 상태를 나타냅니다.\n");
+    printf("패스워드 잠김은 'L', 패스워드 없음은 'NP', 사용 가능한 패스워드는 'P'로 표시됩니다.\n");
+    getchar();
+    printf("세번째 필드는 '%02d/%02d/%d'에 해당하며 가장 최근의 패스워드 변경 일자(MM/DD/YYYY)를 표시합니다.\n", tm.tm_mon+1, tm.tm_mday, tm.tm_year+1900);
+    getchar();
+    printf("네번째 필드는 '0'에 해당하며 패스워드 변경까지 최소 일자를 나타냅니다.\n");
+    printf("만약 해당 필드가 '5'로 되어 있다면, 패스워드를 변경한 후 5일간은 다시 패스워드를 변경하지 못합니다.\n");
+    getchar();
+    printf("다섯번째 필드는 '99999'에 해당하며 패스워드 변경까지 최대 일자를 나타냅니다.\n");
+    printf("만약 해당 필드가 '30'으로 되어 있다면, 패스워드 변경을 한 지 30일이 지난 후에 패스워드가 만료됩니다.\n");
+    getchar();
+    printf("여섯번째 필드는 '7'에 해당하며 패스워드 만료를 알리는 경고 기간을 표시합니다.\n");
+    printf("'7'이라고 되어 있다면, 비밀번호 만료 기간 7일 전에 경고 메시지를 출력해줍니다.\n");
+    getchar();
+    printf("일곱번째 필드는 '-1'에 해당하며 패스워드가 만료되고 패스워드가 Lock 되기 까지의 유예 기간을 표시합니다.\n");
+    printf("패스워드 만료 기간이 지난 후 해당 기간이 지나면 패스워드의 상태는 잠김(Lock)상태가 됩니다.\n");
+    getchar();
+
+    printf("-a 옵션은 -S 옵션과 같이 쓰이는 옵션으로, 'all'을 의미하며 모든 사용자에 대한 passwd -S 명령어를 실행합니다.\n");
+    getchar();
+    printf("-l 옵션은 사용자의 패스워드를 잠김(Lock) 상태로 만들어 로그인을 막습니다.\n");
+    getchar();
+    printf("-d 옵션은 사용자의 패스워드를 제거합니다. 패스워드가 제거된 계정은 패스워드 없이 로그인이 가능합니다.\n");
+    getchar();
+    printf("위에서 살펴본 것 처럼 사용자를 관리하는 명령어는 해당 시스템에 속해 있는 계정을 마음대로 삭제하거나 패스워드를 변경할 수 있습니다.\n");
+    getchar();
+    printf("root 권한으로만 사용자 관리 명령어를 사용할 수 있는 이유는 바로 이것 때문입니다.\n");
+    getchar();
+
+    printf("마지막으로 지금까지 실습에 이용했던 'user1' 계정을 삭제하겠습니다.\n");
+    getchar();
+    printf("-r 옵션을 이용해서 'user1'의 홈 디렉토리와 계정을 삭제하세요.\n");
+    printf("# userdel [옵션] [삭제할 계정명]\n");
+    fake_run_command("userdel -r user1");
+
+    printf("계정 관리 명령어(adduser, userdel, passwd) 학습이 끝났습니다.\n");
+    getchar();
 
     // Delete default directory
 	chdir(def_dir);
