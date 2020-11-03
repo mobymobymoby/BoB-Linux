@@ -41,7 +41,7 @@ void training_ping(void)
 	getchar();
 	printf("ICMP 패킷을 전송받은 서버는 해당 패킷을 받았다는 의미로 'ICMP Reply'를 전송할 수도 있습니다.\n");
 	getchar();
-	printf("여기서 할수도 있다는 의미는, naver와 같은 대부분의 서버는 보안상의 이유로 ping에 대한 응답을 하지 않습니다.\n");
+	printf("여기서 할수도 있다는 의미는, naver와 같은 대부분의 서버는 보안상의 이유로 ping을 차단합니다.\n");
 	getchar();
 	printf("백문이불여일견. 직접 google과 naver에 ping을 보내며 실습을 진행하도록 합시다\n");
 	getchar();
@@ -77,7 +77,7 @@ void training_ping(void)
 	printf("\n");
 	printf("ping을 보냈다는 메시지만 출력되며 더 이상의 메시지가 출력되지 않습니다.\n");
 	getchar();
-	printf("이는 naver 측에서 ICMP 패킷에 대한 reply를 전송하지 않기 때문입니다.\n");
+	printf("이는 naver 측에서 ICMP 패킷을 차단하기 때문입니다.\n우리의 ICMP Request가 도달하지 않으므로, Reply 또한 오지 않아 응답이 없게 됩니다.\n");
 	getchar();
 
 	printf("이제부터는 ping의 옵션에 대해 알아보겠습니다.\n");
