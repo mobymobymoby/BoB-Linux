@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <unistd.h> // sleep, getcwd, access í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-#include <stdlib.h> // system í•¨ìˆ˜
-#define MAX_LINE 30 // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
+#include <unistd.h> // sleep, getcwd, access ÇÔ¼ö
+#include <string.h> // strncmp ÇÔ¼ö 
+#include <stdlib.h> // system ÇÔ¼ö
+#define MAX_LINE 30 // ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ÁöÁ¤
 
 int training(char test[],char guide[]){    
     char cmd[MAX_LINE+1]={}; 
@@ -15,12 +15,12 @@ int training(char test[],char guide[]){
         } else {
             ++num;
         }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ½Ç½À ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((num <= 1) || (num >= MAX_LINE)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
+    // ÃÖ¼Ò, ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ¹ÌÃæÁ·½Ã ÇÔ¼ö Á¾·á
 
-    printf("[ì‹¤ìŠµ] %s\n",guide);
+    printf("[½Ç½À] %s\n",guide);
     getcwd(d_buf, sizeof(d_buf));
 	printf("Trainer@BoB:%s$ ", d_buf);
     fgets(cmd,30,stdin);
@@ -32,13 +32,12 @@ int training(char test[],char guide[]){
         } else {
             ++num2;
         }
-    } // ì…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ÀÔ·Â¹ŞÀº ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
         system(test);
-        printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        printf("\n");
-        sleep(2);
+        printf("Àß ÇÏ¼Ì½À´Ï´Ù!\n");
+        pause();
         return 0;
     } else {
         training(test,guide);
@@ -48,41 +47,34 @@ int training(char test[],char guide[]){
 void file_check(){
     int Result = access("./index.html", 0 );
     if (Result == 0) remove("./index.html");
-} // íŒŒì¼ ì¡´ì¬ í™•ì¸ í›„, ì¡´ì¬ì‹œ ì‚­ì œ
+} // ÆÄÀÏ Á¸Àç È®ÀÎ ÈÄ, Á¸Àç½Ã »èÁ¦
+
+void pause(){
+    getchar();
+    fflush(stdin);
+}
 
 int main(){
-    printf("wget ëª…ë ¹ì–´ëŠ” ì›¹ ìƒì— ìˆëŠ” íŒŒì¼ì„ ë‹¤ìš´ë°›ëŠ” ëª…ë ¹ì–´ì´ë©°,\n");
-    sleep(3);
-    printf("ì§€ì›ë˜ëŠ” í”„ë¡œí† ì½œì€ HTTP, HTTPS, FTPê°€ ìˆìŠµë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("wget ¸í·É¾î´Â À¥ »ó¿¡ ÀÖ´Â ÆÄÀÏÀ» ´Ù¿î¹Ş´Â ¸í·É¾îÀÌ¸ç,\n");
+    printf("Áö¿øµÇ´Â ÇÁ·ÎÅäÄİÀº HTTP, HTTPS, FTP°¡ ÀÖ½À´Ï´Ù.\n");
+    pause();
 
-    printf("ê¸°ë³¸ì ìœ¼ë¡œ ì›¹ ìƒì— ìˆëŠ” íŒŒì¼ì„ ë‹¤ìš´ë°›ì„ ë•ŒëŠ”\n");
-    sleep(2);
-    printf("'wget [URL ë§í¬]'ì™€ ê°™ì´ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
-    printf("\n");
-    sleep(3);
+    printf("±âº»ÀûÀ¸·Î À¥ »ó¿¡ ÀÖ´Â ÆÄÀÏÀ» ´Ù¿î¹ŞÀ» ¶§´Â\n");
+    printf("'wget [URL ¸µÅ©]'¿Í °°ÀÌ »ç¿ëÇÕ´Ï´Ù.\n");
+    pause();
 
-   file_check();
-   training("wget https://www.naver.com","ë„¤ì´ë²„(https://www.naver.com)ì˜ ì›¹ í˜ì´ì§€ íŒŒì¼ì„ ë‹¤ìš´ë°›ì•„ë³´ì„¸ìš”.");
-   file_check();
-    // íŠ¸ë ˆì´ë‹ ì‹œì‘
+    file_check();
+    training("wget https://www.naver.com","³×ÀÌ¹ö(https://www.naver.com)ÀÇ À¥ ÆäÀÌÁö ÆÄÀÏÀ» ´Ù¿î¹Ş¾Æº¸¼¼¿ä.");
+    file_check();
+    // Æ®·¹ÀÌ´× ½ÃÀÛ
 
-    printf("[ê¸°íƒ€ ìœ ìš©í•œ ì˜µì…˜ë“¤]\n");
-    sleep(2);
-    printf("wget -c [URL] : íŒŒì¼ ì´ì–´ë°›ê¸°\n");
-    sleep(3);
-    printf("wget -0 [URL] : íŒŒë¼ë¯¸í„° í˜•íƒœì˜ ë§í¬ì—ì„œ íŒŒì¼ ë‹¤ìš´ë¡œë“œ\n");
-    sleep(3);
-    printf("wget -r [URL] : ë””ë ‰í„°ë¦¬ êµ¬ì¡°ë¥¼ ìœ ì§€í•œì±„ ë‹¤ìš´ë¡œë“œ\n");
-    sleep(3);
-    printf("wget -nd -r --accept=[í™•ì¥ì] [URL] : íŠ¹ì • í™•ì¥ì íŒŒì¼ë§Œ ë‹¤ìš´ë¡œë“œ\n");
-    sleep(4);
-    printf("wget -nd -r --reject=[í™•ì¥ì] [URL] : íŠ¹ì • í™•ì¥ì íŒŒì¼ë§Œ ë¹¼ê³  ë‹¤ìš´ë¡œë“œ\n");
-    sleep(4);
-    printf("\n");
-
-    printf("ì´ì™€ ê°™ì´ ì˜µì…˜ì„ ì‚¬ìš©í•˜ë©´ ë”ìš± ìœ ìš©í•˜ê²Œ í™œìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("[±âÅ¸ À¯¿ëÇÑ ¿É¼Çµé]\n");
+    printf("wget -c [URL] : ÆÄÀÏ ÀÌ¾î¹Ş±â\n");
+    printf("wget -0 [URL] : ÆÄ¶ó¹ÌÅÍ ÇüÅÂÀÇ ¸µÅ©¿¡¼­ ÆÄÀÏ ´Ù¿î·Îµå\n");
+    printf("wget -r [URL] : µğ·ºÅÍ¸® ±¸Á¶¸¦ À¯ÁöÇÑÃ¤ ´Ù¿î·Îµå\n");
+    printf("wget -nd -r --accept=[È®ÀåÀÚ] [URL] : Æ¯Á¤ È®ÀåÀÚ ÆÄÀÏ¸¸ ´Ù¿î·Îµå\n");
+    printf("wget -nd -r --reject=[È®ÀåÀÚ] [URL] : Æ¯Á¤ È®ÀåÀÚ ÆÄÀÏ¸¸ »©°í ´Ù¿î·Îµå\n");
+    printf("ÀÌ¿Í °°ÀÌ ¿É¼ÇÀ» »ç¿ëÇÏ¸é ´õ¿í À¯¿ëÇÏ°Ô È°¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.\n");
+    pause();
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }
