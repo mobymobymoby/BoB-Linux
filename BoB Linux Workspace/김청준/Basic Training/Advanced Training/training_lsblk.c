@@ -38,8 +38,7 @@ void training_lsblk(void)
 	printf("아무런 옵션 없이 lsblk를 입력해 현재 연결되어 있는 블록 디바이스의 정보를 확인할 수 있습니다.\n");
 	getchar();
 	printf("옵션 없이 lsblk를 입력해 디바이스의 정보를 확인해보세요\n사용법은 아래와 같습니다.\n");
-	printf("$ lsblk [옵션]");
-	getchar();
+	printf("$ lsblk [옵션]\n");
 	run_command("lsblk");
 	getchar();
 	printf("첫번째 필드인 'NAME'은 해당 디바이스의 이름을 나타냅니다.\n");

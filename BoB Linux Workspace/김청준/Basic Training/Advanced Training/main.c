@@ -1,4 +1,4 @@
 int main()
 {
-    training_group();
+    training_mkfs();
 }
