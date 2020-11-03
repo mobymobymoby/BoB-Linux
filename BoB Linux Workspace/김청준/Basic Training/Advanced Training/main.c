@@ -1,4 +1,4 @@
 int main()
 {
-    training_mkfs();
+    training_ping();
 }
