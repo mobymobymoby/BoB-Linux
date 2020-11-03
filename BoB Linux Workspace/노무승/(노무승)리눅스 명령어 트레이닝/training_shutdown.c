@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-// #include <stdlib.h> // system í•¨ìˆ˜
+#include <unistd.h> // sleep, getcwd ÇÔ¼ö
+#include <string.h> // strncmp ÇÔ¼ö 
+// #include <stdlib.h> // system ÇÔ¼ö
 
 int training(char test[],char guide[]){
-    char cmd[21]={}; // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
+    char cmd[21]={}; // ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ÁöÁ¤
     char d_buf[30]={};
     int num=0,num2=0;
 
@@ -14,12 +14,12 @@ int training(char test[],char guide[]){
         } else {
             ++num;
         }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ½Ç½À ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((num <= 1) || (num >= 20)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
+    // ÃÖ¼Ò, ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ¹ÌÃæÁ·½Ã ÇÔ¼ö Á¾·á
 
-    printf("[ì‹¤ìŠµ] %s\n",guide);
+    printf("[½Ç½À] %s\n",guide);
     getcwd(d_buf, sizeof(d_buf));
 	printf("Trainer@BoB:%s$ ", d_buf);
     fgets(cmd,20,stdin);
@@ -31,59 +31,50 @@ int training(char test[],char guide[]){
         } else {
             ++num2;
         }
-    } // ì…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ÀÔ·Â¹ŞÀº ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
-        printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        printf("\n");
-        sleep(2);
+        printf("Àß ÇÏ¼Ì½À´Ï´Ù!\n");
+        pause();
         return 0;
     } else {
         training(test,guide);
     }
 }
 
+void pause(){
+    getchar();
+    fflush(stdin);
+}
+
 int main(){
-    printf("shutdown ëª…ë ¹ì–´ëŠ” ì‹œìŠ¤í…œì„ ì¢…ë£Œí•˜ê±°ë‚˜ ì¬ë¶€íŒ… í•˜ëŠ” ëª…ë ¹ì–´ì…ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("shutdown ¸í·É¾î´Â ½Ã½ºÅÛÀ» Á¾·áÇÏ°Å³ª ÀçºÎÆÃ ÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    pause();
 
-    printf("[ì‹œìŠ¤í…œ ì¢…ë£Œ ì˜µì…˜]\n");
-    sleep(2);
-    printf("shutdown -h now : ì¦‰ì‹œ ì‹œìŠ¤í…œ ì¢…ë£Œ\n");
-    sleep(3);
-    printf("shutdown -h [ìˆ«ì] : [ìˆ«ì] ë¶„ í›„ ì‹œìŠ¤í…œ ì¢…ë£Œ\n");
-    sleep(3);
-    printf("shutdown -h [hh:mm] : [hh:mm] ì‹œê°„ì— ì‹œìŠ¤í…œ ì¢…ë£Œ (ex. 12:00)\n");
-    sleep(5);
-    printf("\n");
+    printf("[½Ã½ºÅÛ Á¾·á ¿É¼Ç]\n");
+    printf("shutdown -h now : Áï½Ã ½Ã½ºÅÛ Á¾·á\n");
+    printf("shutdown -h [¼ıÀÚ] : [¼ıÀÚ] ºĞ ÈÄ ½Ã½ºÅÛ Á¾·á\n");
+    printf("shutdown -h [hh:mm] : [hh:mm] ½Ã°£¿¡ ½Ã½ºÅÛ Á¾·á (ex. 12:00)\n");
+    pause();
 
-    training("shutdown -h now","shutdown ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•˜ì—¬ ì¦‰ì‹œ ì‹œìŠ¤í…œì´ ì¢…ë£Œë˜ê²Œ í•´ë³´ì„¸ìš”.\n (ì‹¤ì œ ë°˜ì˜ë˜ì§€ëŠ” ì•ŠìŠµë‹ˆë‹¤.)");
-    // ì‹œìŠ¤í…œ ì¦‰ì‹œ ì¢…ë£Œ ì‹¤ìŠµ
+    training("shutdown -h now","shutdown ¸í·É¾î¸¦ »ç¿ëÇÏ¿© Áï½Ã ½Ã½ºÅÛÀÌ Á¾·áµÇ°Ô ÇØº¸¼¼¿ä.\n (½ÇÁ¦ ¹İ¿µµÇÁö´Â ¾Ê½À´Ï´Ù.)");
+    // ½Ã½ºÅÛ Áï½Ã Á¾·á ½Ç½À
 
-    printf("ì‹œìŠ¤í…œ ì¬ë¶€íŒ…ì€ 'shutdown -r [ì‚¬ìš© ì˜µì…˜]' ê³¼ ê°™ì´ ì‚¬ìš©í•˜ë©°,\n");
-    sleep(5);
-    printf("[ì‚¬ìš© ì˜µì…˜]ì€ ì‹œìŠ¤í…œ ì¢…ë£Œì™€ ë™ì¼í•©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ì‹œìŠ¤í…œ ê°•ì œ ì¢…ë£ŒëŠ” 'shutdown -P [ì‚¬ìš© ì˜µì…˜]'ë¥¼ ì…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("½Ã½ºÅÛ ÀçºÎÆÃÀº 'shutdown -r [»ç¿ë ¿É¼Ç]' °ú °°ÀÌ »ç¿ëÇÏ¸ç,\n");
+    printf("½Ã½ºÅÛ °­Á¦ Á¾·á´Â 'shutdown -P [»ç¿ë ¿É¼Ç]'¸¦ ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
+    printf("[»ç¿ë ¿É¼Ç]Àº ½Ã½ºÅÛ Á¾·á¿Í µ¿ÀÏÇÕ´Ï´Ù.\n");
+    pause();
 
-    training("shutdown -r 5","shutdown ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•˜ì—¬ 5ë¶„ í›„ ì‹œìŠ¤í…œì´ ì¬ë¶€íŒ… ë˜ê²Œ í•´ë³´ì„¸ìš”.\n (ì‹¤ì œ ë°˜ì˜ë˜ì§€ëŠ” ì•ŠìŠµë‹ˆë‹¤.)");
-    // ì‹œìŠ¤í…œ ì˜ˆì•½ ì¬ë¶€íŒ… ì‹¤ìŠµ
+    training("shutdown -r 5","shutdown ¸í·É¾î¸¦ »ç¿ëÇÏ¿© 5ºĞ ÈÄ ½Ã½ºÅÛÀÌ ÀçºÎÆÃ µÇ°Ô ÇØº¸¼¼¿ä.\n (½ÇÁ¦ ¹İ¿µµÇÁö´Â ¾Ê½À´Ï´Ù.)");
+    // ½Ã½ºÅÛ ¿¹¾à ÀçºÎÆÃ ½Ç½À
 
-    printf("shutdown ì˜ˆì•½ ì·¨ì†ŒëŠ” 'shutdown -c'ë¥¼ ì…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("shutdown ¿¹¾à Ãë¼Ò´Â 'shutdown -c'¸¦ ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
+    training("shutdown -c","shutdown ¿¹¾à ¸í·ÉÀ» Ãë¼Ò ÇØº¸¼¼¿ä.\n (½ÇÁ¦ ¹İ¿µµÇÁö´Â ¾Ê½À´Ï´Ù.)");
+    // ¿¹¾à Ãë¼Ò ½Ç½À
 
-    training("shutdown -c","shutdown ì˜ˆì•½ ëª…ë ¹ì„ ì·¨ì†Œ í•´ë³´ì„¸ìš”.\n (ì‹¤ì œ ë°˜ì˜ë˜ì§€ëŠ” ì•ŠìŠµë‹ˆë‹¤.)");
-    // ì˜ˆì•½ ì·¨ì†Œ ì‹¤ìŠµ
+    printf("ºñ½ÁÇÏ°Ô ½Ã½ºÅÛ Á¾·á¸¦ ¼öÇàÇÏ´Â ¸í·É¾î·Î´Â 'init', 'poweroff', 'halt' °¡ ÀÖÀ¸¸ç,\n");
+    printf("½Ã½ºÅÛ ÀçºÎÆÃÀ» ¼öÇàÇÏ´Â ¸í·É¾î·Î´Â 'init', 'reboot'°¡ ÀÖ½À´Ï´Ù.\n");
+    pause();
 
-    printf("ë¹„ìŠ·í•˜ê²Œ ì‹œìŠ¤í…œ ì¢…ë£Œë¥¼ ìˆ˜í–‰í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'init', 'poweroff', 'halt' ê°€ ìˆìœ¼ë©°,\n");
-    sleep(5);
-    printf("ì‹œìŠ¤í…œ ì¬ë¶€íŒ…ì„ ìˆ˜í–‰í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'init', 'reboot'ê°€ ìˆìŠµë‹ˆë‹¤.\n");
-    sleep(5);
-    printf("\n");
-
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }

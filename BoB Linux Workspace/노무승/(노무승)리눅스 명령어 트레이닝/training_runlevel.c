@@ -1,40 +1,40 @@
 #include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-#include <stdlib.h> // system í•¨ìˆ˜
+#include <unistd.h> // sleep, getcwd ÇÔ¼ö
+#include <string.h> // strncmp ÇÔ¼ö 
+#include <stdlib.h> // system ÇÔ¼ö
 
 void training(){
     char cmd[9]={};
     char d_buf[30]={};
-    printf("[ì‹¤ìŠµ] runlevel ëª…ë ¹ì–´ë¥¼ ì…ë ¥í•´ë³´ì„¸ìš”.\n");
+    printf("[½Ç½À] runlevel ¸í·É¾î¸¦ ÀÔ·ÂÇØº¸¼¼¿ä.\n");
     getcwd(d_buf, sizeof(d_buf));
 	printf("Trainer@BoB:%s$ ", d_buf);
     fgets(cmd,sizeof(cmd),stdin);
     
     if (strncmp(cmd,"runlevel",8)==0){
         system("runlevel");
+        fflush(stdin);
     } else {
         training();
     }
 }
 
-int main(){
-    printf("runlevel ëª…ë ¹ì–´ëŠ” ëŸ°ë ˆë²¨(RunLevel)ì„ í™•ì¸í•˜ëŠ” ëª…ë ¹ì–´ì…ë‹ˆë‹¤.\n");
-    printf("\n");
-    sleep(2);
+void pause(){
+    getchar();
+    fflush(stdin);
+}
 
-    printf("ëŸ°ë ˆë²¨ì— ê´€í•œ ë‚´ìš©ì€ init ëª…ë ¹ì–´ íŠ¸ë ˆì´ë‹ì„ ì°¸ê³ í•˜ì‹œë©´ ë©ë‹ˆë‹¤.\n");
-    sleep(2);
-    printf("\n");
+int main(){
+    printf("runlevel ¸í·É¾î´Â ·±·¹º§(RunLevel)À» È®ÀÎÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    printf("·±·¹º§¿¡ °üÇÑ ³»¿ëÀº init ¸í·É¾î Æ®·¹ÀÌ´×À» Âü°íÇÏ½Ã¸é µË´Ï´Ù.\n");
+    pause();
     
     training();
+    printf("Àß ÇÏ¼Ì½À´Ï´Ù!\n");
+    pause();
 
-    printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-    sleep(2);
-    printf("ì™¼ìª½ì— í‘œê¸°ëœ ê²ƒì´ ì´ì „ì˜ ëŸ°ë ˆë²Œì´ê³ , \n");
-    sleep(2);
-    printf("ì˜¤ë¥¸ìª½ì— í‘œê¸°ëœ ê²ƒì´ í˜„ì¬ ëŸ°ë ˆë²¨ì…ë‹ˆë‹¤.\n");
-    printf("\n");
-    sleep(3);
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("¿ŞÂÊ¿¡ Ç¥±âµÈ °ÍÀÌ ÀÌÀüÀÇ ·±·¹¹úÀÌ°í, \n");
+    printf("¿À¸¥ÂÊ¿¡ Ç¥±âµÈ °ÍÀÌ ÇöÀç ·±·¹º§ÀÔ´Ï´Ù.\n");
+    pause();
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }

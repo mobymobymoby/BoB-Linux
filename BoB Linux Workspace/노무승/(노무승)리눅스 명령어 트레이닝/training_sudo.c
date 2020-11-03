@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-// #include <stdlib.h> // system í•¨ìˆ˜
+#include <unistd.h> // sleep, getcwd ÇÔ¼ö
+#include <string.h> // strncmp ÇÔ¼ö 
+// #include <stdlib.h> // system ÇÔ¼ö
 
 int training(char test[],char guide[]){
-    char cmd[21]={}; // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
+    char cmd[21]={}; // ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ÁöÁ¤
     char d_buf[30]={};
     int num=0,num2=0;
 
@@ -14,12 +14,12 @@ int training(char test[],char guide[]){
         } else {
             ++num;
         }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ½Ç½À ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((num <= 1) || (num >= 20)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
+    // ÃÖ¼Ò, ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ¹ÌÃæÁ·½Ã ÇÔ¼ö Á¾·á
 
-    printf("[ì‹¤ìŠµ] %s\n",guide);
+    printf("[½Ç½À] %s\n",guide);
     getcwd(d_buf, sizeof(d_buf));
 	printf("Trainer@BoB:%s$ ", d_buf);
     fgets(cmd,20,stdin);
@@ -31,75 +31,61 @@ int training(char test[],char guide[]){
         } else {
             ++num2;
         }
-    } // ì…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ÀÔ·Â¹ŞÀº ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
-        sleep(1);
         printf("[sudo] password for Trainer:\n");
-        sleep(1);
-        printf("Trainer@BoB:%s#\n", d_buf);
-        sleep(1);
-        printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        printf("\n");
-        sleep(2);
+        printf("Trainer@BoB:%s#\n", d_buf);;
+        printf("Àß ÇÏ¼Ì½À´Ï´Ù!\n");
+        pause();
         return 0;
     } else {
         training(test,guide);
     }
 }
 
+void pause(){
+    getchar();
+    fflush(stdin);
+}
+
 int main(){
-    printf("sudo ëª…ë ¹ì–´ëŠ” root ê¶Œí•œì„ íšë“í•˜ê¸° ìœ„í•œ ëª…ë ¹ì–´ì…ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("sudo ¸í·É¾î´Â root ±ÇÇÑÀ» È¹µæÇÏ±â À§ÇÑ ¸í·É¾îÀÔ´Ï´Ù.\n");
+    pause();
     
-    printf("root ê¶Œí•œì€ ë¦¬ëˆ…ìŠ¤ì˜ ìµœìƒìœ„ ê¶Œí•œìœ¼ë¡œì¨,\n");
-    sleep(3);
-    printf("ë¦¬ëˆ…ìŠ¤ ì‹œìŠ¤í…œ ìì²´ë¥¼ ê±´ë“œë¦´ ìˆ˜ ìˆìœ¼ë¯€ë¡œ ì‚¬ìš©ì— ì£¼ì˜ê°€ í•„ìš”í•©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("root ±ÇÇÑÀº ¸®´ª½ºÀÇ ÃÖ»óÀ§ ±ÇÇÑÀ¸·Î½á,\n");
+    printf("¸®´ª½º ½Ã½ºÅÛ ÀÚÃ¼¸¦ °Çµå¸± ¼ö ÀÖÀ¸¹Ç·Î »ç¿ë¿¡ ÁÖÀÇ°¡ ÇÊ¿äÇÕ´Ï´Ù.\n");
+    pause();
     
-    printf("íŠ¹ì • ëª…ë ¹ì–´ë¥¼ root ê¶Œí•œìœ¼ë¡œ ì‹¤í–‰í•˜ê³  ì‹¶ë‹¤ë©´\n");
-    sleep(3);
-    printf("'sudo [ëª…ë ¹ì–´]'ë¥¼ ì…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("Æ¯Á¤ ¸í·É¾î¸¦ root ±ÇÇÑÀ¸·Î ½ÇÇàÇÏ°í ½Í´Ù¸é\n");
+    printf("'sudo [¸í·É¾î]'¸¦ ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
+    pause();
 
-    training("sudo bash","bash ëª…ë ¹ì–´ë¥¼ root ê¶Œí•œìœ¼ë¡œ ì‹¤í–‰ì‹œì¼œë´…ì‹œë‹¤.");
-    // íŠ¸ë ˆì´ë‹ 1
+    training("sudo bash","bash ¸í·É¾î¸¦ root ±ÇÇÑÀ¸·Î ½ÇÇà½ÃÄÑº¾½Ã´Ù.");
+    // Æ®·¹ÀÌ´× 1
 
-    printf("ì¼ë°˜ ìœ ì €ì—ì„œ root ìœ ì €ë¡œ ì „í™˜í•˜ê³  ì‹¶ë‹¤ë©´\n");
-    sleep(3);
-    printf("'sudo -s' ëª…ë ¹ì–´ë¥¼ ì…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("ÀÏ¹İ À¯Àú¿¡¼­ root À¯Àú·Î ÀüÈ¯ÇÏ°í ½Í´Ù¸é\n");
+    printf("'sudo -s' ¸í·É¾î¸¦ ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
+    pause();
 
-    training("sudo -s","sudo ëª…ë ¹ì–´ë¥¼ ì´ìš©í•´ ì¼ë°˜ ìœ ì €ì—ì„œ root ìœ ì €ë¡œ ì „í™˜í•´ë´…ì‹œë‹¤.");
-     // íŠ¸ë ˆì´ë‹ 2   
+    training("sudo -s","sudo ¸í·É¾î¸¦ ÀÌ¿ëÇØ ÀÏ¹İ À¯Àú¿¡¼­ root À¯Àú·Î ÀüÈ¯ÇØº¾½Ã´Ù.");
+     // Æ®·¹ÀÌ´× 2   
 
-    printf("root ìœ ì €ë¡œ ë°”ë€Œë©´ ëª…ë ¹ì¤„ ì™¼ìª½ì˜ ë¬¸êµ¬ê°€\n");
-    sleep(3);
-    printf("'$'ì—ì„œ '#'ìœ¼ë¡œ ë°”ë€ ê²ƒì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("root À¯Àú·Î ¹Ù²î¸é ¸í·ÉÁÙ ¿ŞÂÊÀÇ ¹®±¸°¡\n");
+    printf("'$'¿¡¼­ '#'À¸·Î ¹Ù²ï °ÍÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.\n");
+    pause();
 
-    printf("sudo ëª…ë ¹ì–´ë¡œ ê¶Œí•œ ìƒìŠ¹ì‹œ, '/etc/sudoers' íŒŒì¼ì„ ì°¸ì¡°í•˜ë©°\n");
-    sleep(3);
-    printf("í•´ë‹¹ íŒŒì¼ì— ê¸°ë¡ëœ ì‚¬ìš©ìë§Œ root ê¶Œí•œ ìƒìŠ¹ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ê¸°ë¡ë˜ì§€ ì•Šì€ ì‚¬ìš©ìì—ì„œ root ê¶Œí•œ ìƒìŠ¹ì„ í•˜ê²Œ ë˜ë©´\n");
-    sleep(3);
-    printf("'{ê³„ì •ì´ë¦„} is not in the sudoers file.' ë¼ëŠ” ì—ëŸ¬ ë¬¸êµ¬ê°€ ëœ¨ê²Œ ë©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("sudo ¸í·É¾î·Î ±ÇÇÑ »ó½Â½Ã, '/etc/sudoers' ÆÄÀÏÀ» ÂüÁ¶ÇÏ¸ç\n");
+    printf("ÇØ´ç ÆÄÀÏ¿¡ ±â·ÏµÈ »ç¿ëÀÚ¸¸ root ±ÇÇÑ »ó½ÂÀÌ °¡´ÉÇÕ´Ï´Ù.\n");
+    printf("±â·ÏµÇÁö ¾ÊÀº »ç¿ëÀÚ¿¡¼­ root ±ÇÇÑ »ó½ÂÀ» ÇÏ°Ô µÇ¸é\n");
+    printf("'{°èÁ¤ÀÌ¸§} is not in the sudoers file.' ¶ó´Â ¿¡·¯ ¹®±¸°¡ ¶ß°Ô µË´Ï´Ù.\n");
+    pause();
 
-    printf("ê¶Œí•œ ìƒìŠ¹ì´ í—ˆìš©ëœ ì‚¬ìš©ìëŠ” ë‹¤ìŒê³¼ ê°™ì´ ê¸°ë¡ë©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("{ê³„ì • ì´ë¦„} ALL=(ALL:ALL) ALL\n");
-    sleep(3);
-    printf("\n");
+    printf("±ÇÇÑ »ó½ÂÀÌ Çã¿ëµÈ »ç¿ëÀÚ´Â ´ÙÀ½°ú °°ÀÌ ±â·ÏµË´Ï´Ù.\n");
+    printf("{°èÁ¤ ÀÌ¸§} ALL=(ALL:ALL) ALL\n");
+    pause();
 
-    printf("ì°¸ê³ ë¡œ ë‹¤ë¥¸ ì‚¬ìš©ìë¡œ ë³€ê²½í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'su' ëª…ë ¹ì–´ê°€ ìˆìŠµë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("Âü°í·Î ´Ù¸¥ »ç¿ëÀÚ·Î º¯°æÇÏ´Â ¸í·É¾î·Î´Â 'su' ¸í·É¾î°¡ ÀÖ½À´Ï´Ù.\n");
+    pause();
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }

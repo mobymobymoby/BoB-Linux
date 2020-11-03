@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-// #include <stdlib.h> // system í•¨ìˆ˜
+#include <unistd.h> // sleep, getcwd ÇÔ¼ö
+#include <string.h> // strncmp ÇÔ¼ö 
+// #include <stdlib.h> // system ÇÔ¼ö
 
 int training(char test[],char guide[]){
-    char cmd[21]={}; // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
+    char cmd[21]={}; // ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ÁöÁ¤
     char d_buf[30]={};
     int num=0,num2=0;
 
@@ -14,12 +14,12 @@ int training(char test[],char guide[]){
         } else {
             ++num;
         }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ½Ç½À ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((num <= 1) || (num >= 20)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
+    // ÃÖ¼Ò, ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ¹ÌÃæÁ·½Ã ÇÔ¼ö Á¾·á
 
-    printf("[ì‹¤ìŠµ] %s\n",guide);
+    printf("[½Ç½À] %s\n",guide);
     getcwd(d_buf, sizeof(d_buf));
 	printf("Trainer@BoB:%s$ ", d_buf);
     fgets(cmd,20,stdin);
@@ -31,42 +31,38 @@ int training(char test[],char guide[]){
         } else {
             ++num2;
         }
-    } // ì…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ÀÔ·Â¹ŞÀº ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
-        sleep(1);
         printf("Password:\n");
-        sleep(1);
         printf("Trainer@BoB:%s#\n", d_buf);
-        sleep(1);
-        printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        printf("\n");
-        sleep(2);
+        printf("Àß ÇÏ¼Ì½À´Ï´Ù!\n");
+        pause();
         return 0;
     } else {
         training(test,guide);
     }
 }
 
+void pause(){
+    getchar();
+    fflush(stdin);
+}
+
 int main(){
-    printf("su ëª…ë ¹ì–´ëŠ” ì‚¬ìš©ìë¥¼ ì „í™˜í•˜ê¸° ìœ„í•œ ëª…ë ¹ì–´ì…ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
-    printf("'su [ì „í™˜í•  ì‚¬ìš©ì ì´ë¦„]' ê³¼ ê°™ì´ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ìœ„ ì˜ˆì‹œì™€ ê°™ì´ ì‚¬ìš©í•˜ë©´ ì „í™˜í•˜ê¸° ì „ ì‚¬ìš©ì í™˜ê²½ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("\n");
+    printf("su ¸í·É¾î´Â »ç¿ëÀÚ¸¦ ÀüÈ¯ÇÏ±â À§ÇÑ ¸í·É¾îÀÔ´Ï´Ù.\n");
+    pause();
 
-    training("su root","su ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•´ root ì‚¬ìš©ìë¡œ ì „í™˜í•´ë³´ì„¸ìš”. (su [ì „í™˜í•  ì‚¬ìš©ì ì´ë¦„])");
+    printf("'su [ÀüÈ¯ÇÒ »ç¿ëÀÚ ÀÌ¸§]' °ú °°ÀÌ »ç¿ëÇÕ´Ï´Ù.\n");
+    printf("À§ ¿¹½Ã¿Í °°ÀÌ »ç¿ëÇÏ¸é ÀüÈ¯ÇÏ±â Àü »ç¿ëÀÚ È¯°æº¯¼ö¸¦ »ç¿ëÇÕ´Ï´Ù.\n");
+    pause();
 
-    printf("'su - [ì „í™˜í•  ì‚¬ìš©ì ì´ë¦„]' ê³¼ ê°™ì´ ì¤‘ê°„ì— - ë¥¼ ì¶”ê°€í•˜ë©´\n");
-    sleep(3);
-    printf("í•´ë‹¹ ì‚¬ìš©ìì˜ í™ˆ ë””ë ‰í„°ë¦¬ë¡œ ì´ë™í•©ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ì´ëŠ” í•´ë‹¹ ì „í™˜ ëŒ€ìƒ ì‚¬ìš©ìì˜ í™˜ê²½ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ëŠ” ê²ƒì„ ì˜ë¯¸í•©ë‹ˆë‹¤.\n");
-    sleep(4);
-    printf("\n");
+    training("su root","su ¸í·É¾î¸¦ »ç¿ëÇØ root »ç¿ëÀÚ·Î ÀüÈ¯ÇØº¸¼¼¿ä. (su [ÀüÈ¯ÇÒ »ç¿ëÀÚ ÀÌ¸§])");
 
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("'su - [ÀüÈ¯ÇÒ »ç¿ëÀÚ ÀÌ¸§]' °ú °°ÀÌ Áß°£¿¡ - ¸¦ Ãß°¡ÇÏ¸é\n");
+    printf("ÇØ´ç »ç¿ëÀÚÀÇ È¨ µğ·ºÅÍ¸®·Î ÀÌµ¿ÇÕ´Ï´Ù.\n");
+    printf("ÀÌ´Â ÇØ´ç ÀüÈ¯ ´ë»ó »ç¿ëÀÚÀÇ È¯°æ º¯¼ö¸¦ »ç¿ëÇÏ´Â °ÍÀ» ÀÇ¹ÌÇÕ´Ï´Ù.\n");
+    pause();
+
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }

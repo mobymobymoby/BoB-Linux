@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-// #include <stdlib.h> // system í•¨ìˆ˜
+#include <unistd.h> // sleep, getcwd ÇÔ¼ö
+#include <string.h> // strncmp ÇÔ¼ö 
+// #include <stdlib.h> // system ÇÔ¼ö
 
 int training(char test[],char guide[]){
-    char cmd[21]={}; // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
+    char cmd[21]={}; // ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ÁöÁ¤
     char d_buf[30]={};
     int num=0,num2=0;
 
@@ -14,12 +14,12 @@ int training(char test[],char guide[]){
         } else {
             ++num;
         }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ½Ç½À ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((num <= 1) || (num >= 20)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
+    // ÃÖ¼Ò, ÃÖ´ë ½Ç½À ¸í·É¾î ±æÀÌ ¹ÌÃæÁ·½Ã ÇÔ¼ö Á¾·á
 
-    printf("[ì‹¤ìŠµ] %s\n",guide);
+    printf("[½Ç½À] %s\n",guide);
     getcwd(d_buf, sizeof(d_buf));
 	printf("Trainer@BoB:%s$ ", d_buf);
     fgets(cmd,20,stdin);
@@ -31,32 +31,35 @@ int training(char test[],char guide[]){
         } else {
             ++num2;
         }
-    } // ì…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    } // ÀÔ·Â¹ŞÀº ¸í·É¾î ±æÀÌ ÃøÁ¤
 
     if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
-        printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        printf("\n");
-        sleep(2);
+        printf("Àß ÇÏ¼Ì½À´Ï´Ù!\n");
+        pause();
         return 0;
     } else {
         training(test,guide);
     }
 }
 
+void pause(){
+    getchar();
+    fflush(stdin);
+}
+
 int main(){
-    printf("halt ëª…ë ¹ì–´ëŠ” ì‹œìŠ¤í…œì„ ì¢…ë£Œí•˜ëŠ” ëª…ë ¹ì–´ì…ë‹ˆë‹¤.\n");
-    sleep(3);
-    printf("ì£¼ì˜í•´ì•¼ í•  ì ì€ ì‹œìŠ¤í…œë§Œ ì¢…ë£Œë˜ê³ , ì‹œìŠ¤í…œì˜ ì „ì›ì€ êº¼ì§€ì§€ ì•ŠëŠ”ë‹¤ëŠ” ì ì…ë‹ˆë‹¤.\n");
-    sleep(5);
-    printf("\n");
+    printf("halt ¸í·É¾î´Â ½Ã½ºÅÛÀ» Á¾·áÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    pause();
 
-    training("halt","halt ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•˜ì—¬ ì‹œìŠ¤í…œì„ ì¢…ë£Œí•´ë³´ì„¸ìš”.\n(ì‹¤ì œ ì ìš©ë˜ì§€ëŠ” ì•ŠìŠµë‹ˆë‹¤.)");
+    printf("ÁÖÀÇÇØ¾ß ÇÒ Á¡Àº ½Ã½ºÅÛ¸¸ Á¾·áµÇ°í, ½Ã½ºÅÛÀÇ Àü¿øÀº ²¨ÁöÁö ¾Ê´Â´Ù´Â Á¡ÀÔ´Ï´Ù.\n");
+    printf("´ëÃ¼ ¸í·É¾î·Î 'init', 'shutdown' ¸í·É¾î »ç¿ëÀ» ±ÇÀåµå¸³´Ï´Ù.\n");
+    pause();
 
-    printf("ë¹„ìŠ·í•˜ê²Œ ì‹œìŠ¤í…œ ì¢…ë£Œë¥¼ ìˆ˜í–‰í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'shutdown', 'init', 'poweroff' ê°€ ìˆìœ¼ë©°,\n");
-    sleep(5);
-    printf("ì‹œìŠ¤í…œ ì¬ë¶€íŒ…ì„ ìˆ˜í–‰í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'shutdown', 'init', 'reboot'ê°€ ìˆìŠµë‹ˆë‹¤.\n");
-    sleep(5);
-    printf("\n");
+    training("halt","halt ¸í·É¾î¸¦ »ç¿ëÇÏ¿© ½Ã½ºÅÛÀ» Á¾·áÇØº¸¼¼¿ä.\n(½ÇÁ¦ Àû¿ëµÇÁö´Â ¾Ê½À´Ï´Ù.)");
 
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("ºñ½ÁÇÏ°Ô ½Ã½ºÅÛ Á¾·á¸¦ ¼öÇàÇÏ´Â ¸í·É¾î·Î´Â 'shutdown', 'init', 'poweroff' °¡ ÀÖÀ¸¸ç,\n");
+    printf("½Ã½ºÅÛ ÀçºÎÆÃÀ» ¼öÇàÇÏ´Â ¸í·É¾î·Î´Â 'shutdown', 'init', 'reboot'°¡ ÀÖ½À´Ï´Ù.\n");
+    pause();
+
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }
