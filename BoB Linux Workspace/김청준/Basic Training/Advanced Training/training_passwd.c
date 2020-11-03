@@ -32,7 +32,7 @@ void training_passwd(void)
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    printf("이번에 학습할 명령어는 'adduser', 'userdel', 'passwd'입니다.\n");
+    printf("이번에 학습할 명령어는 'adduser', 'userdel', 'usermod', 'passwd'입니다.\n");
     getchar();
     printf("이 명령어들은 사용자 계정과 관련된 동작들을 합니다.\n");
     getchar();
@@ -48,7 +48,7 @@ void training_passwd(void)
     getchar();
     printf("아무런 옵션을 주지 않고, adduser [생성할 계정 이름]의 문법으로 사용하면 지정한 이름으로 계정을 생성합니다.\n");
     getchar();
-    printf("이 때 사용할 계정의 비밀번호를 입력하게 되고, 추가적으로 이름이나 전화번호 등 인적사항을 기입하게 됩니다.\n");
+    printf("이 때 사용할 계정의 패스워드를 입력하게 되고, 추가적으로 이름이나 전화번호 등 인적사항을 기입하게 됩니다.\n");
     getchar();
     printf("다만, 인적사항은 필수로 기입해야하는 것은 아니며 Enter를 입력하여 넘어가도 큰 문제는 없습니다.\n");
     getchar();
@@ -86,18 +86,18 @@ void training_passwd(void)
 
     printf("다시 'adduser user1'을 입력한 상태로 돌아오겠습니다.\n");
     getchar();
-    printf("현재 우리가 입력한 것에서는 사용자 계정 이름만 지정했고, 비밀번호를 입력하지 않았습니다.\n");
+    printf("현재 우리가 입력한 것에서는 사용자 계정 이름만 지정했고, 패스워드를 입력하지 않았습니다.\n");
     getchar();
-    printf("위에서 출력된 내용들이 나온 후에 사용자 계정의 비밀번호를 입력하라는 메시지('Enter new UNIX password')와 재확인(Retype) 메시지가 나옵니다.\n");
+    printf("위에서 출력된 내용들이 나온 후에 사용자 계정의 패스워드를 입력하라는 메시지('Enter new UNIX password')와 재확인(Retype) 메시지가 나옵니다.\n");
     getchar();
-    printf("user1 계정의 비밀번호를 'BoB-Linux'로 설정하세요.\n");
+    printf("user1 계정의 패스워드를 'BoB-Linux'로 설정하세요.\n");
     getchar();
     fake_command("BoB-Linux", "Enter new UNIX password: ");
     fake_command("BoB-Linux", "Retype new UNIX password: ");
     printf("passwd: password updated successfully\n");
     getchar();
 
-    printf("비밀번호를 입력한 후에는 패스워드가 성공적으로 업데이트 되었다는 메시지 후에 user1의 정보를 입력하라는 메시지가 나옵니다.\n");
+    printf("패스워드를 입력한 후에는 패스워드가 성공적으로 업데이트 되었다는 메시지 후에 user1의 정보를 입력하라는 메시지가 나옵니다.\n");
     getchar();
     printf("이 정보들은 선택사항이며, 이름, 방 번호, 전화번호, 집 전화번호 등을 입력할 수 있습니다.\n");
     getchar();
@@ -142,20 +142,44 @@ void training_passwd(void)
     printf("-r 옵션을 추가하면 삭제할 때 해당 사용자의 홈 디렉토리까지 삭제합니다.\n");
     getchar();
 
-    printf("위에서 생성한 'user1'은 passwd 부분에서 사용할 것이기 때문에 지우지 않고 진행하곘습니다.\n");
+    printf("위에서 생성한 'user1'은 뒷 부분에서 사용할 것이기 때문에 지우지 않고 진행하곘습니다.\n");
     getchar();
 
-    printf("계정을 생성하고 삭제하는 방법을 익혔습니다.\n다음으로는 계정을 관리하는 passwd 명령어 입니다.\n");
+    printf("다음으로는 존재하는 계정을 변경하는 명령어인 'usermod'입니다.\n");
     getchar();
-    printf("passwd 명령어는 'password'의 약자로, 계정의 비밀번호와 관련된 명령어입니다.\n");
+    printf("usermod 명령어는 다른 옵션과 함께 사용됩니다.\n");
+    getchar();
+    printf("여러 옵션이 존재하기 때문에 자주 쓰이는 옵션 위주로 설명하겠습니다.\n");
+    getchar();
+    printf("먼저 -l 옵션입니다. -l 옵션은 기존에 존재하는 계정 이름을 새로운 이름으로 바꿀 때 사용합니다. 사용법은 아래와 같습니다.\n");
+    getchar();
+    printf("$ usermod -l [새로운 계정명] [기존 계정명]\n");
+    getchar();
+    printf("보통 계정 이름에 따라 홈 디렉토리가 변경되므로, -l 옵션을 이용해 계정명을 변경할 때는 홈 디렉토리도 함께 변경하는 것이 좋습니다.\n");
+    getchar();
+    printf("따라서 -l 옵션은 홈 디렉토리를 변경하는 옵션인 -d 옵션\n기존 홈 디렉토리의 파일과 디렉토리를 옮겨주는 옵션인 -m과 함께 자주 사용합니다.\n");
+    getchar();
+    printf("-l -d -m 옵션을 함께 사용하는 방법은 아래와 같습니다.\n");
+    getchar();
+    printf("$ usermod -l [새로운 계정명] -d [새로운 홈 디렉토리] -m [기존 계정명]\n");
+    getchar();
+    printf("-g 옵션은 사용자가 속한 그룹을 변경합니다.\n");
+    getchar();
+    printf("-G 옵션은 사용자가 본래 속한 그룹을 그대로 두고, 새로운 그룹에 추가로 속하게 합니다.\n");
+    printf("참고로 리눅스에서는 하나의 사용자가 여러 가지 그룹에 속하는 것이 가능합니다.\n");
+    getchar();
+
+    printf("계정을 생성, 변경, 삭제하는 방법을 익혔습니다.\n다음으로는 계정의 패스워드를 관리하는 passwd 명령어 입니다.\n");
+    getchar();
+    printf("passwd 명령어는 'password'의 약자로, 계정의 패스워드와 관련된 명령어입니다.\n");
     getchar();
     printf("기본적인 사용법은 아무런 옵션도 주지 않고 사용하는 것입니다.\n");
     getchar();
     printf("$ passwd\n");
     getchar();
-    printf("해당 명령어를 입력하면 현재 로그인 된 사용자의 비밀번호를 변경하게 됩니다.\n");
+    printf("해당 명령어를 입력하면 현재 로그인 된 사용자의 패스워드를 변경하게 됩니다.\n");
     getchar();
-    printf("이 때 현재 로그인된 사용자의 비밀번호를 알고 있어야 비밀번호를 변경할 수 있습니다.\n");
+    printf("이 때 현재 로그인된 사용자의 패스워드를 알고 있어야 패스워드를 변경할 수 있습니다.\n");
     getchar();
 
     printf("passwd 명령어는 옵션을 주어 사용하기도 합니다.\n");
@@ -167,13 +191,13 @@ void training_passwd(void)
     printf("$ passwd [옵션] [사용자 계정명]\n");
     getchar();
 
-    printf("옵션을 주지 않고 passwd [사용자 계정]으로 사용하면 [사용자 계정]에 해당하는 계정의 비밀번호를 변경할 수 있습니다.\n");
+    printf("옵션을 주지 않고 passwd [사용자 계정]으로 사용하면 [사용자 계정]에 해당하는 계정의 패스워드를 변경할 수 있습니다.\n");
     getchar();
     printf("위에서 언급했듯, passwd 명령어는 보통 root 계정에 의해 수행됩니다.\n");
     getchar();
-    printf("루트 권한이 없는 일반 사용자는 passwd 명령어를 자신의 계정 비밀번호를 변경하는 용도로 밖에 사용하지 못합니다.\n");
+    printf("루트 권한이 없는 일반 사용자는 passwd 명령어를 자신의 계정 패스워드를 변경하는 용도로 밖에 사용하지 못합니다.\n");
     getchar();
-    printf("root 계정은 관리자 계정이기 때문에 다른 사용자의 비밀번호와 다양한 설정을 변경할 수 있습니다.\n");
+    printf("root 계정은 관리자 계정이기 때문에 다른 사용자의 패스워드와 다양한 설정을 변경할 수 있습니다.\n");
     getchar();
     printf("이렇듯, root 계정은 다른 사용자에 비해 막강한 권한을 가지고 있기 때문에 root 계정이 유출되서는 안되는 것입니다.\n");
 
@@ -207,7 +231,7 @@ void training_passwd(void)
     printf("만약 해당 필드가 '30'으로 되어 있다면, 패스워드 변경을 한 지 30일이 지난 후에 패스워드가 만료됩니다.\n");
     getchar();
     printf("여섯번째 필드는 '7'에 해당하며 패스워드 만료를 알리는 경고 기간을 표시합니다.\n");
-    printf("'7'이라고 되어 있다면, 비밀번호 만료 기간 7일 전에 경고 메시지를 출력해줍니다.\n");
+    printf("'7'이라고 되어 있다면, 패스워드 만료 기간 7일 전에 경고 메시지를 출력해줍니다.\n");
     getchar();
     printf("일곱번째 필드는 '-1'에 해당하며 패스워드가 만료되고 패스워드가 Lock 되기 까지의 유예 기간을 표시합니다.\n");
     printf("패스워드 만료 기간이 지난 후 해당 기간이 지나면 패스워드의 상태는 잠김(Lock)상태가 됩니다.\n");
