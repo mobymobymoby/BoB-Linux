@@ -1,4 +1,4 @@
 int main()
 {
-    training_curl();
+    training_head();
 }
