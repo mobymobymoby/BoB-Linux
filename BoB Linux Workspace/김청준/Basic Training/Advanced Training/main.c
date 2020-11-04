@@ -1,4 +1,4 @@
 int main()
 {
-    training_ping();
+    training_curl();
 }
