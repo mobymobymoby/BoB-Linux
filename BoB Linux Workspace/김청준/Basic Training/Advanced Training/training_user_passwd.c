@@ -5,7 +5,7 @@
 #include <time.h>
 #include "common_func.h"
 
-void training_passwd(void)
+void training_user_passwd(void)
 {
 	// 초기 작업 디렉토리 설정
 	char def_dir[DIR_SIZE];
