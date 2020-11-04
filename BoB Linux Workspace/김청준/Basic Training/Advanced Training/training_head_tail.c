@@ -1,6 +1,6 @@
 #include "common_func.h"
 
-void training_head(void)
+void training_head_tail(void)
 {
 	// 초기 작업 디렉토리 설정
 	char def_dir[DIR_SIZE];
