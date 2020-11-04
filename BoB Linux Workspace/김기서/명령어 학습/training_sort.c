@@ -1,28 +1,50 @@
-#include <stdio.h>
-
-#define BUF_SIZE 1024
+#include "common_func.h"
 
 void training_rm()
 {
-	FILE*  fp = NULL;
-    int    n  = 0;
-	char   buf[BUF_SIZE] = {0,};
+	char def_dir[DIR_SIZE];
+	char rst_dir[DIR_SIZE + 10];
+	char rm_dir[DIR_SIZE + 10];
+
+	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
+
+	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
+	system(rst_dir);
+	strncpy(rm_dir, rst_dir, sizeof(rm_dir));
+
+	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
+	system(rst_dir);
+
+	chdir(def_dir);
 
     system("ls -f /etc > sort_test_file");
 
-	fp = fopen("sort.txt", "r");
-	fread(buf, sizeof(buf), 1, fp);
-
-	n = read_txt(buf, n);
+	printf("이번에 학습할 명령어는 'sort' 입니다. sort는 파일의 내용을 행 단위로 끊어서 정렬을 해줍니다. 정렬된 결과를 출력만 해줄 뿐, 따로 저장하거나 원본파일을 변경하지는 않습니다.");
+	getchar();
+	printf("sort 명령어는 다음과 같은 형식으로 사용합니다.\n");
+	printf("\t$ sort [옵션] 파일");
+	getchar();
+	printf("우선 cat으로 정렬 전의 'sort_test_file' 파일의 내용을 확인해봅시다.");
 	run_command("cat sort_test_file");
 
-	n = read_txt(buf, n);
+	printf("이번엔 sort를 이용하여 'sort_test_file' 파일을 내용을 정렬시켜 확인해보세요.");
 	run_command("sort sort_test_file");
-    
-    n = read_txt(buf, n);
-	fclose(fp);
+
+	printf("sort 명령어의 옵션은 아래와 같습니다.\n");
+	printf("\t-b : 공백은 무시\n");
+	printf("\t-d : 사전 순으로 정렬\n");
+	printf("\t-f : 대소문자 무시\n");
+	printf("\t-n : 숫자를 기준으로 정렬\n");
+	printf("\t-r : 내림차순으로 정렬");
+
+	printf("sort 명령어는 정렬하여 출력만 해주므로, 파이프라인|  혹은 리다이렉션>  기법과 같이 많이 사용됩니다.");
+	getchar();
 
 	system("rm sort_test_file");
 
-	printf("\n");
+	printf("sort 명령어에 대한 학습이 끝났습니다.\n");
+
+	chdir(def_dir);
+	chdir("..");
+	system(rm_dir);
 }

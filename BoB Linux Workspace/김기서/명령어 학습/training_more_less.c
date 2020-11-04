@@ -1,21 +1,60 @@
-#include <stdio.h>
-
-#define BUF_SIZE 1024
+#include "common_func.h"
 
 void training_more_less()
 {
-	FILE*  fp = NULL;
-    int    n  = 0;
-	char   buf[BUF_SIZE] = {0,};
+	char def_dir[DIR_SIZE];
+	char rst_dir[DIR_SIZE + 10];
+	char rm_dir[DIR_SIZE + 10];
 
-	fp = fopen("moreLess.txt", "r");
-	fread(buf, sizeof(buf), 1, fp);
+	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
 
-	n = read_txt(buf, n);
-	run_command("more more.txt");
+	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
+	system(rst_dir);
+	strncpy(rm_dir, rst_dir, sizeof(rm_dir));
 
-    n = read_txt(buf, n);
+	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
+	system(rst_dir);
+
+	chdir(def_dir);
+
+	FILE* fp = fopen("more.txt", "w");
+	for(int i = 0; i < 10; i++)
+	{
+		fprintf(fp, "이것은 more 명령어의 테스트 파일 more.txt 입니다.\n\n");
+		fprintf(fp, "more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n\n");
+		fprintf(fp, "\tspace : 다음 페이지\n");
+		fprintf(fp, "\tb : 이전 페이지\n");
+		fprintf(fp, "\tq : 나가기\n\n");
+	}
 	fclose(fp);
 
-	printf("\n");
+	printf("이번에 학습할 명령어는 'more'와 'less'입니다.\n");
+	printf("두 명령어 모두 파일의 내용을 화면에 출력하는 기능을 합니다.");
+	getchar();
+	printf("cat과 같은 명령어와 다른 점은 화면 단위, 페이지 단위로 보여준다는 점입니다.\n");
+	printf("내용이 긴 파일을 cat을 이용하여 화면에 출력하면 터미널 화면을 초과하는 앞의 내용을 볼 수가 없는 단점이 있습니다.\n");
+	printf("GUI의 가상터미널을 사용할 때면 마우스로 스크롤을 하여 위의 내용을 볼 수 있으나 CLI 환경에서는 불가능하죠...");
+	getchar();
+	printf("이럴 때 사용하는 것이 more와 less입니다.");
+	printf("more는 화면 사이즈만큼, less는 페이지 단위로 출력합니다.");
+	getchar();
+	printf("more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n");
+	printf("\tspace : 다음 페이지\n");
+	printf("\tb : 이전 페이지\n");
+	printf("\tq : 나가기");
+	getchar();
+	printf("more를 통해 more.txt를 읽어봅시다.\n");
+	printf("이 후 space, b, q를 통해 화면을 넘겨보세요.");
+	run_command("more more.txt");
+
+	printf("추후 파이프라인| 이란것을 배우게 될 것입니다. 결과 내용이 너무 많아서 화면을 뚫고 나간다면 more을 활용하여 페이지를 넘겨가며 내용을 볼 수 있습니다.");
+	getchar();
+
+	printf("more 및 less 명령어에 대한 학습이 끝났습니다.\n");
+
+	system("rm -f more.txt");
+
+	chdir(def_dir);
+	chdir("..");
+	system(rm_dir);
 }
