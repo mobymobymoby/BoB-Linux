@@ -12,4 +12,6 @@
 
 void next_quit(void);
 int run_command(char valid_cmd[]);
+int fake_run_command(char valid_cmd[]);
+int fake_command(char valid_cmd[], char print_msg[]);
 #endif
