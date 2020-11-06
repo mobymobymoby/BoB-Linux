@@ -25,7 +25,7 @@ void training_clear()
 	printf("위에 있던 내용들이 다 지워졌나요? 어떤가요, 정말 쉽죠?");
 	getchar();
 	printf("항상 새 것과 같은 터미널에서 작업하고 싶다면 clear를 기억해주세요!");
-	gethar();
+	getchar();
 	printf("Ctrl + L 로도 지울 수 있답니다.");
 	getchar();
 
