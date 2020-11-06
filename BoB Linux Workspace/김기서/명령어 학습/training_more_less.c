@@ -33,7 +33,7 @@ void training_more_less()
 	getchar();
 	printf("cat과 같은 명령어와 다른 점은 화면 단위, 페이지 단위로 보여준다는 점입니다.\n");
 	printf("내용이 긴 파일을 cat을 이용하여 화면에 출력하면 터미널 화면을 초과하는 앞의 내용을 볼 수가 없는 단점이 있습니다.\n");
-	printf("GUI의 가상터미널을 사용할 때면 마우스로 스크롤을 하여 위의 내용을 볼 수 있으나 CLI 환경에서는 불가능하죠...");
+	printf("shift+PgUp, shift+PgDn 으로 넘길 수는 있으나 불편한 키 조합일 수도 있습니다.");
 	getchar();
 	printf("이럴 때 사용하는 것이 more와 less입니다.");
 	printf("more는 화면 사이즈만큼, less는 페이지 단위로 출력합니다.");
