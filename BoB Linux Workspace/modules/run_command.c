@@ -8,7 +8,7 @@ int run_command(char valid_cmd[])
 	{
 		printf("\n");
 		getcwd(dir_buf, sizeof(dir_buf));
-		printf("%s@BoB:%s$ ", getlogin(), dir_buf);
+		printf("%s@localhost:%s$ ", getlogin(), dir_buf);
 		int valid_len = strlen(valid_cmd);
 		fgets(cmd, sizeof(cmd), stdin);
 
