@@ -3,7 +3,7 @@
 int run_command(char valid_cmd[]);
 void next_quit();
 
-void training_mv(void)
+void training_(void)
 {
     char def_dir[DIR_SIZE];
     char rst_dir[DIR_SIZE + 10];
@@ -88,7 +88,7 @@ void training_mv(void)
 
 int main()
 {
-    training_mv();
+    training_cp();
     next_quit();
     printf("next\n");
     return 0;
