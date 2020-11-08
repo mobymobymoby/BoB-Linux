@@ -1,6 +1,6 @@
 #include "common_func.h"
 
-void training_rm()
+void training_uname()
 {
 	char def_dir[DIR_SIZE];
 	char rst_dir[DIR_SIZE + 10];
