@@ -24,6 +24,8 @@ int call_training(char select);
 int convert_training(char select[]);
 void create_defdir();
 void delete_defdir();
+void advanced_trainer(void);
+void essential_trainer(void);
 
 /* 함수 리스트 */
 
