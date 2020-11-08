@@ -1,4 +1,4 @@
-#include "common_func.h"
+#include "func.h"
 
 // fake_run_command는 run_command와 같지만, system 함수를 통해 실제로 명령어를 실행시키지는 않음
 int fake_run_command(char valid_cmd[])
