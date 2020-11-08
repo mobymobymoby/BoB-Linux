@@ -1,4 +1,4 @@
-#include "common_func.h"
+#include "func.h"
 
 
 void next_quit()
