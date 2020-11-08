@@ -2,10 +2,6 @@
 
 void advanced_trainer()
 {
-
-
-
-
     printf("심화 명령어 학습입니다.\n");
     next_line();
     printf("해당 커리큘럼에서는 보안을 위해 리눅스를 사용할 때 응용할 수 있는 명령어를 학습합니다.\n");
@@ -42,8 +38,5 @@ void advanced_trainer()
 
         next_quit();
     }
-    printf("\n");
-    next_line();
-    printf("\n");
-    next_line();
+    printf("심화 명령어 학습이 종료되었습니다.\n고생하셨습니다.\n");
 }
