@@ -1,37 +1,17 @@
-#ifndef __COMMON_FUNC_H__
-#define __COMMON_FUNC_H__
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-#define CMD_SIZE 60 // 최대 59개의 문자 입력
-#define DIR_SIZE 60 // 최대 59개의 문자 입력
-#define BUF_SIZE 102400
-
-void next_quit(void);
-void next_line(void);
-int run_command(char valid_cmd[]);
-int just_run_command(char valid_cmd[]);
-int fake_run_command(char valid_cmd[]);
-int fake_command(char valid_cmd[], char print_msg[]);
-
-/* 함수 리스트 */
 
 // 김기서 명령어
-void training_clear(void);
-void training_file(void);
-void training_find(void);
-void training_history(void);
-void training_make(void);
-void training_more_less(void);
-void training_mount(void);
-void training_rm(void);
-void training_sort(void);
-void training_tar(void);
-void training_umask(void);
-void training_uname(void);
+void training_clear();
+void training_file();
+void training_find();
+void training_history();
+void training_make();
+void training_more_less();
+void training_mount();
+void training_rm();
+void training_sort();
+void training_tar();
+void training_umask();
+void training_uname();
 
 // 김청준 명령어
 void training_curl(void);
@@ -82,4 +62,3 @@ void training_ln(void);
 void training_mv(void);
 void training_redirection(void);
 void training_users(void);
-#endif
