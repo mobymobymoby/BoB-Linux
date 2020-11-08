@@ -14,8 +14,8 @@ void advanced_trainer()
         printf("[1. file], [2. find], [3. history], [4. make], [5. more](+less), [6. mount], [7. sort], [8. tar], [9. umask], [10. uname]\n");
         printf("[11. curl], [12. group](+관련 명령어), [13. head](+tail), [14. lsblk], [15. mkfs], [16. ping], [17. sed], [18. user](+관련 명령어+passwd)\n");
         printf("[19. fsck], [20. halt], [21. ifconfig], [22. init], [23. kill], [24. nano], [25. netstat], [26. poweroff], [27. reboot], [28. runlevel], [29. shutdown], [30. su], [31. sudo], [32. top], [33. wget]\n");
-        printf("[34. ], [35. ], [36. ], [37. ], [38. ], [39. ], [40. ], [41. ], [42. ], [43. ], [44. ], [45. ]\n");
-        printf("[46. chmod], [47. chown], [48. chroot], [49. dd], [50. echo], [51. env], [52. export], [53. ln], [54. redirection], [55. users]\n");
+        printf("[34. alias], [35. apt], [36. chsh], [37. cmp], [38. comm], [39. diff], [40. grep], [41. locate], [42. man], [43. pipe], [44. ps], [45. vi], [46. whereis], [47. which]\n");
+        printf("[48. chmod], [49. chown], [50. chroot], [51. dd], [52. echo], [53. env], [54. export], [55. git], [56. ln], [57. redirection], [58. set(+unset)], [59. users]\n");
 
         printf("원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요.\nex) [1. curl] -> '1' 또는 'curl' 입력, [3. head](+tail) -> '3' 또는'head' 입력\n");
         printf("'0'을 입력하면 종료합니다.");
