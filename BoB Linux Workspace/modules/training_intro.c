@@ -30,5 +30,5 @@ void training_intro()
     next_line();
     printf("<Shift + PgUp>은 스크롤을 위로, <Shift + PgDn>은 스크롤을 아래로 움직입니다.\n");
     next_line();
-    printf("\n");
+    printf("기본 설명은 여기까지 입니다.\n");
 }
