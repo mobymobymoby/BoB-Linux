@@ -114,60 +114,87 @@ int call_training(char select)
 
     // 백송선 명령어
     case 34:
+        training_alias();
         break;
     case 35:
+        training_apt();
         break;
     case 36:
+        training_chsh();
         break;
     case 37:
+        training_cmp();
         break;
     case 38:
+        training_comm();
         break;
     case 39:
+        training_diff();
         break;
     case 40:
+        training_grep();
         break;
     case 41:
+        training_locate();
         break;
     case 42:
+        training_man();
         break;
     case 43:
+        training_pipe();
         break;
     case 44:
+        training_ps();
         break;
     case 45:
+        training_vi();
         break;
-    // 이안나 명령어
-    case 46:
-        training_chmod();
+    
+    case 46:        
+        training_whereis();
         break;
     case 47:
-        training_chown();
+        training_which();
         break;
+    
+    // 이안나 명령어
     case 48:
-        training_chroot();
+        training_chmod();
         break;
     case 49:
-        training_dd();
+        training_chown();
         break;
     case 50:
-        training_echo();
+        training_chroot();
         break;
     case 51:
-        training_env();
+        training_dd();
         break;
     case 52:
-        training_export();
+        training_echo();
         break;
     case 53:
-        training_ln();
+        training_env();
         break;
     case 54:
-        training_redirection();
+        training_export();
         break;
     case 55:
+        training_git();
+        break;
+    case 56:
+        training_ln();
+        break;
+    case 57:
+        training_redirection();
+        break;
+    case 58:
+        training_set_unset();
+        break;
+    case 59:
         training_users();
         break;
+            
     default:
         printf("잘못된 값을 입력하셨습니다.\n");
         return -1;
