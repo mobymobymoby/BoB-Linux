@@ -1,4 +1,4 @@
-#include "common_func.h"
+#include "func.h"
 
 int run_command(char valid_cmd[])
 {
