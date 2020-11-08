@@ -1,6 +1,6 @@
 #include "common_func.h"
 
-void training_rm()
+void training_sort()
 {
 	char def_dir[DIR_SIZE];
 	char rst_dir[DIR_SIZE + 10];
@@ -17,7 +17,7 @@ void training_rm()
 
 	chdir(def_dir);
 
-    system("ls -f /etc > sort_test_file");
+   	system("ls -f /etc > sort_test_file");
 
 	printf("이번에 학습할 명령어는 'sort' 입니다. sort는 파일의 내용을 행 단위로 끊어서 정렬을 해줍니다. 정렬된 결과를 출력만 해줄 뿐, 따로 저장하거나 원본파일을 변경하지는 않습니다.");
 	getchar();
