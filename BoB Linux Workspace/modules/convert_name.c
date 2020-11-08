@@ -75,8 +75,34 @@ int convert_training(char select[])
         training_wget();
 
     // 백송선
-    else if (!strcmp(select, ""))
-        training_();
+    else if (!strcmp(select, "alias"))
+        training_alias();
+    else if (!strcmp(select, "apt"))
+        training_apt();
+    else if (!strcmp(select, "chsh"))
+        training_chsh();
+    else if (!strcmp(select, "cmp"))
+        training_cmp();
+    else if (!strcmp(select, "comm"))
+        training_comm();
+    else if (!strcmp(select, "diff"))
+        training_diff();
+    else if (!strcmp(select, "grep"))
+        training_grep();
+    else if (!strcmp(select, "locate"))
+        training_locate();
+    else if (!strcmp(select, "man"))
+        training_man();
+    else if (!strcmp(select, "pipe"))
+        training_pipe();
+    else if (!strcmp(select, "ps"))
+        training_ps();
+    else if (!strcmp(select, "vi"))
+        training_vi();
+    else if (!strcmp(select, "whereis"))
+        training_whereis();
+    else if (!strcmp(select, "which"))
+        training_which();
 
     // 이안나
     else if (!strcmp(select, "chmod"))
@@ -93,10 +119,14 @@ int convert_training(char select[])
         training_env();
     else if (!strcmp(select, "export"))
         training_export();
+    else if (!strcmp(select, "git"))
+        training_git();
     else if (!strcmp(select, "ln"))
         training_ln();
     else if (!strcmp(select, "redirection"))
         training_redirection();  
+    else if (!strcmp(select, "set"))
+        training_set_unset();
     else if (!strcmp(select, "users"))
         training_users();
     else
