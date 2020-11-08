@@ -76,7 +76,21 @@ void training_top(void);
 void training_wget(void);
  
 // 백송선 명령어
+void training_alias(void);
+void training_apt(void);
+void training_chsh(void);
+void training_cmp(void);
+void training_comm(void);
+void training_diff(void);
+void training_grep(void);
+void training_locate(void);
+void training_man(void);
+void training_pipe(void);
+void training_ps(void);
 void training_pwd(void);
+void training_vi(void);
+void training_whereis(void);
+void training_which(void);
 void training_whoami(void);
 
 // 이안나 명령어
