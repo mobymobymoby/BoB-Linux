@@ -11,10 +11,11 @@
 #define BUF_SIZE 102400
 
 void next_quit(void);
+void next_line(void);
 int run_command(char valid_cmd[]);
 int just_run_command(char valid_cmd[]);
 int fake_run_command(char valid_cmd[]);
 int fake_command(char valid_cmd[], char print_msg[]);
-void essential_trainer(void);
-void advanced_trainer(void);
+void create_defdir();
+void delete_defdir();
 #endif
