@@ -1,4 +1,4 @@
-#include "common_func.h"
+#include "func.h"
 
 // fake_command는 사용자 계정을 보여주지 않고 입력만 받음
 // 예를 들어 passwd 명령어를 통해 "Enter new UNIX password: [커서]" 처럼 표시할 때 사용
