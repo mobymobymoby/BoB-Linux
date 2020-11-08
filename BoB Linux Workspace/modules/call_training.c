@@ -5,9 +5,10 @@ int call_training(char select)
     // 문자열 정수로 변환
     int num = atoi(select);
     
-    // 김기서 명령어
+
     switch(num)
     {
+    // 김기서 명령어
     case 1:
         training_file();
         break;
