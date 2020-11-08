@@ -1,6 +1,6 @@
 #include <stdio_ext.h>
 
-void pause(void)
+void next_line(void)
 {
     getchar();
     __fpurge(stdin);
