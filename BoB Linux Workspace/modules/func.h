@@ -1,5 +1,5 @@
-#ifndef __COMMON_FUNC_H__
-#define __COMMON_FUNC_H__
+#ifndef __FUNC_H__
+#define __FUNC_H__
 
 #include <stdio.h>
 #include <string.h>
@@ -10,12 +10,18 @@
 #define DIR_SIZE 60 // 최대 59개의 문자 입력
 #define BUF_SIZE 102400
 
+char def_dir[DIR_SIZE];
+char rst_dir[DIR_SIZE + 10];
+char rm_dir[DIR_SIZE + 10];
+
 void next_quit(void);
 void next_line(void);
 int run_command(char valid_cmd[]);
 int just_run_command(char valid_cmd[]);
 int fake_run_command(char valid_cmd[]);
 int fake_command(char valid_cmd[], char print_msg[]);
+int call_training(char select);
+int convert_training(char select[]);
 void create_defdir();
 void delete_defdir();
 
