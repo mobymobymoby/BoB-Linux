@@ -46,5 +46,5 @@ void training_set_unset(void)
 	printf("\nset, unset 명령어에 대한 학습이 끝났습니다. \n");
 
 
-    delete_defdir();
+	delete_defdir();
 }
