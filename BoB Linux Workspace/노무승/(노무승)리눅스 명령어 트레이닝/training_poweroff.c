@@ -1,68 +1,27 @@
-#include <stdio.h>
-#include <unistd.h> // sleep, getcwd 함수
-#include <string.h> // strncmp 함수 
-// #include <stdlib.h> // system 함수
+#include "func.h"
 
-int training(char test[],char guide[]){
-    char cmd[21]={}; // 최대 실습 명령어 길이 지정
-    char d_buf[30]={};
-    int num=0,num2=0;
+void training_poweroff(void)
+{
+	system("clear");
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    while(1) {
-        if (test[num]==0) {
-            break;
-        } else {
-            ++num;
-        }
-    } // 실습 명령어 길이 측정
-
-    if ((num <= 1) || (num >= 20)) return -1;
-    // 최소, 최대 실습 명령어 길이 미충족시 함수 종료
-
-    printf("[실습] %s\n",guide);
-    getcwd(d_buf, sizeof(d_buf));
-	printf("Trainer@BoB:%s$ ", d_buf);
-    fgets(cmd,20,stdin);
-    fflush(stdin);
-
-    while(1) {
-        if (cmd[num2]==0) {
-            break;
-        } else {
-            ++num2;
-        }
-    } // 입력받은 명령어 길이 측정
-
-    if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
-        printf("잘 하셨습니다!\n");
-        pause();
-        return 0;
-    } else {
-        training(test,guide);
-    }
-}
-
-void pause(){
-    getchar();
-    fflush(stdin);
-}
-
-int main(){
     printf("poweroff 명령어는 시스템을 종료하는 명령어입니다.\n");
-    pause();
+    next_line();
 
     printf("poweroff 명령어는 하드디스크와 메모리를 동기화 시키지 않고 바로 종료하기 때문에,\n");
     printf("poweroff 명령어는 가급적 사용하지 않는 것이 좋습니다.\n");
-    pause();
+    next_line();
 
     printf("대체 명령어로 'init', 'shutdown' 명령어 사용을 권장드립니다.\n");
-    pause();
+    next_line();
 
-    training("poweroff","poweroff 명령어를 사용하여 시스템을 종료해보세요.\n(실제 적용되지는 않습니다.)");
+    printf("[실습] poweroff 명령어를 사용하여 시스템을 종료해보세요.\n(실제 적용되지는 않습니다.)\n");
+    fake_run_command("poweroff");
+    next_line();
 
     printf("비슷하게 시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'halt' 가 있으며,\n");
     printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'가 있습니다.\n");
-    pause();
+    next_line();
 
     printf("고생하셨습니다!\n");
 }

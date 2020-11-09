@@ -1,105 +1,62 @@
-#include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-// #include <stdlib.h> // system í•¨ìˆ˜
+#include "func.h"
 
-int training(char test[],char guide[]){
-    char cmd[31]={}; // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
-    char d_buf[30]={};
-    int num=0,num2=0;
+void training_nano(void)
+{
+	system("clear");
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    while(1) {
-        if (test[num]==0) {
-            break;
-        } else {
-            ++num;
-        }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    printf("nano ¸í·É¾î´Â nano ÅØ½ºÆ® ÆíÁı±â¸¦ ºÒ·¯¿À´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    next_line();
+    printf("´Ù¸¥ À¯¸íÇÑ ÅØ½ºÆ® ÆíÁı±â·Î´Â vi¿Í vim µîÀÌ ÀÖÀ¸¸ç,\n");
+    printf("nano ¿¡µğÅÍ´Â ±× Áß¿¡¼­ »ç¿ëÇÏ±â ¼ö¿ùÇÑ Æí¿¡ ¼ÓÇÕ´Ï´Ù.\n");
+    next_line();
 
-    if ((num <= 1) || (num >= 30)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
-
-    printf("[ì‹¤ìŠµ] %s\n",guide);
-    getcwd(d_buf, sizeof(d_buf));
-	printf("Trainer@BoB:%s$ ", d_buf);
-    fgets(cmd,30,stdin);
-    fflush(stdin);
-
-    while(1) {
-        if (cmd[num2]==0) {
-            break;
-        } else {
-            ++num2;
-        }
-    } // ì…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
-
-    if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
+    printf("'nano [ÆÄÀÏ ¸í]' °ú °°ÀÌ ÀÔ·ÂÇÏ¸é Æ¯Á¤ ÆÄÀÏÀ» nano ÆíÁı±â·Î ¿­ ¼ö ÀÖ½À´Ï´Ù.\n");
+    printf("[½Ç½À] test ÆÄÀÏÀ» nano ÆíÁı±â·Î ¿­¾îº¸¼¼¿ä.\n");
+    fake_run_command("nano test");
         printf("  GNU nano 4.8                          test                                    \n");
         printf("TEST FILE\n");
         printf("                                  [ New File ]\n");
         printf("^G Get Help  ^O Write Out ^W Where Is  ^K Cut Text  ^J Justify   ^C Cur Pos\n");
         printf("^X Exit      ^R Read File ^\ Replace   ^U Paste Text^T To Spell  ^_ Go To Line\n");
+        next_line();
+        
+    printf("±âº»ÀûÀ¸·Î ¹æÇâÅ°·Î ¹®ÀÚ, ¶óÀÎ ÀÌµ¿ÀÌ °¡´ÉÇÕ´Ï´Ù.\n");
+    next_line();
 
-        printf("\n");
-        printf("ì˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        pause();
-        return 0;
-    } else {
-        training(test,guide);
-    }
-}
+    printf("´ÙÀ½Àº ÀÚÁÖ »ç¿ëÇÏ´Â ¿É¼ÇµéÀÔ´Ï´Ù.\n");
+    printf("    nano -B [ÆÄÀÏ¸í] : º¯°æ ÀÌÀü ÆÄÀÏÀÌ '[ÆÄÀÏ¸í]~'ÀÌ¸§À¸·Î ¹é¾÷µË´Ï´Ù.\n");
+    printf("    nano -m [ÆÄÀÏ¸í] : ¸¶¿ì½º¸¦ »ç¿ëÇÕ´Ï´Ù.\n");
+    printf("    nano +[¶óÀÎ] [ÆÄÀÏ¸í] : ÆÄÀÏÀ» ¿­ÀÚ¸¶ÀÚ Æ¯Á¤ ¶óÀÎÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù.\n");
+    next_line();
 
-void pause(){
-    getchar();
-    fflush(stdin);
-}
-
-int main(){
-    printf("nano ëª…ë ¹ì–´ëŠ” nano í…ìŠ¤íŠ¸ í¸ì§‘ê¸°ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” ëª…ë ¹ì–´ì…ë‹ˆë‹¤.\n");
-    pause();
-    printf("ë‹¤ë¥¸ ìœ ëª…í•œ í…ìŠ¤íŠ¸ í¸ì§‘ê¸°ë¡œëŠ” viì™€ vim ë“±ì´ ìˆìœ¼ë©°,\n");
-    printf("nano ì—ë””í„°ëŠ” ê·¸ ì¤‘ì—ì„œ ì‚¬ìš©í•˜ê¸° ìˆ˜ì›”í•œ í¸ì— ì†í•©ë‹ˆë‹¤.\n");
-    pause();
-
-    printf("'nano [íŒŒì¼ ëª…]' ê³¼ ê°™ì´ ì…ë ¥í•˜ë©´ íŠ¹ì • íŒŒì¼ì„ nano í¸ì§‘ê¸°ë¡œ ì—´ ìˆ˜ ìˆìŠµë‹ˆë‹¤.\n");
-    training("nano test","test íŒŒì¼ì„ nano í¸ì§‘ê¸°ë¡œ ì—´ì–´ë³´ì„¸ìš”.");
-
-    printf("ê¸°ë³¸ì ìœ¼ë¡œ ë°©í–¥í‚¤ë¡œ ë¬¸ì, ë¼ì¸ ì´ë™ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.\n");
-    pause();
-
-    printf("ë‹¤ìŒì€ ìì£¼ ì‚¬ìš©í•˜ëŠ” ì˜µì…˜ë“¤ì…ë‹ˆë‹¤.\n");
-    printf("    nano -B [íŒŒì¼ëª…] : ë³€ê²½ ì´ì „ íŒŒì¼ì´ '[íŒŒì¼ëª…]~'ì´ë¦„ìœ¼ë¡œ ë°±ì—…ë©ë‹ˆë‹¤.\n");
-    printf("    nano -m [íŒŒì¼ëª…] : ë§ˆìš°ìŠ¤ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
-    printf("    nano +[ë¼ì¸] [íŒŒì¼ëª…] : íŒŒì¼ì„ ì—´ìë§ˆì íŠ¹ì • ë¼ì¸ìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.\n");
-    pause();
-
-    printf("nano í¸ì§‘ê¸° ë‚´ì—ì„œë„ ë‹¤ì–‘í•œ ê¸°ëŠ¥ë“¤ì´ ì¡´ì¬í•˜ëŠ”ë°, ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.\n");
+    printf("nano ÆíÁı±â ³»¿¡¼­µµ ´Ù¾çÇÑ ±â´ÉµéÀÌ Á¸ÀçÇÏ´Âµ¥, ´ÙÀ½°ú °°½À´Ï´Ù.\n");
     printf("\n");
-    printf("[ë¶€ê°€ ê¸°ëŠ¥]\n");
-    printf("    ctrl+g (F1) : ë„ì›€ë§ í‘œì‹œ\n");
-    printf("    ctrl+x (F2) : nano ì¢…ë£Œ\n");
-    printf("    ctrl+o (F3) : íŒŒì¼ ì €ì¥\n");
-    pause();
+    printf("[ºÎ°¡ ±â´É]\n");
+    printf("    ctrl+g (F1) : µµ¿ò¸» Ç¥½Ã\n");
+    printf("    ctrl+x (F2) : nano Á¾·á\n");
+    printf("    ctrl+o (F3) : ÆÄÀÏ ÀúÀå\n");
+    next_line();
 
-    printf("[ìœ ìš©í•œ ê¸°ëŠ¥]\n");
-    printf("    ctrl+w (F6) : ë¬¸ì ê²€ìƒ‰\n");
-    printf("    ctrl+\\ : ë¬¸ì ê²€ìƒ‰ í›„ ìˆ˜ì •\n");
-    printf("    ctrl+k (F9) : í˜„ì¬ ì¤„ ì˜ë¼ë‚´ê¸°\n");
-    printf("    ctrl+u : ì´ì „ì— ìë¥¸ ì¤„ì„ ë¶™ì—¬ë„£ê¸°\n");
-    printf("    alt+] : í˜„ì¬ ê´„í˜¸ì— ë§¤ì¹­ë˜ëŠ” ê´„í˜¸ ì°¾ê¸°\n");
-    printf("            (ì½”ë”©ì‹œ ìœ ìš©í•˜ê²Œ ì‚¬ìš©ë  ìˆ˜ ìˆìŒ)\n");
-    pause();
+    printf("[À¯¿ëÇÑ ±â´É]\n");
+    printf("    ctrl+w (F6) : ¹®ÀÚ °Ë»ö\n");
+    printf("    ctrl+\\ : ¹®ÀÚ °Ë»ö ÈÄ ¼öÁ¤\n");
+    printf("    ctrl+k (F9) : ÇöÀç ÁÙ Àß¶ó³»±â\n");
+    printf("    ctrl+u : ÀÌÀü¿¡ ÀÚ¸¥ ÁÙÀ» ºÙ¿©³Ö±â\n");
+    printf("    alt+] : ÇöÀç °ıÈ£¿¡ ¸ÅÄªµÇ´Â °ıÈ£ Ã£±â\n");
+    printf("            (ÄÚµù½Ã À¯¿ëÇÏ°Ô »ç¿ëµÉ ¼ö ÀÖÀ½)\n");
+    next_line();
     
-    printf("[ë¼ì¸ ì´ë™]\n");
-    printf("    ctrl+y (F7) : ì´ì „ í™”ë©´ìœ¼ë¡œ ì´ë™\n");
-    printf("    ctrl+v (F8) : ë‹¤ìŒ í™”ë©´ìœ¼ë¡œ ì´ë™\n");
-    printf("    ctrl+a : í˜„ì¬ ë¼ì¸ì˜ ì‹œì‘ ìœ„ì¹˜ë¡œ ì´ë™\n");
-    printf("    ctrl+e : í˜„ì¬ ë¼ì¸ì˜ ë ìœ„ì¹˜ë¡œ ì´ë™\n");
-    printf("    alt+( : í˜„ì¬ ë¬¸ë‹¨ì˜ ì‹œì‘ìœ¼ë¡œ ì´ë™\n");
-    printf("    alt+) : í˜„ì¬ ë¬¸ë‹¨ì˜ ëìœ¼ë¡œ ì´ë™\n");
-    printf("    alt+\\ : íŒŒì¼ì˜ ì²« ë¼ì¸ìœ¼ë¡œ ì´ë™\n");
-    printf("    alt+/ : íŒŒì¼ì˜ ë§ˆì§€ë§‰ ë¼ì¸ìœ¼ë¡œ ì´ë™\n");
-    pause();
+    printf("[¶óÀÎ ÀÌµ¿]\n");
+    printf("    ctrl+y (F7) : ÀÌÀü È­¸éÀ¸·Î ÀÌµ¿\n");
+    printf("    ctrl+v (F8) : ´ÙÀ½ È­¸éÀ¸·Î ÀÌµ¿\n");
+    printf("    ctrl+a : ÇöÀç ¶óÀÎÀÇ ½ÃÀÛ À§Ä¡·Î ÀÌµ¿\n");
+    printf("    ctrl+e : ÇöÀç ¶óÀÎÀÇ ³¡ À§Ä¡·Î ÀÌµ¿\n");
+    printf("    alt+( : ÇöÀç ¹®´ÜÀÇ ½ÃÀÛÀ¸·Î ÀÌµ¿\n");
+    printf("    alt+) : ÇöÀç ¹®´ÜÀÇ ³¡À¸·Î ÀÌµ¿\n");
+    printf("    alt+\\ : ÆÄÀÏÀÇ Ã¹ ¶óÀÎÀ¸·Î ÀÌµ¿\n");
+    printf("    alt+/ : ÆÄÀÏÀÇ ¸¶Áö¸· ¶óÀÎÀ¸·Î ÀÌµ¿\n");
+    next_line();
 
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("°í»ıÇÏ¼Ì½À´Ï´Ù!\n");
 }

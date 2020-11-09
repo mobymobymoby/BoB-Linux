@@ -1,118 +1,76 @@
-#include <stdio.h>
-#include <unistd.h> // sleep, getcwd í•¨ìˆ˜
-#include <string.h> // strncmp í•¨ìˆ˜ 
-//#include <stdlib.h> // system í•¨ìˆ˜
+#include "func.h"
 
-int training(char test[],char guide[]){
-    char cmd[21]={}; // ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì§€ì •
-    char d_buf[30]={};
-    int num=0,num2=0;
+void training_top(void)
+{
+	system("clear");
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    while(1) {
-        if (test[num]==0) {
-            break;
-        } else {
-            ++num;
-        }
-    } // ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    printf("top ¸í·É¾î´Â ¸®´ª½º ½Ã½ºÅÛÀÇ ¿î¿ë »óÈ²À» º¼ ¼ö ÀÖ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    printf("ÇÁ·Î¼¼½ºº° CPU »ç¿ëÀ², ¸Þ¸ð¸® Á¡À¯·ü, »óÅÂ, ½ÇÇà ½Ã°£ µîÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.\n");
+    next_line();
 
-    if ((num <= 1) || (num >= 20)) return -1;
-    // ìµœì†Œ, ìµœëŒ€ ì‹¤ìŠµ ëª…ë ¹ì–´ ê¸¸ì´ ë¯¸ì¶©ì¡±ì‹œ í•¨ìˆ˜ ì¢…ë£Œ
+    printf("[½Ç½À] top ¸í·É¾î¸¦ ÀÔ·ÂÇØº¸¼¼¿ä.\n");
+    fake_run_command("top");
+    printf("   PID USER      PR  NI    VIRT    RES    SHR S  %%CPU  %%MEM     TIME+ COMMAND  \n");
+    printf("  1234 user      20   0  893548  93596  58916 R   1.1   2.2   1:30.65 TEST     \n");
+    next_line();
 
-    printf("[ì‹¤ìŠµ] %s\n",guide);
-    getcwd(d_buf, sizeof(d_buf));
-	printf("Trainer@BoB:%s$ ", d_buf);
-    fgets(cmd,20,stdin);
-    fflush(stdin);
+    printf("PID´Â ProcessIDÀÇ ¾àÀÚ·Î, °¢ ÇÁ·Î¼¼½º¸¦ ±¸ºÐÇÏ´Â ¹øÈ£ÀÔ´Ï´Ù.\n");
+    printf("    (À§ °á°ú¿¡¼­ PID 1234´Â 'TEST'¶ó´Â ÇÁ·Î±×·¥À» °¡¸£Åµ´Ï´Ù.)\n");
+    next_line();
 
-    while(1) {
-        if (cmd[num2]==0) {
-            break;
-        } else {
-            ++num2;
-        }
-    } // ìž…ë ¥ë°›ì€ ëª…ë ¹ì–´ ê¸¸ì´ ì¸¡ì •
+    printf("USER´Â ÇØ´ç ÇÁ·Î¼¼½º¸¦ ½ÇÇà½ÃÅ² »ç¿ëÀÚÀÇ ÀÌ¸§ÀÔ´Ï´Ù.\n");
+    printf("    (À§ °á°ú¿¡¼­ 'TEST'¶ó´Â ÇÁ·Î±×·¥À» ½ÇÇàÇÑ »ç¿ëÀÚ´Â 'user'¶ó´Â °ÍÀ» ÀÇ¹ÌÇÕ´Ï´Ù.)\n");
+    next_line();
 
-    if ((strncmp(cmd,test,num)==0) && (num==num2-1)){
-        printf("   PID USER      PR  NI    VIRT    RES    SHR S  %%CPU  %%MEM     TIME+ COMMAND  \n");
-        printf("  1234 user      20   0  893548  93596  58916 R   1.1   2.2   1:30.65 TEST     \n");
-        printf("ìž˜ í•˜ì…¨ìŠµë‹ˆë‹¤!\n");
-        pause();
-        return 0;
-    } else {
-        training(test,guide);
-    }
-}
+    printf("PR ¶Ç´Â PRI´Â Priority¸¦ ¸»ÇÏ¸ç, ½Ã½ºÅÛÀÌ NICE °ª¸¦ ÀÌ¿ëÇÏ¿© °è»êÇÑ ½ÇÁ¦ ¿ì¼±¼øÀ§ÀÔ´Ï´Ù.\n");
+    printf("    ¸ðµç ÇÁ·Î¼¼½º´Â PR°ªÀ» °¡Áö°í ÀÖÀ¸¸ç, ±× ¹üÀ§´Â 1 ~ 139 ±îÁö ÀÔ´Ï´Ù.\n");
+    printf("    PR 1ÀÌ °¡Àå ¿ì¼±¼øÀ§°¡ ³ô°í, PR 139°¡ °¡Àå ¿ì¼±¼øÀ§°¡ ³·´Ù°í º¼ ¼ö ÀÖ½À´Ï´Ù.\n");
+    printf("    NIÀÇ ÃÖ¼Ò °ªÀÎ -20ÀÌ PR 100À» ÀÇ¹ÌÇÏ¸ç, NIÀÇ ÃÖ´ë °ªÀÎ 19°¡ PR 139¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.\n");
+    next_line();
+    printf("    ½ÇÁ¦ top ¸í·É¾î¿¡¼­¼­ º¸¿©ÁÖ´Â PR °ªÀº NI(-20 ~ 19) + 20 À¸·Î ¿¹½Ã´Â ¾Æ·¡¿Í °°½À´Ï´Ù.\n");
+    printf("    (Áï À§ °á°ú¿¡¼­ PR 20Àº ½ÇÁ¦ Priority 120, NI °ªÀº 0À¸·Î º¼ ¼ö ÀÖ½À´Ï´Ù.)\n");
+    next_line();
 
-void pause(){
-    getchar();
-    fflush(stdin);
-}
+    printf("NI´Â NICE °ªÀ» ¸»ÇÏ¸ç, »ç¿ëÀÚ¿Í °ü¸®ÀÚ°¡ Á¶ÀýÇÒ ¼ö ÀÖ´Â ¿ì¼±¼øÀ§ °ªÀÔ´Ï´Ù.\n");
+    printf("    ¾Õ¿¡¼­ ¾ð±ÞÇÑ °Í°ú °°ÀÌ ¹üÀ§´Â -20 ~ 19·Î, ±âº» °ªÀº 0ÀÔ´Ï´Ù.\n");
+    printf("    (À§ °á°ú¿¡¼­ NI 0Àº ÇØ´ç ÇÁ·Î±×·¥ÀÇ ¿ì¼± ¼øÀ§°¡ ±âº» °ªÀÎ °ÍÀ» ¸»ÇÕ´Ï´Ù.)\n");
+    next_line();
 
-int main(){
-    printf("top ëª…ë ¹ì–´ëŠ” ë¦¬ëˆ…ìŠ¤ ì‹œìŠ¤í…œì˜ ìš´ìš© ìƒí™©ì„ ë³¼ ìˆ˜ ìžˆëŠ” ëª…ë ¹ì–´ìž…ë‹ˆë‹¤.\n");
-    printf("í”„ë¡œì„¸ìŠ¤ë³„ CPU ì‚¬ìš©ìœ¨, ë©”ëª¨ë¦¬ ì ìœ ë¥ , ìƒíƒœ, ì‹¤í–‰ ì‹œê°„ ë“±ì„ ë³¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.\n");
-    pause();
-    
-    training("top","top ëª…ë ¹ì–´ë¥¼ ìž…ë ¥í•´ë³´ì„¸ìš”.");
+    printf("VIRT´Â ÇØ´ç ÇÁ·Î¼¼½ºÀÇ °¡»ó ¸Þ¸ð¸® »ç¿ë·®,\n");
+    printf("RES´Â ÇØ´ç ÇÁ·Î¼¼½ºÀÇ ¹°¸®ÀûÀÎ ¸Þ¸ð¸® »ç¿ë·®,\n");
+    printf("SHR´Â ÇØ´ç ÇÁ·Î¼¼½º¿¡ ÀÇÇØ »ç¿ëµÈ °øÀ¯¸Þ¸ð¸®ÀÇ ¾çÀ» ¸»ÇÕ´Ï´Ù.\n");
+    next_line();
 
-    printf("PIDëŠ” ProcessIDì˜ ì•½ìžë¡œ, ê° í”„ë¡œì„¸ìŠ¤ë¥¼ êµ¬ë¶„í•˜ëŠ” ë²ˆí˜¸ìž…ë‹ˆë‹¤.\n");
-    printf("    (ìœ„ ê²°ê³¼ì—ì„œ PID 1234ëŠ” 'TEST'ë¼ëŠ” í”„ë¡œê·¸ëž¨ì„ ê°€ë¥´í‚µë‹ˆë‹¤.)\n");
-    pause();
+    printf("S´Â Process State¸¦ ¸»ÇÏ¸ç, ÇöÀç ÇÁ·Î¼¼½ºÀÇ »óÅÂ¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.\n");
+    printf("    StateÀÇ °ªÀº °¢°¢ S(sleeping), R(running), W(swapped out process), Z(zombies)°¡ ÀÖ½À´Ï´Ù.\n");
+    printf("    (À§ °á°ú¿¡¼­ State°ªÀº R·Î ÇØ´ç ÇÁ·Î±×·¥ÀÌ ÇöÀç ½ÇÇà ÁßÀÎ °ÍÀ» ÀÇ¹ÌÇÕ´Ï´Ù.)\n");
+    next_line();
 
-    printf("USERëŠ” í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ë¥¼ ì‹¤í–‰ì‹œí‚¨ ì‚¬ìš©ìžì˜ ì´ë¦„ìž…ë‹ˆë‹¤.\n");
-    printf("    (ìœ„ ê²°ê³¼ì—ì„œ 'TEST'ë¼ëŠ” í”„ë¡œê·¸ëž¨ì„ ì‹¤í–‰í•œ ì‚¬ìš©ìžëŠ” 'user'ë¼ëŠ” ê²ƒì„ ì˜ë¯¸í•©ë‹ˆë‹¤.)\n");
-    pause();
+    printf("%%CPU´Â CPU »ç¿ëÀ², %%MEM´Â ¸Þ¸ð¸® Á¡À¯À²À» ³ªÅ¸³À´Ï´Ù.\n");
+    printf("TIME+´Â ÇÁ·Î¼¼½º°¡ ½ÇÇàµÈ ÈÄ °æ°úµÈ ½Ã°£,\n");
+    printf("COMMAND´Â ½ÇÇàµÈ ¸í·É¾î³ª ÇÁ·Î¼¼½º ÀÌ¸§À» ¶æ ÇÕ´Ï´Ù.\n");
+    next_line();
 
-    printf("PR ë˜ëŠ” PRIëŠ” Priorityë¥¼ ë§í•˜ë©°, ì‹œìŠ¤í…œì´ NICE ê°’ë¥¼ ì´ìš©í•˜ì—¬ ê³„ì‚°í•œ ì‹¤ì œ ìš°ì„ ìˆœìœ„ìž…ë‹ˆë‹¤.\n");
-    printf("    ëª¨ë“  í”„ë¡œì„¸ìŠ¤ëŠ” PRê°’ì„ ê°€ì§€ê³  ìžˆìœ¼ë©°, ê·¸ ë²”ìœ„ëŠ” 1 ~ 139 ê¹Œì§€ ìž…ë‹ˆë‹¤.\n");
-    printf("    PR 1ì´ ê°€ìž¥ ìš°ì„ ìˆœìœ„ê°€ ë†’ê³ , PR 139ê°€ ê°€ìž¥ ìš°ì„ ìˆœìœ„ê°€ ë‚®ë‹¤ê³  ë³¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.\n");
-    printf("    NIì˜ ìµœì†Œ ê°’ì¸ -20ì´ PR 100ì„ ì˜ë¯¸í•˜ë©°, NIì˜ ìµœëŒ€ ê°’ì¸ 19ê°€ PR 139ë¥¼ ì˜ë¯¸í•©ë‹ˆë‹¤.\n");
-    pause();
-    printf("    ì‹¤ì œ top ëª…ë ¹ì–´ì—ì„œì„œ ë³´ì—¬ì£¼ëŠ” PR ê°’ì€ NI(-20 ~ 19) + 20 ìœ¼ë¡œ ì˜ˆì‹œëŠ” ì•„ëž˜ì™€ ê°™ìŠµë‹ˆë‹¤.\n");
-    printf("    (ì¦‰ ìœ„ ê²°ê³¼ì—ì„œ PR 20ì€ ì‹¤ì œ Priority 120, NI ê°’ì€ 0ìœ¼ë¡œ ë³¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.)\n");
-    pause();
+    printf("[top ¸í·É¾î ¿É¼Ç] (Á¤·Ä)\n");
+    printf("    shift + p   : cpu »ç¿ë·®ÀÌ Å« ¼ø¼­·Î Á¤·Ä\n");
+    printf("    shift + m	: ¸Þ¸ð¸® »ç¿ë·®ÀÌ Å« ¼ø¼­·Î Á¤·Ä\n");
+    printf("    shift + t	: ½ÇÇàµÈ ½Ã°£ÀÌ Å« ¼ø¼­·Î Á¤·Ä\n");
+    next_line();
 
-    printf("NIëŠ” NICE ê°’ì„ ë§í•˜ë©°, ì‚¬ìš©ìžì™€ ê´€ë¦¬ìžê°€ ì¡°ì ˆí•  ìˆ˜ ìžˆëŠ” ìš°ì„ ìˆœìœ„ ê°’ìž…ë‹ˆë‹¤.\n");
-    printf("    ì•žì—ì„œ ì–¸ê¸‰í•œ ê²ƒê³¼ ê°™ì´ ë²”ìœ„ëŠ” -20 ~ 19ë¡œ, ê¸°ë³¸ ê°’ì€ 0ìž…ë‹ˆë‹¤.\n");
-    printf("    (ìœ„ ê²°ê³¼ì—ì„œ NI 0ì€ í•´ë‹¹ í”„ë¡œê·¸ëž¨ì˜ ìš°ì„  ìˆœìœ„ê°€ ê¸°ë³¸ ê°’ì¸ ê²ƒì„ ë§í•©ë‹ˆë‹¤.)\n");
-    pause();
+    printf("[top ¸í·É¾î ¿É¼Ç] (±â´É)\n");
+    printf("     (½ÇÇà Àü) top -p [PID]  : Æ¯Á¤ ÇÁ·Î¼¼½º¸¸ ¸ð´ÏÅÍ¸µ\n");
+    printf("    k ÀÔ·Â ÈÄ PID ÀÔ·Â       : ÇØ´ç ÇÁ·Î¼¼½º Á¾·á\n");
+    printf("    r ÀÔ·Â ÈÄ PID, NICE ÀÔ·Â : ÇØ´ç ÇÁ·Î¼¼½º ¿ì¼± ¼øÀ§ º¯°æ\n");
+    printf("    d ÀÔ·Â ÈÄ ÃÊ(Sec) ÀÔ·Â   : ÁöÁ¤µÈ ÃÊ ¸¶´Ù ¸ñ·Ï °»½Å\n");
+    printf("    space                    : ¸ñ·Ï °»½Å\n");
+    printf("    q                        : top ÇÁ·Î±×·¥ Á¾·á\n");
+    next_line();
 
-    printf("VIRTëŠ” í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ì˜ ê°€ìƒ ë©”ëª¨ë¦¬ ì‚¬ìš©ëŸ‰,\n");
-    printf("RESëŠ” í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ì˜ ë¬¼ë¦¬ì ì¸ ë©”ëª¨ë¦¬ ì‚¬ìš©ëŸ‰,\n");
-    printf("SHRëŠ” í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ì— ì˜í•´ ì‚¬ìš©ëœ ê³µìœ ë©”ëª¨ë¦¬ì˜ ì–‘ì„ ë§í•©ë‹ˆë‹¤.\n");
-    pause();
+    printf("ºñ½ÁÇÑ ¸í·É¾î·Î´Â 'ps' ¸í·É¾î°¡ ÀÖ½À´Ï´Ù.\n");
+    printf("ps ¸í·É¾î´Â ½ÇÇàµÈ ½ÃÁ¡¿¡¼­ÀÇ ½Ã½ºÅÛ »óÅÂ¸¸ º¸¿©ÁÖÁö¸¸,\n");
+    printf("top ¸í·É¾î´Â ÁÖ±âÀûÀ¸·Î ½Ã½ºÅÛ »óÅÂ¸¦ °»½ÅÇÏ¿© º¸¿©ÁÖ´Â Â÷ÀÌÁ¡ÀÌ ÀÖ½À´Ï´Ù.\n");
+    next_line();
 
-    printf("SëŠ” Process Stateë¥¼ ë§í•˜ë©°, í˜„ìž¬ í”„ë¡œì„¸ìŠ¤ì˜ ìƒíƒœë¥¼ ì˜ë¯¸í•©ë‹ˆë‹¤.\n");
-    printf("    Stateì˜ ê°’ì€ ê°ê° S(sleeping), R(running), W(swapped out process), Z(zombies)ê°€ ìžˆìŠµë‹ˆë‹¤.\n");
-    printf("    (ìœ„ ê²°ê³¼ì—ì„œ Stateê°’ì€ Rë¡œ í•´ë‹¹ í”„ë¡œê·¸ëž¨ì´ í˜„ìž¬ ì‹¤í–‰ ì¤‘ì¸ ê²ƒì„ ì˜ë¯¸í•©ë‹ˆë‹¤.)\n");
-    pause();
-
-    printf("%%CPUëŠ” CPU ì‚¬ìš©ìœ¨, %%MEMëŠ” ë©”ëª¨ë¦¬ ì ìœ ìœ¨ì„ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤.\n");
-    printf("TIME+ëŠ” í”„ë¡œì„¸ìŠ¤ê°€ ì‹¤í–‰ëœ í›„ ê²½ê³¼ëœ ì‹œê°„,\n");
-    printf("COMMANDëŠ” ì‹¤í–‰ëœ ëª…ë ¹ì–´ë‚˜ í”„ë¡œì„¸ìŠ¤ ì´ë¦„ì„ ëœ» í•©ë‹ˆë‹¤.\n");
-    pause();
-
-    printf("[top ëª…ë ¹ì–´ ì˜µì…˜] (ì •ë ¬)\n");
-    printf("    shift + p   : cpu ì‚¬ìš©ëŸ‰ì´ í° ìˆœì„œë¡œ ì •ë ¬\n");
-    printf("    shift + m	: ë©”ëª¨ë¦¬ ì‚¬ìš©ëŸ‰ì´ í° ìˆœì„œë¡œ ì •ë ¬\n");
-    printf("    shift + t	: ì‹¤í–‰ëœ ì‹œê°„ì´ í° ìˆœì„œë¡œ ì •ë ¬\n");
-    pause();
-
-    printf("[top ëª…ë ¹ì–´ ì˜µì…˜] (ê¸°ëŠ¥)\n");
-    printf("     (ì‹¤í–‰ ì „) top -p [PID]  : íŠ¹ì • í”„ë¡œì„¸ìŠ¤ë§Œ ëª¨ë‹ˆí„°ë§\n");
-    printf("    k ìž…ë ¥ í›„ PID ìž…ë ¥       : í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ ì¢…ë£Œ\n");
-    printf("    r ìž…ë ¥ í›„ PID, NICE ìž…ë ¥ : í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ ìš°ì„  ìˆœìœ„ ë³€ê²½\n");
-    printf("    d ìž…ë ¥ í›„ ì´ˆ(Sec) ìž…ë ¥   : ì§€ì •ëœ ì´ˆ ë§ˆë‹¤ ëª©ë¡ ê°±ì‹ \n");
-    printf("    space                    : ëª©ë¡ ê°±ì‹ \n");
-    printf("    q                        : top í”„ë¡œê·¸ëž¨ ì¢…ë£Œ\n");
-
-    pause();
-
-    printf("ë¹„ìŠ·í•œ ëª…ë ¹ì–´ë¡œëŠ” 'ps' ëª…ë ¹ì–´ê°€ ìžˆìŠµë‹ˆë‹¤.\n");
-    printf("ps ëª…ë ¹ì–´ëŠ” ì‹¤í–‰ëœ ì‹œì ì—ì„œì˜ ì‹œìŠ¤í…œ ìƒíƒœë§Œ ë³´ì—¬ì£¼ì§€ë§Œ,\n");
-    printf("top ëª…ë ¹ì–´ëŠ” ì£¼ê¸°ì ìœ¼ë¡œ ì‹œìŠ¤í…œ ìƒíƒœë¥¼ ê°±ì‹ í•˜ì—¬ ë³´ì—¬ì£¼ëŠ” ì°¨ì´ì ì´ ìžˆìŠµë‹ˆë‹¤.\n");
-    pause();
-
-    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
+    printf("°í»ýÇÏ¼Ì½À´Ï´Ù!\n");
 }
