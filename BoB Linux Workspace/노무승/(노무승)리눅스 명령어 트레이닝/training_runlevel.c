@@ -3,6 +3,7 @@
 void training_runlevel(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("runlevel 명령어는 런레벨(RunLevel)을 확인하는 명령어입니다.\n");
@@ -16,5 +17,7 @@ void training_runlevel(void)
     printf("왼쪽에 표기된 것이 이전의 런레벌이고, \n");
     printf("오른쪽에 표기된 것이 현재 런레벨입니다.\n");
     next_line();
+
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

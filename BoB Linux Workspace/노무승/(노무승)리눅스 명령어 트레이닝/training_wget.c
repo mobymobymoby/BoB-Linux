@@ -7,6 +7,7 @@ void file_check(){
 
 void training_wget(void)
 {
+    create_defdir();
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -18,9 +19,8 @@ void training_wget(void)
     printf("'wget [URL 링크]'와 같이 사용합니다.\n");
     next_line();
 
-    create_defdir();
-    file_check();
     printf("[실습] 네이버(https://www.naver.com)의 웹 페이지 파일을 다운받아보세요.\n");
+    file_check();
     run_command("wget https://www.naver.com");
     delete_defdir();
     // 트레이닝 시작
@@ -33,5 +33,7 @@ void training_wget(void)
     printf("wget -nd -r --reject=[확장자] [URL] : 특정 확장자 파일만 빼고 다운로드\n");
     printf("이와 같이 옵션을 사용하면 더욱 유용하게 활용할 수 있습니다.\n");
     next_line();
+
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

@@ -2,6 +2,7 @@
 
 void training_kill(void)
 {
+    create_defdir();
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -38,5 +39,7 @@ void training_kill(void)
 
     printf("PID를 확인하는 방법으로는 'ps' 명령어나 'top' 명령어를 사용하시면 됩니다.\n");
     next_line();
+
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

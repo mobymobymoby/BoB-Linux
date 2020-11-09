@@ -3,6 +3,7 @@
 void training_sudo(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("sudo 명령어는 root 권한을 획득하기 위한 명령어입니다.\n");
@@ -48,5 +49,7 @@ void training_sudo(void)
 
     printf("참고로 다른 사용자로 변경하는 명령어로는 'su' 명령어가 있습니다.\n");
     next_line();
+
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

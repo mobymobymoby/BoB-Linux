@@ -3,6 +3,7 @@
 void training_reboot(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("reboot 명령어는 시스템을 재부팅하는 명령어입니다.\n");
@@ -17,5 +18,6 @@ void training_reboot(void)
     printf("시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'halt', 'poweroff' 가 있습니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

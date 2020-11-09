@@ -3,6 +3,7 @@
 void training_shutdown(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("shutdown 명령어는 시스템을 종료하거나 재부팅 하는 명령어입니다.\n");
@@ -39,5 +40,6 @@ void training_shutdown(void)
     printf("시스템 재부팅을 수행하는 명령어로는 'init', 'reboot'가 있습니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

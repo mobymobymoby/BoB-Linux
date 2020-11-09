@@ -2,6 +2,7 @@
 
 void training_fsck(void){
     system("clear");
+    create_defdir();
 
     printf("fsck 명령어는 리눅스 파일 시스템을 검사하고 수리하는 명령어입니다.\n");
     next_line();
@@ -35,5 +36,6 @@ void training_fsck(void){
     printf("    -f : 파일 시스템 이상 유무와 관계없이 강제로 점검을 합니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

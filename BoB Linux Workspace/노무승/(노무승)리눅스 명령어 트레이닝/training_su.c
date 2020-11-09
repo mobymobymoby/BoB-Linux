@@ -3,6 +3,7 @@
 void training_su(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("su 명령어는 사용자를 전환하기 위한 명령어입니다.\n");
@@ -23,5 +24,6 @@ void training_su(void)
     printf("이는 해당 전환 대상 사용자의 환경 변수를 사용하는 것을 의미합니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

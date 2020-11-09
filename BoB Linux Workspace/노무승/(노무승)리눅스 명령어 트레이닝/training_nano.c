@@ -2,6 +2,7 @@
 
 void training_nano(void)
 {
+    create_defdir();
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,5 +59,6 @@ void training_nano(void)
     printf("    alt+/ : 파일의 마지막 라인으로 이동\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

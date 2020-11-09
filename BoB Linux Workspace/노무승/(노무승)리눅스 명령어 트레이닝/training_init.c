@@ -3,6 +3,7 @@
 void training_init(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("init 명령어는 런레벨(RunLevel)을 변경하는 명령어입니다.\n");
@@ -56,5 +57,6 @@ void training_init(void)
     printf("시스템을 종료하는 명령어로는 'shutdown', 'half', 'reboot' 명령어가 있습니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!");
 }

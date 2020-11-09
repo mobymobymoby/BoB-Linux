@@ -3,6 +3,7 @@
 void training_poweroff(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("poweroff 명령어는 시스템을 종료하는 명령어입니다.\n");
@@ -23,5 +24,6 @@ void training_poweroff(void)
     printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'가 있습니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

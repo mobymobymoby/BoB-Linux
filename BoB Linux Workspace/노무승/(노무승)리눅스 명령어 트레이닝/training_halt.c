@@ -2,6 +2,7 @@
 
 void training_halt(void)
 {
+    create_defdir();
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -19,6 +20,7 @@ void training_halt(void)
     printf("비슷하게 시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'poweroff' 가 있으며,\n");
     printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'가 있습니다.\n");
     next_line();
-
+    
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

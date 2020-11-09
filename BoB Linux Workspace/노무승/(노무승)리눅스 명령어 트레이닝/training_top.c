@@ -3,6 +3,7 @@
 void training_top(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("top 명령어는 리눅스 시스템의 운용 상황을 볼 수 있는 명령어입니다.\n");
@@ -72,5 +73,6 @@ void training_top(void)
     printf("top 명령어는 주기적으로 시스템 상태를 갱신하여 보여주는 차이점이 있습니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

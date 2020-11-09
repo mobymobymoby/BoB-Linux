@@ -2,6 +2,7 @@
 
 void training_netstat(void)
 {
+    create_defdir();
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -50,5 +51,6 @@ void training_netstat(void)
     printf("    UNKNOWN	    : 소켓의 상태를 알 수 없음\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

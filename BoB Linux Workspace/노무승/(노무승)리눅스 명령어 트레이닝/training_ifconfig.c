@@ -3,6 +3,7 @@
 void training_ifconfig(void)
 {
 	system("clear");
+    create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("ifconfig 명령어는 네트워크 인터페이스를 확인하고 설정할 수 있는 명령어입니다.\n");
@@ -59,5 +60,6 @@ void training_ifconfig(void)
     printf("정보를 바꿀 때는 항상 주의해야 하며, 왠만해서 함부로 정보를 바꾸지 않는 것을 추천드립니다.\n");
     next_line();
 
+    delete_defdir();
     printf("고생하셨습니다!\n");
 }

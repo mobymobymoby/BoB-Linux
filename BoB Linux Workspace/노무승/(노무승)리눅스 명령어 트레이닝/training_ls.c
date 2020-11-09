@@ -2,13 +2,13 @@
 
 void training_ls(void)
 {
+    create_defdir();
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("ls 명령어는 파일이나 폴더의 구조, 정보를 보여주는 명령어입니다.\n");
     next_line();
 
-    create_defdir();
     system("touch 1234.txt");
     system("touch 5678.txt");
     system("chmod 777 1234.txt");
