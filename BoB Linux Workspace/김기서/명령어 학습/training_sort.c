@@ -1,29 +1,17 @@
-#include "common_func.h"
+#include "func.h"
 
 void training_sort()
 {
-	char def_dir[DIR_SIZE];
-	char rst_dir[DIR_SIZE + 10];
-	char rm_dir[DIR_SIZE + 10];
-
-	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
-
-	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
-	system(rst_dir);
-	strncpy(rm_dir, rst_dir, sizeof(rm_dir));
-
-	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
-	system(rst_dir);
-
-	chdir(def_dir);
+	create_defdir();
+	system("clear");
 
    	system("ls -f /etc > sort_test_file");
 
 	printf("이번에 학습할 명령어는 'sort' 입니다. sort는 파일의 내용을 행 단위로 끊어서 정렬을 해줍니다. 정렬된 결과를 출력만 해줄 뿐, 따로 저장하거나 원본파일을 변경하지는 않습니다.");
-	getchar();
+	next_line();
 	printf("sort 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("\t$ sort [옵션] 파일");
-	getchar();
+	next_line();
 	printf("우선 cat으로 정렬 전의 'sort_test_file' 파일의 내용을 확인해봅시다.");
 	run_command("cat sort_test_file");
 
@@ -38,13 +26,11 @@ void training_sort()
 	printf("\t-r : 내림차순으로 정렬");
 
 	printf("sort 명령어는 정렬하여 출력만 해주므로, 파이프라인|  혹은 리다이렉션>  기법과 같이 많이 사용됩니다.");
-	getchar();
+	next_line();
 
 	system("rm sort_test_file");
 
 	printf("sort 명령어에 대한 학습이 끝났습니다.\n");
 
-	chdir(def_dir);
-	chdir("..");
-	system(rm_dir);
+	delete_defdir();
 }

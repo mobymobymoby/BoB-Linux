@@ -1,30 +1,18 @@
-#include "common_func.h"
+#include "func.h"
 
 void training_uname()
 {
-	char def_dir[DIR_SIZE];
-	char rst_dir[DIR_SIZE + 10];
-	char rm_dir[DIR_SIZE + 10];
-
-	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
-
-	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
-	system(rst_dir);
-	strncpy(rm_dir, rst_dir, sizeof(rm_dir));
-
-	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
-	system(rst_dir);
-
-	chdir(def_dir);
+	create_defdir();
+	system("clear");
 
 	printf("이번에 학습할 명령어는 'uname'입니다. uname은 시스템의 정보를 출력해줍니다.");
-	getchar();
+	next_line();
 	printf("uname 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("$ uname [옵션]");
-	getchar();
+	next_line();
 	printf("옵션에는 여러가지가 있으나 -a 옵션이 가장 널리 사용됩니다.\n");
 	printf("-a, --all: 모든 내용을 출력");
-	getchar();
+	next_line();
 	printf("uname을 입력하여 내용을 확인해보세요.");
 	run_command("uname");
 
@@ -39,7 +27,5 @@ void training_uname()
 
 	printf("uname 명령어에 대한 학습이 끝났습니다.\n");
 
-	chdir(def_dir);
-	chdir("..");
-	system(rm_dir);
+	delete_defdir();
 }
