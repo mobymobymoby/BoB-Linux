@@ -3,7 +3,7 @@
 int run_command(char valid_cmd[]);
 void next_quit();
 
-void training_(void)
+void training_cp(void)
 {
     create_defdir();
     system("clear");;
