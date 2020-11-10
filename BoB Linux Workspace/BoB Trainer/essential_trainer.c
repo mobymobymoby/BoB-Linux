@@ -25,18 +25,14 @@ void essential_trainer()
             next_quit();
             printf("해당 단계의 flag 값은 '703'입니다.\n");
         case 703:
-            training_whoami();
-            next_quit();
-            printf("해당 단계의 flag 값은 '905'입니다.\n");
-        case 905:
             training_pwd();
             next_quit();
             printf("해당 단계의 flag 값은 '1017'입니다.\n");
-        case 1017:
+        case 905:
             training_ls();
             next_quit();
             printf("해당 단계의 flag 값은 '630'입니다.\n");
-        case 630:
+        case 1017:
             training_mkdir();
             next_quit();
             printf("해당 단계의 flag 값은 '1024'입니다.\n");
