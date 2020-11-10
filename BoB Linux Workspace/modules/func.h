@@ -106,6 +106,6 @@ void training_export(void);
 void training_ln(void);
 void training_mv(void);
 void training_redirection(void);
-void set_unset(void);
+void training_set_unset(void);
 void training_users(void);
 #endif
