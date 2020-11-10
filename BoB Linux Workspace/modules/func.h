@@ -26,7 +26,7 @@ void create_defdir();
 void delete_defdir();
 void advanced_trainer(void);
 void essential_trainer(void);
-void training_intro
+void training_intro(void);
 
 /* 함수 리스트 */
 
