@@ -103,6 +103,7 @@ void training_dd(void);
 void training_echo(void);
 void training_env(void);
 void training_export(void);
+void training_git(void);
 void training_ln(void);
 void training_mv(void);
 void training_redirection(void);
