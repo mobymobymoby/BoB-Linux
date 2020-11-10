@@ -5,61 +5,61 @@ void training_cd(void){
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    printf("cd ¸í·É¾î´Â ÀÛ¾÷ µð·ºÅÍ¸®¸¦ ¿Å±æ ¶§ »ç¿ëÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    printf("cd ëª…ë ¹ì–´ëŠ” ìž‘ì—… ë””ë ‰í„°ë¦¬ë¥¼ ì˜®ê¸¸ ë•Œ ì‚¬ìš©í•˜ëŠ” ëª…ë ¹ì–´ìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    mkdir("./test1");
-    mkdir("./test2");
-    // Å×½ºÆ® Æú´õ »ý¼º
+    system("./test1");
+    system("./test2");
+    // í…ŒìŠ¤íŠ¸ í´ë” ìƒì„±
 
-    printf("'cd [µð·ºÅÍ¸® °æ·Î]' Çü½ÄÀ¸·Î »ç¿ëÇÏ¸ç,\n");
-    printf("µð·ºÅÍ¸® °æ·Î¸¦ ÁöÁ¤ÇÒ ¶§, Àý´ë °æ·Î¿Í »ó´ë °æ·Î¸¦ ÁöÁ¤ÇÏ¿© »ç¿ëÇÕ´Ï´Ù.\n");
+    printf("'cd [ë””ë ‰í„°ë¦¬ ê²½ë¡œ]' í˜•ì‹ìœ¼ë¡œ ì‚¬ìš©í•˜ë©°,\n");
+    printf("ë””ë ‰í„°ë¦¬ ê²½ë¡œë¥¼ ì§€ì •í•  ë•Œ, ì ˆëŒ€ ê²½ë¡œì™€ ìƒëŒ€ ê²½ë¡œë¥¼ ì§€ì •í•˜ì—¬ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("Àý´ë °æ·Î´Â ÃÖ»óÀ§ µð·ºÅÍ¸®ºÎÅÍ ³ª¿­µÈ °íÀ¯ÇÑ °æ·Î¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.\n");
+    printf("ì ˆëŒ€ ê²½ë¡œëŠ” ìµœìƒìœ„ ë””ë ‰í„°ë¦¬ë¶€í„° ë‚˜ì—´ëœ ê³ ìœ í•œ ê²½ë¡œë¥¼ ì˜ë¯¸í•©ë‹ˆë‹¤.\n");
     printf("(ex. /etc/systemd)\n");
-    printf("¸Ç ¾ÕÀÇ /°¡ ·çÆ®(ÃÖ»óÀ§) µð·ºÅÍ¸®¸¦ ÀÇ¹ÌÇÏ¸ç,\n");
-    printf("'cd /' ÀÔ·Â½Ã, ·çÆ® µð·ºÅÍ¸®·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.\n");
+    printf("ë§¨ ì•žì˜ /ê°€ ë£¨íŠ¸(ìµœìƒìœ„) ë””ë ‰í„°ë¦¬ë¥¼ ì˜ë¯¸í•˜ë©°,\n");
+    printf("'cd /' ìž…ë ¥ì‹œ, ë£¨íŠ¸ ë””ë ‰í„°ë¦¬ë¡œ ì´ë™í•˜ê²Œ ë©ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("[½Ç½À] cd ¸í·É¾î¸¦ »ç¿ëÇØ /home/user/tr/test1 Æú´õ·Î ÀÌµ¿ÇØº¸¼¼¿ä.\n");
-    printf("'cd /' ÀÔ·Â½Ã, ·çÆ® µð·ºÅÍ¸®·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.\n");
+    printf("[ì‹¤ìŠµ] cd ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•´ /home/user/tr/test1 í´ë”ë¡œ ì´ë™í•´ë³´ì„¸ìš”.\n");
+    printf("'cd /' ìž…ë ¥ì‹œ, ë£¨íŠ¸ ë””ë ‰í„°ë¦¬ë¡œ ì´ë™í•˜ê²Œ ë©ë‹ˆë‹¤.\n");
     fake_run_command("cd /home/user/tr/test1");
     chdir("/home/user/tr/test1");
     next_line();
-    // Àý´ë °æ·Î Æ®·¹ÀÌ´×
+    // ì ˆëŒ€ ê²½ë¡œ íŠ¸ë ˆì´ë‹
 
-    printf("»ó´ë °æ·Î´Â »ó´ëÀûÀÎ °æ·Î·Î, ¾Æ·¡¿Í °°Àº ÁöÁ¤ ¹æ½ÄÀÌ ÀÖ½À´Ï´Ù.\n");
-    printf(". : ÇöÀç ÀÛ¾÷ µð·ºÅÍ¸®¸¦ ÀÇ¹Ì\n");
-    printf(".. : ÇöÀç ÀÛ¾÷ µð·ºÅÍÀÇ »óÀ§ µð·ºÅÍ¸®¸¦ ÀÇ¹Ì\n");
+    printf("ìƒëŒ€ ê²½ë¡œëŠ” ìƒëŒ€ì ì¸ ê²½ë¡œë¡œ, ì•„ëž˜ì™€ ê°™ì€ ì§€ì • ë°©ì‹ì´ ìžˆìŠµë‹ˆë‹¤.\n");
+    printf(". : í˜„ìž¬ ìž‘ì—… ë””ë ‰í„°ë¦¬ë¥¼ ì˜ë¯¸\n");
+    printf(".. : í˜„ìž¬ ìž‘ì—… ë””ë ‰í„°ì˜ ìƒìœ„ ë””ë ‰í„°ë¦¬ë¥¼ ì˜ë¯¸\n");
     next_line();
 
-    printf("¿¹¸¦ µé¾î './1234/' ´Â ÇöÀç ÀÛ¾÷ µð·ºÅÍ¸® ÇÏÀ§ÀÇ 1234 µð·ºÅÍ¸®¸¦ ÀÇ¹ÌÇÏ°í,\n");
-    printf("    (ÀÛ¾÷ µð·ºÅÍ¸®°¡ /etc ÀÏ ¶§, ./1234 ´Â /etc/1234¿Í °°À½.)\n");
-    printf("'../1234/' ´Â ÇöÀç ÀÛ¾÷ µð·ºÅÍ¸® »óÀ§ÀÇ 1234 µð·ºÅÍ¸®¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.\n");
-    printf("    (ÀÛ¾÷ µð·ºÅÍ¸®°¡ /etc ÀÏ ¶§, ../1234 ´Â /1234¿Í °°À½.)\n");
+    printf("ì˜ˆë¥¼ ë“¤ì–´ './1234/' ëŠ” í˜„ìž¬ ìž‘ì—… ë””ë ‰í„°ë¦¬ í•˜ìœ„ì˜ 1234 ë””ë ‰í„°ë¦¬ë¥¼ ì˜ë¯¸í•˜ê³ ,\n");
+    printf("    (ìž‘ì—… ë””ë ‰í„°ë¦¬ê°€ /etc ì¼ ë•Œ, ./1234 ëŠ” /etc/1234ì™€ ê°™ìŒ.)\n");
+    printf("'../1234/' ëŠ” í˜„ìž¬ ìž‘ì—… ë””ë ‰í„°ë¦¬ ìƒìœ„ì˜ 1234 ë””ë ‰í„°ë¦¬ë¥¼ ì˜ë¯¸í•©ë‹ˆë‹¤.\n");
+    printf("    (ìž‘ì—… ë””ë ‰í„°ë¦¬ê°€ /etc ì¼ ë•Œ, ../1234 ëŠ” /1234ì™€ ê°™ìŒ.)\n");
     next_line();
 
-    printf("[½Ç½À] »óÀ§ °æ·Î¸¦ ÀÌ¿ëÇØ »óÀ§ µð·ºÅÍ¸®ÀÇ test2 µð·ºÅÍ¸®·Î ÀÌµ¿ÇØº¸¼¼¿ä.\n");
+    printf("[ì‹¤ìŠµ] ìƒìœ„ ê²½ë¡œë¥¼ ì´ìš©í•´ ìƒìœ„ ë””ë ‰í„°ë¦¬ì˜ test2 ë””ë ‰í„°ë¦¬ë¡œ ì´ë™í•´ë³´ì„¸ìš”.\n");
     fake_run_command("cd ../test2");
     chdir("cd ../test2");
     next_line();
-    // »ó´ë °æ·Î Æ®·¹ÀÌ´× 
+    // ìƒëŒ€ ê²½ë¡œ íŠ¸ë ˆì´ë‹ 
 
-    printf("¸¸¾à ÇöÀç ÀÛ¾÷ µð·ºÅÍ¸®ÀÇ »óÀ§ µð·ºÅÍ¸®·Î ÀÌµ¿ÇÏ°í ½Í´Ù¸é 'cd ..' À» ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
-    printf("[½Ç½À] 'cd ..'À» ÀÔ·ÂÇØ »óÀ§ µð·ºÅÍ¸®·Î ÀÌµ¿ÇØº¸¼¼¿ä.\n");
+    printf("ë§Œì•½ í˜„ìž¬ ìž‘ì—… ë””ë ‰í„°ë¦¬ì˜ ìƒìœ„ ë””ë ‰í„°ë¦¬ë¡œ ì´ë™í•˜ê³  ì‹¶ë‹¤ë©´ 'cd ..' ì„ ìž…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
+    printf("[ì‹¤ìŠµ] 'cd ..'ì„ ìž…ë ¥í•´ ìƒìœ„ ë””ë ‰í„°ë¦¬ë¡œ ì´ë™í•´ë³´ì„¸ìš”.\n");
     fake_run_command("cd ..");
     chdir("cd ..");
     next_line();
-    // »óÀ§ °æ·Î Æ®·¹ÀÌ´×
+    // ìƒìœ„ ê²½ë¡œ íŠ¸ë ˆì´ë‹
 
-    printf("ÀÌµ¿ÇÏ±â ÀÌÀüÀÇ µð·ºÅÍ¸®·Î µÇµ¹¾Æ°¡±â À§ÇØ¼­´Â 'cd -'¸¦ ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
-    printf("[½Ç½À] 'cd -'À» ÀÔ·ÂÇØ ÀÌÀüÀÇ µð·ºÅÍ¸®·Î µÇµ¹¾Æ°¡ º¸¼¼¿ä.\n");
+    printf("ì´ë™í•˜ê¸° ì´ì „ì˜ ë””ë ‰í„°ë¦¬ë¡œ ë˜ëŒì•„ê°€ê¸° ìœ„í•´ì„œëŠ” 'cd -'ë¥¼ ìž…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
+    printf("[ì‹¤ìŠµ] 'cd -'ì„ ìž…ë ¥í•´ ì´ì „ì˜ ë””ë ‰í„°ë¦¬ë¡œ ë˜ëŒì•„ê°€ ë³´ì„¸ìš”.\n");
     fake_run_command("cd -");
     chdir("cd -");
     next_line();
-    // ÀÌÀü °æ·Î Æ®·¹ÀÌ´×
+    // ì´ì „ ê²½ë¡œ íŠ¸ë ˆì´ë‹
 
     delete_defdir();
-    printf("°í»ýÇÏ¼Ì½À´Ï´Ù!\n");
+    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
 }

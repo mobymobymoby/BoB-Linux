@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <direct.h>
+
 
 #define CMD_SIZE 60 // 최대 59개의 문자 입력
 #define DIR_SIZE 60 // 최대 59개의 문자 입력
