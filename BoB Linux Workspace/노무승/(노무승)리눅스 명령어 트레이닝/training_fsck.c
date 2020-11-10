@@ -4,38 +4,38 @@ void training_fsck(void){
     system("clear");
     create_defdir();
 
-    printf("fsck ¸í·É¾î´Â ¸®´ª½º ÆÄÀÏ ½Ã½ºÅÛÀ» °Ë»çÇÏ°í ¼ö¸®ÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    printf("fsck ëª…ë ¹ì–´ëŠ” ë¦¬ëˆ…ìŠ¤ íŒŒì¼ ì‹œìŠ¤í…œì„ ê²€ì‚¬í•˜ê³  ìˆ˜ë¦¬í•˜ëŠ” ëª…ë ¹ì–´ìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("ÆÄÀÏ ½Ã½ºÅÛ °Ë»ç ÀýÂ÷´Â ´ÙÀ½°ú °°½À´Ï´Ù.\n");
-    printf("    ´Ü°è 1  : ºí·Ïµé°ú ÆÄÀÏ Å©±â °Ë»ç\n");
-    printf("    ´Ü°è 2a : Áßº¹µÈ ÀÌ¸§ÀÌ ÀÖ´ÂÁö °Ë»ç\n");
-    printf("    ´Ü°è 2b : °æ·Î ÀÌ¸§ °Ë»ç\n");
-    printf("    ´Ü°è 3  : ¿¬°á¼º °Ë»ç\n");
-    printf("    ´Ü°è 4  : ÂüÁ¶ ¼ö °Ë»ç\n");
-    printf("    ´Ü°è 5  : ½ÎÀÌÅ¬ ±×·ì °Ë»ç\n");
+    printf("íŒŒì¼ ì‹œìŠ¤í…œ ê²€ì‚¬ ì ˆì°¨ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.\n");
+    printf("    ë‹¨ê³„ 1  : ë¸”ë¡ë“¤ê³¼ íŒŒì¼ í¬ê¸° ê²€ì‚¬\n");
+    printf("    ë‹¨ê³„ 2a : ì¤‘ë³µëœ ì´ë¦„ì´ ìžˆëŠ”ì§€ ê²€ì‚¬\n");
+    printf("    ë‹¨ê³„ 2b : ê²½ë¡œ ì´ë¦„ ê²€ì‚¬\n");
+    printf("    ë‹¨ê³„ 3  : ì—°ê²°ì„± ê²€ì‚¬\n");
+    printf("    ë‹¨ê³„ 4  : ì°¸ì¡° ìˆ˜ ê²€ì‚¬\n");
+    printf("    ë‹¨ê³„ 5  : ì‹¸ì´í´ ê·¸ë£¹ ê²€ì‚¬\n");
     next_line();
 
-    printf("fsck ¸í·ÉÀÌ ¼Õ»óµÈ ÆÄÀÏÀÌ³ª µð·ºÅÍ¸®¸¦ ¼ö¸®ÇÒ ¶§,\n");
-    printf("/lost+found µð·ºÅÍ¸®¿¡¼­ ÀÛ¾÷À» ¼öÇàÇÏ°í º¹±¸°¡ ¿Ï·áµÇ¸é »ç¶óÁý´Ï´Ù.\n");
+    printf("fsck ëª…ë ¹ì´ ì†ìƒëœ íŒŒì¼ì´ë‚˜ ë””ë ‰í„°ë¦¬ë¥¼ ìˆ˜ë¦¬í•  ë•Œ,\n");
+    printf("/lost+found ë””ë ‰í„°ë¦¬ì—ì„œ ìž‘ì—…ì„ ìˆ˜í–‰í•˜ê³  ë³µêµ¬ê°€ ì™„ë£Œë˜ë©´ ì‚¬ë¼ì§‘ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("fsck ¸í·ÉÀ¸·Î °Ë»çÇÏ°Å³ª ¼ö¸®ÇÒ ÆÄÆ¼¼ÇÀº ¸¶¿îÆ®°¡ µÈ »óÅÂ¸é ¾ÈµË´Ï´Ù.\n");
-    printf("¹Ýµå½Ã umount ¸í·É¾î µîÀ¸·Î ¸¶¿îÆ®¸¦ ÇìÁ¦ÇÏ°í ¼öÇàÇØÁÖ¾î¾ß ÇÕ´Ï´Ù.\n");
+    printf("fsck ëª…ë ¹ìœ¼ë¡œ ê²€ì‚¬í•˜ê±°ë‚˜ ìˆ˜ë¦¬í•  íŒŒí‹°ì…˜ì€ ë§ˆìš´íŠ¸ê°€ ëœ ìƒíƒœë©´ ì•ˆë©ë‹ˆë‹¤.\n");
+    printf("ë°˜ë“œì‹œ umount ëª…ë ¹ì–´ ë“±ìœ¼ë¡œ ë§ˆìš´íŠ¸ë¥¼ í—¤ì œí•˜ê³  ìˆ˜í–‰í•´ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("±âº»ÀûÀ¸·Î 'fsck [ÆÄÆ¼¼Ç °æ·Î]' ¿Í °°Àº Çü½ÄÀ¸·Î »ç¿ëÇÕ´Ï´Ù.\n");
-    printf("[½Ç½À] fsck ¸í·É¾î·Î /dev/sdb1 ÆÄÆ¼¼ÇÀ» °Ë»çÇØº¸¼¼¿ä. (½ÇÁ¦ ¹Ý¿µµÇÁö´Â ¾Ê½À´Ï´Ù.)\n");
+    printf("ê¸°ë³¸ì ìœ¼ë¡œ 'fsck [íŒŒí‹°ì…˜ ê²½ë¡œ]' ì™€ ê°™ì€ í˜•ì‹ìœ¼ë¡œ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
+    printf("[ì‹¤ìŠµ] fsck ëª…ë ¹ì–´ë¡œ /dev/sdb1 íŒŒí‹°ì…˜ì„ ê²€ì‚¬í•´ë³´ì„¸ìš”. (ì‹¤ì œ ë°˜ì˜ë˜ì§€ëŠ” ì•ŠìŠµë‹ˆë‹¤.)\n");
     fake_run_command("fsck /dev/sdb1");
     next_line();
 
-    printf("±âº»ÀûÀÎ »ç¿ë¹ý ÀÌ¿Ü¿¡µµ ´Ù¾çÇÑ ¸í·É ¿É¼ÇÀÌ ÀÖ½À´Ï´Ù.\n");
-    printf("    -v : Á¡°Ë ³»¿ªÀ» ÀÚ¼¼ÇÏ°Ô Ãâ·ÂÇØÁÝ´Ï´Ù.\n");
-    printf("    -y : ¸ðµç ÀÀ´äÀ» ´Ù yes¸¦ ÇØ¼­ ÀÚµ¿À¸·Î Á¡°Ë, ¼ö¸®¸¦ ¼öÇàÇÕ´Ï´Ù.\n");
-    printf("    -n : ¸ðµç ÀÀ´äÀ» ´Ù no¸¦ ÇØ¼­ Á¡°Ë¸¸ ¼öÇàÇÕ´Ï´Ù.\n");
-    printf("    -f : ÆÄÀÏ ½Ã½ºÅÛ ÀÌ»ó À¯¹«¿Í °ü°è¾øÀÌ °­Á¦·Î Á¡°ËÀ» ÇÕ´Ï´Ù.\n");
+    printf("ê¸°ë³¸ì ì¸ ì‚¬ìš©ë²• ì´ì™¸ì—ë„ ë‹¤ì–‘í•œ ëª…ë ¹ ì˜µì…˜ì´ ìžˆìŠµë‹ˆë‹¤.\n");
+    printf("    -v : ì ê²€ ë‚´ì—­ì„ ìžì„¸í•˜ê²Œ ì¶œë ¥í•´ì¤ë‹ˆë‹¤.\n");
+    printf("    -y : ëª¨ë“  ì‘ë‹µì„ ë‹¤ yesë¥¼ í•´ì„œ ìžë™ìœ¼ë¡œ ì ê²€, ìˆ˜ë¦¬ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.\n");
+    printf("    -n : ëª¨ë“  ì‘ë‹µì„ ë‹¤ noë¥¼ í•´ì„œ ì ê²€ë§Œ ìˆ˜í–‰í•©ë‹ˆë‹¤.\n");
+    printf("    -f : íŒŒì¼ ì‹œìŠ¤í…œ ì´ìƒ ìœ ë¬´ì™€ ê´€ê³„ì—†ì´ ê°•ì œë¡œ ì ê²€ì„ í•©ë‹ˆë‹¤.\n");
     next_line();
 
     delete_defdir();
-    printf("°í»ýÇÏ¼Ì½À´Ï´Ù!\n");
+    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
 }

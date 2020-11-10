@@ -6,60 +6,60 @@ void training_ifconfig(void)
     create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    printf("ifconfig ¸í·É¾î´Â ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½º¸¦ È®ÀÎÇÏ°í ¼³Á¤ÇÒ ¼ö ÀÖ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    printf("ifconfig ëª…ë ¹ì–´ëŠ” ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ í™•ì¸í•˜ê³  ì„¤ì •í•  ìˆ˜ ìžˆëŠ” ëª…ë ¹ì–´ìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("[½Ç½À] ifconfig ¸í·É¾î¸¦ ÀÔ·ÂÇØ ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½º¸¦ È®ÀÎÇØº¸¼¼¿ä.\n");
+    printf("[ì‹¤ìŠµ] ifconfig ëª…ë ¹ì–´ë¥¼ ìž…ë ¥í•´ ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ í™•ì¸í•´ë³´ì„¸ìš”.\n");
     run_command("ifconfig");
     next_line();
-    // ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½º Ãâ·Â ½Ç½À
+    // ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ ì¶œë ¥ ì‹¤ìŠµ
 
-    printf("¸Ç ÁÂÃøÀÇ °æ¿ì ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½ºÀÇ ÀÌ¸§(ex. enp0s3) ÀÔ´Ï´Ù.\n");
+    printf("ë§¨ ì¢Œì¸¡ì˜ ê²½ìš° ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ì˜ ì´ë¦„(ex. enp0s3) ìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("lo ÀÎÅÍÆäÀÌ½ºÀÇ °æ¿ì, loop backÀÇ ¾àÀÚ·Î\n");
-    printf("ÀÚ±â ÀÚ½Å°ú Åë½ÅÇÏ±â À§ÇÑ °¡»ó ÀÎÅÍÆäÀÌ½ºÀÔ´Ï´Ù.\n");
+    printf("lo ì¸í„°íŽ˜ì´ìŠ¤ì˜ ê²½ìš°, loop backì˜ ì•½ìžë¡œ\n");
+    printf("ìžê¸° ìžì‹ ê³¼ í†µì‹ í•˜ê¸° ìœ„í•œ ê°€ìƒ ì¸í„°íŽ˜ì´ìŠ¤ìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("flags´Â ÀÎÅÍÆäÀÌ½ºÀÇ »óÅÂ¸¦ ¸»ÇÏ¸ç,\n");
-    printf("mtu´Â ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½ºÀÇ ÃÖ´ë Àü¼Û ´ÜÀ§ÀÔ´Ï´Ù.\n");
+    printf("flagsëŠ” ì¸í„°íŽ˜ì´ìŠ¤ì˜ ìƒíƒœë¥¼ ë§í•˜ë©°,\n");
+    printf("mtuëŠ” ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ì˜ ìµœëŒ€ ì „ì†¡ ë‹¨ìœ„ìž…ë‹ˆë‹¤.\n");
     next_line();
     
-    printf("inetÀº ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½º¿¡ ÇÒ´çµÈ ¾ÆÀÌÇÇ ÁÖ¼Ò(ipv4)¸¦ ÀÇ¹ÌÇÏ¸ç,\n");
-    printf("inet6´Â ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½º¿¡ ÇÒ´çµÈ ipv6 ÁÖ¼Ò¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.\n");
-    printf("ÀÏ¹ÝÀûÀ¸·Î '³»ºÎ ¾ÆÀÌÇÇ'¶ó ºÎ¸£´Â ÁÖ¼Ò´Â ipv4 Çü½ÄÀÎ inet ÁÖ¼ÒÀÔ´Ï´Ù.\n");
+    printf("inetì€ ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ì— í• ë‹¹ëœ ì•„ì´í”¼ ì£¼ì†Œ(ipv4)ë¥¼ ì˜ë¯¸í•˜ë©°,\n");
+    printf("inet6ëŠ” ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ì— í• ë‹¹ëœ ipv6 ì£¼ì†Œë¥¼ ì˜ë¯¸í•©ë‹ˆë‹¤.\n");
+    printf("ì¼ë°˜ì ìœ¼ë¡œ 'ë‚´ë¶€ ì•„ì´í”¼'ë¼ ë¶€ë¥´ëŠ” ì£¼ì†ŒëŠ” ipv4 í˜•ì‹ì¸ inet ì£¼ì†Œìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("netmask´Â ½±°Ô »ý°¢ÇÏ¿© ³×Æ®¿öÅ©¿¡ ÇÒ´çÇÒ ¼ö ÀÖ´Â ¾ÆÀÌÇÇ ÁÖ¼ÒÀÇ ÃÖ´ë °ªÀ» ¶æ ÇÏ¸ç,\n");
-    printf("brodcast´Â ³×Æ®¿öÅ©¿¡ ¼ÓÇÏ´Â ¸ðµç È£½ºÆ®¿¡°Ô µ¥ÀÌÅÍ¸¦ º¸³¾ ¼ö ÀÖ´Â ÁÖ¼Ò¸¦ ¶æ ÇÕ´Ï´Ù.\n");
-    printf("ether´Â ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½ºÀÇ ÇÏµå¿þ¾î ÁÖ¼ÒÀÌ¸ç, ´Ù¸¥ ¸»·Î´Â ¸Æ(MAC) ÁÖ¼Ò¶ó°í ºÎ¸¨´Ï´Ù.\n");
+    printf("netmaskëŠ” ì‰½ê²Œ ìƒê°í•˜ì—¬ ë„¤íŠ¸ì›Œí¬ì— í• ë‹¹í•  ìˆ˜ ìžˆëŠ” ì•„ì´í”¼ ì£¼ì†Œì˜ ìµœëŒ€ ê°’ì„ ëœ» í•˜ë©°,\n");
+    printf("brodcastëŠ” ë„¤íŠ¸ì›Œí¬ì— ì†í•˜ëŠ” ëª¨ë“  í˜¸ìŠ¤íŠ¸ì—ê²Œ ë°ì´í„°ë¥¼ ë³´ë‚¼ ìˆ˜ ìžˆëŠ” ì£¼ì†Œë¥¼ ëœ» í•©ë‹ˆë‹¤.\n");
+    printf("etherëŠ” ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ì˜ í•˜ë“œì›¨ì–´ ì£¼ì†Œì´ë©°, ë‹¤ë¥¸ ë§ë¡œëŠ” ë§¥(MAC) ì£¼ì†Œë¼ê³  ë¶€ë¦…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("ifconfig ¸í·É¾î¸¦ »ç¿ëÇØ Æ¯Á¤ ÀÎÅÍÆäÀÌ½º¸¦ ºñÈ°¼ºÈ­, È°¼ºÈ­ ÇÒ ¼öµµ ÀÖ´Âµ¥,\n");
-    printf("'ifconfig [ÀÎÅÍÆäÀÌ½º ÀÌ¸§] up/down' À¸·Î »ç¿ëÇÕ´Ï´Ù.\n");
+    printf("ifconfig ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•´ íŠ¹ì • ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ë¹„í™œì„±í™”, í™œì„±í™” í•  ìˆ˜ë„ ìžˆëŠ”ë°,\n");
+    printf("'ifconfig [ì¸í„°íŽ˜ì´ìŠ¤ ì´ë¦„] up/down' ìœ¼ë¡œ ì‚¬ìš©í•©ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("ºñÈ°¼ºÈ­ÇÑ ÀÎÅÍÆäÀÌ½º´Â ´Ü¼ø 'ifconfig' ¸í·É¾î·Î´Â ³ªÅ¸³ªÁö ¾ÊÁö¸¸,\n");
-    printf("-a ¿É¼ÇÀ» ÁÖ¸é ºñÈ°¼ºÈ­ÇÑ ÀÎÅÍÆäÀÌ½º±îÁö ¸ðµÎ º¼ ¼ö ÀÖ½À´Ï´Ù.\n");
+    printf("ë¹„í™œì„±í™”í•œ ì¸í„°íŽ˜ì´ìŠ¤ëŠ” ë‹¨ìˆœ 'ifconfig' ëª…ë ¹ì–´ë¡œëŠ” ë‚˜íƒ€ë‚˜ì§€ ì•Šì§€ë§Œ,\n");
+    printf("-a ì˜µì…˜ì„ ì£¼ë©´ ë¹„í™œì„±í™”í•œ ì¸í„°íŽ˜ì´ìŠ¤ê¹Œì§€ ëª¨ë‘ ë³¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.\n");
     next_line();
 
-    printf("¿øÇÏ´Â ÀÎÅÍÆäÀÌ½ºÀÇ Á¤º¸¸¸ º¸°í ½Í´Ù¸é\n");
-    printf("'ifconfig [ÀÎÅÍÆäÀÌ½º ÀÌ¸§]'À¸·Î °¡´ÉÇÕ´Ï´Ù.\n");
+    printf("ì›í•˜ëŠ” ì¸í„°íŽ˜ì´ìŠ¤ì˜ ì •ë³´ë§Œ ë³´ê³  ì‹¶ë‹¤ë©´\n");
+    printf("'ifconfig [ì¸í„°íŽ˜ì´ìŠ¤ ì´ë¦„]'ìœ¼ë¡œ ê°€ëŠ¥í•©ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("[½Ç½À] ifconfig ¸í·É¾î¸¦ ÀÌ¿ëÇØ lo ÀÎÅÍÆäÀÌ½ºÀÇ Á¤º¸¸¸ Ãâ·ÂÇØº¸¼¼¿ä.\n");
+    printf("[ì‹¤ìŠµ] ifconfig ëª…ë ¹ì–´ë¥¼ ì´ìš©í•´ lo ì¸í„°íŽ˜ì´ìŠ¤ì˜ ì •ë³´ë§Œ ì¶œë ¥í•´ë³´ì„¸ìš”.\n");
     run_command("ifconfig lo");
     next_line();
-    // Æ¯Á¤ ÀÎÅÍÆäÀÌ½º Á¤º¸¸¸ Ãâ·ÂÇÏµµ·Ï ½Ç½À
+    // íŠ¹ì • ì¸í„°íŽ˜ì´ìŠ¤ ì •ë³´ë§Œ ì¶œë ¥í•˜ë„ë¡ ì‹¤ìŠµ
 
-    printf("°¢ ³×Æ®¿öÅ© ÀÎÅÍÆäÀÌ½º¿¡ ÇÒ´çµÈ Á¤º¸¸¦ ¹Ù²Ù°í ½ÍÀ» ¶§´Â ¾Æ·¡¿Í °°ÀÌ ÀÔ·ÂÇÏ¸é µË´Ï´Ù.\n");
-    printf("IP ÁÖ¼Ò º¯°æ        : ifconfig [ÀÎÅÍÆäÀÌ½º ÀÌ¸§] [IP]\n");
-    printf("netmask ÁÖ¼Ò º¯°æ   : ifconfig [ÀÎÅÍÆäÀÌ½º ÀÌ¸§] netmask [IP]\n");
-    printf("brodcast ÁÖ¼Ò º¯°æ  : ifconfig [ÀÎÅÍÆäÀÌ½º ÀÌ¸§] brodcast [IP]\n");
-    printf("¸ÆÁÖ¼Ò º¯°æ         : ifconfig [ÀÎÅÍÆäÀÌ½º ÀÌ¸§] hw ether [IP]\n");
-    printf("Á¤º¸¸¦ ¹Ù²Ü ¶§´Â Ç×»ó ÁÖÀÇÇØ¾ß ÇÏ¸ç, ¿Ø¸¸ÇØ¼­ ÇÔºÎ·Î Á¤º¸¸¦ ¹Ù²ÙÁö ¾Ê´Â °ÍÀ» ÃßÃµµå¸³´Ï´Ù.\n");
+    printf("ê° ë„¤íŠ¸ì›Œí¬ ì¸í„°íŽ˜ì´ìŠ¤ì— í• ë‹¹ëœ ì •ë³´ë¥¼ ë°”ê¾¸ê³  ì‹¶ì„ ë•ŒëŠ” ì•„ëž˜ì™€ ê°™ì´ ìž…ë ¥í•˜ë©´ ë©ë‹ˆë‹¤.\n");
+    printf("IP ì£¼ì†Œ ë³€ê²½        : ifconfig [ì¸í„°íŽ˜ì´ìŠ¤ ì´ë¦„] [IP]\n");
+    printf("netmask ì£¼ì†Œ ë³€ê²½   : ifconfig [ì¸í„°íŽ˜ì´ìŠ¤ ì´ë¦„] netmask [IP]\n");
+    printf("brodcast ì£¼ì†Œ ë³€ê²½  : ifconfig [ì¸í„°íŽ˜ì´ìŠ¤ ì´ë¦„] brodcast [IP]\n");
+    printf("ë§¥ì£¼ì†Œ ë³€ê²½         : ifconfig [ì¸í„°íŽ˜ì´ìŠ¤ ì´ë¦„] hw ether [IP]\n");
+    printf("ì •ë³´ë¥¼ ë°”ê¿€ ë•ŒëŠ” í•­ìƒ ì£¼ì˜í•´ì•¼ í•˜ë©°, ì™ ë§Œí•´ì„œ í•¨ë¶€ë¡œ ì •ë³´ë¥¼ ë°”ê¾¸ì§€ ì•ŠëŠ” ê²ƒì„ ì¶”ì²œë“œë¦½ë‹ˆë‹¤.\n");
     next_line();
 
     delete_defdir();
-    printf("°í»ýÇÏ¼Ì½À´Ï´Ù!\n");
+    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
 }

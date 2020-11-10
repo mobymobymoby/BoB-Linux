@@ -8,8 +8,8 @@ void training_cd(void){
     printf("cd 명령어는 작업 디렉터리를 옮길 때 사용하는 명령어입니다.\n");
     next_line();
 
-    system("./test1");
-    system("./test2");
+    mkdir("./test1");
+    mkdir("./test2");
     // 테스트 폴더 생성
 
     printf("'cd [디렉터리 경로]' 형식으로 사용하며,\n");
