@@ -1,6 +1,6 @@
 #include "func.h"
 
-int convert_training(char select[])
+int convert_name(char select[])
 {
     // 김기서 
     if (!strcmp(select, "file"))
@@ -22,7 +22,7 @@ int convert_training(char select[])
     else if (!strcmp(select, "umask"))
         training_umask();
     else if (!strcmp(select, "uname"))
-        training_uselect();
+        training_uname();
 
     // 김청준
     else if (!strcmp(select, "curl"))
