@@ -1,6 +1,6 @@
 #include "func.h"
 
-int call_training(char select)
+int call_training(char select[])
 {
     // 문자열 정수로 변환
     int num = atoi(select);
