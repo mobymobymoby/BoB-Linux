@@ -11,11 +11,15 @@ void advanced_trainer()
     while (1)
     {
         printf("명령어 목록입니다.\n");
-        printf("[1. file], [2. find], [3. history], [4. make], [5. more](+less), [6. mount], [7. sort], [8. tar], [9. umask], [10. uname]\n");
-        printf("[11. curl], [12. group](+관련 명령어), [13. head](+tail), [14. lsblk], [15. mkfs], [16. ping], [17. sed], [18. user](+관련 명령어+passwd)\n");
-        printf("[19. fsck], [20. halt], [21. ifconfig], [22. init], [23. kill], [24. nano], [25. netstat], [26. poweroff], [27. reboot], [28. runlevel], [29. shutdown], [30. su], [31. sudo], [32. top], [33. wget]\n");
-        printf("[34. alias], [35. apt], [36. chsh], [37. cmp], [38. comm], [39. diff], [40. grep], [41. locate], [42. man], [43. pipe], [44. ps], [45. vi], [46. whereis], [47. which]\n");
-        printf("[48. chmod], [49. chown], [50. chroot], [51. dd], [52. echo], [53. env], [54. export], [55. git], [56. ln], [57. redirection], [58. set(+unset)], [59. users]\n");
+        printf(" [1. file] \t\t [2. find] \n [3. history] \t\t [4. make] \n [5. more](+less) \t [6. mount] \n [7. sort] \t\t [8. tar] \n [9. umask] \t\t [10. uname]\n");
+        
+        printf(" [11. curl] \t\t [12. group](+관련 명령어) \n [13. head](+tail) \t [14. lsblk] \n [15. mkfs] \t\t [16. ping] \n [17. sed] \t\t [18. user](+관련 명령어+passwd) \n [19. fsck] \t\t [20. halt] \n");
+
+        printf(" [21. ifconfig] \t [22. init] \n [23. kill] \t\t [24. nano] \n [25. netstat] \t\t [26. poweroff] \n [27. reboot] \t\t [28. runlevel] \n [29. shutdown] \t [30. su] \n [31. sudo] \t\t [32. top] \n [33. wget] \t\t [34. alias] \n");
+        
+        printf(" [35. apt] \t\t [36. chsh] \n [37. cmp] \t\t [38. comm] \n [39. diff] \t\t [40. grep] \n [41. locate] \t\t [42. man] \n [43. pipe] \t\t [44. ps] \n [45. vi] \t\t [46. whereis] \n [47. which] \t\t [48. chmod] \n");
+        
+        printf(" [49. chown] \t\t [50. chroot] \n [51. dd] \t\t [52. echo] \n [53. env] \t\t [54. export] \n [55. git] \t\t [56. ln] \n [57. redirection] \t [58. set(+unset)] \n [59. users] \n");
 
         printf("원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요.\nex) [1. curl] -> '1' 또는 'curl' 입력, [3. head](+tail) -> '3' 또는'head' 입력\n");
         printf("'0'을 입력하면 종료합니다.");
