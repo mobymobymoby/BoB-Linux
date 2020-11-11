@@ -2,6 +2,7 @@
 
 int main()
 {
+    system("clear");
     printf(" ____        ____            _     _                  \n");
     usleep(100000);
     printf("| __ )  ___ | __ )          | |   (_)_ __  _   ___  __\n");
