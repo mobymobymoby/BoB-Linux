@@ -22,13 +22,10 @@ void training_mkdir(void)
 	next_line();
 
 	printf("mkdir의 옵션은 상당히 간단합니다.\n");
-	next_line();
 	printf("-m 옵션은 디렉토리를 생성할 때 권한을 설정합니다.\n");
-	next_line();
 	printf("-m xxx의 형식으로 사용할 수 있습니다.\n");
 	next_line();
 	printf("mkdir -m xxx에서 'xxx'에 해당하는 것이 바로 앞에서 배운 3자리 숫자의 권한 표시 방식입니다.\n");
-	next_line();
 	printf("즉 소유자, 그룹, 전체 권한을 숫자 형식으로 표시해주어 디렉토리를 생성할 수 있는 것입니다.\n");
 	next_line();
 	printf("mkdir -m 명령어를 이용해 'drwxr-x-w-(752)' 권한을 가진 디렉토리 'test_dir2'를 생성해보세요.\n$ mkdir -m [권한] [생성할 디렉토리 이름]\n");
