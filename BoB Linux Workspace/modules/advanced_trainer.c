@@ -22,7 +22,7 @@ void advanced_trainer()
         printf(" [49. chown] \t\t [50. chroot] \n [51. dd] \t\t [52. echo] \n [53. env] \t\t [54. export] \n [55. git] \t\t [56. ln] \n [57. redirection] \t [58. set(+unset)] \n [59. users] \n");
 
         printf("원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요.\nex) [1. curl] -> '1' 또는 'curl' 입력, [3. head](+tail) -> '3' 또는'head' 입력\n");
-        printf("'0'을 입력하면 종료합니다. ");
+        printf("'q 또는 Q'를 입력하면 종료합니다.\n원하시는 값을 입력하세요 :");
 
         int status_code = 1;
         fgets(select, sizeof(select), stdin);
@@ -32,7 +32,7 @@ void advanced_trainer()
         /* 그 외에는 문자열로 판단 if else 문을 이용해 해당하는 함수 실행*/
         if (select[0] >= 49 && select[0] <= 57)
             status_code = call_training(select);
-        else if (select[0] == '0')
+        else if (select[0] == 'q' || select[0] == 'Q')
             break;
         else
             status_code = convert_name(select);
