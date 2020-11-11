@@ -5,7 +5,7 @@ void training_clear()
 	create_defdir();
 	system("clear");
 
-	printf("이번에 학습할 명령어는 'clear' 입니다. 말그대로 지우다(clear), 터미널 화면을 싹 지워줍니다.");
+	printf("이번에 학습할 명령어는 'clear' 입니다. 말 그대로 지우다(clear), 터미널 화면을 싹 지워줍니다.");
 	next_line();
 	printf("바로 clear를 입력해봅시다.");
 	run_command("clear");
