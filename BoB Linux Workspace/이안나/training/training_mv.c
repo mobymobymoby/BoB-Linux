@@ -17,7 +17,7 @@ void training_mv(void)
 
     printf("이번에 학습할 명령어는 'mv'입니다.\n\nmv는 파일이나 디렉터리를 이동할 때 사용되는 명령어입니다.\n");
     next_line();
-    printf("mv 명령어는 다음과 같은 형식으로 사용합니다.\n$ mv [options] source(s) destination\n");
+    printf("mv 명령어는 다음과 같은 형식으로 사용합니다.\n$ mv [옵션] [source(s)] [destination]\n");
     next_line();
     printf("option은 선택 사항이며 해당 명령어에 지정할 옵션, \nsources는 옮기고자 하는 파일명 또는 디렉토리명,\ndestination에는 옮길 위치를 입력합니다.\n\n");
     next_line();
