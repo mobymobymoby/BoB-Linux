@@ -22,7 +22,7 @@ void advanced_trainer()
         printf(" [49. chown] \t\t [50. chroot] \n [51. dd] \t\t [52. echo] \n [53. env] \t\t [54. export] \n [55. git] \t\t [56. ln] \n [57. redirection] \t [58. set(+unset)] \n [59. users] \n");
 
         printf("ex) [1. curl] -> '1' 또는 'curl' 입력, [3. head](+tail) -> '3' 또는'head' 입력\n");
-        printf("'q 또는 Q'를 입력하면 종료합니다.\n원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요. :");
+        printf("- 'q 또는 Q'를 입력하면 종료합니다.\n원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요. :");
 
         int status_code = 1;
         fgets(select, sizeof(select), stdin);
