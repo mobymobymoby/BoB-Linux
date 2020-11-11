@@ -29,7 +29,7 @@ void training_pwd(void)
     printf("'--help' - pwd 명령어의 사용법을 출력해줍니다.\n");
     printf("'--version' - pwd 명령어의 버전 정보를 출력해줍니다.\n");
     next_line();
-    printf("현재 작업 중이 디렉토리의 경로를 보는 실습을 하겠습니다.\n");
+    printf("현재 작업 중인 디렉토리의 경로를 보는 실습을 하겠습니다.\n");
     next_line();
     printf("\"pwd\"을(를) 입력하여 실습해보세요.\n");
     just_run_command("pwd");
