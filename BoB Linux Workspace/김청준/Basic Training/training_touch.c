@@ -52,13 +52,13 @@ void training_touch(void)
 	printf("[YYYYMMDDhhmm.ss]과 같은 형태는 시스템에서 날짜를 지정하는 방식인데, 앞으로도 이와 같은 형식의 날짜 표기를 자주 보게 될 것입니다.\n");
 	next_line();
 	
-	printf("Y는 Year의 약자로, '년도'를 2020과 같이 4자리로 표현하는 것을 의미하고, MM은 Month의 약자로 '월'을 2자리로 표현하는 것을 의미합니다.\n");
+	printf("YYYY는 Year의 약자로, '년도'를 2020과 같이 4자리로 표현하는 것을 의미하고, MM은 Month의 약자로 '월'을 2자리로 표현하는 것을 의미합니다.\n");
 	next_line();
 	
-	printf("D는 Day의 약자로 '일'을 2자리로 표현하는 것을 의미하고, h와 m은 각각 hour과 minute로 '시'와 '분'을 각각 2자리로 표현하는 것을 의미합니다.\n");
+	printf("DD는 Day의 약자로 '일'을 2자리로 표현하는 것을 의미하고, hh와 mm은 각각 hour과 minute로 '시'와 '분'을 각각 2자리로 표현하는 것을 의미합니다.\n");
 	next_line();
 	
-	printf("마지막으로 s는 second의 약자로 초를 2자리로 표현하는 것을 의미합니다.\n");
+	printf("마지막으로 ss는 second의 약자로 초를 2자리로 표현하는 것을 의미합니다.\n");
 	next_line();
 	
 	printf("따라서 \"2000년 1월 2일 3시 4분 5초\" 라는 날짜는 [YYYYMMDDhhmm.ss] 형식으로 200001020304.05로 표기하면 됩니다.\n");
