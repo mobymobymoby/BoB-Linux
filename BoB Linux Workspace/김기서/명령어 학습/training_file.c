@@ -4,6 +4,8 @@ void training_file()
 {
 	create_defdir();
 	system("clear");
+	
+	system("echo $SHELL > file.txt");
 
 	printf("이번에 학습할 명령어는 'file' 입니다. 파일의 종류를 알려줍니다.");
 	next_line();
