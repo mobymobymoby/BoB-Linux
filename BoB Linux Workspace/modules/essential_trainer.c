@@ -2,6 +2,7 @@
 
 void essential_trainer()
 {
+    system("clear");
     printf("기초 명령어 학습입니다.\n");
     next_line();
     printf("해당 커리큘럼에서는 리눅스를 사용하는데 필요한 기초적인 필수 명령어를 학습합니다.\n");
