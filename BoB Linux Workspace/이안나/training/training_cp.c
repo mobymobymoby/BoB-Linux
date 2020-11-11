@@ -15,7 +15,7 @@ void training_cp(void)
     system("touch file1 directory1/file1");
 
 
-    printf("이번에 학습할 명령어는 'cp'입니다.\n\n");
+    printf("이번에 학습할 명령어는 'cp'입니다.\n");
     next_line();
     printf("cp는 파일이나 디렉터리를 복사할 때 사용하는 명령입니다.\ncp 명령어는 다음과 같은 형식으로 사용합니다.\n$ cp [options] source(s) destination\n");
     next_line();
