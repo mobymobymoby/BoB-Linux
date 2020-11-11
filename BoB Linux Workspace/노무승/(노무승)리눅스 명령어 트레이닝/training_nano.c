@@ -3,7 +3,7 @@
 void training_nano(void)
 {
     create_defdir();
-	system("clear");
+    system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("nano 명령어는 nano 텍스트 편집기를 불러오는 명령어입니다.\n");
@@ -19,7 +19,7 @@ void training_nano(void)
         printf("TEST FILE\n");
         printf("                                  [ New File ]\n");
         printf("^G Get Help  ^O Write Out ^W Where Is  ^K Cut Text  ^J Justify   ^C Cur Pos\n");
-        printf("^X Exit      ^R Read File ^\ Replace   ^U Paste Text^T To Spell  ^_ Go To Line\n");
+        printf("^X Exit      ^R Read File ^\\ Replace   ^U Paste Text^T To Spell  ^_ Go To Line\n");
         next_line();
         
     printf("기본적으로 방향키로 문자, 라인 이동이 가능합니다.\n");
