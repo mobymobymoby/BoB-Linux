@@ -21,7 +21,7 @@ int main()
     printf("  | || | | (_| | | | | |  __/ |   \n");
     usleep(100000);
     printf("  |_||_|  \\__,_|_|_| |_|\\___|_|   \n\n");
-    usleep(200000);
+    usleep(100000);
 
     printf("BoB Linux Training에 오신 것을 환영합니다. (Enter 키를 눌러 진행할 수 있습니다)\n");
     next_line();
@@ -49,7 +49,7 @@ int main()
 
     while (1)
     {
-        printf("1 : 기초 명령어 학습\n2 : 심화 명령여 학습\n0 : 종료\n실행할 학습을 선택하세요 : ");
+        printf("1 : 기초 명령어 학습\n2 : 심화 명령 학습\n0 : 종료\n실행할 학습을 선택하세요 : ");
         scanf("%d", &menu);
 
         if (menu == 1)
