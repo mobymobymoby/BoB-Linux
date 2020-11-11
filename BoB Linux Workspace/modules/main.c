@@ -28,7 +28,10 @@ int main()
     next_line();
     printf("본 트레이닝 기능은 BoB 9th Team \"Black Moon\"에서 제작하였습니다.\n");
     next_line();
-
+    system("clear");
+    
+    /* 사이트에 대한 설명 */
+    
     /* 기본 설명 듣기 : 1 듣지 않기 : 0 */
     int menu = 0;
 
