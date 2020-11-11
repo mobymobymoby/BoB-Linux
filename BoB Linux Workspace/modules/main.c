@@ -35,6 +35,7 @@ int main()
     printf("트레이너 학습 전에 기본 설명을 들으시겠습니까?\n(리눅스를 처음 시작한다면 듣는 것을 권장)\n");
     printf("1번을 입력하면 기본 설명을 시작하고 0번을 입력하면 넘어갑니다.\n숫자를 입력해 주세요 : ");
     scanf("%d", &menu);
+    printf("\n");
     if (menu == 1)
     {
         training_intro();
