@@ -23,6 +23,7 @@ int main()
     {
         printf("1 : 기초 명령어 학습\n2 : 심화 명령어 학습\nq : 종료\n실행할 학습을 선택하세요 : ");
         menu = getchar();
+        __fpurge(stdin);
 
         if (menu == '1')
         {
