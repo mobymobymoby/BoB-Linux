@@ -49,6 +49,7 @@ void training_init(void)
     next_line();
     
     printf("[실습] 런레벨을 0으로 바꿔보세요. (실제 반영되지는 않습니다.)\n");
+    printf("	'init [런레벨 숫자]'와 같이 입력하여 런레벨을 바꿀 수 있습니다.\n");
     fake_run_command("init 0");
     printf("잘 하셨습니다! 앞으로도 이런 식으로 런레벨을 바꾸면 됩니다.\n");
     next_line();
