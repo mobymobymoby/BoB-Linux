@@ -13,7 +13,6 @@ void training_cat(void)
 	printf("이번에 학습할 명령어는 'cat'입니다.\ncat 명령어는 'concatenate'의 약자로, 두 개 이상의 파일을 연결(concatenate)하여 출력할 때 사용합니다.\n");
 	next_line();
 	printf("간단하게 생각하면, 여러 파일의 내용을 터미널로 연결시켜 출력한다고 보면 됩니다.\n");
-	next_line();
 	printf("기본 사용법은 다음과 같습니다.\n$ cat [옵션] [파일명]\n");
 	next_line();
 	printf("다음은 현재 디렉토리에 있는 파일들의 목록입니다.\n");
@@ -39,8 +38,6 @@ void training_cat(void)
 	next_line();
 	
 	printf("사용법은 다음과 같습니다.\n$ cat [파일 1] [파일 2] ... [파일 n] > [대상 파일명]\n");
-	next_line();
-	
 	printf("해당 사용법은 [파일 1] [파일 2] ... [파일 n] 까지의 모든 내용을 합쳐, [대상 파일명]로 만듭니다.\n만약 [대상 파일명]이 이미 존재 한다면, 이미 존재하는 파일의 내용을 [파일 1] [파일 2] ... [파일 n]로 덮어 씌웁니다.\n");
 	next_line();
 	
@@ -52,18 +49,12 @@ void training_cat(void)
 	system("cat test.txt");
 	next_line();
 	
-	printf("두 파일의 내용이 합쳐졌음을 알 수 있습니다. 즉, cat hello.txt bob.txt의 출력 결과가 test.txt 파일에 저장(연결)됩니다.\n");
-	next_line();
-	
+	printf("두 파일의 내용이 합쳐졌음을 알 수 있습니다. 즉, cat hello.txt bob.txt의 출력 결과가 test.txt 파일에 저장(연결)됩니다.\n");	
 	printf("cat을 이용해 이미 존재하는 파일에 덮어쓰는게 아닌, 내용을 추가해 덧붙일 수 있습니다.\n");
 	next_line();
 	
 	printf("사용법은 다음과 같습니다.\n$ cat [파일 1] >> [대상 파일]\n");
-	next_line();
-
-	printf("만약 [파일 1]의 내용이 \"Linux\"고, [대상 파일]의 내용이 \"BoB\"이라면 명령어를 실행 후 [대상 파일]의 내용은\n");
-	next_line();
-	
+	printf("만약 [파일 1]의 내용이 \"Linux\"고, [대상 파일]의 내용이 \"BoB\"이라면 명령어를 실행 후 [대상 파일]의 내용은\n");	
 	printf("\"BoB\"\n\"Linux\"\n가 됩니다. 여기서 주의할 점은 \"BoBLinux\"나 \"BoB Linux\"가 아닌, '개행(new line)'으로 두 파일이 구분된다는 점 입니다.\n");
 	next_line();
 	
@@ -81,10 +72,9 @@ void training_cat(void)
 	next_line();
 	
 	printf("cat 명령어는 자주 쓰게 될 것이므로, 여러 가지의 텍스트 파일을 이용해 연습하면 좋습니다.\n");
-	next_line();
 	printf("가장 많이 쓰이는 용법은 cat 명령어를 통해 파일의 내용을 보거나, 리다이렉션 하여 파일의 내용을 변경하는 것 입니다.\n");
 	next_line();
-	printf("cat 명령어 학습이 끝났습니다.\n");
+	printf("cat 명령어 학습이 끝났습니다. 고생하셨습니다.\n");
 
 	delete_defdir();
 }
