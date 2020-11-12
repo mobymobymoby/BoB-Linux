@@ -29,12 +29,12 @@ void essential_trainer()
         case 703:
             training_pwd();
             next_quit();
-            printf("해당 단계의 flag 값은 '1017'입니다.\n");
+            printf("해당 단계의 flag 값은 '905'입니다.\n");
             next_line();
         case 905:
             training_ls();
             next_quit();
-            printf("해당 단계의 flag 값은 '630'입니다.\n");
+            printf("해당 단계의 flag 값은 '1017'입니다.\n");
             next_line();
         case 1017:
             training_mkdir();
