@@ -6,21 +6,21 @@ void training_halt(void)
 	system("clear");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    printf("halt ¸í·É¾î´Â ½Ã½ºÅÛÀ» Á¾·áÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù.\n");
+    printf("halt ëª…ë ¹ì–´ëŠ” ì‹œìŠ¤í…œì„ ì¢…ë£Œí•˜ëŠ” ëª…ë ¹ì–´ìž…ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("ÁÖÀÇÇØ¾ß ÇÒ Á¡Àº ½Ã½ºÅÛ¸¸ Á¾·áµÇ°í, ½Ã½ºÅÛÀÇ Àü¿øÀº ²¨ÁöÁö ¾Ê´Â´Ù´Â Á¡ÀÔ´Ï´Ù.\n");
-    printf("´ëÃ¼ ¸í·É¾î·Î 'init', 'shutdown' ¸í·É¾î »ç¿ëÀ» ±ÇÀåµå¸³´Ï´Ù.\n");
+    printf("ì£¼ì˜í•´ì•¼ í•  ì ì€ ì‹œìŠ¤í…œë§Œ ì¢…ë£Œë˜ê³ , ì‹œìŠ¤í…œì˜ ì „ì›ì€ êº¼ì§€ì§€ ì•ŠëŠ”ë‹¤ëŠ” ì ìž…ë‹ˆë‹¤.\n");
+    printf("ëŒ€ì²´ ëª…ë ¹ì–´ë¡œ 'init', 'shutdown' ëª…ë ¹ì–´ ì‚¬ìš©ì„ ê¶Œìž¥ë“œë¦½ë‹ˆë‹¤.\n");
     next_line();
 
-    printf("[½Ç½À] halt ¸í·É¾î¸¦ »ç¿ëÇÏ¿© ½Ã½ºÅÛÀ» Á¾·áÇØº¸¼¼¿ä.\n(½ÇÁ¦ Àû¿ëµÇÁö´Â ¾Ê½À´Ï´Ù.)\n");
+    printf("[ì‹¤ìŠµ] halt ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•˜ì—¬ ì‹œìŠ¤í…œì„ ì¢…ë£Œí•´ë³´ì„¸ìš”.\n(ì‹¤ì œ ì ìš©ë˜ì§€ëŠ” ì•ŠìŠµë‹ˆë‹¤.)\n");
     fake_run_command("halt");
     next_line();
 
-    printf("ºñ½ÁÇÏ°Ô ½Ã½ºÅÛ Á¾·á¸¦ ¼öÇàÇÏ´Â ¸í·É¾î·Î´Â 'shutdown', 'init', 'poweroff' °¡ ÀÖÀ¸¸ç,\n");
-    printf("½Ã½ºÅÛ ÀçºÎÆÃÀ» ¼öÇàÇÏ´Â ¸í·É¾î·Î´Â 'shutdown', 'init', 'reboot'°¡ ÀÖ½À´Ï´Ù.\n");
+    printf("ë¹„ìŠ·í•˜ê²Œ ì‹œìŠ¤í…œ ì¢…ë£Œë¥¼ ìˆ˜í–‰í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'shutdown', 'init', 'poweroff' ê°€ ìžˆìœ¼ë©°,\n");
+    printf("ì‹œìŠ¤í…œ ìž¬ë¶€íŒ…ì„ ìˆ˜í–‰í•˜ëŠ” ëª…ë ¹ì–´ë¡œëŠ” 'shutdown', 'init', 'reboot'ê°€ ìžˆìŠµë‹ˆë‹¤.\n");
     next_line();
     
     delete_defdir();
-    printf("°í»ýÇÏ¼Ì½À´Ï´Ù!\n");
+    printf("ê³ ìƒí•˜ì…¨ìŠµë‹ˆë‹¤!\n");
 }
