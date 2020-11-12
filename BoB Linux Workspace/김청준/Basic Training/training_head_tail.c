@@ -81,7 +81,7 @@ void training_head_tail(void)
 	printf("진행을 위해서 tail을 종료시키겠습니다. 평소 사용시에는 컨트롤 + C 키를 입력하여 tail을 종료할 수 있습니다.\n");
 	printf("tail은 네트워크 모니터링 시에 쌓이는 로그를 확인하기 위해 사용하는 등 다양하게 사용할 수 있습니다.\n");
 	next_line();
-	printf("head와 tail의 학습이 끝났습니다.\n");
+	printf("head와 tail의 학습이 끝났습니다. 고생하셨습니다.\n");
 
     // Delete default directory
 	delete_defdir();
