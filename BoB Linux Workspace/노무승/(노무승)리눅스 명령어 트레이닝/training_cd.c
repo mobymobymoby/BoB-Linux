@@ -23,7 +23,6 @@ void training_cd(void){
     next_line();
 
     printf("[실습] cd 명령어를 사용해 /home/user/tr/test1 폴더로 이동해보세요.\n");
-    printf("'cd /' 입력시, 루트 디렉터리로 이동하게 됩니다.\n");
     fake_run_command("cd /home/user/tr/test1");
     chdir("/home/user/tr/test1");
     next_line();
