@@ -11,7 +11,7 @@ void training_runlevel(void)
     next_line();
     
     printf("[실습] runlevel 명령어를 입력해보세요.\n");
-    fake_run_command("runlevel");
+    run_command("runlevel");
     next_line();
 
     printf("왼쪽에 표기된 것이 이전의 런레벌이고, \n");
