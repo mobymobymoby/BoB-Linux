@@ -36,3 +36,4 @@ void training_redirection(void)
 
 	delete_defdir();
 }
+

@@ -11,7 +11,7 @@ void training_chmod(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //실습할 파일&디렉토리 제공
-    	system("touch file1 file2");
+    system("touch file1 file2");
 	system("chmod 000 file1");
 	system("chmod 000 file2");
 
@@ -21,7 +21,9 @@ void training_chmod(void)
 	next_line();
 	printf("chmod 명령어는 다음과 같은 형식으로 사용됩니다.\n$ chmod [option] mode file(s)\noption은 선택 사항이며 해당 명령어에 지정할 옵션,\nmode는 숫자 모드, 또는 문자 모드로 지정할 권한을 입력,\nfile(s)는 허가권을 변경할 파일명을 입력하여 사용합니다.\n\n");
 	next_line();
-	printf("chmod에서 자주 사용하는 옵션은 다음과 같습니다.\n -R, --recursive : 디렉토리 내부의 모든 하위 디렉토리와 파일의 접근 권한을 변경합니다.\n -c, --change : 변경 정보를 출력합니다.\n -f, --silent, --quite : 중요한 오류메시지가 아닌 경우 출력하지 않습니다.\n --version : 명령어의 버전 정보를 표시합니다.\n\n");
+	printf("chmod에서 자주 사용하는 옵션은 다음과 같습니다.\n -R, --recursive : 디렉토리 내부의 모든 하위 디렉토리와 파일의 접근 권한을 변경합니다.\n -c, --change : 변경 정보를 출력합니다.\n -f, --silent, --quite : 중요한 오류메시지가 아닌 경우 출력하지 않습니다.\n --version : 명령어의 버전 정보를 표시합니다.\n");
+	next_line();
+	printf("옵션에서 -R과 --recursive는 같은 동작을 하는 옵션이지만,\n 사용자의 입력에 따라 숏옵션(-R) 또는 롱옵션(--recursive)으로 사용할 수 있습니다.\n\n");
 	next_line();
 	printf("chmod 명령어는 두가지 모드가 존재합니다.\n\n");
 	next_line();
@@ -61,3 +63,4 @@ void training_chmod(void)
 
 	delete_defdir();
 }
+

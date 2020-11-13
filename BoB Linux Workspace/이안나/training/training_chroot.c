@@ -1,4 +1,4 @@
-#include <stdio_ext.h>
+#include <string.h>
 #include "func.h"
 
 int run_command(char valid_cmd[]);
@@ -7,11 +7,10 @@ void next_quit();
 void training_chroot(void)
 {
 	char test[20]; 
-	char test2[20];
-	char dir_buf[DIR_SIZE];
 	create_defdir();
 	system("clear");;
 
+	test[0] = '\0';
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	printf("이번에 학습할 명령어는 'chroot'입니다. \n\n");
@@ -26,20 +25,9 @@ void training_chroot(void)
 
 	printf("현재 디렉토리의 경로는 \'%s\'입니다.\n\n", def_dir);
 
-	strcat( strcat(test2, "chroot "), def_dir);
-
-	while(1){
-	getcwd(dir_buf, sizeof(dir_buf));
-	printf("Trainer@BoB:%s$ ", dir_buf);
-	scanf("%s", test);
-		if (strcmp(test, test2) ) {
-			printf("\n잘 입력하셨습니다.\n\n");
-			__fpurge(stdin);
-			break;
-		}
-		printf("잘못된 명령어를 입력하셨습니다.\n");
-		__fpurge(stdin);
-	}
+	strncat( strncat(test, "chroot ", 7), def_dir, 50);
+	printf("%s", test);
+	fake_run_command(test);
 
 	next_line();
 	printf("성공적으로 변경이 되었다면 현재 위치는 루트인 '/'로 표시될 것입니다.\n\n");
@@ -50,3 +38,4 @@ void training_chroot(void)
 
     delete_defdir();
 }
+

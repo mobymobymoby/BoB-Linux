@@ -31,3 +31,4 @@ void training_echo(void)
 
 	delete_defdir();
 }
+

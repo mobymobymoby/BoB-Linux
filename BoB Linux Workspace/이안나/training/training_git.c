@@ -45,3 +45,4 @@ void training_git(void)
 	printf("git에 대한 학습이 끝났습니다.\n\n");
 
 }
+

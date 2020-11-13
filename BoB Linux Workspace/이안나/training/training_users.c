@@ -28,3 +28,4 @@ void training_users(void)
 
     delete_defdir();
 }
+
