@@ -16,7 +16,7 @@ int fake_command(char valid_cmd[], char print_msg[])
         	cmd[strlen(cmd)-1] = '\0';
 
 		// 입력값 검증 부분
-		if (!strcmp(cmd, valid_cmd))
+		if (!strncmp(cmd, valid_cmd, strlen(valid_cmd)) && strlen(cmd) == strlen(valid_cmd))
 		{
 			printf("잘 입력하셨습니다.\n\n");
 			// fakecommand에서는 입력 값 검증만 수행하며, 실제로 명령어를 실행시키지는 않음
