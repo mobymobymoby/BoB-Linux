@@ -3,131 +3,131 @@
 int convert_name(char select[])
 {
     // 김기서 
-    if (!strcmp(select, "file"))
+    if (!strncmp(select, "file", strlen("file")) && strlen(select) == strlen("file"))
         training_file();
-    else if (!strcmp(select, "find"))
+    else if (!strncmp(select, "find", strlen("find")) && strlen(select) == strlen("find"))
         training_find();
-    else if (!strcmp(select, "history"))
+    else if (!strncmp(select, "history", strlen("history")) && strlen(select) == strlen("history"))
         training_history();
-    else if (!strcmp(select, "make"))
+    else if (!strncmp(select, "make", strlen("make")) && strlen(select) == strlen("make"))
         training_make();
-    else if (!strcmp(select, "more"))
+    else if (!strncmp(select, "more", strlen("more")) && strlen(select) == strlen("more"))
         training_more_less();
-    else if (!strcmp(select, "mount"))
+    else if (!strncmp(select, "mount", strlen("mount")) && strlen(select) == strlen("mount"))
         training_mount();
-    else if (!strcmp(select, "sort"))
+    else if (!strncmp(select, "sort", strlen("sort")) && strlen(select) == strlen("sort"))
         training_sort();
-    else if (!strcmp(select, "tar"))
+    else if (!strncmp(select, "tar", strlen("tar")) && strlen(select) == strlen("tar"))
         training_tar();
-    else if (!strcmp(select, "umask"))
+    else if (!strncmp(select, "umask", strlen("umask")) && strlen(select) == strlen("umask"))
         training_umask();
-    else if (!strcmp(select, "uname"))
+    else if (!strncmp(select, "uname", strlen("uname")) && strlen(select) == strlen("uname"))
         training_uname();
 
     // 김청준
-    else if (!strcmp(select, "curl"))
+    else if (!strncmp(select, "curl", strlen("curl")) && strlen(select) == strlen("curl"))
         training_curl();
-    else if (!strcmp(select, "group"))
+    else if (!strncmp(select, "group", strlen("group")) && strlen(select) == strlen("group"))
         training_group();
-    else if (!strcmp(select, "head"))
+    else if (!strncmp(select, "head", strlen("head")) && strlen(select) == strlen("head"))
         training_head_tail();
-    else if (!strcmp(select, "lsblk"))
+    else if (!strncmp(select, "lsblk", strlen("lsblk")) && strlen(select) == strlen("lsblk"))
         training_lsblk();
-    else if (!strcmp(select, "mkfs"))
+    else if (!strncmp(select, "mkfs", strlen("mkfs")) && strlen(select) == strlen("mkfs"))
         training_mkfs();
-    else if (!strcmp(select, "ping"))
+    else if (!strncmp(select, "ping", strlen("ping")) && strlen(select) == strlen("ping"))
         training_ping();
-    else if (!strcmp(select, "sed"))
+    else if (!strncmp(select, "sed", strlen("sed")) && strlen(select) == strlen("sed"))
         training_sed();
-    else if (!strcmp(select, "user"))
+    else if (!strncmp(select, "user", strlen("user")) && strlen(select) == strlen("user"))
         training_user_passwd();
 
     // 노무승
-    else if (!strcmp(select, "fsck"))
+    else if (!strncmp(select, "fsck", strlen("fsck")) && strlen(select) == strlen("fsck"))
         training_fsck();
-    else if (!strcmp(select, "halt"))
+    else if (!strncmp(select, "halt", strlen("halt")) && strlen(select) == strlen("halt"))
         training_halt();
-    else if (!strcmp(select, "ifconfig"))
+    else if (!strncmp(select, "ifconfig", strlen("ifconfig")) && strlen(select) == strlen("ifconfig"))
         training_ifconfig();
-    else if (!strcmp(select, "init"))
+    else if (!strncmp(select, "init", strlen("init")) && strlen(select) == strlen("init"))
         training_init();
-    else if (!strcmp(select, "kill"))
+    else if (!strncmp(select, "kill", strlen("kill")) && strlen(select) == strlen("kill"))
         training_kill();
-    else if (!strcmp(select, "nano"))
+    else if (!strncmp(select, "nano", strlen("nano")) && strlen(select) == strlen("nano"))
         training_nano();
-    else if (!strcmp(select, "netstat"))
+    else if (!strncmp(select, "netstat", strlen("netstat")) && strlen(select) == strlen("netstat"))
         training_netstat();
-    else if (!strcmp(select, "poweroff"))
+    else if (!strncmp(select, "poweroff", strlen("poweroff")) && strlen(select) == strlen("poweroff"))
         training_poweroff();
-    else if (!strcmp(select, "reboot"))
+    else if (!strncmp(select, "reboot", strlen("reboot")) && strlen(select) == strlen("reboot"))
         training_reboot();
-    else if (!strcmp(select, "runlevel"))
+    else if (!strncmp(select, "runlevel", strlen("runlevel")) && strlen(select) == strlen("runlevel"))
         training_runlevel();
-    else if (!strcmp(select, "shutdown"))
+    else if (!strncmp(select, "shutdown", strlen("shutdown")) && strlen(select) == strlen("shutdown"))
         training_shutdown();
-    else if (!strcmp(select, "su"))
+    else if (!strncmp(select, "su", strlen("su")) && strlen(select) == strlen("su"))
         training_su();
-    else if (!strcmp(select, "sudo"))
+    else if (!strncmp(select, "sudo", strlen("sudo")) && strlen(select) == strlen("sudo"))
         training_sudo();
-    else if (!strcmp(select, "top"))
+    else if (!strncmp(select, "top", strlen("top")) && strlen(select) == strlen("top"))
         training_top();
-    else if (!strcmp(select, "wget"))
+    else if (!strncmp(select, "wget", strlen("wget")) && strlen(select) == strlen("wget"))
         training_wget();
 
     // 백송선
-    else if (!strcmp(select, "alias"))
+    else if (!strncmp(select, "alias", strlen("alias")) && strlen(select) == strlen("alias"))
         training_alias();
-    else if (!strcmp(select, "apt"))
+    else if (!strncmp(select, "apt", strlen("apt")) && strlen(select) == strlen("apt"))
         training_apt();
-    else if (!strcmp(select, "chsh"))
+    else if (!strncmp(select, "chsh", strlen("chsh")) && strlen(select) == strlen("chsh"))
         training_chsh();
-    else if (!strcmp(select, "cmp"))
+    else if (!strncmp(select, "cmp", strlen("cmp")) && strlen(select) == strlen("cmp"))
         training_cmp();
-    else if (!strcmp(select, "comm"))
+    else if (!strncmp(select, "comm", strlen("comm")) && strlen(select) == strlen("comm"))
         training_comm();
-    else if (!strcmp(select, "diff"))
+    else if (!strncmp(select, "diff", strlen("diff")) && strlen(select) == strlen("diff"))
         training_diff();
-    else if (!strcmp(select, "grep"))
+    else if (!strncmp(select, "grep", strlen("grep")) && strlen(select) == strlen("grep"))
         training_grep();
-    else if (!strcmp(select, "locate"))
+    else if (!strncmp(select, "locate", strlen("locate")) && strlen(select) == strlen("locate"))
         training_locate();
-    else if (!strcmp(select, "man"))
+    else if (!strncmp(select, "man", strlen("man")) && strlen(select) == strlen("man"))
         training_man();
-    else if (!strcmp(select, "pipe"))
+    else if (!strncmp(select, "pipe", strlen("pipe")) && strlen(select) == strlen("pipe"))
         training_pipe();
-    else if (!strcmp(select, "ps"))
+    else if (!strncmp(select, "ps", strlen("ps")) && strlen(select) == strlen("ps"))
         training_ps();
-    else if (!strcmp(select, "vi"))
+    else if (!strncmp(select, "vi", strlen("vi")) && strlen(select) == strlen("vi"))
         training_vi();
-    else if (!strcmp(select, "whereis"))
+    else if (!strncmp(select, "whereis", strlen("whereis")) && strlen(select) == strlen("whereis"))
         training_whereis();
-    else if (!strcmp(select, "which"))
+    else if (!strncmp(select, "which", strlen("which")) && strlen(select) == strlen("which"))
         training_which();
 
     // 이안나
-    else if (!strcmp(select, "chmod"))
+    else if (!strncmp(select, "chmod", strlen("chmod")) && strlen(select) == strlen("chmod"))
         training_chmod();
-    else if (!strcmp(select, "chown"))
+    else if (!strncmp(select, "chown", strlen("chown")) && strlen(select) == strlen("chown"))
         training_chown();
-    else if (!strcmp(select, "chroot"))
+    else if (!strncmp(select, "chroot", strlen("chroot")) && strlen(select) == strlen("chroot"))
         training_chroot();
-    else if (!strcmp(select, "dd"))
+    else if (!strncmp(select, "dd", strlen("dd")) && strlen(select) == strlen("dd"))
         training_dd();
-    else if (!strcmp(select, "echo"))
+    else if (!strncmp(select, "echo", strlen("echo")) && strlen(select) == strlen("echo"))
         training_echo();
-    else if (!strcmp(select, "env"))
+    else if (!strncmp(select, "env", strlen("env")) && strlen(select) == strlen("env"))
         training_env();
-    else if (!strcmp(select, "export"))
+    else if (!strncmp(select, "export", strlen("export")) && strlen(select) == strlen("export"))
         training_export();
-    else if (!strcmp(select, "git"))
+    else if (!strncmp(select, "git", strlen("git")) && strlen(select) == strlen("git"))
         training_git();
-    else if (!strcmp(select, "ln"))
+    else if (!strncmp(select, "ln", strlen("ln")) && strlen(select) == strlen("ln"))
         training_ln();
-    else if (!strcmp(select, "redirection"))
+    else if (!strncmp(select, "redirection", strlen("redirection")) && strlen(select) == strlen("redirection"))
         training_redirection();  
-    else if (!strcmp(select, "set"))
+    else if (!strncmp(select, "set", strlen("set")) && strlen(select) == strlen("set"))
         training_set_unset();
-    else if (!strcmp(select, "users"))
+    else if (!strncmp(select, "users", strlen("users")) && strlen(select) == strlen("users"))
         training_users();
     else
     {
