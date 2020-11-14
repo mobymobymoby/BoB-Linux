@@ -11,6 +11,7 @@ void advanced_trainer()
     while (1)
     {
         printf("명령어 목록입니다.\n");
+        printf("ex) [3. head](+tail) -> '3' 또는'head' 입력\n");
         printf(" [1. file] \t\t [2. find] \n [3. history] \t\t [4. make] \n [5. more](+less) \t [6. mount] \n [7. sort] \t\t [8. tar] \n [9. umask] \t\t [10. uname]\n");
         
         printf(" [11. curl] \t\t [12. group](+관련 명령어) \n [13. head](+tail) \t [14. lsblk] \n [15. mkfs] \t\t [16. ping] \n [17. sed] \t\t [18. user](+관련 명령어+passwd) \n [19. fsck] \t\t [20. halt] \n");
@@ -21,7 +22,6 @@ void advanced_trainer()
         
         printf(" [49. chown] \t\t [50. chroot] \n [51. dd] \t\t [52. echo] \n [53. env] \t\t [54. export] \n [55. git] \t\t [56. ln] \n [57. redirection] \t [58. set(+unset)] \n [59. users] \n");
 
-        printf("ex) [3. head](+tail) -> '3' 또는'head' 입력\n");
         printf("'q' 또는 'Q'를 입력하면 종료합니다.\n원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요. : ");
 
         int status_code = 1;
