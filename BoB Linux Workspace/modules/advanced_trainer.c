@@ -31,16 +31,20 @@ void advanced_trainer()
         /* 입력 값이 'q' 또는 'Q'라면 종료 */
         /* 그 외에는 문자열로 판단 if else 문을 이용해 해당하는 함수 실행*/
         if (select[0] >= 49 && select[0] <= 57)
+        {
             status_code = call_training(select);
+            next_quit();
+        }
         else if (select[0] == 'q' || select[0] == 'Q')
             break;
         else
+        {
             status_code = convert_name(select);
+            next_quit();
+        }
 
         if (status_code == -1)
             printf("올바른 값을 다시 입력해주세요.\n");
-
-        next_quit();
     }
     printf("심화 명령어 학습이 종료되었습니다.\n고생하셨습니다.\n");
 }
