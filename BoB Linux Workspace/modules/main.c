@@ -40,7 +40,8 @@ int main()
             break;
         }
         else
-        {
+        {   
+            system("clear");
             printf("잘못된 입력입니다. 다시 입력해주세요.\n\n");
         }
     }
