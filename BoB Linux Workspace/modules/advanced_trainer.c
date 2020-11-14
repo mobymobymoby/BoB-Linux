@@ -2,6 +2,7 @@
 
 void advanced_trainer()
 {
+    system("clear");
     printf("심화 명령어 학습입니다.\n");
     next_line();
     printf("해당 커리큘럼에서는 보안을 위해 리눅스를 사용할 때 응용할 수 있는 명령어를 학습합니다.\n");
@@ -10,7 +11,7 @@ void advanced_trainer()
     char select[20];
     while (1)
     {
-        printf("명령어 목록입니다.\n");
+        printf("명령어 목록입니다.\n'q' 또는 'Q'를 입력하면 종료합니다.\n");
         printf("ex) [3. head](+tail) -> '3' 또는'head' 입력\n");
         printf(" [1. file] \t\t [2. find] \n [3. history] \t\t [4. make] \n [5. more](+less) \t [6. mount] \n [7. sort] \t\t [8. tar] \n [9. umask] \t\t [10. uname]\n");
         
@@ -22,7 +23,7 @@ void advanced_trainer()
         
         printf(" [49. chown] \t\t [50. chroot] \n [51. dd] \t\t [52. echo] \n [53. env] \t\t [54. export] \n [55. git] \t\t [56. ln] \n [57. redirection] \t [58. set(+unset)] \n [59. users] \n");
 
-        printf("'q' 또는 'Q'를 입력하면 종료합니다.\n원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요. : ");
+        printf("원하시는 [ ]안의 명령어의 번호 또는 이름을 입력하세요. : ");
 
         int status_code = 1;
         fgets(select, sizeof(select), stdin);
