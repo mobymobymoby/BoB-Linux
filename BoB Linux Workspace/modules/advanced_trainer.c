@@ -46,7 +46,10 @@ void advanced_trainer()
         }
 
         if (status_code == -1)
+        {
             printf("올바른 값을 다시 입력해주세요.\n");
+            next_line();
+        }
         else 
             next_quit();
     }
