@@ -29,10 +29,10 @@ void training_history()
     printf("!!을 입력해 보세요.\n");
     fake_run_command("!!");
     printf("1000\n");
-
+	
     printf("좀 전에 실행하였던 echo $HISTSIZE 가 다시 수행된 것을 볼 수 있습니다.\n");
     next_line();
-
+    // to do : history 명령어 써서 지금까지 입력했던 명령어 출력
     printf("history 기능에 대한 학습이 끝났습니다.\n");
 
 	delete_defdir();
