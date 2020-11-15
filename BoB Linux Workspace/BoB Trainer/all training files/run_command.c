@@ -9,14 +9,14 @@ int run_command(char valid_cmd[])
 		printf("\n");
 		getcwd(dir_buf, sizeof(dir_buf));
 		printf("%s@localhost:%s$ ", getlogin(), dir_buf);
-		int valid_len = strlen(valid_cmd);
+		
 		fgets(cmd, sizeof(cmd), stdin);
 
 		// 나머지 입력 값 제거
-        cmd[strlen(cmd)-1] = '\0';
+		cmd[strlen(cmd) - 1] = '\0';
 
 		// 입력값 검증 부분
-		if (!strcmp(cmd, valid_cmd))
+		if (!strncmp(cmd, valid_cmd, strlen(valid_cmd)) && strlen(cmd) == strlen(valid_cmd))
 		{
 			printf("잘 입력하셨습니다.\n\n");
 			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
@@ -40,14 +40,13 @@ int just_run_command(char valid_cmd[])
 		printf("\n");
 		getcwd(dir_buf, sizeof(dir_buf));
 		printf("%s@localhost:%s$ ", getlogin(), dir_buf);
-		int valid_len = strlen(valid_cmd);
 		fgets(cmd, sizeof(cmd), stdin);
 
 		// 나머지 입력 값 제거
-        cmd[strlen(cmd)-1] = '\0';
+		cmd[strlen(cmd) - 1] = '\0';
 
 		// 입력값 검증 부분
-		if (!strcmp(cmd, valid_cmd))
+		if (!strncmp(cmd, valid_cmd, strlen(valid_cmd)) && strlen(cmd) == strlen(valid_cmd))
 		{
 			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
 			system(valid_cmd);

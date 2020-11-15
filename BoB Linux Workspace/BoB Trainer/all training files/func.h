@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <stdio_ext.h> // __fpurge(stdin)
 
 #define CMD_SIZE 60 // 최대 59개의 문자 입력
 #define DIR_SIZE 60 // 최대 59개의 문자 입력
@@ -28,9 +28,9 @@ void delete_defdir();
 void advanced_trainer(void);
 void essential_trainer(void);
 void training_intro(void);
+void print_banner(void);
 
 /* 함수 리스트 */
-
 // 김기서 명령어
 void training_clear(void);
 void training_file(void);

@@ -42,7 +42,7 @@ void training_dd(void)
 	system("ls -al");
 	next_line();
 
-	printf("\n현재 폴더에 dir1과 dir2이 있고 dir1에는 file1이 있습니다.\n");
+	printf("\n\'ls -al\' 명령을 통해 확인해보면, 현재 폴더에 dir1과 dir2이 있고 dir1에는 file1이 있습니다.\n");
 
 	printf("dd 명령을 사용해 디스크 if=dir1/file1를 of=dir2/file1로,\n블록 사이즈 bs=1M 단위로 읽고 쓰도록 명령어를 입력해보세요.\n\n");
 
@@ -57,3 +57,4 @@ void training_dd(void)
 
 	delete_defdir();
 }
+

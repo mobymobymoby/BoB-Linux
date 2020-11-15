@@ -2,6 +2,7 @@
 
 void essential_trainer()
 {
+    system("clear");
     printf("기초 명령어 학습입니다.\n");
     next_line();
     printf("해당 커리큘럼에서는 리눅스를 사용하는데 필요한 기초적인 필수 명령어를 학습합니다.\n");
@@ -24,42 +25,52 @@ void essential_trainer()
             training_whoami();
             next_quit();
             printf("해당 단계의 flag 값은 '703'입니다.\n");
+            next_line();
         case 703:
             training_pwd();
             next_quit();
-            printf("해당 단계의 flag 값은 '1017'입니다.\n");
+            printf("해당 단계의 flag 값은 '905'입니다.\n");
+            next_line();
         case 905:
             training_ls();
             next_quit();
-            printf("해당 단계의 flag 값은 '630'입니다.\n");
+            printf("해당 단계의 flag 값은 '1017'입니다.\n");
+            next_line();
         case 1017:
             training_mkdir();
             next_quit();
             printf("해당 단계의 flag 값은 '1024'입니다.\n");
+            next_line();
         case 1024:
             training_touch();
             next_quit();
             printf("해당 단계의 flag 값은 '1106'입니다.\n");
+            next_line();
         case 1106:
             training_cat();
             next_quit();
             printf("해당 단계의 flag 값은 '1121'입니다.\n");
+            next_line();
         case 1121:
             training_cd();
             next_quit();
             printf("해당 단계의 flag 값은 '1219'입니다.\n");
+            next_line();
         case 1219:
             training_mv();
             next_quit();
             printf("해당 단계의 flag 값은 '1223'입니다.\n");
+            next_line();
         case 1223:
             training_cp();
             next_quit();
             printf("해당 단계의 flag 값은 '1231'입니다.\n");
+            next_line();
         case 1231:
             training_rm();
             next_quit();
             printf("해당 단계의 flag 값은 '808'입니다.\n");
+            next_line();
         case 808:
             training_clear();
             break;

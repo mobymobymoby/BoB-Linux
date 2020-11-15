@@ -29,8 +29,8 @@ void training_pipe(void)
     next_line();
     printf("한 번 실습을 해보겠습니다.\n");
     next_line();
-    printf("\"touch test1; cat > test1; cat > test1\"을 입력하시고 내용을 적은 뒤 Ctrl + d로 저장하세요.\n");
-    just_run_command("touch test1; cat > test1; cat > test1");
+    printf("\"touch test1; cat > test1; cat test1\"을 입력하시고 아무 내용 입력한 뒤 Ctrl + d로 저장하세요.\n");
+    just_run_command("touch test1; cat > test1; cat test1");
     printf("\n잘 따라하셨다면 파일이 만들어졌을 것이고, 내용을 입력하고, 내용을 확인하실 수 있었을 것입니다.\n");
     next_line();
     printf("[pipe(|)]\n");

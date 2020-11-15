@@ -3,29 +3,23 @@
 
 void training_user_passwd(void)
 {
-	create_defdir();
+    create_defdir();
     system("clear");
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("이번에 학습할 명령어는 'adduser', 'userdel', 'usermod', 'passwd'입니다.\n");
-    next_line();
     printf("이 명령어들은 사용자 계정과 관련된 동작들을 합니다.\n");
     next_line();
     printf("계정을 관리하는 역할은 일반적으로 관리자 계정인 'root'의 역할이므로, 일반 사용자는 해당 명령어들을 사용하지 못합니다.\n");
-    next_line();
     printf("따라서 이 명령어 들은 root 계정을 통해 수행할 수 있습니다.\n");
     next_line();
     printf("이름에서도 충분히 유추할 수 있듯, adduser 명령어는 새로운 사용자 계정을 생성합니다.\n");
-    next_line();
     printf("기본적인 사용법은 다음과 같습니다.\n");
-    next_line();
     printf("# adduser [옵션] [생성할 계정 이름]");
     next_line();
     printf("아무런 옵션을 주지 않고, adduser [생성할 계정 이름]의 문법으로 사용하면 지정한 이름으로 계정을 생성합니다.\n");
-    next_line();
     printf("이 때 사용할 계정의 패스워드를 입력하게 되고, 추가적으로 이름이나 전화번호 등 인적사항을 기입하게 됩니다.\n");
-    next_line();
     printf("다만, 인적사항은 필수로 기입해야하는 것은 아니며 Enter를 입력하여 넘어가도 큰 문제는 없습니다.\n");
     next_line();
     printf("adduser를 이용해 'user1'이라는 이름을 가진 사용자 계정을 생성해보세요.\n");
@@ -40,14 +34,12 @@ void training_user_passwd(void)
     next_line();
 
     printf("user1이라는 계정을 만들기 위해 여러 가지 작업을 수행하는 모습이 출력됩니다.\n");
-    next_line();
     printf("출력 결과를 하나 하나 살펴보겠습니다.\n");
     next_line();
     printf("Adding user `user1' ... : 우리가 지정한 이름인 'user1'을 계정에 추가하고 있다는 의미입니다.\n");
     next_line();
     printf("Adding new group `user1' (1001) ... : user1의 '그룹'을 따로 지정해주지 않았기 때문에\n");
     printf("지정한 사용자 계정 이름과 동일한 이름(user1)으로 group을 생성합니다. (1001)은 생성한 그룹의 GID(Group ID)입니다.\n");
-    next_line();
     printf("이 때 일반적으로 GID는 생성된 계정의 UID와 일치합니다.\n");
     next_line();
     printf("Adding new user `user1' (1001) with group `user1' ... : 생성한 'user1' 그룹에 'user1' 계정을 포함시킨다는 의미입니다.\n");
@@ -61,11 +53,9 @@ void training_user_passwd(void)
     next_line();
 
     printf("다시 'adduser user1'을 입력한 상태로 돌아오겠습니다.\n");
-    next_line();
     printf("현재 우리가 입력한 것에서는 사용자 계정 이름만 지정했고, 패스워드를 입력하지 않았습니다.\n");
     next_line();
     printf("위에서 출력된 내용들이 나온 후에 사용자 계정의 패스워드를 입력하라는 메시지('Enter new UNIX password')와 재확인(Retype) 메시지가 나옵니다.\n");
-    next_line();
     printf("user1 계정의 패스워드를 'BoB-Linux'로 설정하세요.\n");
     next_line();
     fake_command("BoB-Linux", "Enter new UNIX password: ");
@@ -74,9 +64,7 @@ void training_user_passwd(void)
     next_line();
 
     printf("패스워드를 입력한 후에는 패스워드가 성공적으로 업데이트 되었다는 메시지 후에 user1의 정보를 입력하라는 메시지가 나옵니다.\n");
-    next_line();
     printf("이 정보들은 선택사항이며, 이름, 방 번호, 전화번호, 집 전화번호 등을 입력할 수 있습니다.\n");
-    next_line();
     printf("아무 정보나 입력해보세요.\n");
     next_line();
     printf("Changing the user information for user1\nEnter the new value, or press ENTER for the default\n");
@@ -108,11 +96,9 @@ void training_user_passwd(void)
     next_line();
 
     printf("계정을 생성하는 방법을 알았으니, 삭제하는 방법도 알아야 할 것입니다.\n");
-    next_line();
     printf("'userdel' 명령어는 간단하게 사용자 계정을 삭제할 수 있습니다.\n");
     next_line();
     printf("기본 사용법은 다음과 같습니다.\n");
-    next_line();
     printf("# userdel [옵션] [삭제할 계정명]");
     next_line();
     printf("-r 옵션을 추가하면 삭제할 때 해당 사용자의 홈 디렉토리까지 삭제합니다.\n");
@@ -122,63 +108,49 @@ void training_user_passwd(void)
     next_line();
 
     printf("다음으로는 존재하는 계정을 변경하는 명령어인 'usermod'입니다.\n");
-    next_line();
     printf("usermod 명령어는 다른 옵션과 함께 사용됩니다.\n");
     next_line();
     printf("여러 옵션이 존재하기 때문에 자주 쓰이는 옵션 위주로 설명하겠습니다.\n");
-    next_line();
     printf("먼저 -l 옵션입니다. -l 옵션은 기존에 존재하는 계정 이름을 새로운 이름으로 바꿀 때 사용합니다. 사용법은 아래와 같습니다.\n");
     next_line();
     printf("$ usermod -l [새로운 계정명] [기존 계정명]\n");
-    next_line();
     printf("보통 계정 이름에 따라 홈 디렉토리가 변경되므로, -l 옵션을 이용해 계정명을 변경할 때는 홈 디렉토리도 함께 변경하는 것이 좋습니다.\n");
-    next_line();
     printf("따라서 -l 옵션은 홈 디렉토리를 변경하는 옵션인 -d 옵션\n기존 홈 디렉토리의 파일과 디렉토리를 옮겨주는 옵션인 -m과 함께 자주 사용합니다.\n");
     next_line();
     printf("-l -d -m 옵션을 함께 사용하는 방법은 아래와 같습니다.\n");
-    next_line();
     printf("$ usermod -l [새로운 계정명] -d [새로운 홈 디렉토리] -m [기존 계정명]\n");
     next_line();
     printf("-g 옵션은 사용자가 속한 그룹을 변경합니다.\n");
-    next_line();
     printf("-G 옵션은 사용자가 본래 속한 그룹을 그대로 두고, 새로운 그룹에 추가로 속하게 합니다.\n");
     printf("참고로 리눅스에서는 하나의 사용자가 여러 가지 그룹에 속하는 것이 가능합니다.\n");
     next_line();
 
     printf("계정을 생성, 변경, 삭제하는 방법을 익혔습니다.\n다음으로는 계정의 패스워드를 관리하는 passwd 명령어 입니다.\n");
-    next_line();
     printf("passwd 명령어는 'password'의 약자로, 계정의 패스워드와 관련된 명령어입니다.\n");
     next_line();
     printf("기본적인 사용법은 아무런 옵션도 주지 않고 사용하는 것입니다.\n");
-    next_line();
     printf("$ passwd\n");
     next_line();
     printf("해당 명령어를 입력하면 현재 로그인 된 사용자의 패스워드를 변경하게 됩니다.\n");
-    next_line();
     printf("이 때 현재 로그인된 사용자의 패스워드를 알고 있어야 패스워드를 변경할 수 있습니다.\n");
     next_line();
 
     printf("passwd 명령어는 옵션을 주어 사용하기도 합니다.\n");
-    next_line();
     printf("주로 여러 계정을 관리하는 관리자(root)에 의해서 passwd 명령어가 수행됩니다.\n");
     next_line();
     printf("옵션과 함께 사용할 때 기본 문법은 다음과 같습니다.\n");
-    next_line();
     printf("$ passwd [옵션] [사용자 계정명]\n");
     next_line();
 
     printf("옵션을 주지 않고 passwd [사용자 계정]으로 사용하면 [사용자 계정]에 해당하는 계정의 패스워드를 변경할 수 있습니다.\n");
-    next_line();
     printf("위에서 언급했듯, passwd 명령어는 보통 root 계정에 의해 수행됩니다.\n");
     next_line();
     printf("루트 권한이 없는 일반 사용자는 passwd 명령어를 자신의 계정 패스워드를 변경하는 용도로 밖에 사용하지 못합니다.\n");
-    next_line();
     printf("root 계정은 관리자 계정이기 때문에 다른 사용자의 패스워드와 다양한 설정을 변경할 수 있습니다.\n");
     next_line();
     printf("이렇듯, root 계정은 다른 사용자에 비해 막강한 권한을 가지고 있기 때문에 root 계정이 유출되서는 안되는 것입니다.\n");
 
     printf("다시 passwd 명령어로 돌아와서, 사용자의 정보을 보기 위해서는 -S(status의 약자) 옵션을 사용합니다.\n");
-    next_line();
     printf("passwd 명령어와 -S 옵션을 이용해 앞에서 생성한 'user1' 계정의 정보를 확인해보세요.\n");
     next_line();
     printf("$ passwd [옵션] [사용자 계정명]\n");
@@ -212,25 +184,22 @@ void training_user_passwd(void)
     printf("일곱번째 필드는 '-1'에 해당하며 패스워드가 만료되고 패스워드가 Lock 되기 까지의 유예 기간을 표시합니다.\n");
     printf("패스워드 만료 기간이 지난 후 해당 기간이 지나면 패스워드의 상태는 잠김(Lock)상태가 됩니다.\n");
     next_line();
-
-    printf("-a 옵션은 -S 옵션과 같이 쓰이는 옵션으로, 'all'을 의미하며 모든 사용자에 대한 passwd -S 명령어를 실행합니다.\n");
-    next_line();
-    printf("-l 옵션은 사용자의 패스워드를 잠김(Lock) 상태로 만들어 로그인을 막습니다.\n");
-    next_line();
-    printf("-d 옵션은 사용자의 패스워드를 제거합니다. 패스워드가 제거된 계정은 패스워드 없이 로그인이 가능합니다.\n");
+    
+    printf("이외의 옵션은 다음과 같습니다.\n");
+    printf("-a 옵션 : -S 옵션과 같이 쓰이는 옵션으로, 'all'을 의미하며 모든 사용자에 대한 passwd -S 명령어를 실행합니다.\n");
+    printf("-l 옵션 : 사용자의 패스워드를 잠김(Lock) 상태로 만들어 로그인을 막습니다.\n");
+    printf("-d 옵션 : 사용자의 패스워드를 제거합니다. 패스워드가 제거된 계정은 패스워드 없이 로그인이 가능합니다.\n");
     next_line();
     printf("위에서 살펴본 것 처럼 사용자를 관리하는 명령어는 해당 시스템에 속해 있는 계정을 마음대로 삭제하거나 패스워드를 변경할 수 있습니다.\n");
-    next_line();
     printf("root 권한으로만 사용자 관리 명령어를 사용할 수 있는 이유는 바로 이것 때문입니다.\n");
     next_line();
 
     printf("마지막으로 지금까지 실습에 이용했던 'user1' 계정을 삭제하겠습니다.\n");
-    next_line();
     printf("-r 옵션을 이용해서 'user1'의 홈 디렉토리와 계정을 삭제하세요.\n");
     printf("# userdel [옵션] [삭제할 계정명]\n");
     fake_run_command("userdel -r user1");
 
-    printf("계정 관리 명령어(adduser, userdel, passwd) 학습이 끝났습니다.\n");
+    printf("계정 관리 명령어(adduser, userdel, passwd) 학습이 끝났습니다. 고생하셨습니다.\n");
     next_line();
 
     // Delete default directory

@@ -178,7 +178,7 @@ void training_vi(void)
     next_line();
     printf("\"vi\"는 이렇게 여러 명령 키들로 조작이 가능합니다.\n");
     next_line();
-    printf("\"vim\"은 \"vi\"의 명려어키들 대부분을 호환하며 사용자를 더 편하게 해줍니다.\n");
+    printf("\"vim\"은 \"vi\"의 명령어키들 대부분을 호환하며 사용자를 더 편하게 해줍니다.\n");
     next_line();
     printf("\"vim\"에서는 스크립트를 통한 확장 기능을 사용할 수 있습니다.\n");
     next_line();

@@ -39,12 +39,12 @@ void training_cmp(void)
     printf("파일 두 개를 만들어 두는데, 서로 내용을 다르게 할 것입니다.\n");
     next_line();
     printf("\"cat > test1\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
-    printf("hello\nworld\ngood morning\nman\n");
+    printf("\nhello\nworld\ngood morning\nman\n");
     just_run_command("cat > test1");
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
     next_line();
     printf("\"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
-    printf("hello\nworld\ngood morning\nwoman\n");
+    printf("\nhello\nworld\ngood morning\nwoman\n");
     just_run_command("cat > test2");
     printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");
     next_line();
@@ -89,7 +89,7 @@ void training_cmp(void)
     printf("'-i 6'는 6byte 즉, 공백 및 엔터 포함하여 6개의 문자를 무시하고 그 다음 것부터 1로 세라는 옵션입니다.\n");
     next_line();
     printf("test1 파일과 test2 파일의 첫 번째 문자부터 6번 째 문자까지는 엔터까지 포함된 \"hello\"입니다.\n");
-    printf("'h' - 1\n'e' - 2\n'l' - 3\n'l' - 4\n'o' - 5\n'\\n(엔터) - 6\n");
+    printf("\n'h' - 1\n'e' - 2\n'l' - 3\n'l' - 4\n'o' - 5\n'\\n(엔터) - 6\n");
     next_line();
     printf("그렇기 때문에 그 다음 문자인 'w'부터 1로 시작한 것입니다.\n");
     next_line();

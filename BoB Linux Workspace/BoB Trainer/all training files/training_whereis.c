@@ -11,7 +11,7 @@ void training_whereis(void)
     printf("\"whereis\" 명령어는 검색하고자 하는 명령어의\n");
     printf("실행 파일(바이너리)과 소스코드 그리고 매뉴얼 파일의 위치를 출력합니다.\n");
     next_line();
-    printf("전에 배웠던 \"which\" 명령어와 비슷하지만 조금 더 많은 걸 알려준다고 보시면 됩니다.\n");
+    printf("\"which\" 명령어와 비슷하지만 조금 더 많은 걸 알려준다고 보시면 됩니다.\n");
     next_line();
     printf("\"whereis\" 명령어의 실행 파일은 \"/usr/bin/whereis\"로 있습니다.\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"whereis\"로 있습니다.\n");

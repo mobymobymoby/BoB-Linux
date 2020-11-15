@@ -2,11 +2,11 @@
 
 void training_pwd(void)
 {
+    create_defdir();
+    
     char wd[BUFSIZ];
 	getcwd(wd,BUFSIZ);
 
-    create_defdir();
-    
     system("clear");
     
     printf("이번에 배울 명령어는 \"pwd\" 입니다.\n");
