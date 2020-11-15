@@ -5,13 +5,15 @@ int main()
     system("clear");
     print_banner();
 
-    printf("BoB Linux Training에 오신 것을 환영합니다. (Enter 키를 눌러 진행할 수 있습니다)\n");
-    printf("본 트레이닝 기능은 BoB 9th Team \"Black Moon\"에서 제작하였습니다.\n");
+    printf("BoB Linux Training에 오신 것을 환영합니다.\n");
+    printf("(Enter 키를 눌러 진행할 수 있습니다)\n\n");
+    printf("본 트레이닝 기능은 BoB 9th Team \"Black Moon\"에서 제작하였습니다.\n\n");
+    printf("이어서 트레이닝에 앞서 기본적인 사항을 설명드리겠습니다.\n");
     next_line();
     system("clear");
 
     training_intro();
-    
+
     printf("본 트레이닝은 '기초 명령어 학습'과 '심화 명령어 학습'으로 나뉩니다.\n");
     next_line();
     printf("기초 명령어 학습은 리눅스를 사용하는데 필요한 내용과 명령어들을 정해진 순서대로 학습합니다.\n\n");
@@ -40,7 +42,7 @@ int main()
             break;
         }
         else
-        {   
+        {
             system("clear");
             printf("잘못된 입력입니다. 다시 입력해주세요.\n\n");
         }
