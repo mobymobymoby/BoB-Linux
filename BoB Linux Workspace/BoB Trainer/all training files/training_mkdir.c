@@ -39,7 +39,7 @@ void training_mkdir(void)
 	next_line();
 	printf("위의 예시처럼 생성하기 위해서는 'mkdir -p 과일/사과'를 입력하면 됩니다.\nmkdir -p 명령어를 이용해 'fruits' 디렉토리 안에 'apple' 디렉토리를 생성해보세요.\n");
 	run_command("mkdir -p fruits/apple");
-
+	// to do : rmdir 설명
 	printf("mkdir 명령어에 대한 학습이 끝났습니다. \n");
 
 	delete_defdir();
