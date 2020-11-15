@@ -3,13 +3,10 @@
 void advanced_trainer()
 {
     system("clear");
-    printf("심화 명령어 학습입니다.\n");
-    next_line();
-    printf("해당 커리큘럼에서는 보안을 위해 리눅스를 사용할 때 응용할 수 있는 명령어를 학습합니다.\n");
-    next_line();
+    printf("심화 명령어 학습입니다.\n\n");
+    printf("해당 커리큘럼에선 보안을 위해 리눅스를 사용할 때 응용할 수 있는 명령어를 학습합니다.\n\n");
     printf("아래의 목록에 따라 원하는 명령어를 선택하여 학습할 수 있습니다.\n");
     next_line();
-    system("clear");
     
     char select[20];
     while (1)
