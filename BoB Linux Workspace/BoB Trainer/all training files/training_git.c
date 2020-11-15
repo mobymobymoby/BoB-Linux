@@ -1,9 +1,8 @@
 #include "func.h"
 
-void next_quit();
-
 void training_git(void)
 {
+	system("clear");
 	printf("이번에 학습할 내용은 'git'입니다.\n\n");
 	next_line();
 	printf("git이란 리누스 토발즈가 개발한 분산형 버전관리 시스템이며\n파일의 변경사항을 추적하고 여러명의 사용자들이 해당 파일의 작업을 조율할 수 있습니다.\n\n");
@@ -12,9 +11,9 @@ void training_git(void)
 	next_line();
 	printf("git은 데이터베이스에 데이터가 추가되는 방식이기 떄문에 되돌리거나 데이터를 삭제할 순 없습니다.\n하지만 위와 같은 방식 덕분에 일단 스냅샷을 커밋하고 나면 데이터를 잃어버릴 걱정 없이 쉽게 손실된 데이터 복구가 가능합니다.\n\n");
 	next_line();
-	printf("깃에는 총 세가지 상태가 있습니다.\n1. Committed : 데이터가 로컬 데이터베이스에 안전하게 저장되었다는 것을 의미합니다.\n2. Modified : 수정한 파일이 아직 로컬 데이터베이스에 커밋되지 않았다는 것을 의미합니다.\n3. Staged : 현재 수정된 파일이 곧 커밋될 것이라고 표시된 상태를 의미합니다.\n\n");
+	printf("git에는 총 세가지 상태가 있습니다.\n1. Committed : 데이터가 로컬 데이터베이스에 안전하게 저장되었다는 것을 의미합니다.\n2. Modified : 수정한 파일이 아직 로컬 데이터베이스에 커밋되지 않았다는 것을 의미합니다.\n3. Staged : 현재 수정된 파일이 곧 커밋될 것이라고 표시된 상태를 의미합니다.\n\n");
 	next_line();
-	printf("깃은 명령어를 통해 레포지토리 관리가 가능합니다.\n우선 git 명령어를 사용하기 위해서는 git을 설치해야 합니다.\n데비안이나 우분투 계열에서는 'sudo apt-get install git'을 입력하면\ngit을 설치할 수 있습니다.\n\n");
+	printf("git은 명령어를 통해 레포지토리 관리가 가능합니다.\n우선 git 명령어를 사용하기 위해서는 git을 설치해야 합니다.\n데비안이나 우분투 계열에서는 'sudo apt-get install git'을 입력하면\ngit을 설치할 수 있습니다.\n\n");
 	next_line();
 	printf("자주 사용하는 git 명령어는 다음과 같습니다.\n");
 	next_line();
