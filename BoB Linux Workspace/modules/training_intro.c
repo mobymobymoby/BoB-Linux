@@ -19,10 +19,9 @@ void training_intro()
     next_line();
     system("clear");
     printf("3. 터미널에서의 스크롤 이동 방법\n");
-    printf("BoB Linux Trainer는 터미널 환경에서 작동합니다.\n");
-    printf("BoB Linux 환경에서는 마우스의 휠이나 스크롤 바를 이용해 이전 내용을 다시 확인할 수 있습니다.\n");
+    printf("BoB Linux Trainer는 터미널을 통해 작동합니다.\n");
     printf("\n");
-    printf("만약 CUI 환경에서 트레이너 기능을 이용하고 계신다면 키보드 방향키 위에 있는 \"PgUp\" 키와 \"PgDn\" 키를 이용해 스크롤을 이동할 수 있습니다.\n");
+    printf("터미널에서는 키보드 방향키 위에 있는 \"PgUp\" 키와 \"PgDn\" 키를 이용해 스크롤을 이동할 수 있습니다.\n");
     printf("<Shift + PgUp>은 스크롤을 위로, <Shift + PgDn>은 스크롤을 아래로 움직입니다.\n");
     next_line();
     system("clear");
