@@ -13,7 +13,7 @@ void training_chroot(void)
 
 	getcwd(dir, sizeof(dir));
 	test[0] = '\0';
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	printf("이번에 학습할 명령어는 'chroot'입니다. \n\n");
 	next_line();
 	printf("chroot는 루트로 사용할 디렉토리를 변경할 때 사용하는 명령입니다.\n루트 디렉토리란 유닉스 계열 운영 체제에서 사용되는 개념이며\n컴퓨터 파일 시스템 계층 구조의 첫번째 또는 최상위 디렉토리를 의미합니다.\n\n");
@@ -26,8 +26,8 @@ void training_chroot(void)
 
 	printf("현재 디렉토리의 경로는 \'%s\'입니다.\n\n", dir);
 
-	strncat( strncat(test, "chroot ", 7), dir, 50);
-	//printf("%s", test);
+	strncat( strncat(test, "chroot ", sizeof("chroot ")), dir, sizeof(dir));
+
 	fake_run_command(test);
 
 	next_line();
@@ -37,5 +37,5 @@ void training_chroot(void)
 	next_line();
 	printf("chroot 명령어에 대한 학습이 끝났습니다.\n");
 
-    delete_defdir();
+    	delete_defdir();
 }
