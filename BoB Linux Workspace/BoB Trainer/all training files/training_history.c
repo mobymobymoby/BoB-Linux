@@ -15,10 +15,10 @@ void training_history()
     printf("최대 저장되는 개수는 HISTSIZE 라는 환경 변수를 확인해 보면 됩니다.\n");
     next_line();
     printf("echo $HISTSIZE 를 입력해 보세요.\n");
-    run_command("echo $HISTSIZE");
+    fake_run_command("echo $HISTSIZE");
     printf("1000\n");
 
-    printf("HISTSIZE 만큼 사용한 명령어를 저장을 할 수 있습니다.\n");
+    printf("출력된 HISTSIZE 만큼 사용한 명령어를 저장을 할 수 있습니다.\n");
     next_line();
     printf("방향키로 입력했던 명령어를 찾아도 되지만, history 기능은 더욱 편리한 옵션들을 제공합니다.\n");
     next_line();
@@ -27,7 +27,7 @@ void training_history()
     printf("!string : string으로 시작하는 가장 최근의 명령문 실행\n");
     next_line();
     printf("!!을 입력해 보세요.\n");
-    run_command("!!");
+    fake_run_command("!!");
     printf("1000\n");
 
     printf("좀 전에 실행하였던 echo $HISTSIZE 가 다시 수행된 것을 볼 수 있습니다.\n");
