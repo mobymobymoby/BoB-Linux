@@ -15,7 +15,7 @@ void advanced_trainer()
     while (1)
     {   
         printf("명령어 목록입니다.\n");
-        printf("[입력 방법] : [3. head](+tail) -> '3' 또는'head' 입력\n");
+        printf("입력 방법 : [3. head](+tail) -> '3' 또는'head' 입력\n");
         printf(" [1. file] \t\t [2. find] \t\t [3. history] \n [4. make] \t\t [5. more](+less) \t [6. mount] \n [7. sort] \t\t [8. tar] \t\t [9. umask] \n [10. uname]\t\t");
         
         printf(" [11. curl] \t\t [12. group](+관련 명령어) \n [13. head](+tail) \t [14. lsblk] \t\t [15. mkfs] \n [16. ping] \t\t [17. sed] \t\t [18. user](+관련 명령어) \n [19. fsck] \t\t [20. halt] \t\t");
