@@ -12,7 +12,7 @@ void create_defdir(void)
 	system(rst_dir);
 	strncpy(rm_dir, rst_dir, sizeof(rm_dir));
 
-	snprintf(rst_dir, sizeof(rst_dir), "mkdir %s", def_dir);
+	snprintf(rst_dir, sizeof(rst_dir), "mkdir -p %s", def_dir);
 	system(rst_dir);
 
 	chdir(def_dir);
