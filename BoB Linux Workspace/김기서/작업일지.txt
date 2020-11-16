@@ -12,3 +12,5 @@
 
 201116
   문자열 trim
+  system command stdout 가져오기
+  전체 멘티 회의
