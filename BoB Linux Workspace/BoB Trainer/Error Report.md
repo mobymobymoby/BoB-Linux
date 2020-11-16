@@ -4,4 +4,6 @@
 
 ### fbterm은 루트 권한으로만 실행 가능
 - sudo를 이용한 방법 : fbterm 실행 시 쉘이 루트 권한으로 됨
-
+  - bashrc를 이용
+  - ALL=NOPASSWD: /usr/bin/fbterm으로 바로 변경
+  - su [유저 이름]으로 변경
