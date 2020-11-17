@@ -5,7 +5,7 @@ void training_clear()
 	create_defdir();
 	system("clear");
 
-	printf("이번에 학습할 명령어는 \"clear\" 입니다.\n");
+	printf("이번에 학습할 명령어는 \"clear\" 입니다.\n\n");
     next_line();
     printf("\"clear\" 명령어는 터미널의 내용을 모두 지우는 명령어로\n");
     printf("윈도우 cmd에서의 'cls' 명령어와 같은 동작을 합니다.\n");
@@ -21,7 +21,7 @@ void training_clear()
 	printf("\"Ctrl + L\"(으)로도 \"clear\"와 같이 화면의 내용을 지워줍니다.\n");
 	next_line();
 
-	printf("clear 명령어에 대한 학습이 끝났습니다.\n");
+	printf("\"clear\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 
 	delete_defdir();

@@ -6,7 +6,7 @@ void training_cmp(void)
 
     system("clear");
 
-    printf("이번에 배울 명령어는 \"cmp\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"cmp\" 입니다.\n\n");
     printf("\"cmp\" 명령어는 \"compare\"의 약자로, \"비교\" 라는 뜻입니다.\n");
     next_line();
     printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"(으)로 있습니다.\n");

@@ -10,9 +10,9 @@ void training_cat(void)
 	system("echo 'Hello' > hello.txt");
 	system("echo 'rookie' > rookie.txt");
 
-	printf("이번에 학습할 명령어는 'cat'입니다.\n");
+	printf("이번에 학습할 명령어는 'cat' 입니다.\n\n");
     next_line();
-    printf("cat 명령어는 'concatenate'의 약자로\n");
+    printf("cat 명령어는 'concatenate'의 약자이며\n");
     printf("주로 파일 한 개 이상의 내용을 화면에 출력할 때 사용합니다.\n");
     next_line();
     printf("\"cat\" 명령어의 실행파일은 \"/usr/bin/cat\"(으)로 있습니다.\n");
@@ -96,7 +96,8 @@ void training_cat(void)
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
-	printf("cat 명령어 학습이 끝났습니다. 고생하셨습니다.\n");
+	printf("\"cat\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
 
 	delete_defdir();
 }

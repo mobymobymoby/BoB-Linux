@@ -6,14 +6,11 @@ void training_cmp(void)
 
     system("clear");
 
-    printf("이번에는 파일 비교 명령어들에 대해 학습할 것입니다.\n");
-    printf("파일 비교 명령어는 유용하게 쓰이는 명령어들 중 하나입니다.\n");
-    next_line();
-    printf("먼저 배울 명령어는 \"cmp\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"cmp\" 입니다.\n\n");
     printf("\"cmp\" 명령어는 \"compare\"의 약자로, \"비교\" 라는 뜻입니다.\n");
     next_line();
-    printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"로\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cmp\"로 있습니다.\n");
+    printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cmp\"(으)로 있습니다.\n");
     next_line();
     printf("\"cmp\" 명령어는 아주 간단하게 파일을 바이트(문자) 단위로 비교하고\n");
     printf("파일의 내용 중 어느 부분이 다른지 알려줍니다.\n\n");
@@ -37,14 +34,14 @@ void training_cmp(void)
     next_line();
     printf("먼저 실습에 필요한 파일을 만들어 내용을 입력하도록 하겠습니다.\n");
     next_line();
-    printf("파일 두 개를 만들어 두는데, 서로 내용을 다르게 할 것입니다.\n");
+    printf("파일 두 개를 만드는데, 서로 내용을 다르게 할 것입니다.\n");
     next_line();
-    printf("\"cat > test1\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test1\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("hello\nworld\ngood morning\nman\n");
     just_run_command("cat > test1");
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
     next_line();
-    printf("\"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("hello\nworld\ngood morning\nwoman\n");
     just_run_command("cat > test2");
     printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");
@@ -53,7 +50,7 @@ void training_cmp(void)
     just_run_command("ls");
     printf("\n파일 두 개의 내용이 다른지 같은지 참 혹은 거짓 형태로 출력되게 실습해보겠습니다.\n");
     next_line();
-    printf("\"cmp\" 명령어를 이용하여 옵션을 넣지 않고 'test1 파일'과 'test2 파일'의 내용을 비교해보세요.\n");
+    printf("[실습] \"cmp\" 명령어를 이용하여 옵션을 넣지 않고 'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
     printf("사용법 : cmp [비교할 파일1] [비교할 파일2]\n");
     just_run_command("cmp test1 test2");
     printf("\n학습을 잘 따라오셨다면, \"test1 test2 differ : byte 26, line 4\"라고 뜰 것입니다.\n");
@@ -67,14 +64,14 @@ void training_cmp(void)
     printf("['-b' (--print-bytes)]\n두 개의 파일을 비교 시 두 파일 간의 최초로 다른 문자들을 ASCII 값 8진수로 출력합니다.\n\n");
     printf("['-i' (--ignore-initial)]\n지정된 바이트 수 만큼 무시하고 다음 문자부터 1로 시작하여 비교합니다.\n\n");
     printf("['-l' (--verbose)]\n두 파일 간의 다른 문자에 대한 위치와 그 문자들의 8진수 값을 출력합니다.\n\n");
-    printf("['-s' (--silent)]\n사용자에게 아무것도 출력하지 않습니다. 하지만 시스템상에서는 실행 결과 코드 값이 반환합니다.\n\n");
+    printf("['-s' (--silent)]\n사용자에게 아무것도 출력하지 않습니다. 하지만 시스템상에서는 실행 결과 코드 값이 반환합니다.\n");
     printf("(0 - 파일의 내용이 같다. / 1 - 파일의 내용이 다르다. / 2 - 파일에 접근할 수 없다)\n");
     next_line();
     printf("\n\"cmp\" 명령어의 옵션 두 가지만 실습해보겠습니다.\n");
     next_line();
     printf("먼저 '-i (--ignore-initial)' 옵션을 실습해보겠습니다.\n");
     next_line();
-    printf("[실습] 미리 만들었던 'test1 파일'과 'test2 파일'을 '-i 6' 옵션을 이용하여 비교해보세요.\n");
+    printf("[실습] 미리 만들었던 'test1' 파일과 'test2' 파일을 '-i 6' 옵션을 이용하여 비교해보세요.\n");
     printf("사용법 : cmp [옵션] [비교할 파일1] [비교할 파일2]\n");
     just_run_command("cmp -i 6 test1 test2");
     next_line();
@@ -97,7 +94,7 @@ void training_cmp(void)
     printf("[실습] 미리 만들었던 'test1 파일'과 'test2 파일'을 '-s' 옵션을 이용하여 비교해보세요\n");
     printf("사용법 : cmp [옵션] [비교할 파일1] [비교할 파일2]\n");
     just_run_command("cmp -s test1 test2");
-    printf("\n\n화면상에 아무런 결과값이 출력되지 않았을 것입니다.\n");
+    printf("\n\n화면상에 아무런 결과값이 출력되지 않습니다.\n");
     next_line();
     printf("하지만 명령어는 정상 동작 하였습니다.\n");
     next_line();
@@ -105,12 +102,13 @@ void training_cmp(void)
     printf("[코드 값]\n0 - 파일의 내용이 같다. / 1 - 파일의 내용이 다르다. / 2 - 파일에 접근할 수 없다.)\n");
     next_line();
     printf("\"cmp\" 명령어는 아주 간단하게 파일을 비교할 때 쓰이는 명령어입니다.\n\n");
-    printf("뒤에 또 다른 파일 비교 명령어들을 배울 것입니다.\n");
+    printf("또 다른 파일 비교 명령어들로는 \"comm\" 명령어와 \"diff\" 명령어가 있습니다.\n");
     next_line();
-    printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     printf("\"cmp\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
     next_line();
 
     delete_defdir();

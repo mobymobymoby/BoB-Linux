@@ -6,16 +6,16 @@ void training_chsh(void)
 
     system("clear");
     
-    printf("이번에 배울 명령어는 \"chsh\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"chsh\" 입니다.\n");
     next_line();
-    printf("\"chsh\" 명령어는 Change Shell의 약자로 사용자의 Shell을 바꿔주는 명령어입니다.\n");
+    printf("\"chsh\" 명령어는 Change Shell의 약자이며, 사용자의 Shell을 바꿔주는 명령어입니다.\n");
     next_line();
     printf("\"chsh\" 명령어의 실행 파일은 \"usr/bin/chsh\"(으)로 있습니다.\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"chsh\"(으)로 있습니다.\n");
     next_line();
     printf("\"chsh\" 명령어로 바꿀 수 있는 Shell은 \"/etc/shells\" 파일에 적혀있는 Shell만 변경할 수 있습니다.\n");
     next_line();
-    printf("\"chsh\" 명령어의 사용법은 \"chsh [옵션] [계정명]\" 입니다.\n");
+    printf("사용법은 \"chsh [옵션] [계정명]\" 입니다.\n");
     printf("ex)chsh -s /bin/bash user1\n");
     next_line();
     printf("먼저, Shell(쉘)이란\n");

@@ -6,10 +6,10 @@ void training_comm(void)
 
     system("clear");
     
-    printf("이번에 배울 명령어는 \"comm\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"comm\" 입니다.\n\n");
     next_line();
-    printf("\"comm\" 명령어는 2개의 파일을 비교하는 명령어로\n");
-    printf("또 다른 파일 비교 명령어 \"diff\"와는 다르게 \"동일 행끼리만 단순 비교\"합니다.\n");
+    printf("\"comm\" 명령어는 2개의 파일을 비교하는 명령어이며\n");
+    printf("또 다른 파일 비교 명령어 \"diff\"와는 다르게 \"동일 행끼리만 단순 비교\" 합니다.\n");
     next_line();
     printf("\"comm\" 명령어의 실행 파일은 \"/usr/bin/comm\"(으)로 있습니다.\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"comm\"(으)로 있습니다.\n");
@@ -21,12 +21,12 @@ void training_comm(void)
     next_line();
     printf("파일 두 개를 만들어 두는데, 서로 내용을 다르게 할 것입니다.\n");
     next_line();
-    printf("\"cat > test1\"을 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test1\"을 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("own\ntwo\nthree\nfour\nfive\n");
     just_run_command("cat > test1");
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
     next_line();
-    printf("\"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("own\ntwo\nthree\nfour\nsix\nseven\n");
     just_run_command("cat > test2");
     printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");

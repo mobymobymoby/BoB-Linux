@@ -8,12 +8,12 @@ void training_alias(void)
     system("touch file2.txt");
 
     system("clear");
-    printf("이번에 배울 명령어는 \"alias\" 입니다.\n");
+    printf("이번에 학습할 것은 쉘의 \"alias\" 기능입니다.\n\n");
     next_line();
     printf("\"alias\" 명령어는 \"별명\" 이란 뜻이고\n");
     printf("\"alias\"를 이용해 지정한 \"별명\"을 입력하면 별명에 해당하는 명령어가 실행됩니다.\n");
     next_line();
-    printf("\"alias\" 명령어의 사용법은 \"alias [별명]='[별명이 입력됐을 때 실행될 명령어]'\" 입니다.\n");
+    printf("사용법은 \"alias [별명]='[별명이 입력됐을 때 실행될 명령어]'\" 입니다.\n");
     printf("ex)alias ls='ls --color=auto'\n");
     next_line();
     printf("\"alias\" 명령어의 사용법을 보시면 [별명이 입력됐을 때 실행될 명령어] 부분이 작은 따옴표 \'와 \'로 감싸져있습니다.\n");

@@ -6,7 +6,7 @@ void training_apt(void)
 
     system("clear");
 
-    printf("이번에 배울 명령어는 \"apt\"입니다.\n");
+    printf("이번에 배울 명령어는 \"apt\" 입니다.\n\n");
     next_line();
     printf("이번 학습에서는 기본적인 개념들과 명령어들이 상당히 깁니다.\n");
     next_line();

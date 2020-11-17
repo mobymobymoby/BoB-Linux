@@ -6,7 +6,7 @@ void training_locate(void)
     
     system("clear");
 
-    printf("이번에 배울 명령어는 \"locate\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"locate\" 입니다.\n\n");
     next_line();
     printf("\"locate\" 명령어는 \"find\" 명령어와 비슷하게 파일을 검색하지만\n");
     printf("다양한 패턴의 파일들을 찾고자 할 때 매우 유용하게 사용됩니다.\n");

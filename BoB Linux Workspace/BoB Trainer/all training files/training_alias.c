@@ -8,12 +8,12 @@ void training_alias(void)
     system("touch file2.txt");
 
     system("clear");
-    printf("이번에 배울 명령어는 \"alias\" 입니다.\n");
+    printf("이번에 학습할 것은 쉘의 \"alias\" 기능입니다.\n\n");
     next_line();
     printf("\"alias\" 명령어는 \"별명\" 이란 뜻이고\n");
     printf("\"alias\"를 이용해 지정한 \"별명\"을 입력하면 별명에 해당하는 명령어가 실행됩니다.\n");
     next_line();
-    printf("\"alias\" 명령어의 사용법은 \"alias [별명]='[별명이 입력됐을 때 실행될 명령어]'\" 입니다.\n");
+    printf("사용법은 \"alias [별명]='[별명이 입력됐을 때 실행될 명령어]'\" 입니다.\n");
     printf("ex)alias ls='ls --color=auto'\n");
     next_line();
     printf("\"alias\" 명령어의 사용법을 보시면 [별명이 입력됐을 때 실행될 명령어] 부분이 작은 따옴표 \'와 \'로 감싸져있습니다.\n");
@@ -89,7 +89,7 @@ void training_alias(void)
     printf("\"unalias [제거할 별명]\"라고 입력하시면 해당 \"별명\"에 대한 설정이 지워집니다.\n");
     printf("ex)unalias ls\n");
     next_line();
-    printf("앞에서 지정했던 \"mkfile\" 별명을 제거해보세요.\n");
+    printf("[실습] 앞에서 지정했던 \"mkfile\" 별명을 제거해보세요.\n");
     printf("사용법 : unalias [제거할 별명]\n");
     fake_run_command("unalias mkfile");
     printf("\n이제 \"mkfile\" 이라는 별명을 제거되었을 것입니다.\n");
@@ -114,15 +114,17 @@ void training_alias(void)
     printf("\".bashrc\"와 \".bash_profile\" 파일은 앞에 ' . ' 이 붙어있는 파일로\n");
     printf("기본적으로 숨긴 파일입니다.\n");
     next_line();
-    printf("위의 두 파일의 차이점은 새로운 터미널 창을 켤 때마다 실행하는 것과 처음 로그인할 때만 실행되는 것입니다.\n\n");
+    printf("위의 두 파일의 차이점은 새로운 터미널 창을 켤 때마다 실행하는 것(.bashrc)과\n");
+    printf("\"bash\"로그인할 때만 실행되는 것(.bash_profile)입니다.\n\n");
     printf("그러므로 \"~/.bashrc\" 파일이나 자신이 사용하는 Shell의 이름 뒤에 'rc'가 붙은 파일에 저장하는 것을 추천드립니다.\n");
     next_line();
     printf("추후 리눅스 시스템에서 \"alias\" 명령어를 이용하여 별명을 지정한 명령어 구문을\n");
-    printf("\"~/.bashrc\" 혹은 \"~/.bash_profile\" 파일에 저장해두고 시스템을 재부팅하여 사용해보세요.\n");
+    printf("\"~/.bashrc\" 혹은 \"~/.bash_profile\" 파일에 저장하고 시스템을 재부팅하여 사용해보세요.\n");
     next_line();
     printf("\"alias\" 명령어는 사용자를 편하게 해주는 명령어이므로 꼭 숙지하시어 명령어를 편하게 사용하세요.\n");
     next_line();
     printf("\"alias\"와 \"unalias\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
     next_line();
 
     delete_defdir();

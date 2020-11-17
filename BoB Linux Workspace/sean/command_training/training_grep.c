@@ -6,7 +6,7 @@ void training_grep(void)
 
     system("clear");
     
-    printf("이번에 배울 명령어는 \"grep\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"grep\" 입니다.\n\n");
     next_line();
     printf("\"grep\" 명령어는 특정 문자열을 찾고자 할 때 사용하는 검색 명령어입니다.\n");
     printf("이번 내용은 길고 어려움으로 여러번 보시길 바랍니다.\n");
@@ -110,7 +110,7 @@ void training_grep(void)
     next_line();
     printf("먼저 실습 전에 파일을 만들어 내용을 입력하도록 하겠습니다.\n");
     next_line();
-    printf("\"cat > test.txt\"을 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습]\"cat > test.txt\"을 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("Hello world\n");
     printf("good morning World\n");
     printf("i'm studying\n");
