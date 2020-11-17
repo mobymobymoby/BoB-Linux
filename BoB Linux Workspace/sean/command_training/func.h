@@ -21,7 +21,7 @@ int run_command(char valid_cmd[]);
 int just_run_command(char valid_cmd[]);
 int fake_run_command(char valid_cmd[]);
 int fake_command(char valid_cmd[], char print_msg[]);
-int nothing_pirnt_fake_run_command(char valid_cmd[]);
+int nothing_print_fake_run_command(char valid_cmd[]);
 int call_training(char select[]);
 int convert_name(char select[]);
 void create_defdir();
