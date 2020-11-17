@@ -86,7 +86,7 @@ void training_diff(void)
     printf("\"diff\" 명령어에서 '-q (--brief)' 옵션은 두 파일을 비교할 때\n");
     printf("차이점의 존재 여부만 출력해주는 옵션입니다.\n");
     next_line();
-    printf("다음으로 '-y (--side-by-side)' 옵션을 실습해보겠습니다.\n");
+    printf("다음은 '-y (--side-by-side)' 옵션을 실습해보겠습니다.\n");
     next_line();
     printf("[실습] 'test1 파일'과 'test2 파일'을 '-y'(--side-by-side) 옵션을 이용하여 비교해보세요.\n");
     printf("사용법 : diff [옵션] [비교할 파일1] [비교할 파일2]\n");
