@@ -123,7 +123,7 @@ void training_alias(void)
     next_line();
     printf("\"alias\" 명령어는 사용자를 편하게 해주는 명령어이므로 꼭 숙지하시어 명령어를 편하게 사용하세요.\n");
     next_line();
-    printf("\"alias\"와 \"unalias\" 명령어의 학습이 끝났습니다.\n");
+    printf("\"alias\"와 \"unalias\" 기능의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
     next_line();
 

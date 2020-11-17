@@ -6,7 +6,7 @@ void training_chsh(void)
 
     system("clear");
     
-    printf("이번에 학습할 명령어는 \"chsh\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"chsh\" 입니다.\n\n");
     next_line();
     printf("\"chsh\" 명령어는 Change Shell의 약자이며, 사용자의 Shell을 바꿔주는 명령어입니다.\n");
     next_line();

@@ -2,8 +2,8 @@
 
 void training_history()
 {
-	create_defdir();
-	system("clear");
+    create_defdir();
+    system("clear");
 
     printf("이번에 학습할 것은 쉘의 \"history\" 기능입니다.\n\n");
     next_line();
@@ -47,5 +47,5 @@ void training_history()
 
     printf("\"history\" 기능의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n")
-	delete_defdir();
+    delete_defdir();
 }

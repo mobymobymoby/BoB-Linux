@@ -1,9 +1,10 @@
 #include "func.h"
 
-void training_cd(void){
-	create_defdir();
-	system("clear");
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
+void training_cd(void)
+{
+    create_defdir();
+    system("clear");
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     
     printf("이번에 학습할 명령어는 \"cd\" 입니다.\n\n");
     next_line();
@@ -12,7 +13,7 @@ void training_cd(void){
 
     system("mkdir dir1");
     system("mkdir dir2");
-    // 테스트 폴더 생성
+    // 테스트 폴더 생성 
 
     printf("사용법은 \"cd [디렉토리 경로]\" 입니다.\n");
     printf("디렉토리 경로를 지정할 때, '절대 경로'나 '상대 경로'를 지정하여 사용합니다.\n");
@@ -87,7 +88,7 @@ void training_cd(void){
     next_line();
     printf("\"cd\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line(); 
+    next_line();
 
     delete_defdir();
 }
