@@ -34,7 +34,7 @@ void training_cmp(void)
     next_line();
     printf("먼저 실습에 필요한 파일을 만들어 내용을 입력하도록 하겠습니다.\n");
     next_line();
-    printf("파일 두 개를 만들어 두는데, 서로 내용을 다르게 할 것입니다.\n");
+    printf("파일 두 개를 만드는데, 서로 내용을 다르게 할 것입니다.\n");
     next_line();
     printf("\"cat > test1\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("hello\nworld\ngood morning\nman\n");

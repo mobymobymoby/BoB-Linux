@@ -93,7 +93,7 @@ void training_diff(void)
     just_run_command("diff -y test1 test2");
     next_line();
     printf("학습을 잘 따라오셨다면 다음과 같이 출력되었을 것입니다.\n");
-    printf("i\t\t\t\t\t\t\t\ti\nlove\t\t\t\t\t\t\t\tlove\nyou\t\t\t\t\t\t\t\t| me\n\t\t\t\t\t\t\t\t> okay?\n");
+    printf("i\t\t\t\t\t\t\t\ti\nlove\t\t\t\t\t\t\t\tlove\nyou\t\t\t\t\t\t\t  | me\n\t\t\t\t\t\t\t  > okay?\n");
     next_line();
     printf("\"diff\" 명령어에서 '-y (--side-by-side)' 옵션은 두 파일의 차이점을 출력할 때\n");
     printf("두 열로 나눠서 출력해주는 옵션입니다.\n");
