@@ -1,9 +1,0 @@
-### create_mkdir 함수가 제대로 작동하지 않는 문제 발견 : 해결
-- /home/[사용자 계정 이름] 디렉토리가 존재하지 않을 때 발생
-- mkdir -p 명령어로 변경하여 하위 디렉토리를 생성하게 함
-
-### fbterm은 루트 권한으로만 실행 가능
-- sudo를 이용한 방법 : fbterm 실행 시 쉘이 루트 권한으로 됨
-  - bashrc를 이용
-  - ALL=NOPASSWD: /usr/bin/fbterm으로 바로 변경
-  - su [유저 이름]으로 변경
