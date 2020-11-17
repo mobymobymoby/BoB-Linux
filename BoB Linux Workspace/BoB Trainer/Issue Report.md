@@ -25,3 +25,7 @@
 ### adduser로 추가한 일반 유저는 shutdown, init 등이 불가능
 - sudo를 이용해야 할듯 함
   - NOPASSWD 옵션으로 사용
+
+### /etc/profile과 /etc/bash.bashrc
+- profile은 로그인 시에만 적용(su에는 미적용)
+- bash.bashrc는 su를 통해서 쉘이 변경될 때도 적용(su에도 적용)
