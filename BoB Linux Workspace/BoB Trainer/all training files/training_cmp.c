@@ -12,7 +12,7 @@ void training_cmp(void)
     printf("먼저 배울 명령어는 \"cmp\" 입니다.\n");
     printf("\"cmp\" 명령어는 \"compare\"의 약자로, \"비교\" 라는 뜻입니다.\n");
     next_line();
-    printf("\"cmp\" 명령어의 위치는 \"/usr/bin/cmp\"로\n");
+    printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"로\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cmp\"로 있습니다.\n");
     next_line();
     printf("\"cmp\" 명령어는 아주 간단하게 파일을 바이트(문자) 단위로 비교하고\n");
