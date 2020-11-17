@@ -9,8 +9,8 @@ void training_cmp(void)
     printf("이번에 배울 명령어는 \"cmp\" 입니다.\n");
     printf("\"cmp\" 명령어는 \"compare\"의 약자로, \"비교\" 라는 뜻입니다.\n");
     next_line();
-    printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"로\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cmp\"로 있습니다.\n");
+    printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cmp\"(으)로 있습니다.\n");
     next_line();
     printf("\"cmp\" 명령어는 아주 간단하게 파일을 바이트(문자) 단위로 비교하고\n");
     printf("파일의 내용 중 어느 부분이 다른지 알려줍니다.\n\n");
@@ -36,12 +36,12 @@ void training_cmp(void)
     next_line();
     printf("파일 두 개를 만드는데, 서로 내용을 다르게 할 것입니다.\n");
     next_line();
-    printf("\"cat > test1\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test1\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("hello\nworld\ngood morning\nman\n");
     just_run_command("cat > test1");
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
     next_line();
-    printf("\"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
     printf("hello\nworld\ngood morning\nwoman\n");
     just_run_command("cat > test2");
     printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");
@@ -104,10 +104,11 @@ void training_cmp(void)
     printf("\"cmp\" 명령어는 아주 간단하게 파일을 비교할 때 쓰이는 명령어입니다.\n\n");
     printf("또 다른 파일 비교 명령어들로는 \"comm\" 명령어와 \"diff\" 명령어가 있습니다.\n");
     next_line();
-    printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     printf("\"cmp\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
     next_line();
 
     delete_defdir();

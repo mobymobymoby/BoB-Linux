@@ -11,6 +11,9 @@ void training_locate(void)
     printf("\"locate\" 명령어는 \"find\" 명령어와 비슷하게 파일을 검색하지만\n");
     printf("다양한 패턴의 파일들을 찾고자 할 때 매우 유용하게 사용됩니다.\n");
     next_line();
+    printf("\"locate\" 명령어의 실행 파일은 \"usr/bin/locate\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"locate\"(으)로 있습니다.\n");
+    next_line();
     printf("\"find\" 명령어는 다양한 옵션이 있어서 원하는 파일을 거의 완벽하게 찾을 수 있지만\n");
     printf("검색 속도가 느린 단점이 있습니다.\n");
     next_line();
@@ -61,10 +64,11 @@ void training_locate(void)
     next_line();
     printf("\"locate\" 명령어의 옵션은 위에 나온 것들 말고도 여러가지가 있습니다.\n");
     next_line();
-    printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     printf("\"locate\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
     next_line();
     
     delete_defdir();

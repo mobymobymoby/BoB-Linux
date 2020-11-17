@@ -11,8 +11,8 @@ void training_grep(void)
     printf("\"grep\" 명령어는 특정 문자열을 찾고자 할 때 사용하는 검색 명령어입니다.\n");
     printf("이번 내용은 길고 어려움으로 여러번 보시길 바랍니다.\n");
     next_line();
-    printf("\"grep\" 명령어의 실행 파일은 \"/bin/grep\"으로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"grep\"으로 있습니다.\n");
+    printf("\"grep\" 명령어의 실행 파일은 \"/usr/bin/grep\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"grep\"(으)로 있습니다.\n");
     next_line();
     printf("\"grep\" 명령어는 리눅스에서 자주 사용되는 명령어들 중 하나입니다.\n");
     next_line();
@@ -150,10 +150,11 @@ void training_grep(void)
     next_line();
     printf("\"grep\" 명령어의 옵션은 위에 나온 것들 말고도 여러가지가 있습니다.\n");
     next_line();
-    printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     printf("\"grep\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
     next_line();
 
     delete_defdir();
