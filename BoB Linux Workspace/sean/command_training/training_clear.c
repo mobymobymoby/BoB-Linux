@@ -15,7 +15,7 @@ void training_clear()
     printf("\n지금까지 화면에 있던 문구들이 다 지워졌을 것입니다.\n\n");
 	next_line();
     printf("\"clear\" 명령어는 따로 옵션이 없습니다.\n");
-    next_ilne();
+    next_line();
 	printf("항상 새 것과 같은 터미널에서 작업하고 싶다면 clear를 기억해주세요!\n");
 	next_line();
 	printf("\"Ctrl + L\"(으)로도 \"clear\"와 같이 화면의 내용을 지워줍니다.\n");
