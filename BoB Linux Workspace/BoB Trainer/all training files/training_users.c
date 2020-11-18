@@ -18,7 +18,7 @@ void training_users(void)
 	next_line();
 	printf("users를 옵션 없이 사용하면 시스템에 로그인 되어 있는 사용자를 출력합니다.\n");
 	next_line();
-	printf("users 명령을 사용하여 시스템에 로그인 되어있는 사용자를 출력해보세요.\n\n");
+	printf("[실습] users 명령을 사용하여 시스템에 로그인 되어있는 사용자를 출력해보세요.\n\n");
 	run_command("users");
 	next_line();
 	printf("현재 로그인된 사용자는 %s 이므로\n", getlogin());
