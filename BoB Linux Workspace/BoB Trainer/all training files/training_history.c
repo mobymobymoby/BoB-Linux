@@ -46,6 +46,6 @@ void training_history()
     next_line();
 
     printf("\"history\" 기능의 학습이 끝났습니다.\n");
-    printf("고생하셨습니다.\n")
+    printf("고생하셨습니다.\n");
 	delete_defdir();
 }
