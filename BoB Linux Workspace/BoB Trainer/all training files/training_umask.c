@@ -24,11 +24,12 @@ void training_umask()
 	printf("  파일 = 0666 - 0022 = 0644 = -rw-r--r--\n");
 	printf("이 됩니다.\n");
 	next_line();
-	printf("즉, 파일이나 디렉토리 생성 시 기본 권한에서 umask의 값을 뺀 값으로 \n권한이 설정되는 것입니다.\n");
+	printf("즉, 파일이나 디렉토리 생성 시 기본 권한에서 umask의 값을 뺀 값으로 \n권한이 설정되는 것입니다.\n\n");
 	printf("umask는 다음과 같은 형식으로 사용합니다.\n");
 	printf("$ umask 값\n");
 	next_line();
-	printf("umask 자체의 값이 권한이 아니라 0777, 0666에서 뺀 값인 점을 \n숙지하여 사용해야 합니다.\n");
+	printf("위의 사용법에서 '값'에 해당되는 숫자가 기본 권한에서 마이너스 됩니다.\n");
+	printf("umask 값이 바로 권한이 아니라 기본 권한에서 뺀 값인 점을 숙지하여 사용해야 합니다.\n");
 	next_line();
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
