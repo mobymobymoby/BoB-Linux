@@ -22,17 +22,17 @@ void essential_trainer()
         default:
             printf("잘못된 flag 값입니다. 처음부터 학습을 시작합니다.\n");
         case 0:
-            training_whoami();
+            training_ls();
             next_quit();
             printf("해당 단계의 flag 값은 '703'입니다.\n");
             next_line();
         case 703:
-            training_pwd();
+            training_whoami();
             next_quit();
             printf("해당 단계의 flag 값은 '905'입니다.\n");
             next_line();
         case 905:
-            training_ls();
+            training_pwd();
             next_quit();
             printf("해당 단계의 flag 값은 '1017'입니다.\n");
             next_line();
