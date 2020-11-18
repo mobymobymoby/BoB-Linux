@@ -23,7 +23,7 @@ void training_users(void)
 	printf("현재 로그인된 사용자는 %s 이므로\n", getlogin());
 	printf("성공적으로 출력이 되었다면 %s(이)가 출력되었을 것입니다.\n\n", getlogin());
 	next_line();
-	printf("users에서 사용하는 옵션은 다음과 같습니다.\n --help : 명령어의 도움말을 표시합니다.\n --version : 명령어의 버전 정보를 표시합니다.\n");
+	printf("users에서 사용하는 옵션은 다음과 같습니다.\n\n --help : 명령어의 도움말을 표시합니다.\n --version : 명령어의 버전 정보를 표시합니다.\n");
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
 	printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
