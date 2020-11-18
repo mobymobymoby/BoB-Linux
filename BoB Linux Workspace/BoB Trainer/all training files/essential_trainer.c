@@ -7,7 +7,7 @@ void essential_trainer()
     next_line();
     printf("해당 커리큘럼에서는 리눅스를 사용하는데 필요한 기초적인 필수 명령어를 학습합니다.\n");
     next_line();
-    printf("명령어의 종류는 [whoami, pwd, ls, mkdir, touch, cat, cd, mv, cp, rm, clear]입니다.\n");
+    printf("명령어의 종류는 [ls, whoami, pwd, mkdir, touch, cat, cd, mv, cp, rm, clear]입니다.\n");
     next_line();
     printf("기초 명령어 학습은 리눅스 입문자들을 위한 과정으로, 리눅스를 처음 접해보는 분은 앞의 '기본 설명'을 듣고 오시는 것을 권장합니다.\n");
     next_line();
