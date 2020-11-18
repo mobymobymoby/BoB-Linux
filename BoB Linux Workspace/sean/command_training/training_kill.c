@@ -27,7 +27,7 @@ void training_kill(void)
     printf("기타 세부 시그널 옵션을 보는 방법은 \"kill -l\" 명령어를 입력하면 됩니다.\n\n");
     next_line();
     system("kill -l");
-    printf("위의 내용은 \"kill -l\"을 입력했을 때 출력되는 결과로 시그널 종류를 출력한 것입니다.\n");
+    printf("\n위의 내용은 \"kill -l\"을 입력했을 때 출력되는 결과로 시그널 종류를 출력한 것입니다.\n");
     next_line();
 
     printf("[알아두면 좋은 시그널 옵션]은 다음과 같습니다.\n\n");
@@ -37,7 +37,7 @@ void training_kill(void)
 
     printf("특히 강제 종료(9번)는 최후의 수단으로 사용해야 합니다.\n");
     printf("프로세스를 강제 종료하게 되면 데이터가 유실될 수 있기 때문입니다.\n\n");
-    printf("추천드리는 방법은 기본 종료(15번) 시그널을 여러번 보내어 종료하는 것입니다.\n");
+    printf("추천드리는 방법은 기본 종료(15번) 시그널을 여러 번 보내어 종료하는 것입니다.\n");
     next_line();
 
     printf("[실습] \"kill\" 명령어로 PID가 '1234'인 프로세스를 '강제 종료' 하십시오.\n");
@@ -60,7 +60,7 @@ void training_kill(void)
     next_line();
     // 명령어 실습
     
-    printf("프로세스를 종료하는 명령어 중에는 \"kill\" 명령어와 비슷한 \"killall\" 명령어가 있습니다.\n");
+    printf("프로세스를 종료하는 명령어 중에는 \"kill\" 명령어와 비슷한 \"killall\" 명령어가 있습니다.\n\n\n");
     next_line();
     
     printf("\"killall\" 명령어는 특정 프로세스를 한 번에 종료시키는 명령어입니다.\n\n");
@@ -82,6 +82,7 @@ void training_kill(void)
 
     printf("\"killall\" 명령어는 이 트레이닝에서는 실습을 하지 않겠습니다.\n");
     printf("특정 프로세스들을 한 번에 종료하고 싶을 때 사용하시면 됩니다.\n");
+    next_line();
 
     printf("현재 실행 중인 프로세스의 'PID'를 확인하는 방법으로는\n");
     printf("\"ps\" 명령어나 \"top\" 명령어를 사용하시면 됩니다.\n");
@@ -90,7 +91,7 @@ void training_kill(void)
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
-    printf("\"kill\"와 \"killall\" 명령어의 학습이 끝났습니다.\n");
+    printf("\"kill\" 명령어와 \"killall\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
     next_line();
     delete_defdir();
