@@ -32,7 +32,7 @@ void training_pwd(void)
     next_line();
     printf("현재 작업 중이 디렉토리의 경로를 보는 실습을 하겠습니다.\n");
     next_line();
-    printf("\"pwd\"을(를) 입력하여 실습해보세요.\n");
+    printf("[실습] \"pwd\"을(를) 입력하여 실습해보세요.\n");
     just_run_command("pwd");
     next_line();
     printf("위에 보이시는 '%s'이(가) 현재 작업 중인 디렉터리 경로를 절대 경로로 보여준 것입니다.\n", wd);
