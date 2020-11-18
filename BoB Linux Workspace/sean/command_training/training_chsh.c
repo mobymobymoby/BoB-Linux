@@ -28,9 +28,11 @@ void training_chsh(void)
     printf("사용자이름@디바이스이름:~$\n");
     printf("ex)ubuntu@localhost:~$\n");
     next_line();
-    printf("이것을 '프롬프트'라고 부르며, Shell이 사용자가 명령을 입력하길 기다리고 있는 상태입니다.\n");
+    printf("이것을 '프롬프트'라고 부르며\n");
+    printf("Shell이 사용자가 명령을 입력하길 기다리고 있는 상태입니다.\n");
     next_line();
-    printf("현재 사용자가 어떤 Shell을 사용 중인지 확인하기 위해 \"cat /etc/passwd\"라고 입력해보세요.\n");
+    printf("[실습] 현재 사용자가 어떤 Shell을 사용 중인지 확인하기 위해\n");
+    printf("\"cat /etc/passwd\"라고 입력해보세요.\n");
     just_run_command("cat /etc/passwd");
     printf("\n위에 출력값 중 맨 왼쪽에 자신의 계정 이름인\n");
     printf("\"%s\"이(가) 적힌 부분을 찾아 맨 오른쪽을 보시면\n", getlogin());
@@ -44,7 +46,7 @@ void training_chsh(void)
     printf("사용자가 사용 중인 Shell을 보는 방법은 \"cat\" 명령어로\"/etc/passwd\" 파일을 보는 방법도 있지만\n");
     printf("\"echo $SHELL\" 명령어를 입력하여 환경 변수를 통해 확인하는 방법도 있습니다.\n");
     next_line();
-    printf("한 번 \"echo $SHELL\"을 입력하여 현재 사용 중인 Shell을 확인해보세요\n");
+    printf("[실습] 한 번 \"echo $SHELL\"을 입력하여 현재 사용 중인 Shell을 확인해보세요\n");
     just_run_command("echo $SHELL");
     next_line();
     printf("잘 따라하셨다면 \"/bin/bash\" 혹은 현재 사용자가 사용 중인 Shell이 출력되었을 것입니다.\n");
@@ -54,7 +56,7 @@ void training_chsh(void)
     printf("저희는 \"/bin\" 디렉토리로 가지 않고 \"ls\" 명령어를 이용하여 확인해보겠습니다.\n\n");
     printf("[실습] \"ls /bin/*sh\"라고 입력해보세요.\n");
     just_run_command("ls /bin/*sh");
-    printf("\n위에 \"sh\" 텍스틀 포함한 파일과 기본으로 설치되어있는 Shell들이 보일 것입니다.\n");
+    printf("\n위에 \"sh\" 텍스트를 포함한 파일과 기본으로 설치 되어있는 Shell들이 보일 것입니다.\n");
     next_line();
     printf("다른 Shell을 사용하실려면 콘솔 혹은 터미널에서 설치되어 있는 Shell들 중에서\n");
     printf("사용하고 싶은 Shell의 이름을 입력하시거나\n");
@@ -70,11 +72,13 @@ void training_chsh(void)
     next_line();
     printf("\"chsh\" 명령어는 바꾸고자 하는 Shell이 \"/etc/shells\" 파일에 적혀있어야 변경이 가능합니다.\n");
     next_line();
-    printf("\"cat /etc/shells\"라고 입력하여 현재 바꿀 수 있는 Shell들을 확인해보세요.\n");
+    printf("[실습] \"cat /etc/shells\"라고 입력하여 현재 바꿀 수 있는 Shell들을 확인해보세요.\n");
     just_run_command("cat /etc/shells");
-    printf("\n위에 보이는 것들이 현재 \"/etc/shells\" 파일에 저장되어 있어서 변경 가능한 Shell들 입니다.\n");
+    printf("\n위에 보이는 것들이 현재 \"/etc/shells\" 파일에 저장되어 있어서\n");
+    printf("사용자가 변경 가능한 Shell들 입니다.\n");
     next_line();
-    printf("[실습] 그럼\"chsh\" 명령어와 '-s'를 이용하여 위에 현재 변경 가능한 Shell들 중 \"/bin/sh\"으로 변경해보세요.\n");
+    printf("[실습] 그럼\"chsh\" 명령어와 '-s'를 이용하여\n");
+    printf("위에 현재 변경 가능한 Shell들 중 \"/bin/sh\"으로 변경해보세요.\n");
     printf("사용법 : chsh [옵션] [변경하고 싶은 Shell]\n");
     just_run_command("chsh -s /bin/sh");
     printf("\n올바르게 입력하셨다면 기존의 Shell에서 \"/bin/sh\"로 변경 되었을 것입니다.\n\n");
@@ -82,7 +86,7 @@ void training_chsh(void)
     just_run_command("cat /etc/passwd");
     printf("\n자신의 계정 이름을 찾아 맨 오른쪽을 보시면 /bin/sh라고 적힌 걸 확인하실 수 있을 것입니다.\n");
     next_line();
-    printf("하지만 \"echo $SHELL\"이라고 명령어를 입력해서 확인해보세요.\n");
+    printf("[실습] 하지만 \"echo $SHELL\"이라고 명령어를 입력해서 확인해보세요.\n");
     just_run_command("echo $SHELL");
     printf("\n아직 Shell이 \"/bin/sh\"로 바뀌지 않은 것을 보실 수 있습니다.\n");
     next_line();
@@ -99,7 +103,7 @@ void training_chsh(void)
     next_line();
     printf("\"chsh\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
 
+    system("chsh -s /bin/bash");
     delete_defdir();
 }

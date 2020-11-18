@@ -21,12 +21,14 @@ void training_comm(void)
     next_line();
     printf("파일 두 개를 만들어 두는데, 서로 내용을 다르게 할 것입니다.\n");
     next_line();
-    printf("[실습] \"cat > test1\"을 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test1\"을 입력하여 아래의 내용을 바로 입력하시고\n");
+    printf("Ctrl + d키로 저장하세요.\n\n");
     printf("own\ntwo\nthree\nfour\nfive\n");
     just_run_command("cat > test1");
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
     next_line();
-    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용을 바로 입력하시고\n");
+    printf("Ctrl + d키로 저장하세요.\n\n");
     printf("own\ntwo\nthree\nfour\nsix\nseven\n");
     just_run_command("cat > test2");
     printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");
@@ -46,19 +48,22 @@ void training_comm(void)
     next_line();
     printf("\n해석하자면 이렇습니다.\n");
     next_line();
-    printf("'own', 'two', 'three', 'four'은(는) 'test1' 파일과 'test2' 파일 모두 들어있는 내용이기 때문에\n");
+    printf("'own', 'two', 'three', 'four'은(는)\n");
+    printf("'test1' 파일과 'test2' 파일 모두 들어있는 내용이기 때문에\n");
     printf("Tab 키를 두번 한 '세 번째 열'에 입력됩니다.\n");
     next_line();
     printf("'five'는 'test1' 파일에만 들어있는 내용이기 때문에 '첫 번째 열'에 입력됩니다.\n");
     next_line();
     printf("'six'와 'seven'은 'test2' 파일에만 들어있는 내용이기 때문에\n");
-    printf("Tab 키를 한번 한 '두 번째 열'에 입력됩니다.\n");
+    printf("Tab 키를 한번 한 '두 번째 열'에 입력됩니다.\n\n");
     next_line();
-    printf("\"comm\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n");
-    next_line();
-    printf("[-1]\n두 개의 파일을 비교하지만, 첫 번째 파일에만 있는 내용은 출력하지 않고 두 파일 모두 있거나 두 번째 파일에 있는 내용은 출력합니다.\n\n");
-    printf("[-2]\n두 개의 파일을 비교하지만, 두 번째 파일에만 있는 내용은 출력하지 않고 두 파일 모두 있거나 첫 번째 파일에 있는 내용은 출력합니다.\n\n");
-    printf("[-3]\n두 개의 파일을 비교하지만, 두 파일 모두에 있는 내용은 출력하지 않고 첫 번째 파일에만 있거나 두 번째 파일에만 있는 내용은 출력합니다.\n\n");
+    printf("\"comm\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n\n");
+    printf("[-1]\n두 개의 파일을 비교하지만, 첫 번째 파일에만 있는 내용은 출력하지 않고\n");
+    printf("두 파일 모두 있거나 두 번째 파일에 있는 내용은 출력합니다.\n\n");
+    printf("[-2]\n두 개의 파일을 비교하지만, 두 번째 파일에만 있는 내용은 출력하지 않고\n");
+    printf("두 파일 모두 있거나 첫 번째 파일에 있는 내용은 출력합니다.\n\n");
+    printf("[-3]\n두 개의 파일을 비교하지만, 두 파일 모두에 있는 내용은 출력하지 않고\n");
+    printf("첫 번째 파일에만 있거나 두 번째 파일에만 있는 내용은 출력합니다.\n\n");
     next_line();
     printf("'test1' 파일과 'test2' 파일을 가지고 옵션들을 차례대로 실습해보겠습니다.\n");
     next_line();
@@ -96,7 +101,6 @@ void training_comm(void)
     next_line();
     printf("\"comm\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
  
     delete_defdir();
 }

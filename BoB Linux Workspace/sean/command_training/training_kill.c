@@ -56,6 +56,7 @@ void training_kill(void)
     printf("사용법 : kill [PID]\n");
     fake_run_command("kill 2020");
     printf("\nPID가 '2020'인 프로세스가 '정상 종료' 되었습니다.\n");
+    next_line();
     printf("\"kill [PID]\"(은)는 \"kill -15 [PID]\"와 같이 '-15' 시그널을 준 것과 같습니다.\n");
     next_line();
     // 명령어 실습
@@ -93,7 +94,5 @@ void training_kill(void)
     next_line();
     printf("\"kill\" 명령어와 \"killall\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
     delete_defdir();
-    printf("고생하셨습니다!\n");
 }

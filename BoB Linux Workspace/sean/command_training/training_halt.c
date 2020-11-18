@@ -8,7 +8,7 @@ void training_halt(void)
     
     printf("이번에 학습할 명령어는 \"halt\" 입니다.\n\n");
     next_line();
-    printf("halt 명령어는 시스템을 종료하는 명령어입니다.\n");
+    printf("\"halt\" 명령어는 시스템을 종료하는 명령어입니다.\n");
     next_line();
     printf("\"halt\" 명령어의 실행 파일은 \"/usr/sbin/halt\"(으)로 있습니다.\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에 \"halt\"(으)로 있습니다.\n");
@@ -21,7 +21,7 @@ void training_halt(void)
     printf("대체 명령어로 'init', 'shutdown' 명령어 사용을 권장드립니다.\n");
     next_line();
 
-    printf("\"halt\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n");
+    printf("\"halt\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n\n");
     printf("[ -d ] : /var/log/wtmp 파일에 로그를 남기지 않습니다.\n");
     printf("[ -f ] : 강제로 종료합니다.\n");
     printf("[ -n ] : 종료할 때 싱크를 하지 않습니다.\n");
@@ -42,7 +42,6 @@ void training_halt(void)
     next_line();
     printf("\"halt\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
 
     delete_defdir();
 }

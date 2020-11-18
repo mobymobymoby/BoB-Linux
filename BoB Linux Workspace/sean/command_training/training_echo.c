@@ -32,7 +32,7 @@ void training_echo(void)
     printf("[이스케이프 문자]란 모니터나 프린터의 속성 등을 제어하기 위해 장치에 보내는 특수 문자열을 의미합니다.\n");
     printf("특수 문자를 역슬래시' \\ '와 함께 붙여 사용합니다.\n\n");
     next_line();
-    printf("[이스케이프 문자]의 종류는 다음과 같습니다.\n");
+    printf("[이스케이프 문자]의 종류는 다음과 같습니다.\n\n");
     printf("[ \\a ] : 경고음 소리 출력합니다. (Alarm)\n");
     printf("[ \\b ] : 백스페이스 역할을 합니다. (Backspace)\n");
     printf("[ \\f ] : 폼 피드 형식(프린터에서 용지 바꿈)으로 출력합니다. (Form Feed)\n");
@@ -46,12 +46,12 @@ void training_echo(void)
     printf("[ \\\" ] : 큰 따옴표를 출력합니다.\n");
     next_line();
 
-    printf("[실습]\"echo hello\"(을)를 명령어를 사용해 문자열 \"hello\"를 출력하도록 입력해보세요.\n");
+    printf("[실습] \"echo hello\"(을)를 명령어를 사용해 문자열 \"hello\"를 출력하도록 입력해보세요.\n");
     printf("사용법 : echo [출력할 문자열]\n");
     just_run_command("echo hello");
 
     next_line();
-    printf("명령어가 성공적으로 동작했다면 터미널 창에 'hello'가 띄워졌을 것입니다.");
+    printf("명령어가 성공적으로 동작했다면 터미널 창에 'hello'가 띄워졌을 것입니다.\n");
     next_line();
 
     printf("\"echo\" 명령어는 유용하게 이용될 수 있는 명령어 입니다.\n");
@@ -61,7 +61,6 @@ void training_echo(void)
     next_line();
     printf("\"echo\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
 
     delete_defdir();
 }

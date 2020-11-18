@@ -89,7 +89,9 @@ void training_cat(void)
     printf("-e : 제어 문자를 ^ 형태로 출력하면서, 각 행의 끝에 $를 출력합니다.\n");
     next_line();
     
-    printf("cat 명령어는 자주 쓰게 될 것이므로, 여러 가지의 텍스트 파일을 이용해 연습하면 좋습니다.\n\n");
+    printf("cat 명령어는 자주 쓰게 될 것이므로\n");
+    printf("여러 가지의 텍스트 파일을 이용해 연습하면 좋습니다.\n\n");
+    next_line();
     printf("가장 많이 쓰이는 구문은 cat 명령어를 통해 파일의 내용을 보거나\n");
     printf("리다이렉션하여 파일의 내용을 변경하는 것 입니다.\n");
     next_line();
@@ -98,6 +100,6 @@ void training_cat(void)
     next_line();
     printf("\"cat\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    
+
     delete_defdir();
 }

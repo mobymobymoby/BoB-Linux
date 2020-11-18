@@ -31,7 +31,7 @@ void training_history()
     next_line();
     printf("!!을 입력해 보세요.\n");
     nothing_print_fake_run_command("!!");
-    printf("1000\n");
+    printf("1000\n\n");
 	
     printf("\n좀 전에 실행하였던 echo $HISTSIZE 가 다시 수행된 것을 볼 수 있습니다.\n");
     next_line();
@@ -40,7 +40,7 @@ void training_history()
     next_line();
 
     printf("[실습] \"history\"(을)를 입력해보세요.\n");
-    just_run_command("histroy");
+    just_run_command("history");
     printf("\n위에 보이시는 것들이 사용자가 사용한 명령어들입니다.\n");
     printf("(아무것도 출력되지 않는다면, 아직 사용한 명령어가 없다는 것입니다.\n");
     next_line();

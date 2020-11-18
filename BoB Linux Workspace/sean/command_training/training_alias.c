@@ -30,7 +30,7 @@ void training_alias(void)
     printf("\n위에 보이시는 것들이 사용자가 지정하기 전에 이미 지정되어 있는 것들입니다.\n");
     printf("(아무것도 없으시다면 아직 설정된 별명이 없는 것입니다.)\n");
     next_line();
-    printf("저희가 사용하는 \"ls\" 명령어가 \"별명\"이었다는 것을 알았습니다.\n");
+    printf("저희가 사용하는 \"ls\" 명령어가 \"별명\"이었다는 것을 알게 되었습니다.\n");
     printf("\"ls\"라고 입력하면 \"ls --color=auto\" 명령어가 실행되었던 것입니다.\n");
     next_line();
     printf("[실습] \"alias ls='ls -al'\"을 입력해보세요.\n");
@@ -57,7 +57,8 @@ void training_alias(void)
     printf("\n잘 입력하셨다면 다음과 같은 형태의 결과가 출력되었을 것입니다.\n");
     printf("\"alias: whoami: not found\"\n");
     next_line();
-    printf("\n\"whoami\"를 입력했을 때 실행될 명령어가 설정되어 있지 않기때문에 \"whoami\"는 명령어였습니다.\n");
+    printf("\n\"whoami\"를 입력했을 때 실행될 명령어가 설정되어 있지 않기때문에\n");
+    printf("\"whoami\"(은)는 별명이 아니었습니다.\n");
     next_line();
     printf("이번에는 사용자가 직접 \"mkfile\" 라는 별명을 만들어 보겠습니다.\n");
     next_line();
@@ -115,7 +116,7 @@ void training_alias(void)
     printf("기본적으로 숨긴 파일입니다.\n");
     next_line();
     printf("위의 두 파일의 차이점은 새로운 터미널 창을 켤 때마다 실행하는 것(.bashrc)과\n");
-    printf("\"bash\"로그인할 때만 실행되는 것(.bash_profile)입니다.\n\n");
+    printf("\"bash\"로 로그인할 때만 실행되는 것(.bash_profile)입니다.\n\n");
     printf("그러므로 \"~/.bashrc\" 파일이나 자신이 사용하는 Shell의 이름 뒤에 'rc'가 붙은 파일에 저장하는 것을 추천드립니다.\n");
     next_line();
     printf("추후 리눅스 시스템에서 \"alias\" 명령어를 이용하여 별명을 지정한 명령어 구문을\n");
@@ -125,7 +126,6 @@ void training_alias(void)
     next_line();
     printf("\"alias\"와 \"unalias\" 기능의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
 
     delete_defdir();
 }
