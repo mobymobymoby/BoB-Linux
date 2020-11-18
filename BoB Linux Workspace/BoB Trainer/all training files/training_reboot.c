@@ -19,7 +19,7 @@ void training_reboot(void)
 	next_line();
 	
 	printf("이러한 명령어들은 보통 관리자 권한으로 실행됩니다.\n");
-	printf("이 말은 즉, 일반 유저들은 '시스템 종료'를 하지 못한다는 말입니다.\n);
+	printf("이 말은 즉, 일반 유저들은 '시스템 종료'를 하지 못한다는 말입니다.\n");
 	next_line();
 	       
 	printf("자기 마음대로 시스템을 종료하지 못한다는 것은 \n개인 PC를 쓰는 우리에게 매우 이상하게 느껴집니다\n");
@@ -39,7 +39,7 @@ void training_reboot(void)
 	next_line();
 	       
 	printf("\"reboot\" 명령어의 학습이 끝났습니다.\n");
-	next_line();
-	delete_defdir();
 	printf("고생하셨습니다!\n");
+	delete_defdir();
+	
 }
