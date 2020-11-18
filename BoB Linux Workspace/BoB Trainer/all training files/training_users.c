@@ -11,14 +11,13 @@ void training_users(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	printf("이번에 학습할 명령어는 'users'입니다.\n");
-	next_line();
 	printf("users는 시스템에 로그인되어 있는 사용자를 출력할 때 사용하는 명령어 입니다.\n");
 	next_line();
 	printf("users 명령어는 보통 다음과 같은 형식으로 사용됩니다.\n$ users [옵션]\n");
 	next_line();
 	printf("users를 옵션 없이 사용하면 시스템에 로그인 되어 있는 사용자를 출력합니다.\n");
 	next_line();
-	printf("[실습] users 명령을 사용하여 시스템에 로그인 되어있는 사용자를 출력해보세요.\n\n");
+	printf("[실습] users 명령을 사용하여 시스템에 로그인 되어있는 사용자를 출력해보세요.\n");
 	run_command("users");
 	next_line();
 	printf("현재 로그인된 사용자는 %s 이므로\n", getlogin());
