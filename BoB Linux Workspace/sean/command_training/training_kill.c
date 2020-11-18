@@ -26,8 +26,8 @@ void training_kill(void)
 
     printf("기타 세부 시그널 옵션을 보는 방법은 \"kill -l\" 명령어를 입력하면 됩니다.\n\n");
     next_line();
-    printf("다음은 \"kill -l\"을 입력했을 때 출력되는 결과로 시그널 종류를 출력합니다.\n");
     system("kill -l");
+    printf("위의 내용은 \"kill -l\"을 입력했을 때 출력되는 결과로 시그널 종류를 출력한 것입니다.\n");
     next_line();
 
     printf("[알아두면 좋은 시그널 옵션]은 다음과 같습니다.\n\n");
