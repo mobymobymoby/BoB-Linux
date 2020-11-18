@@ -23,8 +23,8 @@ ALL	ALL=NOPASSWD: /usr/sbin/init
 #!/bin/sh
 trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP TERM
 
-printf "BoB Linux에서는 기본 계정인 'rookie'를 제공합니다.\n"
-printf "하지만 사용자가 원하는 계정을 생성할 수도 있습니다.\n\n"
+printf "BoB Linux에서는 기본 계정인 'rookie'를 제공합니다.\n\n"
+printf "하지만 사용자가 원하는 계정을 생성할 수도 있습니다.\n"
 printf "새로운 계정 생성시 기본 계정은 삭제됩니다.\n\n"
 printf "디버깅 용 : '3'을 입력하면 곧바로 코드가 종료됩니다.(실제 배포에선 삭제될 옵션)\n\n"
 while :
@@ -86,7 +86,6 @@ sudo su - ${name}
 ### init_account2
 ```
 #!/bin/sh
-
 trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP TERM
 
 fbterm
@@ -97,12 +96,13 @@ sudo sed -i '/rookie/d' /etc/sudoers
 rm -f ./init_account2
 
 sudo sed -i'' -r -e "/fbterm/i\/home/${name}/init_account3" /etc/bash.bashrc
+clear
 printf "설정을 마치기 위해 재부팅을 실행합니다.\n\n"
 printf "다시 재부팅이 완료되면 방금 생성한 아이디로 로그인 해주세요.\n\n"
 printf "재부팅 이후 모든 설정이 완료된 후에는 영어로 결과 메시지가 출력됩니다.\n"
 printf "이후의 도움말을 보려면 홈 디렉토리의 README 파일을 참고하세요.\n\n"
 printf "Enter를 입력하면 재부팅이 시작됩니다.\n"
-read trash
+read input
 printf " 3 초후에 종료됩니다.\n\n"
 sleep 1
 printf " 2 초후에 종료됩니다.\n\n"
@@ -120,10 +120,8 @@ sudo userdel -r rookie > /dev/null 2>&1
 sudo sed -i '/init_account/d' /etc/bash.bashrc
 sudo sed -i '/NOPASSWD/d' /etc/sudoers
 rm -f ./init_account3
-clear
-printf "Success!\nAll Configures are done.\nIf you press [Enter], start BoB Linux Trainer.\n"
+read input
 fbterm
-trainer
 exit
 ```
 
