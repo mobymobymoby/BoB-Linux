@@ -6,11 +6,13 @@ void training_reboot(void)
 	create_defdir();
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 	printf("이번에 배울 명령어는 'reboot'입니다.\n");
+	next_line();
 	printf("reboot 명령어는 시스템을 재부팅하는 명령어입니다.\n");
 	printf("'-f 옵션을 주어 강제 재부팅이 가능합니다.\n");
 	next_line();
 
 	printf("[실습] reboot 명령어를 사용하여 시스템을 '강제 재부팅'해보세요.\n(실제 적용되지는 않습니다.)\n");
+	printf("$ reboot [옵션]\n");
 	fake_run_command("reboot -f");
 	next_line();
 
