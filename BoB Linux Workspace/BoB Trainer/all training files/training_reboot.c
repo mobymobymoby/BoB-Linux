@@ -40,6 +40,7 @@ void training_reboot(void)
 	       
 	printf("\"reboot\" 명령어의 학습이 끝났습니다.\n");
 	printf("고생하셨습니다!\n");
-	delete_defdir();
+	next_line();
 	
+	delete_defdir();
 }
