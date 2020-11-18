@@ -48,9 +48,11 @@ def U14(user):
         return True
 
 def U14_report():
-    print("U-14 조치 방법")
+    print("[U-14] 조치 방법")
     print("\t1. 'chmod og-w [파일명]'으로 소유자외 다른 유저의 파일 실행을 막을 수 있습니다.")
     print("\t2. 'chown [소유자] [파일명]'으로 소유자를 변경할 수 있습니다.")
 
-if (U14("root")) or (U14("user")) :
-    U14_report()
+U14flag = False
+if (U14("root")): U14flag = True
+if (U14("user")): U14flag = True
+if (U14flag) : U14_report()
