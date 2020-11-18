@@ -118,7 +118,6 @@ sudo init 6
 trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP TERM
 sudo userdel -r rookie > /dev/null 2>&1
 sudo sed -i '/init_account/d' /etc/bash.bashrc
-sudo sed -i -e "\$a./trainer" /etc/bash.bashrc
 sudo sed -i '/NOPASSWD/d' /etc/sudoers
 rm -f ./init_account3
 clear
