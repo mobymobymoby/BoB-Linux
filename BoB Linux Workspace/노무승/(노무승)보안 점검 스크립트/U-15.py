@@ -20,14 +20,14 @@ def U15():
         print("\t[검사 결과] 안전합니다.\n")
         return False
     else :
-        print(temp)
+        print(temp.rstrip())
         print("\t[검사 결과] 보안이 필요합니다.\n")
         return True
 
 def U15_report():
     print("U-15 조치 방법")
-    print("     1. 'chmod o-w [파일명]'으로 소유자와 그룹 외의 다른 유저의 파일 실행을 막을 수 있습니다.")
-    print("     2. 'rm -rf [파일명]'으로 파일을 삭제할 수 있습니다.")
-    print("     3. 해당 파일의 사용 목적을 확실히 알고 있고, 필요하다면 넘겨도 됨.")
+    print("\t1. 'chmod o-w [파일명]'으로 소유자와 그룹 외의 다른 유저의 파일 실행을 막을 수 있습니다.")
+    print("\t2. 'rm -rf [파일명]'으로 파일을 삭제할 수 있습니다.")
+    print("\t3. 해당 파일의 사용 목적을 확실히 알고 있고, 필요하다면 넘겨도 됨.")
 
 if (U15()) : U15_report()
