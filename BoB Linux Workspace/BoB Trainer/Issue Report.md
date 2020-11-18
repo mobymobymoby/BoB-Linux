@@ -29,3 +29,6 @@
 ### /etc/profile과 /etc/bash.bashrc
 - profile은 로그인 시에만 적용(su에는 미적용)
 - bash.bashrc는 su를 통해서 쉘이 변경될 때도 적용(su에도 적용)
+
+### /etc/bash.bashrc에 ./trainer 적용시 
+- exit를 통해 fbterm을 나가면 무한루프 발생
