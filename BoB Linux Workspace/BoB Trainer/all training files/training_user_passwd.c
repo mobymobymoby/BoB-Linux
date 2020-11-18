@@ -25,7 +25,7 @@ void training_user_passwd(void)
 	next_line();
 	printf("다만, 인적사항은 필수로 기입해야하는 것은 아니며 Enter를 입력하여 넘어가도 큰 문제는 없습니다.\n");
 	next_line();
-	printf("adduser를 이용해 'user1'이라는 이름을 가진 사용자 계정을 생성해보세요.\n");
+	printf("[실습] adduser를 이용해 'user1'이라는 이름을 가진 사용자 계정을 생성해보세요.\n");
 	printf("(이번 트레이닝을 진행할 동안 계정을 관리할 수 있도록 당신의 권한을 잠시 상승시켜 드리겠습니다.)\n");
 
 	fake_run_command("adduser user1");
@@ -61,7 +61,7 @@ void training_user_passwd(void)
 	next_line();
 	printf("위에서 출력된 내용들이 나온 후에 사용자 계정의 패스워드를 입력하라는 메시지('Enter new UNIX password')와 \n재확인(Retype) 메시지가 나옵니다.\n");
 	next_line();
-	printf("user1 계정의 패스워드를 'BoB-Linux'로 설정하세요.\n");
+	printf("[실습] user1 계정의 패스워드를 'BoB-Linux'로 설정하세요.\n");
 	next_line();
 	fake_command("BoB-Linux", "Enter new UNIX password: ");
 	fake_command("BoB-Linux", "Retype new UNIX password: ");
@@ -71,7 +71,7 @@ void training_user_passwd(void)
 	printf("패스워드를 입력한 후에는 패스워드가 성공적으로 업데이트 되었다는 메시지 후에 \nuser1의 정보를 입력하라는 메시지가 나옵니다.\n");
 	next_line();
 	printf("이 정보들은 선택사항이며, 이름, 방 번호, 전화번호, 집 전화번호 등을 입력할 수 있습니다.\n");
-	printf("아무 정보나 입력해보세요.\n");
+	printf("[실습] 아무 정보나 입력해보세요.\n");
 	next_line();
 	printf("Changing the user information for user1\nEnter the new value, or press ENTER for the default\n");
 	usleep(3000);
@@ -157,7 +157,7 @@ void training_user_passwd(void)
 	printf("이렇듯, root 계정은 다른 사용자에 비해 막강한 권한을 가지고 있기 때문에 root 계정이 유출되서는 안되는 것입니다.\n");
 
 	printf("다시 passwd 명령어로 돌아와서, 사용자의 정보을 보기 위해서는 -S(status의 약자) 옵션을 사용합니다.\n");
-	printf("passwd 명령어와 -S 옵션을 이용해 앞에서 생성한 'user1' 계정의 정보를 확인해보세요.\n");
+	printf("[실습] passwd 명령어와 -S 옵션을 이용해 앞에서 생성한 'user1' 계정의 정보를 확인해보세요.\n");
 	next_line();
 	printf("$ passwd [옵션] [사용자 계정명]\n");
 	fake_run_command("passwd -S user1");
@@ -201,7 +201,7 @@ void training_user_passwd(void)
 	next_line();
 
 	printf("마지막으로 지금까지 실습에 이용했던 'user1' 계정을 삭제하겠습니다.\n");
-	printf("-r 옵션을 이용해서 'user1'의 홈 디렉토리와 계정을 삭제하세요.\n");
+	printf("[실습] -r 옵션을 이용해서 'user1'의 홈 디렉토리와 계정을 삭제하세요.\n");
 	printf("# userdel [옵션] [삭제할 계정명]\n");
 	fake_run_command("userdel -r user1");
 	
