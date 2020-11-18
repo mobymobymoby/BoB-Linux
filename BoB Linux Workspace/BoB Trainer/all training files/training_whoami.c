@@ -36,7 +36,7 @@ void training_whoami(void)
 	next_line();
 	printf("\"whoami\" 명령어를 직접 입력하여 현재 로그인 되어 있는 사용자 계정의 이름을 확인해보세요.\n");
 	just_run_command("whoami");
-	printf("\위에 보이시는 \"%s\"이 현재 로그인된 사용자 계정의 이름 즉, 'EUID'입니다.\n", lpwd->pw_name);
+	printf("\n위에 보이시는 \"%s\"이 현재 로그인된 사용자 계정의 이름 즉, 'EUID'입니다.\n", lpwd->pw_name);
 	next_line();
 	printf("사용자 계정의 ID를 보여주는 명령어는 \"whoami\"와 비슷하게 생긴 \"who am i\"가 있습니다.\n");
 	next_line();
@@ -45,7 +45,7 @@ void training_whoami(void)
 	next_line();
 	printf("\"whoami\"는 현재 로그인이 되어있는 계정을 보여주지만\n");
     	next_line();
-	printf("\"who am i\"는 처음 'user1'으로 로그인 한 후 'User2'로 로그인하여 사용자 계정을 바꾼 후에도\n");
+	printf("\"who am i\"는 처음 'User1'으로 로그인 한 후 'User2'로 로그인하여 사용자 계정을 바꾼 후에도\n");
     	printf("현재 로그인 되어 있는 'User2'가 아닌 처음 로그인 했던 'User1'을 보여줍니다.\n");
 	next_line();
 	printf("그리고 비슷한 명령어로는 다음의 것들이 있습니다.\n");
