@@ -49,7 +49,7 @@ void training_mkdir(void)
 	just_run_command("ls fruits/apple");
 	printf("\n해당 디렉토리가 없다는 것을 보아 잘 삭제된 것을 확인할 수 있습니다.\n");
 	next_line();
-	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+	printf("이후 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     	printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
 	
 	printf("mkdir 명령어에 대한 학습이 끝났습니다.\n고생하셨습니다.\n");
