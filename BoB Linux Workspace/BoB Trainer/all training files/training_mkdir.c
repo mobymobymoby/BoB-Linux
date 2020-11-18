@@ -46,7 +46,7 @@ void training_mkdir(void)
 	printf("$ rmdir [삭제할 디렉토리]\n");
 	run_command("rmdir fruits/apple");
 	next_line();
-	printf("[실습] 'ls fruits/apple'을 입력하여 디렉토리가 삭제되었는지 확인해보세요.
+	printf("[실습] 'ls fruits/apple'을 입력하여 디렉토리가 삭제되었는지 확인해보세요.\n");
 	just_run_command("ls fruits/apple");
 	printf("디렉토리가 잘 삭제된 것을 확인할 수 있습니다.\n");
 	next_line();
