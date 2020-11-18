@@ -2,8 +2,8 @@
 
 void training_history()
 {
-	create_defdir();
-	system("clear");
+    create_defdir();
+    system("clear");
 
     printf("이번에 학습할 것은 쉘의 \"history\" 기능입니다.\n\n");
     next_line();
@@ -19,7 +19,7 @@ void training_history()
     next_line();
     printf("실습 \"echo $HISTSIZE\"를 입력해 보세요.\n");
     nothing_print_fake_run_command("echo $HISTSIZE");
-    printf("1000\n");
+    printf("1000\n\n");
 
     printf("출력된 'HISTSIZE'의 값 만큼 사용자가 사용한 명령어를 저장을 할 수 있습니다.\n");
     next_line();
@@ -31,21 +31,16 @@ void training_history()
     next_line();
     printf("!!을 입력해 보세요.\n");
     nothing_print_fake_run_command("!!");
-    printf("1000\n");
+    printf("1000\n\n");
 	
     printf("\n좀 전에 실행하였던 echo $HISTSIZE 가 다시 수행된 것을 볼 수 있습니다.\n");
     next_line();
     // to do : history 명령어 써서 지금까지 입력했던 명령어 출력
-    printf("사용자가 이전에 입력했던 명령어들을 한 번에 확인하고 싶다면 \"history\"라고 입력하면됩니다.\n");
-    next_line();
-
-    printf("[실습] \"history\"(을)를 입력해보세요.\n");
-    just_run_command("histroy");
-    printf("\n위에 보이시는 것들이 사용자가 사용한 명령어들입니다.\n");
-    printf("(아무것도 출력되지 않는다면, 아직 사용한 명령어가 없다는 것입니다.\n");
+    printf("추후에 실제 시스템에서 사용자가 이전에 입력했던 명령어들을 한 번에 확인하고 싶다면\n");
+    printf("\"history\"라고 입력하면됩니다.\n");
     next_line();
 
     printf("\"history\" 기능의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-	delete_defdir();
+    delete_defdir();
 }

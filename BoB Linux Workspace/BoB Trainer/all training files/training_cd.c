@@ -1,9 +1,10 @@
 #include "func.h"
 
-void training_cd(void){
-	create_defdir();
-	system("clear");
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
+void training_cd(void)
+{
+    create_defdir();
+    system("clear");
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     
     printf("이번에 학습할 명령어는 \"cd\" 입니다.\n\n");
     next_line();
@@ -12,7 +13,7 @@ void training_cd(void){
 
     system("mkdir dir1");
     system("mkdir dir2");
-    // 테스트 폴더 생성
+    // 테스트 폴더 생성 
 
     printf("사용법은 \"cd [디렉토리 경로]\" 입니다.\n");
     printf("디렉토리 경로를 지정할 때, '절대 경로'나 '상대 경로'를 지정하여 사용합니다.\n");
@@ -46,9 +47,9 @@ void training_cd(void){
     next_line();
 
     printf("[ ./dir1/ ](은)는 현재 작업 디렉토리 밑에 있는 'dir1' 디렉토리를 의미합니다.\n");
-    printf("ex) 현재 작업 디렉토리가 '/etc' 일 때, [ ./dir1 ](은)는 \"/etc/dir1\"와(과) 같습니다.)\n\n");
+    printf("ex) 현재 작업 디렉토리가 '/etc' 일 때, [ ./dir1 ](은)는 \"/etc/dir1\"(와)과 같습니다.)\n\n");
     printf("[ ../dir2/ ](은)는 현재 작업 디렉토리의 상위 디렉토리에 있는 다른 디렉토리인 'dir2'를 의미합니다.\n");
-    printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때, [ ../dir3 ](은)는 \"/etc/dir3\"와(과) 같습니다.)\n");
+    printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때, [ ../dir3 ](은)는 \"/etc/dir3\"(와)과 같습니다.)\n");
     next_line();
     
     printf("[실습] '상대 경로'의 '상위 경로'를 이용해 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
@@ -68,7 +69,7 @@ void training_cd(void){
     // 상위 경로 트레이닝
 
     printf("이동하기 이전의 디렉토리로 되돌아가기 위해서는 'cd -'를 입력하면 됩니다.\n\n");
-    printf("[실습] 'cd -'을 입력해 이전의 디렉토리로 되돌아가 보세요.\n");
+    printf("[실습] 'cd -'(을)를 입력해 이전의 디렉토리로 되돌아가 보세요.\n");
     fake_run_command("cd -");
     chdir("cd -");
     next_line();
@@ -87,7 +88,6 @@ void training_cd(void){
     next_line();
     printf("\"cd\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line(); 
 
     delete_defdir();
 }

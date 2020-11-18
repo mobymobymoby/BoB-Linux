@@ -69,7 +69,6 @@ void training_locate(void)
     next_line();
     printf("\"locate\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
     
     delete_defdir();
 }

@@ -23,12 +23,14 @@ void training_diff(void)
     next_line();
     printf("먼저 실습에 필요한 파일을 만들어 내용을 입력하도록 하겠습니다.\n");
     next_line();
-    printf("[실습] \"cat > test1\"을 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test1\"을 입력하여 아래의 내용을 바로 입력하시고\n");
+    printf("Ctrl + d키로 저장하세요.\n\n");
     printf("i\nlove\nyou\n");
     just_run_command("cat > test1");
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
     next_line();
-    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용을 바로 입력하시고\n");
+    printf("Ctrl + d키로 저장하세요.\n\n");
     printf("i\nlove\nme\nokay?\n");
     just_run_command("cat > test2");
     printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");
@@ -76,7 +78,7 @@ void training_diff(void)
     next_line();
     printf("먼저 '-q' 옵션을 실습해보겠습니다.\n");
     next_line();
-    printf("[실습] 'test1 파일'과 'test2 파일'을 '-q'(--brief) 옵션을 이용하여 비교해보세요.\n");
+    printf("[실습] 'test1' 파일과 'test2' 파일을 '-q'(--brief) 옵션을 이용하여 비교해보세요.\n");
     printf("사용법 : diff [옵션] [비교할 파일1] [비교할 파일2]\n");
     just_run_command("diff -q test1 test2");
     next_line();
@@ -88,7 +90,7 @@ void training_diff(void)
     next_line();
     printf("다음은 '-y (--side-by-side)' 옵션을 실습해보겠습니다.\n");
     next_line();
-    printf("[실습] 'test1 파일'과 'test2 파일'을 '-y'(--side-by-side) 옵션을 이용하여 비교해보세요.\n");
+    printf("[실습] 'test1' 파일과 'test2' 파일을 '-y'(--side-by-side) 옵션을 이용하여 비교해보세요.\n");
     printf("사용법 : diff [옵션] [비교할 파일1] [비교할 파일2]\n");
     just_run_command("diff -y test1 test2");
     next_line();
@@ -109,7 +111,8 @@ void training_diff(void)
     next_line();
     printf("\"diff3\" 명령어를 실습하기 전에 파일을 하나 더 만들어줍니다.\n");
     next_line();
-    printf("[실습] \"cat > test3\"을(를) 입력하여 아래의 내용처럼 입력하시고, Ctrl + d키로 저장하세요.\n\n");
+    printf("[실습] \"cat > test3\"을(를) 입력하여 아래의 내용을 바로 입력하시고\n");
+    printf("Ctrl + d키로 저장하세요.\n\n");
     printf("i\nlove\nit\ngot it?\n");
     just_run_command("cat > test3");
     printf("\n학습을 잘 따라오셨다면 test3 파일이 만들어졌을 것입니다.\n");
@@ -119,7 +122,7 @@ void training_diff(void)
     next_line();
     printf("이제 \"diff3\" 명령어를 실습해보겠습니다.\n");
     next_line();
-    printf("[실습] \"diff3\" 명령어를 옵션 없이 이용하여 test1, test2, test3를 비교해보세요.\n");
+    printf("[실습] \"diff3\" 명령어를 옵션 없이 이용하여 'test1', 'test2', 'test3'(을)를 비교해보세요.\n");
     printf("사용법 : diff3 [옵션] [비교할 파일1] [비교할 파일2] [비교할 파일3]\n");
     just_run_command("diff3 test1 test2 test3");
     next_line();
@@ -143,7 +146,7 @@ void training_diff(void)
     printf("2 번째 파일의 3 번째 행과 4번째 행 \"me\"와 \"okay?\"라는 내용이\n");
     printf("다른 파일에는 없다는 것이고\n\n");
     printf("3 번째 파일의 3 번째 행과 4 번째 행 \"it\"과 \"got it?\"이라는 내용이\n");
-    printf("다른 파일에는 없다는 것입니다.\n");
+    printf("다른 파일에는 없다는 것입니다.\n\n");
     next_line();
     printf("만약 1 번째 파일과 2 번째 파일의 내용은 같고 3 번째 내용만 다르다면\n");
     printf("\"====3\"처럼 '====' 뒤에 내용이 다른 파일의 번호를 붙여서 출력해줍니다.\n");
@@ -161,7 +164,6 @@ void training_diff(void)
     next_line();
     printf("\"diff\"와 \"diff3\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-    next_line();
 
     delete_defdir();
 }
