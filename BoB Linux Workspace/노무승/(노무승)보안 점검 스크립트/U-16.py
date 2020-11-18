@@ -21,7 +21,7 @@ def U16():
         return True
         
 def U16_report():
-    print("U-16 조치 방법")
+    print("[U-16] 조치 방법")
     print("\t1. 중요한 파일이면 'mv [파일명] [디렉터리]'로 파일을 옮기십시오.")
     print("\t2. 'rm -rf [파일명]'으로 /dev 디렉터리에 존재하는 쓸데없는 파일을 삭제하십시오.")
 
