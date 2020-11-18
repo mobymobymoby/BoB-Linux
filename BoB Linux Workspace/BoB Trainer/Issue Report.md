@@ -32,3 +32,5 @@
 
 ### /etc/bash.bashrc에 ./trainer 적용시 
 - exit를 통해 fbterm을 나가면 무한루프 발생
+
+### 트레이닝 진행 중에 명령어 실습 부분에서 Ctrl + d를 입력하면 
