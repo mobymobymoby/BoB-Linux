@@ -8,7 +8,6 @@ void training_whoami(void)
 	lpwd = getpwuid(geteuid());
 
     	create_defdir();
-    
     	system("clear");
 
 	printf("이번에 학습할 명령어는 \"whoami\" 입니다.\n");
@@ -24,7 +23,7 @@ void training_whoami(void)
 	printf("만일 사용자가 'User1'으로 처음 로그인을 했다가\n'User2'으로 로그인하여 계정을 바꾼 후 \"whoami\" 명령어를 입력한다면\n\n");
    	printf("현재 로그인 되어있는 계정은 'User2'이기 때문에 'User2'를 보여줄 것입니다.\n");
 	next_line();
-	printf("\"whoami\" 명령어는 '현재 로그인 되어 있는 사용자의 이름'을 \n보여준다는 것을 기억하셔야 합니다.\n");
+	printf("\"whoami\" 명령어는 '현재 로그인 되어 있는 사용자의 이름'을 \n보여준다는 것을 기억하셔야 합니다.\n\n");
     	printf("후에 나올 비슷한 명령어와의 차이점이 될 점입니다.\n");
 	next_line();
 	printf("\"whoami\" 명령어의 실행파일은 리눅스 시스템 내에서 \"/usr/bin/whoami\"로\n");
