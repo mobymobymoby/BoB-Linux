@@ -1,5 +1,6 @@
 # [U-17] 'r' command 원격 접속 파일 검사
 # 2020/11/19 : 노무승
+#   1. 2>/dev/null 문구로 권한 에러를 뜨지 않게 함
 
 import subprocess
 import os.path
