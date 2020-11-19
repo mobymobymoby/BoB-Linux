@@ -42,15 +42,15 @@ def U14(user):
  
     if (flag==False):
         print("\t[검사 결과] 안전합니다.\n")
-        return False
     else:
         print("\t[검사 결과] 보안이 필요합니다.\n")
-        return True
+    return flag
 
 def U14_report():
     print("[U-14] 조치 방법")
     print("\t1. 'chmod og-w [파일명]'으로 소유자외 다른 유저의 파일 실행을 막을 수 있습니다.")
     print("\t2. 'chown [소유자] [파일명]'으로 소유자를 변경할 수 있습니다.")
+    print("")
 
 U14flag = False
 if (U14("root")): U14flag = True
