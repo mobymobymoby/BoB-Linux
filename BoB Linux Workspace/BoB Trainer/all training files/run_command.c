@@ -18,7 +18,7 @@ int run_command(char valid_cmd[])
 		// 입력값 검증 부분
 		if (!strncmp(cmd, valid_cmd, strlen(valid_cmd)) && strlen(cmd) == strlen(valid_cmd))
 		{
-			printf("잘 입력하셨습니다.\n\n");
+			printf("잘 입력하셨습니다.\n");
 			// 여기서 핵심은 system 함수의 인자로 valid_cmd가 입력된다는 것임. 즉 사용자의 입력값은 사용되지 않음
 			system(valid_cmd);
 			break;
