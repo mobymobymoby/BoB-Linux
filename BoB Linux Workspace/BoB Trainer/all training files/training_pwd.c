@@ -13,7 +13,7 @@ void training_pwd(void)
     next_line();
     printf("\"pwd\" 명령어는 현재 작업 중인 디렉터리 경로를 절대 경로로 보여주는 명령어입니다.\n");
     next_line();
-    printf("\"pwd\" 명령어는 'Print Working Directory'의 앞글자들만 따와서 조합한 것입니다.\n");
+    printf("\"pwd\" 명령어는 'Print Working Directory'의 약자입니다.\n");
     printf("현재 자신이 어떤 디렉터리 경로에 있는 지 확인하고 싶을 때 사용합니다.\n");
     next_line();
     printf("\"pwd\" 명령어의 실행 파일은 \"/bin/pwd\"로 있습니다.\n");
