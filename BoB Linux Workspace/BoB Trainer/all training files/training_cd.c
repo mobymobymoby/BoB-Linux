@@ -29,7 +29,7 @@ void training_cd(void)
     printf("\"cd /\"를 입력하면, 루트 디렉토리로 이동하게 됩니다.\n");
     next_line();
     
-    printf("[실습] \"cd\" 명령어를 사용해 '%s/dir1' 디렉토리로 이동해보세요.\n", cwd);
+    printf("[실습] \"cd\" 명령어를 사용해 '%s/dir1' 디렉토리로 이동해보세요.\n", wd);
     printf("사용법 : cd [디렉토리 경로]\n");
     snprintf(command_str, sizeof(command_str), "cd %s/dir1", wd);
     fake_run_command(command_str);
