@@ -55,7 +55,7 @@ void training_cat(void)
     next_line();
     
     printf("[실습] \"cat\" 명령어를 이용하여 'hello.txt' 파일과 'rookie.txt' 파일의 내용을 'test.txt' 파일로 합쳐보세요.\n");
-    printf("사용법 : cat [file1][file2] > [file3]\n");
+    printf("사용법 : cat [파일 1] [파일 2] > [file3]\n");
     run_command("cat hello.txt rookie.txt > test.txt");
     
     printf("\n아래의 내용은 새로 만들어진 test.txt 파일을 \"cat\" 명령어를 통해 출력한 내용입니다.\n\n");
@@ -90,12 +90,12 @@ void training_cat(void)
     next_line();
     
     printf("cat 명령어는 자주 쓰게 될 것이므로\n");
-    printf("여러 가지의 텍스트 파일을 이용해 연습하면 좋습니다.\n\n");
+    printf("여러 가지의 텍스트 파일을 이용해 연습하면 좋습니다.\n");
     next_line();
     printf("가장 많이 쓰이는 구문은 cat 명령어를 통해 파일의 내용을 보거나\n");
     printf("리다이렉션하여 파일의 내용을 변경하는 것 입니다.\n");
     next_line();
-    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     printf("\"cat\" 명령어의 학습이 끝났습니다.\n");
