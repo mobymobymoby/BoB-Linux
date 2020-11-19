@@ -36,11 +36,7 @@ void training_rm()
 	next_line();
 	printf("물론 자신에게 권한이 없는 파일도 삭제가 불가능합니다.\n");
 	next_line();
-	printf("특히 'rm -rf /*'라는 구문은 \"내 시스템에 있는 모든 파일과 디렉토리를 제거하라\"라는 의미입니다.\n");
-	next_line();
-	printf("해당 표현은 일종의 밈처럼 사용되며, \n사용시 시스템 전체가 망가질 수 있기 때문에 주의해야 합니다.\n");
-	next_line();
-	       
+		       
 	printf("rm과 유사한 명령어로는 'rmdir'가 있습니다.\n");
 	printf("rmdir는 remove directory로 디렉토리를 지운다는 점에서 rm -r 옵션과 유사합니다.\n");
 	next_line();
