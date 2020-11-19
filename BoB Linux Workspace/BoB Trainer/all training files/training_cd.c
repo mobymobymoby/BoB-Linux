@@ -4,9 +4,9 @@ void training_cd(void)
 {
     create_defdir();
     system("clear");
-    char cwd[DIR_SIZE];
+    char wd[DIR_SIZE];
     char command_str[DIR_SIZE*2];
-    getcwd(cwd, DIR_SIZE);
+    getcwd(wd, DIR_SIZE);
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
     printf("이번에 학습할 명령어는 \"cd\" 입니다.\n");
@@ -31,9 +31,9 @@ void training_cd(void)
     
     printf("[실습] \"cd\" 명령어를 사용해 '%s/dir1' 디렉토리로 이동해보세요.\n", cwd);
     printf("사용법 : cd [디렉토리 경로]\n");
-    snprintf(command_str, sizeof(command_str), "cd %s/dir1", cwd);
+    snprintf(command_str, sizeof(command_str), "cd %s/dir1", wd);
     fake_run_command(command_str);
-    chdir(cwd);
+    chdir(wd);
     chdir("dir1");
     next_line();
     // 절대 경로 트레이닝
@@ -60,7 +60,7 @@ void training_cd(void)
     printf("[실습] '상대 경로'의 '상위 경로'를 이용해 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
     printf("사용법 : cd [디렉토리 상대 경로]\n");
     fake_run_command("cd ../dir2");
-    chdir("cd ../dir2");
+    chdir("../dir2");
     next_line();
     // 상대 경로 트레이닝 
 
@@ -69,14 +69,14 @@ void training_cd(void)
     next_line();
     printf("[실습] \"cd ..\"을(를) 입력해 상위 디렉토리로 이동해보세요.\n");
     fake_run_command("cd ..");
-    chdir("cd ..");
+    chdir("..");
     next_line();
     // 상위 경로 트레이닝
 
     printf("이동하기 이전의 디렉토리로 되돌아가기 위해서는 'cd -'를 입력하면 됩니다.\n\n");
     printf("[실습] 'cd -'(을)를 입력해 이전의 디렉토리로 되돌아가 보세요.\n");
     fake_run_command("cd -");
-    chdir("cd -");
+    chdir("-");
     next_line();
     // 이전 경로 트레이닝
     
