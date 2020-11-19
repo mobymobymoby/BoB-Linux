@@ -79,6 +79,7 @@ void training_top(void);
 void training_wget(void);
  
 // 백송선 명령어
+void training_linux_basic(void);
 void training_alias(void);
 void training_apt(void);
 void training_chsh(void);
