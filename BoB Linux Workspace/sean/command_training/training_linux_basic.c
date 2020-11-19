@@ -6,8 +6,7 @@ void training_linux_basic(void)
     system("clear");
     
     printf("환영합니다.\n\n");
-    printf("여기서는 리눅스의 전반적인 기본 지식과 리눅스의 중요성\n");
-    printf("그리고 명령어 학습 전 필요한 지식을 배우게 될 것입니다.\n\n");
+    printf("여기서는 리눅스가 무엇인지와 종류, 필요성 그리고 기본 디렉토리들을 배울 것입니다.\n");
     printf("1. 리눅스란 무엇인가\n");
     printf("2. 리눅스 배포판과 종류\n");
     printf("3. 리눅스의 필요성\n");
