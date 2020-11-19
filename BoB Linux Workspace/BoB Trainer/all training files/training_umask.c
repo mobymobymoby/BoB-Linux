@@ -37,8 +37,6 @@ void training_umask()
 	next_line();
 	printf("\"umask\" 명령어의 학습이 끝났습니다.\n");
 	printf("고생하셨습니다.\n");
-	
-	printf("umask 명령어에 대한 학습이 끝났습니다.\n");
 
 	delete_defdir();
 }
