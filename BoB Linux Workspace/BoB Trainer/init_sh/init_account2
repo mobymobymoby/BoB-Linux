@@ -34,5 +34,5 @@ sleep 1
 printf " 1 초후에 종료됩니다.\n\n"
 sleep 1
 
-# 
+# 재부팅
 sudo init 6
