@@ -5,7 +5,7 @@ void training_cd(void)
     create_defdir();
     system("clear");
     char cwd[DIR_SIZE];
-    char command_str[DIR_SIZE];
+    char command_str[DIR_SIZE*2];
     getcwd(cwd, DIR_SIZE);
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
@@ -32,7 +32,7 @@ void training_cd(void)
     printf("[실습] \"cd\" 명령어를 사용해 '%s/dir1' 디렉토리로 이동해보세요.\n", cwd);
     printf("사용법 : cd [디렉토리 경로]\n");
     snprintf(command_str, sizeof(command_str), "cd %s/dir1", cwd);
-    fake_run_command(cmaand_str);
+    fake_run_command(command_str);
     chdir(cwd);
     chdir("dir1");
     next_line();
