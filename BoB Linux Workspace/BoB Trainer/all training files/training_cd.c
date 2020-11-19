@@ -4,9 +4,12 @@ void training_cd(void)
 {
     create_defdir();
     system("clear");
+    char cwd[DIR_SIZE];
+    char command_str[DIR_SIZE];
+    getcwd(cwd, DIR_SIZE);
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    printf("이번에 학습할 명령어는 \"cd\" 입니다.\n\n");
+    printf("이번에 학습할 명령어는 \"cd\" 입니다.\n");
     next_line();
     printf("\"cd\" 명령어는 'Change Directory'의 약자이며, 디렉토리를 이동할 때 사용하는 명령어 입니다.\n");
     next_line();
@@ -20,16 +23,18 @@ void training_cd(void)
     next_line();
 
     printf("[절대 경로]는 \"최상위 디렉토리부터 나열된 고유한 경로\"를 의미합니다.\n");
-    printf("(ex. /etc/systemd)\n\n");
+    printf("(ex. /etc/systemd)\n");
     next_line();
     printf("맨 앞의 '/'가 루트(최상위) 디렉토리를 의미하며\n");
     printf("\"cd /\"를 입력하면, 루트 디렉토리로 이동하게 됩니다.\n");
     next_line();
-
-    printf("[실습] \"cd\" 명령어를 사용해 '/home/user/tr/dir1' 디렉토리로 이동해보세요.\n");
+    
+    printf("[실습] \"cd\" 명령어를 사용해 '%s/dir1' 디렉토리로 이동해보세요.\n", cwd);
     printf("사용법 : cd [디렉토리 경로]\n");
-    fake_run_command("cd /home/user/tr/dir1");
-    chdir("/home/user/tr/dir1");
+    snprintf(command_str, sizeof(command_str), "cd %s/dir1", cwd);
+    fake_run_command(cmaand_str);
+    chdir(cwd);
+    chdir("dir1");
     next_line();
     // 절대 경로 트레이닝
 
