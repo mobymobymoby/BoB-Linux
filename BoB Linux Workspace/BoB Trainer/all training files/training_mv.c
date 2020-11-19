@@ -39,9 +39,9 @@ void training_mv(void)
 	printf("ls 명령으로 dir2에 file1이 잘 이동되었는지 확인해봅시다.\n\n[실습]\"ls -l dir2\"를 입력하세요.\n");
 	run_command("ls -l dir2");
 	//system("ls dir2");
-	printf("\nmv는 파일이나 디렉토리를 이동할 때도 사용되지만, 이름을 변경하고자 할 때도 사용됩니다.\n파일을 동일한 디렉토리 안에서 이동할 경우 이름이 변경됩니다.\n");
+	printf("\nmv는 파일이나 디렉토리를 이동할 때도 사용되지만, 이름을 변경하고자 할 때도 사용됩니다.\n\n파일을 동일한 디렉토리 안에서 이동할 경우 이름이 변경됩니다.\n");
 	next_line();
-	printf("같은 dir2안에서 file1을 file2로 이름을 바꿔봅시다.\n변경할 파일은 \"dir2/file1\" 이고 변경할 위치는 \"dir2/file2\"입니다.\nmv 명령어를 입력해 파일 이름을 변경해보세요.\n");
+	printf("같은 dir2안에서 file1을 file2로 이름을 바꿔봅시다.\n\n변경할 파일은 \"dir2/file1\" 이고 변경할 위치는 \"dir2/file2\"입니다.\nmv 명령어를 입력해 파일 이름을 변경해보세요.\n");
 	run_command("mv dir2/file1 dir2/file2");
 	printf("ls 명령으로 dir2에 file1의 이름이 file2로 변경되었는지 확인해봅시다.\n\n[실습]\"ls -l dir2\"를 입력하세요.\n");
 	run_command("ls -l dir2");
