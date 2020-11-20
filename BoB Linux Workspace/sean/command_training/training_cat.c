@@ -10,7 +10,7 @@ void training_cat(void)
     system("echo 'Hello' > hello.txt");
     system("echo 'rookie' > rookie.txt");
     
-    printf("이번에 학습할 명령어는 'cat' 입니다.\n\n");
+    printf("이번에 학습할 명령어는 \"cat\" 입니다.\n\n");
     next_line();
     printf("cat 명령어는 'concatenate'의 약자이며\n");
     printf("주로 파일 한 개 이상의 내용을 화면에 출력할 때 사용합니다.\n");
@@ -79,7 +79,7 @@ void training_cat(void)
     printf("리다이렉션에 대해서는 심화 명령어 트레이닝에서 다시 한 번 다루게 됩니다.\n");
     next_line();
     
-    printf("\"cat\" 명령어의 옵션은 다음과 같습니다.\n");
+    printf("\"cat\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n");
     next_line();
     
     printf("-b : 줄번호를 화면 왼쪽에 출력하지만 비어있는 행은 출력하지 않습니다.\n");

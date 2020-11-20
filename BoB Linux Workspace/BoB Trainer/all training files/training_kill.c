@@ -72,7 +72,7 @@ void training_kill(void)
     printf("[옵션]은 지정하지 않고 [프로세스명]만 입력해도 됩니다.\n");
     next_line();
 
-    printf("\"killall 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n");
+    printf("\"killall 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
     printf("[-e] : 긴 프로세스 이름에 일치해야 합니다.\n");
     printf("[-I] : 대소문자를 구별하지 않고 프로세스 이름으로 종료합니다.\n");
     printf("[-y] : 지정된 시간보다 이전 프로세스를 종료합니다.\n");
