@@ -8,6 +8,10 @@
 #       모든 경우의 수에 대해서 한번씩 다 대입하여 보완했음
 
 import os.path
+C_END     = "\033[0m"
+C_RED    = "\033[31m"
+C_GREEN  = "\033[32m"
+C_YELLOW = "\033[33m"
 
 def U20():
     flag = False
@@ -28,8 +32,8 @@ def U20():
     if (output == "") :
         f_output = f_output + "\t[알림] FTP 계정이 존재하지 않습니다.\n"         
     else :
-        f_output = f_output + "\t[알림] FTP 계정이 존재합니다.\n"
-        f_output = f_output + "\t\t따라서 FTP 계정에 대한 확인이 필요합니다.\n"  
+        f_output = f_output + C_YELLOW + "\t[알림] FTP 계정이 존재합니다.\n"
+        f_output = f_output + "\t\t따라서 FTP 계정에 대한 확인이 필요합니다.\n" + C_END  
     f_output = f_output + "\n"
 
     # FTP Setting File Check
@@ -59,22 +63,22 @@ def U20():
                 temp = handle.readline()     
 
             if (flag): # Result Print
-                f_output = f_output + "\t[경고] /etc/" + i + ".conf : anonymous 계정 접속이 활성화되어 있습니다.\n"
-                f_output = f_output + "\t[검사 결과] 보안 조치가 필요합니다.\n"
+                f_output = f_output + C_YELLOW + "\t[경고] /etc/" + i + ".conf : anonymous 계정 접속이 활성화되어 있습니다.\n" + C_END
+                f_output = f_output + C_RED + "\t[검사 결과] 보안 조치가 필요합니다.\n" + C_END
                 flag = False
             else :
-                f_output = f_output + "\t[검사 결과] 안전합니다.\n"    
+                f_output = f_output + C_GREEN + "\t[검사 결과] 안전합니다.\n" + C_END
             f_output = f_output + "\n"
 
     # if (FTP user found) && (setting file not found) -> report
     if (f_output.find("[검사 결과]") == -1) :  
         f_output = f_output + "\t[알림] FTP 프로그램 설정 파일이 존재하지 않습니다.\n"  
         if (f_output.find("FTP 계정이 존재합니다.") != -1) :
-            f_output = f_output + "\t[검사 결과] 보안 조치가 필요합니다.\n"    
+            f_output = f_output + C_RED + "\t[검사 결과] 보안 조치가 필요합니다.\n" + C_END  
             f_output = f_output + "\n"     
     # if (FTP user not found) && (setting file not found) -> safe 
         elif (f_output.find("FTP 계정이 존재하지 않습니다.") != -1) :
-            f_output = f_output + "\t[검사 결과] 안전합니다.\n"    
+            f_output = f_output + C_GREEN + "\t[검사 결과] 안전합니다.\n" + C_END    
             f_output = f_output + "\n"      
 
     # U-20 Report
