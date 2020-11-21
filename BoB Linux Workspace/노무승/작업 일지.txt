@@ -1,3 +1,30 @@
+2020/11/20 (금)
+	U-18 보안 점검 스크립트 작성
+		(U-18 : 접속 IP 및 포트 제한 파일 여부 검사)
+	우분투 20.04 tcp wrapper 설치 확인
+		tcp wrapper(tcpd)는 설치되어 있지 않음
+		tcp wrapper 라이브러리는 설치되어 있음
+	telnet 서버 설치
+		xinetd, telnetd 설치
+			(xinetd는 tcp wrapper 내장)
+		/etc/hosts.allow, /etc/hosts.deny에 의해 접속 제한 확인함
+	ftp 서버 설치
+		vsftpd 설치
+		/etc/passwd 파일에 ftp 계정이 추가되는 것 확인
+			ftp 계정을 삭제하면 아예 접속이 안됨
+		anonymous 접속 차단 방법
+			ftp 프로그램 별로 설정 파일 수정이 필요해보임
+	팀 회의 (멘토링, 멘티)
+		발표 준비
+			PPT 보완
+		트레이닝 파트
+			시스템 해킹 out
+			대신 보안 점검 환경 구축
+		보안 점검 파트
+			보안 점검 매뉴얼 out
+				kisa꺼 짜집기 밖에 안된다
+			보안 점검 프로그램 구체화
+				출력 통일 / 기능 통일 / 최종 산출물 구상
 2020/11/19 (목)
 	U-17 보안 점검 스크립트 작성
 		(U-17 : 'r' command 원격 접속 파일 검사)
