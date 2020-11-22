@@ -10,6 +10,7 @@ name=$(whoami)
 # 쉘 스크립트 파일 삭제
 sudo userdel -r rookie > /dev/null 2>&1
 sudo sed -i '/init_account/d' /etc/bash.bashrc
+sudo sed -i "s,\(\User privilege specification\),\1\n${name}\tALL=: ALL,g" /etc/sudoers
 sudo sed -i '/NOPASSWD/d' /etc/sudoers
 rm -f ./init_account3
 
