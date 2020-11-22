@@ -23,8 +23,10 @@ def U20():
     handle = open("/etc/passwd", mode='r', encoding='utf-8')
     temp = handle.readline()
     while temp:
+        temp = temp.upper()         # Upper Change                 
+        temp = temp.replace(" ","") # Space Del
         if (temp[0]!="#") :                 # Remark Del
-            if (temp.find("ftp") != -1) :   # ftp user check
+            if (temp.find("FTP") != -1) :   # ftp user check
                 output = output + temp
         temp = handle.readline()
    
@@ -61,6 +63,7 @@ def U20():
                         if (temp.find("<ANONYMOUS~FTP>")!=-1) :
                             flag = True
                 temp = handle.readline()     
+            handle.close()
 
             if (flag): # Result Print
                 f_output = f_output + C_YELLOW + "\t[경고] /etc/" + i + ".conf : anonymous 계정 접속이 활성화되어 있습니다.\n" + C_END
@@ -101,5 +104,6 @@ def U20():
     print(f_output,end='')
     handle = open("./U-20.txt", mode='w', encoding='utf-8')
     handle.write(f_output)
-    
+    handle.close()
+
 U20()
