@@ -37,12 +37,22 @@ void training_export(void)
 	run_command("myVal=\"hello\"");
 	next_line();
 
-    printf("\n환경 변수를 확인할 때는 \"echo\" 명령어를 이용하여 확인할 수 있습니다.\n\n");
-    printf("[실습] \"echo $myVal\"(을) 입력하여 \"myVal\" 변수가 잘 선언되었는지 확인해보세요.\n");
-    just_run_command("echo $myVal");
+    printf(\n"위의 실습으로 지정한 쉘 변수 \"myVal\"을 환경 변수로 변경해보겠습니다.\n\n");
     next_line();
 
-	printf("\n[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");
+    printf("[실습] \"export myVal\"(을)를 입력해보세요.\n");
+    just_run_command("export myVal");
+    printf("\n잘 입력하셨다면, 환경 변수 \"myVal\"이 환경 변수 목록에 등록되었을 것입니다.\n\n");
+    next_line();
+
+    printf("환경 변수를 확인할 때는 \"echo\" 명령어를 이용하여 확인할 수 있습니다.\n\n");
+    printf("[실습] \"echo $myVal\"(을) 입력하여 \"myVal\" 변수가 잘 선언되었는지 확인해보세요.\n");
+    just_run_command("echo $myVal");
+
+    printf("\n잘 입력하셨다면, 'hello'가 출력되는 것을 확인하실 수 있을 것입니다.\n\n");
+    next_line();
+
+	printf("[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");
 	just_run_command("export");
 
     /*
