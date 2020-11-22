@@ -33,10 +33,11 @@ void training_export(void)
 	printf("[실습] 'export myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
     printf("'hello' 라는 값을 저장하도록 선언해보세요.\n\n");
     printf("사용법 : export [환경변수명]=[값]\n");
-	run_command("export myVal=\"hello\"");
+	fake_run_command("export myVal=\"hello\"");
+    system("export myVal=\"hello\"");
 	next_line();
 
-	printf("[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n\n");
+	printf("[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");
 	just_run_command("export");
 
     /*
