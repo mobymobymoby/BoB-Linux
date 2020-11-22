@@ -7,12 +7,12 @@ void training_file()
 	
 	system("echo $SHELL > file.txt");
 
-	printf("이번에 학습할 명령어는 \"file\" 입니다.\n");
+	printf("이번에 학습할 명령어는 \"file\" 입니다.\n\n");
     printf("\"file\" 명령어는 파일의 종류(유형) 확인 및 속성 값을 확인할 때 사용합니다.\n");
 	next_line();
 
-    printf("\"cmp\" 명령어의 실행 파일은 \"/usr/bin/cmp\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cmp\"(으)로 있습니다.\n");
+    printf("\"file\" 명령어의 실행 파일은 \"/usr/bin/file\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"file\"(으)로 있습니다.\n");
     next_line();
 
 	printf("사용법은 \"file [옵션] [파일 이름]\" 입니다.\n");
