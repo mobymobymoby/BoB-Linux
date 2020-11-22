@@ -11,13 +11,15 @@ void training_export(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	printf("이번에 학습할 명령어는 \"export\" 입니다.\n\n");
-	printf("\"export\"는 환경 변수를 지정 혹은 변경하거나 이미 정의되어 있는 환경 변수를 보여줄 때 사용됩니다.\n");
+	printf("\"export\"는 환경 변수를 지정 혹은 변경하거나\n");
+    printf("이미 정의되어 있는 환경 변수를 보여줄 때 사용됩니다.\n");
 	next_line();
 
     printf("\"export\"(으)로 설정된 환경 변수는 전역 변수로 설정됩니다.\n");
     next_line();
 
-	printf("사용법은 \"export [환경변수 이름]=[값]\" 또는 \"export [환경변수 이름]\" 또는 \"export\" 입니다.\n\n");
+	printf("사용법은 \"export [환경변수 이름]=[값]\" 또는\n");
+    printf("\"export [환경변수 이름]\" 또는 \"export\" 입니다.\n\n");
     printf("ex) export test=\"helloworld\", export test\n\n");
 	next_line();
 
@@ -28,10 +30,10 @@ void training_export(void)
     printf("\"export\"만 입력하여 실행할 경우,  현재 환경 변수 목록을 출력합니다.\n\n");
     next_line();
 
-	printf("[실습] \"myVal=hello\"(을)를 입력하여 'myVal'의 변수 명으로\n");
+	printf("[실습] 'myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
     printf("'hello' 라는 값을 저장하도록 선언해보세요.\n\n");
     printf("사용법 : export [환경변수명]=[값]\n");
-	run_command("export myVal=hello");
+	run_command("export myVal=\"hello\"");
 	next_line();
 
 	printf("이제 'export myVal'를 입력해 셸 변수를 환경변수로 내보내보세요.\n\n");
@@ -47,11 +49,13 @@ void training_export(void)
 	next_line();
     */
 
-    printf("위의 보이시는 것들이 이미 선언된 환경 변수들입니다.\n");
+    printf("위의 보이시는 것들이 이미 선언된 환경 변수들입니다.\n\n\n");
     next_line();
 
-    printf("\"export\" 명령어에 의해 변경된 환경 변수는 \"export\"(을)를 실행한 사용자가 로그아웃 전까지만 유효합니다.\n");
-    printf("영구적으로 유효하게 하려면, 환경 변수를 정의하는 설정 파일(/etc/profile 등)에 \"export\" 명령어 구문을 적으시면 됩니다.\n");
+    printf("\"export\" 명령어에 의해 변경된 환경 변수는\n");
+    printf("\"export\"(을)를 실행한 사용자가 로그아웃 전까지만 유효합니다.\n\n");
+    printf("영구적으로 유효하게 하려면, 환경 변수를 정의하는 설정 파일(/etc/profile 등)에\n");
+    printf("\"export\" 명령어 구문을 적으시면 됩니다.\n");
     next_line();
 
 	printf("\"export\" 명령어의 학습이 끝났습니다.\n");
