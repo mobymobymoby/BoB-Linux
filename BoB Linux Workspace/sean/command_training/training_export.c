@@ -33,7 +33,7 @@ void training_export(void)
 	printf("[실습] 'myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
     printf("'hello' 라는 값을 저장하도록 선언해보세요.\n\n");
     printf("사용법 : [환경변수명]=[값]\n");
-	fake_command("myVal=\"hello\"");
+	fake_run_command("myVal=\"hello\"");
     popen("myVal=\"hello\"", "w");
 	next_line();
 
