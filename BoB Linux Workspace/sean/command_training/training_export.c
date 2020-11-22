@@ -30,14 +30,10 @@ void training_export(void)
     printf("\"export\"만 입력하여 실행할 경우,  현재 환경 변수 목록을 출력합니다.\n\n");
     next_line();
 
-	printf("[실습] 'myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
+	printf("[실습] 'export myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
     printf("'hello' 라는 값을 저장하도록 선언해보세요.\n\n");
     printf("사용법 : export [환경변수명]=[값]\n");
 	run_command("export myVal=\"hello\"");
-	next_line();
-
-	printf("이제 'export myVal'를 입력해 셸 변수를 환경변수로 내보내보세요.\n\n");
-	just_run_command("export myVal");
 	next_line();
 
 	printf("[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n\n");
@@ -49,7 +45,8 @@ void training_export(void)
 	next_line();
     */
 
-    printf("위의 보이시는 것들이 이미 선언된 환경 변수들입니다.\n\n\n");
+    printf("위의 보이시는 것들이 이미 선언된 환경 변수들입니다.\n\n");
+    printf("마지막 줄을 보시면 \"export\" 명령어로 추가한 환경 변수가 선언되어 있습니다.\n\n\n");
     next_line();
 
     printf("\"export\" 명령어에 의해 변경된 환경 변수는\n");
