@@ -7,7 +7,7 @@ void training_export(void)
 {
 	create_defdir();
 	system("clear");
-
+    system("myVal=\"hello\" && export myVal");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	printf("이번에 학습할 명령어는 \"export\" 입니다.\n\n");
