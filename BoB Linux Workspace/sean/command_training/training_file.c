@@ -5,7 +5,7 @@ void training_file()
 	create_defdir();
 	system("clear");
 	
-	system("echo $SHELL > file.txt");
+	system("echo $SHELL > test.txt");
 
 	printf("이번에 학습할 명령어는 \"file\" 입니다.\n\n");
     printf("\"file\" 명령어는 파일의 종류(유형) 확인 및 속성 값을 확인할 때 사용합니다.\n");
