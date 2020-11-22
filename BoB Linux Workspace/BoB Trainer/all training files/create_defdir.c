@@ -6,7 +6,9 @@ extern char rm_dir[DIR_SIZE + 10];
 
 void create_defdir(void)
 {
-	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", getlogin());
+	struct passwd *pwd;
+	pwd = getpwuid(getuid());
+	snprintf(def_dir, sizeof(def_dir), "/home/%s/tr", pwd->pw_name);
 
 	snprintf(rst_dir, sizeof(rst_dir), "rm -rf %s", def_dir);
 	system(rst_dir);

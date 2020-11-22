@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <pwd.h> // passwd 구조체 사용
 #include <stdio_ext.h> // __fpurge(stdin)
 
 #define CMD_SIZE 60 // 최대 59개의 문자 입력
