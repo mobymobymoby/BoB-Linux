@@ -16,11 +16,16 @@ void training_env(void)
     printf("\"env\" 명령어의 실행 파일은 \"/usr/bin/env\"(으)로 있습니다.\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"env\"(으)로 있습니다.\n");
     next_line();
-    printf("사용법은 \"env [옵션] [NAME]=[값]\" 입니다.\n");
+    printf("사용법은 \"env [옵션] [환경변수 이름]=[값]\" 입니다.\n");
     printf("옵션 없이 \"env\"만 입력할 경우 현재 환경 변수 목록을 출력합니다.\n\n");
     next_line();
+
+    printf("주의할 점은 \"env [환경변수 이름]=[값]\"(을)를 사용할 때\n");
+    printf("[환경변수 이름]과 '='(와)과 [값] 사이에 띄어쓰기는 없어야 합니다.\n");
+    next_line();
+
     printf("[실습] \"env\" 명령어를 입력해 \"myVal\"이라는 이름으로 \"hello\" 라는 값을 저장하도록 선언해보세요.\n");
-    printf("사용법 : env [이름]=[값]\n");
+    printf("사용법 : env [환경변수 이름]=[값]\n");
     just_run_command("env myVal=hello");
     next_line();
     
@@ -30,7 +35,7 @@ void training_env(void)
     printf("이제 선언된 환경변수를 수정해봅시다.\n\n");
     next_line();
     printf("[실습] \"env\" 명령어를 입력해 \"myVal\"의 변수를 \"linux\" 라는 값으로 수정해보세요.\n\n");
-    printf("사용법 : env [이름]=[값]\n");
+    printf("사용법 : env [환경변수 이름]=[값]\n");
     run_command("env myVal=linux");
     next_line();
 
