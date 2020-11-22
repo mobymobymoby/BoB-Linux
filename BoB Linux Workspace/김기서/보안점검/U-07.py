@@ -6,7 +6,6 @@ import printModule as pm
 
 def U07():
     report = open('./U-07.txt', mode='w', encoding='utf-8')
-
     pm.printTitle(report, '[U-07] /etc/passwd 파일 소유자 및 권한 설정')
 
     status = stat('/etc/passwd')
@@ -31,7 +30,7 @@ def U07():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printTitle(report, '[U-07] 조치 방법')
+        report.write('[U-07] 조치 방법\n')
         report.write('\t/etc/passwd 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
         report.write('\t\t#chown root /etc/passwd\n')
         report.write('\t\t#chmod 644 /etc/passwd\n')
