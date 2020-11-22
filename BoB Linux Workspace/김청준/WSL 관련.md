@@ -8,7 +8,7 @@
     - 그 후에 wsl 이미지 내보내기를 이용해 배포
     - 하지만, 우리가 작업하는 ova파일을 불러올 수 있는 방법을 찾지 못했으므로, 보안 점검은 불가
 
-- WSL 가져오기 / 내보내기
-```wsl --list --all``` 모든 wsl 이미지 리스트 보기<br\>
-```wsl --import <Name of the distro> <Fill path to save the backup .tar file>``` : wsl 이미지 가져오기<br\>
-```wsl --export <Name of the distro> <Fill path to save the backup .tar file>``` : wsl 이미지 내보내기<br\>
+- WSL 가져오기 / 내보내기<br />
+```wsl --list --all``` 모든 wsl 이미지 리스트 보기<br />
+```wsl --import <Name of the distro> <Fill path to save the backup .tar file>``` : wsl 이미지 가져오기<br />
+```wsl --export <Name of the distro> <Fill path to save the backup .tar file>``` : wsl 이미지 내보내기<br />
