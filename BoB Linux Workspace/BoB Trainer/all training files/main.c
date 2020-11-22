@@ -25,13 +25,19 @@ int main()
         printf("1 : 기초 명령어 학습\n2 : 심화 명령어 학습\nq : 종료\n실행할 학습을 선택하세요 : ");
         menu = getchar();
         __fpurge(stdin);
-
+        
+        
         if (menu == '1')
+        {
+            training_linux_basic();
+            break;
+        }
+        else if (menu == '2')
         {
             essential_trainer();
             break;
         }
-        else if (menu == '2')
+        else if (menu == '3')
         {
             advanced_trainer();
             break;
