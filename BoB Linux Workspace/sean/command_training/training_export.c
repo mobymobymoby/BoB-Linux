@@ -37,7 +37,7 @@ void training_export(void)
 	run_command("myVal=\"hello\"");
 	next_line();
 
-    printf(\n"위의 실습으로 지정한 쉘 변수 \"myVal\"을 환경 변수로 변경해보겠습니다.\n\n");
+    printf("\n위의 실습으로 지정한 쉘 변수 \"myVal\"을 환경 변수로 변경해보겠습니다.\n\n");
     next_line();
 
     printf("[실습] \"export myVal\"(을)를 입력해보세요.\n");
