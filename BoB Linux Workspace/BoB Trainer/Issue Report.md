@@ -54,5 +54,7 @@
  printf("%s\n", pwd->pw_name);
  ```
  ㄴ 다음과 같이 사용하면, su에 관계 없이 현재 로그인 되어 있는 유저의 이름을 반환
+ 
+ - create_dir 함수와 run_command 함수에 적용 완료(20201122)
   
  
