@@ -39,7 +39,7 @@ void training_export(void)
 
     printf("\n환경 변수를 확인할 때는 \"echo\" 명령어를 이용하여 확인할 수 있습니다.\n\n");
     printf("[실습] \"echo $myVal\"(을) 입력하여 \"myVal\" 변수가 잘 선언되었는지 확인해보세요.\n");
-    just_run_command("echo \$myVal");
+    just_run_command("echo $myVal");
     next_line();
 
 	printf("\n[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");
