@@ -15,7 +15,8 @@ void training_export(void)
     printf("이미 정의되어 있는 환경 변수를 보여줄 때 사용됩니다.\n");
 	next_line();
 
-    printf("\"export\"(으)로 설정된 환경 변수는 전역 변수로 설정됩니다.\n");
+    printf("\"export\"(으)로 이미 선언된 쉘 변수를 환경 변수로 변경해줄 때 자주 사용하며\n");
+    printf("설정된 환경 변수는 전역 변수로 설정됩니다.\n");
     next_line();
 
 	printf("사용법은 \"export [환경변수 이름]=[값]\" 또는\n");
@@ -30,14 +31,17 @@ void training_export(void)
     printf("\"export\"만 입력하여 실행할 경우,  현재 환경 변수 목록을 출력합니다.\n\n");
     next_line();
 
-	printf("[실습] 'export myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
+	printf("[실습] 'myVal=\"hello\"'(을)를 입력하여 'myVal'의 변수 명으로\n");
     printf("'hello' 라는 값을 저장하도록 선언해보세요.\n\n");
-    printf("사용법 : export [환경변수명]=[값]\n");
-	fake_run_command("export myVal=\"hello\"");
-    system("export myVal=\"hello\"");
+    printf("사용법 : [환경변수명]=[값]\n");
+	run_command("myVal=\"hello\"");
 	next_line();
 
-	printf("[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");
+    printf("[실습] \"export myVal\"(을) 입력하여 \"myVal\" 변수가 잘 선언되었는지 확인해보세요.\n");
+    just_run_command("export myVal");
+
+
+	printf("\n[실습] 'export'(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");
 	just_run_command("export");
 
     /*
