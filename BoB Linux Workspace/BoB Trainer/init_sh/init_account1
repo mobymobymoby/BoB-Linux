@@ -67,7 +67,8 @@ sudo mv ./init_account2 /home/${name}/
 sudo mv ./init_account3 /home/${name}/
 sudo mv ./README /home/${name}/
 
-# bash.bashrc에 있는 자동 시작 스크립트를 제거
+# bashrc에 있는 자동 시작 스크립트를 제거
+sudo sed -i '/init_account/d' /home/rookie/.bashrc
 rm -f /home/rookie/init_account1
 
 # 생성한 계정으로 su하며, bash.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
