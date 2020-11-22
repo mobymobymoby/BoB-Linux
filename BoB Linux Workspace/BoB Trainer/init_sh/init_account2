@@ -19,7 +19,7 @@ rm -f ./init_account2
 
 # 다음 쉘 스크립트를 실행하기 위한 문장
 # /etc/bash.bashrc에 다음 쉘 스크립트를 등록하여 로그인 시 바로 실행되게 함
-sudo sed -i'' -r -e "/fbterm/i\/home/${name}/init_account3" /etc/bash.bashrc
+sudo sed -i -e "\$a/home/${name}/init_account3" /etc/bash.bashrc
 clear
 printf "설정을 마치기 위해 재부팅을 실행합니다.\n\n"
 printf "다시 재부팅이 완료되면 방금 생성한 계정으로 로그인 해주세요.\n\n"
@@ -37,4 +37,4 @@ printf " 1 초후에 종료됩니다.\n\n"
 sleep 1
 
 # 재부팅
-sudo init 6
+sudo systemctl poweroff
