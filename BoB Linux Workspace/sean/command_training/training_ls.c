@@ -158,5 +158,4 @@ void training_ls(void)
     printf("\"ls\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
     delete_defdir();
-    printf("고생하셨습니다!\n");
 }
