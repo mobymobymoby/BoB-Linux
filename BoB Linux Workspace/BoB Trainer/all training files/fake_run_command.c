@@ -8,8 +8,12 @@ int fake_run_command(char valid_cmd[])
 	while (1)
 	{
 		printf("\n");
+		
+		struct passwd *pwd;
+		pwd = getpwuid(getuid());
+		printf("\n");
 		getcwd(dir_buf, sizeof(dir_buf));
-		printf("%s@BoB:%s$ ", getlogin(), dir_buf);
+		printf("%s@localhost:%s$ ", pwd->pw_name, dir_buf);
 		fgets(cmd, sizeof(cmd), stdin);
 
 		// 나머지 입력 값 제거
@@ -37,8 +41,11 @@ int nothing_print_fake_run_command(char valid_cmd[])
 	while (1)
 	{
 		printf("\n");
+		
+		struct passwd *pwd;
+		pwd = getpwuid(getuid());
 		getcwd(dir_buf, sizeof(dir_buf));
-		printf("%s@BoB:%s$ ", getlogin(), dir_buf);
+		printf("%s@localhost:%s$ ", pwd->pw_name, dir_buf);
 		fgets(cmd, sizeof(cmd), stdin);
 
 		// 나머지 입력 값 제거
