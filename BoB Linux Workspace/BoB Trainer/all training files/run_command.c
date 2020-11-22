@@ -6,9 +6,12 @@ int run_command(char valid_cmd[])
 	char dir_buf[DIR_SIZE];
 	while (1)
 	{
+		struct passwd *pwd;
+		pwd = getpwuid(getuid());
+		
 		printf("\n");
 		getcwd(dir_buf, sizeof(dir_buf));
-		printf("%s@localhost:%s$ ", getlogin(), dir_buf);
+		printf("%s@localhost:%s$ ", pwd->pw_name, dir_buf);
 		
 		fgets(cmd, sizeof(cmd), stdin);
 
@@ -37,9 +40,12 @@ int just_run_command(char valid_cmd[])
 	char dir_buf[DIR_SIZE];
 	while (1)
 	{
+		struct passwd *pwd;
+		pwd = getpwuid(getuid());
+		
 		printf("\n");
 		getcwd(dir_buf, sizeof(dir_buf));
-		printf("%s@localhost:%s$ ", getlogin(), dir_buf);
+		printf("%s@localhost:%s$ ", pwd->pw_name, dir_buf);
 		fgets(cmd, sizeof(cmd), stdin);
 
 		// 나머지 입력 값 제거
