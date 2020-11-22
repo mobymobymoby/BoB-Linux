@@ -27,10 +27,10 @@ void training_file()
     printf("텍스트 파일임을 알 수 있습니다.\n");
 	next_line();
 
-	printf("[디렉토리 관련 지식]\n");
+	printf("[디렉토리 관련 지식]\n\n");
 	printf("리눅스에서는 디렉토리도 파일로 취급합니다.\n");
-	printf("'.'  은 현재 디렉토리를 가리키는 파일입니다.\n");
-	printf("'..' 은 상위 디렉토리를 가리키는 파일입니다.\n\n");
+	printf("'.'  : 현재 디렉토리를 가리키는 파일입니다.\n");
+	printf("'..' : 상위 디렉토리를 가리키는 파일입니다.\n\n");
 	next_line();
 
 	printf("[실습] \"file .\"(을)를 입력하여 현재 디렉토리 경로를 의미하는\n");
@@ -66,7 +66,7 @@ void training_file()
 
     printf("\n위의 결과는 지금까지 실습했던 결과와는 보여주는 것이 좀 다를 것입니다.\n\n");
     printf("\"text/plain\" 부분은 \"파일의 종류/파일의 포맷\" 형태입니다.\n");
-    printf("그리고 \"charset=us-ascii\"는 '문자가 us-ascii로 작성되어있다'라는 뜻입니다.\n");
+    printf("그리고 \"charset=us-ascii\"는 '문자셋이 us-ascii(으)로 작성되어있다'라는 뜻입니다.\n");
     next_line();
 
 	printf("[Tip] 확장자가 없는 파일들을 \"file\" 명령어를 통해 어떤 유형인지 확인할 수 있습니다.\n");
