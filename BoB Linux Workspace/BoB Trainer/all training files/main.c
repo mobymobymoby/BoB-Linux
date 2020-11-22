@@ -22,7 +22,7 @@ int main()
     char menu;
     while (1)
     {
-        printf("1 : 기초 명령어 학습\n2 : 심화 명령어 학습\nq : 종료\n실행할 학습을 선택하세요 : ");
+        printf("1 : 리눅스 기초\n2 : 기초 명령어 학습\n3 : 심화 명령어 학습\nq : 종료\n실행할 학습을 선택하세요 : ");
         menu = getchar();
         __fpurge(stdin);
         
