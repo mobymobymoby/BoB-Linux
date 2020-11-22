@@ -13,7 +13,7 @@ do
 	printf "기본 계정을 유지하려면 '1'을, 새로운 계정을 생성하려면 '2'를 입력하세요. : "
 	read num
 	if [ ${num} -eq 1 ] > /dev/null 2>&1 ; then
-		sudo sed -i '/init_account/d' /etc/bash.bashrc
+		sudo sed -i '/init_account/d' /home/rookie/.bashrc
 		sudo sed -i '/NOPASSWD/d' /etc/sudoers
 		rm -f init_account*
 		exit
