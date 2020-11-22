@@ -59,7 +59,7 @@ sudo gpasswd -a $name video > /dev/null 2>&1
 sudo sed -i "s,\(\User privilege specification\),\1\n${name}\tALL=/usr/bin/apt\n${name}\tALL=NOPASSWD: /usr/sbin/userdel\n${name}\tALL=NOPASSWD: /usr/bin/sed,g" /etc/sudoers
 
 # 다음 쉘 스크립트를 실행하기 위한 문장
-sudo sed -i'' -r -e "/fbterm/i\/home/${name}/init_account2" /etc/bash.bashrc
+sudo sed -i -e "\$a/home/${name}/init_account2" /etc/bash.bashrc
 
 # 현재 디렉토리에 있는 파일을 홈 디렉토리로 이동시킴
 # sudo mv ./* /home/${name}/
