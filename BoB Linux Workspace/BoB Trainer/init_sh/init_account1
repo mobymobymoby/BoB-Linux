@@ -56,7 +56,7 @@ sleep 1
 printf "BoB Linux를 위한 기타 설정 중입니다.\n\n"
 sleep 1
 sudo gpasswd -a $name video > /dev/null 2>&1
-sudo sed -i "s,\(\User privilege specification\),\1\n${name}\tALL=/usr/bin/apt\n${name}\tALL=NOPASSWD: /usr/sbin/userdel\n${name}\tALL=NOPASSWD: /usr/bin/sed,g" /etc/sudoers
+sudo sed -i "s,\(\User privilege specification\),\1\n${name}\tALL=NOPASSWD: /usr/sbin/userdel\n${name}\tALL=NOPASSWD: /usr/bin/sed,g" /etc/sudoers
 
 # 다음 쉘 스크립트를 실행하기 위한 문장
 sudo sed -i -e "\$a/home/${name}/init_account2" /etc/bash.bashrc
