@@ -28,11 +28,11 @@ def U08():
 
     isRightPerm = False
     perm = int(oct(status.st_mode)[-3:])
-    if perm <= 400:
+    if perm == 400:
         isRightPerm = True
-        pm.printNotice(report, '/etc/shadow 파일의 권한이 400 이하입니다.')
+        pm.printNotice(report, '/etc/shadow 파일의 권한이 400 입니다.')
     else:
-        pm.printWarning(report, '/etc/shadow 파일의 권한이 400 이하가 아닙니다.')
+        pm.printWarning(report, '/etc/shadow 파일의 권한이 400이 아닙니다.')
 
     if isRightOwner and isRightPerm:
         pm.printSafe(report)
