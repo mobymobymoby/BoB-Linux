@@ -27,9 +27,9 @@ void training_chmod(void)
     printf("ex) chmod -R ug+rx test , chmod -R 550 test\n");
     next_line();
 
-    printf("[옵션]은 선택 사항이며 해당 명령어에 지정할 옵션을 지정합니다.\n");
-    printf("[모드](은)는 '숫자 모드' 또는 '문자 모드'로 지정할 권한을 입력합니다.\n");
-    printf("[파일]은 사용 권한을 변경할 파일명을 입력합니다.\n\n");
+    printf("[옵션]은 선택 사항이며 해당 명령어에 지정할 옵션을 지정합니다.\n\n");
+    printf("[모드](은)는 '숫자 모드' 또는 '문자 모드'로 지정할 권한을 입력합니다.\n\n");
+    printf("[파일]은 사용 권한을 변경할 파일명을 입력합니다.\n\n\n");
 	next_line();
 
 	printf("\"chmod\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
