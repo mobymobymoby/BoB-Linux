@@ -25,22 +25,24 @@ void training_tar()
 	printf("대표적인 조합 두 가지는 아래와 같습니다.\n\n");
 	printf("\t-cvf : 여러 파일을 하나의 tar 파일로 묶을 때 사용\n");
 	printf("\t-xvf : 묶여있는 tar 파일을 풀 때 사용\n");
+	next_line();
 	printf("이 두 옵션은 잘 기억☆해주셨으면 합니다.\n\n");
 	next_line();
 	printf("tar 명령어는 다음과 같이 사용합니다.\n");
 	printf("\t$ tar [옵션] [결과파일 이름] [묶을 파일1] [묶을 파일2] ...\n");
 	next_line();
 	printf("tar -cvf 를 이용하여 file1, file2, file3를 'test.tar'로 묶어보세요.\n");
-	run_command("tar -cvf test.tar file1 file2 file3");
-
+	just_run_command("tar -cvf test.tar file1 file2 file3");
+	printf("\n묶은 후에는 묶을 때 사용된 파일들의 목록이 출력됩니다.\n");
 	printf("이번에는 tar -tvf 를 이용하여 'test.tar'의 내용을 확인해보세요.\n");
-	run_command("tar -tvf test.tar");
+	just_run_command("tar -tvf test.tar");
 	
-	printf("-tvf 옵션을 사용하여 방금 전에 하나로 합친 파일 들을 볼 수 있습니다.\n");
+	printf("\n-tvf 옵션을 사용하여 하나로 합친 파일의 정보를 볼 수 있습니다.\n");
 	next_line();
 	printf("그러면 다시 tar -xvf 를 이용하여 'test.tar'를 풀어봅시다.\n");
-	run_command("tar -xvf test.tar");
-
+	just_run_command("tar -xvf test.tar");
+	printf("\ntest.tar의 묶음이 해제되면서 풀어진 파일의 목록이 출력됩니다.\n");
+	next_line();
 	printf("단순히 tar 로 묶는 것으로는 압축은 되지 않습니다. tar는 어디까지나 묶어만 줍니다.\n");
 	printf("압축은 -j 혹은 -z 옵션을 덧붙여서 이뤄집니다.\n");
 	next_line();
