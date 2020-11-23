@@ -147,7 +147,7 @@ void training_chmod(void)
 	printf("\n");
 	system("ls -al");
 	printf("\n파일 목록을 출력하면 권한이 성공적으로 부여된 것을 확인할 수 있습니다.\n\n");
-	next_linux();
+	next_line();
 
 	printf("\"chmod\" 명령어의 학습이 끝났습니다.");
     printf("고생하셨습니다.\n");
