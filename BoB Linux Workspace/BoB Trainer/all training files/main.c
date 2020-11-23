@@ -14,7 +14,7 @@ int main()
 
     training_intro();
 
-    select_menu(void);
+    select_menu();
     
     printf("\n[트레이너를 종료합니다.]\n");
     
