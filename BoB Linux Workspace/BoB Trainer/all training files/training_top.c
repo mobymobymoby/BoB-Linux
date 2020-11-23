@@ -11,7 +11,7 @@ void training_top(void)
 	next_line();
 
 	printf("[실습] top 명령어를 입력해보세요.\n");
-	fake_run_command("top");
+	nothing_print_fake_run_command("top");
 	printf("   PID USER      PR  NI    VIRT    RES    SHR S  %%CPU  %%MEM     TIME+ COMMAND  \n");
 	printf("  1234 rookie    20   0  893548  93596  58916 R   1.1   2.2   1:30.65 TEST     \n");
 	next_line();
@@ -24,9 +24,9 @@ void training_top(void)
 	printf("(위 결과에서 'TEST'라는 프로그램을 실행한 사용자는 'user'라는 것을 의미합니다.)\n");
 	next_line();
 
-	printf("PR 또는 PRI는 Priority를 말하며, 시스템이 NICE 값를 이용하여 계산한 실제 우선순위입니다.\n");
+	printf("PR 또는 PRI는 Priority(우선순위)를 말하며, \n시스템이 NICE 값를 이용하여 계산한 실제 우선순위입니다.\n");
 	next_line();
-	printf("모든 프로세스는 PR값을 가지고 있으며, 그 범위는 1 ~ 139 까지 입니다.\n");
+	printf("모든 프로세스는 PR값을 가지고 있으며, 그 범위는 1 ~ 139 까지 입니다.\n\n");
 	printf("PR 1이 가장 우선순위가 높고, PR 139가 가장 우선순위가 낮다고 볼 수 있습니다.\n");
 	printf("NI의 최소 값인 -20이 PR 100을 의미하며, NI의 최대 값인 19가 PR 139를 의미합니다.\n");
 	next_line();
@@ -45,7 +45,7 @@ void training_top(void)
 	printf("SHR는 해당 프로세스에 의해 사용된 공유메모리의 양을 말합니다.\n");
 	next_line();
 
-	printf("S는 Process State를 말하며, 현재 프로세스의 상태를 의미합니다.\n");
+	printf("S는 Process State를 말하며, 현재 프로세스의 상태를 의미합니다.\n\n");
 	printf("State의 값은 S(sleeping), R(running), W(swapped out process), Z(zombies)가 있습니다.\n");
 	printf("(위 결과에서 State값은 R로 해당 프로그램이 현재 실행 중인 것을 의미합니다.)\n");
 	next_line();
@@ -62,7 +62,7 @@ void training_top(void)
 	next_line();
 
 	printf("[top 명령어 옵션] (기능)\n\n");
-	printf("     (실행 전) top -p [PID]  : 특정 프로세스만 모니터링\n");
+	printf("    (실행 전) top -p [PID]  : 특정 프로세스만 모니터링\n");
 	printf("    k 입력 후 PID 입력       : 해당 프로세스 종료\n");
 	printf("    r 입력 후 PID, NICE 입력 : 해당 프로세스 우선 순위 변경\n");
 	printf("    d 입력 후 초(Sec) 입력   : 지정된 초 마다 목록 갱신\n");
@@ -70,7 +70,7 @@ void training_top(void)
 	printf("    q                        : top 프로그램 종료\n");
 	next_line();
 
-	printf("비슷한 명령어로는 'ps' 명령어가 있습니다.\n");
+	printf("비슷한 명령어로는 'ps' 명령어가 있습니다.\n\n");
 	printf("ps 명령어는 실행된 시점에서의 시스템 상태만 보여주지만,\n");
 	printf("top 명령어는 주기적으로 시스템 상태를 갱신하여 보여주는 차이점이 있습니다.\n");
 	next_line();
