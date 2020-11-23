@@ -1,3 +1,9 @@
+2020/11/23 (월)
+	U-23 보안 점검 스크립트 작성
+		(U-23 : DoS 공격에 취약한 서비스 비활성화 검사)
+	U-24 보안 점검 스크립트 작성
+		(U-24 : NFS 서비스 비활성화 검사)
+	NFS 서버, 클라이언트 설치 및 테스트
 2020/11/22 (일)
 	U-21 보안 점검 스크립트 작성
 		(U-21 : r 계열 서비스 비활성화 검사)
@@ -6,7 +12,7 @@
 2020/11/21 (토)
 	팀 프로젝트 2차 발표 (온라인 참가)
 		녹화 영상 공유
-	ProFTP 설치
+	ProFTP (FTP 서버) 설치 및 테스트
 		설정 파일에서 anonymous 계정 제어 가능
 	U-20 보안 점검 스크립트 작성
 		(U-20 : Anonmous FTP 계정 비활성화 여부 검사)
@@ -30,12 +36,11 @@
 	우분투 20.04 tcp wrapper 설치 확인
 		tcp wrapper(tcpd)는 설치되어 있지 않음
 		tcp wrapper 라이브러리는 설치되어 있음
-	telnet 서버 설치
+	telnet 서버 설치 및 테스트
 		xinetd, telnetd 설치
 			(xinetd는 tcp wrapper 내장)
 		/etc/hosts.allow, /etc/hosts.deny에 의해 접속 제한 확인함
-	ftp 서버 설치
-		vsftpd 설치
+	vsftpd (FTP 서버) 설치 설치 및 테스트
 		/etc/passwd 파일에 ftp 계정이 추가되는 것 확인
 			ftp 계정을 삭제하면 아예 접속이 안됨
 		anonymous 접속 차단 방법

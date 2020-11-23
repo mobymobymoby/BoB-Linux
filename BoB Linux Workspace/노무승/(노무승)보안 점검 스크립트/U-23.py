@@ -1,4 +1,4 @@
-# [U-23] DoS 공격에 취약한 서비스 비활성화
+# [U-23] DoS 공격에 취약한 서비스 비활성화 검사
 # 2020/11/23 : 노무승
 #   '/etc/inetd.conf' 파일과 '/etc/xinetd.d/~' 파일을 검사하여 판단함.
 
@@ -10,7 +10,7 @@ C_YELLOW = "\033[33m"
 
 def U23() :
     f_output = ""
-    f_output = f_output + "[U-23] DoS 공격에 취약한 서비스 비활성화" + "\n"
+    f_output = f_output + "[U-23] DoS 공격에 취약한 서비스 비활성화 검사" + "\n"
     flag = False
     path = "/etc/inetd.conf"
     list = "echo echo-udp discard discard-udp daytime daytime-udp chargen chargen-udp ntp ntp-udp snmp snmp-udp"
