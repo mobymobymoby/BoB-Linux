@@ -19,7 +19,7 @@ void training_chown(void)
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"chown\"(으)로 있습니다.\n");
     next_line();
 
-	printf("사용법은 \"chown [옵션] [소유자] [:그룹] [파일 혹은 디렉토리]\" 입니다.\n");
+	printf("사용법은 \"chown [옵션] [소유자][:그룹] [파일 혹은 디렉토리]\" 입니다.\n");
     printf("ex1) chown rookie test.txt\n");
     printf("ex2) chown rookie /home/rookie/testdir\n");
     next_line();
