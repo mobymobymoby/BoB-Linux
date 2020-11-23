@@ -32,6 +32,7 @@ void essential_trainer(void);
 void training_intro(void);
 void print_banner(void);
 void program_information(void);
+void select_menu(void);
 
 /* 함수 리스트 */
 // 김기서 명령어
