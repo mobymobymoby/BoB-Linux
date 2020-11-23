@@ -2,6 +2,7 @@
 
 void program_information(void)
 {
+	system("clear");
 	printf("Thanks for using our trainer\n");
 	printf("This Trainer mady by BoB 9th Team 'Black Moon'\n");
 	printf("\n");
