@@ -22,6 +22,7 @@ void training_su(void)
 	printf("적절한 패스워드를 입력한 후에는 아래와 같이 프롬프트 창이 변화합니다.\n");
 	printf("test@localhost:$\n");
 	next_line();
+	printf("프롬프트에서 표시되는 계정명이 'test'로 변화되어\n사용자가 전환되었음을 알려줍니다.\n");
 
 	printf("'su - [전환할 사용자 이름]' 과 같이 중간에 - 를 추가하면\n");
 	printf("해당 사용자의 홈 디렉터리로 이동합니다.\n");
