@@ -1,3 +1,5 @@
+#include "func.h"
+
 void program_information(void)
 {
 	printf("Thanks for using our trainer\n");
