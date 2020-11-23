@@ -1,5 +1,6 @@
 # [U-23] DoS 공격에 취약한 서비스 비활성화
 # 2020/11/23 : 노무승
+#   '/etc/inetd.conf' 파일과 '/etc/xinetd.d/~' 파일을 검사하여 판단함.
 
 import os.path
 C_END     = "\033[0m"
