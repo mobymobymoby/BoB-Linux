@@ -13,7 +13,5 @@ void program_information(void)
 
 	printf("\nIf you have any question, please contact below information\n");
 
-	printf("\nblack6765@gmail.com(KIM CHEONG-JUN, PM)\n");
-
-	printf("Thanks for using our trainer\n");
+	printf("\nblack6765@gmail.com(KIM CHEONG-JUN, Project Manager)\n");
 }
