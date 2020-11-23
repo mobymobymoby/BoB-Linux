@@ -130,7 +130,7 @@ void training_curl(void)
 
     printf("위의 옵션을 포함하여 \"curl\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
     printf("[ -k, --insecure ]\nhttps 사이트를 SSL certificate 검증을 하지 않고 연결합니다.\n");
-    pinrtf("\"wget\" 명령어의 --no-check-certificate 옵션과 비슷합니다.\n\n");
+    printf("\"wget\" 명령어의 --no-check-certificate 옵션과 비슷합니다.\n\n");
     printf("[ -l, --head ]\nHTTP header만 보여주고 content는 표시하지 않습니다.\n");
     printf("[ -D, --dump-header <file> ]\n<file>에 HTTP header를 기록합니다.\n\n");
     printf("[ -L, --location ]\n서버에서 HTTP 301이나 HTTP302 응답이 왔을 경우 리다이렉션 되는 URL로 따라갑니다.\n");
