@@ -11,7 +11,7 @@ C_YELLOW = "\033[33m"
 
 def U22() :
     f_output = ""
-    f_output = f_output + "[U-22] Cron 관련 설정 파일 점검 " + "\n"
+    f_output = f_output + "[U-22] Cron 관련 설정 파일 점검" + "\n"
     flag = False
     list = ["/etc/cron.allow","/etc/cron.deny"]
 
