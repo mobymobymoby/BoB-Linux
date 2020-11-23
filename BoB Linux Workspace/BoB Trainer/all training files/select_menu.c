@@ -1,3 +1,5 @@
+#include "func.h"
+
 void select_menu(void)
 {
     char menu[20] = "";
