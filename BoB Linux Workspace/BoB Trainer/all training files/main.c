@@ -16,7 +16,7 @@ int main()
 
     select_menu();
     
-    printf("\n[트레이너를 종료합니다.]\n");
+    printf("\n[트레이너를 종료합니다.]\n\n");
     
     return 0;
 }
