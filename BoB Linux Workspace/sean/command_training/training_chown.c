@@ -11,8 +11,10 @@ void training_chown(void)
 
     //실습할 파일&디렉토리 제공
     system("touch file1");
-
+    
+    system("clear");
 	printf("이번에 학습할 명령어는 \"chown\" 입니다.\n\n");
+    
 	printf("\"chown\"는 파일이나 디렉토리의 소유권 및 그룹 소유권을 변경하는 명령어입니다.\n\n");
 	next_line();
 
