@@ -67,23 +67,26 @@ void training_chmod(void)
     printf("'x' : 실행\n\n");
 	next_line();
 
-	printf("만약 '모든 사용자' 및 '그룹'에게 '모든 권한'을 부여하고 싶다면\n");
+	printf("만약 모든 '사용자' 및 '그룹'에게 '모든 권한'을 부여하고 싶다면\n");
     printf("명령어는 \"chmod ugo+rwx [파일]\" 또는 \"chmod a+rwx [파일]\"으로 사용됩니다.\n\n\n");
 	next_line();
     
 	system("ls -al");
 	printf("\n\n현재 디렉토리에 'file1' 파일이 있고\n");
-    printf("설정된 권한은 앞의 '파일의 유형'을 나타내는 첫 번째 자리를 빼고 9자리인 '---------' 입니다.\n");
+    printf("설정된 권한은 앞의 '파일의 유형'을 나타내는 첫 번째 자리를 빼고\n");
+    printf("9자리인 '---------' 입니다.\n");
     next_line();
 
     printf("즉 \"소유자\", \"그룹 사용자\", \"다른 사용자\" 모두 읽기, 쓰기, 실행 권한이 없습니다.\n\n");
 	next_line();
 
-	printf("[실습] \"chmod\" 명령의 '문자 모드'를 사용하여 'file1'의 \"소유자\"에게 '쓰기' 권한을 부여하고\n");
+	printf("[실습] \"chmod\" 명령의 '문자 모드'를 사용하여\n");
+    printf("'file1'의 \"소유자\"에게 '쓰기' 권한을 부여하고\n");
     printf("\"그룹\"과 \"다른 사용자\"에게 '읽기' 권한을 부여해보세요.\n");
     printf("사용법 : chmod [모드] [파일]\n\n");
     printf("(Tip) 각 사용자마다 권한을 다르게 부여할 경우 콤마 기호(,)를 이용하여 'u+x,go+w'과 같이 구분합니다.\n");
     run_command("chmod u+w,go+r file1");
+    next_line();
     
 	printf("\n");
 	system("ls -al");
@@ -98,12 +101,12 @@ void training_chmod(void)
 
     printf("'4' : 읽기 권한\n");
     printf("'2' : 쓰기 권한\n");
-    printf("'1' : 실행 권한\n");
+    printf("'1' : 실행 권한\n\n");
     printf("위와 같은 가중치의 값을 부여하고\n");
     printf("여러 권한을 지정할 경우 해당 값을 더해서 지정합니다.\n");
 	next_line();
 
-	printf("만약 '읽기', '쓰기', '실행'의 모든 권한을 지정하고 싶다면 세 값을 모두 더한\n");
+	printf("만약 '읽기', '쓰기', '실행' 모든 권한을 지정하고 싶다면 세 값을 모두 더한\n");
     printf("\"4+2+1 = '7'\"이 됩니다.\n");
 	next_line();
 
@@ -121,7 +124,7 @@ void training_chmod(void)
 	printf("예를 들어 소유자는 모든 권한을 부여하고\n");
     printf("그룹과 다른 사용자는 '읽기', '쓰기' 권한만 부여하고 싶다면\n\n");
     printf("명령어는 'chmod 766 [파일]'(와)과 같이 사용됩니다.\n");
-    printf("모든 권한 : (4+2+1 = 7) / 읽기, 쓰기 : (4+2 = 6)\n");
+    printf("모든 권한 : (4+2+1 = 7) / 읽기, 쓰기 : (4+2 = 6)\n\n");
 	next_line();
 
     system("rm file1");
@@ -130,14 +133,16 @@ void training_chmod(void)
 	system("ls -al");
 
 	printf("\n\n현재 디렉토리에 'file2' 파일이 있고\n");
-    printf("설정된 권한은 앞의 '파일의 유형'을 나타내는 첫 번째 자리를 빼고 9자리인 '---------' 입니다.\n");
+    printf("설정된 권한은 앞의 '파일의 유형'을 나타내는 첫 번째 자리를 빼고\n");
+    printf("9자리인 '---------' 입니다.\n");
     next_line();
 
-    printf("즉 \"소유자\", \"그룹 사용자\", \"다른 사용자\" 모두 읽기, 쓰기, 실행 권한이 없습니다.\n\n");
+    printf("즉, \"소유자\", \"그룹\", \"다른 사용자\" 모두 '읽기', '쓰기', '실행' 권한이 없습니다.\n\n");
 	next_line();
     
 
-	printf("[실습] \"chmod\" 명령의 '숫자 모드'를 사용하여 'file2'의 \"소유자\"에게 '쓰기' 권한을 부여하고\n");
+	printf("[실습] \"chmod\" 명령의 '숫자 모드'를 사용하여\n");
+    printf("'file2'의 \"소유자\"에게 '쓰기' 권한을 부여하고\n");
     printf("\"그룹\"과 \"다른 사용자\"에게 '읽기' 권한을 부여해보세요.\n");
     printf("사용법 : chmod 000 [파일]\n\n");
     printf("(읽기 권한 : 4, 쓰기 권한 :  2, 실행 권한 : 1입니다.)\n");
@@ -148,8 +153,12 @@ void training_chmod(void)
 	system("ls -al");
 	printf("\n파일 목록을 출력하면 권한이 성공적으로 부여된 것을 확인할 수 있습니다.\n\n");
 	next_line();
+    
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
+    next_line();
 
-	printf("\"chmod\" 명령어의 학습이 끝났습니다.");
+	printf("\"chmod\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 
 	delete_defdir();
