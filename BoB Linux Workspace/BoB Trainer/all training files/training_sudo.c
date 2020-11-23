@@ -33,7 +33,7 @@ void training_sudo(void)
 	fake_run_command("sudo -s");
 	printf("sudo 명령어 사용시에는 현재 로그인 되어 있는 사용자의 패스워드를 입력해야합니다.\n\n");
 	printf("[sudo] password for %s:\n", pwd->pw_name);
-	printf("다음과 같은 문장이 출력된 후에 비밀번호를 입력한다면, 아래처럼 프롬프트가 변화합니다.\n"):
+	printf("다음과 같은 문장이 출력된 후에 비밀번호를 입력한다면, 아래처럼 프롬프트가 변화합니다.\n");
 	printf("root@localhost:#\n");
 	next_line();
 	// 트레이닝 2   
