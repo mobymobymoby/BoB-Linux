@@ -7,7 +7,7 @@ void training_kill(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("이번에 학습할 명령어는 \"kill\" 입니다.\n\n");
-    next_line();
+
     printf("\"kill\" 명령어는 'PID'를 이용해 프로세스를 종료하는 명령어입니다.\n\n");
     printf("'PID'란 Process ID의 줄임말이며, 프로세스의 고유 번호를 의미합니다.\n");
     next_line();
@@ -89,9 +89,11 @@ void training_kill(void)
     printf("\"ps\" 명령어나 \"top\" 명령어를 사용하시면 됩니다.\n");
     next_line();
     
-    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
+
     printf("\"kill\" 명령어와 \"killall\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
     delete_defdir();

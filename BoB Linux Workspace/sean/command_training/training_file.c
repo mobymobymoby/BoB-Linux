@@ -75,7 +75,8 @@ void training_file()
     printf("\"file\" 명령어의 옵션은 위에 나온 것들 말고도 여러가지가 있습니다.\n");
     next_line();
 
-    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
 

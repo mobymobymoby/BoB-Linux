@@ -22,6 +22,7 @@ void training_cd(void)
     printf("[절대 경로]는 \"최상위 디렉토리부터 나열된 고유한 경로\"를 의미합니다.\n");
     printf("(ex. /etc/systemd)\n\n");
     next_line();
+    
     printf("맨 앞의 '/'가 루트(최상위) 디렉토리를 의미하며\n");
     printf("\"cd /\"를 입력하면, 루트 디렉토리로 이동하게 됩니다.\n");
     next_line();
@@ -62,6 +63,7 @@ void training_cd(void)
     printf("만약 현재 작업 디렉토리에서 현재 작업 디렉토리의 상위 디렉토리로 이동하고 싶다면\n");
     printf("\"cd ..\"을(를) 입력하면 됩니다.\n");
     next_line();
+    
     printf("[실습] \"cd ..\"을(를) 입력해 상위 디렉토리로 이동해보세요.\n");
     fake_run_command("cd ..");
     chdir("cd ..");
@@ -86,6 +88,7 @@ void training_cd(void)
     printf("[ cd ~계정명] : 입력한 사용자의 홈 디렉토리로 이동합니다.\n");
     printf("[ cd - ]      : 이전 경로로 이동합니다.\n");
     next_line();
+    
     printf("\"cd\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 

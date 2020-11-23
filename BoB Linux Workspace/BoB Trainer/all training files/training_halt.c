@@ -37,9 +37,11 @@ void training_halt(void)
     printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'가 있습니다.\n");
     next_line();
     
-    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] —help\"와 같이 '—help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
+
     printf("\"halt\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 

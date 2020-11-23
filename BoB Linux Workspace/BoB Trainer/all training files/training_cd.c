@@ -4,12 +4,9 @@ void training_cd(void)
 {
     create_defdir();
     system("clear");
-    char wd[DIR_SIZE];
-    char command_str[DIR_SIZE*2];
-    getcwd(wd, DIR_SIZE);
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    printf("이번에 학습할 명령어는 \"cd\" 입니다.\n");
+    printf("이번에 학습할 명령어는 \"cd\" 입니다.\n\n");
     next_line();
     printf("\"cd\" 명령어는 'Change Directory'의 약자이며, 디렉토리를 이동할 때 사용하는 명령어 입니다.\n");
     next_line();
@@ -23,18 +20,17 @@ void training_cd(void)
     next_line();
 
     printf("[절대 경로]는 \"최상위 디렉토리부터 나열된 고유한 경로\"를 의미합니다.\n");
-    printf("(ex. /etc/systemd)\n");
+    printf("(ex. /etc/systemd)\n\n");
     next_line();
+    
     printf("맨 앞의 '/'가 루트(최상위) 디렉토리를 의미하며\n");
     printf("\"cd /\"를 입력하면, 루트 디렉토리로 이동하게 됩니다.\n");
     next_line();
-    
-    printf("[실습] \"cd\" 명령어를 사용해 '%s/dir1' 디렉토리로 이동해보세요.\n", wd);
+
+    printf("[실습] \"cd\" 명령어를 사용해 '/home/user/tr/dir1' 디렉토리로 이동해보세요.\n");
     printf("사용법 : cd [디렉토리 경로]\n");
-    snprintf(command_str, sizeof(command_str), "cd %s/dir1", wd);
-    fake_run_command(command_str);
-    chdir(wd);
-    chdir("dir1");
+    fake_run_command("cd /home/user/tr/dir1");
+    chdir("/home/user/tr/dir1");
     next_line();
     // 절대 경로 트레이닝
 
@@ -60,23 +56,24 @@ void training_cd(void)
     printf("[실습] '상대 경로'의 '상위 경로'를 이용해 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
     printf("사용법 : cd [디렉토리 상대 경로]\n");
     fake_run_command("cd ../dir2");
-    chdir("../dir2");
+    chdir("cd ../dir2");
     next_line();
     // 상대 경로 트레이닝 
 
     printf("만약 현재 작업 디렉토리에서 현재 작업 디렉토리의 상위 디렉토리로 이동하고 싶다면\n");
     printf("\"cd ..\"을(를) 입력하면 됩니다.\n");
     next_line();
+    
     printf("[실습] \"cd ..\"을(를) 입력해 상위 디렉토리로 이동해보세요.\n");
     fake_run_command("cd ..");
-    chdir("..");
+    chdir("cd ..");
     next_line();
     // 상위 경로 트레이닝
 
     printf("이동하기 이전의 디렉토리로 되돌아가기 위해서는 'cd -'를 입력하면 됩니다.\n\n");
     printf("[실습] 'cd -'(을)를 입력해 이전의 디렉토리로 되돌아가 보세요.\n");
     fake_run_command("cd -");
-    chdir("-");
+    chdir("cd -");
     next_line();
     // 이전 경로 트레이닝
     
@@ -91,6 +88,7 @@ void training_cd(void)
     printf("[ cd ~계정명] : 입력한 사용자의 홈 디렉토리로 이동합니다.\n");
     printf("[ cd - ]      : 이전 경로로 이동합니다.\n");
     next_line();
+    
     printf("\"cd\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 
