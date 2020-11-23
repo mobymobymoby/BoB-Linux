@@ -13,7 +13,6 @@ C_GREEN  = "\033[32m"
 C_YELLOW = "\033[33m"
 C_NUM = "U-24"
 
-
 def U24() :
     f_output = ""
     f_output = f_output + "[" + C_NUM + "] NFS 서비스 비활성화 검사" + "\n"
