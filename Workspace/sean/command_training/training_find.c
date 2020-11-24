@@ -45,7 +45,7 @@ void training_find()
 	printf("	+n : n보다 큰 파일\n");
 	printf("	-n : n보다 작은 파일\n");
 	printf("	n : n인 파일\n\n");
-	printf("-perm <권한 값> : 퍼미션 값으로 파일 찾기\n");
+	printf("-perm <권한 값> : 퍼미션 값으로 파일 찾기\n\n");
 	printf("-exec <명령어> {} \\; : 찾은 파일을 대상으로 수행할 명령어를 지정합니다.\n");
     printf("                        {} \\;을 명령어 끝에 붙여야 합니다.\n\n");
 	next_line();
@@ -57,16 +57,20 @@ void training_find()
     printf("사용법 : find [파일 이름]\n");
 	just_run_command("find find_test_file1");
 
-	printf("\n\n위의 출력된 결과는 \"find\" 명령어로 찾은 'find_test_file1' 파일 입니다.\n\n");
+	printf("\n\n위의 출력된 결과는 \"find\" 명령어로 찾은 'find_test_file1' 파일입니다.\n\n");
     printf("경로를 생략했기 때문에 현재 디렉토리 내에서 파일을 검색하게 됩니다.\n");
 	next_line();
 	
     //실습 2
     system("clear");
     printf("[실습 2]\n\n");
+
+    system("ls -al find_test_file2");
+    printf("\n\n현재 디렉토리에 'find_test_file2'라는 파일이 존재합니다.\n\n\n");
+
     printf("\"find\" 명령어를 사용하여 'find_test_file2'(을)를 찾고 동시에\n");
     printf("'-exec rm {} \\;'옵션을 이용하여 삭제까지 해보세요.\n\n");
-    printf("사용법 : find [파일 이름] [-exec <명령어> {}\\]");
+    printf("사용법 : find [파일 이름] [-exec <명령어> {}\\]\n");
 	just_run_command("find find_test_file2 -exec rm {} \\;");
 
     printf("\n\n위의 실습 결과로 'find_test_file2' 파일이 삭제되었을 것입니다.\n\n");
@@ -84,7 +88,7 @@ void training_find()
     printf("[실습 3]\n\n");
     printf("\"find . -name 'find_test*' -type d\"(을)를 입력해보세요.\n");
     printf("사용법 : find [경로] [옵션]\n");
-    just_run_command("find . -name '*find_test' -type d");
+    just_run_command("find . -name \"find_test*\" -type d");
     
     printf("\n\n위의 실습은 현재 디렉토리에서 'find_test' 텍스트가 포함된 디렉토리들을 찾습니다.\n");
     next_line();
@@ -96,7 +100,7 @@ void training_find()
     system("clear");
     printf("[실습 3-2]\n\n");
     printf("\" find . -type f -name 'find_test*' \"(을)를 입력해보세요.\n");
-    just_run_command("find . -type f -name '*find_test'");
+    just_run_command("find . -type f -name \"find_test*\"");
     
     printf("\n\n[실습 3-2]는 [실습 3]와 비슷하지만\n");
     printf("현재 디렉토리에서 'find_test' 텍스트가 포함된 일반 파일들을 찾습니다.\n");
