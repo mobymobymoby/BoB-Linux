@@ -29,15 +29,15 @@ void training_find()
     printf("ex) find ./dir\n");
     next_line();
 	
-    printf("[경로]를 생략하면 현재 디렉토리에서부터 검색을 합니다.\n");
+    printf("[경로]를 생략하면 현재 디렉토리에서부터 검색을 합니다.\n\n");
 	next_line();
     
-    printf("\"find\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[-P]    : 심볼릭 링크를 따라가지 않고, 심볼릭 링크 자체 정보를 사용합니다.\n");
-    printf("[-L]    : 심볼릭 링크에 연결된 파일 정보를 사용합니다.\n");
+    printf("\"find\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n\n");
+    printf("[-P]    : 심볼릭 링크를 따라가지 않고, 심볼릭 링크 자체 정보를 사용합니다.\n\n");
+    printf("[-L]    : 심볼릭 링크에 연결된 파일 정보를 사용합니다.\n\n");
     printf("[-H]    : 심볼릭 링크를 따라가지 않으나\n");
-    printf("          Command Line Argument를 처리할 땐 예외로 합니다.\n");
-    printf("[-D]    : 디버그 메시지를 출력합니다.\n");
+    printf("          Command Line Argument를 처리할 땐 예외로 합니다.\n\n");
+    printf("[-D]    : 디버그 메시지를 출력합니다.\n\n");
     next_line();
 
 	
