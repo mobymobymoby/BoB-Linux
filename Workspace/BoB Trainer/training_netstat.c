@@ -21,15 +21,16 @@ void training_netstat(void)
 
 	printf("그 중에서 자주 사용하는 옵션 모음은 아래와 같습니다.\n");
 	printf("netstat -nap                  : 연결을 기다리는 프로그램을 보여줍니다.\n");
-	printf("netstat -anp | grep [포트번호] : 특정 포트를 어떤 프로그램에서 사용중 인지 확인합니다.\n");
+	printf("netstat -anp | grep [포트번호] : 특정 포트를 어떤 프로그램에서 사용중 인지 확인합니다\n");
 	printf("netstat -nlpt                 : TCP Listening 상태의 프로그램을 보여줍니다.\n");
 	next_line();
 
 	printf("[실습] 80번 포트를 어떤 프로그램에서 사용 중인지 확인하는 명령어를 입력해보세요.\n");
 	printf("$ netstat -anp | grep [포트번호]\n");
 	nothing_print_fake_run_command("netstat -anp | grep 80");
-	printf("Proto Recv-Q Send-Q Local Address       Foreign Address     State       PID/Program name\n");
-	printf("tcp        0      0 10.0.1.2:12345      1.1.1.1:80          ESTABLISHED 1234/TEST\n");
+	printf("\n");
+	printf("Proto Recv-Q Send-Q Local Address     Foreign Address   State        PID/Program name\n");
+	printf("tcp        0      0 10.0.1.2:12345    1.1.1.1:80        ESTABLISHED  1234/TEST\n");
 	printf("\n");
 	next_line();
 	printf("출력된 결과를 설명해드리곘습니다.\n");
