@@ -5,11 +5,11 @@ void training_more_less()
 	create_defdir();
 	system("clear");
 
-	FILE* fp = fopen("more.txt", "w");
+	FILE* fp = fopen("test.txt", "w");
 	for(int i = 0; i < 10; i++)
 	{	
 		fprintf(fp, "\n[%d 번째]\n\n", i+1);
-		fprintf(fp, "이것은 more 명령어의 테스트 파일 more.txt 입니다.\n\n");
+		fprintf(fp, "이것은 more 명령어의 테스트 파일 test.txt 입니다.\n\n");
 		fprintf(fp, "more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n\n");
 		fprintf(fp, "\tspace : 다음 페이지\n");
 		fprintf(fp, "\tb : 이전 페이지\n");
@@ -34,12 +34,34 @@ void training_more_less()
 	printf("\t[b : 이전 페이지]\n");
 	printf("\t[q : 나가기]\n");
 	next_line();
-	printf("[실습] more를 통해 more.txt를 읽어봅시다.\n");
+	printf("[실습] more를 통해 test.txt를 읽어봅시다.\n");
 	printf("$ more [파일명]\n");
 	printf("이 후 space, b, q를 통해 화면을 넘겨보세요.\n");
-	just_run_command("more more.txt");
-
-	printf("파이프라인(|)을 배웠다면, 출력된 결과 내용이 너무 많아서 읽기가 어려울 때 \nmore을 활용하여 페이지를 넘겨가며 내용을 볼 수 있습니다.\n");
+	just_run_command("more test.txt");
+	
+	printf("이런 식으로 페이지를 앞 뒤로 넘기며 파일의 내용을 읽을 수 있습니다.\n");
+	next_line();
+	printf("다음 명령어는 'less'입니다.\n");
+	next_line();
+	printf("less는 more과 유사하지만, 키보드 방향키를 이용해 위 아래로 스크롤 할 수 있습니다.\n");
+	next_line();
+	printf("또한, more에서 사용했던 [space], [b], [q] 단축키를 모두 사용할 수 있습니다.\n");
+	next_line();
+	printf("방향키로 한줄씩 스크롤 할 수 있다는 장점때문에 많이 선호됩니다.\n");
+	next_line();
+	printf("[실습] less를 통해 test.txt를 읽어봅시다.\n");
+	printf("$ less [파일명]\n");
+	printf("이 후 space, b, q를 통해 화면을 넘겨보세요.\n");
+	just_run_command("less test.txt");
+	
+	printf("cat 명령어로 내용을 보는 것이랑은 다른 느낌이죠?\n");
+	printf("보통 읽을 파일의 내용이 많을 때는 more, less 명령어를 사용합니다.\n");
+	next_line();
+	printf("반대로 내용이 적을 때는 굳이 스크롤 할 이유가 없으니 cat으로 충분하겠지요.\n");
+	next_line();
+	printf("이처럼 리눅스 명령어는 상황에 맞게 사용하시면 됩니다.\n");
+	next_line();
+	printf("파이프라인(|)을 배웠다면, 출력된 결과 내용이 너무 많아서 읽기가 어려울 때 \nmore과 less를 활용하여 페이지를 넘겨가며 내용을 볼 수 있습니다.\n");
 	next_line();
 	printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
 	printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
