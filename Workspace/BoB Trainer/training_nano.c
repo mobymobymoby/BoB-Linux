@@ -32,6 +32,7 @@ void training_nano(void)
 	printf("[실습] test 파일을 nano 편집기로 열어서 아무 내용이나 적어보세요.\n");
 	printf("(저장할 땐 원본 파일명인 'test'로 저장하세요.)\n");
 	just_run_command("nano test");
+	system("clear");
 	printf("내용이 잘 저장되었다면 cat 명령어를 통해 확인할 수 있습니다.\n");
 	printf("[실습] test 파일의 내용을 cat [파일명]으로 확인해보세요.\n");
 	just_run_command("cat test");
@@ -53,7 +54,7 @@ void training_nano(void)
 
 	printf("[유용한 기능]\n");
 	printf("    Ctrl+w (F6) : 문자 검색\n");
-	printf("    Ctrl+\\     : 문자 검색 후 수정\n");
+	printf("    Ctrl+\\      : 문자 검색 후 수정\n");
 	printf("    Ctrl+k (F9) : 현재 줄 잘라내기\n");
 	printf("    Ctrl+u      : 이전에 자른 줄을 붙여넣기\n");
 	printf("    Alt+]       : 현재 괄호에 매칭되는 괄호 찾기\n");
@@ -67,8 +68,10 @@ void training_nano(void)
 	printf("    Ctrl+e      : 현재 라인의 끝 위치로 이동\n");
 	printf("    Alt+(       : 현재 문단의 시작으로 이동\n");
 	printf("    Alt+)       : 현재 문단의 끝으로 이동\n");
-	printf("    Alt+\\      : 파일의 첫 라인으로 이동\n");
+	printf("    Alt+\\       : 파일의 첫 라인으로 이동\n");
 	printf("    Alt+/       : 파일의 마지막 라인으로 이동\n");
+	next_line();
+	printf("nano 편집기를 이용해 다양한 파일들을 확인하고 수정해보세요.\n");
 	next_line();
 	printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
 	printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
