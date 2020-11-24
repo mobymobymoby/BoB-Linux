@@ -110,7 +110,7 @@ void training_chsh(void)
     printf("사용자가 변경 가능한 Shell들 입니다.\n");
     next_line();
 
-    printf("\"chsh\는 시스템의 Shell을 변경하는 것이기 때문에\n");
+    printf("\"chsh\"는 시스템의 Shell을 변경하는 것이기 때문에\n");
     printf("사용자의 암호를 필요로 합니다.\n\n");
     next_line();
     
