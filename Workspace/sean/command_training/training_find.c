@@ -6,19 +6,34 @@ void training_find()
 	create_defdir();
 	system("clear");
 
-	system("touch find_test_file");
+	system("touch find_test_file1");
+	system("touch find_test_file2");
+	system("touch find_test_file3");
+    system("mkdir find_test_dir1");
+    system("mkdir find_test_dir2");
+    system("mkdir find_test_dir3");
+    system("touch hello.c world.c good.c morning.c im_rookie.c");
 
-	printf("이번에 학습할 명령어는 'find'입니다. 이름에서 알 수 있듯이 파일을 찾는 명령어입니다.\n");
+	printf("이번에 학습할 명령어는 \"find\" 입니다.\n\n");
+    
+    printf("이름에서 알 수 있듯이 파일을 찾는 명령어입니다.\n");
 	printf("주어진 조건으로 파일을 찾아 해당 경로를 표시합니다.\n");
 	next_line();
-	printf("find 명령어는 다음과 같은 형식으로 사용합니다.\n");
-	printf("$ find [찾을 경로] [옵션] [파일명]\n");
+
+    printf("사용법은 \"find [옵션] [경로] [표현식] 입니다.\n");
+    printf("ex) find ./dir\n");
+    next_line();
+	
+    printf("[경로]를 생략하면 현재 디렉토리에서부터 검색을 합니다.\n");
 	next_line();
-	printf("[찾을 경로]를 생략하면 현재 디렉토리에서 부터 검색을 합니다.\n");
-	next_line();
-	printf("find 명령어의 옵션은 아래와 같습니다.\n");
-	printf("-name 찾을이름 : 이름으로 파일 찾기\n");
-	printf("-user 유저이름 : 소유자가 유저이름인 파일 찾기\n");
+	
+    system("clear");
+    printf("find 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
+	printf("-name <찾을이름> : 지정된 이름으로 파일을 찾습니다.\n");
+	printf("-user <유저이름> : 소유자가 유저 이름인 파일을 찾습니다.\n");
+    printf("-group <group명> : 지정한 그룹 소유의 파일이나 디렉토리를 찾습니다.\n");
+    printf("-uid             : 지정한 UID 소유의 파일이나 디렉토리를 찾습니다.\n");
+    printf("-uid             : 지정한 GID 소유의 파일이나 디렉토리를 찾습니다.\n");
 	printf("-type [bcdfls] : 파일 유형에 따라 파일 찾기\n");
 	printf("	b: 블록파일\n");
 	printf("	c: 문자\n");
@@ -30,20 +45,90 @@ void training_find()
 	printf("	+n : n보다 큰 파일\n");
 	printf("	-n : n보다 작은 파일\n");
 	printf("	n : n인 파일\n");
-	printf("-perm 퍼미션 : 퍼미션 값으로 파일 찾기\n");
-	printf("-exec 명령어 {}\\ : 찾은 파일을 대상으로 수행할 명령어 지정. {}\\을 명령어 끝에 붙여야 한다.\n");
-	next_line();
-	printf("find 명령어를 사용하여 find_test_file을 찾아보세요.\n");
-	run_command("find find_test_file");
-
-	printf("경로를 생략했기 때문에 현재 디렉토리 내에서 파일을 검색하게 됩니다.\n");
-	next_line();
-	printf("그럼 다시 한 번 find 명령어를 사용하여 find_test_file을 찾고 동시에 -exec 옵션을 이용하여 삭제까지 해보세요.\n");
-	run_command("find find_test_file -exec rm {}\\");
-
-	printf("find 명령어를 잘 활용하면 원하는 파일에만 대해서 다양한 작업을 한 큐에 실행이 가능합니다.\n");
+	printf("-perm <퍼미션> : 퍼미션 값으로 파일 찾기\n");
+	printf("-exec <명령어> {} \\; : 찾은 파일을 대상으로 수행할 명령어 지정합니다.\n");
+    pirntf("                        {} \\;을 명령어 끝에 붙여야 한다.\n\n");
 	next_line();
 	
+    //실습 1
+    system("clear");
+    printf("[실습 1]\n\n");
+    printf("\"find\" 명령어를 사용하여 'find_test_file1'을 찾아보세요.\n");
+    printf("사용법 : find [파일 이름]\n");
+	just_run_command("find find_test_file");
+
+	printf("\n\n경로를 생략했기 때문에 현재 디렉토리 내에서 파일을 검색하게 됩니다.\n");
+	next_line();
+	
+    //실습 2
+    system("clear");
+    printf("[실습 2]\n\n");
+    printf("\"find\" 명령어를 사용하여 'find_test_file2'(을)를 찾고 동시에\n");
+    printf("'-exec rm {} \\;'옵션을 이용하여 삭제까지 해보세요.\n\n");
+    printf("사용법 : find [파일 이름] [-exec <명령어> {}\\]");
+	just_run_command("find find_test_file2 -exec rm {} \\;");
+    
+
+    //실습 3
+    system("clear");
+    printf("[실습 3]\n\n");
+    printf("\"find . -name '*find_test' -type d\"(을)를 입력해보세요.\n");
+    printf("사용법 : find [경로] [옵션]\n");
+    just_run_command("find . -name '*find_test' -type d");
+    
+    printf("\n\n위의 실습은 현재 디렉토리에서 'find_test' 텍스트가 포함된 디렉토리들을 찾습니다.\n");
+    next_line();
+    
+    printf("이번 실습에서는 옵션 '-name'(와)과 '-type' 두 개를 사용해보았습니다.\n");
+    next_line();
+
+    //실습 3-2
+    system("clear");
+    printf("[실습 3-2]\n\n");
+    printf("\" find . -type f -name '*find_test' \"(을)를 입력해보세요.\n");
+    just_run_command("find . -type f -name '*find_test'");
+    
+    printf("\n\n[실습 3-2]는 [실습 3]와 비슷하지만\n");
+    printf("현재 디렉토리에서 'find_test' 텍스트가 포함된 일반 파일들을 찾습니다.\n");
+    next_line();
+
+    printf("이번 실습에서는 옵션 두 개의 위치를 바꿔보았습니다.\n");
+    next_line();
+
+    //실습 4
+    system("clear");
+    printf("[실습 4]\n\n");
+    printf("\"find . '*.c' | head 10\"(을)를 입력해보세요.\n");
+    just_run_command("find . '*.c' | head 4");
+
+    printf("\n\n위의 실습은 현재 디렉토리에서 '.c'로 끝나는 파일을 찾은 뒤 4개만 출력합니다.\n");
+    next_line();
+
+    //실습 5
+    system("clear");
+    printf("[실습 5]\n\n");
+    printf("\"find ! -type d\"(을)를 입력해보세요.\n");
+    just_run_command("find ! -type d");
+
+    printf("\n\n위의 실습은 디렉토리 아닌 파일들은 모두 찾습니다.\n");
+    next_line();
+
+    //실습 끝
+    system("clear");
+    printf("\"find\" 명령어를 이용한 실습 5가지를 해보았습니다.\n");
+    next_line();
+
+    printf("\"find\" 명령어는 리눅스에서 파일을 찾을 때 여러 가지 방법으로 찾을 수 있습니다.\n");
+    next_line();
+
+	printf("find 명령어를 잘 활용하면 원하는 파일에만 대해서 다양한 작업을 한 번에 실행이 가능합니다.\n");
+	next_line();
+	
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
+    next_line();
+
 	printf("find 명령어에 대한 학습이 끝났습니다.\n");
 
 	delete_defdir();
