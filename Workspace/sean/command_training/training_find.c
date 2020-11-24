@@ -28,7 +28,7 @@ void training_find()
 	next_line();
 	
     system("clear");
-    printf("find 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
+    printf("find 명령어의 자주 쓰이는 표현식은 다음과 같습니다.\n\n");
 	printf("-name <찾을이름> : 지정된 이름으로 파일을 찾습니다.\n");
 	printf("-user <유저이름> : 소유자가 유저 이름인 파일을 찾습니다.\n");
     printf("-group <group명> : 지정한 그룹 소유의 파일이나 디렉토리를 찾습니다.\n");
@@ -80,7 +80,7 @@ void training_find()
     printf("[실습 2-1]\"ls -al find_test_file2\"(을)를 입력하여 확인해보세요.\n");
     just_run_command("ls -al find_test_file2");
     
-    printf("\n\n 파일이 삭제되었다는 것을 확인할 수 있습니다.\n");
+    printf("\n\n파일이 정상적으로 삭제되었다는 것을 확인할 수 있습니다.\n");
     next_line();
     
 
@@ -94,7 +94,7 @@ void training_find()
     printf("\n\n위의 실습은 현재 디렉토리에서 'find_test' 텍스트가 포함된 디렉토리들을 찾습니다.\n");
     next_line();
     
-    printf("이번 실습에서는 옵션 '-name'(와)과 '-type' 두 개를 사용해보았습니다.\n");
+    printf("이번 실습에서는 표션식 '-name'(와)과 '-type' 두 개를 사용해보았습니다.\n");
     next_line();
 
     //실습 3-2
@@ -103,20 +103,20 @@ void training_find()
     printf("\" find . -type f -name \"find_test*\" \"(을)를 입력해보세요.\n");
     just_run_command("find . -type f -name \"find_test*\"");
     
-    printf("\n\n[실습 3-2]는 [실습 3]와 비슷하지만\n");
+    printf("\n\n[실습 3-2]는 [실습 3]에서와 비슷하지만\n");
     printf("현재 디렉토리에서 'find_test' 텍스트가 포함된 일반 파일들을 찾습니다.\n");
     next_line();
 
-    printf("이번 실습에서는 옵션 두 개의 위치를 바꿔보았습니다.\n");
+    printf("이번 실습에서는 표현식 두 개의 위치를 바꿔보았습니다.\n");
     next_line();
 
     //실습 4
     system("clear");
     printf("[실습 4]\n\n");
-    printf("\"find . \"*.c\" | head -3\"(을)를 입력해보세요.\n");
-    just_run_command("find . \"*.c\" | head -3");
+    printf("\"find . -name \"*.c\" | head -3\"(을)를 입력해보세요.\n");
+    just_run_command("find . -name \"*.c\" | head -3");
 
-    printf("\n\n위의 실습은 현재 디렉토리에서 '.c'로 끝나는 파일을 찾은 뒤 4개만 출력합니다.\n");
+    printf("\n\n위의 실습은 현재 디렉토리에서 '.c'로 끝나는 파일을 찾은 뒤 3개만 출력합니다.\n");
     next_line();
 
     //실습 5
