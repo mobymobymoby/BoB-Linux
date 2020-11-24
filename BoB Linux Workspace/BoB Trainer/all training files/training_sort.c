@@ -10,17 +10,18 @@ void training_sort()
 	printf("이번에 학습할 명령어는 'sort' 입니다. \n");
 	next_line();
 	printf("sort는 파일의 내용을 행 단위로 끊어서 정렬을 해줍니다.\n\n");
-	printf("하지만, 옵션 없이 사용시 정렬된 결과를 출력만 해줄 뿐, \n따로 저장하거나 원본 파일을 변경하지는 않습니다.\n");
+	printf("하지만, 옵션 없이 사용시 오름차 순으로 정렬된 결과를 출력만 해줄 뿐, \n따로 저장하거나 원본 파일을 변경하지는 않습니다.\n");
 	next_line();
 	printf("sort 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("$ sort [옵션] 파일\n");
 	next_line();
 	printf("[실습] 우선 cat으로 정렬 전의 'testfile' 파일의 내용을 확인해봅시다.\n");
 	just_run_command("cat testfile");
-
+	printf("\n정렬되지 않은 상태의 파일 내용이 출력됩니다.\n");
 	printf("[실습] 이번엔 sort를 이용하여 'testfile' 파일을 내용을 정렬시켜 확인해보세요.\n");
 	just_run_command("sort testfile");
-
+	printf("\n아까와는 달리 오름차순(a-b-c.. 순)으로 정렬됩니다.\n");
+	next_line();
 	printf("\nsort 명령어의 옵션은 아래와 같습니다.\n\n");
 	printf("\t-b : 공백은 무시\n");
 	printf("\t-d : 사전 순으로 정렬\n");
