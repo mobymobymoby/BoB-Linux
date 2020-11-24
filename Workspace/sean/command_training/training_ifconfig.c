@@ -98,8 +98,9 @@ void training_ifconfig(void)
     printf("[실습] \"ifconfig\" 명령어를 이용하여 'lo' 인터페이스의 정보만 출력해보세요.\n");
     printf("사용법 : ifconfig [인터페이스 이름]\n");
     just_run_command("ifconfig lo");
-    next_line();
 
+    printf("\n\n위의 출력 결과는 \"lo\" 인터페이스만 출력한 내용입니다.\n\n\n");
+    next_line();
     // 특정 인터페이스 정보만 출력하도록 실습
 
     printf("각 네트워크 인터페이스에 할당된 정보를 바꾸고 싶을 때는 아래와 같이 입력하면 됩니다.\n\n");
