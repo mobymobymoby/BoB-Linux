@@ -39,13 +39,15 @@ void training_ifconfig(void)
     
     printf("[inet] : 네트워크 인터페이스에 할당된 아이피 주소(ipv4)를 의미하며\n");
     printf("[inet6] : 네트워크 인터페이스에 할당된 ipv6 주소를 의미합니다.\n\n");
-    printf("일반적으로 '내부 아이피'라 부르는 주소는 ipv4 형식인 \"inet\" 주소입니다.\n");
+    printf("일반적으로 '내부 아이피'라 부르는 주소는 ipv4 형식인 [inet] 주소입니다.\n");
     next_line();
 
-    printf("[netmask] : 쉽게 생각하여 네트워크에 할당할 수 있는 아이피 주소의 최대 값을 의미합니다.\n");
+    printf("[netmask] : 쉽게 생각하여 네트워크에 할당할 수 있는 아이피 주소의\n");
+    printf("            최대 값을 의미합니다.\n");
     next_line();
 
-    printf("[brodcast] : 네트워크에 속하는 모든 호스트에게 데이터를 보낼 수 있는 주소를 의미합니다.\n");
+    printf("[brodcast] : 네트워크에 속하는 모든 호스트에게 데이터를 보낼 수 있는\n");
+    printf("             주소를 의미합니다.\n");
     next_line();
 
     printf("[prefixlen] : ip주소에서 서브넷 마스크로 사용될 비트 수를 의미합니다.\n");
@@ -55,14 +57,15 @@ void training_ifconfig(void)
     printf("            LOOKPBACK / LINKLOCAL / SITELOCAL / COMPATv4 / GLOBAL\n");
     next_line();
 
-    printf("[ether] : 네트워크 인터페이스의 하드웨어 주소이며, 다른 말로는 맥(MAC) 주소라고 부릅니다.\n");
+    printf("[ether] : 네트워크 인터페이스의 하드웨어 주소이며\n");
+    printf("          다른 말로는 맥(MAC) 주소라고 부릅니다.\n");
     next_line();
 
-    printf("[RX packets] : 받은 패킷의 정보를 의미합니다.\n");
+    printf("[RX packets] : 받은 패킷의 정보를 의미합니다.\n\n");
     printf("[TX packets] : 보낸 패킷의 정보를 의미합니다.\n");
     next_line();
 
-    printf("[collisions] : 충돌된 패킷 수를 의미합니다.\n");
+    printf("[collisions] : 충돌된 패킷 수를 의미합니다.\n\n");
     next_line();
 
     printf("\"ifconfig\" 명령어를 사용하여 특정 인터페이스를 비활성화 또는 활성화 할 수도 있습니다.\n");
