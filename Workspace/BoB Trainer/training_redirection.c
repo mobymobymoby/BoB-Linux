@@ -42,7 +42,7 @@ void training_redirection(void)
 	printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
 	next_line();
 	printf("\"redirection\" 학습이 끝났습니다.\n");
-	printf("고생하셨습니다.\n")
+	printf("고생하셨습니다.\n");
 		
 
 	delete_defdir();
