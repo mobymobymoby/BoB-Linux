@@ -34,7 +34,7 @@ void training_history()
     
     printf("!!  : 마지막으로 실행한 명령문 실행\n");
     printf("!n  : n번째 명령어 실행\n");
-    printf("!string : string으로 시작하는 가장 최근의 명령문 실행\n");
+    printf("!string : string으로 시작하는 가장 최근의 명령문 실행\n\n");
     next_line();
     
     printf("[실습] \"!!\"(을)를 입력해보세요.\n");

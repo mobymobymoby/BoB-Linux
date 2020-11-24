@@ -33,7 +33,7 @@ void training_env(void)
     nothing_print_fake_run_command("env myVal=\"hello\"");
     printf("\nmyVal=hello\n");
     
-    printf("\n\n출력된 결과를 보면, \"env\" 명령어로 환경 변수를 생성하고 값을 지정할 수 있습니다.\n");
+    printf("\n\n출력된 결과를 보면, \"env\" 명령어로 환경 변수를 생성하고 값을 지정하였습니다.\n");
     next_line();
 
     printf("이제 선언된 환경변수를 수정해봅시다.\n\n");
@@ -53,10 +53,11 @@ void training_env(void)
     fake_run_command("env -u myVal");
     next_line();
     
-    printf("\n\n이제 'myVal'의 '값'이 성공적으로 해제되었을 것입니다.\n");
+    printf("\n이제 'myVal'의 '값'이 성공적으로 해제되었을 것입니다.\n");
     next_line();
     
-    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     

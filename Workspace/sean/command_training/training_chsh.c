@@ -72,7 +72,8 @@ void training_chsh(void)
     printf("잘 따라하셨다면 \"/bin/bash\" 혹은 현재 사용자가 사용 중인 Shell이 출력되었을 것입니다.\n");
     next_line();
     
-    printf("Shell은 'root' 디렉토리 밑에 'bin' 디렉토리 밑에 있기 때문에 \"/bin\" 디렉토리 밑에 가보시면 됩니다.\n");
+    printf("Shell은 'root' 디렉토리 밑에 'bin' 디렉토리 밑에 있기 때문에\n");
+    printf("\"/bin\" 디렉토리 밑에 가보시면 됩니다.\n");
     next_line();
     
     printf("저희는 \"/bin\" 디렉토리로 가지 않고 \"ls\" 명령어를 이용하여 확인해보겠습니다.\n\n");
@@ -100,7 +101,8 @@ void training_chsh(void)
     printf("다음 로그인 때부터 적용되지만, 로그아웃을 했다가 로그인 해도 되돌아가지 않습니다.\n");
     next_line();
     
-    printf("\"chsh\" 명령어는 바꾸고자 하는 Shell이 \"/etc/shells\" 파일에 적혀있어야 변경이 가능합니다.\n\n");
+    printf("\"chsh\" 명령어는 바꾸고자 하는 Shell이\n");
+    printf("\"/etc/shells\" 파일에 적혀있어야 변경이 가능합니다.\n\n");
     next_line();
     
     printf("[실습] \"cat /etc/shells\"라고 입력하여 현재 바꿀 수 있는 Shell들을 확인해보세요.\n");
@@ -125,7 +127,8 @@ void training_chsh(void)
     printf("\"[실습] cat /etc/passwd\"를 입력하여 자신의 Shell을 확인해보세요.\n");
     just_run_command("cat /etc/passwd");
     
-    printf("\n자신의 계정 이름을 찾아 맨 오른쪽을 보시면 /bin/sh라고 적힌 걸 확인하실 수 있을 것입니다.\n\n");
+    printf("\n자신의 계정 이름을 찾아 맨 오른쪽을 보시면\n");
+    printf("'/bin/sh'라고 적힌 걸 확인하실 수 있을 것입니다.\n\n");
     next_line();
     
     printf("[실습] 하지만 \"echo $SHELL\"이라고 명령어를 입력해서 확인해보세요.\n");
@@ -136,11 +139,14 @@ void training_chsh(void)
     
     printf("그 이유는 아까 말했듯이 \"chsh\" 명령어로 바꾸면\n");
     printf("한 번 로그아웃 후 다시 로그인을 해야 적용된다는 번거로움이 있지만\n");
-    printf("다시 바꿔주기 전에는 원래 Shell로 돌아가지 않는다라는 장점이 있습니다.\n");
+    printf("다시 바꿔주기 전에는 원래 Shell로 돌아가지 않는다라는 장점이 있습니다.\n\n");
     next_line();
     
-    printf("Shell을 원래의 Shell로 되돌리기 위해 사용자의 암호를 입력해주세요.\n");
-    system("chsh -s /bin/bash");
+    printf("[실습] 이번에는 \"chsh -s /bin/bash\"(을)를 입력하여 Shell을 되돌려보세요.\n");
+    just_run_command("chsh -s /bin/bash");
+
+    printf("\n\n이제 다시 bash shell로 되돌아왔습니다.\n");
+    next_line();
     
     printf("\"chsh\" 명령어의 옵션은\n");
     printf("'-s (--shell)'(와)과 '-R (--root)'이 있지만 '-s'만 알아둬도 됩니다.\n");
