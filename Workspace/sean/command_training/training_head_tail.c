@@ -9,7 +9,7 @@ void training_head_tail(void)
 
 	int i = 0;
 	char tmp[40];
-	for(i=1; i<1000; i++)
+	for(i=1; i<500; i++)
 	{
 		snprintf(tmp, sizeof(tmp), "echo '%d번째 줄' >> textfile", i);
 		system(tmp);
@@ -19,11 +19,12 @@ void training_head_tail(void)
   	printf("이번에 학습할 명령어는 \"head\"와 \"tail\"입니다.\n\n");
     next_line();
 
-	printf("기초 명령어 학습에서 \"cat\"에 대해서 배운 적이 있습니다.\n");
+	printf("기초 명령어 학습에서 \"cat\"에 대해서 배운 적이 있습니다.\n\n");
 	next_line();
 	
     printf("\"cat\"은 특정 파일의 내용을 출력하는 명령어로 자주 사용합니다.\n\n");
-	printf("하지만, \"cat\" 명령어를 통해 어떤 파일을 볼 때 그 파일의 내용이 너무 많거나 줄(Line) 수가 많다면\n");
+	printf("하지만, \"cat\" 명령어를 통해 어떤 파일을 볼 때\n");
+    printf("그 파일의 내용이 너무 많거나 줄(Line) 수가 많다면\n");
     printf("내용이 터미널에 표시되지 않거나 읽기 힘들 수 있습니다.\n");
 	next_line();
 	
@@ -41,7 +42,8 @@ void training_head_tail(void)
 	printf("\"head\"는 특정 파일의 내용을 맨 앞에서부터 출력할 수 있는 명령어입니다.\n");
 	next_line();
 	
-    printf("아무런 옵션없이 파일이름만을 입력하면 맨 앞에서부터 아래로 '10'줄의 내용이 출력합니다.\n");
+    printf("아무런 옵션없이 파일이름만을 입력하면\n");
+    printf("맨 앞에서부터 아래로 '10'줄의 내용을 출력합니다.\n");
     next_line();
 
 	printf("사용법은 \" head [옵션] [파일 이름]\" 입니다.\n");
@@ -66,29 +68,20 @@ void training_head_tail(void)
     printf("\n\n파일의 내용이 20줄까지 정상적으로 출력되었습니다.\n\n");
 	next_line();
 	
-    printf("'-c' 옵션을 이용하여 바이트(byte) 단위로 내용을 출력할 수도 있습니다.\n\n");
-	printf("만약 \"head -c 200 textfile\"이라고 입력하면\n");
-    printf("앞에서부터 '200byte' 까지의 내용을 출력합니다.\n");
-	next_line();
-
-    printf("'-c' 옵션은 따로 실습하지 않겠습니다.\n");
-    printf("추후에 리눅스 시스템에서 파일을 만들고, 내용을 기입하여 실습해보시길 바랍니다.\n");
-    next_line();
-
     printf("[실습] \"head\"에 '-c 100' 옵션을 이용하여 'textfile' 파일에서\n");
     printf("100byte만큼의 내용을 출력해보세요.\n");
     printf("사용법 : head [옵션] [파일 이름]\n");
-    just_run_command("head -c 100  textfile");
+    just_run_command("head -c 100 textfile");
     next_line();
 
-    printf("출력된 결과는 'textfile'에서 100byte의 내용만 가져온 것입니다.\n");
+    printf("\n\n출력된 결과는 'textfile'에서 100byte만큼의 내용만 가져온 것입니다.\n\n\n");
     next_line();
 
     printf("\"head\" 명령어의 옵션은 다음과 같습니다.\n\n");
-    printf(" [ -c, --bytes=[-]K ]\n각 파일의 처음부터 K bytes까지를 출력합니다.\n'-'를 붙일 경우에는 각 파일의 마지막 K bytes를 출력합니다.\n\n");
-    printf(" [ -n, --linux=[-]K ]\n각 파일의 처음 10개 행을 출력하지 않고, 처음부터 k번째 행까지 출력합니다.\n'-'를 붙일 경우에는 각 파일의 마지막 K 번째 행을 출력합니다.\n\n");
-    printf(" [ -q, --quiet, --silent ]\n파일의 이름을 header에 출력하지 않습니다.\n\n");
-    printf(" [ -v, --verbose ]\n항상 파일의 이름을 header에 출력합니다.\n\n");
+    printf("[ -c, --bytes=[-]K ]\n각 파일의 처음부터 K bytes까지를 출력합니다.\n'-'를 붙일 경우에는 각 파일의 마지막 K bytes를 출력합니다.\n\n");
+    printf("[ -n, --linux=[-]K ]\n각 파일의 처음 10개 행을 출력하지 않고, 처음부터 k번째 행까지 출력합니다.\n'-'를 붙일 경우에는 각 파일의 마지막 K 번째 행을 출력합니다.\n\n");
+    printf("[ -q, --quiet, --silent ]\n파일의 이름을 header에 출력하지 않습니다.\n\n");
+    printf("[ -v, --verbose ]\n항상 파일의 이름을 header에 출력합니다.\n\n");
     next_line();
 
     //tail
@@ -109,7 +102,7 @@ void training_head_tail(void)
     printf("\n\n맨 뒤에서부터 10줄의 내용이 출력됩니다.\n");
 	next_line();
 	
-    printf("tail도 역시 '-n' 옵션을 이용하여 원하는 줄 개수 만큼 뒤에서 출력할 수 있습니다.\n");
+    printf("tail도 역시 '-n' 옵션을 이용하여 원하는 줄 개수 만큼 뒤에서 출력할 수 있습니다.\n\n");
 	next_line();
 	
     printf("\"tail\"에 '-n 20' 옵션을 이용하여 뒤에서 20줄 만큼 'textfile'의 내용을 출력해보세요.\n");
@@ -120,7 +113,7 @@ void training_head_tail(void)
     next_line();
 
 	printf("\"head\"와 마찬가지로 '-c' 옵션을 이용하여 \n");
-    printf("바이트 단위로 파일의 내용을 뒤에서부터 출력할 수도 있습니다.\n");
+    printf("바이트 단위로 파일의 내용을 뒤에서부터 출력할 수도 있습니다.\n\n");
 	next_line();
 	
     printf("\"tail\"을 이용한 특별한 기능은 어떤 파일을 모니터링 할 수 있다는 것입니다.\n\n");
@@ -129,7 +122,7 @@ void training_head_tail(void)
 	printf("로그 파일의 경우 새롭게 쌓인 내용이 맨 뒤에 추가되기 때문에\n");
     printf("\"tail\"을 이용해 이를 추적할 수 있습니다.\n\n");
 	printf("이 때 사용하는 옵션은 '-f' 입니다.\n");
-    printf("해당 파일의 내용을 지속적으로 출력합니다.\n");
+    printf("해당 파일의 내용을 지속적으로 출력합니다.\n\n");
 	next_line();
 	
     printf("[실습] '-f' 옵션을 이용하여 'textfile'의 내용을 추적해보세요.\n");
@@ -141,7 +134,7 @@ void training_head_tail(void)
     printf("잘 보고 계신가요.\n");
 	sleep(1);
 	
-    printf("보시는 것 처럼 추가 되는 내용이 갱신됩니다.\n");
+    printf("보시는 것 처럼 추가 되는 내용이 갱신됩니다.\n\n\n");
 	sleep(1);
 	
     printf("학습의 진행을 위해서 \"tail\"을 종료시키겠습니다. \n");
@@ -157,7 +150,7 @@ void training_head_tail(void)
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
     
-    printf("head와 tail의 학습이 끝났습니다.\n");
+    printf("\"head\" 명령어와 \"tail\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 
     // Delete default directory
