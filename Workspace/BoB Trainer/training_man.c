@@ -40,7 +40,7 @@ void training_man(void)
     next_line();
     printf("[실습] 이제 \"man\" 명령어를 이용하여 \"ls\" 명령어에 대한 매뉴얼을 봐보세요.\n");
     printf("$ man [명령어 이름]\n");
-    printf("(내용을 읽은 후에 'q'키를 입력해서 나오실 수 있습니다.)\n")
+    printf("(내용을 읽은 후에 'q'키를 입력해서 나오실 수 있습니다.)\n");
     just_run_command("man ls");
     printf("\n많은 내용들이 출력되고, 'q' 키로 나오셨다면 제대로 실습하셨습니다.\n");
     next_line();
