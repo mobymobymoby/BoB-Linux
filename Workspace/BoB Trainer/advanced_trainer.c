@@ -14,15 +14,15 @@ void advanced_trainer()
         system("clear");
         printf("명령어 목록입니다.\n");
         printf("입력 방법 : [22. head](+tail) -> '22' 또는 'head' 입력\n\n");
-        printf(" [1. alias] \t\t [2. apt] \t\t [3. chmod] \n [4. chown] \t\t [5. chroot] \t [6. chsh] \n [7. cmp] \t\t [8. comm] \t\t [9. curl] \n [10. dd]\t\t");
+        printf(" [1. alias] \t\t [2. apt] \t\t [3. chmod] \n [4. chown] \t\t [5. chroot] \t\t [6. chsh] \n [7. cmp] \t\t [8. comm] \t\t [9. curl] \n [10. dd]\t\t");
         
-        printf(" [11. diff] \t\t [12. echo] \n [13. env] \t [14. export] \t\t [15. file] \n [16. find] \t\t [17. fsck] \t\t [18. git] \n [19. grep] \t\t [20. group](+관련 명령어) \t\t");
+        printf(" [11. diff] \t\t [12. echo] \n [13. env] \t\t [14. export] \t\t [15. file] \n [16. find] \t\t [17. fsck] \t\t [18. git] \n [19. grep] \t\t [20. group] \t\t");
 
-        printf(" [21. halt] \n [22. head](+tail) \t\t [23. history] \t\t [24. ifconfig] \n [25. init] \t\t [26. kill] \t [27. ln] \n [28. locate] \t [29. lsblk] \t [30. make] \n [31. man] \t\t [32. mkfs] \t\t [33. more](+less) \n [34. mount] \t\t");
+        printf(" [21. halt] \n [22. head](+tail) \t [23. history] \t\t [24. ifconfig] \n [25. init] \t\t [26. kill] \t [27. ln] \n [28. locate] \t\t [29. lsblk] \t\t [30. make] \n [31. man] \t\t [32. mkfs] \t\t [33. more](+less) \n [34. mount] \t\t");
         
-        printf(" [35. nano] \t\t [36. netstat] \n [37. ping] \t\t [38. pipe] \t\t [39. poweroff] \n [40. ps] \t\t [41. reboot] \t\t [42. redirection] \n [43. runlevel] \t\t [44. sed] \t\t [45. set](+unset) \n [46. shutdown] \t\t [47. sort] \t\t [48. su] \n");
+        printf(" [35. nano] \t\t [36. netstat] \n [37. ping] \t\t [38. pipe] \t\t [39. poweroff] \n [40. ps] \t\t [41. reboot] \t\t [42. redirection] \n [43. runlevel] \t [44. sed] \t\t [45. set](+unset) \n [46. shutdown] \t [47. sort] \t\t [48. su] \n");
         
-        printf(" [49. sudo] \t\t [50. tar] \t\t [51. top] \n [52. umask] \t\t [53. uname] \t\t [54. user](+관련 명령어) \n [55. users] \t\t [56. vi] \t\t [57. wget] \n [58. whereis] \t [59. which] \n [q. 종료]\n");
+        printf(" [49. sudo] \t\t [50. tar] \t\t [51. top] \n [52. umask] \t\t [53. uname] \t\t [54. user](+관련 명령어) \n [55. users] \t\t [56. vi] \t\t [57. wget] \n [58. whereis] \t\t [59. which] \n [q. 종료]\n");
 
         printf("\n명령어의 번호 또는 이름을 입력하세요 : ");
 
