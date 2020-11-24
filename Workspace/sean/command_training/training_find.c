@@ -47,7 +47,7 @@ void training_find()
 	printf("	n : n인 파일\n");
 	printf("-perm <퍼미션> : 퍼미션 값으로 파일 찾기\n");
 	printf("-exec <명령어> {} \\; : 찾은 파일을 대상으로 수행할 명령어 지정합니다.\n");
-    pirntf("                        {} \\;을 명령어 끝에 붙여야 한다.\n\n");
+    printf("                        {} \\;을 명령어 끝에 붙여야 한다.\n\n");
 	next_line();
 	
     //실습 1
