@@ -26,30 +26,30 @@ void training_fsck(void){
     printf("비상사태가 발생 했을 때 복구하는 것이 중요합니다.\n");
     next_line();
 
-    printf("\"fsck\" 명령어의 확장된 명령어로 \"e2fsck\"가 있습니다.\n");
+    printf("\"fsck\" 명령어의 확장된 명령어로는 \"e2fsck\"가 있습니다.\n");
     printf("현재 리눅스 배포판에서 \"fsck\" 명령어을 실행하면 \"e2fsck\" 명령어가 실행이 됩니다.\n");
     next_line();
 
     printf("\"fsck\" 명령어는 손상된 디렉토리나 파일을 수정할 때\n");
-    printf("임시적으로 '/lost+found' 디렉토리에서 작업을 수행하고 복구가 되면 사라지게 됩니다.\n");
+    printf("임시적으로 '/lost+found' 디렉토리에서 작업을 수행하고 복구가 되면 사라지게 됩니다.\n\n");
     next_line();
 
     printf("파일 시스템 검사 절차는 다음과 같습니다.\n\n\n");
-    printf("    단계 1  : 블록들과 파일 크기를 검사합니다.\n\n");
-    printf("    단계 2a : 중복된 이름이 있는지 검사합니다.\n\n");
-    printf("    단계 2b : 경로 이름을 검사합니다.\n\n");
-    printf("    단계 3  : 연결성을 검사합니다.\n\n");
-    printf("    단계 4  : 참조 수를 검사합니다.\n\n");
-    printf("    단계 5  : 싸이클 그룹을 검사합니다.\n\n\n");
+    printf(" 단계 1  : 블록들과 파일 크기를 검사합니다.\n\n");
+    printf(" 단계 2a : 중복된 이름이 있는지 검사합니다.\n\n");
+    printf(" 단계 2b : 경로 이름을 검사합니다.\n\n");
+    printf(" 단계 3  : 연결성을 검사합니다.\n\n");
+    printf(" 단계 4  : 참조 수를 검사합니다.\n\n");
+    printf(" 단계 5  : 싸이클 그룹을 검사합니다.\n\n\n");
     next_line();
 
     printf("\"fsck\" 또는 \"e2fsck\" 명령으로 검사하거나 수리할 파티션은 마운트가 된 상태면 안됩니다.\n");
     next_line();
 
-    printf("반드시 \"umount\" 명령어 등으로 마운트를 헤제하고 수행해주어야 합니다.\n");
+    printf("반드시 \"umount\" 명령어 등으로 마운트를 해제하고 수행해주어야 합니다.\n");
     next_line();
 
-    printf("기본적으로 'fsck [파티션 경로]' 와 같은 형식으로 사용합니다.\n");
+    printf("기본적으로 'fsck [파티션 경로]' 와 같은 형식으로 사용합니다.\n\n");
     next_line();
 
     printf("[실습] \"fsck\" 명령어로 '/dev/sdb1' 파티션을 검사해보세요.\n");
@@ -58,11 +58,11 @@ void training_fsck(void){
     fake_run_command("fsck /dev/sdb1");
     next_line();
 
-    printf("위에서 실습했던  명령어로 파티션을 검사할 수 있습니다.\n");
+    printf("위에서 실습했던 명령어로 파티션을 검사할 수 있습니다.\n");
     next_line();
 
     system("clear");
-    printf("\"fsck\" 명령어의 옵션은 다음과 같습니다.\n\n\n");
+    printf("\"fsck\" 명령어의 옵션은 다음과 같습니다.\n\n");
     printf(" [-A]\n일반적으로 /etc/fstab에 나와있는 파일 시스템들을 검사하고\n/etc/rc 시스템 초기화 파일에서 일관적으로 검사합니다.\n\n");
     printf(" [-R]\n'-A' 옵션과 같이 사용하면 루트 파일 시스템을 제외한 모든 파일 시스템을 점검합니다.\n\n");
     printf(" [-T]\n검사할 때 제목을 보여주지 않습니다.\n\n");
@@ -74,7 +74,7 @@ void training_fsck(void){
     printf(" [-r]\n파일 시스템 복구 전에 복구 여부를 붇습니다.\n(병렬로 작동할 때는 권장하지 않습니다.\n\n");
     next_line();
 
-    printf("위에서 언급된 \"e2fsck\" 명령어의 경우도 \"fsck\"와 사용법은 같습니다.\n");
+    printf("\n\n\n\n위에서 언급된 \"e2fsck\" 명령어의 경우도 \"fsck\"와 사용법은 같습니다.\n");
     next_line();
 
     system("clear");
@@ -90,8 +90,12 @@ void training_fsck(void){
     printf("이번 트레이닝에서는 간단한 실습 한 가지를 해보고 옵션을 위주로 봤습니다.\n");
     next_line();
 
-    printf("리눅스를 사용하다 보면 파일 시스템과 관련하여 공부하시거나 관련된 명령어를 이용하실 일이 많습니다.\n");
-    printf("가상 머신을 이용하여 리눅스 환경을 구축하고 파일 시스템과 관련된 실습을 많이 하여 숙지하시길 바랍니다.\n");
+    printf("리눅스를 사용하다 보면 파일 시스템과 관련하여 공부하시거나\n");
+    printf("관련된 명령어를 이용하실 일이 많습니다.\n");
+    next_line();
+
+    printf("가상 머신을 이용하여 리눅스 환경을 구축하고\n");
+    printf("파일 시스템과 관련된 실습을 많이 하여 숙지하시길 바랍니다.\n");
     next_line();
     
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
