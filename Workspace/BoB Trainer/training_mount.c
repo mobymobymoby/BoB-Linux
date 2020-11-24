@@ -14,7 +14,7 @@ void training_mount()
 	printf("우선 mount -l 을 입력하여 현재 마운트 목록을 살펴보세요.\n");
 	
 	nothing_print_fake_run_command("mount -l");
-	printf("마운트 목록의 일부분만 출력해드리겠습니다.\n");
+	printf("마운트 목록의 일부분만 출력해드리겠습니다.\n\n");
 	printf("sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)\n");
 	printf("proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)\n");
 	printf("udev on /dev type devtmpfs (rw,nosuid,noexec,relatime,size=1986708k,nr_inodes=496677,mode=755)\n");
@@ -22,11 +22,12 @@ void training_mount()
 	printf("tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=403024k,mode=755)\n");
 	printf("/dev/sda1 on / type ext4 (rw,relatime)\n");
 	printf("\n");
-	printf("많은 정보가 출력되었습니다.\n마지막에 출력된 '/dev/sda1 ...'");
+	printf("많은 정보가 출력되었습니다.\n마지막에 출력된 '/dev/sda1 ...'을 예시로 말씀드리겠습니다.");
 	next_line();
-	printf("/dev/sda1 과 같이 앞 쪽은 장치를 나타냅니다.\n");
-	printf("on 뒤의 / 는 마운트 된 디렉토리를 나타냅니다.\n");
-	printf("type 뒤에는 파일시스템을 나타냅니다.\n");
+	printf("[/dev/sda1] 과 같이 앞 쪽은 장치를 나타냅니다.\n");
+	printf("on 뒤의 [/] 는 마운트 된 디렉토리를 나타냅니다.\n");
+	printf("type 뒤 [ext4]는 파일시스템을 나타냅니다.\n");
+	printf("괄호 안의 내용들은 해당 장치의 속성을 나타냅니다.\n");
 	next_line();
 	printf("mount 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("$ mount [옵션] [마운트할 디바이스] [연결할 디렉토리]\n");
