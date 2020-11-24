@@ -45,7 +45,7 @@ void advanced_trainer()
 
         if (status_code == -1)
         {
-            printf("올바른 값을 다시 입력해주세요.\n");
+            printf("[Enter]를 입력한 후 올바른 값을 다시 입력해주세요.\n");
             next_line();
         }
         else 
