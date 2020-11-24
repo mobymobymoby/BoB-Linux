@@ -42,9 +42,9 @@ void training_sed(void)
 	printf("textfile의 2번째 줄의 내용이 정상적으로 출력된 것을 확인할 수 있습니다.\n");
 	printf("특이한 점은 textfile의 전체 내용이 출력되면서 2번째 줄이 두 번 출력되었다는 것입니다.\n");
 	next_line();
-	printf("sed 명령어를 -n 옵션 없이 출력(p)하게 되면 대상 파일의 전체 내용을 출력하면서 해당하는 줄의 내용이 한번 더 출력됩니다.\n");
+	printf("sed 명령어를 -n 옵션 없이 출력(p)하게 되면 \n대상 파일의 전체 내용을 출력하면서 해당하는 줄의 내용이 한번 더 출력됩니다.\n");
 	next_line();
-	printf("\n보통 자신이 원하는 라인만 출력하기 위해 -n 옵션을 더해서 사용합니다.\n");
+	printf("보통 자신이 원하는 라인만 출력하기 위해 -n 옵션을 더해서 사용합니다.\n");
 	next_line();
 	printf("[실습] sed와 -n 옵션을 이용해 textfile 파일의 2번째 줄을 출력(p)해 보세요.\n");
 	printf("$ sed [옵션] '[출력할 줄 번호]p' [파일의 이름]\n");
@@ -54,6 +54,7 @@ void training_sed(void)
 	next_line();
 	
 	printf("지금까지는 하나의 줄만 대상으로 하였지만, 여러가지 줄을 한 번에 출력할 수도 있습니다.\n");
+	next_line();
 	printf("2~5번째 줄 까지 출력하기 위해서는 '2,5p'와 같이 입력하면 됩니다.\n");
 	next_line();
 	printf("[실습] sed와 -n 옵션을 이용해 textfile 파일의 2~5번째줄을 출력(p)해 보세요.\n");
@@ -76,21 +77,23 @@ void training_sed(void)
 	next_line();
 	printf("-e 옵션을 추가하면 됩니다.\n");
 	next_line();
-	printf("sed -n -e '2p' -e '4,7p'와 같이 사용하면 2번째줄과 4~7번째줄을 동시에 출력할 수 있습니다.\n");
+	printf("sed -n -e '2p' -e '4,7p'와 같이 사용하면 \n2번째줄과 4~7번째줄을 동시에 출력할 수 있습니다.\n");
 	next_line();
 	printf("[실습] sed와 -n, -e 옵션을 이용해 \ntextfile 파일의 4번째 줄과 7~9번째 줄을 동시에 출력(p)해 보세요.\n");
 	printf("$ sed -n -e '[출력할 줄 번호]p' -e '[출력할 줄 번호]p' [파일의 이름]\n");
 	just_run_command("sed -n -e '4p' -e '7,9p' textfile");
 	next_line();
-	printf("정상적으로 출력되었습니다.\n점점 사용법이 복잡해지기 시작합니다. 하지만 익숙해지면 매우 유용하게 사용할 수 있게 될 것입니다.\n");
+	printf("원하는 내용이 정상적으로 출력되었습니다.\n\n점점 사용법이 복잡해지기 시작합니다.\n");
+	next_line();
+	printf("하지만 익숙해지면 매우 유용하게 사용할 수 있게 될 것입니다.\n");
 	next_line();
 
-	printf("지금까지는 줄 번호를 입력하여 출력헀지만 특정 단어가 있는 줄 만 출력할 수도 있습니다.\n");
+	printf("지금까지는 줄 번호를 입력하여 출력헀지만 특정 단어가 있는 줄만 출력할 수도 있습니다.\n");
 	printf("예를 들어 hello라는 단어는 5번째줄과 7번째줄에 존재합니다.\n");
 	next_line();
 	printf("만약 hello라는 단어가 있는 모든 줄을 출력하기 위해서는 \nsed -n '/hello/p' [파일 이름]과 같이 입력하면 됩니다.\n");
 	next_line();
-	printf("[실습] sed와 -n 옵션을 이용해 \ntextfile 파일의 'hi'라는 단어가 포함된 줄을 출력(p)해 보세요.\n");
+	printf("[실습] sed와 -n 옵션을 이용해 textfile 파일의 \n'hi'라는 단어가 포함된 줄을 출력(p)해 보세요.\n");
 	printf("$ sed [옵션] '/찾을 단어/p' [파일의 이름]\n");
 	run_command("sed -n '/hi/p' textfile");
 	next_line();
@@ -125,11 +128,11 @@ void training_sed(void)
 	next_line();
 	printf("예를 들어, \"sed '3d' textfile\"은 textfile의 3번째 줄을 지우는 것을 의미합니다.\n");
 	next_line();
-	printf("sed 명령어는 -n과 쓰지 않았을 때 전체 파일의 내용을 출력해주는 것을 아까도 확인할 수 있었습니다.\n");
+	printf("sed 명령어는 -n과 쓰지 않았을 때 전체 파일의 내용을 출력해주는 것을 \n아까도 확인할 수 있었습니다.\n");
 	next_line();
-	printf("p 옵션에서는 -n 옵션과 함께 사용하여 전체 내용이 출력되면서 특정 줄의 내용이 한번 더 출력되는 것을 막았습니다.\n");
+	printf("p 옵션에서는 -n 옵션과 함께 사용하여 전체 내용이 출력되면서 \n특정 줄의 내용이 한번 더 출력되는 것을 막았습니다.\n");
 	next_line();
-	printf("하지만 d 옵션에서는 특정 라인의 내용만 출력되지 않고 나머지 내용이 출력되는 방식이기 때문에 -n 옵션을 사용할 필요가 없습니다.\n");
+	printf("하지만 d 옵션에서는 특정 라인의 내용만 출력되지 않고 \n나머지 내용이 출력되는 방식이기 때문에 -n 옵션을 사용할 필요가 없습니다.\n");
 	next_line();
 	printf("[실습] sed를 이용해'textfile' 파일의 2번째 줄을 제거해 출력해 보세요.\n");
 	printf("$ sed '[제거할 줄 번호]d' [파일의 이름]\n");
@@ -141,11 +144,13 @@ void training_sed(void)
 	next_line();
 	printf("sed '/^$/d' [파일명]의 형식으로 사용하면, 비어있는 줄을 제외한 줄 만을 출력합니다.\n");
 	next_line();
-	printf("하지만 d 옵션으로 원본의 내용이 삭제된 것은 아닙니다. 다만 원본의 내용이 출력된 결과가 변경된 것입니다.\n");
+	printf("하지만 d 옵션으로 원본의 내용이 삭제된 것은 아닙니다. \n다만 원본의 내용이 출력된 결과가 변경된 것입니다.\n");
 	next_line();
 	printf("그러나 실제로 원본의 내용에 변한 내용을 반영하여 저장하고 싶을 때가 있을 것입니다.\n");
 	
-	printf("이 때에는 리다이렉션 기호인 '>'를 사용합니다.\n'>'기호 기준으로 오른쪽에 있는 것이 새롭게 저장할 파일이 됩니다.\n");
+	printf("이 때에는 리다이렉션 기호인 '>'를 사용합니다.\n");
+	next_line();
+	printf("'>'기호 기준으로 오른쪽에 있는 것이 새롭게 저장할 파일이 됩니다.\n");
 	next_line();
 	printf("[실습] textfile의 2번째 줄을 제외한 내용을 실제로 'new_textfile'에 저장해보세요.\n사용법은 다음과 같습니다.\n");
 	printf("$ sed '[제외할 줄 번호]d' [파일명] > [저장할 파일명]\n");
@@ -170,24 +175,25 @@ void training_sed(void)
 	printf("예를 들어 sed 's/better/best/' [파일명]과 같이 입력하면, \n[파일명]의 전체 내용 중 각 행의 첫번째 'better'라는 문자열이 'best'로 변경됩니다.\n");
 	next_line();
 	printf("즉 첫번째 줄의 내용이 만약 \"bob is better of the better\"라는 내용이었고, \nsed 's/better/best/' [파일명]과 같이 입력했다면\n");
-	printf("bob is best of the better와 같이 변경됩니다..\n");
 	next_line();
-	printf("만약 각 행의 해당하는 첫번째 문자열 만이 아닌 해당하는 모든 문자열을 변경하고 싶다면, \n's/better/best/g'와 같이 입력하면됩니다.\n");
+	printf("bob is best of the better와 같이 변경됩니다.\n");
+	next_line();
+	printf("만약 각 행의 해당하는 첫번째 문자열 만이 아닌 해당하는 모든 문자열을 변경하고 싶다면\n's/better/best/g'와 같이 입력하면됩니다.\n");
 	next_line();
 	printf("즉 sed 's/better/best/g' [파일명] 처럼 입력했다면 변경된 내용은 \n\"bob is best of the best\"가 됩니다.\n");
 	next_line();
 
 	printf("이번에는 textfile의 내용을 치환하여 출력하도록 하겠습니다.\n");
 	next_line();
-	printf("[실습] s 옵션을 이용하여 textfile의 'hello'라는 문자열을 'good'으로 바꿔보세요. \n단 각 행의 첫번째 일치하는 문자열만 바뀌도록 해보세요.\n");
+	printf("[실습] s 옵션을 이용하여 textfile의 'hello'라는 문자열을 'good'으로 바꿔보세요. \n(단 각 행의 첫번째 일치하는 문자열만 바뀌도록 해보세요.)\n");
 	printf("$ sed 's/대상 문자열/변경할 문자열/' [파일명]\n");
-	run_command("sed 's/hello/good/' textfile");
+	just_run_command("sed 's/hello/good/' textfile");
 	next_line();
 	printf("hello라는 문자열이 정상적으로 good으로 바뀌었습니다.\n");
 	next_line();
 	printf("마지막으로 치환된 내용을 리다이렉션(>)을 이용해 다른 파일에 반영해보도록 하곘습니다.\n");
 	next_line();
-	printf("[실습] s 옵션을 이용하여 textfile의 'l'라는 문자를 'here'로 바꿔 new_textfile에 저장해보세요. \n단, 일치하는 모든 문자가 바뀌도록 해보세요.\n");
+	printf("[실습] s 옵션을 이용하여 textfile의 'l'라는 문자를 \n'here'로 바꿔 new_textfile에 저장해보세요. \n(단, 일치하는 모든 문자가 바뀌도록 해보세요.)\n");
 	printf("$ sed 's/대상 문자열/변경할 문자열/g' [파일명] > [파일명]\n");
 	run_command("sed 's/l/here/g' textfile > new_textfile");
 	next_line();
@@ -195,7 +201,7 @@ void training_sed(void)
 	printf("[실습] 변경된 내용을 확인하기 위해 cat new_textfile을 입력해보세요.\n");
 	run_command("cat new_textfile");
 	next_line();
-	printf("변경된 내용이 실제 대상 파일에 반영되었습니다..\n");
+	printf("변경된 내용이 실제 대상 파일에 반영되었습니다.\n");
 	next_line();
 	printf("sed 명령어는 정규표현식의 다양한 메타문자와 리다이렉션 기호와 \n함께 사용하면 더욱 강력한 명령어가 됩니다.\n");
 	next_line();
