@@ -12,8 +12,10 @@ void training_more_less()
 		fprintf(fp, "이것은 more 명령어의 테스트 파일 test.txt 입니다.\n\n");
 		fprintf(fp, "more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n\n");
 		fprintf(fp, "\tspace : 다음 페이지\n");
-		fprintf(fp, "\tb : 이전 페이지\n");
-		fprintf(fp, "\tq : 나가기\n\n");
+		fprintf(fp, "\tb     : 이전 페이지\n");
+		fprintf(fp, "\tEnter : 한 줄씩 내리기\n");
+		fprintf(fp, "\t=     : 현재 라인 확인\n");
+		fprintf(fp, "\tq     : 나가기\n\n");
 	}
 	fclose(fp);
 
@@ -30,31 +32,33 @@ void training_more_less()
 	printf("more는 화면 사이즈만큼, less는 페이지 단위로 출력합니다.\n");
 	next_line();
 	printf("more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n\n");
-	printf("\t[space : 다음 페이지]\n");
-	printf("\t[b : 이전 페이지]\n");
-	printf("\t[q : 나가기]\n");
+	printf("\t[space   : 다음 페이지]\n");
+	printf("\t[b 	   : 이전 페이지]\n");
+	printf("\t[Enter   : 한줄씩 내리기]\n");
+	printf("\t[=       : 현재 라인 확인]\n");
+	printf("\t[q       : 나가기]\n");
 	next_line();
 	printf("[실습] more를 통해 test.txt를 읽어봅시다.\n");
 	printf("$ more [파일명]\n");
-	printf("이 후 space, b, q를 통해 화면을 넘겨보세요.\n");
+	printf("(이 후 space, b, enter, q를 통해 화면을 넘겨보세요.)\n");
 	just_run_command("more test.txt");
 	
-	printf("이런 식으로 페이지를 앞 뒤로 넘기며 파일의 내용을 읽을 수 있습니다.\n");
+	printf("\n이런 식으로 페이지를 앞 뒤로 넘기며 파일의 내용을 읽을 수 있습니다.\n");
 	next_line();
 	printf("다음 명령어는 'less'입니다.\n");
 	next_line();
 	printf("less는 more과 유사하지만, 키보드 방향키를 이용해 위 아래로 스크롤 할 수 있습니다.\n");
 	next_line();
-	printf("또한, more에서 사용했던 [space], [b], [q] 단축키를 모두 사용할 수 있습니다.\n");
+	printf("또한, more에서 사용했던 [space], [b], [q] 등 단축키를 모두 사용할 수 있습니다.\n");
 	next_line();
-	printf("방향키로 한줄씩 스크롤 할 수 있다는 장점때문에 많이 선호됩니다.\n");
+	printf("방향키로 스크롤 할 수 있다는 편의성 때문에 많이 선호됩니다.\n");
 	next_line();
 	printf("[실습] less를 통해 test.txt를 읽어봅시다.\n");
 	printf("$ less [파일명]\n");
-	printf("이 후 space, b, q를 통해 화면을 넘겨보세요.\n");
+	printf("(이 후 화면을 자유롭게 넘겨보세요.)\n");
 	just_run_command("less test.txt");
 	
-	printf("cat 명령어로 내용을 보는 것이랑은 다른 느낌이죠?\n");
+	printf("\ncat 명령어로 내용을 보는 것이랑은 다른 느낌이죠?\n");
 	printf("보통 읽을 파일의 내용이 많을 때는 more, less 명령어를 사용합니다.\n");
 	next_line();
 	printf("반대로 내용이 적을 때는 굳이 스크롤 할 이유가 없으니 cat으로 충분하겠지요.\n");
