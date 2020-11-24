@@ -18,7 +18,7 @@ void advanced_trainer()
         
         printf(" [11. diff] \t\t [12. echo] \n [13. env] \t\t [14. export] \t\t [15. file] \n [16. find] \t\t [17. fsck] \t\t [18. git] \n [19. grep] \t\t [20. group] \t\t");
 
-        printf(" [21. halt] \n [22. head](+tail) \t [23. history] \t\t [24. ifconfig] \n [25. init] \t\t [26. kill] \t [27. ln] \n [28. locate] \t\t [29. lsblk] \t\t [30. make] \n [31. man] \t\t [32. mkfs] \t\t [33. more](+less) \n [34. mount] \t\t");
+        printf(" [21. halt] \n [22. head](+tail) \t [23. history] \t\t [24. ifconfig] \n [25. init] \t\t [26. kill] \t\t [27. ln] \n [28. locate] \t\t [29. lsblk] \t\t [30. make] \n [31. man] \t\t [32. mkfs] \t\t [33. more](+less) \n [34. mount] \t\t");
         
         printf(" [35. nano] \t\t [36. netstat] \n [37. ping] \t\t [38. pipe] \t\t [39. poweroff] \n [40. ps] \t\t [41. reboot] \t\t [42. redirection] \n [43. runlevel] \t [44. sed] \t\t [45. set](+unset) \n [46. shutdown] \t [47. sort] \t\t [48. su] \n");
         
