@@ -63,9 +63,9 @@ void training_dd(void)
     printf(" b   : Block, 512byte\n\n");
     printf(" kb  : 1000byte\n\n");
     printf(" k   : Kilo byte, 1024byte\n\n");
-    printf(" MB  : 1000 * 1000\n\n");
+    printf(" MB  : 1000 * 1000byte\n\n");
     printf(" M   : 1024 * 1024\n\n");
-    printf(" GB  : 1000 * 1000 * 1000\n\n");
+    printf(" GB  : 1000 * 1000 * 1000byte\n\n");
     printf(" G   : 1024 * 1024 * 1024\n\n");
     printf(" etc) T, P, E, Z, Y\n\n\n");
     next_line();
