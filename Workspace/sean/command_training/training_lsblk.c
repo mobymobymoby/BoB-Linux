@@ -36,7 +36,8 @@ void training_lsblk(void)
     printf("\n\n첫번째 필드인 [NAME]은 해당 디바이스의 이름을 나타냅니다.\n");
 	next_line();
 	
-    printf("두번째 필드인 [MAJ:MIN](은)는 해당 디바이스의 \"MAJOR\" 번호와 \"MINOR\" 번호를 나타냅니다.\n");
+    printf("두번째 필드인 [MAJ:MIN](은)는 해당 디바이스의\n");
+    printf("\"MAJOR\" 번호와 \"MINOR\" 번호를 나타냅니다.\n");
 	next_line();
 	
     printf("세번째 필드인 [RM]은 해당 디바이스의 제거 가능 여부(Removable)를 나타냅니다.\n");
@@ -94,7 +95,6 @@ void training_lsblk(void)
 
 	printf("\"lsblk\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
-	next_line();
 
     // Delete default directory
 	delete_defdir();
