@@ -92,8 +92,8 @@ void training_ln(void)
     printf("[-f, --force]    : 링크 파일 존재 시에 삭제하고 생성합니다.\n");
     printf("[-b, --backup]   : 대상 파일이 존재할 경우\n");
     printf("                   백업 파일을 만든 후 링크 파일을 생성합니다.\n");
-    printf("[-i, --interactive : 대상 파일이 존재할 경우\n");
-    printf("                     대상 파일을 지울 것인지 여부를 확인합니다.\n\n");
+    printf("[-i, --interactive] : 대상 파일이 존재할 경우\n");
+    printf("                      대상 파일을 지울 것인지 여부를 확인합니다.\n\n");
     printf("옵션을 입력하지 않으면 하드 링크를 생성합니다.\n\n\n");
 	next_line();
 
@@ -104,7 +104,7 @@ void training_ln(void)
 
     printf("[실습] \"ln\" 명령어를 이용하여 'file1'의 하드 링크를\n");
     printf("'link1'라는 이름으로 생성해보세요.\n");
-    printf("사용법 : ln [원본 파일] [링크 파일]");
+    printf("사용법 : ln [원본 파일] [링크 파일]\n");
 	run_command("ln file1 link1");
 	next_line();
 
@@ -122,7 +122,7 @@ void training_ln(void)
     next_line();
 
     printf("[실습] \"rm -f link1\"(을)를 입력하여 링크 파일을 삭제해보세요.\n");
-    printf("사용법 : rm [옵션] [링크 파일]");
+    printf("사용법 : rm [옵션] [링크 파일]\n");
     run_command("rm -f link1");
     
     system("ls -al");
