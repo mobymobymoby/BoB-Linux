@@ -21,7 +21,7 @@ void training_netstat(void)
 
 	printf("그 중에서 자주 사용하는 옵션 모음은 아래와 같습니다.\n");
 	printf("netstat -nap                  : 연결을 기다리는 프로그램을 보여줍니다.\n");
-	printf("netstat -anp | grep [포트번호] : 특정 포트를 어떤 프로그램에서 사용 중 인지 확인합니다.\n");
+	printf("netstat -anp | grep [포트번호] : 특정 포트를 어떤 프로그램에서 사용중 인지 확인합니다.\n");
 	printf("netstat -nlpt                 : TCP Listening 상태의 프로그램을 보여줍니다.\n");
 	next_line();
 
