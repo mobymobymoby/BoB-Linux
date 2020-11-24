@@ -8,7 +8,7 @@ void training_more_less()
 	FILE* fp = fopen("more.txt", "w");
 	for(int i = 0; i < 10; i++)
 	{	
-		fprintf(fp, "\[%d 번째]\n\n", i+1);
+		fprintf(fp, "\n[%d 번째]\n\n", i+1);
 		fprintf(fp, "이것은 more 명령어의 테스트 파일 more.txt 입니다.\n\n");
 		fprintf(fp, "more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n\n");
 		fprintf(fp, "\tspace : 다음 페이지\n");
