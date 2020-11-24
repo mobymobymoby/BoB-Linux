@@ -18,7 +18,7 @@ void training_set_unset(void)
 
 	printf("환경 변수는 셸의 환경을 정의하는 중요한 역할을 수행하는 변수이며, \n미리 예약된 변수 명을 사용합니다.\n");
 	next_line();
-	printf("셸 변수란 특정한 셸에서만 적용되는 변수입니다.\n환경 변수는 현재 셸 뿐만 아니라 서브 셸에서도 적용이 되므로, 셸 변수보다 적용 범위가 넓습니다.\n");
+	printf("셸 변수란 특정한 셸에서만 적용되는 변수입니다.\n\n환경 변수는 현재 셸 뿐만 아니라 서브 셸에서도 적용이 되므로, \n셸 변수보다 적용 범위가 넓습니다.\n");
 	next_line();
 
 	printf("set 명령어는 다음과 같은 형식으로 사용합니다.\n$ set\n");
@@ -26,9 +26,9 @@ void training_set_unset(void)
 	printf("현재 환경 변수와 셸 변수 목록을 출력합니다.\n");
 	next_line();
 
-	printf("unset 명령어는 다음과 같은 형식으로 사용합니다.\n$ unset NAME\n");
+	printf("unset 명령어는 다음과 같은 형식으로 사용합니다.\n$ unset [변수 이름]\n");
 	next_line();
-	printf("NAME이라는 변수 명으로 선언된 변수가 제거됩니다.\n");
+	printf("해당 변수 이름으로 선언된 변수가 제거됩니다.\n");
 	next_line();
 
 	printf("그럼 우선 셸 변수를 선언해봅시다.\n");
