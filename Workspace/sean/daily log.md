@@ -128,7 +128,37 @@ BoB 리눅스의 해상도와 글자 크기 및 색상 그리고 한글 설정�
 오후 9시 - training_chmod.c, training_chown.c, training_curl.c를 보완하기 시작.
 
 ### 11월 24일 화요일
-오전 1:41 - 어제부터 시작했던 명령어들을 테스트까지 끝냈다.
-            이전에 보완 작업을 했던 명령어 트레이닝 코드들의 일괄적인 부분을 수정하였다.
-            next_line()을 기준으로 개행을 한 번씩 주어 코드 수정함에 있어서 수월하도록 하였다.
+오전 1시 41분  - 어제부터 시작했던 명령어들을 테스트까지 끝냈다.
+                 이전에 보완 작업을 했던 명령어 트레이닝 코드들의 일괄적인 부분을 수정하였다.
+                 next_line()을 기준으로 개행을 한 번씩 주어 코드 수정함에 있어서 수월하도록 하였다.\
 
+오후 6시 30분 - 트레이닝 보완 시작.
+오후 7시 50분 - training_dd.c 완료.
+
+오후 8시 - 팀 전체 회의
+
+오후 9시 30분 - training_group.c 시작
+오후 11시 - training_group.c 완료.
+
+오후 11시 40분 - training_head_tail.c 시작
+
+### 11월 25일 수요일
+오전 12시 50분 - trining_head_tail.c 완료.
+
+오전 1시 - training_ifconfig.c 시작.
+오전 1시 40분 - training_ifconfig.c 완료.
+
+오전 1시 40분 - training_init.c 시작.
+오전 2시 5분 - training_init.c 완료.
+
+오전 2시 10분 - training_ln.c 시작.
+오전 3시 01분 - trining_ln.c 완료.
+
+오전 3시 20분 - chsh, env, export, history, locate 보완 시작.
+오전 4시 30분 - chsh, env, export, history, locate 보완 완료.
+
+오전 4시 35분 - training_find.c 시작.
+오전 6시 08분 - training_find.c 완료.
+
+오전 6시 10분 - training_chroot.c 시작.
+오전 6시 50분 - training_chroot.c 완료.
