@@ -19,6 +19,11 @@ void training_find()
     printf("이름에서 알 수 있듯이 파일을 찾는 명령어입니다.\n");
 	printf("주어진 조건으로 파일을 찾아 해당 경로를 표시합니다.\n");
 	next_line();
+    
+    printf("\"find\" 명령어의 실행 파일은 \"/usr/bin/find\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"find\"(으)로 있습니다.\n");
+    next_line();
 
     printf("사용법은 \"find [옵션] [경로] [표현식]\" 입니다.\n");
     printf("ex) find ./dir\n");
