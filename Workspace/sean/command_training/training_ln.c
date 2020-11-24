@@ -104,7 +104,7 @@ void training_ln(void)
 	next_line();
 
 	printf("\n\n[실습] \"ln\"에 '-s' 옵션을 입력하여 'file1'의 심볼릭 링크를\n");
-    pirntf("'link2'라는 이름으로 생성해보세요.\n\n");
+    printf("'link2'라는 이름으로 생성해보세요.\n\n");
     printf("사용법 : ln [옵션] [원본 파일] [링크 파일]\n");
 	run_command("ln -s file1 link2");
 	next_line();
