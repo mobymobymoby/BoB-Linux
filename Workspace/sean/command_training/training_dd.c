@@ -57,6 +57,7 @@ void training_dd(void)
 	printf(" skip=<BLOCKS>  : 지정된 단위만큼 ibs크기를 건너뛰고 입력합니다.\n\n\n");
 	next_line();
     
+    system("clear");
     printf("'BYTES'의 단위로는 다음과 같습니다.\n\n\n");
     printf(" c   : Character, 1byte\n\n");
     printf(" w   : Word, 2byte\n\n");
@@ -96,7 +97,8 @@ void training_dd(void)
 
     printf("리눅스에서는 모든 디바이스를 파일화하여 관리하기 때문에\n");
     printf("\"dd\" 명령어를 잘 숙지해두면 파일 시스템과 관련하여 작업할 때 더욱 편리해질 것입니다.\n\n");
-    printf("파일 시스템이나 리눅스 시스템에 대하여 공부하거나 사용 중이시라면 꼭 숙지해두시길 바랍니다.\n");
+    printf("파일 시스템이나 리눅스 시스템에 대하여 공부하거나 사용 중이시라면\n");
+    printf("꼭 숙지해두시길 바랍니다.\n");
     next_line();
 
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
