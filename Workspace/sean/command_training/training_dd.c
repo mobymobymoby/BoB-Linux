@@ -33,13 +33,14 @@ void training_dd(void)
     next_line();
 	
 	printf("\"dd [operand] ...\" 형식인 경우\n");
-    printf("'dd [if=복사할 디스크/파티션] [of=저장 될 파일] [단위명=사이즈]' 를 입력해 사용합니다.\n");
+    printf("'dd [if=복사할 디스크/파티션] [of=저장 될 파일] [단위명=사이즈]'를 입력해 사용합니다.\n");
     next_line();
 
-    printf("예시를 들자면 \"dd if=/dev/sda of=/dev/sdb bs=1k\"(이)라고 하였을 때\n");
-    printf("'/dev/sda'를 '/dev/sdb'로 블록 사이즈 '1kb 단위'로 백업하는 것입니다.\n\n");
+    printf("예시를 들자면 \"dd if=/dev/sda of=/dev/sdb bs=512\"(이)라고 하였을 때\n");
+    printf("'/dev/sda'(을)를 '/dev/sdb'(으)로 블록 사이즈 '512 단위'로 백업하는 것입니다.\n\n");
 	next_line();
 
+    system("clear");
 	printf("\"dd\"에서 자주 쓰이는 [operand]는 다음과 같습니다.\n\n\n");
     printf(" if=<FILE>      : 입력 대상이 될 파일을 지정합니다.\n\n");
 	printf(" of=<FILE>      : 출력 대상이 될 파일을 지정합니다.\n\n");
@@ -55,17 +56,17 @@ void training_dd(void)
 	printf(" seek=<BLOCKS>  : 지정된 단위만큼 obs크기를 건너뛰고 출력합니다.\n\n");
 	printf(" skip=<BLOCKS>  : 지정된 단위만큼 ibs크기를 건너뛰고 입력합니다.\n\n\n");
 	next_line();
-
-    printf("'BYTES'의 단위로는 다음과 같습니다.\n\n");
-    printf(" c   : Character, 1byte\n");
-    printf(" w   : Word, 2byte");
-    printf(" b   : Block, 512byte\n");
-    printf(" kb  : 1000byte\n");
-    printf(" k   : Kilo byte, 1024byte\n");
-    printf(" MB  : 1000 * 1000\n");
-    printf(" M   : 1024 * 1024\n");
-    printf(" GB  : 1000 * 1000 * 1000\n");
-    printf(" G   : 1024 * 1024 * 1024\n");
+    
+    printf("'BYTES'의 단위로는 다음과 같습니다.\n\n\n");
+    printf(" c   : Character, 1byte\n\n");
+    printf(" w   : Word, 2byte\n\n");
+    printf(" b   : Block, 512byte\n\n");
+    printf(" kb  : 1000byte\n\n");
+    printf(" k   : Kilo byte, 1024byte\n\n");
+    printf(" MB  : 1000 * 1000\n\n");
+    printf(" M   : 1024 * 1024\n\n");
+    printf(" GB  : 1000 * 1000 * 1000\n\n");
+    printf(" G   : 1024 * 1024 * 1024\n\n");
     printf(" etc) T, P, E, Z, Y\n\n\n");
     next_line();
 
@@ -76,7 +77,7 @@ void training_dd(void)
     printf("'dir1' 디렉토리에는 'file1' 파일이 있습니다.\n\n");
     next_line();
 
-	printf("[실습] \"dd\"를 사용하여 디스크 \"if=dir1/file1\"(을)를 \"of=dir2/file1\"로\n");
+	printf("[실습] \"dd\"를 사용하여 디스크 \"if=dir1/file1\"(을)를 \"of=dir2/file1\"(으)로\n");
     printf("블록 사이즈 \"bs=1M\" 단위로 읽고 쓰도록 명령어를 입력해보세요.\n");
     printf("사용법 : dd if=[복사할 디스크] of=[복사되어 출력될 디스크] [단위=사이즈]\n");
 	just_run_command("dd if=dir1/file1 of=dir2/file1 bs=1M");
