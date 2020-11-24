@@ -20,7 +20,7 @@ void training_find()
 	printf("주어진 조건으로 파일을 찾아 해당 경로를 표시합니다.\n");
 	next_line();
 
-    printf("사용법은 \"find [옵션] [경로] [표현식] 입니다.\n");
+    printf("사용법은 \"find [옵션] [경로] [표현식]\" 입니다.\n");
     printf("ex) find ./dir\n");
     next_line();
 	
@@ -33,21 +33,21 @@ void training_find()
 	printf("-user <유저이름> : 소유자가 유저 이름인 파일을 찾습니다.\n");
     printf("-group <group명> : 지정한 그룹 소유의 파일이나 디렉토리를 찾습니다.\n");
     printf("-uid             : 지정한 UID 소유의 파일이나 디렉토리를 찾습니다.\n");
-    printf("-uid             : 지정한 GID 소유의 파일이나 디렉토리를 찾습니다.\n");
-	printf("-type [bcdfls] : 파일 유형에 따라 파일 찾기\n");
+    printf("-uid             : 지정한 GID 소유의 파일이나 디렉토리를 찾습니다.\n\n");
+	printf("-type [bcdfls] : 파일 유형에 따라 파일을 찾습니다.\n");
 	printf("	b: 블록파일\n");
 	printf("	c: 문자\n");
 	printf("	d: 디렉토리\n");
 	printf("	f: 파일\n");
 	printf("	l: 링크파일\n");
-	printf("	s: 소켓\n");
-	printf("-size [+/-]n : 파일 크기로 찾기\n");
+	printf("	s: 소켓\n\n");
+	printf("-size [+/-]n : 파일 크기로 찾습니다.\n");
 	printf("	+n : n보다 큰 파일\n");
 	printf("	-n : n보다 작은 파일\n");
-	printf("	n : n인 파일\n");
-	printf("-perm <퍼미션> : 퍼미션 값으로 파일 찾기\n");
-	printf("-exec <명령어> {} \\; : 찾은 파일을 대상으로 수행할 명령어 지정합니다.\n");
-    printf("                        {} \\;을 명령어 끝에 붙여야 한다.\n\n");
+	printf("	n : n인 파일\n\n");
+	printf("-perm <권한 값> : 퍼미션 값으로 파일 찾기\n");
+	printf("-exec <명령어> {} \\; : 찾은 파일을 대상으로 수행할 명령어를 지정합니다.\n");
+    printf("                        {} \\;을 명령어 끝에 붙여야 합니다.\n\n");
 	next_line();
 	
     //실습 1
@@ -55,7 +55,7 @@ void training_find()
     printf("[실습 1]\n\n");
     printf("\"find\" 명령어를 사용하여 'find_test_file1'을 찾아보세요.\n");
     printf("사용법 : find [파일 이름]\n");
-	just_run_command("find find_test_file");
+	just_run_command("find find_test_file1");
 
 	printf("\n\n경로를 생략했기 때문에 현재 디렉토리 내에서 파일을 검색하게 됩니다.\n");
 	next_line();
