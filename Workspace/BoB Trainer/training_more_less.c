@@ -8,7 +8,7 @@ void training_more_less()
 	FILE* fp = fopen("more.txt", "w");
 	for(int i = 0; i < 10; i++)
 	{	
-		fprintf(fp, "[%d 페이지]\n\n", i+1);
+		fprintf(fp, "\[%d 번째]\n\n", i+1);
 		fprintf(fp, "이것은 more 명령어의 테스트 파일 more.txt 입니다.\n\n");
 		fprintf(fp, "more와 less로 내용을 보는 중에는 아래와 같은 입력을 통해서 제어할 수 있습니다.\n\n");
 		fprintf(fp, "\tspace : 다음 페이지\n");
@@ -23,6 +23,7 @@ void training_more_less()
 	printf("cat과 같은 명령어와 다른 점은 화면 단위, 페이지 단위로 보여준다는 점입니다.\n");
 	next_line();
 	printf("내용이 긴 파일을 cat을 이용하여 화면에 출력하면 \n터미널 화면을 초과하는 앞의 내용을 보기 힘든 단점이 있습니다.\n");
+	next_line();
 	printf("<Shift+PgUp>, <Shift+PgDn> 으로 넘길 수는 있으나 아무래도 불편함이 있습니다.\n");
 	next_line();
 	printf("이럴 때 사용하는 것이 more와 less입니다.\n");
