@@ -78,13 +78,13 @@ void training_fsck(void){
     next_line();
 
     system("clear");
-    printf("다음은 \"fsck\"의 확장된 명령어인 \"e2fsck\"의 옵션입니다.\n\n\n")
+    printf("다음은 \"fsck\"의 확장된 명령어인 \"e2fsck\"의 옵션입니다.\n\n\n");
     printf(" [-v] : 점검 내역을 자세하게 출력해줍니다.\n\n");
     printf(" [-y] : 모든 응답을 다 yes를 해서 자동으로 점검, 수리를 수행합니다.\n\n");
     printf(" [-n] : 모든 응답을 다 no를 해서 점검만 수행합니다.\n\n");
     printf(" [-f] : 파일 시스템 이상 유무와 관계없이 강제로 점검을 합니다.\n\n");
     printf(" [-p] : 파일 시스템을 검사하면서 자동으로 복구도 해줍니다.\n\n");
-    pritnf(" [-c] : BAD BLOCK을 체크합니다.\n\n");
+    printf(" [-c] : BAD BLOCK을 체크합니다.\n\n");
     next_line();
 
     printf("이번 트레이닝에서는 간단한 실습 한 가지를 해보고 옵션을 위주로 봤습니다.\n");
