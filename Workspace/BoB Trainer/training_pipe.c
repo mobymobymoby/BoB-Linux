@@ -54,7 +54,7 @@ void training_pipe(void)
     next_line();
     printf("주로 \"awk\", \"cut\", \"grep\", \"more\" 같은 명령어들과 조합하여 사용됩니다.\n");
     next_line();
-    printf("\"cat ~/.bashrc | more\"을 입력하여 pipe 기능을 실습해보세요.\n");
+    printf("[실습] \"cat ~/.bashrc | more\"을 입력하여 pipe 기능을 실습해보세요.\n");
     printf("(q를 입력하면 종료됩니다.)\n");
     just_run_command("cat ~/.bashrc | more");
     printf("\n잘 따라하셨다면 .bashrc 파일의 내용을 한 페이지씩 볼 수 있었을 것입니다.\n");
@@ -70,7 +70,7 @@ void training_pipe(void)
     next_line();
     printf("바로 실습해보도록 하겠습니다.\n");
     next_line();
-    printf("\"touch && cat > test1\"이라고 입력해보세요.\n");
+    printf("[실습] \"touch && cat > test1\"이라고 입력해보세요.\n");
     just_run_command("touch && cat > test1");
     printf("\n잘 따라하셨다면 \"cat > test1\" 명령은 실행되지 않았을 것입니다.\n");
     next_line();
@@ -86,7 +86,7 @@ void training_pipe(void)
     next_line();
     printf("더블 버티컬바(||)는 간단히 실습해보겠습니다.\n");
     next_line();
-    printf("\"touch || echo hello world\"라고 입력해보세요.\n");
+    printf("[실습] \"touch || echo hello world\"라고 입력해보세요.\n");
     just_run_command("touch || echo hello world");
     printf("\n잘 따라하셨다면 \"touch\" 명령어가 제대로 동작하지 않아도 화면에 \"hello world\" 문구가 보일 것입니다.\n");
     next_line();
@@ -98,8 +98,7 @@ void training_pipe(void)
     printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
-    printf("\"pipe(|)\" 외 3가지에 대한 학습이 끝났습니다.\n");
-    next_line();
+    printf("\"pipe(|)\" 외 3가지에 대한 학습이 끝났습니다.\n고생하셨습니다.\n");
 
     delete_defdir();
 }
