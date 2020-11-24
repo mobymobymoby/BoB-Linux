@@ -13,7 +13,8 @@ void training_file()
 	next_line();
 
     printf("\"file\" 명령어의 실행 파일은 \"/usr/bin/file\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"file\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"file\"(으)로 있습니다.\n");
     next_line();
 
 	printf("사용법은 \"file [옵션] [파일 이름]\" 입니다.\n");

@@ -18,7 +18,8 @@ void training_cat(void)
     next_line();
     
     printf("\"cat\" 명령어의 실행파일은 \"/usr/bin/cat\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"cat\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"cat\"(으)로 있습니다.\n");
     next_line();
     
     printf("사용법은 \"cat [옵션] [파일명]\" 입니다.\n");

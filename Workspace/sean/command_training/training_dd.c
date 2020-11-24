@@ -25,7 +25,8 @@ void training_dd(void)
 	next_line();
 
     printf("\"dd\" 명령어의 실행 파일은 \"/usr/bin/dd\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"dd\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"dd\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"dd [operand] ...\" 또는 \"dd [옵션]\" 입니다.\n");

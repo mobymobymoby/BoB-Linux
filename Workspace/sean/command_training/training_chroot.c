@@ -15,7 +15,7 @@ void training_chroot(void)
 	test[0] = '\0';
 	
 	printf("이번에 학습할 명령어는 \"chroot\" 입니다. \n\n");
-	printf("\"chroot\"는 'Change Root Directory'의 약자이며\n");
+	printf("\"chroot\"는 'Change Root Directory'의 약자이며\n\n");
     printf("주로 보안성을 위해 새로운 가상의 'root' 디렉토리를 생성하여\n");
     printf("이 디렉토리의 상위로는 이동이 불가능하게 합니다.\n");
     next_line();
@@ -36,7 +36,7 @@ void training_chroot(void)
 
     printf("[옵션]은 해당 명령어에 지정할 옵션입니다.\n\n");
     printf("[새로운 루트 디렉토리](은)는 새롭게 지정할 'root' 디렉토리를 지정합니다.\n\n");
-    printf("[명령어 [인자값] ...](은)는 선택 사항이며 'root' 디렉토리를 변경한 후\n\n");
+    printf("[명령어 [인자값] ...](은)는 선택 사항이며 'root' 디렉토리를 변경한 후\n");
     printf("해당 'root'를 기반으로 실행할 명령어를 입력하여 사용합니다.\n\n");
     next_line();
 
@@ -44,7 +44,7 @@ void training_chroot(void)
     printf("컴퓨터 파일 시스템 계층 구조의 첫번째 또는 최상위 디렉토리를 의미합니다.\n\n");
 	next_line();
 
-	printf("\"chroot\"명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n");
+	printf("\"chroot\"명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
     printf("[--help] : 명령어의 도움말을 표시합니다.\n");
     printf("[--version] : 명령어의 버전 정보를 표시합니다.\n\n");
 	next_line();
@@ -52,7 +52,7 @@ void training_chroot(void)
 	printf("[실습] \"chroot\" 명령어를 사용하여 현재 디렉토리를 루트 디렉토리로 변경해보세요.\n");
 	printf("현재 디렉토리의 경로는 \'%s\'입니다.\n\n", dir);
     
-    printf("사용법 : chroot [지정할 새 루트 디렉토리]");
+    printf("사용법 : chroot [지정할 새 루트 디렉토리]\n");
 
 	strncat( strncat(test, "chroot ", sizeof("chroot ")), dir, sizeof(dir));
 
@@ -68,7 +68,7 @@ void training_chroot(void)
 
     printf("\"chroot\"로 루트 환경을 새로 구축하여\n");
     printf("기존 시스템에 영향을 미치지 않게 작업을 하고싶은 경우\n\n");
-    printf("테스트 및 개발, 의존성 제어, 호환성, 복구, 권한 분리의 목적으로 사용됩니다.\n\n");
+    printf("보통 테스트 및 개발, 의존성 제어, 호환성, 복구, 권한 분리의 목적으로 사용됩니다.\n\n");
 	next_line();
     
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");

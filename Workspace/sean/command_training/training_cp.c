@@ -18,6 +18,11 @@ void training_cp(void)
     printf("이번에 학습할 명령어는 \"cp\" 입니다.\n\n");
     printf("\"cp\" 명령어는 'copy'의 약자이며, 파일이나 디렉토리를 복사할 때 사용하는 명령어입니다.\n\n");
     next_line();
+    
+    printf("\"cp\" 명령어의 실행 파일은 \"/usr/bin/cp\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"cp\"(으)로 있습니다.\n");
+    next_line();
 
     printf("사용법은 \"cp [옵션] [원본 파일 혹은 디렉토리] ... [대상 파일 혹은 디렉토리]\" 입니다.\n");
     next_line();

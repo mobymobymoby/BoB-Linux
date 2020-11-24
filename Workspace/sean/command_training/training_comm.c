@@ -13,7 +13,8 @@ void training_comm(void)
     next_line();
     
     printf("\"comm\" 명령어의 실행 파일은 \"/usr/bin/comm\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"comm\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"comm\"(으)로 있습니다.\n");
     next_line();
     
     printf("사용법은 \"comm [옵션] [비교할 파일1] [비교할 파일2]\"입니다.\n");

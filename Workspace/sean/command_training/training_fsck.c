@@ -11,7 +11,8 @@ void training_fsck(void){
     next_line();
 
     printf("\"fsck\" 명령어의 실행 파일은 \"/usr/sbin/fsck\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에 \"fsck\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
+    printf("\"fsck\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"fsck [옵션] [파일시스템 또는 디스크 디바이스]\" 입니다.\n");

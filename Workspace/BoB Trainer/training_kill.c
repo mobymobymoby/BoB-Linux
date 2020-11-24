@@ -13,7 +13,8 @@ void training_kill(void)
     next_line();
 
     printf("\"kill\" 명령어의 실행 파일은 \"/usr/bin/kill\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"kill\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"kill\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"kill [옵션 or 시그널] [PID]\" 입니다.\n");

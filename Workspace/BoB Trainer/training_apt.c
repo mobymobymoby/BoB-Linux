@@ -16,7 +16,8 @@ void training_apt(void)
     next_line();
     
     printf("\"apt\" 명령어의 실행 파일은 \"usr/bin/apt\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"apt\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"apt\"(으)로 있습니다.\n");
     next_line();
     
     printf("대표적으로 'Ubuntu'와 'Kali linux'를 포함한\n");

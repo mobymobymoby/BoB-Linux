@@ -8,9 +8,16 @@ void training_curl(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("이번에 학습할 명령어는 \"curl\" 입니다.\n\n");
+
 	printf("\"curl\" 명령어는 커맨드 라인에서 URL을 통해\n");
     printf("데이터를 전송하거나 다운로드 하는 것에 사용합니다.\n");
 	next_line();
+
+    printf("\"curl\" 명령어의 실행 파일은 \"/usr/bin/curl\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"curl\"(으)로 있습니다.\n");
+    next_line();
+
 
     printf("사용법은 \"curl [옵션 / URLs]\" 입니다.\n");
     printf("ex) curl google.com\n");
@@ -29,9 +36,6 @@ void training_curl(void)
 	printf("\"302 Found\" 메세지는 해당 주소가 다른 주소로 변경되었음을 의미하고\n");
     printf("다른 주소의 정보가 존재한다는 것을 알려주는 것입니다.\n");
     next_line();
-
-	//printf("즉, 여기서 제시된 다른 주소로 접속하면 된다는 의미입니다.\n");
-    //next_line();
 
     printf("보통 chrome과 같은 인터넷 브라우저로 접속할 때 '302' 코드가 발생되면\n");
     printf("자동으로 변경된 새 주소에 연결하여 사용자에게 데이터를 보여줍니다.\n");

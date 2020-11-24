@@ -8,10 +8,13 @@ void training_halt(void)
     
     printf("이번에 학습할 명령어는 \"halt\" 입니다.\n\n");
     next_line();
+
     printf("\"halt\" 명령어는 시스템을 종료하는 명령어입니다.\n");
     next_line();
+
     printf("\"halt\" 명령어의 실행 파일은 \"/usr/sbin/halt\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에 \"halt\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
+    printf("\"halt\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"halt [옵션]\" 입니다.\n");

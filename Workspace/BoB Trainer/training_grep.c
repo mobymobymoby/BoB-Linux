@@ -13,7 +13,8 @@ void training_grep(void)
     next_line();
     
     printf("\"grep\" 명령어의 실행 파일은 \"/usr/bin/grep\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"grep\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"grep\"(으)로 있습니다.\n");
     next_line();
     
     printf("\"grep\" 명령어는 리눅스에서 자주 사용되는 명령어들 중 하나입니다.\n");

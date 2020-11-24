@@ -20,7 +20,8 @@ void training_chmod(void)
 	next_line();
     
     printf("\"chmod\" 명령어의 실행 파일은 \"/usr/bin/chmod\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"chmod\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"chmod\"(으)로 있습니다.\n");
     next_line();
 
 	printf("사용법은 \"chmod [옵션] [모드] [파일]\" 입니다.\n");
