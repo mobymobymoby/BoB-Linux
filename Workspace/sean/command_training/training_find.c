@@ -31,6 +31,15 @@ void training_find()
 	
     printf("[경로]를 생략하면 현재 디렉토리에서부터 검색을 합니다.\n");
 	next_line();
+    
+    printf("\"find\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
+    printf("[-P]    : 심볼릭 링크를 따라가지 않고, 심볼릭 링크 자체 정보를 사용합니다.\n");
+    printf("[-L]    : 심볼릭 링크에 연결된 파일 정보를 사용합니다.\n");
+    printf("[-H]    : 심볼릭 링크를 따라가지 않으나\n");
+    printf("          Command Line Argument를 처리할 땐 예외로 합니다.\n");
+    printf("[-D]    : 디버그 메시지를 출력합니다.\n");
+    next_line();
+
 	
     system("clear");
     printf("find 명령어의 자주 쓰이는 표현식은 다음과 같습니다.\n\n");
@@ -138,10 +147,10 @@ void training_find()
     printf("\"find\" 명령어를 이용한 실습 5가지를 해보았습니다.\n");
     next_line();
 
-    printf("\"find\" 명령어는 리눅스에서 파일을 찾을 때 여러 가지 방법으로 찾을 수 있습니다.\n");
+    printf("\"find\" 명령어는 리눅스에서 파일을 찾을 때 아주 유용한 명령어입니다.\n");
     next_line();
 
-	printf("find 명령어를 잘 활용하면 원하는 파일에만 대해서\n");
+	printf("\"find\" 명령어를 잘 활용하면 원하는 파일에만 대해서\n");
     printf("다양한 작업을 한 번에 실행이 가능합니다.\n");
 	next_line();
 	
@@ -150,7 +159,8 @@ void training_find()
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
 
-	printf("find 명령어에 대한 학습이 끝났습니다.\n");
+	printf("\"find\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
 
 	delete_defdir();
 }
