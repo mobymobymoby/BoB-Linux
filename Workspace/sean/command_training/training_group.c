@@ -72,7 +72,7 @@ void training_group(void)
     printf("\"groupadd\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
     printf(" [-g] : 새로운 그룹을 생성하면서 GID를 부여하고 싶을 때 사용합니다.\n");
     printf("        RedHat을 제외하고는 0 ~ 999까지 예약되어 있으므로 999 이상의 번호가 부여됩니다.\n\n");
-    pritnf(" [-p] : 생성하는 그룹에 암호를 부여합니다.\n\n");
+    printf(" [-p] : 생성하는 그룹에 암호를 부여합니다.\n\n");
     printf(" [-r] : 예약된 GID(0 ~ 999)로 할당할 때 사용합니다.\n\n");
 	next_line();
 
