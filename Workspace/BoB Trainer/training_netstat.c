@@ -35,12 +35,12 @@ void training_netstat(void)
 	next_line();
 	printf("출력된 결과를 설명해드리곘습니다.\n");
 	next_line();
-	printf("Proto는 프로토콜의 종류를 의미하며, 주로 tcp, udp 등이 있습니다.\n");
-	printf("Recv-Q와 Send-Q는 수송신된 패킷 중에서 아직 처리되지 않은 바이트 수를 말합니다.\n");
-	printf("Local Address는 본인의 로컬 아이피와 포트를 의미하며,\n");
-	printf("Foreign Address는 상대방의 아이피와 포트를 의미합니다.\n");
-	printf("State는 해당 소켓의 연결 상태를 의미합니다.\n");
-	printf("PID/Program name는 해당 소켓을 사용하는 프로그램 이름, 프로세스 고유 번호를 말합니다.\n");
+	printf(" Proto는 프로토콜의 종류를 의미하며, 주로 tcp, udp 등이 있습니다.\n");
+	printf(" Recv-Q와 Send-Q는 수송신된 패킷 중에서 아직 처리되지 않은 바이트 수를 말합니다.\n");
+	printf(" Local Address는 본인의 로컬 아이피와 포트를 의미하며,\n");
+	printf(" Foreign Address는 상대방의 아이피와 포트를 의미합니다.\n");
+	printf(" State는 해당 소켓의 연결 상태를 의미합니다.\n");
+	printf(" PID/Program name는 해당 소켓을 사용하는 프로그램 이름, 프로세스 고유 번호를 말합니다\n");
 	next_line();
 
 	printf("State 값 중 핵심적인 내용들만 알아보겠습니다.\n\n");
@@ -53,7 +53,10 @@ void training_netstat(void)
 	printf(" TIME_WAIT   : 연결은 종결되었지만 당분간 소켓을 열어 놓은 상태, 시간이 지나면 사라짐\n");
 	printf(" UNKNOWN     : 소켓의 상태를 알 수 없음\n");
 	next_line();
-
+	printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+	printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
+	next_line();
+	printf("\"netstat\" 명령어의 학습이 끝났습니다.\n");
+	printf("고생하셨습니다.\n");
 	delete_defdir();
-	printf("고생하셨습니다!\n");
 }
