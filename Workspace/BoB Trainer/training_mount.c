@@ -22,7 +22,7 @@ void training_mount()
 	printf("tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=403024k,mode=755)\n");
 	printf("/dev/sda1 on / type ext4 (rw,relatime)\n");
 	printf("\n");
-	printf("많은 정보가 출력되었습니다.\n마지막에 출력된 '/dev/sda1 ...'을 예시로 말씀드리겠습니다.");
+	printf("많은 정보가 출력되었습니다.\n마지막에 출력된 '/dev/sda1 ...'을 예시로 말씀드리겠습니다.\n");
 	next_line();
 	printf("[/dev/sda1] 과 같이 앞 쪽은 장치를 나타냅니다.\n");
 	printf("on 뒤의 [/] 는 마운트 된 디렉토리를 나타냅니다.\n");
