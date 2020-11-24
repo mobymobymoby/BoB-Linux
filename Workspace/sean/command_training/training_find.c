@@ -65,8 +65,9 @@ void training_find()
     system("clear");
     printf("[실습 2]\n\n");
 
-    system("ls -al find_test_file2");
-    printf("\n\n현재 디렉토리에 'find_test_file2'라는 파일이 존재합니다.\n\n\n");
+    system("ls -al find_test_file*");
+    printf("\n\n현재 디렉토리에 'find_test_file'가 포함된 파일들이 존재합니다.\n\n\n");
+    next_line();
 
     printf("\"find\" 명령어를 사용하여 'find_test_file2'(을)를 찾고 동시에\n");
     printf("'-exec rm {} \\;'옵션을 이용하여 삭제까지 해보세요.\n\n");
@@ -86,7 +87,7 @@ void training_find()
     //실습 3
     system("clear");
     printf("[실습 3]\n\n");
-    printf("\"find . -name 'find_test*' -type d\"(을)를 입력해보세요.\n");
+    printf("\"find . -name \"find_test*\" -type d\"(을)를 입력해보세요.\n");
     printf("사용법 : find [경로] [옵션]\n");
     just_run_command("find . -name \"find_test*\" -type d");
     
@@ -99,7 +100,7 @@ void training_find()
     //실습 3-2
     system("clear");
     printf("[실습 3-2]\n\n");
-    printf("\" find . -type f -name 'find_test*' \"(을)를 입력해보세요.\n");
+    printf("\" find . -type f -name \"find_test*\" \"(을)를 입력해보세요.\n");
     just_run_command("find . -type f -name \"find_test*\"");
     
     printf("\n\n[실습 3-2]는 [실습 3]와 비슷하지만\n");
@@ -112,8 +113,8 @@ void training_find()
     //실습 4
     system("clear");
     printf("[실습 4]\n\n");
-    printf("\"find . '*.c' | head 4\"(을)를 입력해보세요.\n");
-    just_run_command("find . '*.c' | head -4");
+    printf("\"find . \"*.c\" | head -3\"(을)를 입력해보세요.\n");
+    just_run_command("find . \"*.c\" | head -3");
 
     printf("\n\n위의 실습은 현재 디렉토리에서 '.c'로 끝나는 파일을 찾은 뒤 4개만 출력합니다.\n");
     next_line();
