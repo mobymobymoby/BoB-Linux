@@ -12,7 +12,7 @@ void training_mkfs(void)
 	printf("mkfs는 make file system의 약자입니다.\n");
 	next_line();
 	printf("mkfs는 보통 새로 생성한 파티션에 대해서 많이 사용합니다.\n");
-	next_lnie();
+	next_line();
 	printf("fdisk 등의 명령어로 파티션을 새로 생성한 후에는 \n해당 파티션을 어떤 형식의 파일 시스템으로 만들어 주어야 합니다.\n");
 	printf("이 때 사용하는 것이 mkfs입니다.\n");
 	next_line();
