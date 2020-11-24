@@ -22,7 +22,8 @@ void training_init(void)
 
     printf("다른 모든 프로세스의 직접적 또는 간접적인 부모 프로세스이며\n");
     printf("자동으로 고아 프로세스들을 입양합니다.\n\n");
-    printf("즉, \"init\" 최초로 프로세스가 실행되고 \"init\"(이)가 다른 프로세스를 시작하는 구조입니다.\n\n");
+    printf("즉, \"init\" 최초로 프로세스가 실행되고\n");
+    printf("\"init\"(이)가 다른 프로세스를 시작하는 구조입니다.\n\n");
     next_line();
 
     printf("[런레벨이란?]\n");
