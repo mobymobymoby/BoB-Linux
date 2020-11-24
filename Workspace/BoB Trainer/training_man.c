@@ -8,18 +8,21 @@ void training_man(void)
 
     printf("이번에 배울 명령어는 \"man\" 입니다.\n");
     next_line();
-    printf("\"man\" 명령어는 Manual pages의 약자로, \n다른 명령어들의 자세한 사용법이나 매뉴얼을 볼 때 사용하는 명령어 입니다.\n");
+    printf("\"man\" 명령어는 Manual pages(man pages)의 약자로, \n다른 명령어들의 자세한 사용법이나 매뉴얼을 볼 때 사용하는 명령어 입니다.\n");
     next_line();
-    printf("Manual 페이지들은 대부분의 유닉스 계열의 운영체제에 기본으로 설치되어 있는 문서입니다.\n");
+    printf("man page들은 대부분의 유닉스 계열의 운영체제에 기본으로 설치되어 있는 문서입니다.\n");
     next_line();
     printf("\"man\" 명령어의 실행 파일 위치는 \"/usr/bin/man\"에 있습니다.\n");
     printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"man\"으로 있습니다.\n");
     next_line();
     printf("\"man\" 명령어의 사용법은 \"man [옵션] [명령어 이름]\" 이지만\n");
-    printf("주로 \"man [명령어 이름]\"으로 많이 사용됩니다.\n예를 들어 다음과 같이 사용합니다.\n");
+    printf("주로 \"man [명령어 이름]\"으로 많이 사용됩니다.\n");
+    next_line();
+    printf("예를 들어 다음과 같이 사용합니다.\n");
     printf("$ man ls\n");
     next_line();
     printf("\"man\" 명령어는 투박하게 구성되어 있지만, \n기본적인 내용을 담고 있어서 도움이 됩니다.\n");
+    next_line();
     printf("명령어에 대해 모를 때 네트워크가 단절된 환경에서도 유용하게 사용할 수 있겠지요.\n");
     next_line();
     printf("각종 명령어들에 대해 간단한 사용법을 확인하고 싶을 때는 \n\"[명령어] --help\"와 같이 '--help' 옵션을 이용해도 됩니다.\n");
@@ -61,7 +64,7 @@ void training_man(void)
     printf("추후 Unix 혹은 리눅스 시스템에서 \"man\" 명령어의 옵션들을 실습해보시길 바랍니다.\n");
     next_line();
     printf("\"man\" 명령어는 각 명령어들의 매뉴얼 페이지를 보여주는 명령어로\n");
-    printf("인터넷이 없는 상황에서도 유용하게 쓸 수 있는 명령어이므로 \n외워두시면 도움이 크게 되실 것입니다.\n");
+    printf("인터넷이 없는 상황에서도 유용하게 쓸 수 있는 명령어이므로 \n알아두시면 도움이 크게 되실 것입니다.\n");
     next_line();
     printf("\"man\" 명령어의 옵션은 위에 나온 것들 말고도 여러가지가 있습니다.\n");
     next_line();
