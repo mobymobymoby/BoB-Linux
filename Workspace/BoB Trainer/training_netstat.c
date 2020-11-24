@@ -39,18 +39,18 @@ void training_netstat(void)
 	printf("Local Address는 본인의 로컬 아이피와 포트를 의미하며,\n");
 	printf("Foreign Address는 상대방의 아이피와 포트를 의미합니다.\n");
 	printf("State는 해당 소켓의 연결 상태를 의미합니다.\n");
-	printf("PID/Program name는 해당 소켓을 사용하고 있는 프로그램 이름, 프로세스 고유 번호를 말합니다.\n");
+	printf("PID/Program name는 해당 소켓을 사용하는 프로그램 이름, 프로세스 고유 번호를 말합니다.\n");
 	next_line();
 
 	printf("State 값 중 핵심적인 내용들만 알아보겠습니다.\n\n");
-	printf("    ESTABLISHED : 연결이 맺어진 상태\n");
-	printf("    SYN-SENT    : 연결을 요청한 상태 \n");
-	printf("    SYN-RECV    : 연결 요청을 수신한 상태\n");
-	printf("    TIME-WAIT   : 연결종료 후에 한동안 유지하고 있는 상태\n");
-	printf("    CLOSED      : 소켓을 사용하지 않는 상태\n");
-	printf("    LISTEN      : 소켓이 새로운 연결을 기다리는 상태\n");
-	printf("    TIME_WAIT   : 연결은 종결되었지만 당분간 소켓을 열어 놓은 상태, 시간이 지나면 사라짐\n");
-	printf("    UNKNOWN	    : 소켓의 상태를 알 수 없음\n");
+	printf(" ESTABLISHED : 연결이 맺어진 상태\n");
+	printf(" SYN-SENT    : 연결을 요청한 상태 \n");
+	printf(" SYN-RECV    : 연결 요청을 수신한 상태\n");
+	printf(" TIME-WAIT   : 연결종료 후에 한동안 유지하고 있는 상태\n");
+	printf(" CLOSED      : 소켓을 사용하지 않는 상태\n");
+	printf(" LISTEN      : 소켓이 새로운 연결을 기다리는 상태\n");
+	printf(" TIME_WAIT   : 연결은 종결되었지만 당분간 소켓을 열어 놓은 상태, 시간이 지나면 사라짐\n");
+	printf(" UNKNOWN     : 소켓의 상태를 알 수 없음\n");
 	next_line();
 
 	delete_defdir();
