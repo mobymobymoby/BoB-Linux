@@ -21,15 +21,17 @@ void training_ln(void)
 	next_line();
 
     printf("\"ln\" 명령어의 실행 파일은 \"/usr/bin/ln\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"ln\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
+    printf("\"ln\"(으)로 있습니다.\n");
     next_line();
 
     printf("링크를 사용하는 이유는\n");
-    printf("\"경로 단축\" 또는 \"데이터를 안전하게 보관하고 싶을 경우\" 또는 \"통일성\" 때문입니다.\n");
+    printf("\"경로 단축\" 또는 \"데이터를 안전하게 보관하고 싶을 경우\" 또는 \"통일성\" 때문입니다.\n\n");
     next_line();
 	
-    printf("리눅스에서는 파일이나 디렉토리가 생성될 때 'I-node(index node)'라는 번호가 부여됩니다.\n");
-    printf("이 번호는 \"ls -i\" 명령으로 확인할 수 있습니다.\n");
+    printf("리눅스에서는 파일이나 디렉토리가 생성될 때\n");
+    printf("'I-node(index node)'라는 번호가 부여됩니다.\n\n");
+    printf("이 번호는 \"ls -i\" 명령으로 확인할 수 있습니다.\n\n");
     next_line();
 
     printf("'I-node'에는 파일이나 디렉토리의 여러가지 정보가 담겨있는데\n\n");
@@ -79,7 +81,7 @@ void training_ln(void)
     next_line();
 
     printf("[옵션]은 선택 사항이며 해당 명령어에 지정할 옵션을 입력합니다.\n");
-    printf("[원본 파일]은 해당 파일의 원본,\n");
+    printf("[원본 파일]은 해당 파일의 원본을 입력합니다.\n");
     printf("[링크 파일 이름]은 생성할 심볼릭 링크 파일의 이름을 입력하여 사용합니다.\n\n");
 	next_line();
 	
@@ -88,17 +90,20 @@ void training_ln(void)
     printf("[-S, --suffix]   : 백업 파일 생성 시 원하는 접미사를 지정합니다.\n");  
     printf("[-v, --verbose]  : 링크를 만드는 정보를 자세히 출력합니다.\n");
     printf("[-f, --force]    : 링크 파일 존재 시에 삭제하고 생성합니다.\n");
-    printf("[-b, --backup]   : 대상 파일이 존재할 경우, 백업 파일을 만든 후 링크 파일을 생성합니다.\n");
-    printf("[-i, --interactive : 대상 파일이 존재할 경우, 대상 파일을 지울 것인지 여부를 확인합니다.\n\n");
-    printf("옵션을 입력하지 않으면 하드 링크를 생성합니다.\n\n");
+    printf("[-b, --backup]   : 대상 파일이 존재할 경우\n");
+    printf("                   백업 파일을 만든 후 링크 파일을 생성합니다.\n");
+    printf("[-i, --interactive : 대상 파일이 존재할 경우\n");
+    printf("                     대상 파일을 지울 것인지 여부를 확인합니다.\n\n");
+    printf("옵션을 입력하지 않으면 하드 링크를 생성합니다.\n\n\n");
 	next_line();
 
 	system("ls -al");
 
-	printf("\n\n현재 디렉토리에는 \"file1\"이 있습니다.\n\n");
+	printf("\n\n현재 디렉토리에는 \"file1\" 파일이 있습니다.\n\n");
     next_line();
 
-    printf("[실습] \"ln\" 명령어를 이용하여 'file1'의 하드 링크를 'link1'라는 이름으로 생성해보세요.\n");
+    printf("[실습] \"ln\" 명령어를 이용하여 'file1'의 하드 링크를\n");
+    printf("'link1'라는 이름으로 생성해보세요.\n");
     printf("사용법 : ln [원본 파일] [링크 파일]");
 	run_command("ln file1 link1");
 	next_line();
