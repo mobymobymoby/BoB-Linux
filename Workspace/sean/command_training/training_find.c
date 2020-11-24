@@ -57,7 +57,8 @@ void training_find()
     printf("사용법 : find [파일 이름]\n");
 	just_run_command("find find_test_file1");
 
-	printf("\n\n경로를 생략했기 때문에 현재 디렉토리 내에서 파일을 검색하게 됩니다.\n");
+	printf("\n\n위의 출력된 결과는 \"find\" 명령어로 찾은 'find_test_file1' 파일 입니다.\n\n");
+    printf("경로를 생략했기 때문에 현재 디렉토리 내에서 파일을 검색하게 됩니다.\n");
 	next_line();
 	
     //실습 2
@@ -67,12 +68,21 @@ void training_find()
     printf("'-exec rm {} \\;'옵션을 이용하여 삭제까지 해보세요.\n\n");
     printf("사용법 : find [파일 이름] [-exec <명령어> {}\\]");
 	just_run_command("find find_test_file2 -exec rm {} \\;");
+
+    printf("\n\n위의 실습 결과로 'find_test_file2' 파일이 삭제되었을 것입니다.\n\n");
+    next_line();
+
+    printf("[실습 2-1]\"ls -al find_test_file2\"(을)를 입력하여 확인해보세요.\n");
+    just_run_command("ls -al find_test_file2");
+    
+    printf("\n\n 파일이 삭제되었다는 것을 확인할 수 있습니다.\n");
+    next_line();
     
 
     //실습 3
     system("clear");
     printf("[실습 3]\n\n");
-    printf("\"find . -name '*find_test' -type d\"(을)를 입력해보세요.\n");
+    printf("\"find . -name 'find_test*' -type d\"(을)를 입력해보세요.\n");
     printf("사용법 : find [경로] [옵션]\n");
     just_run_command("find . -name '*find_test' -type d");
     
@@ -85,7 +95,7 @@ void training_find()
     //실습 3-2
     system("clear");
     printf("[실습 3-2]\n\n");
-    printf("\" find . -type f -name '*find_test' \"(을)를 입력해보세요.\n");
+    printf("\" find . -type f -name 'find_test*' \"(을)를 입력해보세요.\n");
     just_run_command("find . -type f -name '*find_test'");
     
     printf("\n\n[실습 3-2]는 [실습 3]와 비슷하지만\n");
@@ -98,8 +108,8 @@ void training_find()
     //실습 4
     system("clear");
     printf("[실습 4]\n\n");
-    printf("\"find . '*.c' | head 10\"(을)를 입력해보세요.\n");
-    just_run_command("find . '*.c' | head 4");
+    printf("\"find . '*.c' | head 4\"(을)를 입력해보세요.\n");
+    just_run_command("find . '*.c' | head -4");
 
     printf("\n\n위의 실습은 현재 디렉토리에서 '.c'로 끝나는 파일을 찾은 뒤 4개만 출력합니다.\n");
     next_line();
@@ -121,7 +131,8 @@ void training_find()
     printf("\"find\" 명령어는 리눅스에서 파일을 찾을 때 여러 가지 방법으로 찾을 수 있습니다.\n");
     next_line();
 
-	printf("find 명령어를 잘 활용하면 원하는 파일에만 대해서 다양한 작업을 한 번에 실행이 가능합니다.\n");
+	printf("find 명령어를 잘 활용하면 원하는 파일에만 대해서\n");
+    printf("다양한 작업을 한 번에 실행이 가능합니다.\n");
 	next_line();
 	
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
