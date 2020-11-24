@@ -74,11 +74,11 @@ void training_locate(void)
     printf("실행 결과에서 n개만 보여주겠끔 하는 옵션을 실습하겠습니다.\n\n");
     next_line();
     
-    printf("[실습] \"locate -l 10 *.deb\"을(를) 입력하여 -n 옵션을 실습해보세요\n");
+    printf("[실습] \"locate -l 10 *.deb\"을(를) 입력하여 '-l' 옵션을 실습해보세요\n");
     printf("사용법 : locate [옵션] [검색할 문자열 or 패턴]\n");
     just_run_command("locate -l 10 *.deb");
     
-    printf("\n잘 입력하셨다면, .deb 확장자를 가진 파일들의 경로가 출력되었을 것입니다.\n");
+    printf("\n잘 입력하셨다면, 10개의 .deb 확장자를 가진 파일들의 경로가 출력되었을 것입니다.\n");
     printf("(아무것도 출력되지 않는다면 '.deb' 확장자의 파일이 없다는 것입니다.)\n");
     next_line();
     

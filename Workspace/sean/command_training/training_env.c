@@ -49,7 +49,7 @@ void training_env(void)
     next_line();
 
     printf("\"env\" 명령어는 '-u' 옵션을 사용해 환경 변수를 해제할 수 있습니다.\n");
-    printf("[실습]\"env -u myVal\"을 입력해보세요.\n");
+    printf("[실습] \"env -u myVal\"을 입력해보세요.\n");
     fake_run_command("env -u myVal");
     next_line();
     
