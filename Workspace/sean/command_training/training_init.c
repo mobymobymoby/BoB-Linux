@@ -12,7 +12,8 @@ void training_init(void)
     next_line();
     
     printf("\"init\" 명령어의 실행 파일은 \"/usr/sbin/init\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에 \"init\"(으)로 있습니다.\n");
+    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
+    printf("\"init\"(으)로 있습니다.\n");
     next_line();
 
     printf("유닉스 기반의 운영 체제에서 \"init\"(은)는 시스템의 부팅 과정 중 최초의 프로세스이고\n");
@@ -21,7 +22,7 @@ void training_init(void)
 
     printf("다른 모든 프로세스의 직접적 또는 간접적인 부모 프로세스이며\n");
     printf("자동으로 고아 프로세스들을 입양합니다.\n\n");
-    printf("즉, \"init\" 프로세스가 실행되고 \"init\"(이)가 다른 프로세스를 시작하는 구조입니다.\n");
+    printf("즉, \"init\" 최초로 프로세스가 실행되고 \"init\"(이)가 다른 프로세스를 시작하는 구조입니다.\n\n");
     next_line();
 
     printf("[런레벨이란?]\n");
@@ -47,7 +48,7 @@ void training_init(void)
     printf("일반적으로 텍스트 유저 모드라고 부르면 해당 런레벨을 의미합니다.\n\n");
     next_line();
 
-    printf("[RunLevel 4 (Multi-User(unused))]\n 사용하지 않는 다중 사용자 모드입니다.\n\n");
+    printf("[RunLevel 4 (Multi-User(unused))]\n사용하지 않는 다중 사용자 모드입니다.\n");
     printf("호환성을 위해 런레벨 3과 동일하게 취급됩니다.\n\n");
     next_line();
 
@@ -56,12 +57,14 @@ void training_init(void)
     next_line();
 
     printf("[RunLevel 6 (Reboot)]\n시스템 재부팅 모드입니다.\n");
-    printf("해당 런레벨로 바꾸면 시스템이 재부팅됩니다.\n\n");
+    printf("해당 런레벨로 바꾸면 시스템이 재부팅됩니다.\n\n\n");
     next_line();
 
     printf("[주요 런레벨 정리]\n\n");
-    printf("[0 (시스템 종료)], [6 (시스템 재부팅)]\n");
-    printf("[3 (CLI 다중 사용자)], [5 (GUI 다중 사용자)]\n\n\n");
+    printf("[0 (시스템 종료)]\n");
+    printf("[6 (시스템 재부팅)]\n\n");
+    printf("[3 (CLI 다중 사용자)]\n");
+    printf("[5 (GUI 다중 사용자)]\n\n\n");
     next_line();
     
     printf("[실습] 런레벨을 '0'으로 바꿔보세요. (실제 시스템에 반영되지는 않습니다.)\n");
