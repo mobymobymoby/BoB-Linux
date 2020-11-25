@@ -16,8 +16,7 @@ void training_pwd(void)
     printf("\"pwd\" 명령어는 'Print Working Directory'의 약자입니다.\n");
     printf("현재 자신이 어떤 디렉터리 경로에 있는 지 확인하고 싶을 때 사용합니다.\n");
     next_line();
-    printf("\"pwd\" 명령어의 실행 파일은 \"/bin/pwd\"로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에 \"pwd\"으로 있습니다.\n");
+    printf("\"pwd\" 명령어의 실행 파일은 \"/bin/pwd\"에 있습니다.\n");
     next_line();
     printf("사용법은 \"pwd [옵션]\" 입니다.\n");
     printf("옵션이 필요하지 않은 경우 옵션은 입력하지 않아도 됩니다.\n");
@@ -35,7 +34,7 @@ void training_pwd(void)
     printf("[실습] \"pwd\"을(를) 입력하여 실습해보세요.\n");
     just_run_command("pwd");
     next_line();
-    printf("위에 보이시는 '%s'이(가) 현재 작업 중인 디렉터리 경로를 절대 경로로 보여준 것입니다.\n", wd);
+    printf("위에 보이시는 '%s'이(가) 현재 작업 중인 디렉터리 경로를 \n절대 경로로 보여준 것입니다.\n", wd);
     next_line();
     printf("\"pwd\" 명령어는 자주 사용하는 명령어들 중 하나입니다.\n");
     next_line();
