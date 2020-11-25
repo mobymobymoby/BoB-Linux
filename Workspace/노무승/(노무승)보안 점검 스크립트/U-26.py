@@ -1,4 +1,4 @@
-# [U-26] automountd 제거 검사
+# [U-26] automountd 설치 검사
 # 2020/11/25 : 노무승
 #   1. 실행중인 프로세스를 확인하여 점검함.
 #       (삭제 방법을 리눅스 패키지 관리자 별로 안내해주게끔 수정함.)
@@ -13,7 +13,7 @@ C_NUM = "U-26"
 
 def U26() :
     f_output = ""
-    f_output = f_output + "[" + C_NUM + "] automountd 제거 검사" + "\n"
+    f_output = f_output + "[" + C_NUM + "] automountd 설치 검사" + "\n"
     flag = False
 
     temp = subprocess.getoutput("ps -ef | grep autofs")
