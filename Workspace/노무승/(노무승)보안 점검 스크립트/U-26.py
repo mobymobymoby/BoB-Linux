@@ -17,7 +17,7 @@ def U26() :
     flag = False
 
     temp = subprocess.getoutput("ps -ef | grep autofs")
-    # nfs service check
+
     if (temp.find("autofs.pid") != -1) :
         f_output = f_output + C_YELLOW + "\t[경고] automountd(autofs) 서비스가 활성화 되어 있습니다.\n"
         flag = True
