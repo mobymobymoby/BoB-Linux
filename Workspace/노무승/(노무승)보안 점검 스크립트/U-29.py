@@ -68,7 +68,7 @@ def U29() :
         f_output = f_output + "\t1. /etc/inetd.conf 에서 취약한 tftp, talk 서비스가 열려있는 경우,\n"
         f_output = f_output + "\t\t텍스트 편집기로 위 설정 파일을 열어 해당 서비스를 지우거나\n"
         f_output = f_output + "\t\t해당 서비스가 있는 줄의 맨 앞 문자를 #으로 설정해 주석 처리해주세요.\n"
-        f_output = f_output + "\t\t(조치 후, 'systemctl restart' 명령어를 입력하시면 반영됩니다.)\n"
+        f_output = f_output + "\t\t(조치 후, 'reboot' 명령어를 입력하시면 반영됩니다.)\n"
         f_output = f_output + "\t2. /etc/xinetd.d/* 하위 파일에서 취약한 tftp, talk 서비스가 열려있는 경우,\n"
         f_output = f_output + "\t\t텍스트 편집기로 설정 파일을 열어 {} 사이에\n"
         f_output = f_output + "\t\t'disable = yes' 항목을 추가해주세요.\n"
