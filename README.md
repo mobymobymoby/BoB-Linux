@@ -10,3 +10,18 @@
 - Mentee
   - PM : 김청준
   - Member : 김기서, 노무승, 백송선, 이안나
+
+#### 트레이닝 기능 사용법
+- 트레이닝 기능만 사용
+  - BoB-Linux/Workspace/BoB Trainer 디렉토리에서 make all
+  - 그 후 생성된 trainer 파일을 실행하면 됨
+  
+- BoB Linux에서 사용
+  - 콘솔 창에 'trainer'를 입력하면 트레이닝 기능 실행
+  - \"/usr/local/bin/trainer\"에 위치
+ 
+ #### BoB Linux 배포
+ - 배포 시스템 구축 중
+   - 구축 후 링크 제공 예정
+ - BoB Linux에는 트레이닝 기능, 보안 점검 프로그램이 기본적으로 내장
+ - 초기 계정 : rookie / rookie
