@@ -22,6 +22,8 @@
  
  #### BoB Linux 배포
  - 배포 시스템 구축 중
-   - 구축 후 링크 제공 예정
+   - https://drive.google.com/file/d/1CH6ONCv2zHDhgddRssbFZQBqvtcK3PY-/view?usp=sharing : Ver 0.2.1(2020-11-25)
+   - 배포 시스템 구축 후에는 별도의 URL을 제공 예정
  - BoB Linux에는 트레이닝 기능, 보안 점검 프로그램이 기본적으로 내장
  - 초기 계정 : rookie / rookie
+ - 한글 입력 : [Ctrl + Space Bar]
