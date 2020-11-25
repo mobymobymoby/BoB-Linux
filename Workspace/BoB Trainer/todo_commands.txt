@@ -1,0 +1,19 @@
+nslookup
+dig
+tracert
+traceroute
+route
+wc
+whois
+ifup / ifdown
+arp
+host
+hostname
+날짜
+date
+cal
+df
+free
+bc
+fg / bg / jobs / nohup
+[telnet, ftp, ssh]
