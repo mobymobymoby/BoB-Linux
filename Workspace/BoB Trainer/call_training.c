@@ -186,7 +186,7 @@ int call_training(char select[])
         training_which();
         break;
     default:
-        printf("잘못된 값을 입력하셨습니다.\n");
+        printf("\n잘못된 값을 입력하셨습니다.\n");
         return -1;
     }
     return 0;
