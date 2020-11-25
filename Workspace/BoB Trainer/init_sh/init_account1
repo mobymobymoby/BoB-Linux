@@ -44,7 +44,7 @@ done
 printf "새로 생성할 계정 비밀번호를 입력하세요 : "
 read password
 sleep 1
-printf "\n계정 생성 중입니다\n\n"
+printf "\n계정 생성 중입니다...\n\n"
 
 # 입력받은 값을 이용해 새로운 유저를 생성
 # gpasswd 명령어를 이용해 새로 생성된 계정을 'video' 그룹에 추가
