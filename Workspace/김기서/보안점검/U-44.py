@@ -22,6 +22,7 @@ def U44():
     else:
         pm.printNotsafe(report)
         report.write('[U-44] 조치 방법\n')
+        # KISA 매뉴얼은 500 이상
         report.write('\tUID가 0인 일반 계정의 UID를 1000 이상으로 수정하세요.\n')
         report.write('\t\t#usermod -u <변경할 UID> <user_name>\n')
 
