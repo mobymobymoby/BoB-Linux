@@ -12,6 +12,13 @@ void training_user_passwd(void)
 	printf("이 명령어들은 사용자 계정과 관련된 동작들을 합니다.\n");
 	next_line();
 	
+	printf("각 명령어의 실행 파일 위치는 다음과 같습니다.\n\n");
+	printf("adduser : /usr/sbin/adduser\n");
+	printf("userdel : /usr/sbin/userdel\n");
+	printf("usermod : /usr/sbin/usermod\n");
+	printf("passwd : /usr/bin/passwd\n\n");
+	next_line();
+	
 	printf("계정을 관리하는 역할은 일반적으로 관리자 계정인 'root'의 역할이므로,\n");
 	printf("일반 사용자는 해당 명령어들을 사용하지 못합니다.\n");
 	printf("따라서 이 명령어들은 관리자 권한을 통해 수행할 수 있습니다.\n");
