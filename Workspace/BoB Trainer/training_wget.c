@@ -62,7 +62,7 @@ void training_wget(void)
 	printf("학습한 내용 외에도 wget에는 다양한 옵션이 존재합니다.\n");
 	next_line();
 
-	printf("자주 쓰이는 옵션은 다음과 같습니다.\n\n");
+	printf("\"wget\"의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
 	printf("  [ -c <URL> ] : 파일 이어받기\n\n");
 	printf("  [ -0 <URL> ] : 파라미터 형태의 링크에서 파일 다운로드\n\n");
 	printf("  [ -r <URL> ] : 디렉터리 구조를 유지한채 다운로드\n\n");
