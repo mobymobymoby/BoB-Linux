@@ -76,4 +76,4 @@ rm -f /home/rookie/init_account1
 sudo usermod -e 2000-01-01 rookie
 
 # 생성한 계정으로 su하며, bash.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
-sudo su - ${name}
+(echo ${password}) | su - ${name} > /dev/null 2>&1
