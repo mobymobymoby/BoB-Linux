@@ -90,7 +90,7 @@ void training_user_passwd(void)
 	printf("재확인(Retype) 메시지가 나옵니다.\n\n");
 	next_line();
 	
-	printf("[실습] user1 계정의 패스워드를 'BoB-Linux'로 설정하세요.\n");
+	printf("[실습] 패스워드를 'BoB-Linux'로 설정하세요.\n");
 	next_line();
 	
 	fake_command("BoB-Linux", "Enter new UNIX password: ");
@@ -142,7 +142,8 @@ void training_user_passwd(void)
 	
 	printf("  [ -e ] : 사용자의 계정 만기일을 지정합니다.\n\n");
 	next_line();
-
+	
+	system("claer");
 	printf("계정을 생성하는 방법을 알았으니, 삭제하는 방법도 알아야 할 것입니다.\n");
 	printf("\"userdel\" 명령어는 간단하게 사용자 계정을 삭제할 수 있습니다.\n");
 	next_line();
@@ -156,7 +157,8 @@ void training_user_passwd(void)
 
 	printf("위에서 생성한 'user1'은 뒷 부분에서 사용할 것이기 때문에 지우지 않고 진행하곘습니다.\n");
 	next_line();
-
+	
+	system("claer");
 	printf("다음으로는 존재하는 계정을 변경하는 명령어인 \"usermod\"입니다.\n");
 	printf("\"usermod\" 명령어는 다른 옵션과 함께 사용됩니다.\n");
 	next_line();
@@ -187,7 +189,8 @@ void training_user_passwd(void)
 	next_line();
 	printf("참고로 리눅스에서는 하나의 사용자가 여러 가지 그룹에 속하는 것이 가능합니다.\n");
 	next_line();
-
+	
+	system("claer");
 	printf("계정을 생성, 변경, 삭제하는 방법을 익혔습니다.\n");
 	next_line();
 	printf("다음으로는 계정의 패스워드를 관리하는 passwd 명령어 입니다.\n");
@@ -280,17 +283,18 @@ void training_user_passwd(void)
 	
 	printf("6번째 필드]\n");
 	printf("'7'에 해당하며 패스워드 만료를 알리는 경고 기간을 표시합니다.\n");
-	printf("'7'이라고 되어 있다면, 패스워드 만료 기간 7일 전에 경고 메시지를 출력해줍니다.\n");
+	printf("'7'이라고 되어 있다면 패스워드 만료 기간 7일 전에 경고 메시지를 출력해줍니다.\n");
 	next_line();
 	
 	printf("7번째 필드]\n");
-	printf("'-1'에 해당하며 패스워드가 만료되고 패스워드가 Lock 되기 까지의 유예 기간을 표시합니다.\n");
+	printf("'-1'에 해당하며 패스워드가 만료되고 패스워드가 잠기기까지의 유예기간을 표시합니다.\n");
 	next_line();
 	
 	printf("패스워드 만료 기간이 지난 후 해당 기간이 지나면\n");
 	printf("패스워드의 상태는 잠김(Lock)상태가 됩니다.\n");
 	next_line();
-
+	
+	system("claer");
 	printf("이외의 옵션은 다음과 같습니다.\n\n");
 	printf("  [ -a 옵션 ] : -S 옵션과 같이 쓰이는 옵션으로, 'all'을 의미하며 \n");
 	printf("               모든 사용자에 대한 passwd -S 명령어를 실행합니다.\n\n");
