@@ -7,7 +7,13 @@ void training_vi(void)
     system("clear");
 
     printf("이번에 배울 명령어는 \"vi\"와 \"vim\" 입니다.\n\n");
-
+    printf("\"vi\"와 \"vim\"은 텍스트를 편집하기 위해 사용합니다.\n");
+    next_line();
+    
+    printf("\"vi\" 명령어의 실행파일은 \"/usr/bin/vi\"(으)로 있습니다.\n");
+    printf("또한 \"vim\" 명령어의 실행파일은 \"/usr/bin/vim\"(으)로 있습니다.\n");
+    next_line();
+    
     printf("\"vi\"와 \"vim\"은 다른 프로그램입니다.\n");
     printf("\"vi\"는 visual editor의 약자고, \"vim\"은 vi improved의 약자로 vi의 개선 버전입니다.\n");
     next_line();
