@@ -159,7 +159,7 @@ void training_vi(void)
     printf("[ 'H'  key ]       : 현재 화면의 첫 줄로 이동합니다. (Head)\n");
     printf("[ 'M'  key ]       : 현재 화면의 중간으로 이동합니다. (Middle)\n");
     printf("[ 'L'  key ]       : 현재 화면의 끝 줄로 이동합니다. (Last)\n");
-    printf("[ 'n%%' key ]       : 현재 파일의 내용에서 입력된 n%에 해당하는 행으로 이동합니다.\n");
+    printf("[ 'n%%' key ]       : 현재 파일의 내용에서 입력된 n%%에 해당하는 행으로 이동합니다.\n");
     printf("[ '('  key ]       : 커서를 현재 문장의 처음으로 이동합니다.\n");
     printf("[ ')'  key ]       : 커서를 현재 문장의 끝으로 이동합니다.\n");
     printf("[ '{'  key ]       : 커서를 현재 문단의 처음으로 이동합니다.\n");
