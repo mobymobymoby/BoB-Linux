@@ -14,7 +14,10 @@ void training_users(void)
 	printf("\"users\"는 시스템에 로그인되어 있는 사용자를 출력할 때 사용하는 명령어 입니다.\n");
 	next_line();
 	
-	printf("users 명령어는 보통 다음과 같은 형식으로 사용됩니다.\n");
+	printf("\"users\" 명령어의 실행 파일은 \"/usr/bin/users\"(으)로 있습니다.\n");
+	next_line();
+	
+	printf("\"users\" 명령어는 보통 다음과 같은 형식으로 사용됩니다.\n");
 	printf("사용법 : \"users [옵션]\"\n");
 	next_line();
 	
