@@ -57,4 +57,7 @@
  
  - create_dir 함수와 run_command 함수에 적용 완료(20201122)
   
- 
+### 부팅시 메시지 삭제
+- grub2를 설치
+- /boot/grub/grub.cfg에서 ro 다음에 vga=0x317 추가
+- linux, initrd 뒤에 16붙이기 
