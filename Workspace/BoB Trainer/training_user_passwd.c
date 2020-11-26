@@ -26,7 +26,7 @@ void training_user_passwd(void)
 	printf("ex) sudo adduser user1\n");
 	next_line();
 	
-	printf("아무런 옵션을 주지 않고, \"adduser\" [생성할 계정 이름]의 문법으로 사용하면 지정한 이름으로 계정을 생성합니다.\n");
+	printf("아무런 옵션을 주지 않고, \"adduser [생성할 계정 이름]\"의 문법으로 사용하면 지정한 이름으로 계정을 생성합니다.\n");
 	next_line();
 	
 	printf("이 때 사용할 계정의 패스워드를 입력하게 되고, 추가적으로 이름이나 전화번호 등 인적사항을 기입하게 됩니다.\n");
@@ -36,7 +36,7 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("[실습] \"adduser\"를 이용해 'user1'이라는 이름을 가진 사용자 계정을 생성해보세요.\n");
-	printf("사용법은 : sudo \"adduser [옵션] [생성할 계정 이름]\"입니다.\n");
+	printf("사용법은 : \"sudo adduser [옵션] [생성할 계정 이름]\"입니다.\n");
 	nothing_print_fake_run_command("sudo adduser user1");
 	
 	printf("Adding user `user1' ...\n");
@@ -49,11 +49,13 @@ void training_user_passwd(void)
 	printf("출력 결과를 하나 하나 살펴보겠습니다.\n");
 	next_line();
 	
-	printf("Adding user `user1' ... : 우리가 지정한 이름인 'user1'을 계정에 추가하고 있다는 의미입니다.\n");
+	printf("[ Adding user `user1' ... ]\n");
+	printf("방금 지정한 이름인 'user1'을 계정에 추가하고 있다는 의미입니다.\n");
 	next_line();
 	
-	printf("Adding new group `user1' (1001) ... : user1의 '그룹'을 따로 지정해주지 않았기 때문에\n");
-	printf("지정한 사용자 계정 이름과 동일한 이름(user1)으로 group을 생성합니다.\n");
+	printf("[ Adding new group `user1' (1001) ... ]\n");
+	printf("user1의 '그룹'을 따로 지정해주지 않았기 때문에\n");
+	printf("지정한 사용자 계정 이름과 동일한 이름(user1)으로 group을 생성합니다.\n\n");
 	printf("(1001)은 생성한 그룹의 GID(Group ID)입니다.\n");
 	next_line();
 	
@@ -73,14 +75,18 @@ void training_user_passwd(void)
 	printf("/etc/skel에는 계정 생성시에 홈 디렉토리에 복사될 파일을 놓을 수 있습니다.\n");
 	next_line();
 	
-	printf("계정을 새로 생성하면 /etc/skel에 저장되어 있는 파일이 자동으로 홈 디렉토리에 복사됩니다.\n");
+	printf("계정을 새로 생성하면 /etc/skel에 저장된 파일이 자동으로 홈 디렉토리에 복사됩니다.\n");
 	next_line();
 
 	printf("다시 'adduser user1'을 입력한 상태로 돌아오겠습니다.\n");
-	printf("현재 우리가 입력한 것에서는 사용자 계정 이름만 지정했고, 패스워드를 입력하지 않았습니다.\n");
 	next_line();
 	
-	printf("위에서 출력된 내용들이 나온 후에 사용자 계정의 패스워드를 입력하라는 메시지('Enter new UNIX password')와 \n");
+	printf("현재 우리가 입력한 것에서는 사용자 계정 이름만 지정했고,\n");
+	printf("패스워드를 입력하지 않았습니다.\n");
+	next_line();
+	
+	printf("위에서 출력된 내용들이 나온 후에\n");
+	printf("사용자 계정의 패스워드를 입력하라는 메시지('Enter new UNIX password')와 \n");
 	printf("재확인(Retype) 메시지가 나옵니다.\n\n");
 	next_line();
 	
@@ -95,7 +101,9 @@ void training_user_passwd(void)
 	printf("패스워드를 입력한 후에는 패스워드가 성공적으로 업데이트 되었다는 메시지 후에 \nuser1의 정보를 입력하라는 메시지가 나옵니다.\n");
 	next_line();
 	
-	printf("이 정보들은 선택사항이며, 이름, 방 번호, 전화번호, 집 전화번호 등을 입력할 수 있습니다.\n\n");
+	printf("이 정보들은 선택사항이며, 여러 가지 정보를 입력할 수 있습니다.\n\n");
+	next_line();
+	
 	printf("[실습] 아무 정보나 입력해보세요.\n");
 	next_line();
 	
@@ -118,13 +126,20 @@ void training_user_passwd(void)
 	next_line();
 	fake_command("Y","Is the information correct? [Y/n] ");
 
-	printf("위에서는 입력값을 Y로 제한했지만, 원래는 Y를 입력하지 않고, n을 입력한다면 다시 정보들을 입력받게 됩니다.\n");
+	printf("위에서는 입력값을 Y로 제한했지만, 원래는 Y를 입력하지 않고,\n");
+	printf("n을 입력한다면 다시 정보들을 입력받게 됩니다.\n");
 	next_line();
 
 	printf("\"adduser\"의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-	printf("  [ -u ] : 사용자 계정의 UID를 지정하여 생성합니다. 앞에서는 이 옵션을 주지 않아 UID가 자동 할당 되었습니다.\n\n");
-	printf("  [ -g ] : 사용자 계정의 GID를 지정합니다. 앞에서는 이 옵션을 주지 않아 UID가 자동 할당 되었습니다.\n\n");
-	printf("  [ -d ] : 사용자의 홈 디렉토리를 지정합니다. 이 옵션을 주지 않으면 '/home/[사용자 계정명]' 디렉토리로 지정됩니다.\n\n");
+	printf("  [ -u ] : 사용자 계정의 UID를 지정하여 생성합니다.\n");
+	printf("           앞에서는 이 옵션을 주지 않아 UID가 자동 할당 되었습니다.\n\n");
+	
+	printf("  [ -g ] : 사용자 계정의 GID를 지정합니다. \n");
+	printf("           앞에서는 이 옵션을 주지 않아 UID가 자동 할당 되었습니다.\n\n");
+	
+	printf("  [ -d ] : 사용자의 홈 디렉토리를 지정합니다.\n");
+	printf("           이 옵션을 주지 않으면 '/home/[사용자 계정명]' 디렉토리로 지정됩니다.\n\n");
+	
 	printf("  [ -e ] : 사용자의 계정 만기일을 지정합니다.\n\n");
 	next_line();
 
@@ -147,10 +162,10 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("여러 옵션이 존재하기 때문에 자주 쓰이는 옵션 위주로 설명하겠습니다.\n");
-	printf("먼저 -l 옵션입니다. -l 옵션은 기존에 존재하는 계정 이름을 새로운 이름으로 바꿀 때 사용합니다.\n");
+	printf("먼저 -l 옵션은 기존에 존재하는 계정 이름을 새로운 이름으로 바꿀 때 사용합니다.\n");
 	next_line();
 	
-	printf("사용법은 : \"usermod -l [새로운 계정명] [기존 계정명]\"입니다.\n");
+	printf("사용법은 : \"sudo usermod -l [새로운 계정명] [기존 계정명]\"입니다.\n");
 	next_line();
 	
 	printf("보통 계정 이름에 따라 홈 디렉토리가 변경되므로,\n");
@@ -162,16 +177,20 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("-l -d -m 옵션을 함께 사용하는 방법은 아래와 같습니다.\n");
-	printf("사용법 : \"usermod -l [새로운 계정명] -d [새로운 홈 디렉토리] -m [기존 계정명]\"\n");
+	next_line();
+	printf("사용법 : \"sudo usermod -l [새로운 계정명] -d [새로운 홈 디렉토리] -m [기존 계정명]\"\n");
 	printf("ex) sudo usermod -l new_user -d /home/new_user -m user1\n");
 	next_line();
 	
 	printf("-g 옵션은 사용자가 속한 그룹을 변경합니다.\n");
 	printf("-G 옵션은 사용자가 본래 속한 그룹을 그대로 두고, 새로운 그룹에 추가로 속하게 합니다.\n");
+	next_line();
 	printf("참고로 리눅스에서는 하나의 사용자가 여러 가지 그룹에 속하는 것이 가능합니다.\n");
 	next_line();
 
-	printf("계정을 생성, 변경, 삭제하는 방법을 익혔습니다.\n다음으로는 계정의 패스워드를 관리하는 passwd 명령어 입니다.\n");
+	printf("계정을 생성, 변경, 삭제하는 방법을 익혔습니다.\n");
+	next_line();
+	printf("다음으로는 계정의 패스워드를 관리하는 passwd 명령어 입니다.\n");
 	printf("\"passwd\" 명령어는 계정의 패스워드와 관련된 명령어입니다.\n");
 	next_line();
 	
@@ -188,23 +207,33 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("옵션과 함께 사용할 때 기본 문법은 다음과 같습니다.\n");
-	printf("사용법 : \"passwd [옵션] [사용자 계정명]\"\n");
+	printf("사용법 : \"sudo passwd [옵션] [사용자 계정명]\"\n");
 	printf("ex) sudo passwd user1\n");
 	next_line();
 
-	printf("옵션을 주지 않고 \"passwd\" [사용자 계정]으로 사용하면 [사용자 계정]에 해당하는 계정의 패스워드를 변경할 수 있습니다.\n");
+	printf("옵션을 주지 않고 \"passwd\" [사용자 계정]으로 사용하면\n");
+	printf("[사용자 계정]에 해당하는 계정의 패스워드를 변경할 수 있습니다.\n");
+	next_line();
+	
 	printf("위에서 언급했듯, \"passwd\" 명령어는 보통 root 계정에 의해 수행됩니다.\n");
 	next_line();
 	
-	printf("루트 권한이 없는 일반 사용자는 passwd 명령어를 자신의 계정 패스워드를 변경하는 용도로 밖에 사용하지 못합니다.\n");
-	printf("root 계정은 관리자 계정이기 때문에 다른 사용자의 패스워드와 다양한 설정을 변경할 수 있습니다.\n");
+	printf("루트 권한이 없는 일반 사용자는 passwd 명령어를 \n");
+	printf("자신의 계정 패스워드를 변경하는 용도로 밖에 사용하지 못합니다.\n");
 	next_line();
 	
-	printf("이렇듯, root 계정은 다른 사용자에 비해 막강한 권한을 가지고 있기 때문에 root 계정이 유출되서는 안되는 것입니다.\n");
+	printf("root 계정은 관리자 계정이기 때문에\n");
+	printf("다른 사용자의 패스워드와 다양한 설정을 변경할 수 있습니다.\n");
 	next_line();
 	
-	printf("다시 \"passwd\" 명령어로 돌아와서, 사용자의 정보을 보기 위해서는 -S(status의 약자) 옵션을 사용합니다.\n\n");
+	printf("이렇듯, root 계정은 다른 사용자에 비해 막강한 권한을 가지고 있기 때문에\n");
+	printf("root 계정이 유출되서는 안되는 것입니다.\n");
 	next_line();
+	
+	printf("다시 \"passwd\" 명령어로 돌아와서,\n");
+	printf("사용자의 정보을 보기 위해서는 -S(status의 약자) 옵션을 사용합니다.\n\n");
+	next_line();
+	
 	printf("[실습] \"passwd\" 명령어와 -S 옵션을 이용해 앞에서 생성한 'user1' 계정의 정보를 확인해보세요.\n");
 	next_line();
 	
@@ -220,39 +249,60 @@ void training_user_passwd(void)
 	printf("\n\n출력 결과는 총 7개의 필드로 나누어집니다.\n");
 	next_line();
 	
-	printf("첫번째 필드는 'user1'에 해당하며 계정의 이름을 표시합니다.\n");
+	printf("[1번째 필드]\n");
+	printf("'user1'에 해당하며 계정의 이름을 표시합니다.\n");
 	next_line();
 	
-	printf("두번째 필드는 'P'에 해당하며 패스워드의 상태를 나타냅니다.\n");
+	printf("[2번째 필드]\n");
+	printf("'P'에 해당하며 패스워드의 상태를 나타냅니다.\n");
 	printf("패스워드 잠김은 'L', 패스워드 없음은 'NP', 사용 가능한 패스워드는 'P'로 표시됩니다.\n");
 	next_line();
 	
-	printf("세번째 필드는 '%02d/%02d/%d'에 해당하며 가장 최근의 패스워드 변경 일자(MM/DD/YYYY)를 표시합니다.\n", tm.tm_mon+1, tm.tm_mday, tm.tm_year+1900);
+	printf("[3번째 필드]\n");
+	printf("'%02d/%02d/%d'에 해당하며 가장 최근의 패스워드 변경 일자(MM/DD/YYYY)를 표시합니다.\n", tm.tm_mon+1, tm.tm_mday, tm.tm_year+1900);
 	next_line();
 	
-	printf("네번째 필드는 '0'에 해당하며 패스워드 변경까지 최소 일자를 나타냅니다.\n");
-	printf("만약 해당 필드가 '5'로 되어 있다면, 패스워드를 변경한 후 5일간은 다시 패스워드를 변경하지 못합니다.\n");
+	printf("[4번째 필드]\n");
+	printf("'0'에 해당하며 패스워드 변경까지 최소 일자를 나타냅니다.\n");
 	next_line();
 	
-	printf("다섯번째 필드는 '99999'에 해당하며 패스워드 변경까지 최대 일자를 나타냅니다.\n");
-	printf("만약 해당 필드가 '30'으로 되어 있다면, 패스워드 변경을 한 지 30일이 지난 후에 패스워드가 만료됩니다.\n");
+	printf("만약 해당 필드가 '5'로 되어 있다면, 패스워드를 변경한 후\n");
+	printf("5일간은 다시 패스워드를 변경하지 못합니다.\n");
 	next_line();
 	
-	printf("여섯번째 필드는 '7'에 해당하며 패스워드 만료를 알리는 경고 기간을 표시합니다.\n");
+	printf("[5번째 필드]\n");
+	printf("'99999'에 해당하며 패스워드 변경까지 최대 일자를 나타냅니다.\n");
+	next_line();
+	
+	printf("만약 해당 필드가 '30'으로 되어 있다면,\n");
+	printf("패스워드 변경을 한 지 30일이 지난 후에 패스워드가 만료됩니다.\n");
+	next_line();
+	
+	printf("6번째 필드]\n");
+	printf("'7'에 해당하며 패스워드 만료를 알리는 경고 기간을 표시합니다.\n");
 	printf("'7'이라고 되어 있다면, 패스워드 만료 기간 7일 전에 경고 메시지를 출력해줍니다.\n");
 	next_line();
 	
-	printf("일곱번째 필드는 '-1'에 해당하며 패스워드가 만료되고 패스워드가 Lock 되기 까지의 유예 기간을 표시합니다.\n");
-	printf("패스워드 만료 기간이 지난 후 해당 기간이 지나면 패스워드의 상태는 잠김(Lock)상태가 됩니다.\n");
+	printf("7번째 필드]\n");
+	printf("'-1'에 해당하며 패스워드가 만료되고 패스워드가 Lock 되기 까지의 유예 기간을 표시합니다.\n");
+	next_line();
+	
+	printf("패스워드 만료 기간이 지난 후 해당 기간이 지나면\n");
+	printf("패스워드의 상태는 잠김(Lock)상태가 됩니다.\n");
 	next_line();
 
 	printf("이외의 옵션은 다음과 같습니다.\n\n");
-	printf("  [ -a 옵션 ] : -S 옵션과 같이 쓰이는 옵션으로, 'all'을 의미하며 모든 사용자에 대한 passwd -S 명령어를 실행합니다.\n\n");
+	printf("  [ -a 옵션 ] : -S 옵션과 같이 쓰이는 옵션으로, 'all'을 의미하며 \n");
+	printf("               모든 사용자에 대한 passwd -S 명령어를 실행합니다.\n\n");
+	
 	printf("  [ -l 옵션 ] : 사용자의 패스워드를 잠김(Lock) 상태로 만들어 로그인을 막습니다.\n\n");
 	printf("  [ -d 옵션 ] : 사용자의 패스워드를 제거합니다. 패스워드가 제거된 계정은 패스워드 없이 로그인이 가능합니다.\n\n");
 	next_line();
 	
-	printf("위에서 살펴본 것 처럼 사용자를 관리하는 명령어는 해당 시스템에 속해 있는 계정을 마음대로 삭제하거나 패스워드를 변경할 수 있습니다.\n");
+	printf("위에서 살펴본 것 처럼 사용자를 관리하는 명령어는\n");
+	printf("해당 시스템에 속해 있는 계정을 마음대로 삭제하거나 패스워드를 변경할 수 있습니다.\n");
+	next_line();
+	
 	printf("root 권한으로만 사용자 관리 명령어를 사용할 수 있는 이유는 바로 이것 때문입니다.\n");
 	next_line();
 
@@ -260,8 +310,8 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("[실습] -r 옵션을 이용해서 'user1'의 홈 디렉토리와 계정을 삭제하세요.\n");
-	printf("사용법 : \"userdel [옵션] [삭제할 계정명]\"\n");
-	printf("ex) sudo userdel -r user1");
+	printf("사용법 : \"sudo userdel [옵션] [삭제할 계정명]\"\n");
+	printf("ex) sudo userdel -r user1\n");
 	fake_run_command("sudo userdel -r user1");
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
