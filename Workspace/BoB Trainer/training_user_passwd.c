@@ -19,6 +19,7 @@ void training_user_passwd(void)
 	
 	printf("관리자 권한으로 수행하기 위해 명령어 앞에 \"sudo\" 명령어를 붙입니다.\n");
 	printf("\"sudo\" 명령어는 어떤 명령어를 관리자 권한으로 실행시켜 줍니다.\n");
+	next_line();
 	
 	printf("이름에서도 충분히 유추할 수 있듯, \"adduser\" 명령어는 새로운 사용자 계정을 생성합니다.\n");
 	printf("사용법은 : sudo \"adduser [옵션] [생성할 계정 이름]\"입니다.\n");
@@ -132,6 +133,7 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("사용법은 : \"userdel [옵션] [삭제할 계정명]\"입니다.\n");
+	printf("ex) sudo userdel user1\n");
 	next_line();
 	
 	printf("-r 옵션을 추가하면 삭제할 때 해당 사용자의 홈 디렉토리까지 삭제합니다.\n");
@@ -161,6 +163,7 @@ void training_user_passwd(void)
 	
 	printf("-l -d -m 옵션을 함께 사용하는 방법은 아래와 같습니다.\n");
 	printf("사용법 : \"usermod -l [새로운 계정명] -d [새로운 홈 디렉토리] -m [기존 계정명]\"\n");
+	printf("ex) sudo usermod -l new_user -d /home/new_user -m user1\n");
 	next_line();
 	
 	printf("-g 옵션은 사용자가 속한 그룹을 변경합니다.\n");
@@ -186,6 +189,7 @@ void training_user_passwd(void)
 	
 	printf("옵션과 함께 사용할 때 기본 문법은 다음과 같습니다.\n");
 	printf("사용법 : \"passwd [옵션] [사용자 계정명]\"\n");
+	printf("ex) sudo passwd user1\n");
 	next_line();
 
 	printf("옵션을 주지 않고 \"passwd\" [사용자 계정]으로 사용하면 [사용자 계정]에 해당하는 계정의 패스워드를 변경할 수 있습니다.\n");
@@ -204,8 +208,8 @@ void training_user_passwd(void)
 	printf("[실습] \"passwd\" 명령어와 -S 옵션을 이용해 앞에서 생성한 'user1' 계정의 정보를 확인해보세요.\n");
 	next_line();
 	
-	printf("사용법은 : \"passwd [옵션] [사용자 계정명]\"입니다.\n");
-	nothing_print_fake_run_command("passwd -S user1");
+	printf("사용법은 : \"sudo passwd [옵션] [사용자 계정명]\"입니다.\n");
+	nothing_print_fake_run_command("sudo passwd -S user1");
 
 	// 현재 날짜를 출력하기 위한 코드
 	// 위에서 user1이라는 계정을 생성한 것처럼 보이도록 했으므로, 최근 패스워드 변경 날짜는 오늘이 됨
@@ -257,7 +261,8 @@ void training_user_passwd(void)
 	
 	printf("[실습] -r 옵션을 이용해서 'user1'의 홈 디렉토리와 계정을 삭제하세요.\n");
 	printf("사용법 : \"userdel [옵션] [삭제할 계정명]\"\n");
-	fake_run_command("userdel -r user1");
+	printf("ex) sudo userdel -r user1");
+	fake_run_command("sudo userdel -r user1");
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
 	printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
