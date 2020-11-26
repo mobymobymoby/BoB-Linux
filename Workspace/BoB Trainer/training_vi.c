@@ -190,7 +190,7 @@ void training_vi(void)
     next_line();
     
     system("clear");
-    printf("\n[입력 모드]\n");
+    printf("[입력 모드]\n");
     printf("[입력 모드]에서는 사용자가 작성할 텍스트를 입력하는 모드입니다.\n");
     next_line();
     
@@ -211,7 +211,7 @@ void training_vi(void)
     next_line();
     
     system("clear");
-    printf("\n[마지막 행 모드]\n");
+    printf("[마지막 행 모드]\n");
     printf("[마지막 행 모드]는 [명령 모드]에서 :, ?, / 이 3가지 문자를 이용해 명령을 내리는 모드로");
     printf("저장, 종료, 탐색, 치환 및 vi 환경 설정 등의 작업을 수행합니다.\n");
     next_line();
