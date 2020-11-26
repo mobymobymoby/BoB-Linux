@@ -5,69 +5,233 @@ void training_make()
 	create_defdir();
 	system("clear");
     
-    printf("이번에 학습할 명령어는 'make'입니다. make는 여러 소스파일의 빌드 작업은 간소화 시켜줍니다.\n");
+    printf("이번에 학습할 명령어는 \"make\" 입니다.\n\n");
+
+    printf("\"make\"는 파일 관리 유틸리티로서\n");
+    printf("여러 소스 파일의 빌드 작업을 간소화 시켜줍니다.\n");
     next_line();
-    printf("예를 들어 foo.c 와 main.c 가 있다고 가정해봅시다.\n");
+    
+    printf("\"make\" 명령어의 실행 파일은 \"/usr/bin/make\"(으)로 있습니다.\n");
     next_line();
-    printf("터미널에서 이 들을 빌드하려면\n");
+
+    printf("사용법은 \"make [옵션] [target]\" 입니다.\n");
+    printf("ex) make\n");
+    next_line();
+
+    printf("기본적으로 [옵션]과 [target]을 사용하지 않고\n");
+    printf("\"make\"만 입력하여 사용합니다.\n");
+    next_line();
+
+    printf("[컴파일 과정]\n\n");
+    printf("컴파일 진행 중에 나오는 파일들을 나열하면\n");
+    printf("'.c' -> '.i' -> '.s' -> '.o' -> '실행 파일' 입니다.\n");
+    next_line();
+
+    printf("예를 들어 'foo.c' 파일과 'main.c' 파일이 있습니다.\n\n");
+    next_line();
+
+    printf("터미널에서 위의 두 파일을 빌드하려면\n\n");
     printf("\t$ gcc -c foo.c\n");
     printf("\t$ gcc -c main.c\n");
-    printf("\t$ gcc -o foo foo.o main.o\n");
+    printf("\t$ gcc -o foo foo.o main.o\n\n");
     printf("와 같이 입력해야 합니다.\n");
     next_line();
-    printf("하지만 코드가 수정되었다면?\n");
-    printf("또 저 짓을 반복해야 합니다.\n");
-    next_line();
-    printf("게다가 프로젝트의 크기가 커지면 소스 코드의 수도 많아지게 됩니다.\n");
-    printf("수 십, 수 백 개의 파일을 gcc 한 줄 한 줄 치다보면 미치기 마련입니다.\n");
-    next_line();
-    printf("겨우 다 했는데 코드가 수정되었다?\n");
-    printf("난 죽음을 택하겠다!\n");
-    next_line();
-    printf("이런 불상사를 막기위해 위대하신 프로그래머님들께서 make라는 획기적인 도구를 만들어 주셨습니다.\n");
-    next_line();
-    printf("make는 해당 폴더 안에서 'Makefile'이란 이름을 가진 파일을 찾습니다.\n");
-    printf("그렇기 때문에 우선 Makefile 을 작성하여야 합니다.\n");
-    next_line();
-    printf("위에서 언급한 foo.c 와 main.c 를 빌드하는 Makefile 을 아래와 같이 작성했습니다.\n");
-    printf("\tfoo: foo.o main.o\n");
-    printf("\t\tgcc -o foo foo.o main.o\n\n");
-    printf("\tfoo.o: foo.c\n");
-    printf("\t\tgcc -c foo.c\n\n");
-    printf("\tmain.o: main.c\n");
-    printf("\t\tgcc -c main.c\n");
-    next_line();
-    printf("Makefile 은 두 줄 정도 단위인 Rule Block 으로 이루어집니다.\n");
-    printf("위의 Makefile 예제와 아래의 Rule Block 공식을 잘 비교해보세요.\n");
-    printf("\t[target]: [dependency]\n");
-    printf("\t\t[command]\n");
-    printf("target: 타겟, 블록 이름\n");
-    printf("dependency: 실행에 필요한 파일 등의 의존성 목록\n");
-    printf("command: 실행할 명령문\n");
-    next_line();
-    printf("target 과 dependency 는 콜론: 이 사이에 있고 command는 tab으로 들여쓰기가 되어야 합니다. 꼭 기억해 주세요!\n");
+
+    printf("하지만 코드가 수정되었다면, 위와 같은 작업을 계속 반복해야 합니다.\n");
     next_line();
 
-    printf("그럼 다시 예제로 돌아와서\n");
-    printf("make를 통해 빌드를 하고 나면 .o 파일들과 실행파일이 생성됩니다.\n");
+    printf("만약 프로젝트의 크기가 커지면 소스 코드의 수도 많아지게 되고\n");
+    printf("수 십, 수 백 개의 파일을 'gcc'를 이용하여 일일히 하다보면 시간이 오래 걸립니다.\n");
     next_line();
-    printf("나중에 되면 소스코드만을 필요로 하기 때문에 이를 한 큐에 정리할 필요가 있습니다.\n");
+
+    printf("이렇게 컴파일 하는 과정을 명령어 한 번으로 수행하겠끔 만든 것이 \"make\" 입니다.\n");
+    next_line();
+
+    printf("\"make\"는 해당 디레토리 안에 \"Makefile\"이라는 이름을 가진 파일을 찾습니다.\n");
+    printf("그렇기 때문에 \"make\"를 이용하려면 \"Makefile\"이라는 파일이 있어야 합니다.\n");
+    next_line();
+
+    printf("\"make\"를 이용하면 좋은 점은\n");
+    printf("수행하고자 하는 반복적인 명령을 자동화 해주므로 시간이 절약됩니다.\n");
+    printf("프로그램의 종속 구조를 빠르게 파악 할 수 있어서 관리가 용이합니다.\n");
+    next_line();
+
+
+    printf("\"Makefile\"은 컴파일 시 수행될 다양한 옵션을 정의해놓은 파일이며\n");
+    printf("sciprt 언어의 문법적 특성을 가지고 있습니다.\n");
+    next_line();
+
+    printf("\"Makefile\"의 요소는 크게 4가지로 나뉩니다.\n");
+    printf("[ 목적 파일 (Target) ]\n");
+    printf("명령어가 수행되어 나온 결과를 저장할 파일입니다.\n\n");
+    printf("[ 의존성 파일 (Dependency) ]\n");
+    printf("'목적 파일'을 만들기 위해 필요한 재료입니다.\n\n");
+    printf("[ 명령어 (Command) ]\n");
+    printf("실행 될 명령어입니다.\n\n");
+    printf("[ 매크로 (macro) ]\n");
+    printf("치환 될 문자를 정의합니다.\n\n");
+    next_line();
+
+    printf("\"Makefile\"의 문법 구조는 다음과 같습니다.\n");
+    printf("[매크로]\n\n");
+    printf("[목적 파일] : [의존성 파일]\n");
+    printf("    [명령어]\n\n");
+    printf("[목적 파일] : [의존성 파일]\n");
+    printf("    [명령어]\n");
+    next_line();
+    
+    printf("다음은 예시입니다.\n\n");
+    printf("ab : a.o b.o main.o\n");
+    printf("    gcc -o abc a.o b.o main.o\n\n");
+    printf("a.o : a.c\n");
+    printf("    gcc -c -o a.o a.c\n\n");
+    printf("b.o : b.c\n");
+    printf("    gcc -c -o b.o b.c\n\n");
+    printf("main.o : main.c\n");
+    printf("    gcc -c -o main.o main.c\n");
+    next_line();
+    
+    printf("위의 예시를 설명하자면 다음과 같습니다.\n\n");
+    printf("':'를 기준으로 왼쪽에는 [목적 파일]입니다.\n\n");
+    printf("':'를 기준으로 오른쪽은 [목적 파일]이 필요로 하는  [의존성 파일]입니다.\n\n");
+    printf("'gcc' 구문은 [목적 파일]이 생성되기 위해 수행될 [명령어] 이며\n");
+    printf("반드시 'tab 키'를 한 번 하고 난 뒤 입력해야 합니다.\n");
+    next_line();
+
+    printf("참고) \"Makefile\"의 내용은 아래에서 위로 수행되는 흐름입니다.\n");
+    next_line();
+
+
+    printf("위에서 언급된 'foo.c' 파일과 'main.c' 파일을 빌드하는 문법은 다음과 같습니다.\n\n");
+    printf("foo : foo.o main.o\n");
+    printf("    gcc -o foo foo.o main.o\n\n");
+    printf("foo.o : foo.c\n");
+    printf("    gcc -c foo.c\n\n");
+    printf("main.o : main.c\n");
+    printf("    gcc -c main.c\n\n");
+    printf("clean :\n");
+    printf("    rm -f *.o foo\n");
+    next_line();
+
+    printf("위의 \"Makefile\" 내용을 바탕으로 \"make\"를 통해 빌드를 하고 나면\n");
+    printf("'.o' 파일들과 '실행파일'이 생성됩니다.\n");
+    next_line();
+
+    printf("자신이 만든 코드를 배포할 때는 소스 코드만을 필요로 하기 때문에\n");
+    printf("'.o' 파일과 실행 파일을 한 번에 제거할 필요가 있습니다.\n");
+    next_line();
+
     printf("그러기 위해 관습적으로 'clean'이란 타겟을 만들어 놓습니다.\n");
     next_line();
-    printf("아래와 같이 clean 타겟을 기존의 Makefile 에 추가하였습니다.\n");
-    printf("\tclean:\n");
-    printf("\t\trm -f foo foo.o main.o\n\n");
+
+    printf("'clean'은 '더미 타켓' 이라고 하며\n");
+    printf("파일을 생성하지 않는 개념적인 타겟으로 문법은 다음과 같습니다.\n\n");
+    printf("clean :\n");
+    printf("    [명령어]\n\n");
     next_line();
-    printf("이후 clean 타겟 수행을 위해서는\n");
-    printf("\t$ make clean\n");
-    printf("라고 입력하면 됩니다.\n");
+    
+    printf("'clean'의 예시로는 다음과 같습니다.\n\n");
+    printf("clean :\n");
+    printf("    rm -f *.o foo\n");
     next_line();
 
-    printf("다른 사람들이 작성한 Makefile 을 보게 되면 매크로를 사용하여 Makefile 의 내용도 줄인 것을 볼 수 있을 겁니다.\n");
-    printf("여기에서는 Makefile의 매크로까지는 다루지 않겠습니다.\n");
+    printf("실제로 'clean'을 수행하려면 다음과 같이 입력하면 됩니다.\n");
+    printf("\"make clean\"\n");
     next_line();
 
-    printf("make 명령어에 대한 학습이 끝났습니다.\n");
+    printf("지금까지 \"Makefile\"의 내용은 일일히 [목적 파일]과 [의존성 파일], [명령어]를 적어줬습니다.\n");
+    next_line();
+
+    printf("위의 방법은 파일이 적으면 괜찮지만, 파일이 많아진다면 일일히 적어주기도 힘들 것입니다.\n");
+    next_line();
+
+    printf("[매크로]를 이용하여 \"Makefile\"의 내용을 간소화 해보겠습니다.\n");
+    next_line();
+
+    printf("[매크로]는 위에서 배웠던 코드에서 중복되는 파일 이름들을 특정 단어로 치환하면 됩니다.\n");
+    next_line();
+
+    printf("[매크로]의 작성 규칙은 다음과 같습니다.\n\n");
+    printf("반드시 치환될 위치보다 먼저 정의가 되어 있어야 합니다.\n");
+    printf("tab으로 시작해서는 안되고, ':', '=', '#', '\"\"' 등은 이름으로 사용할 수 없습니다.\n");
+    printf("매크로를 사용할 때는 소괄호나 중괄호로 둘러싸고 앞에 '$'를 붙입니다.\n");
+    next_line();
+
+    printf("사용 예시는 다음과 같습니다.\n\n");
+    printf("CC = gcc\n");
+    printf("CFLAGS = -W -WALL\n");
+    printf("TARGET = foo\n\n");
+    printf("$(TARGET) : foo.o main.o\n");
+    printf("    $(cc) $(CFLAGS) -o $(TARGET) foo.o main.o\n\n");
+    printf("$foo.o : foo.c\n");
+    printf("    $(cc) $(CFLAGS) -c -o foo.o foo.c\n\n");
+    printf("$main.o : main.c\n");
+    printf("    $(cc) $(CFLAGS) -c -o main.o main.c\n\n");
+    next_line();
+    
+    printf("위의 내용은 실제 동작 시 동일하게 적인 단어들 위치에 미리 지정되었던 값으로 치환됩니다.\n");
+    next_line();
+
+    printf("하지만, 위의 내용은 치환만 되었을 뿐 코드가 간소화 되지는 않았습니다.\n");
+    next_line();
+
+    printf("'내부 매크로'라는 것을 이용하여 코드를 간소화 해보겠습니다.\n\n");
+    printf("CC = gcc\n");
+    printf("CFLAGS = -W -Wall\n");
+    printf("TARGET = foo\n");
+    printf("OBJECTS = foo.o main.o\n\n");
+    printf("all : $(TARGET)\n");
+    printf("$(TARGET) : $(OBJECT)\n");
+    printf("    $(CC) $(CFLAGS) -o $@ $^\n\n");
+    printf("clean :\n");
+    printf("    rm *.o foo\n");
+
+    printf("위의 코드는 이전의 코드들과 같은 동작을 하지만 훨씬 간소화되었습니다.\n");
+    next_line();
+
+    printf("\"make\"에서 지원하는 [내부 메크로]는 다음과 같습니다.\n\n");
+    printf("[ $@ ] : 현재 [목적 파일]의 이름\n");
+    printf("[ $^ ] : 현재 [목적 파일]이 필요로 하는 [의존성 파일] 리스트\n");
+    printf("[ $* ] : 현재 [목적 파일]의 이름에서 확장자만 제거\n");
+    printf("[ $? ] : 현재 [목적 파일]이 필요로 하는 [의존성 파일] 중 변경된 것들의 목록\n");
+    printf("[ $< ] : [의존성 파일] 중 첫 번째 파일\n\n");
+    printf("더 많은 [내부 매크로]는 아래의 사이트에서 확인할 수 있습니다.\n");
+    printf("\"www.gnu.org/software/make/manual/html_node/Automatic-Variables.html\"");
+    next_line();
+
+    printf("[Tip]\n");
+    printf("내부 매크로를 사용하지 않고 아무리 많은 파일들이 있더라도\n");
+    printf("한 번에 빌드할 수 있습니다.\n");
+    next_line();
+
+    printf("'a.c', 'b.c', 'd.c', 'e.c', 'f.c' 파일이 있다고 하였을 때\n");
+    printf("다음과 같이 작성하면 됩니다.\n\n");
+
+    printf("abdef : *.o\n");
+    printf("    gcc -o abdef *.o\n\n");
+    printf("*.o : *.c\n");
+    printf("    gcc -c *.c\n\n");
+    printf("all : abdef\n\n");
+    printf("clean : rm -f *.o abdef\n");
+    next_line();
+
+    printf("\"make\"와 \"Makefile\"은 코드를 작성하고 빌드함에 있어서 매우 유용한 유틸리티입니다.\n");
+    next_line();
+
+    printf("이 트레이닝에서 배운 것만으로도 사용함에 있어서 불편함은 없습니다.\n");
+    next_line();
+
+    printf("하지만 \"gcc\" 명령어의 여러 옵션들과\n");
+    printf("\"Makefile\"의 다양한 작성 방법을 알면 더 효율적으로 사용할 수 있습니다.\n");
+
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
+    next_line();
+
+
+    printf("\"make\" 명령어의 학습이 끝났습니다.\n");
+    printf("고생하셨습니다.\n");
 
 	delete_defdir();
 }
