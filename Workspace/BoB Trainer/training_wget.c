@@ -15,6 +15,9 @@ void training_wget(void)
 	printf("\"wget\" 명령어는 웹 상에 있는 파일을 다운받는 명령어이며,\n");
 	printf("지원되는 프로토콜은 'HTTP', 'HTTPS', 'FTP'가 있습니다.\n");
 	next_line();
+	
+	printf("\"wget\" 명령어의 실행파일은 \"/usr/bin/wget\"(으)로 있습니다.\n");
+	next_line();
 
 	printf("기본적으로 웹 상에 있는 파일을 다운받을 때는\n");
 	printf("\"wget [URL 링크]\"와 같이 사용합니다.\n");
