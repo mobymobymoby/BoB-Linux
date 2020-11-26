@@ -8,9 +8,11 @@ name=$(whoami)
 # init_account 관련 내용 bash.bashrc에서 모두 삭제
 # 설치를 진행하기 위해 NOPASSWD로 sudoers에 등록된 내용 모두 삭제
 # 쉘 스크립트 파일 삭제
+# issue에 뜨는 초기 계정 설정 내용 삭제
 sudo userdel -r rookie > /dev/null 2>&1
 sudo sed -i '/init_account/d' /etc/bash.bashrc
 sudo sed -i "s,\(\User privilege specification\),\1\n${name}\tALL=(ALL:ALL) ALL,g" /etc/sudoers
+sudo sed -i '/rookie/d' /etc/issue
 sudo sed -i '/NOPASSWD/d' /etc/sudoers
 rm -f ./init_account3
 
