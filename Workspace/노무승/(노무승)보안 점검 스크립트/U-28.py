@@ -16,15 +16,14 @@ def U28() :
     f_output = f_output + "[" + C_NUM + "] NIS, NIS+ 서비스 서비스 검사" + "\n"
     flag = False
 
-    temp = subprocess.getoutput("ps -ef | egrep \"ypserv|ypbind|ypxfrd|rpc.yppasswdd|rpc.ypupdated\"")
+    temp = subprocess.getoutput("ps -ef | egrep \"ypserv|ypbind|ypxfrd|rpc.yppasswdd|rpc.ypupdated\" | grep -v grep")
 
     if (len(temp) != 0) :
         temp = temp.split("\n")
         for i in temp:
-            if (i.find("grep") == -1) :
-                data = i.split()
-                f_output = f_output + C_YELLOW + "\t[경고] NIS, NIS+ 서비스 (" + data[7] + ")가 활성화 되어 있습니다.\n"
-                flag = True
+            data = i.split()
+            f_output = f_output + C_YELLOW + "\t[경고] NIS, NIS+ 서비스 (" + data[7] + ")가 활성화 되어 있습니다.\n"
+            flag = True
 
     if (flag) :
         f_output = f_output + C_RED + "\t[검사 결과] 보안 조치가 필요합니다.\n" + C_END  
