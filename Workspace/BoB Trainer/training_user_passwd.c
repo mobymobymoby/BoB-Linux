@@ -60,7 +60,7 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("[ Adding new user `user1' (1001) with group `user1' ... ]\n");
-	printrf("생성한 'user1' 그룹에 'user1' 계정을 포함시킨다는 의미입니다.\n");
+	printf("생성한 'user1' 그룹에 'user1' 계정을 포함시킨다는 의미입니다.\n");
 	next_line();
 	
 	printf("[Creating home directory `/home/user1' ... ]\n");
