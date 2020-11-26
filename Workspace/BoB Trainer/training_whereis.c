@@ -34,7 +34,7 @@ void training_whereis(void)
     printf("'root' 디렉토리 밑에 'usr' 디렉토리 밑에 'bin' 디렉토리 밑과\n");
     printf("'root' 디렉토리 밑에 'bin' 디렉토리 밑에 있고\n\n");
     printf("매뉴얼 파일의 위치는\n");
-    printf("'root' 디렉토리 밑에 'share' 디렉토리 밑에 'man' 디렉토리 밑에 'man1' 디렉토리 밑에 .gz 파일로 압축되어 있습니다.\n");
+    printf("'root' 밑에 'share' 밑에 'man' 밑에 'man1' 밑에 .gz 파일로 압축되어 있습니다.\n");
     next_line();
 
     printf("\"whereis\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n\n");
