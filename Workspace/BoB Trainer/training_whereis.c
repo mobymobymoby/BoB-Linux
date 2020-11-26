@@ -62,6 +62,8 @@ void training_whereis(void)
 
     printf("\n\n잘 따라하셨다면 \"locate: /usr/bin/locate\" 라고 출력되었을 것입니다.\n");
     printf("(혹은 파일이 들어있는 위치)\n");
+    next_line();
+    
     printf("\"locate\" 명령어의 실행파일 위치는 'root' 밑에 'usr' 밑에 'bin' 밑에 위치 하고 있다고 출력해주고 있습니다.\n\n");
     next_line();
 
