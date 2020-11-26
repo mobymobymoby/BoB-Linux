@@ -1,3 +1,8 @@
+### 부팅 시 오류메시지 
+![image](https://user-images.githubusercontent.com/67176669/100335410-50ed2800-3018-11eb-9f4d-9af3305140ed.png)
+- 커널을 업데이트하여 해결
+  - 5.8.0-29-generic, apt 이용
+
 ### create_mkdir 함수가 제대로 작동하지 않는 문제 발견 : 해결
 - /home/[사용자 계정 이름] 디렉토리가 존재하지 않을 때 발생
 - mkdir -p 명령어로 변경하여 하위 디렉토리를 생성하게 함
