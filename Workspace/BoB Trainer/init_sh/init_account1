@@ -14,6 +14,7 @@ do
 	read num
 	if [ ${num} -eq 1 ] > /dev/null 2>&1 ; then
 		sudo sed -i '/init_account/d' /home/rookie/.bashrc
+		sudo sed -i "s,\(\User privilege specification\),\1\nrookie\tALL=(ALL:ALL) ALL,g" /etc/sudoers
 		sudo sed -i '/NOPASSWD/d' /etc/sudoers
 		rm -f init_account*
 		exit
