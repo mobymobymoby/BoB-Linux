@@ -3,7 +3,6 @@
 void training_whereis(void)
 {
     create_defdir();
-
     system("clear");
 
     printf("이번에 배울 명령어는 \"whereis\" 입니다.\n\n");
@@ -16,6 +15,7 @@ void training_whereis(void)
 
     printf("\"whereis\" 명령어의 실행 파일은 \"/usr/bin/whereis\"(으)로 있습니다.\n");
     next_line();
+    
     printf("사용법은 \"whereis [옵션] [검색할 명령어]\" 입니다.\n");
     next_line();
     
@@ -45,7 +45,8 @@ void training_whereis(void)
     printf("  [ -M ] : 매뉴얼 파일을 찾을 위치를 제한(지정)합니다.\n\n");
     printf("  [ -S ] : 소스코드 파일을 찾을 위치를 제한(지정)합니다.\n\n");
     printf("  [ -u ] : 특정 파일을 제외합니다.\n\n");
-    printf("  [ -f ] : -B, -M, -S 옵션에서 디렉토리를 제한(지정)한 다음, 이 옵션을 통해 파일 이름을 지정합니다.\n\n");
+    printf("  [ -f ] : -B, -M, -S 옵션에서 디렉토리를 제한(지정)한 다음, \n");
+    printf("           이 옵션을 통해 파일 이름을 지정합니다.\n\n");
     next_line();
 
     printf("\"whereis\" 명령어 옵션 중 두 개만 실습해보겠습니다.\n\n");
@@ -53,6 +54,7 @@ void training_whereis(void)
 
     printf("[실습] '-b' 옵션을 이용하여 \"locate\" 명령어의 실행 파일 위치만 출력하세요.\n");
     printf("사용법 : \"whereis [옵션] [검색할 명령어]\"\n");
+    
     // whereis -b locate 
     // 다른 메시지가 출력되므로, fake로 해결
     fake_run_command("whereis -b locate");
@@ -71,13 +73,18 @@ void training_whereis(void)
     printf("(혹은 파일이 들어있는 위치)\n\n");
     printf("\"locate\" 명령어의 매뉴얼 파일위치는 'root' 밑에 'share' 밑에 'man' 밑에 'man1' 밑에 .gz로 압축 되어있다고 출력해주고 있습니다.\n");
     next_line();
+    
     printf("이렇게 \"whereis\" 명령어에 대해 배워보았습니다.\n");
     next_line();
+    
     printf("\"whereis\" 명령어의 옵션은 위에 나온 것들 말고도 여러가지가 있습니다.\n");
     next_line();
-    printf("이후에 콘솔 혹은 터미널에 \"man\"명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
+    
+    printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
+    printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
     printf("더 많은 정보와 옵션들을 확인하시길 바랍니다.\n");
     next_line();
+    
     printf("\"whereis\" 명령어의 학습이 끝났습니다.\n");
     next_line();
 
