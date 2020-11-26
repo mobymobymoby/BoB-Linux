@@ -35,10 +35,6 @@ void training_whoami(void)
 	printf("후에 나올 비슷한 명령어와의 차이점이 될 점입니다.\n");
 	next_line();
 
-	printf("\"whoami\" 명령어의 실행파일은 리눅스 시스템 내에서 \"/usr/bin/whoami\"로\n");
-	printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리 밑에 'bin' 디렉토리 밑에 \"whoami\"로 있습니다.\n");
-	next_line();
-
 	printf("\"whoami\" 명령어가 보여주는 결과는 뒤에서 언급 될 \"id\" 명령어에 옵션 \n'u' 와 'n'을 줘서 \"id -un\"의 결과와 같습니다.\n");
 	next_line();
 
@@ -65,12 +61,12 @@ void training_whoami(void)
 	next_line();
 
 	printf("그리고 비슷한 명령어로는 다음의 것들이 있습니다.\n\n");
-	printf("  \"who\" - 현재 시스템에 로그인 되어 있는 사용자를 출력해줍니다.\n");
-	printf("  \"w\" - 로그인된 사용자와 수행 중인 작업을 출력해줍니다.\n");
-	printf("  \"users\" - 시스템에 로그인 되어있는 사용자의 아이디를 출력해줍니다.\n");
-	printf("  \"logname\" - 사용자의 계정을 출력해줍니다. (\"users\"와 같은 결과값을 보여줍니다.)\n");
-	printf("  \"id\" - 시스템에 등록된 아이디 정보를 출력해줍니다.\n");
-	printf("          (더 자세히는 현재 사용자 정보인 UID와 GID 등을 보여줍니다.)\n\n");
+	printf("  \"who\"     : 현재 시스템에 로그인 되어 있는 사용자를 출력해줍니다.\n");
+	printf("  \"w\"       : 로그인된 사용자와 수행 중인 작업을 출력해줍니다.\n");
+	printf("  \"users\"   : 시스템에 로그인 되어있는 사용자의 아이디를 출력해줍니다.\n");
+	printf("  \"logname\" : 사용자의 계정을 출력해줍니다. (\"users\"와 같은 결과값을 보여줍니다.)\n");
+	printf("  \"id\"      : 시스템에 등록된 아이디 정보를 출력해줍니다.\n");
+	printf("               (더 자세히는 현재 사용자 정보인 UID와 GID 등을 보여줍니다.)\n\n");
 	next_line();
 
 	printf("다른 운영체제에서도 \"whoami\" 명령어를 사용해보시고 \n관련된 다른 명령어들도 한 번씩 실습하여 결과를 확인해보세요.\n");
