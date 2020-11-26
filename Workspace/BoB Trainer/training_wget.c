@@ -25,7 +25,7 @@ void training_wget(void)
 
 	printf("[실습] '네이버(https://www.naver.com)'의 웹 페이지 파일을 다운받아보세요.\n");
 	file_check();
-	run_command("wget https://www.naver.com");
+	just_run_command("wget https://www.naver.com");
 	
 	printf("\n\nwget을 통해 다운로드 받은 파일에 대한 정보가 출력됩니다.\n\n");
 	printf("접속한 URL의 IP 정보와 '200'이라는 HTTP 상태코드 등\n");
