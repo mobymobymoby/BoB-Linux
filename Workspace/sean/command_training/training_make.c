@@ -19,7 +19,7 @@ void training_make()
     next_line();
 
     printf("기본적으로 [옵션]과 [target]을 사용하지 않고\n");
-    printf("\"make\"만 입력하여 사용합니다.\n\n");
+    printf("\"make\"만 입력하여 사용합니다.\n\n\n");
     next_line();
 
     printf("[컴파일 과정]\n\n");
@@ -31,8 +31,8 @@ void training_make()
     next_line();
 
     printf("터미널에서 위의 두 파일을 빌드하려면\n\n");
-    printf("$ gcc -c foo.c\n");
-    printf("$ gcc -c main.c\n");
+    printf("$ gcc -c -o foo.o foo.c\n");
+    printf("$ gcc -c -o main.o main.c\n");
     printf("$ gcc -o foo foo.o main.o\n\n");
     printf("와 같이 입력해야 합니다.\n");
     next_line();
@@ -98,20 +98,20 @@ void training_make()
     printf("':'를 기준으로 왼쪽에는 [목적 파일] 입니다.\n\n");
     printf("':'를 기준으로 오른쪽은 [목적 파일]이 필요로 하는 [의존성 파일] 입니다.\n\n");
     printf("'gcc' 구문은 [목적 파일]이 생성되기 위해 수행될 [명령어] 이며\n");
-    printf("반드시 'tab 키'를 한 번 하고 난 뒤 입력해야 합니다.\n");
+    printf("반드시 'tab 키'를 한 번 하고 난 뒤 입력해야 합니다.\n\n");
     next_line();
 
-    printf("참고) \"Makefile\"의 내용은 아래에서 위로 수행되는 흐름입니다.\n\n");
+    printf("참고) \"Makefile\"의 내용은 아래에서 위로 수행되는 흐름입니다.\n");
     next_line();
 
     system("clear");
-    printf("위에서 언급된 'foo.c' 파일과 'main.c' 파일을 빌드하는 문법은 다음과 같습니다.\n\n");
+    printf("처음의 'foo.c' 파일과 'main.c' 파일을 빌드하는 문법은 다음과 같습니다.\n\n");
     printf("foo : foo.o main.o\n");
     printf("    gcc -o foo foo.o main.o\n\n");
     printf("foo.o : foo.c\n");
-    printf("    gcc -c foo.c\n\n");
+    printf("    gcc -c -o foo.o foo.c\n\n");
     printf("main.o : main.c\n");
-    printf("    gcc -c main.c\n\n");
+    printf("    gcc -c -o foo.o main.c\n\n");
     printf("clean :\n");
     printf("    rm -f *.o foo\n");
     next_line();
@@ -139,7 +139,7 @@ void training_make()
     next_line();
 
     printf("실제로 'clean'을 수행하려면 다음과 같이 입력하면 됩니다.\n");
-    printf("\"make clean\"\n");
+    printf("\"make clean\"\n\n");
     next_line();
 
     printf("지금까지 \"Makefile\"의 내용은 일일히\n");
@@ -160,7 +160,7 @@ void training_make()
     printf("[매크로]의 작성 규칙은 다음과 같습니다.\n\n");
     printf("1. 반드시 치환될 위치보다 먼저 정의가 되어 있어야 합니다.\n");
     printf("2. tab으로 시작해서는 안되고, ':', '=', '#', '\"\"' 등은 이름으로 사용할 수 없습니다.\n");
-    printf("3. 매크로를 사용할 때는 소괄호나 중괄호로 둘러싸고 앞에 '$'를 붙입니다.\n");
+    printf("3. 매크로를 사용할 때는 소괄호나 중괄호로 둘러싸고 앞에 '$'를 붙입니다.\n\n");
     next_line();
 
     printf("사용 예시는 다음과 같습니다.\n\n");
