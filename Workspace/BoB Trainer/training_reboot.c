@@ -19,15 +19,15 @@ void training_reboot(void)
 	printf("'-f 옵션을 주어 강제 재부팅이 가능합니다.\n\n");
 	next_line();
 
-	printf("[실습] reboot 명령어를 사용하여 시스템을 '강제 재부팅'해보세요.\n");
+	printf("[실습] \"reboot\" 명령어를 사용하여 시스템을 '강제 재부팅'해보세요.\n");
 	printf("(실제 적용되지는 않습니다.)\n");
 	fake_run_command("reboot -f");
 
-	printf("\n\n비슷하게 시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init'이 있으며,\n");
-	printf("시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'halt', 'poweroff' 가 있습니다.\n");
+	printf("\n\n비슷하게 시스템 재부팅을 수행하는 명령어로는 \"shutdown\", \"init\"이 있으며,\n");
+	printf("시스템 종료를 수행하는 명령어로는 \"shutdown\", \"init\", \"halt\", \"poweroff\" 가 있습니다.\n");
 	next_line();
 	       
-	printf("reboot와 비슷한 명령어로는 'shutdown 명령어의 -r 옵션', 'init 6'가 있습니다.\n");  
+	printf("\"reboot\"와 비슷한 명령어로는 \"shutdown 명령어의 -r 옵션\", \"init 6\"가 있습니다.\n");  
 	next_line();
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
