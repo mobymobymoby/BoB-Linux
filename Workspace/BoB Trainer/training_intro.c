@@ -7,7 +7,7 @@ void training_intro()
     printf("기본적으로 Enter 키를 누르면 다음 메시지가 뜨는 방식으로 진행할 수 있습니다.\n");
     printf("\n");
     printf("특정 설명에서는 사용자로부터 입력을 받아 명령어를 실습하기도 합니다.\n\n");
-    printf("이 때 조건에 일치하는 명령어를 입력해야 하며,\n");
+    printf("이 때 조건에 일치하는 명령어를 입력해야 하며\n");
     printf("잘못된 명령어를 입력했을 때는 다시 입력을 받게 됩니다.\n");
     next_line();
     
@@ -18,7 +18,7 @@ void training_intro()
     printf("\"ls -a\"이나 \"ls -l\"로 따로 쓸 수도 있지만 ");
     printf("\"ls -al\"과 같이 한 번에 사용할 수 있습니다.\n\n");
     printf("이 때의 기능은 -a 옵션과 -l의 옵션을 합친 것이 됩니다.\n");
-    printf("이러한 법칙은 ls 뿐만 아니라 대부분의 명령어에 통용됩니다.\n");
+    printf("이러한 법칙은 ls 뿐만 아니라 대부분의 명령어에 공통되는 부분입니다.\n");
     next_line();
     
     system("clear");
