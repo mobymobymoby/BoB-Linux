@@ -84,7 +84,7 @@ void essential_trainer()
     printf("지금까지 배운 명령어들은 리눅스에서 \n");
     printf("기본적으로 사용하게 될 명령어들입니다.\n\n");
     
-    printf("꾸준히 복습하여 숙지하시길 바랍니다.\n");
+    printf("꾸준히 사용하여 능숙해지시길 바랍니다.\n");
     next_line();
     
     printf("다음 파트인 응용 명령어들을 학습하여\n");
