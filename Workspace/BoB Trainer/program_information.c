@@ -13,5 +13,10 @@ void program_information(void)
 
 	printf("\nIf you have any question, please contact below information.\n");
 
-	printf("\nblack6765@gmail.com(KIM CHEONG-JUN, Project Manager)\n");
+	printf("\n\n[KIM CHEONG-JUN, Project Manager]\n");
+	printf("black6765@gmail.com\n");
+	
+	printf("\n\n[Sean Baek]\n");
+	printf("https://github.com/sean-baek\n");
+	printf("songseon0110@gmail.com\n");
 }
