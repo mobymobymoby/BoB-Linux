@@ -70,15 +70,25 @@ void essential_trainer()
             next_quit();            
         case 808:
             training_clear();
+            next_line();
             break;
     }
-    printf("\n기초 명령어 학습 과정이 끝났습니다.\n");
+    system("clear");
+    
+    printf("\n기초 명령어 학습 과정이 모두 끝났습니다.\n");
     next_line();
     
     printf("이제 여러분은 리눅스의 다양한 명령어들을 배울 준비가 되었습니다.\n");
     next_line();
     
-    printf("기초 명령어 학습에서 배운 것은 리눅스를 사용할 때 필수적인 사항이므로 꾸준히 복습하여 숙지하시길 바랍니다.\n");
+    printf("지금까지 배운 명령어들은 리눅스에서 \n");
+    printf("기본적으로 사용하게 될 명령어들입니다.\n\n");
+    
+    printf("꾸준히 복습하여 숙지하시길 바랍니다.\n");
+    next_line();
+    
+    printf("다음 파트인 응용 명령어들을 학습하여\n");
+    printf("리눅스의 다양한 명령어들을 학습해보시길 바랍니다.\n");
     next_line();
     
     printf("고생하셨습니다.\n");
