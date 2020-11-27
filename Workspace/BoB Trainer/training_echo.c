@@ -44,7 +44,7 @@ void training_echo(void)
     printf("[ \\r ] : 캐리지 리턴 역할을 합니다. (carrige Return)\n");
     printf("[ \\t ] : 탭 키를 누른 것과 같은 역할을 합니다. (Tab)\n");
     printf("[ \\v ] : 수직 탭 역할을 합니다. (Vertical tab)\n");
-    printf("[ \\\\  ] : 역슬래시를 출력해줍니다.\n");
+    printf("[ \\\\ ] : 역슬래시를 출력해줍니다.\n");
     printf("[ \\0 ] : 널 문자 역할을 합니다.\n");
     printf("[ \\' ] : 작은 따옴표를 출력합니다.\n");
     printf("[ \\\" ] : 큰 따옴표를 출력합니다.\n\n");
