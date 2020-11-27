@@ -81,7 +81,7 @@ void training_init(void)
     printf("참고) \"init\"(은)는 한계가 있었기 때문에 이를 보완하여 나온 것이 \"systemd\" 입니다.\n");
     next_line();
 
-    printf("하지만, \"systemd\"가 \"init\"보다 장점이 많지만 완벽하다고는 할 수 없습니다.\n");
+    printf("하지만, \"systemd\"가 \"init\"보다 장점은 많아도 완벽하다고는 할 수 없습니다.\n");
     next_line();
 
     printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");

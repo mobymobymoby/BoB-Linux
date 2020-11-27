@@ -3,7 +3,6 @@
 void training_diff(void)
 {
     create_defdir();
-
     system("clear");
     
     printf("이번에 학습할 명령어는 \"diff\" 입니다.\n\n");
@@ -46,18 +45,16 @@ void training_diff(void)
     
     printf("[실습] \"ls\"를 입력하여 파일 두 개가 잘 만들어졌는지 확인해봅니다.\n");
     just_run_command("ls");
-    next_line();
     
-    printf("\n이제 위에서 만든 파일 두 개를 비교해 볼 것입니다.\n\n");
+    printf("\n\n이제 위에서 만든 파일 두 개를 비교해 볼 것입니다.\n\n");
     next_line();
     
     printf("[실습] \"diff\" 명령어를 옵션을 없이 이용하여\n");
     printf("'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
     printf("사용법 : diff [비교할 파일1] [비교할 파일2]\n");
     just_run_command("diff test1 test2");
-    next_line();
     
-    printf("\n학습을 잘 따라오셨다면 아래와 같이 출력될 것입니다.\n");
+    printf("\n\n학습을 잘 따라오셨다면 아래와 같이 출력될 것입니다.\n");
     printf("3c3,4\n< you\n---\n> me\n> okay?\n");
     next_line();
     
@@ -66,8 +63,12 @@ void training_diff(void)
     
     printf("두 파일을 비교했을 때\n");
     printf("첫번째 파일에서는 3번째 행이 다르고\n");
+    next_line();
+    
     printf("두번째 파일에서는 3번째 행과 4번째 행이 다른데\n");
+    next_line();
     printf("첫번째 파일에서는 \"you\"라고 적힌 부분이고\n");
+    next_line();
     printf("두 번째 파일에서는 \"me\"와 \"okay?\"라고 적힌 부분이다.\n");
     next_line();
     
@@ -78,12 +79,13 @@ void training_diff(void)
     printf("'>' : 첫 번째 파일에는 없지만 \"두 번째 파일에는 들어있는 내용이다.\"\n");
     next_line();
     
+    system("clear");
     printf("\"diff\" 명령어의 자주 쓰이는 옵션들은 다음와 같습니다.\n\n");
     printf("  [ -b (--ignore-spcae-change) ]: 연속된 공백은 무시합니다.\n");
     printf("  [ -w (--ignore-all-space) ]   : 모든 공백 차이를 무시합니다.\n");
     printf("  [ -d ]                        : 세세한 차이까지 비교합니다.\n");
     printf("  [ -i (--ignore-case) ]        : 대소문자의 차이를 무시합니다.\n");
-    printf("  [ -q (--brief) ]              : 두 파일을 비교 시 차이점의 존재 여부만 출력해줍니다.\n");
+    printf("  [ -q (--brief) ]              : 두 파일을 비교 시 차이점의 존재 여부만 출력해줍니다\n");
     printf("  [ -s (--report-identical-files) ] : 두 파일이 같은 지 확인합니다.\n");
     printf("  [ -r (--recursive) ]          : 두 디렉토리(폴더)를 비교 시\n");
     printf("                                  디렉토리 밑에 있는 파일과 디렉토리들도 비교하여\n");
@@ -179,15 +181,24 @@ void training_diff(void)
     next_line();
     
     printf("마지막으로 '3c', '3,4c', '3,4c' 이렇게 되어 있는 것들은\n");
+    next_line();
+    
     printf("각 파일에서 다른 부분의 행 번호 입니다.\n\n");
+    next_line();
     printf("그 밑에는 각 파일에만 입력되어 있고\n");
-    printf("다른 파일에는 입력이 안된 내용을 출력해 준 것입니다.\n");
+    next_line();
+    
+    printf("다른 파일에는 입력이 안된 내용을 출력해 준 것입니다.\n\n\n");
     next_line();
     
     printf("최종적으로 보자면\n");
     printf("1 번째 파일의 3 번째 행 \"you\"라는 내용이 다른 파일에는 없다는 것이고\n\n");
+    next_line();
+    
     printf("2 번째 파일의 3 번째 행과 4번째 행 \"me\"와 \"okay?\"라는 내용이\n");
-    printf("다른 파일에는 없다는 것이고\n\n");
+    printf("다른 파일에는 없다는 것이고\n");
+    next_line();
+    
     printf("3 번째 파일의 3 번째 행과 4 번째 행 \"it\"과 \"got it?\"이라는 내용이\n");
     printf("다른 파일에는 없다는 것입니다.\n\n");
     next_line();

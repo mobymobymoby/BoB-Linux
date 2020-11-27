@@ -24,10 +24,12 @@ void training_cmp(void)
     printf("발견된 첫 번째 위치만 출력하고 끝나버립니다.\n\n");
     next_line();
 
-    printf("즉, 두 파일을 비교할 때 맨 처음 내용이 다른 문자가 나오면 그 부분만 출력하고 뒤에 내용이 다른 문자들은 출력되지 않고 끝나버립니다.\n");
+    printf("즉, 두 파일을 비교할 때 맨 처음 내용이 다른 문자가 나오면 그 부분만 출력하고\n");
+    printf("뒤에 내용이 다른 문자들은 출력되지 않고 끝나버립니다.\n");
     next_line();
     
-    printf("\"cmp\" 명령어는 두 개의 파일의 내용이 서로 같은지 혹은 다른지에 대한 참과 거짓 형태를 얻을 때 유용합니다.\n");
+    printf("\"cmp\" 명령어는 두 개의 파일의 내용이 서로 같은지 혹은 다른지에 대한\n");
+    printf("참과 거짓 형태를 얻을 때 유용합니다.\n");
     next_line();
     
     printf("예를 들어 두 개의 파일이 있는데 서로 다른 부분이 있는지 알고 싶을 때\n");
@@ -63,14 +65,15 @@ void training_cmp(void)
     
     printf("\n\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n\n");
     next_line();
-    
+
     printf("[실습] \"ls\"를 입력하여 파일 두 개가 잘 만들어졌는지 확인해봅니다.\n");
     just_run_command("ls");
     
     printf("\n\n파일 두 개의 내용이 다른지 같은지 참 혹은 거짓 형태로 출력되게 실습해보겠습니다.\n\n");
     next_line();
     
-    printf("[실습] \"cmp\" 명령어를 이용하여 옵션을 넣지 않고 'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
+    printf("[실습] \"cmp\" 명령어를 이용하여 옵션을 넣지 않고\n");
+           printf("'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
     printf("사용법 : cmp [비교할 파일1] [비교할 파일2]\n");
     just_run_command("cmp test1 test2");
     
@@ -82,26 +85,29 @@ void training_cmp(void)
     printf("'공백과 엔터 포함하여 전체 문자 중 26번째 문자'이다.\n");
     next_line();
     
+    system("clear");
     printf("\"cmp\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf(" [ '-b' (--print-bytes) ]\n");
+    printf("  [ '-b' (--print-bytes) ]\n");
     printf("두 개의 파일을 비교 시 두 파일 간의 최초로 다른 문자들을 ASCII 값 8진수로 출력합니다.\n\n");
-    printf("[ '-i' (--ignore-initial) ]\n");
+    printf("  [ '-i' (--ignore-initial) ]\n");
     printf("지정된 바이트 수 만큼 무시하고 다음 문자부터 1로 시작하여 비교합니다.\n\n");
-    printf("[ '-l' (--verbose) ]\n");
+    printf("  [ '-l' (--verbose) ]\n");
     printf("두 파일 간의 다른 문자에 대한 위치와 그 문자들의 8진수 값을 출력합니다.\n\n");
-    printf("[ '-s' (--silent) ]\n");
+    printf("  [ '-s' (--silent) ]\n");
     printf("사용자에게 아무것도 출력하지 않습니다.\n");
     printf("하지만 시스템상에서는 실행 결과 코드 값이 반환합니다.\n");
     printf("(0 - 파일의 내용이 같다. / 1 - 파일의 내용이 다르다. / 2 - 파일에 접근할 수 없다)\n\n");
     next_line();
     
+    system("clear");
     printf("\n\"cmp\" 명령어의 옵션 두 가지만 실습해보겠습니다.\n");
     next_line();
     
     printf("먼저 [ -i (--ignore-initial) ] 옵션을 실습해보겠습니다.\n\n");
     next_line();
     
-    printf("[실습] 미리 만들었던 'test1' 파일과 'test2' 파일을 '-i 6' 옵션을 이용하여 비교해보세요.\n");
+    printf("[실습] 미리 만들었던 'test1' 파일과 'test2' 파일을\n");
+    printf("'-i 6' 옵션을 이용하여 비교해보세요.\n");
     printf("사용법 : cmp [옵션] [비교할 파일1] [비교할 파일2]\n");
     just_run_command("cmp -i 6 test1 test2");
     next_line();
@@ -120,7 +126,8 @@ void training_cmp(void)
     printf("그 다음 것부터 '1'로 세라는 옵션입니다.\n");
     next_line();
     
-    printf("test1 파일과 test2 파일의 첫 번째 문자부터 6번 째 문자까지는 엔터까지 포함된 \"hello\" 입니다.\n");
+    printf("test1 파일과 test2 파일의 첫 번째 문자부터 6번 째 문자까지는\n");
+    printf("엔터까지 포함된 \"hello\" 입니다.\n");
     printf("\n'h' - 1\n'e' - 2\n'l' - 3\n'l' - 4\n'o' - 5\n'\\n(엔터) - 6\n");
     next_line();
     
@@ -140,8 +147,10 @@ void training_cmp(void)
     printf("하지만 명령어는 정상 동작 하였습니다.\n");
     next_line();
     
-    printf("'-s' 옵션은 사용자에게 출력해주지 않지만, 출력만 안될 뿐 시스템에서는 서로 같을 때와 다른 때에 대한 코드값을 반환했습니다.\n");
-    printf("[코드 값]\n0 - 파일의 내용이 같다. / 1 - 파일의 내용이 다르다. / 2 - 파일에 접근할 수 없다.)\n\n");
+    printf("'-s' 옵션은 사용자에게 출력해주지 않지만\n");
+    printf("출력만 안될 뿐 시스템에서는 서로 같을 때와 다른 때에 대한 코드값을 반환했습니다.\n\n");
+    
+    printf("  [코드 값]\n0 - 파일의 내용이 같다. / 1 - 파일의 내용이 다르다. / 2 - 파일에 접근할 수 없다.)\n\n");
     next_line();
     
     printf("\"cmp\" 명령어는 아주 간단하게 파일을 비교할 때 쓰이는 명령어입니다.\n\n");

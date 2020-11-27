@@ -27,7 +27,7 @@ void training_comm(void)
     
     printf("[실습] \"cat > test1\"을 입력하여 아래의 내용을 바로 입력하시고\n");
     printf("Ctrl + d키로 저장하세요.\n\n");
-    printf("own\ntwo\nthree\nfour\nfive\n");
+    printf("one\ntwo\nthree\nfour\nfive\n");
     just_run_command("cat > test1");
     
     printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n\n");
@@ -35,7 +35,7 @@ void training_comm(void)
     
     printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용을 바로 입력하시고\n");
     printf("Ctrl + d키로 저장하세요.\n\n");
-    printf("own\ntwo\nthree\nfour\nsix\nseven\n");
+    printf("one\ntwo\nthree\nfour\nsix\nseven\n");
     just_run_command("cat > test2");
     
     printf("\n\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n\n");
@@ -50,19 +50,20 @@ void training_comm(void)
     printf("\n이제 위에서 만든 파일 두 개를 비교해 볼 것입니다.\n\n");
     next_line();
     
-    printf("[실습] \"comm\" 명령어를 옵션을 넣지 않고 이용하여 'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
+    printf("[실습] \"comm\" 명령어를 옵션을 넣지 않고 이용하여\n");
+    printf("'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
     printf("사용법 : comm [비교할 파일1] [비교할 파일2]\n");
     just_run_command("comm test1 test2");
     next_line();
     
     printf("\n학습을 잘 따라오셨다면 아래와 같은 형태로 출력될 것입니다.\n");
-    printf("\t\town\n\t\ttwo\n\t\tthree\n\t\tfour\nfive\n\tsix\n\tseven\n");
+    printf("\t\tone\n\t\ttwo\n\t\tthree\n\t\tfour\nfive\n\tsix\n\tseven\n");
     next_line();
     
     printf("\n해석하자면 이렇습니다.\n");
     next_line();
     
-    printf("'own', 'two', 'three', 'four'은(는)\n");
+    printf("'one', 'two', 'three', 'four'은(는)\n");
     printf("'test1' 파일과 'test2' 파일 모두 들어있는 내용이기 때문에\n");
     printf("Tab 키를 두번 한 '세 번째 열'에 입력됩니다.\n");
     next_line();
@@ -95,7 +96,7 @@ void training_comm(void)
     next_line();
     
     printf("\n학습을 잘 따라오셨다면 다음과 같은 형태로 출력되었을 것입니다.\n");
-    printf("\town\n\ttwo\n\tthree\n\tfour\nsix\nseven\n");
+    printf("\tone\n\ttwo\n\tthree\n\tfour\nsix\nseven\n");
     next_line();
     
     printf("'-1' 옵션은 첫 번째 파일에만 있는 내용은 출력하지 않습니다.\n\n");
@@ -107,14 +108,14 @@ void training_comm(void)
     next_line();
     
     printf("\n햑습을 잘 따라오셨다면 이번에는 다음과 같은 형태로 출력되었을 것입니다.\n");
-    printf("\town\n\ttwo\n\tthree\n\tfour\nfive\n");
+    printf("\tone\n\ttwo\n\tthree\n\tfour\nfive\n");
     next_line();
     
     printf("'-2' 옵션은 두 번째 파일에만 있는 내용은 출력하지 않습니다.\n\n");
     next_line();
     
     printf("[실습] 마지막으로 'test1 파일'과 'test2 파일'을 '-3' 옵션을 이용하여 비교해보세요.\n");
-    printf("사용법 : comm[옵션] [비교할 파일1] [비교할 파일2]\n");
+    printf("사용법 : comm [옵션] [비교할 파일1] [비교할 파일2]\n");
     just_run_command("comm -3 test1 test2");
     next_line();
     

@@ -1,8 +1,5 @@
 #include "func.h"
 
-int run_command(char valid_cmd[]);
-void next_quit();
-
 void training_env(void)
 {
     create_defdir();
