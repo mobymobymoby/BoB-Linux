@@ -22,7 +22,7 @@ def U28() :
         temp = temp.split("\n")
         for i in temp:
             data = i.split()
-            f_output = f_output + C_YELLOW + "\t[경고] NIS, NIS+ 서비스 (" + data[7] + ")가 활성화 되어 있습니다.\n"
+            f_output = f_output + C_YELLOW + "\t[경고] NIS, NIS+ 서비스 (" + data[7] + ")가 활성화 되어 있습니다.\n" + C_END 
             flag = True
 
     if (flag) :
