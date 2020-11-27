@@ -44,7 +44,7 @@ void training_shutdown(void)
 	fake_run_command("shutdown -c");
 	
 	// 예약 취소 실습
-	printf("비슷하게 시스템 종료를 수행하는 명령어로는 'init', 'poweroff', 'halt' 가 있으며,\n");
+	printf("비슷하게 시스템 종료를 수행하는 명령어로는 'init', 'poweroff', 'halt' 가 있으며\n");
 	printf("시스템 재부팅을 수행하는 명령어로는 'init', 'reboot'가 있습니다.\n");
 	next_line();
 	
