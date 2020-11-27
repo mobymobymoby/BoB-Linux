@@ -57,13 +57,12 @@ void training_cd(void)
 	next_line();
 
 	printf("[ ./dir1/ ](은)는 현재 작업 디렉토리 안에 있는 'dir1' 디렉토리를 의미합니다.\n");
-	printf("ex) 현재 작업 디렉토리가 '/etc' 일 때, [ ./dir1 ](은)는 \"/etc/dir1\"(와)과 같습니다.)\n\n");
+	printf("ex) 현재 작업 디렉토리가 '/etc' 일 때, [ ./dir1 ](은)는 \"/etc/dir1\"(와)과 같습니다.\n\n");
 	next_line();
 
 	printf("[ ../dir2/ ](은)는 현재 작업 디렉토리의\n");
 	printf("상위 디렉토리에 있는 다른 디렉토리인 'dir2'를 의미합니다.\n");
-	printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때\n");
-	printf("[ ../dir3 ](은)는 \"/etc/dir3\"(와)과 같습니다.)\n\n");
+	printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때 [ ../dir3 ](은)는 \"/etc/dir3\"(와)과 같습니다.\n\n");
 	next_line();
 
 	printf("[실습] '상위 경로'를 이용하여 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
