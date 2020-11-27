@@ -12,7 +12,7 @@ void training_wget(void)
 
 
 	printf("이번에 배울 명령어는 \"wget\"입니다.\n\n");
-	printf("\"wget\" 명령어는 웹 상에 있는 파일을 다운받는 명령어이며,\n");
+	printf("\"wget\" 명령어는 웹 상에 있는 파일을 다운받는 명령어이며\n");
 	printf("지원되는 프로토콜은 'HTTP', 'HTTPS', 'FTP'가 있습니다.\n");
 	next_line();
 	
@@ -35,36 +35,39 @@ void training_wget(void)
 	printf("여러가지 정보를 확인할 수 있습니다.\n");
 	next_line();
 	
-	printf("또한, 우리가 방금 다운로드 받은 파일은 용량이 낮은 파일이라 확인하기 힘들었겠지만,\n");
+	printf("또한, 우리가 방금 다운로드 받은 파일은 용량이 낮은 파일이라 확인하지 못했지만\n");
 	printf("파일이 다운로드 받아지는 상태가 표시됩니다.\n");
 	next_line();
+	
 	printf("다운로드 받은 파일인 'index.html'을 확인해보겠습니다.\n\n");
-	printf("[실습] cat을 이용하여 index.html의 내용을 확인해보세요.\n");
+	next_line();
+	
+	printf("[실습] \"cat\"을 이용하여 index.html의 내용을 확인해보세요.\n");
 	just_run_command("cat index.html");
 	
 	printf("\n\n우리가 네이버에 접속하여 볼 수 있는 내용이 텍스트로 출력됩니다.\n");
 	printf("데이터를 그대로 받아오기에 조금 알아보기 힘들 것입니다.\n");
 	next_line();
 	
-	printf("이렇게 html 파일을 다운로드 받을 수도 있지만,\n");
-	printf("우리가 흔히 인터넷에서 다운로드 받는 자료들도 wget으로 받을 수 있습니다.\n");
+	printf("이렇게 html 파일을 다운로드 받을 수도 있지만\n");
+	printf("우리가 흔히 인터넷에서 다운로드 받는 자료들도 \"wget\"으로 받을 수 있습니다.\n");
 	next_line();
 	
 	printf("인터넷에서 클릭을 통해 다운로드를 받는 방식은\n");
 	printf("어떤 아이콘을 클릭하면 그에 해당하는 링크로 이동되는 원리입니다.\n");
 	next_line();
 	
-	printf("따라서 해당 링크 주소를 얻을 수 있다면, \n");
-	printf("동일한 파일을 wget [해당 주소] 명령어를 통해 다운로드 받을 수 있습니다.\n");
+	printf("따라서 해당 링크 주소를 얻을 수 있다면\n");
+	printf("동일한 파일을 \"wget [해당 주소]\" 명령어를 통해 다운로드 받을 수 있습니다.\n");
 	next_line();
 	
-	printf("wget 명령어는 'curl' 명령어와 흡사한 점이 많으니 \n");
+	printf("\"wget\" 명령어는 \"curl\" 명령어와 흡사한 점이 많으니\n");
 	printf("비교하며 공부해보시길 권해드립니다.\n");
 	next_line();
 	
-	printf("학습한 내용 외에도 wget에는 다양한 옵션이 존재합니다.\n");
+	printf("학습한 내용 외에도 \"wget\"에는 다양한 옵션이 존재합니다.\n\n");
 	next_line();
-
+	
 	printf("\"wget\"의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
 	printf("  [ -c <URL> ] : 파일 이어받기\n\n");
 	printf("  [ -0 <URL> ] : 파라미터 형태의 링크에서 파일 다운로드\n\n");
