@@ -26,10 +26,11 @@ void training_which(void)
     printf("[실습] \"which\" 명령어를 이용하여 \"pwd\" 명령어의 위치를 알아보세요.\n");
     just_run_command("which pwd");
 
-    printf("\n\n잘 따라오셨다면 \"/bin/pwd\" 라고 출력되었을 것입니다.\n");
+    printf("\n\n잘 따라오셨다면 \"/usr/bin/pwd\" 라고 출력되었을 것입니다.\n");
     next_line();
 
-    printf("해석하자면 \"'root' 디렉토리 밑에 'bin' 디렉토리 밑에 위치하고 있다\" 입니다.\n");
+    printf("해석하자면\n");
+    printf("'root' 디렉토리 밑에 'usr' 디렉토리 밑에 'bin' 디렉토리 밑에 위치하고 있습니다.\n");
     next_line();
 
     printf("\"which\" 명령어의 옵션은 '-a' 하나 입니다.\n\n");
