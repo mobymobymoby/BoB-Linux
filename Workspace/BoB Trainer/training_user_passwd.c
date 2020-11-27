@@ -185,7 +185,7 @@ void training_user_passwd(void)
 	next_line();
 	
 	printf("여러 옵션이 존재하기 때문에 자주 쓰이는 옵션 위주로 설명하겠습니다.\n");
-	next_Line();
+	next_line();
 	
 	printf("먼저 '-l' 옵션은 기존에 존재하는 계정 이름을 새로운 이름으로 바꿀 때 사용합니다.\n");
 	next_line();
