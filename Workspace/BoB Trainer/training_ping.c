@@ -20,6 +20,7 @@ void training_ping(void)
 	next_line();
 	
 	printf("가장 간단한 사용법은 : \"ping [타겟 IP 또는 주소]\"입니다.\n");
+	printf("ex) ping 127.0.0.1\n");
 	printf("해당 명령어는 타겟 IP로 일정한 시간 간격(1초)마다 'ICMP Request' 패킷을 전송합니다.\n");
 	next_line();
 	
