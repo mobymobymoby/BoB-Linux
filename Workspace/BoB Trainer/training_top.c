@@ -42,10 +42,14 @@ void training_top(void)
 	printf("NI는 NICE 값을 말하며, 사용자와 관리자가 조절할 수 있는 우선순위 값입니다.\n");
 	next_line();
 	
+	system("clear");
+	
 	printf("앞에서 언급한 것과 같이 범위는 -20 ~ 19로, 기본 값은 0입니다.\n");
 	printf("(위 결과에서 NI 0은 해당 프로그램의 우선 순위가 기본 값인 것을 말합니다.)\n");
 	next_line();
-
+	
+	
+	
 	printf("VIRT는 해당 프로세스의 가상 메모리 사용량,\n");
 	printf("RES는 해당 프로세스의 물리적인 메모리 사용량,\n");
 	printf("SHR는 해당 프로세스에 의해 사용된 공유메모리의 양을 말합니다.\n");
@@ -60,13 +64,16 @@ void training_top(void)
 	printf("TIME+는 프로세스가 실행된 후 경과된 시간,\n");
 	printf("COMMAND는 실행된 명령어나 프로세스 이름을 의미합니다.\n");
 	next_line();
+	
+	system("clear");
 
 	printf("\"top\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.(정렬)\n\n");
 	printf("  [ shift + p } : cpu 사용량이 큰 순서로 정렬\n\n");
 	printf("  [ shift + m ] : 메모리 사용량이 큰 순서로 정렬\n\n");
 	printf("  [ shift + t ]	: 실행된 시간이 큰 순서로 정렬\n\n");
 	next_line();
-
+	
+	system("clear");
 	printf("\"top\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.(기능)\n\n");
 	printf("  [ (실행 전) top -p [PID] ]   : 특정 프로세스만 모니터링\n\n");
 	printf("  [ k 입력 후 PID 입력 ]       : 해당 프로세스 종료\n\n");
