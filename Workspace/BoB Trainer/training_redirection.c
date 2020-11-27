@@ -20,7 +20,7 @@ void training_redirection(void)
 	next_line();
 	
 	printf("하지만, 리다이렉션을 사용해 다른 출력으로 변경하면 출력 결과를 파일로 저장하거나\n");
-	printf("파일의 내용을 어떠한 프로세스의 입력으로 사용할 수 있습니다.\n");
+	printf("파일의 내용을 어떠한 프로세스의 입력으로 사용할 수 있습니다.\n\n");
 	next_line();
 	
 	printf("리다이렉션의 종류는 다음과 같습니다.\n\n");
@@ -44,23 +44,25 @@ void training_redirection(void)
 	printf("'hello' 문자열을 'file' 파일로 출력해보세요.\n");
 	printf("사용법 : \"echo [문자열] > [대상 파일]\"\n");
 	run_command("echo hello > file");
+	next_line();
 	
-	printf("\n\n[실습] \"cat file\"로 'hello'가 'file'파일에 출력된 결과를 확인하세요.\n");
-	just_run_command("cat file");
+	printf("\n[실습] \"cat file\"로 'hello'가 'file'파일에 출력된 결과를 확인하세요.\n");
+	just_run_command("cat file");  
+	next_line();
 	
-	printf("\n\n[실습] 'echo' 명령어와 출력 변경 리다이렉션 '>>' 를 사용하여\n");
+	printf("\n[실습] 'echo' 명령어와 출력 변경 리다이렉션 '>>' 를 사용하여\n");
 	printf("'linux' 문자열을 'file' 파일에 텍스트를 추가해보세요.\n");
 	printf("사용법 : \"echo [문자열] >> [대상 파일]\"\n");
 	run_command("echo linux >> file");
 	
-	printf("\n\n\"cat file\"로 파일 내용을 확인하면 입력한 텍스트가 추가되어 저장된 것을 볼 수 있습니다.\n\n");
+	printf("\n\n\"cat file\"로 파일 내용을 확인하면 입력한 텍스트가 추가로 저장된 것을 볼 수 있습니다.\n\n");
 	printf("[실습] 'cat file'을 입력해보세요.\n");
 	run_command("cat file");
 	
 	printf("\n\n방금 리다이렉션으로 내보낸 텍스트인 'hello'와 'linux'가 출력되었을 것입니다.\n");
 	next_line();
 	
-	printf("리다이렉션을 응용하는 명령어들은 많이 존재합니다.\n");
+	printf("리다이렉션을 응용하는 명령어들은 많이 존재합니다.\\n");
 	printf("명령어 학습을 진행하다보면 리다이렉션을 활용할 경우가 많으니 꼭 숙지하시길 바랍니다.\n");
 	next_line();
 	
