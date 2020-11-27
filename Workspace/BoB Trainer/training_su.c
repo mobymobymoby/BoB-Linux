@@ -11,11 +11,11 @@ void training_su(void)
 	next_line();
 
 	printf("사용법은 : \"su [전환할 사용자 이름]\" 과 같이 사용합니다.\n");
+	printf("ex) su user1\n");
 	printf("위 예시와 같이 사용하면 전환하기 전의 사용자 '환경 변수'를 사용합니다.\n\n");
 	next_line();
 
 	printf("[실습] 가상으로 su 명령어를 사용해 'test' 사용자로 전환해보세요.\n");
-	printf("(su [전환할 사용자 이름])\n");
 	fake_run_command("su test");
 	
 	printf("Password:\n");
