@@ -28,7 +28,7 @@ void training_poweroff(void)
 	printf("(실제 종료되지는 않습니다.)\n");
 	fake_run_command("poweroff");
 
-	printf("\n\n비슷하게 시스템 종료를 수행하는 명령어로는 \"shutdown\", \"init\", \"halt\" 가 있으며,\n");
+	printf("\n\n비슷하게 시스템 종료를 수행하는 명령어로는 \"shutdown\", \"init\", \"halt\" 가 있으며\n");
 	printf("시스템 재부팅을 수행하는 명령어로는 \"shutdown\", \"init\", \"reboot\"가 있습니다.\n");
 	next_line();
 	
