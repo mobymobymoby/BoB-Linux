@@ -7,7 +7,7 @@ void training_ping(void)
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    	printf("이번에 학습할 명령어는 \"ping\"입니다.\n");
+    	printf("이번에 학습할 명령어는 \"ping\"입니다.\n\n");
 	printf("\"ping\" 명령어는 네트워크 실습에서 상당히 많이 사용하게 되는 명령어로, \n");
 	printf("주로 대상 간의 통신 여부를 확인하기 위해 사용합니다.\n");
 	next_line();
@@ -16,16 +16,19 @@ void training_ping(void)
 	next_line();
 	
 	printf("\"ping\"은 icmp 패킷을 전송하는 도구로 다양한 방법에 이용할 수 있습니다.\n\n");
-	printf("심지어 과거에는 \"ping\"을 이용해 서버를 마비시키는 'ping of death'라는 공격이 있을 정도였습니다.\n");
+	printf("심지어 과거에는 \"ping\"을 이용해 서버를 마비시키는\n");
+	printf("'ping of death'라는 공격이 있을 정도였습니다.\n");
 	next_line();
 	
 	printf("가장 간단한 사용법은 : \"ping [타겟 IP 또는 주소]\"입니다.\n");
 	printf("ex) ping 127.0.0.1\n");
-	printf("해당 명령어는 타겟 IP로 일정한 시간 간격(1초)마다 'ICMP Request' 패킷을 전송합니다.\n");
+	printf("\n해당 명령어는 타겟 IP로 일정한 시간 간격(1초)마다 'ICMP Request' 패킷을 전송합니다.\n");
 	next_line();
 	
 	printf("ICMP 패킷을 전송받은 서버는 해당 패킷을 받았다는 의미로 \n");
 	printf("'ICMP Reply'를 전송할 수도 있습니다.\n");
+	next_line();
+	
 	printf("여기서 할수도 있다는 의미는, naver와 같은 대부분의 서버는 \n");
 	printf("보안상의 이유로 ping을 차단합니다.\n");
 	next_line();
@@ -85,13 +88,13 @@ void training_ping(void)
 	
 	printf("이외에도 다양한 옵션이 존재합니다.\n\n");
 	printf("  [ -D 옵션 ] : 각 패킷에 대한 reply에 타임스탬프를 붙여 출력합니다.\n\n");
-	printf("  [ -i 옵션 ] : interval을 조절할 수 있는 옵션으로 패킷이 전송되는 간격을 바꿀 수 있습니다.\n");
-	printf("                이 옵션은 관리자 권한만 사용할 수 있습니다.\n\n");
-	printf("  [ -f 옵션 ] : interval을 매우 빠르게 하여 패킷을 홍수(flood)처럼 전송하는 옵션입니다.\n");
+	printf("  [ -i 옵션 ] :  패킷이 전송되는 간격(interval)을 바꿀 수 있습니다.\n");
+	printf("                 이 옵션은 관리자 권한만 사용할 수 있습니다.\n\n");
+	printf("  [ -f 옵션 ] : interval을 매우 빠르게 하여 패킷을 범람시키는(flood) 옵션입니다.\n");
 	printf("                이 역시 관리자 권한만 사용할 수 있습니다.\n\n");
 	next_line();
 
-	printf("앞에서는 도메인 주소를 통해 \"ping\"을 전송했지만, IP를 이용해 \"ping\"을 보낼 수 있습니다.\n");
+	printf("앞에서는 도메인을 통해 \"ping\"을 전송했지만 IP를 이용해 \"ping\"을 보낼 수 있습니다.\n");
 	next_line();
 	
 	printf("\"ping\" 명령어를 이용해 '127.0.0.1' IP 주소에 4개의 패킷을 보내보세요.\n");
@@ -100,7 +103,10 @@ void training_ping(void)
 	
 	printf("\n\n'127.0.0.1'라는 IP 주소는 자신의 localhost 주소입니다.\n");
 	printf("즉. 방금은 \"ping\"을 자기 자신에게 보낸 것이 됩니다.\n\n");
-	printf("localhost 주소는 \"ping\" 명령어가 정상적으로 작동하는지 외에도 여러 가지 방법으로 사용됩니다.\n");
+	next_line();
+	
+	printf("localhost 주소는 \"ping\" 명령어가 정상적으로 작동하는지 외에도\n");
+	printf("여러 가지 방법으로 사용됩니다.\n");
 	next_line();
 	
 	printf("이후 콘솔 혹은 터미널에 \"man\" 명령어나 \"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
