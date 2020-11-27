@@ -66,7 +66,7 @@ void training_locate(void)
     next_line();
     
     printf("  [ -e ] : 검색에서 제외할 디렉토리를 지정합니다.\n");
-    printf("  [ -l ]: 결과에서 몇 개만 보여줄 것인지 제한합니다.\n");
+    printf("  [ -l ] : 결과에서 몇 개만 보여줄 것인지 제한합니다.\n");
     next_line();
     
     printf("실행 결과에서 n개만 보여주겠끔 하는 옵션을 실습하겠습니다.\n\n");
