@@ -3,13 +3,16 @@
 void select_menu(void)
 {
     char menu[20] = "";
-    printf("본 트레이닝은 크게 '기초 명령어 학습'과 '응용 명령어 학습'으로 나뉩니다.\n\n");
-    printf("기초 명령어 학습은 리눅스를 사용하는데 필요한 내용과 명령어들을 정해진 순서대로 학습합니다.\n\n");
-    printf("응용 명령어 학습은 리눅스를 효율적으로 사용하기 위한 다양한 응용 명령어들을 선택하여 학습할 수 있습니다.\n");
+    printf("본 트레이닝은 크게 [기초 명령어 학습]과 [응용 명령어 학습]으로 나뉩니다.\n\n");
+    printf("[기초 명령어 학습]은 리눅스를 사용하는데 필요한 내용과\n");
+    printf("명령어들을 정해진 순서대로 학습합니다.\n\n\n");
+    printf("[응용 명령어 학습]은 리눅스를 효율적으로 사용하기 위한\n");
+    printf("다양한 응용 명령어들을 선택하여 학습할 수 있습니다.\n\n");
     next_line();
+    
     while (1)
     {
-        printf("1 : 리눅스 기초\n2 : 기초 명령어 학습\n3 : 응용 명령어 학습\n0 : 프로그램 정보\nq : 종료\n실행할 학습을 선택하세요 : ");
+        printf("1 : 리눅스 기본 지식\n2 : 기초 명령어 학습\n3 : 응용 명령어 학습\n0 : 프로그램 정보\nq : 종료\n\n실행할 학습을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
@@ -32,7 +35,7 @@ void select_menu(void)
             advanced_trainer();
             break;
         }
-        else if (!strncmp(menu, "0", strlen("0")) && strlen(menu) == strlen("0"))
+        else if ( (!strncmp(menu, "i", strlen("i")) && strlen(menu) == strlen("i")) || (!strncmp(menu, "I", strlen("I")) && strlen(menu) == strlen("I")) ) || (!strncmp(menu, "info", strlen("info")) && strlen(menu) == strlen("info")) )
         {
             program_information();
             break;
