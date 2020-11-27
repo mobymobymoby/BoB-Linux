@@ -5,14 +5,14 @@ void advanced_trainer()
     system("clear");
     printf("응용 명령어 학습입니다.\n\n");
     printf("해당 커리큘럼에선 보안을 위해 리눅스를 사용할 때 응용할 수 있는 명령어를 학습합니다.\n\n");
-    printf("아래의 목록에 따라 원하는 명령어를 선택하여 학습할 수 있습니다.\n");
+    printf("다음에 출력되는 목록에 따라 원하는 명령어를 선택하여 학습할 수 있습니다.\n");
     next_line();
     
     char select[20];
     while (1)
     {   
         system("clear");
-        printf("명령어 목록입니다.\n");
+        printf("명령어 목록입니다.\n\n");
         printf("입력 방법 : [22. head](+tail) -> '22' 또는 'head' 입력\n\n");
         printf(" [1. alias] \t\t [2. apt] \t\t [3. chmod] \n [4. chown] \t\t [5. chroot] \t\t [6. chsh] \n [7. cmp] \t\t [8. comm] \t\t [9. curl] \n [10. dd]\t\t");
         
