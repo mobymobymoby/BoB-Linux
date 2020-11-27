@@ -13,7 +13,7 @@ void training_rm()
 	next_line();
 	
 	printf("\"rm\" 명령어의 실행 파일은 \"/usr/sbin/rm\"(으)로 있습니다.\n");
-	mext_line();
+	next_line();
 	
 	printf("\"rm\" 실습에 앞서서, \"rm\" 명령어를 실행하기 위해서는 \n");
 	printf("어떤 파일이 있는지 확인해봐야겠죠?\n\n");

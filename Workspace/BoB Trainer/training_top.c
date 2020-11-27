@@ -13,7 +13,7 @@ void training_top(void)
 	printf("프로세스별 CPU 사용율, 메모리 점유률, 상태, 실행 시간 등을 볼 수 있습니다.\n\n");
 	next_line();
 
-	printf("[실습] top 명령어를 입력해보세요.\n");
+	printf("[실습] \"top\" 명령어를 입력해보세요.\n");
 	nothing_print_fake_run_command("top");
 	printf("   PID USER      PR  NI    VIRT    RES    SHR S  %%CPU  %%MEM     TIME+ COMMAND  \n");
 	printf("  1234 rookie    20   0  893548  93596  58916 R   1.1   2.2   1:30.65 TEST     \n");
@@ -35,7 +35,7 @@ void training_top(void)
 	printf("NI의 최소 값인 -20이 PR 100을 의미하며, NI의 최대 값인 19가 PR 139를 의미합니다.\n");
 	next_line();
 	
-	printf("실제 'top'에서 보여주는 PR 값은 NI(-20 ~ 19) + 20 으로 예시는 아래와 같습니다.\n");
+	printf("실제 \"top\"에서 보여주는 PR 값은 NI(-20 ~ 19) + 20 으로 예시는 아래와 같습니다.\n");
 	printf("(즉 위 결과에서 PR 20은 실제 Priority 120, NI 값은 0으로 볼 수 있습니다.)\n");
 	next_line();
 
