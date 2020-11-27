@@ -42,13 +42,9 @@ void training_top(void)
 	printf("NI는 NICE 값을 말하며, 사용자와 관리자가 조절할 수 있는 우선순위 값입니다.\n");
 	next_line();
 	
-	system("clear");
-	
 	printf("앞에서 언급한 것과 같이 범위는 -20 ~ 19로, 기본 값은 0입니다.\n");
 	printf("(위 결과에서 NI 0은 해당 프로그램의 우선 순위가 기본 값인 것을 말합니다.)\n");
 	next_line();
-	
-	
 	
 	printf("VIRT는 해당 프로세스의 가상 메모리 사용량,\n");
 	printf("RES는 해당 프로세스의 물리적인 메모리 사용량,\n");
