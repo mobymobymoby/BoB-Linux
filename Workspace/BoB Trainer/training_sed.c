@@ -233,7 +233,7 @@ void training_sed(void)
 	next_line();
 	printf("사용법 : \"sed 's/대상 문자열/변경할 문자열/' [파일명]\"\n");
 	printf("ex) sed 's/better/best/' file\n");
-	next_Line();
+	next_line();
 	
 	printf("위와 같이 입력하면 대상 문자열의 내용이 변경할 문자열로 변경됩니다.\n");
 	next_line();
