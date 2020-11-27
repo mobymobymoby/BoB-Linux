@@ -50,12 +50,14 @@ void training_tar()
 	next_line();
 	
 	printf("[실습] 이번에는 \"tar -tvf\" 를 이용하여 'test.tar'의 내용을 확인해보세요.\n");
+	printf("사용법은 : \"tar -tvf [대상 파일]\"입니다.\n");
 	just_run_command("tar -tvf test.tar");
 	
 	printf("\n\n-tvf 옵션을 사용하여 하나로 합친 파일의 정보를 볼 수 있습니다.\n\n");
 	next_line();
 	
 	printf("[실습] 그러면 다시 tar -xvf 를 이용하여 'test.tar'를 풀어봅시다.\n");
+	printf("사용법은 : \"tar -xvf [대상 파일]\"입니다.\n");
 	just_run_command("tar -xvf test.tar");
 	
 	printf("\n\ntest.tar의 묶음이 해제되면서 풀어진 파일의 목록이 출력됩니다.\n");
