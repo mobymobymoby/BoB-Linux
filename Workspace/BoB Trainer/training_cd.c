@@ -28,19 +28,27 @@ void training_cd(void)
     printf("\"cd /\"를 입력하면, 루트 디렉토리로 이동하게 됩니다.\n\n");
     next_line();
 
-    printf("[실습] \"cd\" 명령어를 사용해 '/home/user/tr/dir1' 디렉토리로 이동해보세요.\n");
+    printf("[실습] \"cd\" 명령어를 사용해 '/home/%s/tr/dir1' 디렉토리로 이동해보세요.\n", getlogin());
     printf("사용법 : cd [디렉토리 경로]\n");
-    fake_run_command("cd /home/user/tr/dir1");
-    chdir("/home/user/tr/dir1");
+    
+    struct passwd *pwd;
+	pwd = getpwuid(getuid()); 
+    char tmp_dir[DIR_SIZE] = "";
+    char tep2_dir[DIR_SIZE + 10] = "";
+    snprintf(tmp_dir, sizeof(tmp_dir), "/home/%s/tr/dir1", pwd->pw_name);
+    snprintf(tmp2_dir, sizeof(tmp2_dir), "cd %s", tmp_dir);
+  
+    fake_run_command(tmp2_dir);
+    chdir(tmp_dir);
     next_line();
     // 절대 경로 트레이닝
 
     printf("\n[상대 경로]는 상대적인 경로로, 아래와 같은 지정 방식이 있습니다.\n");
-    printf("  . : 현재 작업 디렉토리를 의미합니다.\n");
-    printf("  .. : 현재 작업 디렉토리의 상위 디렉토리를 의미합니다.\n");
+    printf(" ' . '  : 현재 작업 디렉토리를 의미합니다.\n");
+    printf(" ' .. ' : 현재 작업 디렉토리의 상위 디렉토리를 의미합니다.\n");
     next_line();
     
-    printf("다음과 같이 '/etc' 디렉토리 밑에 'dir1', 'dir2', 'dir3' 디렉토리가 있다고 한다면\n\n");
+    printf("다음과 같이 '/etc' 디렉토리 안에 'dir1', 'dir2', 'dir3' 디렉토리가 있다고 한다면\n\n");
     printf("     ---- dir1\n");
     printf("     |        \n");
     printf("/etc ---- dir2\n");
@@ -48,14 +56,19 @@ void training_cd(void)
     printf("     ---- dir3\n");
     next_line();
 
-    printf("[ ./dir1/ ](은)는 현재 작업 디렉토리 밑에 있는 'dir1' 디렉토리를 의미합니다.\n");
+    printf("[ ./dir1/ ](은)는 현재 작업 디렉토리 안에 있는 'dir1' 디렉토리를 의미합니다.\n");
     printf("ex) 현재 작업 디렉토리가 '/etc' 일 때, [ ./dir1 ](은)는 \"/etc/dir1\"(와)과 같습니다.)\n\n");
-    printf("[ ../dir2/ ](은)는 현재 작업 디렉토리의 상위 디렉토리에 있는 다른 디렉토리인 'dir2'를 의미합니다.\n");
-    printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때, [ ../dir3 ](은)는 \"/etc/dir3\"(와)과 같습니다.)\n\n");
     next_line();
     
-    printf("[실습] '상대 경로'의 '상위 경로'를 이용해 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
-    printf("사용법 : cd [디렉토리 상대 경로]\n");
+    printf("[ ../dir2/ ](은)는 현재 작업 디렉토리의\n");
+    printf("상위 디렉토리에 있는 다른 디렉토리인 'dir2'를 의미합니다.\n");
+    printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때\n");
+    printf("[ ../dir3 ](은)는 \"/etc/dir3\"(와)과 같습니다.)\n\n");
+    next_line();
+    
+    printf("[실습] '상위 경로'를 이용하여 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
+    printf("사용법 : cd [디렉토리 상대 경로]\n");   
+    printf("ex) cd ../[디렉토리 이름]\n");
     fake_run_command("cd ../dir2");
     chdir("cd ../dir2");
     next_line();
