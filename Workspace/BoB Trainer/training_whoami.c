@@ -59,6 +59,9 @@ void training_whoami(void)
 	printf("\"who am i\"는 처음 'User1'으로 로그인 한 후 'User2'로 로그인하여 사용자 계정을 바꿔도\n");
 	printf("현재 로그인 되어 있는 'User2'가 아닌 처음 로그인 했던 'User1'을 보여줍니다.\n");
 	next_line();
+	
+	printf("참고) : \"who am i\" 명령어는 ssh로 서버에 접속했을 때 유용하게 사용할 수 있습니다.\n\n");
+	next_line();
 
 	printf("그리고 비슷한 명령어로는 다음의 것들이 있습니다.\n\n");
 	printf("  \"who\"     : 현재 시스템에 로그인 되어 있는 사용자를 출력해줍니다.\n");
