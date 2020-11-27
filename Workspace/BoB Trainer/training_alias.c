@@ -19,11 +19,11 @@ void training_alias(void)
     next_line();
     
     printf("\"alias\" 명령어의 사용법을 보시면\n");
-    printf("[별명이 입력됐을 때 실행될 명령어] 부분이 작은 따옴표 \'와 \'로 감싸져있습니다.\n");
+    printf("[별명이 입력됐을 때 실행될 명령어] 부분이 작은 따옴표로 감싸져있습니다.\n");
     next_line();
     
     printf("\"alias\" 명령어의 특징은 나중에 반복될 긴 명령어를\n");
-    printf("사용자가 지정한 \"별명\"을 입력하여 실행함으로서 시간과 귀찮음을 덜어줍니다.\n");
+    printf("사용자가 지정한 \"별명\"을 입력하여 실행함으로써 시간과 귀찮음을 덜어줍니다.\n");
     next_line();
     
     printf("기본적으로 이미 \"alias\" 명령어로 \"별명\"이 지정된 명령어가 몇 개 있을 수 있습니다.\n\n");
@@ -63,7 +63,7 @@ void training_alias(void)
     printf("\"alias [궁금한 별명 혹은 명령어명]\"을 입력해보시면 됩니다.\n");
     next_line();
     
-    printf("예를 들어 기초 명령어에서 배웠던 \"whoami\" 명령어는 별명인지 명령어인지 확인해보겠습니다.\n\n");
+    printf("예를 들어 기초 명령어에서 배웠던 \"whoami\"는 별명인지 명령어인지 확인해보겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"alias whoami\"을 입력하여 \"whoami\"가 별명인지 명령어인지 확인해보세요.\n");
@@ -74,17 +74,18 @@ void training_alias(void)
     printf("\"alias: whoami: not found\"\n");
     next_line();
     
-    printf("\n\"whoami\"를 입력했을 때 실행될 명령어가 설정되어 있지 않기때문에\n");
+    printf("\n\"whoami\"를 입력했을 때 실행될 명령어가 설정되어 있지 않기 때문에\n");
     printf("\"whoami\"(은)는 별명이 아니었습니다.\n");
     next_line();
     
-    printf("이번에는 사용자가 직접 \"mkfile\" 라는 별명을 만들어 보겠습니다.\n");
+    printf("이번에는 사용자가 직접 \"mkfile\"(이)라는 별명을 만들어 보겠습니다.\n");
     next_line();
     
     printf("\"mkfile\"은 파일을 만들어주는 명령어를 실행할 \"make a file\"라는 뜻의 별명입니다.\n\n");
     next_line();
     
-    printf("[실습] \"alias mkfile='touch'\"를 입력하여 'mkfile'을 입력시 \"touch\" 명령어가 실행되게 해보세요.\n");
+    printf("[실습] \"alias mkfile='touch'\"를 입력하여\n");
+    printf("'mkfile'을 입력시 \"touch\" 명령어가 실행되게 해보세요.\n");
     printf("사용법 : alias [별명]='[실행될 명령어]'\n");
     fake_run_command("alias mkfile='touch'");
     system("alias mkfile=\'touch\'");
@@ -134,6 +135,7 @@ void training_alias(void)
     printf("\"mkfile: not found\"\n");
     next_line();
     
+    system("clear");
     printf("이렇게 \"alias\" 명령어를 이용하여 별명을 지정해보고\n");
     printf("별명을 입력하면 지정된 명령어가 실행되게 해보았습니다.\n");
     next_line();
@@ -156,14 +158,16 @@ void training_alias(void)
     
     printf("위의 두 파일의 차이점은 새로운 터미널 창을 켤 때마다 실행하는 것(.bashrc)과\n");
     printf("\"bash\"로 로그인할 때만 실행되는 것(.bash_profile)입니다.\n\n");
-    printf("그러므로 \"~/.bashrc\" 파일이나 자신이 사용하는 Shell의 이름 뒤에 'rc'가 붙은 파일에 저장하는 것을 추천드립니다.\n");
+    printf("그러므로 \"~/.bashrc\" 파일이나\n");
+    printf("자신이 사용하는 Shell의 이름 뒤에 'rc'가 붙은 파일에 저장하는 것을 추천드립니다.\n");
     next_line();
     
     printf("추후 리눅스 시스템에서 \"alias\" 명령어를 이용하여 별명을 지정한 명령어 구문을\n");
     printf("\"~/.bashrc\" 혹은 \"~/.bash_profile\" 파일에 저장하고 시스템을 재부팅하여 사용해보세요.\n");
     next_line();
     
-    printf("\"alias\" 명령어는 사용자를 편하게 해주는 명령어이므로 꼭 숙지하시어 명령어를 편하게 사용하세요.\n");
+    printf("\"alias\" 명령어는 사용자를 편하게 해주는 명령어이므로\n");
+    printf("꼭 숙지하시어 명령어를 편하게 사용하세요.\n");
     next_line();
     
     printf("\"alias\"와 \"unalias\" 기능의 학습이 끝났습니다.\n");
