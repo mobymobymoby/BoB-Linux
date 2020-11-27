@@ -34,7 +34,7 @@ void training_cd(void)
     struct passwd *pwd;
 	pwd = getpwuid(getuid()); 
     char tmp_dir[DIR_SIZE] = "";
-    char tep2_dir[DIR_SIZE + 10] = "";
+    char tmp2_dir[DIR_SIZE + 10] = "";
     snprintf(tmp_dir, sizeof(tmp_dir), "/home/%s/tr/dir1", pwd->pw_name);
     snprintf(tmp2_dir, sizeof(tmp2_dir), "cd %s", tmp_dir);
   
