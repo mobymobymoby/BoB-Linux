@@ -1,6 +1,6 @@
 #include "func.h"
 
-void training_\"git\"(void)
+void training_git(void)
 {
 	system("clear");
 	printf("이번에 학습할 명령어는 \"git\" 입니다.\n\n");
