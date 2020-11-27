@@ -17,6 +17,7 @@ void training_sort()
 	
 	printf("\"sort\" 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("사용법은 : \"sort [옵션] [파일 이름]\"입니다.\n\n");
+	printf("ex) sort file1\n");
 	next_line();
 	
 	printf("[실습] 우선 \"cat\"으로 정렬 전의 'testfile' 파일의 내용을 확인해봅시다.\n");
@@ -44,6 +45,7 @@ void training_sort()
 	next_line();
 	
 	printf("사용법은 : \"sort -o [원본 파일] [대상 파일]\"입니다.\n");
+	printf("ex) sort -o source_file dest_file\n");
 	next_line();
 	
 	printf("원본 파일에 있는 내용이 정렬되어 대상 파일에 저장됩니다.\n");
@@ -57,7 +59,7 @@ void training_sort()
 	printf("사용법은 : \"sort -o [원본 파일] [대상 파일]\"입니다.\n");
 	run_command("sort -o testfile testfile");
 
-	printf("\n\n[실습] cat으로 정렬 후의 'testfile' 파일의 내용을 확인해봅시다.\n");
+	printf("\n\n[실습] \"cat\"으로 정렬 후의 'testfile' 파일의 내용을 확인해봅시다.\n");
 	just_run_command("cat testfile");
 	
 	printf("\n\n파일의 내용이 오름차순으로 정렬되어 저장된 것을 확인할 수 있습니다.\n");
