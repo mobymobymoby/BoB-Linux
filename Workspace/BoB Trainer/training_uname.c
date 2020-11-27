@@ -36,7 +36,7 @@ void training_uname()
 	printf("2. 호스트명\n");
 	printf("3. 커널 릴리즈 버전\n");
 	printf("4. 커널 빌드 버전과 빌드 날짜\n");
-	printf9"5. 아키텍처\n6. 운영체제\n");
+	printf("5. 아키텍처\n6. 운영체제\n");
 	next_line();
 	
 	printf("이외에도, \"uname\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
