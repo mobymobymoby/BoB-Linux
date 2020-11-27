@@ -41,7 +41,8 @@ void training_su(void)
 	printf("리눅스의 경험이 쌓이고 나면 어떤 의미인지 이해할 수 있을 것입니다.\n");
 	next_line();
 	
-	printf("환경 변수의 개념을 다루고 있는 명령어로는 env, export, set 등이 있습니다.\n해당 명령어를 학습하여 환경 변수의 개념을 익혀보세요!\n");
+	printf("환경 변수의 개념을 다루고 있는 명령어로는 env, export, set 등이 있습니다.\n");
+	printf("해당 명령어를 학습하여 환경 변수의 개념을 익혀보시길 바랍니다.\n");
 	next_line();
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
