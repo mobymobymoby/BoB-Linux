@@ -40,12 +40,12 @@ void training_uname()
 	next_line();
 	
 	printf("이외에도, \"uname\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-	printf("  [ -i (--hardware-platfrom) ]   : 시스템 하드웨어 플랫폼의 정보 출력\n");
-	printf("  [ -m 옵션(--machine) ]          : 시스템 하드웨어 타입 정보 출력\n");
-	printf("  [ -n 옵션(-nodename) ]          : 네트워크 노드 호스트 이름에 대한 정보 출력\n");
-	printf("  [ -o 옵션(--operating-system) ] : 운영체제(OS) 정보 출력\n");
-	printf("  [ -p 옵션(--processor) ]        : 프로세서 정보를 출력\n");
-	printf("  [ -r 옵션(--kernel-release) ]   : 운영체제의 배포 버전을 출력\n");
+	printf("  [ -i (--hardware-platfrom) ]   : 시스템 하드웨어 플랫폼의 정보 출력\n\n");
+	printf("  [ -m 옵션(--machine) ]          : 시스템 하드웨어 타입 정보 출력\n\n");
+	printf("  [ -n 옵션(-nodename) ]          : 네트워크 노드 호스트 이름에 대한 정보 출력\n\n");
+	printf("  [ -o 옵션(--operating-system) ] : 운영체제(OS) 정보 출력\n\n");
+	printf("  [ -p 옵션(--processor) ]        : 프로세서 정보를 출력\n\n");
+	printf("  [ -r 옵션(--kernel-release) ]   : 운영체제의 배포 버전을 출력\n\n");
 	next_line();
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
