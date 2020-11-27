@@ -25,9 +25,9 @@ void training_whereis(void)
     printf("[실습] \"whereis\" 명령어로 \"which\" 명령어에 대해 알아보세요.\n");
     just_run_command("whereis which");
 
-    printf("\n\n잘 따라오셨다면 다음과 비슷한 내용이 출력되었을 것입니다.\n");
-    printf("(혹은 파일이 들어있는 위치)\n");
-    printf("which: /usr/bin/which /bin/which /usr/share/man/man1/which.1.gz\n");
+    printf("\n\n잘 따라오셨다면 다음과 같은 내용이 출력되었을 것입니다.\n");
+    printf("(혹은 파일이 들어있는 위치)\n\n");
+    printf("which: /usr/bin/which /usr/share/man/man1/which.1.gz\n");
     next_line();
 
     printf("which 명령어의 실행파일 위치는\n");
@@ -37,6 +37,7 @@ void training_whereis(void)
     printf("'root' 밑에 'share' 밑에 'man' 밑에 'man1' 밑에 .gz 파일로 압축되어 있습니다.\n");
     next_line();
 
+    system("clear");
     printf("\"whereis\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n\n");
     printf("  [ -b ] : 바이너리 파일만 찾습니다.\n\n");
     printf("  [ -m ] : 매뉴얼 파일만 찾습니다.\n\n");
@@ -64,16 +65,22 @@ void training_whereis(void)
     printf("(혹은 파일이 들어있는 위치)\n");
     next_line();
     
-    printf("\"locate\" 명령어의 실행파일 위치는 'root' 밑에 'usr' 밑에 'bin' 밑에 위치 하고 있다고 출력해주고 있습니다.\n\n");
+    printf("\"locate\" 명령어의 실행파일 위치는\n");
+    printf("'root' 밑에 'usr' 밑에 'bin' 밑에 위치 하고 있다고 출력해주고 있습니다.\n\n");
     next_line();
-
+    
+    system("clear");
     printf("[실습] 이번에는 '-m' 옵션을 이용하여 \"locate\" 명령어의 매뉴얼 파일 위치만 출력하세요.\n");
     printf("사용법 : whereis [옵션] [검색할 명령어]\n");
     just_run_command("whereis -m locate");
 
     printf("\n\n잘 따라하셨다면 \"locate: /usr/share/man/man1/locate.1.gz\" 라고 출력되었을 것입니다.\n");
-    printf("(혹은 파일이 들어있는 위치)\n\n");
-    printf("\"locate\" 명령어의 매뉴얼 파일위치는 'root' 밑에 'share' 밑에 'man' 밑에 'man1' 밑에 .gz로 압축 되어있다고 출력해주고 있습니다.\n");
+    printf("(혹은 파일이 들어있는 위치)\n");
+    next_line();
+    
+    printf("\"locate\" 명령어의 매뉴얼 파일 위치는\n");
+    printf("'root' 밑에 'share' 밑에 'man' 밑에 'man1' 밑에 .gz로 압축\n");
+    printf("되어있다고 출력해주고 있습니다.\n");
     next_line();
     
     printf("이렇게 \"whereis\" 명령어에 대해 배워보았습니다.\n");
