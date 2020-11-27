@@ -17,6 +17,7 @@ void training_sudo(void)
 	next_line();
 	
 	printf("\"sudo\" 명령어의 사용법은 : \"sudo [명령어]\"입니다.\n");
+	printf("ex) sudo rm test\n");
 	next_line();
 	
 	printf("위의 형태로 명령어를 실행하면, 현재 로그인되어 있는 사용자의\n");
