@@ -9,8 +9,9 @@ void training_git(void)
 	printf("실습하면서 진행해 보시길 바랍니다.\n");
 	next_line();
 
-	printf("\"git\"이란 리누스 토발즈가 개발한 분산형 버전관리 시스템이며\n");
-	printf("파일의 변경사항을 추적하고 여러 명의 사용자들이 해당 파일의 작업을 조율할 수 있습니다.\n\n");
+	printf("\"git\"이란 리누스 토발즈가 개발한 분산형 버전관리 시스템이며\n\n");
+	printf("파일의 변경사항을 추적하고 여러 명의 사용자들이\n");
+	printf("해당 파일의 작업을 조율할 수 있습니다.\n\n");
 	next_line();
 
 	printf("\"git\"은 항상 파일을 지켜보고 있습니다.\n");
@@ -21,7 +22,7 @@ void training_git(void)
 	next_line();
 
 	printf("\"git\"은 어떠한 프로젝트에 여러 명이 참여할 때 파일들을 주고 받을 필요가 없이\n");
-	printf("같은 파일을 여러 명이 동시에 작업하는 병령 작업이 가능합니다.\n");
+	printf("같은 파일을 여러 명이 동시에 작업하는 병렬 작업이 가능합니다.\n");
 	next_line();
 
 	printf("또한, 사용자가 어떠한 파일을 업데이트 할 때마다 백업과 같은 기능을 수행합니다.\n");
@@ -42,25 +43,40 @@ void training_git(void)
 
 	system("clear");
 	printf("[github]\n\n\n");
+	
 	printf("공개적으로 사용 가능한 무료 서비스입니다.\n\n");
+	
 	printf("무료 계정과 유료 계정으로 나뉘는데 주로 오픈 소스 프로젝트를 진행할 때 이용됩니다.\n\n");
+	
 	printf("보통은 무료 계정으로 사용하지만, 이 때 소스 코드가 모두 오픈되어 있어야 합니다.\n\n");
-	printf("자신의 코드를 비공개로 관리하고 싶다면, 유료 계정을 이용하거나 \"gitlab\"을 이용해야 합니다.\n\n");
-	printf("\"github\"은 오픈 소스 프로젝트가 목적이므로 다른 사람들의 오픈 소스 프로젝트 코드들도 볼 수 있습니다.\n");
+	
+	printf("프로젝트 팀의 코드를 비공개로 관리하고 싶다면\n\n");
+	
+	printf("유료 계정을 이용하거나 \"gitlab\"을 이용해야 합니다.\n\n");
+	
+	printf("\"github\"(은)는 오픈 소스 프로젝트가 목적이므로\n");
+	printf("다른 사람들의 오픈 소스 프로젝트 코드들도 볼 수 있습니다.\n");
 	next_line();
 
 	system("clear");
 	printf("[gitlab]\n\n\n");
 	printf("개인 혹은 조직 내에서 이용하고 싶을 때 유용합니다.\n\n");
+	
 	printf("\"github\"(와)과 다른 점은 비공개로 관리하고 싶을 때 무료로 이용할 수 있습니다.\n\n");
-	printf("또한, 자신의 서버가 있다면 \"gitlab\" 자체를 설치하여 자신의 서버에 \"gitlab\" 환경을 구축할 수 있습니다.\n\n");
+	
+	printf("또한, 자신의 서버가 있다면 \"gitlab\" 자체를 설치하여\n\n");
+	printf("자신의 서버에 \"gitlab\" 환경을 구축할 수 있습니다.\n\n");
+		
 	printf("이 때 자신의 서버를 이용하여 다른 사람이 자신의 \"gitlab\" 환경을 보도록 하려면\n\n");
+	
 	printf("포트를 설정하여 외부에서 접속할 수 있도록 '포트포워딩'이라는 작업을 해주어야 합니다.\n");
 	next_line();
 
+	system("clear");
 	printf("\"git\"에는 총 세가지 상태가 있습니다.\n\n");
-	printf("1. Committed : 데이터가 로컬 데이터베이스에 안전하게 저장되었다는 것을 의미합니다.\n");
-	printf("2. Modified : 수정한 파일이 아직 로컬 데이터베이스에 커밋되지 않았다는 것을 의미합니다.\n");
+	
+	printf("1. Committed : 데이터가 로컬 DB에 안전하게 저장되었다는 것을 의미합니다.\n");
+	printf("2. Modified : 수정한 파일이 아직 로컬 DB에 커밋되지 않았다는 것을 의미합니다.\n");
 	printf("3. Staged : 현재 수정된 파일이 곧 커밋될 것이라고 표시된 상태를 의미합니다.\n\n");
 	next_line();
 
@@ -117,7 +133,7 @@ void training_git(void)
 	printf("사용자명과 이메일 주소를 입력해야 합니다.\n");
 	next_line();
 
-	printf("만약 \"github\"에서 회원 가입을 했다면");
+	printf("만약 \"github\"에서 회원 가입을 했다면\n");
 	printf("\"github\"에서 사용하는 사용자명과 이메일을 입력해주시면 됩니다.\n");
 	next_line();
 
@@ -133,7 +149,8 @@ void training_git(void)
 	printf("              개인 전용 저장소로 다른 사람에게 공유되지 않습니다.\n");
 	next_line();
 
-	printf("\"github\"(을)를 예시로 들면, \"github\"는 원격 저장소입니다.\n");
+	printf("\"github\"(을)를 예시로 들면, \"github\"는 원격 저장소입니다.\n\n");
+	
 	printf("그리고 \"github\"에 작업 디렉토리를 생성하고 자신의 컴퓨터로 디렉토리를 다운로드하면\n");
 	printf("\"자신의 컴퓨터\"는 로컬 저장소가 됩니다.\n");
 	next_line();
@@ -170,7 +187,8 @@ void training_git(void)
 	//commit
 	system("clear");
 	printf("[로컬 저장소의 작업 중인 브랜치에 등록]\n\n\n");
-	printf("대기 그룹에 모아둔 파일들을 나중에 알아볼 수 있는 메시지와 함께 로컬 브랜치에 등록합니다.\n\n");
+	printf("대기 그룹에 모아둔 파일들을 나중에 알아볼 수 있는 메시지와 함께 \n");
+	printf("로컬 브랜치에 등록합니다.\n\n");
 	printf("사용법 : git commit -m <메시지>\n");
 	printf("ex) git commit -m \"update test_file.txt\"\n");
 	next_line();
@@ -211,8 +229,8 @@ void training_git(void)
 
 	printf("[브랜치 생성 및 이동]\n\n\n");
 	printf("위의 브랜치를 생성하고 이동하는 과정을 한 번에 할 수 있습니다.\n\n");
-	printf("사용법 : git checkout -d <브랜치 이름>\n");
-	printf("ex) git checkout -d test_branch\n\n\n");
+	printf("사용법 : git checkout -b <브랜치 이름>\n");
+	printf("ex) git checkout -b test_branch\n\n\n");
 	next_line();
 
 	//브랜치 삭제
@@ -231,7 +249,9 @@ void training_git(void)
 
 	//merge
 	printf("[브랜치 병합]\n\n\n");
-	printf("만약 새 브랜치를 생성하여 작업하였는데 결과물이 좋아서 \"master 브랜치\"에 병합하고 싶다면\n");
+	printf("만약 새 브랜치를 생성하여 작업하였는데\n");
+	printf("결과물이 좋아서 \"master 브랜치\"에 병합하고 싶다면\n\n");
+	
 	printf("반드시 'checkout'을 이용하여 \"master 브랜치\"로 이동한 후 다음과 같이 입력하면 됩니다.\n\n");
 	printf("사용법 : git merge <master에 병합할 브랜치>\n");
 	printf("ex) git merge test_branch\n\n\n");
@@ -258,8 +278,10 @@ void training_git(void)
 	printf("https://git-scm.com/book/ko/v2\n\n");
 	next_line();
 
-	printf("\"git\"은 매우 매우 중요하고 개발이나 프로젝트 등을 하다 보면 한 번쯤은 이용하게 될 것입니다.\n");
-	printf("혼자 작업을 하더라도 \"git\"을 이용하여 능숙하게 다를 수 있어야 합니다.\n");
+	printf("\"git\"은 매우 매우 중요하고 개발이나 프로젝트 등을 하다 보면\n");
+	printf("한 번쯤은 이용하게 될 것입니다.\n\n");
+	
+	printf("혼자 작업을 하더라도 \"git\"을 이용하여 능숙하게 다룰 수 있어야 합니다.\n");
 	next_line();
 
 	printf("\"git\"에 내장된 GUI로는 \"gitk\"가 있습니다.\n");
