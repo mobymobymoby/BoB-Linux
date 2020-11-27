@@ -67,7 +67,7 @@ void training_cat(void)
     next_line();
     
     printf("[실습] \"cat\" 명령어를 이용하여 'hello.txt' 파일과 'rookie.txt' 파일의 내용을\n");
-    printf9"'test.txt' 파일로 합쳐보세요.\n");
+    printf("'test.txt' 파일로 합쳐보세요.\n");
     printf("사용법 : cat [파일1] [파일2] > [대상 파일]\n");
     run_command("cat hello.txt rookie.txt > test.txt");
     
