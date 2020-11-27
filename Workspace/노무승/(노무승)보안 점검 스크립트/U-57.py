@@ -1,9 +1,12 @@
 # [U-57] UMASK 설정 값 점검
 # 2020/11/27 : 노무승
 #   1. 매뉴얼에 나와 있는 UMASK 설정 파일 리스트에
-#	    추가로 조사해 설정 파일 몇 개 추가함.
-#   2. 기본적인 UMASK 값은 /etc/login.defs에 저장 됨.
- 
+#	    추가로 조사해 설정 파일 여러 개 추가함.
+#   2. 기본적인 UMASK 설정 값은 /etc/login.defs에 저장 됨.
+#   3. /etc/pam.d/common-session, common-session-noninteractive 파일 내부에 설정을 추가해 시스템 전체 UMASK를 지정 가능함.
+#   4. /etc/bashrc, /etc/bash.bashrc에 설정을 추가해 UMASK를 지정하는 것도 가능함.
+
+
 import getpass
 import os.path
 
