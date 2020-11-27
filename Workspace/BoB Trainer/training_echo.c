@@ -61,7 +61,8 @@ void training_echo(void)
     printf("\"echo\" 명령어는 유용하게 이용될 수 있는 명령어 입니다.\n");
     next_line();
     
-    printf("\"echo hello > test1.txt\"처럼 출력 결과를 리다이렉션(>)을 이용해 입력으로 처리할 수도 있고\n");
+    printf("\"echo hello > test1.txt\"처럼 출력 결과를 리다이렉션(>)을 이용해\n");
+    printf("입력으로 처리할 수도 있고\n\n");
     printf("\"echo $SHELL\"처럼 환경 변수 이름을 이용해 환경 변수를 확인할 수도 있습니다.\n");
     next_line();
     
