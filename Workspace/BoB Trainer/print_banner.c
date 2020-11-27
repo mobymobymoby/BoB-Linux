@@ -26,6 +26,8 @@ void print_banner()
     printf("                                                     |____/ \n\n");
     usleep(100000);
     
+    sleep(2);
+    
     printf("BoB Linux Training에 오신 것을 환영합니다.\n");
     printf("(Enter 키를 눌러 진행할 수 있습니다)\n\n");
     
