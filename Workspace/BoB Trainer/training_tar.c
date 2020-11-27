@@ -11,7 +11,7 @@ void training_tar()
 	printf("\"tar\" 명령어는 Tape ARchive의 약자로, 여러 파일들을 하나의 파일로 묶는 명령어 입니다.\n");
 	next_line();
 	
-	printf9"\"tar\" 명령어의 실행 파일은 \"/usr/bin/tar\"(으)로 있습니다.\n");
+	printf("\"tar\" 명령어의 실행 파일은 \"/usr/bin/tar\"(으)로 있습니다.\n");
 	next_line();
 	
 	printf("tar 명령어는 단독으로 사용되거나 하나의 옵션만으로 사용되는 경우는 거의 없습니다.\n");
