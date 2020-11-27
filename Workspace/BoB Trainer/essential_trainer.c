@@ -30,54 +30,44 @@ void essential_trainer()
             printf("잘못된 flag 값입니다. 처음부터 학습을 시작합니다.\n");
         case 0:
             training_ls();
-            printf("해당 단계의 flag 값은 '703'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '703'입니다.\n");
             next_quit();
-            next_line();
         case 703:
             training_whoami();
-            printf("해당 단계의 flag 값은 '905'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '905'입니다.\n");
             next_quit();
-            next_line();
         case 905:
             training_pwd();
-            printf("해당 단계의 flag 값은 '1017'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1017'입니다.\n");
             next_quit();
-            next_line();
         case 1017:
             training_mkdir();
-            printf("해당 단계의 flag 값은 '1024'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1024'입니다.\n");
             next_quit();            
-            next_line();
         case 1024:
             training_touch();
-            printf("해당 단계의 flag 값은 '1106'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1106'입니다.\n");
             next_quit();            
-            next_line();
         case 1106:
             training_cat();
-            printf("해당 단계의 flag 값은 '1121'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1121'입니다.\n");
             next_quit();            
-            next_line();
         case 1121:
             training_cd();
-            printf("해당 단계의 flag 값은 '1219'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1219'입니다.\n");
             next_quit();            
-            next_line();
         case 1219:
             training_mv();
-            printf("해당 단계의 flag 값은 '1223'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1223'입니다.\n");
             next_quit();            
-            next_line();
         case 1223:
             training_cp();
-            printf("해당 단계의 flag 값은 '1231'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '1231'입니다.\n");
             next_quit();            
-            next_line();
         case 1231:
             training_rm();
-            printf("해당 단계의 flag 값은 '808'입니다.\n");
+            printf("\n해당 단계의 flag 값은 '808'입니다.\n");
             next_quit();            
-            next_line();
         case 808:
             training_clear();
             break;
