@@ -11,7 +11,7 @@ void training_sort()
 	printf("\"sort\"는 파일의 내용을 행 단위로 끊어서 정렬을 해줍니다.\n");
 	next_line();
 	
-	printf("하지만, 옵션 없이 사용시 오름차 순으로 정렬된 결과를 출력만 해줄 뿐,\n");
+	printf("하지만, 옵션 없이 사용시 오름차 순으로 정렬된 결과를 출력만 해줄 뿐\n");
 	printf("따로 저장하거나 원본 파일을 변경하지는 않습니다.\n");
 	next_line();
 	
@@ -19,8 +19,8 @@ void training_sort()
 	next_line();
 	
 	printf("\"sort\" 명령어는 다음과 같은 형식으로 사용합니다.\n");
-	printf("사용법은 : \"sort [옵션] [파일 이름]\"입니다.\n\n");
-	printf("ex) sort file1\n");
+	printf("사용법은 : \"sort [옵션] [파일 이름]\"입니다.\n");
+	printf("ex) sort file1\n\n");
 	next_line();
 	
 	printf("[실습] 우선 \"cat\"으로 정렬 전의 'testfile' 파일의 내용을 확인해봅시다.\n");
@@ -54,7 +54,7 @@ void training_sort()
 	printf("원본 파일에 있는 내용이 정렬되어 대상 파일에 저장됩니다.\n");
 	next_line();
 	
-	printf("따라서 원본 파일의 내용을 정렬시켜 저장하고 싶다면,\n");
+	printf("따라서 원본 파일의 내용을 정렬시켜 저장하고 싶다면\n");
 	printf("원본 파일과 대상 파일을 같게 지정하면 됩니다.\n\n");
 	next_line();
 	
