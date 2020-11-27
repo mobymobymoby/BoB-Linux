@@ -50,7 +50,7 @@ void training_chown(void)
 	next_line();
 
 	printf("\n\n-rw-r--r--  1 test %s   0 mm월  dd hh:mm file1\n", getlogin());
-	printf("\n명령어가 잘 실행되었다면, 소유자가 'test'로변경되었을 것입니다.\n\n");
+	printf("\n명령어가 잘 실행되었다면, 소유자가 'test'로 변경되었을 것입니다.\n\n");
 	next_line();
 
 	printf("[실습] \"chown test:test file1\"(을)를 입력하여 'file1'의 그룹도 변경해보세요.\n");
