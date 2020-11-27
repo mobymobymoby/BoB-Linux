@@ -49,7 +49,7 @@ void training_chmod(void)
 	system("clear");
 	printf("[문자(symbolic) 모드]\n\n");
 	printf("알파벳 기호를 사용하여 사용 권한을 지정합니다.\n\n");
-	printf("사용법 : \"chmod [옵션] (사용자 대상) (설정 연산자) (권한) [파일]\"\n");
+	printf("사용법 : chmod [옵션] (사용자 대상) (설정 연산자) (권한) [파일]\n");
 	next_line();
 	
 	printf("(사용자 대상)\n");
