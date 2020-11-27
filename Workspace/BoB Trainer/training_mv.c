@@ -66,7 +66,7 @@ void training_mv(void)
 	next_line();
 	
 	printf("같은 'dir2'안에서 'file1'을 'file2'로 이름을 바꿔봅시다.\n");
-	prinrf("변경할 파일은 \"dir2/file1\" 이고 변경할 위치는 \"dir2/file2\"입니다.\n\n");
+	printf("변경할 파일은 \"dir2/file1\" 이고 변경할 위치는 \"dir2/file2\"입니다.\n\n");
 	next_line();
 	
 	printf("[실습] \"mv\" 명령어를 입력해 파일 이름을 변경해보세요.\n");
