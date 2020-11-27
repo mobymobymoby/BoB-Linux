@@ -20,10 +20,10 @@ def U31() :
     if (os.path.isfile("/etc/mail/sendmail.cf")) :
         temp = subprocess.getoutput("cat /etc/mail/sendmail.cf | grep \"R$\*\" | grep \"Relaying denied\"")
         if (len(temp) == 0) or (temp[0] == "#") :
-            f_output = f_output + C_YELLOW + "\t[경고] /etc/mail/sendmail.cf : 스팸 메일 릴레이 제한이 필요합니다.\n"
+            f_output = f_output + C_YELLOW + "\t[경고] /etc/mail/sendmail.cf : 스팸 메일 릴레이 제한이 필요합니다.\n" + C_END 
             flag = True
         if (os.path.isfile("/etc/mail/access") == False):
-            f_output = f_output + C_YELLOW + "\t[경고] /etc/mail/access : 릴레이 허용 대상에 대한 설정 파일이 없습니다.\n"
+            f_output = f_output + C_YELLOW + "\t[경고] /etc/mail/access : 릴레이 허용 대상에 대한 설정 파일이 없습니다.\n" + C_END 
             flag = True
 
     if (flag) :
