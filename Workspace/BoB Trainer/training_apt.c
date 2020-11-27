@@ -25,10 +25,11 @@ void training_apt(void)
     next_line();
     
     printf("\"apt\"는 패키지 관련 관리 도구이기 때문에\n");
-    printf("대부분 관리자 권한으로 실행되어야 하므로 sudo와 함께 사용합니다.\n");
+    printf("대부분 관리자 권한으로 실행되어야 하므로 \"sudo\"와 함께 사용합니다.\n");
     next_line();
     
-    printf("원래는 \"apt-get\" 명령어와 \"apt-cache\" 명령어가 각각 각자의 범주의 기능에 최적화되어 있어서 따로 사용되었으나\n");
+    printf("원래는 \"apt-get\" 명령어와 \"apt-cache\" 명령어가\n");
+    printf("각각 각자의 범주의 기능에 최적화되어 있어서 따로 사용되었으나\n");
     next_line();
     
     printf("두 범주의 기능을 통합하여 하나의 도구에서 운용할 수 있도록 개발된 것이 \"apt\" 입니다.\n");
@@ -98,7 +99,8 @@ void training_apt(void)
     next_line();
     
     printf("Redhat 계열에서 \"yum\"은 Debian 계열에서 \"apt\"와 같습니다.\n");
-    printf("자동 설치 도구를 이용하면 패키지(설치파일) 다운로드부터 설치까지 모든 것이 자동으로 진행됩니다.\n");
+    printf("자동 설치 도구를 이용하면 패키지(설치파일) 다운로드부터 설치까지\n");
+    printf("모든 것이 자동으로 진행됩니다.\n");
     next_line();
     
     printf("그런데 위에서 말한 의존성의 문제라는 것은 무엇일까요.\n");
@@ -110,11 +112,18 @@ void training_apt(void)
     next_line();
     
     printf("예를 들어서 사람이 살아가면서 활동을 하려면 에너지가 필요합니다.\n");
-    printf("이 에너지는 사람이 섭취하는 음식으로부터 얻어지므로 음식이 꼭 있어야 에너지를 낼 수 있습니다.\n");
+    next_line();
+    
+    printf("이 에너지는 사람이 섭취하는 음식으로부터 얻어지므로\n");
+    printf("음식이 꼭 있어야 에너지를 낼 수 있습니다.\n");
+    next_line();    
+    
     printf("먄약 음식이 없다면 사람은 에너지를 내지 못할 것입니다.\n");
     next_line();
     
     printf("위에서 에너지를 내기 위해 꼭 음식이 있어야 하는 것처럼\n");
+    next_line();
+    
     printf("무언가를 실행하기 위해서는 이를 위해 또 다른 무언가가 필요한데\n");
     printf("그 또 다른 무언가가 없어서 실행할 수 없다면, 이것이 의존성 문제입니다.\n");
     next_line();
@@ -155,11 +164,14 @@ void training_apt(void)
     next_line();
     
     printf("참고 사항으로 \"apt\" 대신 \"apt-get\" 사용해도 되지만\n");
-    printf("\"Ubuntu\"에서는 \"apt\"의 사용을 권장하고 있습니다.\n");
+    printf("\"Ubuntu\"에서는 \"apt\"의 사용을 권장하고 있습니다.\n\n");
     next_line();
     
     printf("실제 시스템에서 \"apt\" 명령어를 사용할 때 사용자로부터 동의를 구할 수 있습니다.\n");
-    printf("명령어를 입력한 후 'y'혹은 'n'을 입력하라고 나오면 'y'키 혹은 엔터를 눌러 진행하시면 됩니다.\n");
+    next_line();
+    
+    printf("명령어를 입력한 후 'y'혹은 'n'을 입력하라고 나오면\n");
+    printf("'y'키 혹은 엔터를 눌러 진행하시면 됩니다.\n");
     next_line();
     
     printf("혹은 명령어 입력 시 '-y' 옵션을 주는 방법도 있습니다.\n");
@@ -226,7 +238,6 @@ void training_apt(void)
     next_line();
     
     printf("[실습] \"sudo apt upgrade\"를 입력하여 설치되어 있는 패키지들을 새 버전으로 업그레이드 해보세요.\n");
-    printf("학습의 진행을 위해 'y'키 혹은 'n'키를 누르라는 메세지가 나오면 'n'(을)를 입력해주세요.\n");
     just_run_command("sudo apt upgrade");
     
     printf("\n잘 입력하셨다면\n");
@@ -247,7 +258,7 @@ void training_apt(void)
     next_line();
     
     printf("[실습] \"sudo apt remove gcc\"을 입력하여 'gcc' 패키지를 제거해보세요.\n");
-    printf("학습의 진행을 위해 'y'키 혹은 'n'키를 누르라는 메세지가 나오면 'n'(을)를 입력해주세요.\n");
+    printf("학습의 진행을 위해 'y'키 혹은 'n'키를 누르라는 메세지가 나오면 'n'(을)를 입력해주세요\n");
     just_run_command("sudo apt remove gcc");
     
     printf("\n방금 실습한 명령어로 'gcc' 패키지를 제거하실 수 있습니다.\n");
