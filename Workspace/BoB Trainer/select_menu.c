@@ -12,7 +12,7 @@ void select_menu(void)
     
     while (1)
     {
-        printf("1 : 리눅스 기본 지식\n2 : 기초 명령어 학습\n3 : 응용 명령어 학습\ni : 프로그램 정보\nq : 종료\n\n실행할 학습을 선택하세요 : ");
+        printf("1 : 리눅스 기본 지식\n2 : 기초 명령어 학습\n3 : 응용 명령어 학습\ni(info) : 프로그램 정보\nq : 종료\n\n실행할 학습을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
