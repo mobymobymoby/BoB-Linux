@@ -13,7 +13,8 @@ void training_poweroff(void)
 	printf("\"poweroff\" 명령어의 실행 파일은 \"/usr/sbin/poweroff\"(으)로 있습니다.\n");
 	next_line();
 	
-	printf("사용법은 : 옵션 없이 \"poweroff\"를 입력하면 됩니다.\n");
+	printf("사용법은 : \"poweroff [옵션]\"입니다.\n");
+	printf("ex) poweroff --help\n");
 	next_line();
 	
 	printf("\"poweroff\" 명령어는 하드디스크와 메모리를 동기화 시키지 않고 바로 종료하기 때문에,\n");
