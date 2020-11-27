@@ -7,7 +7,7 @@ void training_runlevel(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	printf("이번에 학습할 명령어는 \"runlevel\"입니다.\n\n");
-	printf("runlevel 명령어는 런 레벨(RunLevel)을 확인하는 명령어입니다.\n");
+	printf("\"runlevel\" 명령어는 런 레벨(RunLevel)을 확인하는 명령어입니다.\n");
 	next_line();
 	
 	printf("\"runlevel\" 명령어는 \"/usr/sbin/runlevel\"(으)로 있습니다.\n\n");
@@ -24,8 +24,8 @@ void training_runlevel(void)
 	printf("런 레벨을 따로 바꾸지 않았다면, 이전의 런 레벨은 'N'으로 표기됩니다.\n");
 	next_line();
 	
-	printf("runlevel은 간단하게 런 레벨을 확인할 수 있는 명령어로\n");
-	printf("런 레벨에 관한 자세한 내용은 init 명령어 트레이닝을 참고하시면 됩니다.\n");
+	printf("\"runlevel\"은 간단하게 런 레벨을 확인할 수 있는 명령어로\n");
+	printf("런 레벨에 관한 자세한 내용은 \"init\" 명령어 트레이닝을 참고하시면 됩니다.\n");
 	next_line();
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
