@@ -33,7 +33,7 @@ void training_mv(void)
 	
 	printf("\"mv\"에서 자주 사용하는 옵션은 다음과 같습니다.\n\n");
 	printf("  [ -i (--interactive) ] : 이동할 디렉토리에 동일한 파일명이 존재할 경우\n");
-	printf9"	       	           덮어 쓸 것인지 물어봅니다.\n\n");
+	printf("	       	           덮어 쓸 것인지 물어봅니다.\n\n");
 	printf("  [ -f (--force) ]   : 같은 파일의 이름이 존재하는 경우에 강제로 덮어씁니다.\n\n");
 	printf("  [ -b ]             : 덮어쓸 때 백업본 파일을 만듭니다.\n\n");
 	printf("  [ -v (--verbose) ] : 파일을 이동할 때 이동 내용을 출력합니다.\n\n");
