@@ -22,7 +22,7 @@ def U30() :
         temp = temp.split("\n")
         for i in temp:
             if (i.find("grep") == -1) :
-                f_output = f_output + C_YELLOW + "\t[경고] Sendmail 서비스가 활성화 되어 있습니다.\n"
+                f_output = f_output + C_YELLOW + "\t[경고] Sendmail 서비스가 활성화 되어 있습니다.\n"+ C_END 
                 flag = True
 
     if (flag) :
