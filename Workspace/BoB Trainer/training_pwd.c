@@ -17,7 +17,7 @@ void training_pwd(void)
 	printf("현재 자신이 어떤 디렉터리 경로에 있는 지 확인하고 싶을 때 사용합니다.\n");
 	next_line();
 
-	printf("\"pwd\" 명령어의 실행 파일은 \"/bin/pwd\"(으)로 있습니다.\n");
+	printf("\"pwd\" 명령어의 실행 파일은 \"/usr/bin/pwd\"(으)로 있습니다.\n");
 	next_line();
 
 	printf("사용법은 \"pwd [옵션]\" 입니다.\n");
