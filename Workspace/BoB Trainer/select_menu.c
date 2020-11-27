@@ -35,7 +35,7 @@ void select_menu(void)
             advanced_trainer();
             break;
         }
-        else if ( (!strncmp(menu, "i", strlen("i")) && strlen(menu) == strlen("i")) || (!strncmp(menu, "I", strlen("I")) && strlen(menu) == strlen("I")) ) || (!strncmp(menu, "info", strlen("info")) && strlen(menu) == strlen("info")) )
+        else if ( (!strncmp(menu, "i", strlen("i")) && strlen(menu) == strlen("i")) || (!strncmp(menu, "I", strlen("I")) && strlen(menu) == strlen("I")) || (!strncmp(menu, "info", strlen("info")) && strlen(menu) == strlen("info")) )
         {
             program_information();
             break;
