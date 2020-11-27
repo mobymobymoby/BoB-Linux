@@ -9,7 +9,7 @@ void training_cd(void)
     printf("이번에 학습할 명령어는 \"cd\" 입니다.\n\n");
 
     printf("\"cd\" 명령어는 'Change Directory'의 약자이며\n");
-    printf("디렉토리를 이동할 때 사용하는 명령어 입니다.\n");
+    printf("디렉토리를 이동할 때 사용하는 명령어 입니다.\n\n");
     next_line();
 
     system("mkdir dir1");
