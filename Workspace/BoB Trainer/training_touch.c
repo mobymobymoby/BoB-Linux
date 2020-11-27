@@ -17,7 +17,8 @@ void training_touch(void)
 	next_line();
 	
 	printf("아무런 옵션을 주지 않고 사용하면 서버의 현재 시간으로 \n");
-	printf("파일의 최근 사용 시간(access time), 최근 수정 시간(modify time), 최근 변경 시간(change time)을 변경합니다.\n");
+	printf("파일의 최근 사용 시간(access time), 최근 수정 시간(modify time),\n");
+	printf("최근 변경 시간(change time)을 변경합니다.\n");
 	next_line();
 	
 	printf("access time, modify time, change time은 보통 atime, mtime, ctime으로 줄여 사용합니다\n");
@@ -36,6 +37,8 @@ void training_touch(void)
 	next_line();
 	
 	printf("Access, Modify, Change 다음에 있는 값이 각각 atime, mtime, ctime을 나타냅니다.\n\n");
+	next_line();
+	
 	printf("[실습] touch 명령어를 이용해서 'test' 파일의 타임스탬프를 현재 시간으로 바꿔보세요.\n");
 	next_line();
 	printf("TIP : 아무런 옵션을 주지 않고 사용하면 서버의 현재 시간으로 \n");
@@ -53,7 +56,8 @@ void training_touch(void)
 	printf("자신이 원하는 시간으로 타임스탬프 값을 변경할 수도 있습니다.\n");
 	next_line();
 	
-	printf("-t 옵션은 자신이 원하는 시간으로 타임스탬프를 변경할 수 있습니다. 이 때는 파일의 atime과 mtime만 변경됩니다.\n");
+	printf("-t 옵션은 자신이 원하는 시간으로 타임스탬프를 변경할 수 있습니다.\n");
+	printf("이 때는 파일의 atime과 mtime만 변경됩니다.\n");
 	next_line();
 	
 	printf("-t 옵션 다음에 시간을 [YYYYMMDDhhmm.ss] 형태로 지정하면 됩니다.\n");
@@ -74,7 +78,8 @@ void training_touch(void)
 	printf("마지막으로 ss는 second의 약자로 초를 2자리로 표현하는 것을 의미합니다.\n");
 	next_line();
 	
-	printf("따라서 \"2000년 1월 2일 3시 4분 5초\" 라는 날짜는 [YYYYMMDDhhmm.ss] 형식으로 200001020304.05로 표기하면 됩니다.\n");
+	printf("따라서 \"2000년 1월 2일 3시 4분 5초\" 라는 날짜는\n");
+	printf("[YYYYMMDDhhmm.ss] 형식으로 200001020304.05로 표기하면 됩니다.\n\n");
 	next_line();
 	
 	printf("[실습] -t 옵션을 touch 명령어와 조합하여 'test' 파일의 atime, mtime을 \n");
@@ -92,14 +97,14 @@ void training_touch(void)
 	next_line();
 	
 	printf("아무 옵션을 주지 않고 \"touch [파일명]\"의 형식으로 사용하면, \n");
-	printf("모든 타임스탬프가 현재 시간으로 변경되지만 -a 옵션은 ctime에는 영향을 미치지 않습니다.\n");
+	printf("모든 타임스탬프가 현재 시간으로 변경되지만 -a 옵션은 ctime에는 영향을 미치지 않습니다\n");
 	next_line();
 	
 	printf("한편, touch 명령어는 빈 파일을 만들 때도 자주 사용합니다.\n");
 	next_line();
 	
 	printf("아무런 옵션 없이 \"touch [디렉토리에 없는 파일명]\"의 형식으로\n");
-	printf("0바이트를 가진 빈 파일을 생설할 수 있습니다.\n\n");
+	printf("0바이트를 가진 빈 파일을 생성할 수 있습니다.\n\n");
 	next_line();
 	
 	printf("[실습] \"touch\" 명령어를 이용해 'testfile'이라는 빈 파일을 만들어보세요.\n");
