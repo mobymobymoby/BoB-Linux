@@ -37,10 +37,11 @@ void training_sed(void)
 	printf("\n\n총 10개의 줄이 있으며, 6번째 줄은 공백으로 비어 있는 줄입니다.\n");
 	next_line();
 	
-	printf("\"sed\"의 기본적인 사용 방법은 'p'(print의 약자)를 이용해 파일의 내용을 출력하는 것입니다.\n");
+	printf("\"sed\"의 기본적인 사용 방법은 'p'(print의 약자)를 이용하여\n");
+	printf("파일의 내용을 출력하는 것입니다.\n");
 	next_line();
 	
-	printf("사용법은 : \"sed [옵션] '[출력할 줄 번호]p' [파일의 이름]\"입니다.\n");
+	printf("사용법은 : \"sed [옵션] '[출력할 줄 번호]p' [파일의 이름]\" 입니다.\n");
 	printf("ex) sed '2p' file\n");
 	next_line();
 	
@@ -58,23 +59,24 @@ void training_sed(void)
 	printf("특이한 점은 'textfile'의 전체가 출력되면서 2번째 줄이 두 번 출력되었다는 것입니다.\n");
 	next_line();
 	
-	printf("\"sed\" 명령어를 -n 옵션 없이 출력(p)하게 되면 \n대상 파일의 전체 내용을 출력하면서 해당하는 줄의 내용이 한번 더 출력됩니다.\n");
+	printf("\"sed\" 명령어를 '-n' 옵션 없이 출력(p)하게 되면 \n");
+	printf("대상 파일의 전체 내용을 출력하면서 해당하는 줄의 내용이 한번 더 출력됩니다.\n\n");
 	next_line();
 	
-	printf("보통 자신이 원하는 라인만 출력하기 위해 -n 옵션을 더해서 사용합니다.\n\n");
+	printf("보통 자신이 원하는 라인만 출력하기 위해 '-n' 옵션을 더해서 사용합니다.\n\n");
 	next_line();
 	
-	printf("[실습] \"sed\"와 -n 옵션을 이용해 'textfile' 파일의 2번째 줄을 출력(p)해 보세요.\n");
+	printf("[실습] \"sed\"와 '-n' 옵션을 이용해 'textfile' 파일의 2번째 줄을 출력(p)해 보세요.\n");
 	printf("사용법 : \"sed -n '[출력할 줄 번호]p' [파일의 이름]\"\n");
 	just_run_command("sed -n '2p' textfile");
 
-	printf("\n\n-n 옵션을 붙여 2번째 줄만 출력이 된 모습입니다.\n");
+	printf("\n\n'-n' 옵션을 붙여 2번째 줄만 출력이 된 모습입니다.\n");
 	next_line();
 	
-	printf("지금까지는 하나의 줄만 대상으로 하였지만, 여러가지 줄을 한 번에 출력할 수도 있습니다.\n");
+	printf("지금까지는 하나의 줄만 대상으로 하였지만, 여러가지 줄을 한 번에 출력할 수도 있습니다.\n\n");
 	next_line();
 	
-	printf("2~5번째 줄 까지 출력하기 위해서는 '2,5p'와 같이 입력하면 됩니다.\n");
+	printf("2 ~ 5번째 줄까지 출력하기 위해서는 '2,5p'와 같이 입력하면 됩니다.\n");
 	printf("ex) sed -n '2,5p' file\n\n");
 	next_line();
 	
@@ -84,6 +86,8 @@ void training_sed(void)
 
 	printf("\n\n2~5번째 줄이 정상적으로 출력되었습니다.\n");
 	next_line();
+	
+	system("clear");
 	
 	printf("또한 \"sed\" 명령어에서 '$'라는 문자는 마지막 줄을 뜻합니다.\n");
 	printf("'$'라는 문자는 정규 표현식의 메타 문자중 하나이며, 문자열의 끝을 의미합니다.\n");
@@ -100,15 +104,17 @@ void training_sed(void)
 	printf("\n\n만약 2번째줄과 4~7번째 줄을 출력하고 싶다면 어떻게 해야 할까요?\n");
 	next_line();
 	
-	printf("-e 옵션을 추가하면 됩니다.\n");
+	printf("'-e' 옵션을 추가하면 됩니다.\n");
 	next_line();
 	
-	printf("sed -n -e '2p' -e '4,7p'와 같이 사용하면\n");
-	printf("2번째줄과 4~7번째줄을 동시에 출력할 수 있습니다.\n\n");
+	printf("\"sed -n -e '2p' -e '4,7p'\"와 같이 사용하면\n");
+	printf("2번째줄과 4 ~ 7번째줄을 동시에 출력할 수 있습니다.\n\n");
 	next_line();
+	
+	system("clear");		
 	
 	printf("[실습] \"sed\"와 -n, -e 옵션을 이용해 \n");
-	printf("textfile 파일의 4번째 줄과 7~9번째 줄을 동시에 출력(p)해 보세요.\n");
+	printf("'textfile' 파일의 4번째 줄과 7~9번째 줄을 동시에 출력('p')해 보세요.\n");
 	printf("사용법 : \"sed -n -e '[출력할 줄 번호]p' -e '[출력할 줄 번호]p' [파일의 이름]\"\n");
 	just_run_command("sed -n -e '4p' -e '7,9p' textfile");
 	
@@ -127,7 +133,7 @@ void training_sed(void)
 	printf("sed -n '/hello/p' [파일 이름]과 같이 입력하면 됩니다.\n\n");
 	next_line();
 	
-	printf("[실습] \"sed\"와 -n 옵션을 이용해 textfile 파일의 \n");
+	printf("[실습] \"sed\"와 '-n' 옵션을 이용해 textfile 파일의 \n");
 	printf("'hi'라는 단어가 포함된 줄을 출력(p)해 보세요.\n");
 	printf("사용법 : \"sed [옵션] '/찾을 단어/p' [파일의 이름]\"\n");
 	just_run_command("sed -n '/hi/p' textfile");
@@ -146,7 +152,7 @@ void training_sed(void)
 	printf("sed -n '/^2/p' textfile을 통해 2번째 라인을 출력할 수 있습니다.\n\n");
 	next_line();
 	
-	printf("[실습] \"sed\"와 -n 옵션으로 'textfile' 파일의 '1'으로 시작하는 줄을 출력(p)해 보세요.\n");
+	printf("[실습] \"sed\"와 '-n' 옵션으로 'textfile' 파일의 '1'으로 시작하는 줄을 출력(p)해 보세요.\n");
 	printf("사용법 : \"sed [옵션] '/^[시작하는 문자열 또는 문자]/p' [파일의 이름]\"\n");
 	just_run_command("sed -n '/^1/p' textfile");
 
@@ -164,9 +170,11 @@ void training_sed(void)
 	printf("사용법 : \"sed -n '/[끝나는 문자열 또는 문자]$/p' [파일의 이름]\"\n");
 	just_run_command("sed -n '/world$/p' textfile");
 
-	printf("\n\n지금은 메타 문자와 sed의 혼합 사용법이 복잡하지만, \n트레이닝을 반복하여 익숙해질 수 있을 것입니다.\n");
+	printf("\n\n지금은 메타 문자와 sed의 혼합 사용법이 복잡하지만, \n");
+	printf("트레이닝을 반복하여 익숙해질 수 있을 것입니다.\n");
 	next_line();
 
+	system("clear");
 	printf("지금까지는 'p' 옵션을 통한 출력에 대해서 알아보았지만,\n");
 	printf("'d'를 이용해서 특정 줄을 제외할 수도 있습니다.\n");
 	next_line();
@@ -224,6 +232,7 @@ void training_sed(void)
 	printf("리다이렉션은 출력 결과를 파일에 반영할 수 있는 기능으로 유용하게 사용할 수 있습니다.\n");
 	next_line();
 
+	system("clear");
 	printf("이번에는 \"sed\"의 유용한 기능 중 하나인 치환 기능을 알아보도록 하겠습니다.\n");
 	printf("치환이란 특정 문자열이나 문자를 다른 문자열이나 문자로 바꾸는 것을 의미합니다.\n");
 	next_line();
@@ -249,14 +258,15 @@ void training_sed(void)
 	printf("bob is best of the better와 같이 변경됩니다.\n");
 	next_line();
 	
-	printf("만약 각 행의 해당하는 첫번째 문자열 만이 아닌 해당하는 모든 문자열을 변경하고 싶다면\n");
-	printf("'s/better/best/g'와 같이 입력하면됩니다.\n");
+	printf("만약 각 행의 해당하는 첫번째 문자열 만이 아닌\n");
+	printf("해당하는 모든 문자열을 변경하고 싶다면 's/better/best/g'와 같이 입력하면됩니다.\n");
 	next_line();
 	
 	printf("즉 sed 's/better/best/g' [파일명] 처럼 입력했다면 변경된 내용은 \n");
 	printf("\"bob is best of the best\"가 됩니다.\n");
 	next_line();
-
+	
+	system("clear");
 	printf("이번에는 textfile의 내용을 치환하여 출력하도록 하겠습니다.\n\n");
 	next_line();
 	
