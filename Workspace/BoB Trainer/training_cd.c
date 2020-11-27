@@ -43,9 +43,9 @@ void training_cd(void)
 	next_line();
 	// 절대 경로 트레이닝
 
-	printf("\n[상대 경로]는 상대적인 경로로, 아래와 같은 지정 방식이 있습니다.\n");
+	printf("\n[상대 경로]는 상대적인 경로로, 아래와 같은 지정 방식이 있습니다.\n\n");
 	printf(" ' . '  : 현재 작업 디렉토리를 의미합니다.\n");
-	printf(" ' .. ' : 현재 작업 디렉토리의 상위 디렉토리를 의미합니다.\n");
+	printf(" ' .. ' : 현재 작업 디렉토리의 상위 디렉토리를 의미합니다.\n\n");
 	next_line();
 
 	printf("다음과 같이 '/etc' 디렉토리 안에 'dir1', 'dir2', 'dir3' 디렉토리가 있다고 한다면\n\n");
@@ -53,7 +53,7 @@ void training_cd(void)
 	printf("     |        \n");
 	printf("/etc ---- dir2\n");
 	printf("     |        \n");
-	printf("     ---- dir3\n");
+	printf("     ---- dir3\n\n");
 	next_line();
 
 	printf("[ ./dir1/ ](은)는 현재 작업 디렉토리 안에 있는 'dir1' 디렉토리를 의미합니다.\n");
