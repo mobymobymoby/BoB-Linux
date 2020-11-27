@@ -68,12 +68,12 @@ void training_top(void)
 	next_line();
 
 	printf("\"top\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.(기능)\n\n");
-	printf(" [ (실행 전) top -p [PID] ]   : 특정 프로세스만 모니터링\n\n");
-	printf(" [ k 입력 후 PID 입력 ]       : 해당 프로세스 종료\n\n");
-	printf(" [ r 입력 후 PID, NICE 입력 ] : 해당 프로세스 우선 순위 변경\n\n");
-	printf(" [ space ]                   : 목록 갱신\n\n");
-	printf(" [ q ]                       : top 프로그램 종료\n\n");
-	printf(" [ d 입력 후 초(Sec) 입력 ]   : 지정된 초 마다 목록 갱신\n\n");
+	printf("  [ (실행 전) top -p [PID] ]   : 특정 프로세스만 모니터링\n\n");
+	printf("  [ k 입력 후 PID 입력 ]       : 해당 프로세스 종료\n\n");
+	printf("  [ r 입력 후 PID, NICE 입력 ] : 해당 프로세스 우선 순위 변경\n\n");
+	printf("  [ space ]                    : 목록 갱신\n\n");
+	printf("  [ q ]                        : top 프로그램 종료\n\n");
+	printf("  [ d 입력 후 초(Sec) 입력 ]   : 지정된 초 마다 목록 갱신\n\n");
 	next_line();
 
 	printf("비슷한 명령어로는 \"ps\" 명령어가 있습니다.\n\n");
