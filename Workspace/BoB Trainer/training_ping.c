@@ -8,7 +8,7 @@ void training_ping(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
     	printf("이번에 학습할 명령어는 \"ping\"입니다.\n\n");
-	printf("\"ping\" 명령어는 네트워크 실습에서 상당히 많이 사용하게 되는 명령어로, \n");
+	printf("\"ping\" 명령어는 네트워크 실습에서 상당히 많이 사용하게 되는 명령어로\n");
 	printf("주로 대상 간의 통신 여부를 확인하기 위해 사용합니다.\n");
 	next_line();
 	
@@ -37,6 +37,7 @@ void training_ping(void)
 	printf("사용법 : \"ping [옵션] [타겟 IP 또는 주소]\"\n\n");
 	next_line();
 	
+	system("clear");
 	printf("[실습] \"ping\" 명령어를 이용해 www.google.com에 ping을 보내보세요.\n");
 	printf("참고로 \"ping\" 명령어는 특별한 옵션 없이는 취소할 때 까지 계속 전송됩니다.\n");
 	printf("원하는 만큼 보낸 후에 [Ctrl+c]를 입력해 취소할 수 있습니다.\n");
@@ -47,16 +48,22 @@ void training_ping(void)
 	next_line();
 	
 	printf("\"ping\" 명령어 실행 중에 계속해서 출력되는 메시지는 \n");
-	printf("우리가 보낸 \"ping\"에 대한 응답(reply)입니다.\n");
+	printf("우리가 보낸 \"ping\"에 대한 응답(reply)입니다.\n\n");
 	printf("해당 서버와의 응답 속도나 ttl(time to live)를 알 수 있습니다.\n");
 	next_line();
 	
 	printf("ttl은 패킷이 무한정 네트워크 상에서 배회하는 것을 막기 위해 설정된 일종의 제한입니다.\n");
+	next_line();
+	
 	printf("하나의 hop(홉) 또는 설정된 시간에 따라 ttl이 감소하게 되고, 0이 된 패킷은 폐기됩니다.\n");
 	next_line();
 	
-	printf("따라서 ttl의 숫자가 높을 수록 더 짧은 네트워크 경로를 통해 reply 패킷이 우리에게 도달한 것을 알 수 있습니다.\n\n");
-	printf("이런식으로 \"ping\"에 대한 reply를 통해서 대상 서버에 대한 여러 가지 정보들을 얻을 수 있습니다.\n");
+	printf("따라서 ttl의 숫자가 높을 수록 더 짧은 네트워크 경로를 통해\n");
+	printf("reply 패킷이 우리에게 도달한 것을 알 수 있습니다.\n\n");
+	next_line();
+	
+	printf("이런식으로 \"ping\"에 대한 reply를 통해서\n");
+	printf("대상 서버에 대한 여러 가지 정보들을 얻을 수 있습니다.\n");
 	next_line();
 	
 	printf("이번에는 reply가 오지 않는 서버인 www.naver.com에 \"ping\"을 보내보겠습니다.\n\n");
@@ -88,8 +95,8 @@ void training_ping(void)
 	
 	printf("이외에도 다양한 옵션이 존재합니다.\n\n");
 	printf("  [ -D 옵션 ] : 각 패킷에 대한 reply에 타임스탬프를 붙여 출력합니다.\n\n");
-	printf("  [ -i 옵션 ] :  패킷이 전송되는 간격(interval)을 바꿀 수 있습니다.\n");
-	printf("                 이 옵션은 관리자 권한만 사용할 수 있습니다.\n\n");
+	printf("  [ -i 옵션 ] : 패킷이 전송되는 간격(interval)을 바꿀 수 있습니다.\n");
+	printf("                이 옵션은 관리자 권한만 사용할 수 있습니다.\n\n");
 	printf("  [ -f 옵션 ] : interval을 매우 빠르게 하여 패킷을 범람시키는(flood) 옵션입니다.\n");
 	printf("                이 역시 관리자 권한만 사용할 수 있습니다.\n\n");
 	next_line();
