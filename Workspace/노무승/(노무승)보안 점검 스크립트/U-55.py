@@ -19,10 +19,10 @@ def U55() :
         temp = subprocess.getoutput("ls -l /etc/hosts.lpd")
         temp = temp.split()
         if (temp[0] != "-rw-------"):
-            f_output = f_output + C_YELLOW + "\t[경고] /etc/hosts.lpd : 파일의 권한이 600(-rw-------)이 아닙니다.\n"
+            f_output = f_output + C_YELLOW + "\t[경고] /etc/hosts.lpd : 파일의 권한이 600(-rw-------)이 아닙니다.\n" + C_END 
             flag = True
         if (temp[2] != "root"):
-            f_output = f_output + C_YELLOW + "\t[경고] /etc/hosts.lpd : 파일의 소유자가 root 계정이 아닙니다. \n"
+            f_output = f_output + C_YELLOW + "\t[경고] /etc/hosts.lpd : 파일의 소유자가 root 계정이 아닙니다. \n" + C_END 
             flag = True
 
     if (flag) :
