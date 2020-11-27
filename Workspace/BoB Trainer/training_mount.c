@@ -34,19 +34,23 @@ void training_mount()
 	printf("devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)\n");
 	printf("tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=403024k,mode=755)\n");
 	printf("/dev/sda1 on / type ext4 (rw,relatime)\n");
-	printf("\n");
-	printf("많은 정보가 출력되었습니다.\n");
+	printf("\n\n많은 정보가 출력되었습니다.\n");
 	printf("마지막에 출력된 '/dev/sda1 ...'을 예시로 말씀드리겠습니다.\n");
 	next_line();
 	
 	printf("[/dev/sda1] 과 같이 앞 쪽은 장치를 나타냅니다.\n");
-	printf("on 뒤의 [/] 는 마운트 된 디렉토리를 나타냅니다.\n");
-	printf("type 뒤 [ext4]는 파일시스템을 나타냅니다.\n");
-	printf("괄호 안의 내용들은 해당 장치의 속성을 나타냅니다.\n");
 	next_line();
 	
-	printf("mount 명령어는 다음과 같은 형식으로 사용합니다.\n");
-	printf("사용법 : \"mount [옵션] [마운트할 디바이스] [연결할 디렉토리]\"\n");
+	printf("on 뒤의 [/] 는 마운트 된 디렉토리를 나타냅니다.\n");
+	next_line();
+	
+	printf("type 뒤 [ext4]는 파일시스템을 나타냅니다.\n");
+	next_line();
+	
+	printf("괄호 안의 내용들은 해당 장치의 속성을 나타냅니다.\n\n");
+	next_line();
+	
+	printf("사용법은 : \"mount [옵션] [마운트할 디바이스] [연결할 디렉토리]\" 입니다.\n\n");
 	next_line();
 	
 	printf("\"mount\" 명령어의 자주 쓰는 옵션은 아래와 같습니다.\n\n");
