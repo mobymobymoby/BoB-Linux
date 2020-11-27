@@ -55,7 +55,7 @@ void training_sed(void)
 	printf("\n\n'textfile'의 2번째 줄의 내용이 정상적으로 출력된 것을 확인할 수 있습니다.\n");
 	next_line();
 	
-	printf("특이한 점은 'textfile'의 전체 내용이 출력되면서 2번째 줄이 두 번 출력되었다는 것입니다.\n");
+	printf("특이한 점은 'textfile'의 전체가 출력되면서 2번째 줄이 두 번 출력되었다는 것입니다.\n");
 	next_line();
 	
 	printf("\"sed\" 명령어를 -n 옵션 없이 출력(p)하게 되면 \n대상 파일의 전체 내용을 출력하면서 해당하는 줄의 내용이 한번 더 출력됩니다.\n");
@@ -104,7 +104,7 @@ void training_sed(void)
 	next_line();
 	
 	printf("sed -n -e '2p' -e '4,7p'와 같이 사용하면\n");
-	printf("2번째줄과 4~7번째줄을 동시에 출력할 수 있습니다.\n");
+	printf("2번째줄과 4~7번째줄을 동시에 출력할 수 있습니다.\n\n");
 	next_line();
 	
 	printf("[실습] \"sed\"와 -n, -e 옵션을 이용해 \n");
@@ -146,7 +146,7 @@ void training_sed(void)
 	printf("sed -n '/^2/p' textfile을 통해 2번째 라인을 출력할 수 있습니다.\n\n");
 	next_line();
 	
-	printf("[실습] \"sed\"와 -n 옵션을 이용해 'textfile' 파일의 '1'으로 시작하는 줄을 출력(p)해 보세요.\n");
+	printf("[실습] \"sed\"와 -n 옵션으로 'textfile' 파일의 '1'으로 시작하는 줄을 출력(p)해 보세요.\n");
 	printf("사용법 : \"sed [옵션] '/^[시작하는 문자열 또는 문자]/p' [파일의 이름]\"\n");
 	just_run_command("sed -n '/^1/p' textfile");
 
@@ -160,7 +160,7 @@ void training_sed(void)
 	printf("sed -n '/[끝나는 문자열]$/p'와 같이 입력하면 됩니다.\n\n");
 	next_line();
 	
-	printf("[실습] 이번에는 '$' 메타 문자를 이용해 'world'라는 문자열로 끝나는 줄을 출력해 보세요\n");
+	printf("[실습] '$' 메타 문자를 이용해 'textfile'의 'world'로 끝나는 줄을 출력해 보세요\n");
 	printf("사용법 : \"sed -n '/[끝나는 문자열 또는 문자]$/p' [파일의 이름]\"\n");
 	just_run_command("sed -n '/world$/p' textfile");
 
@@ -260,7 +260,8 @@ void training_sed(void)
 	printf("이번에는 textfile의 내용을 치환하여 출력하도록 하겠습니다.\n\n");
 	next_line();
 	
-	printf("[실습] 's' 옵션을 이용하여 textfile의 'hello'라는 문자열을 'good'으로 바꿔보세요. \n(단 각 행의 첫번째 일치하는 문자열만 바뀌도록 해보세요.)\n");
+	printf("[실습] 's' 옵션을 이용하여 textfile의 'hello'라는 문자열을 'good'으로 바꿔보세요. \n");
+	printf("(단, 각 행의 첫번째 일치하는 문자열만 바뀌도록 해보세요.)\n");
 	printf("사용법 : \"sed 's/대상 문자열/변경할 문자열/' [파일명]\"\n");
 	just_run_command("sed 's/hello/good/' textfile");
 
@@ -270,11 +271,13 @@ void training_sed(void)
 	printf("마지막으로 치환된 내용을 리다이렉션(>)을 이용해 다른 파일에 반영해보도록 하곘습니다.\n\n");
 	next_line();
 	
-	printf("[실습] s 옵션을 이용하여 textfile의 'l'라는 문자를 \n'here'로 바꿔 new_textfile에 저장해보세요. \n(단, 일치하는 모든 문자가 바뀌도록 해보세요.)\n");
+	printf("[실습] s 옵션을 이용하여 'textfile'의 'l'라는 문자를 \n");
+	printf("'here'로 바꿔 'new_textfile'에 저장해보세요.\n\n");
+	printf("(단, 일치하는 모든 문자가 바뀌도록 해보세요.)\n");
 	printf("사용법 : \"sed 's/대상 문자열/변경할 문자열/g' [파일명] > [파일명]\"\n");
 	run_command("sed 's/l/here/g' textfile > new_textfile");
 
-	printf("\n\n[실습] 변경된 내용을 확인하기 위해 cat new_textfile을 입력해보세요.\n");
+	printf("\n\n[실습] 변경된 내용을 확인하기 위해 \"cat new_textfile\"을 입력해보세요.\n");
 	run_command("cat new_textfile");
 
 	printf("\n\n변경된 내용이 실제 대상 파일에 반영되었습니다.\n");
