@@ -15,6 +15,9 @@ void training_sort()
 	printf("따로 저장하거나 원본 파일을 변경하지는 않습니다.\n");
 	next_line();
 	
+	printf("\"sort\" 명령어의 실행 파일은 \"/usr/bin/sort\"(으)로 있습니다.\n");
+	next_line();
+	
 	printf("\"sort\" 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("사용법은 : \"sort [옵션] [파일 이름]\"입니다.\n\n");
 	printf("ex) sort file1\n");
