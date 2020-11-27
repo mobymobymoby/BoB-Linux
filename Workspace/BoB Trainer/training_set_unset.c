@@ -32,6 +32,7 @@ void training_set_unset(void)
 
 	printf("\"unset\" 명령어는 다음과 같은 형식으로 사용합니다.\n");
 	printf("사용법 : \"unset [변수 이름]\"\n");
+	printf("ex) unset myVal\n");
 	next_line();
 	
 	printf("해당 변수 이름으로 선언된 변수가 제거됩니다.\n");
