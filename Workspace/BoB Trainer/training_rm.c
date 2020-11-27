@@ -16,22 +16,21 @@ void training_rm()
 	next_line();
 	
 	printf("\"rm\" 실습에 앞서서, \"rm\" 명령어를 실행하기 위해서는 \n");
-	printf("어떤 파일이 있는지 확인해봐야겠죠?\n\n");
+	printf("어떤 파일이 있는지 확인해봐야 합니다.\n\n");
 	next_line();
 	
 	printf("[실습] 'ls -al'을 입력하여 현재 디렉토리에 있는 파일의 정보를 확인하세요.\n");
 	just_run_command("ls -al");
 	
-	printf("\n\n'rm_test_file'은 일반 파일,\n");
+	printf("\n\n'rm_test_file'은 일반 파일\n\n");
 	printf("'rm_test_dir'는 디렉토리임을 확인할 수 있습니다.\n"); 
 	next_line();
-	
-	printf("rm 명령어는 다음과 같은 형식으로 사용합니다.\n");
-	printf("사용법 : \"rm [옵션] [삭제할 파일 이름]\"\n");
+
+	printf("사용법은 : \"rm [옵션] [삭제할 파일 이름]\"입니다.\n");
 	printf("ex) rm file\n\n");
 	next_line();
 	
-	printf("[실습] rm 명령어를 입력하여 'rm_test_file' 파일을 삭제해보세요.\n");
+	printf("[실습] \"rm\" 명령어를 입력하여 'rm_test_file' 파일을 삭제해보세요.\n");
 	run_command("rm rm_test_file");
 
 	printf("\n\nrm 명령어의 자주 사용하는 옵션은 아래와 같습니다.\n\n");
@@ -56,7 +55,10 @@ void training_rm()
 	next_line();
 		       
 	printf("\"rm\"과 유사한 명령어로는 \"rmdir\"가 있습니다.\n");
-	printf("\"rmdir\"는 remove directory로 디렉토리를 지운다는 점에서 \"rm -r\" 옵션과 유사합니다.\n");
+	next_line();
+	
+	printf("\"rmdir\"는 remove directory의 약자이며\n");
+	printf("디렉토리를 지운다는 점에서 \"rm -r\" 옵션과 유사합니다.\n");
 	next_line();
 	
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
