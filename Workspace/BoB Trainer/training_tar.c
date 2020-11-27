@@ -8,13 +8,14 @@ void training_tar()
 	system("touch file1 file2 file3");
 
 	printf("이번에 학습할 명령어는\"tar\"입니다.\n\n");
-	printf("\"tar\" 명령어는 Tape ARchive의 약자로, 여러 파일들을 하나의 파일로 묶는 명령어 입니다.\n");
+	printf("\"tar\" 명령어는 'Tape ARchive'의 약자이며\n");
+	printf("여러 파일들을 하나의 파일로 묶는 명령어 입니다.\n");
 	next_line();
 	
 	printf("\"tar\" 명령어의 실행 파일은 \"/usr/bin/tar\"(으)로 있습니다.\n");
 	next_line();
 	
-	printf("tar 명령어는 단독으로 사용되거나 하나의 옵션만으로 사용되는 경우는 거의 없습니다.\n");
+	printf("\"tar\" 명령어는 단독으로 사용되거나 하나의 옵션만으로 사용되는 경우는 거의 없습니다.\n");
 	printf("따라서 먼저 옵션을 보여드리겠습니다.\n");
 	next_line();
 	
@@ -28,11 +29,11 @@ void training_tar()
 	printf("  [ -z (--gzip) ]    : gzip을 이용한 압축\n\n");
 	next_line();
 	
-	printf("\"tar\"는 다양한 옵션의 조합으로 사용됩니다.\n");
+	printf("\"tar\"는 다양한 옵션의 조합으로 사용됩니다.\n\n");
 	next_line();
 	
 	printf("대표적인 조합 두 가지는 아래와 같습니다.\n\n");
-	printf("  [ -cvf ] : 여러 파일을 하나의 tar 파일로 묶을 때 사용\n");
+	printf("  [ -cvf ] : 여러 파일을 하나의 tar 파일로 묶을 때 사용\n\n");
 	printf("  [ -xvf ] : 묶여있는 tar 파일을 풀 때 사용\n");
 	next_line();
 	
@@ -53,18 +54,19 @@ void training_tar()
 	printf("사용법은 : \"tar -tvf [대상 파일]\"입니다.\n");
 	just_run_command("tar -tvf test.tar");
 	
-	printf("\n\n-tvf 옵션을 사용하여 하나로 합친 파일의 정보를 볼 수 있습니다.\n\n");
+	printf("\n\n'-tvf' 옵션을 사용하여 하나로 합친 파일의 정보를 볼 수 있습니다.\n\n");
 	next_line();
 	
-	printf("[실습] 그러면 다시 tar -xvf 를 이용하여 'test.tar'를 풀어봅시다.\n");
+	printf("[실습] 그러면 다시 \"tar -xvf\" 를 이용하여 'test.tar'를 풀어봅시다.\n");
 	printf("사용법은 : \"tar -xvf [대상 파일]\"입니다.\n");
 	just_run_command("tar -xvf test.tar");
 	
-	printf("\n\ntest.tar의 묶음이 해제되면서 풀어진 파일의 목록이 출력됩니다.\n");
+	printf("\n\n'test.tar'의 묶음이 해제되면서 풀어진 파일의 목록이 출력됩니다.\n");
 	next_line();
 	
-	printf("단순히 tar 로 묶는 것으로는 압축은 되지 않습니다. tar는 어디까지나 묶어만 줍니다.\n");
-	printf("압축은 -j 혹은 -z 옵션을 덧붙여서 이뤄집니다.\n");
+	printf("단순히 \"tar\" 로 묶는 것으로는 압축은 되지 않습니다.\n");
+	printf("\"tar\"는 어디까지나 묶어만 줍니다.\n");
+	printf("압축은 '-j' 혹은 '-z' 옵션을 덧붙여서 이뤄집니다.\n");
 	next_line();
 	
 	printf("여러 가지 파일을 하나로 묶은 후 압축하면,\n");
