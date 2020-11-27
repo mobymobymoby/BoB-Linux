@@ -8,7 +8,8 @@ void training_sudo(void)
 	pwd = getpwuid(getuid());
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	printf("sudo 명령어는 root 권한을 잠시 획득하기 위한 명령어입니다.\n\n");
+	printf("이번에 학습할 명령어는 \"sudo\"입니다.\n\n");
+	printf("sudo 명령어는 root 권한을 잠시 획득하기 위한 명령어입니다.\n");
 	printf("sudo 앞에 붙여 실행한 명령어는 root의 권한으로 실행됩니다.\n");
 	next_line();
 	
@@ -43,14 +44,14 @@ void training_sudo(void)
 	fake_run_command("sudo -s");
 	printf("[sudo] password for %s:\n", pwd->pw_name);
 	
-	printf("\n\nsudo 명령어 사용시에는 현재 로그인 되어 있는 사용자의 패스워드를 입력해야합니다.\n\n");
+	printf("\n\nsudo 명령어 사용시에는 현재 로그인 되어 있는 사용자의 패스워드를 입력해야합니다.\n");
+	printf("위와 같은 문장이 출력된 후에 비밀번호를 입력한다면 다음과 같이 프롬프트가 변화합니다.\n");
 	next_line();
 	
-	printf("위와 같은 문장이 출력된 후에 비밀번호를 입력한다면, 다음과 같이 프롬프트가 변화합니다.\n");
 	printf("root@localhost:#\n");
 	next_line();
+	
 	// 트레이닝 2   
-
 	printf("사용자의 계정이 'root'로 바뀌면서 명령줄 왼쪽의 문구가\n");
 	printf("'$'에서 '#'으로 바뀐 것을 볼 수 있습니다.\n");
 	next_line();
