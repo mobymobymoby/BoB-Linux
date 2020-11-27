@@ -6,7 +6,7 @@ void training_more_less()
 	system("clear");
 
 	FILE* fp = fopen("test.txt", "w");
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < 20; i++)
 	{	
 		fprintf(fp, "\n[%d 번째]\n\n", i+1);
 		fprintf(fp, "이것은 more 명령어의 테스트 파일 test.txt 입니다.\n\n");
@@ -27,7 +27,7 @@ void training_more_less()
 	printf("또한 \"less\" 명령어의 실행 파일은 \"/usr/bin/less\"(으)로 있습니다.\n");
 	next_line();
 	
-	printf("\"cat\"과 같은 명령어와 다른 점은 화면 단위, 페이지 단위로 보여준다는 점입니다.\n");
+	printf("\"cat\" 명령어와 다른 점은 화면 단위, 페이지 단위로 보여준다는 점입니다.\n");
 	next_line();
 	
 	printf("내용이 긴 파일을 \"cat\"을 이용하여 화면에 출력하면\n");
