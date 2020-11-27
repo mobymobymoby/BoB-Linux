@@ -21,8 +21,6 @@ void training_find()
 	next_line();
     
     printf("\"find\" 명령어의 실행 파일은 \"/usr/bin/find\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"find\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"find [옵션] [경로] [표현식]\" 입니다.\n");
@@ -33,11 +31,11 @@ void training_find()
 	next_line();
     
     printf("\"find\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n\n");
-    printf("[-P]    : 심볼릭 링크를 따라가지 않고, 심볼릭 링크 자체 정보를 사용합니다.\n\n");
-    printf("[-L]    : 심볼릭 링크에 연결된 파일 정보를 사용합니다.\n\n");
-    printf("[-H]    : 심볼릭 링크를 따라가지 않으나\n");
-    printf("          Command Line Argument를 처리할 땐 예외로 합니다.\n\n");
-    printf("[-D]    : 디버그 메시지를 출력합니다.\n\n");
+    printf("  [ -P ]    : 심볼릭 링크를 따라가지 않고, 심볼릭 링크 자체 정보를 사용합니다.\n\n");
+    printf("  [ -L ]    : 심볼릭 링크에 연결된 파일 정보를 사용합니다.\n\n");
+    printf("  [ -H ]    : 심볼릭 링크를 따라가지 않으나\n");
+    printf("              Command Line Argument를 처리할 땐 예외로 합니다.\n\n");
+    printf("  [ -D ]    : 디버그 메시지를 출력합니다.\n\n");
     next_line();
 
 	
@@ -67,7 +65,7 @@ void training_find()
     //실습 1
     system("clear");
     printf("[실습 1]\n\n");
-    printf("\"find\" 명령어를 사용하여 'find_test_file1'을 찾아보세요.\n");
+    printf("[실습] \"find\" 명령어를 사용하여 'find_test_file1'을 찾아보세요.\n");
     printf("사용법 : find [파일 이름]\n");
 	just_run_command("find find_test_file1");
 
@@ -83,7 +81,7 @@ void training_find()
     printf("\n\n현재 디렉토리에 'find_test_file'가 포함된 파일들이 존재합니다.\n\n\n");
     next_line();
 
-    printf("\"find\" 명령어를 사용하여 'find_test_file2'(을)를 찾고 동시에\n");
+    printf("[실습] \"find\" 명령어를 사용하여 'find_test_file2'(을)를 찾고 동시에\n");
     printf("'-exec rm {} \\;'옵션을 이용하여 삭제까지 해보세요.\n\n");
     printf("사용법 : find [파일 이름] [-exec <명령어> {}\\]\n");
 	just_run_command("find find_test_file2 -exec rm {} \\;");
@@ -101,7 +99,7 @@ void training_find()
     //실습 3
     system("clear");
     printf("[실습 3]\n\n");
-    printf("\"find . -name \"find_test*\" -type d\"(을)를 입력해보세요.\n");
+    printf("[실습] \"find . -name \"find_test*\" -type d\"(을)를 입력해보세요.\n");
     printf("사용법 : find [경로] [옵션]\n");
     just_run_command("find . -name \"find_test*\" -type d");
     
@@ -114,7 +112,7 @@ void training_find()
     //실습 3-2
     system("clear");
     printf("[실습 3-2]\n\n");
-    printf("\" find . -type f -name \"find_test*\" \"(을)를 입력해보세요.\n");
+    printf("[실습] \" find . -type f -name \"find_test*\" \"(을)를 입력해보세요.\n");
     just_run_command("find . -type f -name \"find_test*\"");
     
     printf("\n\n[실습 3-2]는 [실습 3]에서와 비슷하지만\n");
@@ -127,7 +125,7 @@ void training_find()
     //실습 4
     system("clear");
     printf("[실습 4]\n\n");
-    printf("\"find . -name \"*.c\" | head -3\"(을)를 입력해보세요.\n");
+    printf("[실습] \"find . -name \"*.c\" | head -3\"(을)를 입력해보세요.\n");
     just_run_command("find . -name \"*.c\" | head -3");
 
     printf("\n\n위의 실습은 현재 디렉토리에서 '.c'로 끝나는 파일을 찾은 뒤 3개만 출력합니다.\n");
@@ -136,7 +134,7 @@ void training_find()
     //실습 5
     system("clear");
     printf("[실습 5]\n\n");
-    printf("\"find ! -type d\"(을)를 입력해보세요.\n");
+    printf("[실습] \"find ! -type d\"(을)를 입력해보세요.\n");
     just_run_command("find ! -type d");
 
     printf("\n\n위의 실습은 디렉토리 아닌 파일들은 모두 찾습니다.\n");

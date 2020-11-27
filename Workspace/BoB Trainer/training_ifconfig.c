@@ -12,9 +12,7 @@ void training_ifconfig(void)
     printf("네트워크 인터페이스를 확인하고 설정할 수 있는 명령어입니다.\n");
     next_line();
 
-    printf("\"ifconfig\" 명령어의 실행 파일은 \"/usr/sbin/ifconfig\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
-    printf("\"ifconfig\"(으)로 있습니다.\n\n");
+    printf("\"ifconfig\" 명령어의 실행 파일은 \"/usr/sbin/ifconfig\"(으)로 있습니다.\n\n");
     next_line();
 
     printf("[실습] \"ifconfig\" 명령어를 입력하여 네트워크 인터페이스를 확인해보세요.\n");

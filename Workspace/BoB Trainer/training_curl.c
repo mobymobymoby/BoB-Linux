@@ -14,13 +14,11 @@ void training_curl(void)
 	next_line();
 
     printf("\"curl\" 명령어의 실행 파일은 \"/usr/bin/curl\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"curl\"(으)로 있습니다.\n");
     next_line();
 
 
     printf("사용법은 \"curl [옵션 / URLs]\" 입니다.\n");
-    printf("ex) curl google.com\n");
+    printf("ex) curl google.com\n\n");
     next_line();
 
 	printf("[실습] \"curl\"을 이용하여 \"http://www.naver.com\"의 데이터를 받아보세요.\n");
@@ -42,7 +40,7 @@ void training_curl(void)
 	next_line();
 
 	printf("하지만 \"curl\"에서는 따로 옵션을 주어 수행해야 합니다.\n");
-	printf("이 때 사용하는 옵션이 바로 '-L(Location의 약자)'입니다.\n");
+	printf("이 때 사용하는 옵션이 바로 '-L(Location의 약자)'입니다.\n\n");
 	next_line();
 
 	printf("[실습] \"curl\"에 '-L' 옵션을 이용하여 \"http://www.naver.com\"의 데이터를 받아보세요.\n");
@@ -66,7 +64,7 @@ void training_curl(void)
 	next_line();
 
 	printf("한편, \"curl\"을 통한 더 많은 정보를 얻고 싶을 때가 있습니다.\n");
-	printf("이럴 때는 '-v' 옵션을 추가하여 수행하면 됩니다.\n");
+	printf("이럴 때는 '-v' 옵션을 추가하여 수행하면 됩니다.\n\n");
 	next_line();
 	
     printf("[실습] \"curl\" 명령어에 '-v' 옵션을 이용하여\n");
@@ -91,7 +89,7 @@ void training_curl(void)
     next_line();
 
 	printf("이때 사용하는 옵션은 '-o' 옵션입니다.\n");
-    printf("'-o' 옵션은 \"curl -o [저장할 파일 이름] [URL]\"의 형식으로 사용하면 됩니다.\n");
+    printf("'-o' 옵션은 \"curl -o [저장할 파일 이름] [URL]\"의 형식으로 사용하면 됩니다.\n\n");
 	next_line();
 
 	printf("[실습] \"curl\" 명령어에 '-o' 옵션을 이용하여 \"https://www.naver.com\"의 데이터를\n");
@@ -105,14 +103,14 @@ void training_curl(void)
 	printf("지금 다운로드 받는 데이터는 텍스트 정보이기 때문에\n");
     printf("용량이 매우 작아 아주 빠르게 다운로드 되었지만\n\n");
     printf("용량이 큰 파일을 다운로드 받을 때는\n");
-    printf("진행 사항이 출력되는 것이 사용자에게 도움이 됩니다.\n");
+    printf("진행 사항이 출력되는 것이 사용자에게 도움이 됩니다.\n\n");
 	next_line();
 
-	printf("\"ls -al\" 명령어를 통해 'naver' 파일이 생성된 것을 확인해보세요.\n");
+	printf("[실습] \"ls -al\" 명령어를 통해 'naver' 파일이 생성된 것을 확인해보세요.\n");
 	just_run_command("ls -al");
 	next_line();
 
-	printf("[실습] 이번에는 \"cat\"을 이용하여 'naver' 파일의 정보를 출력해보세요.\n");
+	printf("\n[실습] 이번에는 \"cat\"을 이용하여 'naver' 파일의 정보를 출력해보세요.\n");
 	printf("사용법 :  cat [출력할 파일 이름]\n");
 	just_run_command("cat naver");
 
@@ -137,12 +135,17 @@ void training_curl(void)
 	next_line();
 
     printf("위의 옵션을 포함하여 \"curl\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[ -k, --insecure ]\nhttps 사이트를 SSL certificate 검증을 하지 않고 연결합니다.\n");
+    printf("  [ -k (--insecure) ]\n");
+    printf("https 사이트를 SSL certificate 검증을 하지 않고 연결합니다.\n");
     printf("\"wget\" 명령어의 --no-check-certificate 옵션과 비슷합니다.\n\n");
-    printf("[ -l, --head ]\nHTTP header만 보여주고 content는 표시하지 않습니다.\n\n");
-    printf("[ -D, --dump-header <file> ]\n<file>에 HTTP header를 기록합니다.\n\n");
-    printf("[ -L, --location ]\n서버에서 HTTP 301이나 HTTP302 응답이 왔을 경우 리다이렉션 되는 URL로 따라갑니다.\n\n");
-    printf("[ -s, --silent ]\n정숙 모드로서, 진행 내역이나 메시지 등을 출력하지 않습니다.\n");
+    printf("  [ -l, (--head) ]\n");
+    printf("HTTP header만 보여주고 content는 표시하지 않습니다.\n\n");
+    printf("  [ -D, (--dump-header) <file> ]\n");
+    printf("<file>에 HTTP header를 기록합니다.\n\n");
+    printf("  [ -L, (--location) ]\n");
+    printf("서버에서 HTTP 301이나 HTTP302 응답이 왔을 경우 리다이렉션 되는 URL로 따라갑니다.\n\n");
+    printf("  [ -s, (--silent) ]\n");
+    printf("정숙 모드로서, 진행 내역이나 메시지 등을 출력하지 않습니다.\n");
     printf("HTTP response code만 가져올 때 유용하게 쓰입니다.\n\n");
     next_line();
 
@@ -158,6 +161,5 @@ void training_curl(void)
 	printf("\"curl\" 명령어의 학습이 끝났습니다.\n");
     printf("고생하셨습니다.\n");
 	
-    // Delete default directory
 	delete_defdir();
 }

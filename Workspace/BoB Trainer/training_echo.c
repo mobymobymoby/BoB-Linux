@@ -17,8 +17,6 @@ void training_echo(void)
     next_line();
     
     printf("\"echo\" 명령어의 실행 파일은 \"/usr/bin/echo\"로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"echo\"(으)로 있습니다.\n");
     next_line();
     
     printf("사용법은 \"echo [옵션] [출력할 문자열]\" 입니다.\n\n");
@@ -27,8 +25,8 @@ void training_echo(void)
     next_line();
     
     printf("\"echo\"에서 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[ -n ] : 개행 문자를 출력하지 않게 합니다.\n");
-    printf("[ -e ] : 이스케이프 문자를 인식할 수 있도록 합니다.\n\n");
+    printf("  [ -n ] : 개행 문자를 출력하지 않게 합니다.\n");
+    printf("  [ -e ] : 이스케이프 문자를 인식할 수 있도록 합니다.\n\n");
     printf("echo 명령어는 이스케이프 문자를 인식할 수 없는 것이 기본 값입니다.\n\n");
     next_line();
     
@@ -48,7 +46,7 @@ void training_echo(void)
     printf("[ \\  ] : 역슬래시를 출력해줍니다.\n");
     printf("[ \\0 ] : 널 문자 역할을 합니다.\n");
     printf("[ \\' ] : 작은 따옴표를 출력합니다.\n");
-    printf("[ \\\" ] : 큰 따옴표를 출력합니다.\n");
+    printf("[ \\\" ] : 큰 따옴표를 출력합니다.\n\n");
     next_line();
 
     printf("[실습] \"echo hello\"(을)를 명령어를 사용해 문자열 \"hello\"를 출력하도록 입력해보세요.\n");
@@ -56,7 +54,7 @@ void training_echo(void)
     just_run_command("echo hello");
     next_line();
 
-    printf("명령어가 성공적으로 동작했다면 터미널 창에 'hello'가 띄워졌을 것입니다.\n");
+    printf("\n명령어가 성공적으로 동작했다면 터미널 창에 'hello'가 띄워졌을 것입니다.\n");
     next_line();
 
     printf("\"echo\" 명령어는 유용하게 이용될 수 있는 명령어 입니다.\n");

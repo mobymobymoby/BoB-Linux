@@ -34,14 +34,14 @@ void training_group(void)
     next_line();
 	
     printf("사용법은 \"groups [계정 이름]\" 입니다.\n");
-    printf("ex) groups rookie\n");
+    printf("ex) groups rookie\n\n");
 	next_line();
 	
     printf("[실습] \"groups\" 명령어를 이용하여 'test' 계정이 속한 그룹을 출력해보세요.\n");
     printf("사용법 : groups [계정 이름]\n");
 	nothing_print_fake_run_command("groups test");
 	
-    printf("\ntest : tester\n");
+    printf("\n\ntest : tester\n");
 	next_line();
 	
     printf("\n위의 출력 결과를 보면, 'test'라는 계정이 속한 그룹은 'tester'라는 것을 보여줍니다.\n");
@@ -67,18 +67,18 @@ void training_group(void)
 	fake_run_command("sudo groupadd test_group");
     next_line();
 	
-    printf("그룹을 생성했을 때는, 별 다른 메시지를 출력하진 않습니다.\n");
+    printf("\n그룹을 생성했을 때는, 별 다른 메시지를 출력하진 않습니다.\n");
     next_line();
 
 	printf("그룹의 목록은 그룹을 관리하는 파일인 \"/etc/group\"을 확인하면 됩니다.\n\n\n");
     next_line();
 
     printf("\"groupadd\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf(" [-g] : 새로운 그룹을 생성하면서 GID를 부여하고 싶을 때 사용합니다.\n");
-    printf("        RedHat을 제외하고는 0 ~ 999까지 예약되어 있으므로\n");
-    printf("        '999' 이상의 번호가 부여됩니다.\n\n");
-    printf(" [-p] : 생성하는 그룹에 암호를 부여합니다.\n\n");
-    printf(" [-r] : 예약된 GID(0 ~ 999)로 할당할 때 사용합니다.\n\n");
+    printf("  [ -g ] : 새로운 그룹을 생성하면서 GID를 부여하고 싶을 때 사용합니다.\n");
+    printf("           RedHat을 제외하고는 0 ~ 999까지 예약되어 있으므로\n");
+    printf("           '999' 이상의 번호가 부여됩니다.\n\n");
+    printf("  [ -p ] : 생성하는 그룹에 암호를 부여합니다.\n\n");
+    printf("  [ -r ] : 예약된 GID(0 ~ 999)로 할당할 때 사용합니다.\n\n");
 	next_line();
 
     //groupdel
@@ -100,7 +100,7 @@ void training_group(void)
     fake_run_command("sudo groupdel tester");
     next_line();
 
-    printf("위의 실습처럼 \"groupdel\" 명령어를 사용하면 그룹을 삭제할 수 있습니다.\n");
+    printf("\n위의 실습처럼 \"groupdel\" 명령어를 사용하면 그룹을 삭제할 수 있습니다.\n");
     next_line();
 
     printf("\"groupdel\" 명령어의 자주 쓰이는 옵션은 '-f' 입니다.\n\n");
@@ -130,10 +130,11 @@ void training_group(void)
     printf("사용법 : gpasswd [옵션] [대상 계정 이름] [대상 그룹 이름]\n");
 	nothing_print_fake_run_command("gpasswd -a test test_group");
 	
-    printf("\nAdding user test to group test_group\n");
+    printf("\n\nAdding user test to group test_group\n\n");
 	next_line();
 	
-	printf("\n\n[실습] 위에서 배운 \"groups\" 명령어로 'test' 계정의 그룹 목록을 확인해보세요.\n");
+	printf("[실습] 위에서 배운 \"groups\" 명령어로 'test' 계정의 그룹 목록을 확인해보세요.\n");
+    printf("사용법 : groups [사용자 계정]\n");
 	nothing_print_fake_run_command("groups test");
 	
     printf("\ntest : tester test_group\n");
@@ -143,12 +144,12 @@ void training_group(void)
 	next_line();
 
     printf("\"gpasswd\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n\n");
-    printf(" [-a] : 그룹 관리자가 해당 그룹에 사용자를 추가합니다.\n\n");
-    printf(" [-A] : root가 해당 그룹에 관리자를 지정합니다.\n\n");
-    printf(" [-d] : 그룹 관리자가 해당 그룹에서 사용자를 없앱니다.\n\n");
-    printf(" [-M] : root가 그룹 멤버를 지정합니다.\n\n");
-    printf(" [-r] : 그룹 패스워드를 제거합니다.\n\n");
-    printf(" [-R] : 해당 그룹 멤버만 접근할 수 있도록 제한합니다.\n\n");
+    printf("  [ -a ] : 그룹 관리자가 해당 그룹에 사용자를 추가합니다.\n\n");
+    printf("  [ -A ] : root가 해당 그룹에 관리자를 지정합니다.\n\n");
+    printf("  [ -d ] : 그룹 관리자가 해당 그룹에서 사용자를 없앱니다.\n\n");
+    printf("  [ -M ] : root가 그룹 멤버를 지정합니다.\n\n");
+    printf("  [ -r ] : 그룹 패스워드를 제거합니다.\n\n");
+    printf("  [ -R ] : 해당 그룹 멤버만 접근할 수 있도록 제한합니다.\n\n");
     next_line();
 	
     printf("이번 학습에서는 그룹 관련 명령어를 배워보았습니다.\n\n");

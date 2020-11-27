@@ -7,7 +7,6 @@ void training_apt(void)
     system("clear");
 
     printf("이번에 학습할 명령어는 \"apt\" 입니다.\n\n");
-    next_line();
     
     printf("이번 학습에서는 기본적인 개념들과 내용이 많습니다.\n");
     next_line();
@@ -16,8 +15,6 @@ void training_apt(void)
     next_line();
     
     printf("\"apt\" 명령어의 실행 파일은 \"usr/bin/apt\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"apt\"(으)로 있습니다.\n");
     next_line();
     
     printf("대표적으로 'Ubuntu'와 'Kali linux'를 포함한\n");
@@ -147,7 +144,7 @@ void training_apt(void)
     next_line();
     
     printf("그 약속은 \"패키지이름_버전-릴리즈-아키텍쳐.deb\" 라고 표기하는 것입니다.\n");
-    printf("ex)vim_8.0.1453-1ubuntu1_amd64.deb\n");
+    printf("ex) vim_8.0.1453-1ubuntu1_amd64.deb\n");
     next_line();
     
     printf("하지만 \"dpkg\" 역시 의존성 문제를 해결해주지 못합니다.\n");
@@ -216,7 +213,7 @@ void training_apt(void)
     next_line();
     
     printf("Debian 계열 리눅스 시스템을 처음으로 켜면\n");
-    printf("\"sudo apt update\"를 입력하여 패키지 인덱스 정보를 업데이트 해줍니다.\n");
+    printf("\"sudo apt update\"를 입력하여 패키지 인덱스 정보를 업데이트 해줍니다.\n\n");
     next_line();
     
     printf("[실습] \"sudo apt udpate\"를 입력하여 패키지 인덱스 정보를 업데이트 해보세요.\n");
@@ -225,7 +222,7 @@ void training_apt(void)
     printf("\n잘 입력하셨다면 패키지 인덱스 정보가 업데이트 되었을 것입니다.\n");
     next_line();
     
-    printf("다음으로 설치되어 있는 패키지들을 새 버전으로 업그레이드해보겠습니다.\n");
+    printf("다음으로 설치되어 있는 패키지들을 새 버전으로 업그레이드해보겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"sudo apt upgrade\"를 입력하여 설치되어 있는 패키지들을 새 버전으로 업그레이드 해보세요.\n");
@@ -236,7 +233,7 @@ void training_apt(void)
     printf("위의 명령어로 패키지들을 업그레이드를 할 수 있다는 것을 확인하실 수 있을 것입니다.\n");
     next_line();
     
-    printf("이번에는 특정 패키지를 설치해보겠습니다.\n");
+    printf("이번에는 특정 패키지를 설치해보겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"sudo apt install gcc\"를 입력하여 'gcc' 패키지를 설치해보세요.\n");
@@ -246,7 +243,7 @@ void training_apt(void)
     printf("(기본적으로 리눅스는 gcc가 설치되어있습니다.)\n");
     next_line();
     
-    printf("마지막으로 방금 설치한 'gcc' 패키지를 제거해보겠습니다.\n");
+    printf("마지막으로 방금 설치한 'gcc' 패키지를 제거해보겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"sudo apt remove gcc\"을 입력하여 'gcc' 패키지를 제거해보세요.\n");

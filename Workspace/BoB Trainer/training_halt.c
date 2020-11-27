@@ -13,8 +13,6 @@ void training_halt(void)
     next_line();
 
     printf("\"halt\" 명령어의 실행 파일은 \"/usr/sbin/halt\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
-    printf("\"halt\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"halt [옵션]\" 입니다.\n");
@@ -25,10 +23,10 @@ void training_halt(void)
     next_line();
 
     printf("\"halt\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n\n");
-    printf("[ -d ] : /var/log/wtmp 파일에 로그를 남기지 않습니다.\n");
-    printf("[ -f ] : 강제로 종료합니다.\n");
-    printf("[ -n ] : 종료할 때 싱크를 하지 않습니다.\n");
-    printf("[ -w ] : 실제로 시스템을 종료하지 않고, /var/log/wtmp 파일에 로그만 남깁니다.\n");
+    printf("  [ -d ] : /var/log/wtmp 파일에 로그를 남기지 않습니다.\n");
+    printf("  [ -f ] : 강제로 종료합니다.\n");
+    printf("  [ -n ] : 종료할 때 싱크를 하지 않습니다.\n");
+    printf("  [ -w ] : 실제로 시스템을 종료하지 않고, /var/log/wtmp 파일에 로그만 남깁니다.\n\n");
     next_line();
 
     printf("[실습] halt 명령어를 사용하여 시스템을 종료해보세요.\n");
@@ -36,7 +34,7 @@ void training_halt(void)
     fake_run_command("halt");
     next_line();
 
-    printf("비슷하게 시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'poweroff' 가 있고\n");
+    printf("\n비슷하게 시스템 종료를 수행하는 명령어로는 'shutdown', 'init', 'poweroff' 가 있고\n");
     printf("시스템 재부팅을 수행하는 명령어로는 'shutdown', 'init', 'reboot'가 있습니다.\n");
     next_line();
     

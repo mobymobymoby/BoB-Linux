@@ -15,13 +15,12 @@ void training_chmod(void)
 	system("chmod 000 file1");
 
 	printf("이번에 학습할 명령어는 \"chmod\" 입니다.\n\n");
+
 	printf("\"chmod\"는 'Change mode'의 약자이며\n");
     printf("사용자가 파일이나 디렉토리에 접근할 수 있는 사용 권한을 변경할 때 사용합니다.\n");
 	next_line();
     
     printf("\"chmod\" 명령어의 실행 파일은 \"/usr/bin/chmod\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"chmod\"(으)로 있습니다.\n");
     next_line();
 
 	printf("사용법은 \"chmod [옵션] [모드] [파일]\" 입니다.\n");
@@ -34,10 +33,14 @@ void training_chmod(void)
 	next_line();
 
 	printf("\"chmod\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[ -R, --recursive ]\n디렉토리 내부의 모든 하위 디렉토리와 파일의 접근 권한을 변경합니다.\n\n");
-    printf("[ -c, --changes]\n권한이 변경된 파일의 정보를 출력합니다.\n\n");
-    printf("[ -f, --silent, --quite]\n중요한 오류메시지가 아닌 경우 출력하지 않습니다.\n\n");
-    printf("[ -V, --verbose]\n실행되고 있는 모든 파일을 나열해줍니다.\n\n");
+    printf("  [ -R (--recursive) ]\n");
+    printf("디렉토리 내부의 모든 하위 디렉토리와 파일의 접근 권한을 변경합니다.\n\n");
+    printf("  [ -c (--changes) ]\n");
+    printf("권한이 변경된 파일의 정보를 출력합니다.\n\n");
+    printf("  [ -f (--silent, --quite]\n");
+    printf("중요한 오류메시지가 아닌 경우 출력하지 않습니다.\n\n");
+    printf("  [ -V (--verbose]\n");
+    printf("실행되고 있는 모든 파일을 나열해줍니다.\n\n");
 	next_line();
 
 	printf("\"chmod\" 명령어의 [모드]를 지정하는 표기법에는 두가지 모드가 존재합니다.\n");
@@ -89,7 +92,7 @@ void training_chmod(void)
     run_command("chmod u+w,go+r file1");
     next_line();
     
-	printf("\n");
+	printf("\n\n");
 	system("ls -al");
 	printf("\n파일 목록을 출력하면 권한이 성공적으로 부여된 것을 확인할 수 있습니다.\n\n");
     next_line();
@@ -150,7 +153,7 @@ void training_chmod(void)
     run_command("chmod 244 file2");
     next_line();
 
-	printf("\n");
+	printf("\n\n");
 	system("ls -al");
 	printf("\n파일 목록을 출력하면 권한이 성공적으로 부여된 것을 확인할 수 있습니다.\n\n");
 	next_line();

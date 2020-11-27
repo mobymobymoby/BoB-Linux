@@ -13,8 +13,6 @@ void training_kill(void)
     next_line();
 
     printf("\"kill\" 명령어의 실행 파일은 \"/usr/bin/kill\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"kill\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"kill [옵션 or 시그널] [PID]\" 입니다.\n");
@@ -38,19 +36,19 @@ void training_kill(void)
 
     printf("특히 강제 종료(9번)는 최후의 수단으로 사용해야 합니다.\n");
     printf("프로세스를 강제 종료하게 되면 데이터가 유실될 수 있기 때문입니다.\n\n");
-    printf("추천드리는 방법은 기본 종료(15번) 시그널을 여러 번 보내어 종료하는 것입니다.\n");
+    printf("추천드리는 방법은 기본 종료(15번) 시그널을 여러 번 보내어 종료하는 것입니다.\n\n");
     next_line();
 
     printf("[실습] \"kill\" 명령어로 PID가 '1234'인 프로세스를 '강제 종료' 하십시오.\n");
     printf("사용법 : kill -[시그널 번호] [PID]\n");
     fake_run_command("kill -9 1234");
-    printf("\nPID가 '1234'인 프로세스가 '강제 종료' 되었습니다.\n");
+    printf("\nPID가 '1234'인 프로세스가 '강제 종료' 되었습니다.\n\n");
     next_line();
 
     printf("[실습] \"kill\" 명령어로 PID가 '5678'인 프로세스를 '정상 종료' 하십시오.\n");
     printf("사용법 : kill -[시그널 번호] [PID]\n");
     fake_run_command("kill -15 5678");
-    printf("\nPID가 '5678'인 프로세스가 '정상 종료' 되었습니다.\n");
+    printf("\nPID가 '5678'인 프로세스가 '정상 종료' 되었습니다.\n\n");
     next_line();
 
     printf("[실습] \"kill\" 명령어에 옵션을 넣지 않고 PID가 '2020'인 프로세스를 '정상 종료' 하십시오.\n");
@@ -58,6 +56,7 @@ void training_kill(void)
     fake_run_command("kill 2020");
     printf("\nPID가 '2020'인 프로세스가 '정상 종료' 되었습니다.\n");
     next_line();
+
     printf("\"kill [PID]\"(은)는 \"kill -15 [PID]\"와 같이 '-15' 시그널을 준 것과 같습니다.\n");
     next_line();
     // 명령어 실습
@@ -74,12 +73,12 @@ void training_kill(void)
     next_line();
 
     printf("\"killall 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[-e] : 긴 프로세스 이름에 일치해야 합니다.\n");
-    printf("[-I] : 대소문자를 구별하지 않고 프로세스 이름으로 종료합니다.\n");
-    printf("[-y] : 지정된 시간보다 이전 프로세스를 종료합니다.\n");
-    printf("[-o] : 지정된 시간보다 이후 프로세스를 종료합니다.\n");
-    printf("[-i] : 프로세스를 종료 하기 전 종료 여부 메세지를 확인합니다.\n");
-    printf("[-u] : 지정된 사용자로 실행된 프로세스만 종료합니다.\n");
+    printf("  [ -e ] : 긴 프로세스 이름에 일치해야 합니다.\n");
+    printf("  [ -I ] : 대소문자를 구별하지 않고 프로세스 이름으로 종료합니다.\n");
+    printf("  [ -y ] : 지정된 시간보다 이전 프로세스를 종료합니다.\n");
+    printf("  [ -o ] : 지정된 시간보다 이후 프로세스를 종료합니다.\n");
+    printf("  [ -i ] : 프로세스를 종료 하기 전 종료 여부 메세지를 확인합니다.\n");
+    printf("  [ -u ] : 지정된 사용자로 실행된 프로세스만 종료합니다.\n");
     next_line();
 
     printf("\"killall\" 명령어는 이 트레이닝에서는 실습을 하지 않겠습니다.\n");

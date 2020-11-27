@@ -12,8 +12,6 @@ void training_init(void)
     next_line();
     
     printf("\"init\" 명령어의 실행 파일은 \"/usr/sbin/init\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
-    printf("\"init\"(으)로 있습니다.\n");
     next_line();
 
     printf("유닉스 기반의 운영 체제에서 \"init\"(은)는 시스템의 부팅 과정 중 최초의 프로세스이고\n");

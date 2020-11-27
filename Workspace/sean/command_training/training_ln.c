@@ -21,8 +21,6 @@ void training_ln(void)
 	next_line();
 
     printf("\"ln\" 명령어의 실행 파일은 \"/usr/bin/ln\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"ln\"(으)로 있습니다.\n");
     next_line();
 
     printf("링크를 사용하는 이유는\n");
@@ -86,13 +84,13 @@ void training_ln(void)
 	next_line();
 	
     printf("\"ln\"에서 자주 쓰이는 옵션은 다음과 같습니다.\n\n\n");
-    printf("[-s, --symbolic] : 심볼릭 링크 생성 시에 사용하는 옵션입니다.\n");
-    printf("[-S, --suffix]   : 백업 파일 생성 시 원하는 접미사를 지정합니다.\n");  
-    printf("[-v, --verbose]  : 링크를 만드는 정보를 자세히 출력합니다.\n");
-    printf("[-f, --force]    : 링크 파일 존재 시에 삭제하고 생성합니다.\n");
-    printf("[-b, --backup]   : 대상 파일이 존재할 경우\n");
-    printf("                   백업 파일을 만든 후 링크 파일을 생성합니다.\n");
-    printf("[-i, --interactive] : 대상 파일이 존재할 경우\n");
+    printf("  [ -s, (--symbolic) ] : 심볼릭 링크 생성 시에 사용하는 옵션입니다.\n");
+    printf("  [ -S, (--suffix) ]   : 백업 파일 생성 시 원하는 접미사를 지정합니다.\n");  
+    printf("  [ -v, (--verbose) ]  : 링크를 만드는 정보를 자세히 출력합니다.\n");
+    printf("  [ -f, (--force) ]    : 링크 파일 존재 시에 삭제하고 생성합니다.\n");
+    printf("  [ -b, (--backup) ]   : 대상 파일이 존재할 경우\n");
+    printf("                     백업 파일을 만든 후 링크 파일을 생성합니다.\n");
+    printf("  [ -i, (--interactive) ] : 대상 파일이 존재할 경우\n");
     printf("                      대상 파일을 지울 것인지 여부를 확인합니다.\n\n");
     printf("옵션을 입력하지 않으면 하드 링크를 생성합니다.\n\n\n");
 	next_line();

@@ -13,8 +13,6 @@ void training_comm(void)
     next_line();
     
     printf("\"comm\" 명령어의 실행 파일은 \"/usr/bin/comm\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"comm\"(으)로 있습니다.\n");
     next_line();
     
     printf("사용법은 \"comm [옵션] [비교할 파일1] [비교할 파일2]\"입니다.\n");
@@ -32,7 +30,7 @@ void training_comm(void)
     printf("own\ntwo\nthree\nfour\nfive\n");
     just_run_command("cat > test1");
     
-    printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n");
+    printf("\n실습에 필요한 파일 한 개가 만들어졌습니다.\n\n");
     next_line();
     
     printf("[실습] \"cat > test2\"을(를) 입력하여 아래의 내용을 바로 입력하시고\n");
@@ -40,16 +38,16 @@ void training_comm(void)
     printf("own\ntwo\nthree\nfour\nsix\nseven\n");
     just_run_command("cat > test2");
     
-    printf("\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n");
+    printf("\n\n이제 실습에 필요한 파일 두 개 모두 만들어졌습니다.\n\n");
     next_line();
     
-    printf("\"ls\"를 입력하여 파일 두 개가 잘 만들어졌는지 확인해봅니다.\n");
+    printf("[실습] \"ls\"를 입력하여 파일 두 개가 잘 만들어졌는지 확인해봅니다.\n");
     just_run_command("ls");
     
-    printf("\n'test1' 파일과 'test2' 파일이 잘 만들어졌습니다.\n");
+    printf("\n\n'test1' 파일과 'test2' 파일이 잘 만들어졌습니다.\n");
     next_line();
     
-    printf("\n이제 위에서 만든 파일 두 개를 비교해 볼 것입니다.\n");
+    printf("\n이제 위에서 만든 파일 두 개를 비교해 볼 것입니다.\n\n");
     next_line();
     
     printf("[실습] \"comm\" 명령어를 옵션을 넣지 않고 이용하여 'test1' 파일과 'test2' 파일의 내용을 비교해보세요.\n");
@@ -77,15 +75,18 @@ void training_comm(void)
     next_line();
     
     printf("\"comm\" 명령어의 자주 쓰이는 옵션들은 다음과 같습니다.\n\n");
-    printf("[-1]\n두 개의 파일을 비교하지만, 첫 번째 파일에만 있는 내용은 출력하지 않고\n");
+    printf("  [-1]\n");
+    printf("두 개의 파일을 비교하지만, 첫 번째 파일에만 있는 내용은 출력하지 않고\n");
     printf("두 파일 모두 있거나 두 번째 파일에 있는 내용은 출력합니다.\n\n");
-    printf("[-2]\n두 개의 파일을 비교하지만, 두 번째 파일에만 있는 내용은 출력하지 않고\n");
+    printf("  [-2]\n");
+    printf("두 개의 파일을 비교하지만, 두 번째 파일에만 있는 내용은 출력하지 않고\n");
     printf("두 파일 모두 있거나 첫 번째 파일에 있는 내용은 출력합니다.\n\n");
-    printf("[-3]\n두 개의 파일을 비교하지만, 두 파일 모두에 있는 내용은 출력하지 않고\n");
+    printf("  [-3]\n");
+    printf("두 개의 파일을 비교하지만, 두 파일 모두에 있는 내용은 출력하지 않고\n");
     printf("첫 번째 파일에만 있거나 두 번째 파일에만 있는 내용은 출력합니다.\n\n");
     next_line();
     
-    printf("'test1' 파일과 'test2' 파일을 가지고 옵션들을 차례대로 실습해보겠습니다.\n");
+    printf("'test1' 파일과 'test2' 파일을 가지고 옵션들을 차례대로 실습해보겠습니다.\n\n");
     next_line();
     
     printf("[실습] 'test1' 파일과 'test2' 파일을 '-1' 옵션을 이용하여 비교해보세요.\n");
@@ -117,7 +118,7 @@ void training_comm(void)
     just_run_command("comm -3 test1 test2");
     next_line();
     
-    printf("학습을 잘 따라오셨다면 이번에는 다음과 같이 출력되었을 것입니다.\n");
+    printf("\n학습을 잘 따라오셨다면 이번에는 다음과 같이 출력되었을 것입니다.\n");
     printf("\nfive\n\tsix\n\tseven\n");
     next_line();
     

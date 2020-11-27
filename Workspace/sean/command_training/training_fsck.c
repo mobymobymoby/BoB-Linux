@@ -11,8 +11,6 @@ void training_fsck(void){
     next_line();
 
     printf("\"fsck\" 명령어의 실행 파일은 \"/usr/sbin/fsck\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
-    printf("\"fsck\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"fsck [옵션] [파일시스템 또는 디스크 디바이스]\" 입니다.\n");
@@ -35,7 +33,7 @@ void training_fsck(void){
     printf("임시적으로 '/lost+found' 디렉토리에서 작업을 수행하고 복구가 되면 사라지게 됩니다.\n\n");
     next_line();
 
-    printf("파일 시스템 검사 절차는 다음과 같습니다.\n\n\n");
+    printf("파일 시스템 검사 절차는 다음과 같습니다.\n\n");
     printf(" 단계 1  : 블록들과 파일 크기를 검사합니다.\n\n");
     printf(" 단계 2a : 중복된 이름이 있는지 검사합니다.\n\n");
     printf(" 단계 2b : 경로 이름을 검사합니다.\n\n");
@@ -59,16 +57,22 @@ void training_fsck(void){
     fake_run_command("fsck /dev/sdb1");
     next_line();
 
-    printf("위에서 실습했던 명령어로 파티션을 검사할 수 있습니다.\n");
+    printf("\n위에서 실습했던 명령어로 파티션을 검사할 수 있습니다.\n");
     next_line();
 
     system("clear");
     printf("\"fsck\" 명령어의 옵션은 다음과 같습니다.\n\n");
-    printf(" [-A]\n일반적으로 /etc/fstab에 나와있는 파일 시스템들을 검사하고\n/etc/rc 시스템 초기화 파일에서 일관적으로 검사합니다.\n\n");
-    printf(" [-R]\n'-A' 옵션과 같이 사용하면 루트 파일 시스템을 제외한 모든 파일 시스템을 점검합니다.\n\n");
-    printf(" [-T]\n검사할 때 제목을 보여주지 않습니다.\n\n");
-    printf(" [-N]\n실제로 실행은 하지 않고, 어던 작업을 할 것인지만 보여줍니다.\n\n");
-    printf(" [-V]\n실행되는 각 파일 시스템용 명령을 포함하여 자세히 출력해줍니다.\n\n");
+    printf(" [ -A ]\n");
+    printf("일반적으로 /etc/fstab에 나와있는 파일 시스템들을 검사하고\n");
+    printf("/etc/rc 시스템 초기화 파일에서 일관적으로 검사합니다.\n\n");
+    printf(" [ -R ]\n");
+    printf("'-A' 옵션과 같이 사용하면 루트 파일 시스템을 제외한 모든 파일 시스템을 점검합니다.\n\n");
+    printf(" [ -T ]\n");
+    printf("검사할 때 제목을 보여주지 않습니다.\n\n");
+    printf(" [ -N ]\n");
+    printf("실제로 실행은 하지 않고, 어던 작업을 할 것인지만 보여줍니다.\n\n");
+    printf(" [ -V ]\n");
+    printf("실행되는 각 파일 시스템용 명령을 포함하여 자세히 출력해줍니다.\n\n");
     next_line();
 
     system("clear");
@@ -83,12 +87,12 @@ void training_fsck(void){
 
     system("clear");
     printf("다음은 \"fsck\"의 확장된 명령어인 \"e2fsck\"의 옵션입니다.\n\n\n");
-    printf(" [-v] : 점검 내역을 자세하게 출력해줍니다.\n\n");
-    printf(" [-y] : 모든 응답을 다 yes를 해서 자동으로 점검, 수리를 수행합니다.\n\n");
-    printf(" [-n] : 모든 응답을 다 no를 해서 점검만 수행합니다.\n\n");
-    printf(" [-f] : 파일 시스템 이상 유무와 관계없이 강제로 점검을 합니다.\n\n");
-    printf(" [-p] : 파일 시스템을 검사하면서 자동으로 복구도 해줍니다.\n\n");
-    printf(" [-c] : BAD BLOCK을 체크합니다.\n\n");
+    printf("  [ -v ] : 점검 내역을 자세하게 출력해줍니다.\n\n");
+    printf("  [ -y ] : 모든 응답을 다 yes를 해서 자동으로 점검, 수리를 수행합니다.\n\n");
+    printf("  [ -n ] : 모든 응답을 다 no를 해서 점검만 수행합니다.\n\n");
+    printf("  [ -f ] : 파일 시스템 이상 유무와 관계없이 강제로 점검을 합니다.\n\n");
+    printf("  [ -p ] : 파일 시스템을 검사하면서 자동으로 복구도 해줍니다.\n\n");
+    printf("  [ -c ] : BAD BLOCK을 체크합니다.\n\n");
     next_line();
 
     system("clear");

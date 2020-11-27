@@ -12,8 +12,6 @@ void training_chsh(void)
     next_line();
     
     printf("\"chsh\" 명령어의 실행 파일은 \"usr/bin/chsh\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"chsh\"(으)로 있습니다.\n");
     next_line();
     
     printf("\"chsh\" 명령어로 바꿀 수 있는 Shell은 \"/etc/shells\" 파일에 적혀있는\n");
@@ -47,7 +45,7 @@ void training_chsh(void)
     printf("\"cat /etc/passwd\"라고 입력해보세요.\n");
     just_run_command("cat /etc/passwd");
     
-    printf("\n위에 출력값 중 맨 왼쪽에 자신의 계정 이름인\n");
+    printf("\n\n위에 출력값 중 맨 왼쪽에 자신의 계정 이름인\n");
     printf("\"%s\"이(가) 적힌 부분을 찾아 맨 오른쪽을 보시면\n", getlogin());
     printf("\"/bin/bash\" 혹은 자신이 사용 중인 Shell이 적혀 있을 것입니다.\n");
     next_line();
@@ -69,7 +67,7 @@ void training_chsh(void)
     just_run_command("echo $SHELL");
     next_line();
     
-    printf("잘 따라하셨다면 \"/bin/bash\" 혹은 현재 사용자가 사용 중인 Shell이 출력되었을 것입니다.\n");
+    printf("\n잘 따라하셨다면 \"/bin/bash\" 혹은 현재 사용자가 사용 중인 Shell이 출력되었을 것입니다.\n");
     next_line();
     
     printf("Shell은 'root' 디렉토리 밑에 'bin' 디렉토리 밑에 있기 때문에\n");
@@ -82,7 +80,7 @@ void training_chsh(void)
     printf("[실습] \"ls /bin/*sh\"라고 입력해보세요.\n");
     just_run_command("ls /bin/*sh");
     
-    printf("\n위에 \"sh\" 텍스트를 포함한 파일과 기본으로 설치 되어있는 Shell들이 보일 것입니다.\n");
+    printf("\n\n위에 \"sh\" 텍스트를 포함한 파일과 기본으로 설치 되어있는 Shell들이 보일 것입니다.\n");
     next_line();
     
     printf("다른 Shell을 사용하실려면 콘솔 혹은 터미널에서 설치되어 있는 Shell들 중에서\n");
@@ -108,7 +106,7 @@ void training_chsh(void)
     printf("[실습] \"cat /etc/shells\"라고 입력하여 현재 바꿀 수 있는 Shell들을 확인해보세요.\n");
     just_run_command("cat /etc/shells");
     
-    printf("\n위에 보이는 것들이 현재 \"/etc/shells\" 파일에 저장되어 있어서\n");
+    printf("\n\n위에 보이는 것들이 현재 \"/etc/shells\" 파일에 저장되어 있어서\n");
     printf("사용자가 변경 가능한 Shell들 입니다.\n");
     next_line();
 
@@ -121,20 +119,20 @@ void training_chsh(void)
     printf("사용법 : chsh [옵션] [변경하고 싶은 Shell]\n");
     just_run_command("chsh -s /bin/sh");
     
-    printf("\n올바르게 입력하셨다면 기존의 Shell에서 \"/bin/sh\"로 변경 되었을 것입니다.\n\n");
+    printf("\n\n올바르게 입력하셨다면 기존의 Shell에서 \"/bin/sh\"로 변경 되었을 것입니다.\n\n");
     next_line();
 
     printf("\"[실습] cat /etc/passwd\"를 입력하여 자신의 Shell을 확인해보세요.\n");
     just_run_command("cat /etc/passwd");
     
-    printf("\n자신의 계정 이름을 찾아 맨 오른쪽을 보시면\n");
+    printf("\n\n자신의 계정 이름을 찾아 맨 오른쪽을 보시면\n");
     printf("'/bin/sh'라고 적힌 걸 확인하실 수 있을 것입니다.\n\n");
     next_line();
     
     printf("[실습] 하지만 \"echo $SHELL\"이라고 명령어를 입력해서 확인해보세요.\n");
     just_run_command("echo $SHELL");
     
-    printf("\n아직 Shell이 \"/bin/sh\"로 바뀌지 않은 것을 보실 수 있습니다.\n");
+    printf("\n\n아직 Shell이 \"/bin/sh\"로 바뀌지 않은 것을 보실 수 있습니다.\n");
     next_line();
     
     printf("그 이유는 아까 말했듯이 \"chsh\" 명령어로 바꾸면\n");
@@ -149,7 +147,7 @@ void training_chsh(void)
     next_line();
     
     printf("\"chsh\" 명령어의 옵션은\n");
-    printf("'-s (--shell)'(와)과 '-R (--root)'이 있지만 '-s'만 알아둬도 됩니다.\n");
+    printf("[ -s (--shell) ](와)과 [-R (--root) ](이)가 있지만 '-s'만 알아둬도 됩니다.\n");
     next_line();
     
     printf("지금까지 \"chsh\" 명령어와 \"chsh\"를 이용하여\n");

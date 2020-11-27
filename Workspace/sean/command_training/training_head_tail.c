@@ -32,8 +32,6 @@ void training_head_tail(void)
     next_line();
 
     printf("위의 두 명령어의 실행파일은 \"/usr/bin\" 디렉토리 밑에 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"head\"와 \"tail\"(으)로 있습니다.\n");
     next_line();
 
     //head
@@ -47,7 +45,7 @@ void training_head_tail(void)
     next_line();
 
 	printf("사용법은 \" head [옵션] [파일 이름]\" 입니다.\n");
-    printf("ex) head test.txt\n");
+    printf("ex) head test.txt\n\n");
 	next_line();
 	
     printf("[실습] \"head\"를 아무런 옵션 없이 이용하여 'textfile'의 내용을 출력해보세요.\n");
@@ -78,10 +76,16 @@ void training_head_tail(void)
     next_line();
 
     printf("\"head\" 명령어의 옵션은 다음과 같습니다.\n\n");
-    printf("[ -c, --bytes=[-]K ]\n각 파일의 처음부터 K bytes까지를 출력합니다.\n'-'를 붙일 경우에는 각 파일의 마지막 K bytes를 출력합니다.\n\n");
-    printf("[ -n, --linux=[-]K ]\n각 파일의 처음 10개 행을 출력하지 않고, 처음부터 k번째 행까지 출력합니다.\n'-'를 붙일 경우에는 각 파일의 마지막 K 번째 행을 출력합니다.\n\n");
-    printf("[ -q, --quiet, --silent ]\n파일의 이름을 header에 출력하지 않습니다.\n\n");
-    printf("[ -v, --verbose ]\n항상 파일의 이름을 header에 출력합니다.\n\n");
+    printf("  [ -c, --bytes=[-]K ]\n");
+    printf("각 파일의 처음부터 K bytes까지를 출력합니다.\n");
+    printf("'-'를 붙일 경우에는 각 파일의 마지막 K bytes를 출력합니다.\n\n");
+    printf("  [ -n, --linux=[-]K ]\n");
+    printf("각 파일의 처음 10개 행을 출력하지 않고, 처음부터 k번째 행까지 출력합니다.\n");
+    printf("'-'를 붙일 경우에는 각 파일의 마지막 K 번째 행을 출력합니다.\n\n");
+    printf("  [ -q, --quiet, --silent ]\n");
+    printf("파일의 이름을 header에 출력하지 않습니다.\n\n");
+    printf("  [ -v, --verbose ]\n");
+    printf("항상 파일의 이름을 header에 출력합니다.\n\n");
     next_line();
 
     //tail
@@ -92,7 +96,7 @@ void training_head_tail(void)
 	printf("다른 점이 있다면 \"tail\"은 파일의 맨 뒤의 내용을 읽어옵니다.\n");
 	next_line();
 	
-    printf("\"tail\"을 아무런 옵션 없이 사용하면 맨 뒤부터 위로 10줄의 내용을 출력합니다.\n");
+    printf("\"tail\"을 아무런 옵션 없이 사용하면 맨 뒤부터 위로 10줄의 내용을 출력합니다.\n\n");
     next_line();
 
 	printf("[실습] \"tail\"을 옵션 없이 이용하여 'textfile'의 내용을 출력해보세요.\n");
@@ -105,7 +109,8 @@ void training_head_tail(void)
     printf("tail도 역시 '-n' 옵션을 이용하여 원하는 줄 개수 만큼 뒤에서 출력할 수 있습니다.\n\n");
 	next_line();
 	
-    printf("\"tail\"에 '-n 20' 옵션을 이용하여 뒤에서 20줄 만큼 'textfile'의 내용을 출력해보세요.\n");
+    printf("[실습] \"tail\"에 '-n 20' 옵션을 이용하여\n");
+    printf("뒤에서 20줄 만큼 'textfile'의 내용을 출력해보세요.\n");
 	printf("사용법 : tail [옵션] [파일 이름]\n");
 	run_command("tail -n 20 textfile");
 	

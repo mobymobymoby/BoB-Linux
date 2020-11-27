@@ -13,8 +13,6 @@ void training_grep(void)
     next_line();
     
     printf("\"grep\" 명령어의 실행 파일은 \"/usr/bin/grep\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"grep\"(으)로 있습니다.\n");
     next_line();
     
     printf("\"grep\" 명령어는 리눅스에서 자주 사용되는 명령어들 중 하나입니다.\n");
@@ -47,7 +45,8 @@ void training_grep(void)
     next_line();
     
     printf("\"grep\" 명령어는 주로\n");
-    printf("앞의 명령어 실행 결과로 나온 출력을 다음 명령어의 입력으로 이어지게 해주는 'pipe(|)'와 같이 조합하여 이용됩니다.\n");
+    printf("앞의 명령어를 실행한 결과로 나온 출력을 다음 명령어의 입력으로 이어지게 해주는\n");
+    printf("'pipe(|)'와 같이 조합하여 이용됩니다.\n\n");
     next_line();
     
     printf("[실습] 프로세스 목록을 보여주는 \"ps\" 명령어와 조합하여 \"ps aux | grep sh\"를 입력해보세요.\n");
@@ -64,16 +63,18 @@ void training_grep(void)
     next_line();
     
     printf("즉, 쉽게 말하자면 정규 표현식에서 사용되는 '메타 문자'라는 것을 활용하여\n");
-    printf("특정 문자열만을 검색하는 것이 아니라, 지정된 패턴에 해당하는 문자열은 모두 검색되게 할 때 사용하는 표현식입니다.\n");
+    printf("특정 문자열만을 검색하는 것이 아니라\n");
+    printf("지정된 패턴에 해당하는 문자열은 모두 검색되게 할 때 사용하는 표현식입니다.\n");
     next_line();
     
     printf("정규표현식은 이 트레이닝에서 다 다루기는 힘드므로 '메타 문자'와 '의미'에 대해서만 알아보겠습니다.\n");
     next_line();
     
+    system("clear");
     printf("[ . ]\n줄바꿈 문자인 '\\n'을 제외한 임의의 문자 한 개가 있는 모든 문자열을 검색합니다.\n");
     printf("        : ex) \"x.\" : 문자 'x' 뒤에 한 문자가 붙은 모든 문자열\n\n");
     printf("[ * ]\n반복을 나타내는 메타 문자로, 메타 문자 '*' 앞에 적힌 글자가 0번 이상 반복되는 모든 문자열을 검색합니다.\n");
-    printf("[ {n, m} ]\n이 또한 반복을 나타내는 메타 문자로, 위의 '*'와는 다르게 반복 횟수를 n번 이상 m번 이하로 지정할 수 있습니다.\n\n");
+    printf("[ {n, m} ]\n이 또한 반복을 나타내는 메타 문자로\n위의 '*'와는 다르게 반복 횟수를 n번 이상 m번 이하로 지정할 수 있습니다.\n\n");
     printf("[ ^ ]\n검색하고자 하는 문자열로 시작하는 문자열의 앞에 써줌으로서\n");
     printf("\"^hello\"와 같이 하면 \"hello\"라는 문자열로 시작하는 문자열들을 검색합니다.\n\n");
     printf("[ $ ]\n위의 '^'와는 반대로 검색하고자 하는 문자열로 끝나는 문자열의 뒤에 써줌으로서\n");
@@ -116,25 +117,25 @@ void training_grep(void)
     printf("ex) [^(abc)]d] : 'd' 앞에 'abc'가 아닌 문자 또는 문자열\n");
     next_line();
     
-    printf("\"grep\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n");
-    next_line();
+    system("clear");
+    printf("\"grep\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
     
-    printf("-c : 패턴이 일치하는 행의 수를 출력합니다.\n");
-    printf("-i : 비교시 대소문자를 구별하지 않습니다.\n");
-    printf("-v : 지정한 패턴과 일치하지 않는 행만 출력합니다\n");
-    printf("-n : 행의 번호를 함께 출력합니다.\n");
-    printf("-l : 패턴이 포함된 파일의 이름을 출력합니다.\n");
-    printf("-w : 패턴이 전체 단어와 일치하는 행만 출력합니다.\n");
-    printf("-E : \"grep\" 명령어의 기본 사용 문법에서 [패턴] 부분을 확장 정규 표현식으로 해석합니다\n");
-    printf("-F : \"grep\" 명령어의 기본 사용 문법에서\n");
-    printf("     [패턴] 부분을 정규 표현식이 아닌 일반 문자열로 해석합니다.\n");
-    printf("-z : 라인을 줄 바꿈('\\n')이 아닌 NULL(\\0)로 구분합니다.\n");
+    printf("  [ -c ] : 패턴이 일치하는 행의 수를 출력합니다.\n");
+    printf("  [ -i ] : 비교시 대소문자를 구별하지 않습니다.\n");
+    printf("  [ -v ] : 지정한 패턴과 일치하지 않는 행만 출력합니다\n");
+    printf("  [ -n ] : 행의 번호를 함께 출력합니다.\n");
+    printf("  [ -l ] : 패턴이 포함된 파일의 이름을 출력합니다.\n");
+    printf("  [ -w ] : 패턴이 전체 단어와 일치하는 행만 출력합니다.\n");
+    printf("  [ -E ] : \"grep\" 명령어의 기본 사용 문법에서 [패턴] 부분을 확장 정규 표현식으로 해석합니다\n");
+    printf("  [ -F ] : \"grep\" 명령어의 기본 사용 문법에서\n");
+    printf("           [패턴] 부분을 정규 표현식이 아닌 일반 문자열로 해석합니다.\n");
+    printf("  [ -z ] : 라인을 줄 바꿈('\\n')이 아닌 NULL(\\0)로 구분합니다.\n\n");
     next_line();
     
     printf("위의 옵션들 중 2개만 실습해보도록 하겠습니다.\n");
     next_line();
     
-    printf("먼저 실습 전에 파일을 만들어 내용을 입력하도록 하겠습니다.\n");
+    printf("먼저 실습 전에 파일을 만들어 내용을 입력하도록 하겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"cat > test.txt\"을 입력하여 아래의 내용을 바로 입력하시고\n");
@@ -144,19 +145,19 @@ void training_grep(void)
     printf("i'm studying\n");
     just_run_command("cat > test.txt");
     
-    printf("\n잘 따라하셨다면 test.txt 파일이 생성되고 위 3개의 문장이 입력되어 있을 것입니다.\n");
+    printf("\n\n잘 따라하셨다면 test.txt 파일이 생성되고 위 3개의 문장이 입력되어 있을 것입니다.\n");
     next_line();
     
     printf("이제 실습해 보도록 하겠습니다.\n");
     next_line();
     
-    printf("문자열을 검색할 때 대소문자를 구분하지 않고 검색하게 하는 옵션을 실습해보겠습니다.\n");
+    printf("문자열을 검색할 때 대소문자를 구분하지 않고 검색하게 하는 옵션을 실습해보겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"grep -i \"world\" test.txt\"를 입력하여 -i 옵션을 실습해보세요.\n");
     just_run_command("grep -i \"world\" test.txt");
     
-    printf("\n잘 따라하셨다면 \"Hello world\"와 \"good morning world\"가 출력되었을 것입니다\n");
+    printf("\n\n잘 따라하셨다면 \"Hello world\"와 \"good morning world\"가 출력되었을 것입니다\n");
     next_line();
     
     printf("'-i' 옵션은 문자열을 검색할 때 대소문자를 구분하지 않게 하는 옵션입니다.\n");
@@ -165,13 +166,13 @@ void training_grep(void)
     printf("이번에는 정규표현식을 이용하여 실습해보겠습니다.\n");
     next_line();
     
-    printf("'s'로 시작하여 'g'로 끝나는 문자열을 검색하는데 해당 문자열의 행 번호도 같이 출력되게 하겠습니다.\n");
+    printf("'s'로 시작하여 'g'로 끝나는 문자열을 검색하는데 해당 문자열의 행 번호도 같이 출력되게 하겠습니다.\n\n");
     next_line();
     
     printf("[실습] \"grep -n \"s.*g\" test.txt\"를 입력하여 실습해보세요.\n");
     just_run_command("grep -n \"s.*g\" test.txt");
     
-    printf("\n잘 따라하셨다면 \"3:i'm studying\"이 출력되었을 것입니다.\n");
+    printf("\n\n잘 따라하셨다면 \"3:i'm studying\"이 출력되었을 것입니다.\n");
     next_line();
     
     printf("'-n' 옵션은 검색된 문자열의 행 번호를 출력해줍니다.\n\n");

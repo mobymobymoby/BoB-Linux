@@ -13,8 +13,6 @@ void training_locate(void)
     next_line();
     
     printf("\"locate\" 명령어의 실행 파일은 \"usr/bin/locate\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"locate\"(으)로 있습니다.\n");
     next_line();
     
     printf("\"find\" 명령어는 다양한 옵션이 있어서 원하는 파일을 거의 완벽하게 찾을 수 있지만\n");
@@ -60,15 +58,15 @@ void training_locate(void)
     printf("사용법 : locate [검색할 명령어]\n");
     just_run_command("locate find");
     
-    printf("\n잘 따라오셨다면 \"find\" 단어가 들어간 여러 파일들의 경로들이 출력되었을 것입니다.\n");
+    printf("\n\n잘 따라오셨다면 \"find\" 단어가 들어간 여러 파일들의 경로들이 출력되었을 것입니다.\n");
     next_line();
     
     system("clear");
     printf("\"locate\" 명령어에서 자주 쓰이는 옵션들은 다음과 같습니다.\n");
     next_line();
     
-    printf("-e : 검색에서 제외할 디렉토리를 지정합니다.\n");
-    printf("-l : 결과에서 몇 개만 보여줄 것인지 제한합니다.\n");
+    printf("  [ -e ] : 검색에서 제외할 디렉토리를 지정합니다.\n");
+    printf("  [ -l ]: 결과에서 몇 개만 보여줄 것인지 제한합니다.\n");
     next_line();
     
     printf("실행 결과에서 n개만 보여주겠끔 하는 옵션을 실습하겠습니다.\n\n");
@@ -78,7 +76,7 @@ void training_locate(void)
     printf("사용법 : locate [옵션] [검색할 문자열 or 패턴]\n");
     just_run_command("locate -l 10 *.deb");
     
-    printf("\n잘 입력하셨다면, 10개의 .deb 확장자를 가진 파일들의 경로가 출력되었을 것입니다.\n");
+    printf("\n\n잘 입력하셨다면, 10개의 .deb 확장자를 가진 파일들의 경로가 출력되었을 것입니다.\n");
     printf("(아무것도 출력되지 않는다면 '.deb' 확장자의 파일이 없다는 것입니다.)\n");
     next_line();
     

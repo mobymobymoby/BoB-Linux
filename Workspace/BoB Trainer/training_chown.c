@@ -16,8 +16,6 @@ void training_chown(void)
 	next_line();
 
     printf("\"chown\" 명령어의 실행 파일은 \"/usr/bin/chown\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"chown\"(으)로 있습니다.\n");
     next_line();
 
 	printf("사용법은 \"chown [옵션] [소유자][:그룹] [파일 혹은 디렉토리]\" 입니다.\n");
@@ -32,10 +30,14 @@ void training_chown(void)
 	next_line();
 
 	printf("\"chown\" 명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[ -R, --recursive ]\n디렉토리 내부의 모든 하위 디렉토리와 파일의 소유 권한을 변경합니다.\n\n");
-    printf("[ -c, --change ]\n변경 정보를 출력합니다.\n\n");
-    printf("[ -f, --silent, --quite ]\n중요한 오류메시지가 아닌 경우 출력하지 않습니다.\n\n");
-    printf("[ -h, --no-dereference ]\n심볼릭 링크 소유자도 변경합니다.\n\n");
+    printf("  [ -R (--recursive ]\n");
+    printf("디렉토리 내부의 모든 하위 디렉토리와 파일의 소유 권한을 변경합니다.\n\n");
+    printf("  [ -c (--change ]\n");
+    printf("변경 정보를 출력합니다.\n\n");
+    printf("  [ -f (--silent, --quite ]\n");
+    printf("중요한 오류메시지가 아닌 경우 출력하지 않습니다.\n\n");
+    printf("  [ -h (--no-dereference ]\n");
+    printf("심볼릭 링크 소유자도 변경합니다.\n\n");
 	next_line();
 
 	system("ls -al");
@@ -60,15 +62,18 @@ void training_chown(void)
 	printf("\n명령어가 잘 실행되었다면, 소유자와 그룹 모두 'test'로변경되었을 것입니다.\n\n");
 	next_line();
 
-	printf("\n\"chown\" 명령어에서 사용자를 지정할때 사용자 이름, 그룹 이름을 직접 입력하기도 하지만\n");
+	printf("\"chown\" 명령어에서 사용자를 지정할때 사용자 이름, 그룹 이름을 직접 입력하기도 하지만\n");
     printf("사용자 이름, 그룹 이름 대신 UID, GID를 사용하여 소유권을 부여할 수도 있습니다.\n\n");
 	next_line();
 
+    system("clear");
+    printf("[UID]\n\n\n");
 	printf("UID란 유저 아이디를 의미하는 것으로 각 사용자마다 부여된 사용자 식별 번호이며\n");
     printf("슈퍼 유저의 UID는 0입니다.\n\n");
     printf("각 사용자의 UID는 '/etc/passwd'에서 확인할 수 있습니다.\n\n");
 	next_line();
 
+    printf("[GID]\n\n\n");
 	printf("마찬가지로 GID란 그룹 아이디를 의미하는 것으로 각 그룹마다 부여된 그룹 식별 번호이며\n");
     printf("슈퍼 그룹의 GID는 0입니다.\n\n");
     printf("각 그룹의 GID는 '/etc/passwd'와 '/etc/group'에서 확인할 수 있습니다.\n\n");

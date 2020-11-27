@@ -25,8 +25,6 @@ void training_dd(void)
 	next_line();
 
     printf("\"dd\" 명령어의 실행 파일은 \"/usr/bin/dd\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"dd\"(으)로 있습니다.\n");
     next_line();
 
     printf("사용법은 \"dd [operand] ...\" 또는 \"dd [옵션]\" 입니다.\n");
@@ -42,20 +40,20 @@ void training_dd(void)
 	next_line();
 
     system("clear");
-	printf("\"dd\"에서 자주 쓰이는 [operand]는 다음과 같습니다.\n\n\n");
-    printf(" if=<FILE>      : 입력 대상이 될 파일을 지정합니다.\n\n");
-	printf(" of=<FILE>      : 출력 대상이 될 파일을 지정합니다.\n\n");
-	printf(" bs=<BYTES>     : 한번에 지정된 <BYTES> bytes 단위로 읽고 씁니다.\n");
-    printf("                 'ibs'와 'obs'를 한번에 지정한 것과 같습니다.\n\n");
-	printf(" ibs=<BYTES>    : 한번에 지정된 <BYTES> bytes 단위로 읽습니다.\n\n");
-	printf(" obs=<BYTES>    : 한번에 지정된 <BYTES> bytes 단위로 출력합니다.\n\n");
-	printf(" cbs=<BYTES>    : 한번에 지정된 <BYTES> bytes 단위로 변환합니다.\n\n");
-	printf(" count=<BLOCKS> : 입력된 블록 크기만큼 복사합니다.\n\n");
-	printf(" conv=<CONVS>   : 쉼표 기호로 구분된 것을 파일로 변환합니다.\n\n");
-	printf(" iflag=<FLAGS>  : 쉼표 기호로 구분된 파일을 읽습니다.\n\n");
-	printf(" oflag=<FLAGS>  : 쉼표 기호로 구분된 파일을 씁니다.\n\n");
-	printf(" seek=<BLOCKS>  : 지정된 단위만큼 obs크기를 건너뛰고 출력합니다.\n\n");
-	printf(" skip=<BLOCKS>  : 지정된 단위만큼 ibs크기를 건너뛰고 입력합니다.\n\n\n");
+	printf("\"dd\"에서 자주 쓰이는 [operand]는 다음과 같습니다.\n\n");
+    printf("  [ if=<FILE> ]      : 입력 대상이 될 파일을 지정합니다.\n\n");
+	printf("  [ of=<FILE> ]      : 출력 대상이 될 파일을 지정합니다.\n\n");
+	printf("  [ bs=<BYTES> ]     : 한번에 지정된 <BYTES> bytes 단위로 읽고 씁니다.\n");
+    printf("                       'ibs'와 'obs'를 한번에 지정한 것과 같습니다.\n\n");
+	printf("  [ ibs=<BYTES> ]    : 한번에 지정된 <BYTES> bytes 단위로 읽습니다.\n\n");
+	printf("  [ obs=<BYTES> ]    : 한번에 지정된 <BYTES> bytes 단위로 출력합니다.\n\n");
+	printf("  [ cbs=<BYTES> ]    : 한번에 지정된 <BYTES> bytes 단위로 변환합니다.\n\n");
+	printf("  [ count=<BLOCKS> ] : 입력된 블록 크기만큼 복사합니다.\n\n");
+	printf("  [ conv=<CONVS> ]   : 쉼표 기호로 구분된 것을 파일로 변환합니다.\n\n");
+	printf("  [ iflag=<FLAGS> ]  : 쉼표 기호로 구분된 파일을 읽습니다.\n\n");
+	printf("  [ oflag=<FLAGS> ]  : 쉼표 기호로 구분된 파일을 씁니다.\n\n");
+	printf("  [ seek=<BLOCKS> ]  : 지정된 단위만큼 obs크기를 건너뛰고 출력합니다.\n\n");
+	printf("  [ skip=<BLOCKS> ]  : 지정된 단위만큼 ibs크기를 건너뛰고 입력합니다.\n\n");
 	next_line();
     
     system("clear");
@@ -72,6 +70,7 @@ void training_dd(void)
     printf(" etc) T, P, E, Z, Y\n\n\n");
     next_line();
 
+    system("clear");
 	system("ls -al");
 
 	printf("\n\n\"ls -al\" 명령을 통해 현재 디렉토리의 목록을 확인해보면\n\n");
@@ -83,8 +82,9 @@ void training_dd(void)
     printf("블록 사이즈 \"bs=1M\" 단위로 읽고 쓰도록 명령어를 입력해보세요.\n");
     printf("사용법 : dd if=[복사할 디스크] of=[복사되어 출력될 디스크] [단위=사이즈]\n");
 	just_run_command("dd if=dir1/file1 of=dir2/file1 bs=1M");
-	
 	next_line();
+
+    printf("\n");
 	system("ls -al dir2");
 
     printf("\n\n위의 출력된 결과는 \"dir2\" 디렉토리에 있는 파일들을 조회한 것입니다.\n\n");

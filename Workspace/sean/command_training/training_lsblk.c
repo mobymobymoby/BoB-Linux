@@ -13,8 +13,6 @@ void training_lsblk(void)
 	next_line();
 
     printf("\"lsblk\" 명령어의 실행 파일은 \"/usr/bin/lsblk\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"lsblk\"(으)로 있습니다.\n");
     next_line();
 
 	printf("리눅스에서는 하드디스크, 플로피 디스크 등\n");

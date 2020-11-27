@@ -15,7 +15,10 @@ void training_chroot(void)
 	test[0] = '\0';
 	
 	printf("이번에 학습할 명령어는 \"chroot\" 입니다. \n\n");
-	printf("\"chroot\"는 'Change Root Directory'의 약자이며\n\n");
+
+	printf("\"chroot\"는 'Change Root Directory'의 약자입니다.\n\n");
+    next_line();
+
     printf("주로 보안성을 위해 새로운 가상의 'root' 디렉토리를 생성하여\n");
     printf("이 디렉토리의 상위로는 이동이 불가능하게 합니다.\n");
     next_line();
@@ -25,8 +28,6 @@ void training_chroot(void)
     next_line();
 
     printf("\"chroot\" 명령어의 실행 파일은 \"/usr/sbin/chroot\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'sbin' 디렉토리(폴더) 밑에\n");
-    printf("\"chroot\"(으)로 있습니다.\n");
     next_line();
     
     printf("사용법은 \"chroot [옵션]\" 또는\n");
@@ -45,21 +46,18 @@ void training_chroot(void)
 	next_line();
 
 	printf("\"chroot\"명령어의 자주 쓰이는 옵션은 다음과 같습니다.\n\n");
-    printf("[--help] : 명령어의 도움말을 표시합니다.\n");
-    printf("[--version] : 명령어의 버전 정보를 표시합니다.\n\n");
+    printf("  [ --help ] : 명령어의 도움말을 표시합니다.\n");
+    printf("  [ --version ] : 명령어의 버전 정보를 표시합니다.\n\n");
 	next_line();
 
 	printf("[실습] \"chroot\" 명령어를 사용하여 현재 디렉토리를 루트 디렉토리로 변경해보세요.\n");
 	printf("현재 디렉토리의 경로는 \'%s\'입니다.\n\n", dir);
-    
     printf("사용법 : chroot [지정할 새 루트 디렉토리]\n");
-
 	strncat( strncat(test, "chroot ", sizeof("chroot ")), dir, sizeof(dir));
-
 	fake_run_command(test);
-
 	next_line();
-	printf("성공적으로 변경이 되었다면 현재 위치는 루트인 '/'로 표시될 것입니다.\n\n");
+
+	printf("\n\n성공적으로 변경이 되었다면 현재 위치는 루트인 '/'로 표시될 것입니다.\n\n");
 	next_line();
 
 	printf("\"chroot\"는 자주 사용되는 명령어는 아닙니다.\n");

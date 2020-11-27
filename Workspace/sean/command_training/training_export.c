@@ -40,7 +40,7 @@ void training_export(void)
 
     printf("[실습] \"export myVal\"(을)를 입력해보세요.\n");
     nothing_print_fake_run_command("export myVal");
-    printf("\n잘 입력하셨다면, 환경 변수 \"myVal\"이 환경 변수 목록에 등록되었을 것입니다.\n\n");
+    printf("\n\n잘 입력하셨다면, 환경 변수 \"myVal\"이 환경 변수 목록에 등록되었을 것입니다.\n\n");
     next_line();
 
     printf("환경 변수를 확인할 때는 \"echo\" 명령어를 이용하여 확인할 수 있습니다.\n\n");
@@ -50,7 +50,7 @@ void training_export(void)
     nothing_print_fake_run_command("echo $myVal");
     printf("\nhello\n");
 
-    printf("\n잘 입력하셨다면, 'hello'가 출력되는 것을 확인하실 수 있을 것입니다.\n\n");
+    printf("\n\n잘 입력하셨다면, 'hello'가 출력되는 것을 확인하실 수 있을 것입니다.\n\n");
     next_line();
 
 	printf("[실습] \"export\"(을)를 입력하면 현재 선언된 환경 변수들이 출력될 것 입니다.\n");

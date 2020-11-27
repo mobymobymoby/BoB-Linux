@@ -25,7 +25,7 @@ void training_history()
     nothing_print_fake_run_command("echo $HISTSIZE");
     printf("1000\n\n");
 
-    printf("출력된 'HISTSIZE'의 값 만큼 사용자가 사용한 명령어를 저장을 할 수 있습니다.\n");
+    printf("\n출력된 'HISTSIZE'의 값 만큼 사용자가 사용한 명령어를 저장을 할 수 있습니다.\n");
     next_line();
     
     printf("방향키로 입력했던 명령어를 찾아도 되지만\n");
