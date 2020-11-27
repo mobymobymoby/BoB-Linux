@@ -12,6 +12,7 @@ void training_intro()
     printf("이 때 조건에 일치하는 명령어를 입력해야 하며,\n");
     printf("잘못된 명령어를 입력했을 때는 다시 입력을 받게 됩니다.\n");
     next_line();
+    
     system("clear");
     printf("2. 옵션의 중첩\n\n");
     printf("트레이닝 기능에서 배우게 되는 대부분의 옵션은 중첩하여 사용할 수 있습니다.\n\n");
@@ -21,6 +22,7 @@ void training_intro()
     printf("이 때의 기능은 -a 옵션과 -l의 옵션을 합친 것이 됩니다.\n");
     printf("이러한 법칙은 ls 뿐만 아니라 대부분의 명령어에 통용됩니다.\n");
     next_line();
+    
     system("clear");
     printf("3. 터미널에서의 스크롤 이동 방법\n\n");
     printf("BoB Linux Trainer는 콘솔이나 터미널에서 진행됩니다.\n");
@@ -28,8 +30,9 @@ void training_intro()
     printf("키보드 방향키 위에 있는 \"PgUp\" 키와 \"PgDn\" 키를 이용해 스크롤을 이동할 수 있습니다.\n");
     printf("<Shift + PgUp>은 스크롤을 위로, <Shift + PgDn>은 스크롤을 아래로 움직입니다.\n\n");
     printf("\"PgUp\" 키와 \"PgDn\" 키가 없다면,\n");
-    printf("\"fn\" 키와 키보드의 위, 아래 방향키를 조합하여 사용하시면 됩니다.\n");
+    printf("<Shift + fn + 키보드의 위, 아래키>를 조합하여 사용하시면 됩니다.\n");
     next_line();
+    
     system("clear");
     printf("4. 트레이닝 기본 디렉토리\n\n");
     printf("트레이닝을 진행할 때는 사용자가 리눅스의 다른 디렉토리나 파일을 변형할 위험이 있어서 별도의 디렉토리로 지정된 상태에서 진행됩니다.\n\n");
@@ -37,6 +40,7 @@ void training_intro()
     printf("이는 지정된 사용자 계정 이름과 함께 트레이닝 기능 중간에\n");
     printf("명령어를 실습할 때 콘솔이나 터미널 화면에 출력됩니다.\n");
     next_line();
+    
     system("clear");
     printf("5. [사용자 계정 이름]@localhost:/home/[사용자 계정 이름]/tr$ \n\n");
     printf("         (1)            (2)                 (3)           (4)\n\n");
@@ -49,6 +53,7 @@ void training_intro()
     printf("(3) : 현재 작업 디렉토리가 표시됩니다.\n");
     printf("(4) : 현재 사용자가 루트 계정이라면 #으로, 아니라면 $으로 표시됩니다.\n");
     next_line();
+    
     system("clear");
     printf("6. '-' 옵션과 '--' 옵션(롱 옵션)\n\n");
     printf("리눅스 명령어에는 다양한 기능을 처리하기 위한 옵션이 존재합니다.\n");
@@ -57,10 +62,11 @@ void training_intro()
     printf("예를 들어 ls 명령어의 '-a' 옵션을 롱옵션으로 사용하면 ");
     printf("'ls --all'으로 입력하면 됩니다.\n\n");
     printf("위의 두 표기법은 동일한 동작을 합니다.\n\n");
-    printf("대부분의 사람들은 더 짧은 옵션을 사용하지만 간혹가다가 롱 옵션을 사용하는 경우도 존재합니다.\n");
+    printf("대부분의 사람들은 더 짧은 옵션을 사용하지만 가끔 롱 옵션을 사용하는 경우도 존재합니다.\n");
     next_line();
-    system("clear");
-    printf("기본 설명은 여기까지 입니다.\n(Enter를 눌러 계속 진행하세요)\n");
+    
+    
+    printf("\n\n\n\n기본 설명은 여기까지 입니다.\n(Enter를 눌러 계속 진행하세요)\n");
     next_line();
     system("clear");
 }
