@@ -123,7 +123,7 @@ void training_cp(void)
 	system("ls -al");
 	next_line();
 
-	printf("다음은 'dir2' 디렉토리에서 \"ls -l\"을 한 결과입니다.\n\n");
+	printf("\n다음은 'dir2' 디렉토리에서 \"ls -l\"을 한 결과입니다.\n\n");
 	printf("[dir2]\n");
 	system("ls -l dir2");
 	next_line();
