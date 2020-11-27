@@ -32,7 +32,7 @@ void training_ps(void)
 	next_line();
 	
 	printf("\"BSD 계열 시스템\"에서는 옵션 앞에 대시(dash, '-')를 \"사용하지 않습니다.\"\n");
-	next_line():
+	next_line();
 	
 	printf("\"GNU\"에서는 옵션 앞에 대시(dash, '-')를 '두 개'를 사용합니다.\n");
 	next_line();
