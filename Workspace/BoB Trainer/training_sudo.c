@@ -9,8 +9,10 @@ void training_sudo(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	printf("이번에 학습할 명령어는 \"sudo\"입니다.\n\n");
-	printf("sudo 명령어는 root 권한을 잠시 획득하기 위한 명령어입니다.\n");
-	printf("sudo 앞에 붙여 실행한 명령어는 root의 권한으로 실행됩니다.\n");
+	printf("\"sudo\" 명령어는 root 권한을 잠시 획득하기 위한 명령어입니다.\n");
+	next_line();
+	
+	printf("\"sudo\" 앞에 붙여 실행한 명령어는 root의 권한으로 실행됩니다.\n");
 	next_line();
 	
 	printf("\"sudo\" 명령어의 실행 파일은 \"/usr/bin/sudo\"(으)로 있습니다.\n");
@@ -33,22 +35,24 @@ void training_sudo(void)
 	next_line();
 
 	printf("[실습] bash 명령어를 root 권한으로 실행시켜봅시다.\n");
+	printf("사용법 : sudo [명령어]\n");
 	fake_run_command("sudo bash");
 	next_line();
 	// 트레이닝 1
 
 	printf("일반 유저에서 관리자 권한을 가진 'root' 유저로 전환하고 싶다면\n");
-	printf("'sudo -s' 명령어를 입력하면 됩니다.\n\n");
+	printf("\"sudo -s\" 명령어를 입력하면 됩니다.\n\n");
 	next_line();
 
 	printf("[실습] 가상으로 \"sudo\" 명령어를 이용해 일반 유저에서 root 유저로 전환해봅시다.\n");
+	printf("사용법 : sudo [옵션]\n");
 	fake_run_command("sudo -s");
 	printf("[sudo] password for %s:\n", pwd->pw_name);
 	
-	printf("\n\nsudo 명령어 사용시에는 현재 로그인 되어 있는 사용자의 패스워드를 입력해야합니다.\n");
-	printf("위와 같은 문장이 출력된 후에 비밀번호를 입력한다면 다음과 같이 프롬프트가 변화합니다.\n");
+	printf("\n\nsudo 명령어 사용시에는 현재 로그인 되어 있는 사용자의 패스워드를 입력해야 합니다.\n");
 	next_line();
 	
+	printf("위와 같은 문장이 출력된 후에 비밀번호를 입력한다면 다음과 같이 프롬프트가 변화합니다.\n");
 	printf("root@localhost:#\n");
 	next_line();
 	
@@ -69,8 +73,8 @@ void training_sudo(void)
 	printf("{계정 이름} ALL=(ALL:ALL) ALL\n");
 	next_line();
 	
-	printf("여러분들이 경험을 쌓아 하나의 서버를 관리하게 된다면,\n");
-	printf("'sudoers' 파일을 신중하게 작성하게 될 것입니다.\n");
+	printf("여러분들이 경험을 쌓아 하나의 서버를 관리하게 된다면\n");
+	printf("\"/etc/sudoers\" 파일을 신중하게 작성하게 될 것입니다.\n");
 	next_line();
 	
 	printf("특히, 위의 예시처럼 모든 명령어에 대한 권한을 사용자에게 주는 경우\n");
