@@ -25,13 +25,13 @@ void training_set_unset(void)
 	next_line();
 
 	printf("\"set\" 명령어의 사용법은 : \"set\"입니다.\n");
+	printf("ex) set\n");
 	next_line();
 	
 	printf("간단하게 입력하여 현재 환경 변수와 셸 변수 목록을 출력합니다.\n");
 	next_line();
 
-	printf("\"unset\" 명령어는 다음과 같은 형식으로 사용합니다.\n");
-	printf("사용법 : \"unset [변수 이름]\"\n");
+	printf("\"unset\" 명령어의 사용법은 : \"unset [변수 이름]\"입니다.\n");
 	printf("ex) unset myVal\n");
 	next_line();
 	
@@ -56,9 +56,8 @@ void training_set_unset(void)
 	next_line();
 	
 	printf("[실습] \"unset\" 명령어를 입력해 'myVal' 변수를 제거해보세요.\n");
-	fake_run_command("unset myVal");
 	printf("사용법 : \"unset [변수 이름]\"\n");
-	next_line();
+	fake_run_command("unset myVal");	
 
 	printf("\n\nunset을 입력하면 셸 변수 목록에서 성공적으로 제거되었을 것입니다.\n\n");
 	printf("[실습] 'set'을 입력해보세요\n");
