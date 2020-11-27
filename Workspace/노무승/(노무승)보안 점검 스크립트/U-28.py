@@ -29,7 +29,7 @@ def U28() :
         f_output = f_output + C_RED + "\t[검사 결과] 보안 조치가 필요합니다.\n" + C_END  
         f_output = f_output + "\n"
         f_output = f_output + "[" + C_NUM + "] 조치 방법\n"
-        f_output = f_output + "\t NIS, NIS+ 서비스 관련 패키지를 모두 삭제해주세요.\n"
+        f_output = f_output + "\tNIS, NIS+ 서비스 관련 패키지를 모두 삭제해주세요.\n"
         f_output = f_output + "\t\t(데비안 계열(우분투 등) : apt remove nis -y)\n"
         f_output = f_output + "\t\t(레드햇 계열(CentOS 등) :\n"
         f_output = f_output + "\t\tyum remove ypserv ypbind ypxfrd rpcbind yppasswdd -y)\n"
