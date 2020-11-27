@@ -62,14 +62,14 @@ void training_cd(void)
 
 	printf("[ ../dir2/ ](은)는 현재 작업 디렉토리의\n");
 	printf("상위 디렉토리에 있는 다른 디렉토리인 'dir2'를 의미합니다.\n");
-	printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때 [ ../dir3 ](은)는 \"/etc/dir3\"(와)과 같습니다.\n\n");
+	printf("ex) 현재 작업 디렉토리가 '/etc/dir2' 일 때 [ ../dir3 ]는 \"/etc/dir3\"와 같습니다.\n\n");
 	next_line();
 
 	printf("[실습] '상위 경로'를 이용하여 상위 디렉토리에 있는 'dir2' 디렉토리로 이동해보세요.\n");
 	printf("사용법 : cd [디렉토리 상대 경로]\n");   
 	printf("ex) cd ../[디렉토리 이름]\n");
 	fake_run_command("cd ../dir2");
-	chdir("cd ../dir2");
+	chdir("../dir2");
 	next_line();
 	// 상대 경로 트레이닝 
 
@@ -79,14 +79,14 @@ void training_cd(void)
 
 	printf("[실습] \"cd ..\"을(를) 입력해 상위 디렉토리로 이동해보세요.\n");
 	fake_run_command("cd ..");
-	chdir("cd ..");
+	chdir("..");
 	next_line();
 	// 상위 경로 트레이닝
 
 	printf("\n이동하기 이전의 디렉토리로 되돌아가기 위해서는 'cd -'를 입력하면 됩니다.\n\n");
 	printf("[실습] 'cd -'(을)를 입력해 이전의 디렉토리로 되돌아가 보세요.\n");
 	fake_run_command("cd -");
-	chdir("cd -");
+	chdir("-");
 	next_line();
 	// 이전 경로 트레이닝
 
