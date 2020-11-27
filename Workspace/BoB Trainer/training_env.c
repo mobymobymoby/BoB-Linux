@@ -1,8 +1,5 @@
 #include "func.h"
 
-int run_command(char valid_cmd[]);
-void next_quit();
-
 void training_env(void)
 {
     create_defdir();
@@ -16,8 +13,6 @@ void training_env(void)
     next_line();
     
     printf("\"env\" 명령어의 실행 파일은 \"/usr/bin/env\"(으)로 있습니다.\n");
-    printf("'root' 디렉토리(폴더) 밑에 'usr' 디렉토리(폴더) 밑에 'bin' 디렉토리(폴더) 밑에\n");
-    printf("\"env\"(으)로 있습니다.\n");
     next_line();
     
     printf("사용법은 \" env [옵션] [환경변수 이름]=\"[값]\" \" 입니다.\n");
