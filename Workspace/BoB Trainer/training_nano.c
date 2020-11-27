@@ -68,33 +68,35 @@ void training_nano(void)
 	printf("  [ -m <파일명> ]      : 마우스를 사용합니다.\n\n");
 	printf("  [ +<라인> <파일명> ]  : 파일을 열자마자 특정 라인으로 이동합니다.\n\n");
 	next_line();
-
+	
+	system("clear");
 	printf("\"nano\" 편집기 내에서도 다양한 기능들이 존재하는데, 다음과 같습니다.\n\n");
-	printf("\n");
-	printf("[부가 기능]\n");
+	printf("  부가 기능\n");
 	printf("  [ Ctrl+g (F1) ] : 도움말 표시\n");
 	printf("  [ Ctrl+x (F2) ] : nano 종료\n");
 	printf("  [ Ctrl+o (F3) ] : 파일 저장\n");
 	next_line();
-
-	printf("[유용한 기능]\n");
-	printf("  [ Ctrl+w (F6) ] : 문자 검색\n");
-	printf("  [ Ctrl+\\ ]      : 문자 검색 후 수정\n");
-	printf("  [ Ctrl+k (F9) ] : 현재 줄 잘라내기\n");
-	printf("  [ Ctrl+u ]      : 이전에 자른 줄을 붙여넣기\n");
+	
+	system("clear");
+	printf("  유용한 기능\n");
+	printf("  [ Ctrl+w (F6) ] : 문자 검색\n\n");
+	printf("  [ Ctrl+\\ ]      : 문자 검색 후 수정\n\n");
+	printf("  [ Ctrl+k (F9) ] : 현재 줄 잘라내기\n\n");
+	printf("  [ Ctrl+u ]      : 이전에 자른 줄을 붙여넣기\n\n");
 	printf("  [ Alt+]         : 현재 괄호에 매칭되는 괄호 찾기\n");
-	printf("                  (코딩시 유용하게 사용될 수 있음)\n");
+	printf("                    (코딩시 유용하게 사용될 수 있음)\n\n");
 	next_line();
-
-	printf("[라인 이동]\n");
-	printf("  [ Ctrl+y (F7) ] : 이전 화면으로 이동\n");
-	printf("  [ Ctrl+v (F8) ] : 다음 화면으로 이동\n");
-	printf("  [ Ctrl+a ]      : 현재 라인의 시작 위치로 이동\n");
-	printf("  [ Ctrl+e ]      : 현재 라인의 끝 위치로 이동\n");
-	printf("  [ Alt+( ]       : 현재 문단의 시작으로 이동\n");
-	printf("  [ Alt+) ]       : 현재 문단의 끝으로 이동\n");
-	printf("  [ Alt+\\ ]       : 파일의 첫 라인으로 이동\n");
-	printf("  [ Alt+/ ]       : 파일의 마지막 라인으로 이동\n");
+	
+	system("clear");
+	printf("  라인 이동\n");
+	printf("  [ Ctrl+y (F7) ] : 이전 화면으로 이동\n\n");
+	printf("  [ Ctrl+v (F8) ] : 다음 화면으로 이동\n\n");
+	printf("  [ Ctrl+a ]      : 현재 라인의 시작 위치로 이동\n\n");
+	printf("  [ Ctrl+e ]      : 현재 라인의 끝 위치로 이동\n\n");
+	printf("  [ Alt+( ]       : 현재 문단의 시작으로 이동\n\n");
+	printf("  [ Alt+) ]       : 현재 문단의 끝으로 이동\n\n");
+	printf("  [ Alt+\\ ]       : 파일의 첫 라인으로 이동\n\n");
+	printf("  [ Alt+/ ]       : 파일의 마지막 라인으로 이동\n\n");
 	next_line();
 	
 	printf("\"nano\" 편집기를 이용해 다양한 파일들을 확인하고 수정해보세요.\n");
