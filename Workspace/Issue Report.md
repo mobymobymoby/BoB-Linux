@@ -54,6 +54,8 @@
     
  - 해결법2 : passwd 구조체 이용 (채택)
  ```
+ #include <pwd>
+ 
  struct passwd *pwd;
  pwd = getpwuid(getuid());
  printf("%s\n", pwd->pw_name);
