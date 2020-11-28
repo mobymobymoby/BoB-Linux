@@ -33,6 +33,10 @@ void training_intro(void);
 void print_banner(void);
 void program_information(void);
 void select_menu(void);
+void training_whatislinux(void);
+void training_linux_distro(void);
+void training_whyneedlinux(void);
+void training_linux_defdir(void);
 
 /* 함수 리스트 */
 // 김기서 명령어
