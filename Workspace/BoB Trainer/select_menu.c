@@ -23,22 +23,22 @@ void select_menu(void)
         if (!strncmp(menu, "1", strlen("1")) && strlen(menu) == strlen("1"))
         {
             training_linux_basic();
-            next_quit();
+            break;
         }
         else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
         {
             essential_trainer();
-            next_quit();
+            break;
         }    
         else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
         {
             advanced_trainer();
-            next_quit();
+            break;
         }
         else if ( (!strncmp(menu, "i", strlen("i")) && strlen(menu) == strlen("i")) || (!strncmp(menu, "I", strlen("I")) && strlen(menu) == strlen("I")) || (!strncmp(menu, "info", strlen("info")) && strlen(menu) == strlen("info")) )
         {
             program_information();
-            next_quit();
+            break;
         }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
         {
