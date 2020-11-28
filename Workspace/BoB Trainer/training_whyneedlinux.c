@@ -1,3 +1,5 @@
+#include "func.h"
+
 void training_whyneedlinux(void)
 {
     system("clear");
