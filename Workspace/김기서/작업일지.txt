@@ -41,5 +41,15 @@
   전체 멘티 회의
 
 201125
-  U-54
+  U-52
   U-44
+
+201126
+  nothing
+
+201127
+  서버의 iptables http ACCEPT 를 제거
+  iptables https ACCEPT 로 수정
+  
+201128
+  U-53
