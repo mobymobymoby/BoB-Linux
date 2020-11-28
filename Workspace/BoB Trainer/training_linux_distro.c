@@ -1,3 +1,5 @@
+#include "func.h"
+
 void training_linux_distro(void)
 {
     system("clear");
