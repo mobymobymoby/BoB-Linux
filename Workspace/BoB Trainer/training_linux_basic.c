@@ -12,7 +12,6 @@ void training_linux_basic(void)
     printf("2. 리눅스 배포판과 종류\n\n");
     printf("3. 리눅스의 필요성\n\n");
     printf("4. 리눅스의 기본 디렉토리들\n");
-    printf("
     next_line();
     
     while (1)
