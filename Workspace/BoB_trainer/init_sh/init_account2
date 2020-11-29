@@ -4,6 +4,7 @@ trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP 
 # fbterm 실행
 # 폰트 파일을 설정하기 위해서는 fbterm을  실행해야 함
 fbterm
+clear
 
 # 계정의 이름을 저장
 name=$(whoami)
