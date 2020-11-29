@@ -3,7 +3,14 @@
 void training_virtual_console(void)
 {
 	system("clear");
-	printf("[가상 콘솔]\n\n");
+	printf("[가상 콘솔]\n\n\n");
+
+	printf("가상 콘솔이란\n");
+	printf("하나의 모니터를 장착한 시스템에 여러 개의 가상 화면을 제공하여 사용하게 하는 기능입니다.\n");
+	next_line();
+
+	printf("리눅스에서는 기본적으로 6개의 가상 콘솔을 제공합니다.\n");
+	next_line();
 
 	printf("[GUI]\n\n");
 	printf("\"GUI\"는 'Graphical User Interface'의 약자이며\n");
@@ -42,13 +49,6 @@ void training_virtual_console(void)
 	next_line();
 
 	printf("이 때 가상 콘솔을 사용하면 됩니다.\n\n");
-	next_line();
-
-	printf("가상 콘솔이란\n");
-	printf("하나의 모니터를 장착한 시스템에 여러 개의 가상 화면을 제공하여 사용하게 하는 기능입니다.\n");
-	next_line();
-
-	printf("리눅스에서는 기본적으로 6개의 가상 콘솔을 제공합니다.\n");
 	next_line();
 
 	printf("X-Window를 사용할 때는\n");
