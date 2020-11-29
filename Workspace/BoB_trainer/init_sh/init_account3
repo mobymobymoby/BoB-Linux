@@ -1,4 +1,5 @@
 #!/bin/sh
+# [Ctrl + c], [Ctrl + z]와 같은 인터럽트를 방지
 trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP TERM
 
 # 계정 이름을 저장
