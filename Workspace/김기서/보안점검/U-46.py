@@ -28,6 +28,7 @@ def U46():
                 pm.printNotice(report, '현재 패스워드 최소 길이는 ' + passLen + '자 입니다.')
                 isSet = True
                 isSafe = True
+
     if not isSet:
         pm.printWarning(report, '패스워드 최소 길이가 설정되어 있지 않습니다.')
 
