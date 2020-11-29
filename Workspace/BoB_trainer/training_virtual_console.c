@@ -21,7 +21,7 @@ void training_virtual_console(void)
 
 	printf("[CLI]\n\n");
 	printf("\"CLI\"는 'Command-Line Interface'의 약자이며\n");
-	printf("키보드로 명령어를 타이핑하여 프로그램을 사용하는 환경입니다.\n");
+	printf("키보드로 명령어를 타이핑하여 프로그램을 사용하는 환경입니다.\n\n");
 	printf("대표적인 예시로는 윈도우 운영 체제의 \"CMD\"가 있습니다.\n");
 	next_line();
 
