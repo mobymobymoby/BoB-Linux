@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <pwd.h> // passwd 구조체 사용
 #include <stdio_ext.h> // __fpurge(stdin)
 
 #define CMD_SIZE 60 // 최대 59개의 문자 입력
@@ -30,6 +31,14 @@ void advanced_trainer(void);
 void essential_trainer(void);
 void training_intro(void);
 void print_banner(void);
+void program_information(void);
+void select_menu(void);
+void training_whatislinux(void);
+void training_linux_distro(void);
+void training_whyneedlinux(void);
+void training_linux_defdir(void);
+void training_device_file(void);
+void training_virtual_console(void);
 
 /* 함수 리스트 */
 // 김기서 명령어

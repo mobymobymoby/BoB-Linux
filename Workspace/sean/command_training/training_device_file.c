@@ -1,6 +1,6 @@
 #include "func.h"
 
-int training_device_file(void)
+void training_device_file(void)
 {
 	system("clear");
 
@@ -14,7 +14,8 @@ int training_device_file(void)
 	printf("리눅스에서는 위의 하드웨어적 자원들을 모두 파일화하여 관리하고 사용합니다.\n");
 	next_line();
 
-	printf("따라서 특정 하드웨어에게 명령을 수행하려면 해당하는 장치 파일에 명령을 내리면 되는 것입니다.\n");
+	printf("따라서 특정 하드웨어에게 명령을 수행하려면\n");
+	printf("해당하는 장치 파일에 명령을 내리면 되는 것입니다.\n");
 	next_line();
 
 	printf("일반적인 장치 파일 접두사에는 다음과 같은 것들이 있습니다.\n\n");
@@ -37,7 +38,7 @@ int training_device_file(void)
 	system("clear");
 	printf("[가상 메모리]\n\n");
 	printf("하드디스크의 일부를 메모리처럼 사용하는 것을 의미합니다.\n\n");
-	printf("리눅스에서 가상 메로리라는 영역을 \"스왑\" 또는 \"스왑 영역\" 이라고 부릅니다.\n\n\n");
+	printf("리눅스에서 가상 메모리라는 영역을 \"스왑\" 또는 \"스왑 영역\" 이라고 부릅니다.\n\n\n");
 	next_line();
 
 	printf("[스왑핑]\n\n");
