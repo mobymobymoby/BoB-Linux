@@ -26,7 +26,7 @@ def U58() :
         temp = handle.readline()
 
         while temp:
-            if (temp.count(":") == 6):
+            if (temp.count(":") == 6) and (temp[0] != "#"):
                 temp = temp.split(":")
                 data = temp[5]
                 if (os.path.isdir(temp[5])):
