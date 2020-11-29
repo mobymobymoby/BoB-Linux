@@ -22,7 +22,7 @@ void training_virtual_console(void)
 	printf("[CLI]\n\n");
 	printf("\"CLI\"는 'Command-Line Interface'의 약자이며\n");
 	printf("키보드로 명령어를 타이핑하여 프로그램을 사용하는 환경입니다.\n");
-	printf("대표적인 예시로는 윈도우 운영 체제의 \"CMD\" 방식이 있습니다.\n\n");
+	printf("대표적인 예시로는 윈도우 운영 체제의 \"CMD\"가 있습니다.\n");
 	next_line();
 
 	printf("\"CLI\"는 명령어를 사용할 줄 알아야 하기 때문에 처음에는 낯설고 어려울 것입니다.\n");
@@ -31,6 +31,7 @@ void training_virtual_console(void)
 
 	printf("\"CLI\"는 다른 말로 \"CUI\" 혹은 \"TUI\" 등으로 불립니다.\n");
 	printf("모두 같거나 비슷한 환경을 의미하므로 모두 맞는 명칭입니다.\n");
+	next_line();
 
 	system("clear");
 	printf("리눅스 배포판에는 \"server\" 버전과 \"Desktop\" 버전이 존재합니다.\n");
@@ -54,13 +55,13 @@ void training_virtual_console(void)
 
 	printf("X-Window를 사용할 때는\"Ctrl + Alt + F1\"이 기본 창으로 전환하는 단축키이며\n");
 	printf("\"Ctrl + Alt + F6\"까지 총 6개의 텍스트 기반의 로그인 창을 제공합니다.\n\n");
-	printf("( X-Window에서는 'Alt' 키가 특수한 기능으로 사용되기에\n");
+	printf("X-Window에서는 'Alt' 키가 특수한 기능으로 사용되기에\n");
 	printf("'Ctrl' 키와 조합하여 사용해야 합니다.\n\n");
 	next_line();
 
 	printf("X-Window가 아닌 가상 콘솔의 창 전환은\n");
 	printf("'Ctrl' 키 없이 \"Alt + F(n)\" 조합으로도 가능합니다.\n");
-	printf("( 'F(n)'은 \"F1 ~ F6\" 키를 의미합니다. )\n");
+	printf("( 'F(n)'은 \"F1 ~ F6\" 키를 의미합니다. )\n\n");
 	next_line();
 
 	printf("[X-Window]\n\n");
