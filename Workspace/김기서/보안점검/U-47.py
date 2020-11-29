@@ -30,7 +30,7 @@ def U47():
     else:
         pm.printNotsafe(report)
         report.write('[U-47] 조치 방법\n')
-        report.write('\t패스워드 최소 사용기간을 90일로 설정하세요.\n')
+        report.write('\t패스워드 최대 사용기간을 90일로 설정하세요.\n')
         report.write('\t\t텍스트 에디터를 이용하여 \"/etc/login.defs" 파일을 엽니다.\n')
         report.write('\t\t아래의 내용을 수정 또는 추가하세요.\n')
         report.write('\t\tPASS_MAX_DAYS 90 (단위: 일)\n')
