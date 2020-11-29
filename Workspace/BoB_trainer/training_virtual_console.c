@@ -64,7 +64,7 @@ void training_virtual_console(void)
 
 	printf("[X-Window]\n\n");
 	printf("\"x-Window\"는 디스플레이 장치에 창을 표시하며 마우스와 키보드 등의 입력 장치의 상호 작용 등을 관리하여\n");
-	printf("GUI 환경의 구현을 위한 기본적인 프레임 워크를 제공합니다.\n\n\n")
+	printf("GUI 환경의 구현을 위한 기본적인 프레임 워크를 제공합니다.\n\n\n");
 	
 	printf("[Tip]\n\n");
 	printf("\"server\" 환경, 즉 텍스트 모드 기반의 가상 콘솔을 사용할 때에는\n");
