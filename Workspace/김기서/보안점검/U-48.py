@@ -28,6 +28,7 @@ def U48():
                 pm.printNotice(report, '현재 패스워드 최소 사용기간은 ' + days + '일 입니다.')
                 isSet = True
                 isSafe = True
+    f.close()
 
     if not isSet:
         pm.printWarning(report, '패스워드 최소 사용기간이 설정되어 있지 않습니다.')
