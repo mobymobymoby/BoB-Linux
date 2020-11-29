@@ -1,6 +1,6 @@
 #include "func.h"
 
-int training_device_file(void)
+void training_device_file(void)
 {
 	system("clear");
 

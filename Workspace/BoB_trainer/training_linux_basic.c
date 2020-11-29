@@ -50,12 +50,12 @@ void training_linux_basic(void)
         }
         else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
         {
-            training_linux_defdir();
+            training_device_file();
             next_quit();
         }
         else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
         {
-            training_linux_defdir();
+            training_virtual_console();
             next_quit();
         }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
