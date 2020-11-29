@@ -37,6 +37,8 @@ void training_whatislinux(void);
 void training_linux_distro(void);
 void training_whyneedlinux(void);
 void training_linux_defdir(void);
+void training_device_file(void);
+void training_device_file(void);
 
 /* 함수 리스트 */
 // 김기서 명령어
