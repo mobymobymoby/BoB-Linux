@@ -40,7 +40,7 @@ def U46():
         report.write('[U-46] 조치 방법\n')
         report.write('\t패스워드 최소 길이를 8자 이상으로 설정하세요.\n')
         report.write('\t공공기관인 경우 9자 이상으로 설정하세요.\n')
-        report.write('\t\t텍스트 에디터를 이용하여 \"/etc/login.defs" 파일을 엽니다.\n')
+        report.write('\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.\n')
         report.write('\t\t아래의 내용을 수정 또는 추가하세요.\n')
         report.write('\t\tPASS_MIN_LEN 8\n')
 
