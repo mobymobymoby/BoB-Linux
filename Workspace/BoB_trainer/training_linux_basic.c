@@ -13,7 +13,14 @@ void training_linux_basic(void)
     next_line();
     while (1)
     {
-        printf("1 : 리눅스란 무엇인가\n2 : 리눅스 배포판과 종류\n3 : 리눅스의 필요성\n4 : 리눅스의 기본 디렉토리들\nq : 종료(quit)\n\n실행할 학습을 선택하세요 : ");
+        printf("1 : 리눅스란 무엇인가\n");
+	printf("2 : 리눅스 배포판과 종류\n");
+	printf("3 : 리눅스의 필요성\n");
+	printf("4 : 리눅스의 기본 디렉토리들\n");
+	printf("5 : 리눅스, 장치의 파일화\n");
+	printf("6 : 가상 콘솔\n");
+	printf("q : 종료(quit)\n\n");
+	printf("실행할 학습을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
