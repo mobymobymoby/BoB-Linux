@@ -39,7 +39,7 @@ def U48():
         pm.printNotsafe(report)
         report.write('[U-48] 조치 방법\n')
         report.write('\t패스워드 최소 사용기간을 1일로 설정하세요.\n')
-        report.write('\t\t텍스트 에디터를 이용하여 \"/etc/login.defs" 파일을 엽니다.\n')
+        report.write('\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.\n')
         report.write('\t\t아래의 내용을 수정 또는 추가하세요.\n')
         report.write('\t\tPASS_MIN_DAYS 1 (단위: 일)\n')
 
