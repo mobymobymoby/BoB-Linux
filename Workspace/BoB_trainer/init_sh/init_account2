@@ -1,4 +1,5 @@
 #!/bin/sh
+
 trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP TERM
 
 # fbterm 실행
