@@ -7,6 +7,7 @@ def U47():
     pm.printTitle(report, '[U-47] 패스워드 최대 사용기간 설정')
 
     isSafe = False
+    isSet = False
     f = open('/etc/login.defs', 'r')
     for line in f:
         line = ''.join(line.split())
@@ -15,15 +16,21 @@ def U47():
             # 주석인지 확인
             if '#' in line[0:index]:
                 continue
+
             days = line[index+len('PASS_MAX_DAYS'):]
             if days == '':
-                pm.printWarning(report, '패스워드 최대 사용기간이 설정되어 있지 않습니다.')
+                continue
             elif int(days) > 90:
                 pm.printWarning(report, '패스워드 최대 사용기간이 90일을 초과합니다.')
                 pm.printWarning(report, '현재 최대 사용기간은 ' + days + '일 입니다.')
+                isSet = True
             else:
                 pm.printNotice(report, '현재 패스워드 최대 사용기간은 ' + days + '일 입니다.')
+                isSet = True
                 isSafe = True
+
+    if not isSet:
+        pm.printWarning(report, '패스워드 최대 사용기간이 설정되어 있지 않습니다.')
 
     if isSafe:
         pm.printSafe(report)
