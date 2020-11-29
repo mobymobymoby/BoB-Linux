@@ -34,8 +34,8 @@ def U05():
         report.write('\t\t/etc/profile.d/*.sh\n')
         report.write('\t\t~/.profile\n')
         report.write('\t\t~/.bashrc\n')
-        report.write('\t(수정 전) PATH=".:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games".\n')
-        report.write('\t(수정 후) PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games".\n')
+        report.write('\t(수정 전) PATH=\".:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games\"\n')
+        report.write('\t(수정 후) PATH=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games\"\n')
         report.write('\t\".\" 혹은 \":\"을 제거')
 
     report.close()
