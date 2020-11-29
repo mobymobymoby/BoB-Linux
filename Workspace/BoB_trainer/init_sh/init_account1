@@ -2,6 +2,7 @@
 # [Ctrl + c], [Ctrl + z]와 같은 인터럽트를 방지
 trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP TERM
 
+
 printf "BoB Linux에서는 기본 계정인 'rookie'를 제공합니다.\n\n"
 printf "하지만 사용자가 원하는 계정을 생성할 수도 있습니다.\n"
 printf "새로운 계정 생성시 기본 계정인 'rookie'는 삭제됩니다.\n\n"
