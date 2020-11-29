@@ -4,24 +4,25 @@ trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP 
 # fbterm 실행
 # 폰트 파일을 설정하기 위해서는 fbterm을  실행해야 함
 fbterm
+clear
 
 # 계정의 이름을 저장
 name=$(whoami)
 
 # rookie 계정 잠금
-# bash.bashrc에서 자동으로 실행되게 해놓은 쉘 스크립트 명령어 제거
+# ~/.bashrc에서 자동으로 실행되게 해놓은 쉘 스크립트(init_account2) 제거
 # fbterm의 폰트 크기 조정
 # sudoers에 존재하던 'rookie' 계정 관련 내용 제거
 # 쉘 스크립트 제거
 sudo usermod -e 2000-01-01 rookie
-sudo sed -i '/init_account/d' /etc/bash.bashrc
+sudo sed -i '/init_account/d' /home/${name}/.bashrc
 sudo sed -i "/font-size/ c\font-size=20" ~/.fbtermrc
 sudo sed -i '/rookie/d' /etc/sudoers
 rm -f ./init_account2
 
 # 다음 쉘 스크립트를 실행하기 위한 문장
-# /etc/bash.bashrc에 다음 쉘 스크립트를 등록하여 로그인 시 바로 실행되게 함
-sudo sed -i -e "\$a/home/${name}/init_account3" /etc/bash.bashrc
+# ~/.bashrc에 다음 쉘 스크립트를 등록하여 로그인 시 바로 실행되게 함
+sudo sed -i -e "\$a/home/${name}/init_account3" /home/${name}/.bashrc
 clear
 printf "설정을 마치기 위해 재부팅을 실행합니다.\n\n"
 printf "다시 재부팅이 완료되면 방금 생성한 계정으로 로그인 해주세요.\n\n"

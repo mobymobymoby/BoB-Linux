@@ -60,7 +60,7 @@ sudo gpasswd -a $name video > /dev/null 2>&1
 sudo sed -i "s,\(\User privilege specification\),\1\n${name}\tALL=NOPASSWD: /usr/sbin/userdel\n${name}\tALL=NOPASSWD: /usr/bin/sed,g" /etc/sudoers
 
 # 다음 쉘 스크립트를 실행하기 위한 문장
-sudo sed -i -e "\$a/home/${name}/init_account2" /etc/bash.bashrc
+sudo sed -i -e "\$a/home/${name}/init_account2" /home/${name}/.bashrc
 
 # 현재 디렉토리에 있는 파일을 홈 디렉토리로 이동시킴
 # sudo mv ./* /home/${name}/
@@ -75,5 +75,5 @@ rm -f /home/rookie/init_account1
 # rookie 계정을 잠금
 (echo "rookie"; echo "THISACCOUNTWASLOCKED"; echo "THISACCOUNTWASLOCKED"; ) | passwd > /dev/null 2>&1
 
-# 생성한 계정으로 su하며, bash.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
+# 생성한 계정으로 su하며, ~/.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
 sudo su - ${name}

@@ -68,3 +68,12 @@
 - grub2를 설치
 - /boot/grub/grub.cfg에서 ro 다음에 vga=0x317 추가
 - linux, initrd 뒤에 16붙이기 
+
+### nginx 띄우기 [해결?]
+- iptables -L 을 입력해서 맨 위의 INPUT 체인을 보면 dpt:https 가 ACCEPT 되어 있다.
+- 이미 nginx는 설치가 되어 있었다.
+- /etc/nginx 에서 conf 파일을 분석
+- nginx.conf 파일의 server 블록의 제일 하단에 보면 sites-enabled/ 하위의 파일을 include 하고 있다.
+- sites-enabled/defalut 는 sites-available/default 를 가리키고 있다.
+- sites-available/default를 까보면 listen 80을 하고 있었다. 이를 443으로 교체
+- 그리고 접속하니 접속이 되었다.
