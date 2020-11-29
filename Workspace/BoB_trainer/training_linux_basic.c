@@ -48,6 +48,16 @@ void training_linux_basic(void)
             training_linux_defdir();
             next_quit();
         }
+        else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
+        {
+            training_linux_defdir();
+            next_quit();
+        }
+        else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
+        {
+            training_linux_defdir();
+            next_quit();
+        }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
         {
             break;
