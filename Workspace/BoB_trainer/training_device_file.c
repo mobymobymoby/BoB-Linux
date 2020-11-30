@@ -5,7 +5,7 @@ void training_device_file(void)
 	system("clear");
 
 	//리눅스 장치의 파일화
-	printf("[5. 리눅스, 장치의 파일화]\n\n");
+	printf("[리눅스, 장치의 파일화]\n\n");
 
 	printf("보통 장치라고 한다면 아래의 것들을 명칭합니다.\n");
 	printf("하드디스크, 키보드, 프린트, 모니터 등 시스템에 설치된 여러가지 하드웨어적 자원.\n");
