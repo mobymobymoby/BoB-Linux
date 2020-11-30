@@ -8,7 +8,7 @@ void training_linux_basic(void)
     char menu[20] = "";
     printf("환영합니다.\n\n");
     printf("리눅스 기본 지식 트레이닝입니다.\n");
-    printf("리눅스가 무엇인지와 종류, 필요성 그리고 기본 디렉토리들을 학습할 수 있습니다.\n\n\n");
+    printf("리눅스에 대한 여러 가지 기본 사항들을 익힐 수 있습니다.\n\n\n");
     
     next_line();
     while (1)
