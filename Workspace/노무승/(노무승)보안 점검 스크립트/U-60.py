@@ -2,7 +2,6 @@
 # 2020/11/29 : 노무승
 #    숨김 파일, 숨김 폴더가 존재하면 취약으로 판단
 
-from os.path import split
 import subprocess
 
 C_END     = "\033[0m"
