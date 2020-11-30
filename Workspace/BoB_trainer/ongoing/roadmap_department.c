@@ -2,5 +2,5 @@
 
 void roadmap_department(void)
 {
-   printf("º¸¾È °ü·Ã ÇÐ°ú ÆÄÆ®ÀÔ´Ï´Ù.\n");
+   printf("ë³´ì•ˆ ê´€ë ¨ í•™ê³¼ íŒŒíŠ¸ìž…ë‹ˆë‹¤.\n");
 }
