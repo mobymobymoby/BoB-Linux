@@ -1,6 +1,6 @@
 #include "func.h"
 
-void roadmap_field(void)
+void roadmap_contest(void)
 {
-   printf("º¸¾È ¼¼ºÎ ºÐ¾ß ÆÄÆ®ÀÔ´Ï´Ù.\n");
+	printf("ë³´ì•ˆ ì„¸ë¶€ ë¶„ì•¼ íŒŒíŠ¸ìž…ë‹ˆë‹¤.\n");
 }
