@@ -18,3 +18,5 @@ autoindex on;
   - 하이퍼 링크를 이용하면 됨
   - ```<a href="[파일 이름]"> [텍스트] </a>```
   - 사진도 비슷한 방법으로 링크 가능
+
+```sudo fuser -k 443/tcp``` : Address already in use 
