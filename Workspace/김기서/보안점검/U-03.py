@@ -50,6 +50,7 @@ def U03():
         report.write('\t계정 잠금 임계값을 5이하로 설정하세요.\n')
         report.write('\t\t텍스트 에디터를 이용하여 \"/etc/pam.d/common-auth\" 파일을 엽니다.\n')
         report.write('\t\t아래의 내용을 수정 또는 추가하세요.\n')
+        report.write('\t\t순서가 중요하므로 수행문 최상단에 입력해.\n')
         report.write('\t\tauth required pam_tally2.so onerr=fail deny=5 unlock_time=120 no_magic_root\n')
         report.write('\t\t\tno_magic_root : root에게는 패스워드 잠금 설정을 적용하지 않음\n')
         report.write('\t\t\tdeny=5        : 5회 입력 실패 시 계정 잠금\n')
