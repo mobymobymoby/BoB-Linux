@@ -29,14 +29,14 @@ def U20():
             if (temp.find("FTP") != -1) :   # ftp user check
                 output = output + temp
         temp = handle.readline()
-   
+    handle.close
+    
     # ftp user search
     if (output == "") :
         f_output = f_output + "\t[알림] FTP 계정이 존재하지 않습니다.\n"         
     else :
         f_output = f_output + C_YELLOW + "\t[알림] FTP 계정이 존재합니다.\n"
         f_output = f_output + "\t\t따라서 FTP 계정에 대한 확인이 필요합니다.\n" + C_END  
-    f_output = f_output + "\n"
 
     # FTP Setting File Check
     list = ["vsftpd","vsftpd/vsftpd","proftpd/proftpd"]
@@ -78,11 +78,11 @@ def U20():
         f_output = f_output + "\t[알림] FTP 프로그램 설정 파일이 존재하지 않습니다.\n"  
         if (f_output.find("FTP 계정이 존재합니다.") != -1) :
             f_output = f_output + C_RED + "\t[검사 결과] 보안 조치가 필요합니다.\n" + C_END  
-            f_output = f_output + "\n"     
+            f_output = f_output + "\n"
     # if (FTP user not found) && (setting file not found) -> safe 
         elif (f_output.find("FTP 계정이 존재하지 않습니다.") != -1) :
             f_output = f_output + C_GREEN + "\t[검사 결과] 안전합니다.\n" + C_END    
-            f_output = f_output + "\n"      
+            f_output = f_output + "\n"
 
     # U-20 Report
     if (f_output.find("[검사 결과] 보안 조치가 필요합니다.")!=-1) :
