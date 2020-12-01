@@ -59,3 +59,6 @@
 
 201130
   pam_tally2
+
+201201
+  pam_pwquality
