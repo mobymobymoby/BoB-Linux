@@ -19,6 +19,7 @@ void training_linux_basic(void)
 	printf("4 : 리눅스의 기본 디렉토리들\n");
 	printf("5 : 리눅스, 장치의 파일화\n");
 	printf("6 : 가상 콘솔\n");
+	printf("7 : 프로세스와 ID\n");
 	printf("q : 종료(quit)\n\n");
 	printf("실행할 학습을 선택하세요 : ");
 
@@ -56,6 +57,11 @@ void training_linux_basic(void)
         else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
         {
             training_virtual_console();
+            next_quit();
+        }
+        else if (!strncmp(menu, "7", strlen("7")) && strlen(menu) == strlen("7"))
+        {
+            training_process_id();
             next_quit();
         }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
