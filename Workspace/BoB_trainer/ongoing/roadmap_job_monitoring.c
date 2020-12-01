@@ -176,10 +176,20 @@ void roadmap_job_monitoring(void)
   
   printf("두 직업군은 밀접한 관계를 가지며, 많은 부분에서 업무가 겹치기도 합니다.\n");
   next_line();
-  printf("이에 대한 자세한 사항은 \"CERT\" 직업군에 대한 로드맵을 참고하세요.\n");
+  
+  printf("간단하게 설명드리면, CERT는 침해 사고가 발생한 후 이에 대한 대응을 하는\n");
+  printf("전문적인 보안 인력을 의미한다고 할 수 있습니다.\n");
   next_line();
   
-  printf("\"한국인터넷진흥원(KISA)에서는 \"보안 관제\"를 전문적으로 수행하는 기업을 지정합니다.\n");
+  printf("어떻게 보면 \"보안 관제\" 업무 중 \"대응\" 업무에 해당하는 부분을\n");
+  printf("특화시킨 대응 팀이라고 할 수 있겠습니다.\n");
+  next_line();
+  
+  printf("CERT에 대한 자세한 내용은 아래의 한국인터넷진흥원(KISA) 문서 링크를 참고하세요.\n");
+  printf("https://www.kisa.or.kr/public/laws/laws3_View.jsp?mode=view&p_No=259&b_No=259&d_No=43&ST=T&SV=\n\n");
+  next_line();
+  
+  printf("또한 \"한국인터넷진흥원(KISA)에서는 \"보안 관제\"를 전문적으로 수행하는 기업을 지정합니다.\n");
   next_line();
   printf("이에 대한 내용은 아래의 링크를 방문하여 확인할 수 있습니다.\n");
   printf("https://www.kisa.or.kr/business/infor/inforpro_4.jsp\n");
