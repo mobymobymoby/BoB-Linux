@@ -10,7 +10,7 @@ void roadmap_main(void)
     char menu[20] = "";
     while (1)
     {
-        printf("1 : 보안 직업\n2 : 보안 세부 분야\n3 : 보안 관련 학과\n4 : 보안 관련 기업\n5. : 보안 / 해킹 대회\n6. : 보안 관련 교육 프로그램\nq : 종료(quit)\n\n실행할 학습을 선택하세요 : ");
+        printf("1 : 보안 직업\n2 : 보안 세부 분야\n3 : 보안 관련 학과\n4 : 보안 관련 기업\n5 : 보안 / 해킹 대회\n6 : 보안 관련 교육 프로그램\nq : 종료(quit)\n\n실행할 학습을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
