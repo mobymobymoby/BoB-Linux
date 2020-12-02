@@ -31,26 +31,17 @@
 <!-- 방문자 수 -->
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fblack6765%2FBoB-Linux&count_bg=%231E1F1D&title_bg=%23555555&icon=github.svg&icon_color=%230B0A0A&title=number+of+visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 
-<!-- 사용 언어 수 -->
-![issue badge](https://img.shields.io/github/languages/count/black6765/BoB-Linux?color=black&label=language%20used)
 
-<!-- 최다빈도 언어 -->
-![issue badge](https://img.shields.io/github/languages/top/black6765/BoB-Linux?color=black&logoColor=black)
+![issue badge](https://img.shields.io/github/languages/count/black6765/BoB-Linux?color=black&label=language%20used)<!-- 사용 언어 수 -->
+![issue badge](https://img.shields.io/github/languages/top/black6765/BoB-Linux?color=black&logoColor=black)<!-- 최다빈도 언어 -->
 
-<!-- forks -->
-![issue badge](https://img.shields.io/github/forks/black6765/BoB-Linux?color=black&logo=github&logoColor=black)
 
-<!-- stars -->
-![issue badge](https://img.shields.io/github/stars/black6765/BoB-Linux?color=black&logo=github&logoColor=black)
+![issue badge](https://img.shields.io/github/forks/black6765/BoB-Linux?color=black&logo=github&logoColor=black)<!-- forks -->
+![issue badge](https://img.shields.io/github/stars/black6765/BoB-Linux?color=black&logo=github&logoColor=black)<!-- stars -->
+![issue badge](https://img.shields.io/github/commit-activity/w/black6765/BoB-Linux?color=black&label=weekly%20commit%20activity&logo=github&logoColor=black)<!-- weekly commit -->
 
-<!-- weekly commit -->
-![issue badge](https://img.shields.io/github/commit-activity/w/black6765/BoB-Linux?color=black&label=weekly%20commit%20activity&logo=github&logoColor=black)
-
-<!-- 깃헙 레포 코드 용량 -->
-![issue badge](https://img.shields.io/github/languages/code-size/black6765/BoB-Linux?color=black&logo=github&logoColor=black)
-
-<!-- 깃헙 레포 용량 -->
-![issue badge](https://img.shields.io/github/repo-size/black6765/BoB-Linux?color=black&logo=github&logoColor=black)
+![issue badge](https://img.shields.io/github/languages/code-size/black6765/BoB-Linux?color=black&logo=github&logoColor=black)<!-- 깃헙 레포 코드 용량 -->
+![issue badge](https://img.shields.io/github/repo-size/black6765/BoB-Linux?color=black&logo=github&logoColor=black)<!-- 깃헙 레포 용량 -->
 
 <!-- 파일 개수 -->
 ![issue badge](https://img.shields.io/github/directory-file-count/black6765/BoB-Linux?color=black&label=number%20of%20file&logo=github&logoColor=black)
