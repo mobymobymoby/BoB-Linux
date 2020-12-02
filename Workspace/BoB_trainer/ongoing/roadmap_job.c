@@ -24,37 +24,37 @@ void roadmap_job(void)
         if (!strncmp(menu, "1", strlen("1")) && strlen(menu) == strlen("1"))
         {
             roadmap_job_monitoring();
-            break;
+            next_quit();
         }
         else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
         {
             roadmap_job_pentest();
-            break;
+            next_quit();
         }    
         else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
         {
             roadmap_job_consult();
-            break;
+            next_quit();;
         }
         else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
         {
             roadmap_job_dev();
-            break;
+            next_quit();
         }
         else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
         {
             roadmap_job_forensic();
-            break;
+            next_quit();
         }
         else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
         {
             roadmap_job_malware();
-            break;
+            next_quit();
         }
          else if (!strncmp(menu, "7", strlen("7")) && strlen(menu) == strlen("7"))
         {
             roadmap_job_officer();
-            break;
+            next_quit();
         }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
         {
