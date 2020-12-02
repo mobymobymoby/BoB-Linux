@@ -25,7 +25,7 @@ void roadmap_job_monitoring(void)
   printf("보안 관제에 대한 정의가 있습니다.\n");
   next_line();
   
-  printf("여기서는 보안관제를 조직의 정보기술 지원 및 보안 시스템을\n");
+  printf("여기서는 \"보안관제\"를 조직의 정보기술 지원 및 보안 시스템을\n");
   printf("안전하게 운영하기 위하여 사이버 공격 정보를 탐지 및 분석하여\n");
   printf("즉시 대응하는 일련의 업무라고 정의합니다.\n");
   next_line();
@@ -34,7 +34,7 @@ void roadmap_job_monitoring(void)
   next_line();
   
   printf("간단하게 말하면 자산을 지키기 위해서\n");
-  printf("실시간 모니터링을 수행하는 업무를 보안 관제 업무라고 할 수 있습니다..\n\n");
+  printf("실시간 모니터링을 수행하는 업무를 보안 관제 업무라고 할 수 있습니다.\n\n");
   next_line();
   
   
@@ -64,7 +64,7 @@ void roadmap_job_monitoring(void)
   printf("이를 \"전문성의 원칙\"이라고 합니다.\n\n");
   next_line();
   
-  printf("이렇듯, 기본적으로 해커가 좀 더 유리한 입장에 위치하지만\n");
+  printf("이렇듯 기본적으로 해커가 좀 더 유리한 입장에 위치하지만\n");
   printf("방어자에게도 이를 어느 정도 극복할 수 있는 방법이 있습니다.\n");
   next_line();
   
@@ -72,11 +72,11 @@ void roadmap_job_monitoring(void)
   printf("서로 다른 여러 곳에다가 시도하는 경우가 많습니다.\n");
   next_line();
   
-  printf("보안에 대한 관심이 높아진 현재에는 하나의 치명적인 취약점은\n");
+  printf("보안에 대한 관심이 높아진 지금은 하나의 치명적인 취약점도\n");
   printf("상당히 발견하기 어렵고, 높은 가치를 지닙니다.\n");
   next_line();
   
-  printf("따라서 한 번 발견하거나 얻게 된 공격 방법으로 동일한 공격을 수행하게 됩니다.\n");
+  printf("따라서 하나의 공격 방법으로 여러 대상에 동일한 공격을 수행하게 됩니다.\n");
   next_line();
   
   printf("이러한 이유로 이미 감지된 공격에 대한 대응 방법을 정립하여\n");
@@ -94,7 +94,7 @@ void roadmap_job_monitoring(void)
   printf("지금까지 보안 관제에 대한 정의와 3개의 원칙에 대해 살펴보았습니다.\n");
   next_line();
   
-  printf("이제부터는 보안 관제 업무가 정확히 어떤 업무를 수행하는지 알아보겠습니다.\n");
+  printf("이제부터는 보안 관제 업무에서 정확히 어떤 업무를 수행하는지 알아보겠습니다.\n\");
   next_line();
   
   printf("보안 관제 업무는 크게 예방, 탐지, 대응 3가지 업무로 구분할 수 있습니다.\n");
@@ -168,7 +168,7 @@ void roadmap_job_monitoring(void)
   printf("이벤트들을 분석하고 자동으로 대응해주어 업무 효율을 높일 수 있습니다.\n");
   next_line();
   
-  printf("이외에도 보안 관제를 위한 다양한 솔루션이 존재합니다.\n");
+  printf("이외에도 \"보안 관제\"를 위한 다양한 솔루션이 존재합니다.\n");
   next_line();
   
   // 마무리
@@ -178,7 +178,7 @@ void roadmap_job_monitoring(void)
   printf("두 직업군은 밀접한 관계를 가지며, 많은 부분에서 업무가 겹치기도 합니다.\n");
   next_line();
   
-  printf("간단하게 설명드리면, CERT는 침해 사고가 발생한 후 이에 대한 대응을 하는\n");
+  printf("간단하게 설명드리면, \"CERT\"는 침해 사고가 발생한 후 이에 대한 대응을 하는\n");
   printf("전문적인 보안 인력을 의미한다고 할 수 있습니다.\n");
   next_line();
   
@@ -186,17 +186,17 @@ void roadmap_job_monitoring(void)
   printf("특화시킨 대응 팀이라고 할 수 있겠습니다.\n");
   next_line();
   
-  printf("CERT에 대한 자세한 내용은 아래의 한국인터넷진흥원(KISA) 문서 링크를 참고하세요.\n");
+  printf("\"CERT\"에 대한 자세한 내용은 아래의 한국인터넷진흥원(KISA) 문서 링크를 참고하세요.\n");
   printf("https://www.kisa.or.kr/public/laws/laws3_View.jsp?mode=view&p_No=259&b_No=259&d_No=43&ST=T&SV=\n\n");
   next_line();
   
-  printf("또한 \"한국인터넷진흥원(KISA)에서는 \"보안 관제\"를 전문적으로 수행하는 기업을 지정합니다.\n");
+  printf("또한 \"한국인터넷진흥원에서는 \"보안 관제\"를 전문적으로 수행하는 기업을 지정합니다.\n");
   next_line();
   printf("이에 대한 내용은 아래의 링크를 방문하여 확인할 수 있습니다.\n");
   printf("https://www.kisa.or.kr/business/infor/inforpro_4.jsp\n");
   next_line();
   
-  printf("보안 관제 업무는 보안 분야에서 가장 대표적인 직업군 중 하나로\n");
+  printf("\"보안 관제\" 업무는 보안 분야에서 가장 대표적인 직업군 중 하나로\n");
   printf("실제로 많은 보안 전문가들이 해당 업무를 거쳐간다고 합니다.\n");
   next_line();
   
@@ -213,6 +213,4 @@ void roadmap_job_monitoring(void)
   next_line();
 
   printf("\"보안 관제\" 직업군 로드맵이 종료되었습니다.\n");
-  
-  next_quit();
 }
