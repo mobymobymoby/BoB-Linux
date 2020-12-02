@@ -109,7 +109,7 @@ void roadmap_job_monitoring(void)
   next_line();
   
   printf("뛰어난 예방 조치는 보안 관제 업무의 피로도와 부담을 크게 낮추어\n");
-  printf("업무 효율성을 향상시킵니다.\n");
+  printf("업무 효율성을 향상시킵니다.\n\n");
   next_line();
   
   printf("다음으로는 \"탐지\"입니다.\n");
@@ -126,7 +126,7 @@ void roadmap_job_monitoring(void)
   next_line();
   
   printf("이러한 \"탐지\" 업무를 통해 보안 사고가 확인되었다면\n");
-  printf("다음 업무는 \"대응\"으로 넘어가게 됩니다.\n");
+  printf("다음 업무는 \"대응\"으로 넘어가게 됩니다.\n\n");
   next_line();
   
   printf("\"대응\" 업무에서는 보안 사고에 대한 피해를 수습하고\n");
@@ -137,7 +137,7 @@ void roadmap_job_monitoring(void)
   printf("새로운 보안 정책을 수립하여 \"예방\" 업무를 수행합니다.\n");
   next_line();
   
-  printf("이렇듯 보안 업무의 3가지 구분은 서로 상호 보완적인 관계를 가집니다.\n");
+  printf("이렇듯 보안 업무의 3가지 구분은 서로 상호 보완적인 관계를 가집니다.\n\n");
   next_line();
   
   // 보안 관제 트렌드
@@ -168,7 +168,7 @@ void roadmap_job_monitoring(void)
   printf("이벤트들을 분석하고 자동으로 대응해주어 업무 효율을 높일 수 있습니다.\n");
   next_line();
   
-  printf("이외에도 \"보안 관제\"를 위한 다양한 솔루션이 존재합니다.\n");
+  printf("이외에도 \"보안 관제\"를 위한 다양한 솔루션이 존재합니다.\n\n");
   next_line();
   
   // 마무리
@@ -192,7 +192,7 @@ void roadmap_job_monitoring(void)
   
   printf("또한 \"한국인터넷진흥원에서는 \"보안 관제\"를 전문적으로 수행하는 기업을 지정합니다.\n");
   next_line();
-  printf("이에 대한 내용은 아래의 링크를 방문하여 확인할 수 있습니다.\n");
+  printf("이에 대한 내용은 아래의 링크를 방문하여 확인할 수 있습니다.\n\n");
   printf("https://www.kisa.or.kr/business/infor/inforpro_4.jsp\n");
   next_line();
   
