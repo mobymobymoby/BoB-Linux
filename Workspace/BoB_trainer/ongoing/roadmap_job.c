@@ -3,8 +3,8 @@
 void roadmap_job(void)
 {
     system("clear");
-    printf("보안 로드맵\n");
-    printf("└ 보안 직업군\n\n");
+    printf("[보안 로드맵]\n");
+    printf("└ [보안 직업군]\n\n");
 
     printf("보안 직업군 파트입니다.\n\n");
     printf("해당 파트에서는 보안과 관련된 일을 하는 직업들을 소개합니다\n");
