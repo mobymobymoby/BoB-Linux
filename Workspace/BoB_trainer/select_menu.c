@@ -17,7 +17,7 @@ void select_menu(void)
     
     while (1)
     {
-        printf("1 : 리눅스 기본 지식\n2 : 기초 명령어 학습\n3 : 응용 명령어 학습\ni : 프로그램 정보(info)\nq : 종료(quit)\n\n실행할 학습을 선택하세요 : ");
+        printf("1 : 리눅스 기본 지식\n2 : 기초 명령어 학습\n3 : 응용 명령어 학습\n4 : 보안 로드맵\ni : 프로그램 정보(info)\nq : 종료(quit)\n\n실행할 학습을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
@@ -38,6 +38,11 @@ void select_menu(void)
         else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
         {
             advanced_trainer();
+            break;
+        }
+        else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
+        {
+            roadmap_main();
             break;
         }
         else if ( (!strncmp(menu, "i", strlen("i")) && strlen(menu) == strlen("i")) || (!strncmp(menu, "I", strlen("I")) && strlen(menu) == strlen("I")) || (!strncmp(menu, "info", strlen("info")) && strlen(menu) == strlen("info")) )
