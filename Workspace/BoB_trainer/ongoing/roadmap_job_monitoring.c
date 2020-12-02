@@ -2,6 +2,7 @@
 
 void roadmap_job_monitoring(void)
 {
+  system("clear");
   printf("보안 로드맵\n");
   printf("└ 보안 직업군\n");
   printf("  └ 보안 관제\n\n");
