@@ -41,6 +41,26 @@ void training_device_file(void);
 void training_virtual_console(void);
 void training_process_id(void);
 
+// 로드맵 함수
+void roadmap_main(void);
+
+void roadmap_job(void);
+void roadmap_field(void);
+void roadmap_department();
+void roadmap_company(void);
+void roadmap_contest(void);
+void roadmap_edu_program(void);
+
+// 직업군
+void roadmap_job_monitoring(void);
+void roadmap_job_pentest(void);
+void roadmap_job_consult(void);
+void roadmap_job_dev(void);
+void roadmap_job_forensic(void);
+void roadmap_job_malware(void);
+void roadmap_job_officer(void);
+
+
 /* 함수 리스트 */
 // 김기서 명령어
 void training_clear(void);
