@@ -23,7 +23,7 @@
 ![issue badge](https://img.shields.io/github/repo-size/black6765/BoB-Linux?color=black&logo=github&logoColor=black)
 
 <!-- 파일 개수 -->
-![issue badge](https://img.shields.io/github/directory-file-count/black6765/BoB-Linux?color=black&label=number%20of%20files&logo=github&logoColor=black&type=file)
+![issue badge](https://img.shields.io/github/directory-file-count/black6765/BoB-Linux?color=black&label=number%20of%20file&logo=github&logoColor=black)
 
 
 ## BoB-Linux Project
