@@ -30,36 +30,36 @@ void roadmap_main(void)
         if (!strncmp(menu, "1", strlen("1")) && strlen(menu) == strlen("1"))
         {
             roadmap_job();
-            next_quit();
+            next_quit_roadmap();
         }
         else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
         {
             roadmap_field();
-            next_quit();
+            next_quit_roadmap();
         }    
         else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
         {
             roadmap_department();
-            next_quit();
+            next_quit_roadmap();
         }
         else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
         {
             roadmap_company();
-            next_quit();
+            next_quit_roadmap();
         }
         else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
         {
             roadmap_contest();
-            next_quit();
+            next_quit_roadmap();
         }
         else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
         {
             roadmap_edu_program();
-            next_quit();
+            next_quit_roadmap();
         }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
         {
-            next_quit();
+            next_quit_roadmap();
         }
         else
         {
