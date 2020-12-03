@@ -63,7 +63,7 @@ void roadmap_field(void);
 void roadmap_field_web(void);
 void roadmap_field_reversing(void);
 void roadmap_field_system(void);
-void roadmap_field_digital_foensic(void);
+void roadmap_field_digital_forensic(void);
 void roadmap_field_network(void);
 void roadmap_field_cryptography(void);
 
