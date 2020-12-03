@@ -22,7 +22,7 @@
  
  #### BoB Linux 배포
  - 배포 링크
-   - https://218.146.20.51:21443/blackmoon/boblinux
+   - https://boblinux.fossa.kr:21443/blackmoon/boblinux
  - BoB Linux에는 트레이닝 기능, 보안 점검 프로그램이 기본적으로 내장
  - 초기 계정 : rookie / rookie
  - 한글 입력 : [Ctrl + Space Bar]
