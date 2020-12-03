@@ -61,7 +61,7 @@ void roadmap_field(void)
 	}
 	else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
 	{
-	        roadmap_field_digital_foensic();
+	        roadmap_field_digital_forensic();
 	        next_quit_roadmap();
 	}
 	else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
