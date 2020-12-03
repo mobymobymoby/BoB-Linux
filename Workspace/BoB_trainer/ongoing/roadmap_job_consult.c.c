@@ -4,8 +4,8 @@ void roadmap_job_consult(void)
 {
 	system("clear");
 	printf("[보안 로드맵]\n");
-	printf("└ [보안 직업군]\n");
-	printf("  └ [보안 컨설턴트]\n\n");
+	printf("  └ [보안 직업군]\n");
+	printf("      └ [보안 컨설턴트]\n\n");
 
 	printf("이번에 살펴볼 보안 직업군은 \"보안 컨설턴트\" 입니다.\n\n");
 	printf("\"보안 컨설턴트\"는 기업에서 보안 컨설팅을 담당하는 직업군입니다.\n");
