@@ -4,8 +4,8 @@ void roadmap_job_dev(void)
 {
 	system("clear");
 	printf("[보안 로드맵]\n");
-	printf("└ [보안 직업군]\n");
-	printf("  └ [보안 제품 개발자]\n\n");
+	printf("  └ [보안 직업군]\n");
+	printf("      └ [보안 제품 개발자]\n\n");
 
 	// 모의 해킹 전문가 인트로 
 	printf("이번에 살펴볼 보안 직업군은 \"보안 제품 개발자\" 입니다.\n\n");
