@@ -65,6 +65,21 @@ void roadmap_job_officer(void);
 void roadmap_edu_program_bob(void);
 void roadmap_edu_program_ksj(void);
 
+//보안 관련 학과
+void roadmap_department_seoul(void);
+void roadmap_department_gyeonggido(void);
+void roadmap_department_gangwondo(void);
+void roadmap_department_daejeon(void);
+void roadmap_department_chungcheongbukdo(void);
+void roadmap_department_chungcheongnamdo(void);
+void roadmap_department_busan(void);
+void roadmap_department_gyeongsangbukdo(void);
+void roadmap_department_gyeongsangnamdo(void);
+void roadmap_department_gwangju(void);
+void roadmap_department_jeollabukdo(void);
+void roadmap_department_jeollanamdo(void);
+void roadmap_department_ma(void);
+
 /* 함수 리스트 */
 // 김기서 명령어
 void training_clear(void);
