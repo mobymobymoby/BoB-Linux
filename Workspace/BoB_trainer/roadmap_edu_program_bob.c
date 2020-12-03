@@ -209,7 +209,7 @@ void roadmap_edu_program_bob(void)
     next_line();
 
     printf("아래의 URL을 방문해서 BoB에 대한 다양한 정보를 확인해보세요.\n");
-    printf("https://kitribob.wiki/wiki/%EB%8C%80%EB%AC%B8\n");
+    //printf("https://kitribob.wiki/wiki/%EB%8C%80%EB%AC%B8\n");
     next_line();
 
     printf("\"BoB\" 보안 교육 프로그램 로드맵이 종료되었습니다.\n");
