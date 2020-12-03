@@ -3,7 +3,10 @@
 void roadmap_department_seoul(void)
 {
 	system("clear");
-	printf("고려대학교     : 사이버국방학과\n");
+	printf("[보안 로드맵]\n");
+   	printf("  └ [정보 보호 또는 보안 관련 학과]\n");
+   	printf("      └ [서울]\n\n\n");
+   	printf("고려대학교     : 사이버국방학과\n");
 	printf("덕성여자대학교 : 사이버보안학과\n");
 	printf("동국대학교     : 융합보안학과\n");
 	printf("서울여자대학교 : 미래산업융합대학 정보보호학과\n");

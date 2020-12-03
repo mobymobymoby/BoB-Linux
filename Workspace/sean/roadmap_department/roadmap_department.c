@@ -6,7 +6,8 @@ void roadmap_department(void)
 
 	system("clear");
 
-	printf("[정보보호 또는 보안 관련 학과]\n\n\n");
+	printf("[보안 로드맵]\n");
+   	printf("  └ [정보 보호 또는 보안 관련 학과]\n\n\n");
 	printf("먼저 \"정보 보안\"과 \"정보 보호\" 모두 맞는 표현입니다.\n");
 	next_line();
 
@@ -104,67 +105,67 @@ void roadmap_department(void)
 		if (!strncmp(menu, "1", strlen("1")) && strlen(menu) == strlen("1"))
 	        {
 	            roadmap_department_seoul();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
 	        {
 	            roadmap_department_gyeonggido();
-	            next_quit();
+	            next_quit_roadmap();
 	        }    
 	        else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
 	        {
 	            roadmap_department_gangwondo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
 	        {
 	            roadmap_department_daejeon();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
 	        {
 	            roadmap_department_chungcheongbukdo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
 	        {
 	            roadmap_department_chungcheongnamdo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "7", strlen("7")) && strlen(menu) == strlen("7"))
 	        {
 	            roadmap_department_busan();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "8", strlen("8")) && strlen(menu) == strlen("8"))
 	        {
 	            roadmap_department_gyeongsangbukdo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "9", strlen("9")) && strlen(menu) == strlen("9"))
 	        {
 	            roadmap_department_gyeongsangnamdo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "10", strlen("10")) && strlen(menu) == strlen("10"))
 	        {
 	            roadmap_department_gwangju();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "11", strlen("11")) && strlen(menu) == strlen("11"))
 	        {
 	            roadmap_department_jeollabukdo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "12", strlen("12")) && strlen(menu) == strlen("12"))
 	        {
 	            roadmap_department_jeollanamdo();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if (!strncmp(menu, "13", strlen("13")) && strlen(menu) == strlen("13"))
 	        {
 	            roadmap_department_ma();
-	            next_quit();
+	            next_quit_roadmap();
 	        }
 	        else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
 	        {
