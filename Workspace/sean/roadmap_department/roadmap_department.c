@@ -65,7 +65,7 @@ void roadmap_department(void)
 	next_line();
 
 	printf("여기서는 보안에 관련된 학과가 있는 대학교를 간단히 볼 수 있습니다.\n\n");
-	while(1);
+	while(1)
 	{
 		printf("1  : 서울\n");
 		printf("2  : 경기도\n");
@@ -98,7 +98,7 @@ void roadmap_department(void)
 	        }    
 	        else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
 	        {
-	            roadmap_gangwondo();
+	            roadmap_department_gangwondo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
@@ -143,7 +143,7 @@ void roadmap_department(void)
 	        }
 	        else if (!strncmp(menu, "12", strlen("12")) && strlen(menu) == strlen("12"))
 	        {
-	            roadmap_departmentjeollanamdo();
+	            roadmap_department_jeollanamdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "13", strlen("13")) && strlen(menu) == strlen("13"))
