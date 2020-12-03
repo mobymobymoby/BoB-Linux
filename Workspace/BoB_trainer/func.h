@@ -17,6 +17,7 @@ char rst_dir[DIR_SIZE + 10];
 char rm_dir[DIR_SIZE + 10];
 
 void next_quit(void);
+void next_quit_roadmap(void);
 void next_line(void);
 int run_command(char valid_cmd[]);
 int just_run_command(char valid_cmd[]);
