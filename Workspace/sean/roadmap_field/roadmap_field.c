@@ -74,4 +74,13 @@ void roadmap_field(void)
 	        roadmap_field_cryptography();
 	        next_quit_roadmap();
 	}
+	        else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
+	{
+	        break;
+	}
+	else
+	{
+	        system("clear");
+	        printf("잘못된 입력입니다. 다시 입력해주세요.\n\n");
+	}
 }
