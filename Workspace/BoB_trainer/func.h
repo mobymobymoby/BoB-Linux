@@ -40,7 +40,8 @@ void training_linux_defdir(void);
 void training_device_file(void);
 void training_virtual_console(void);
 void training_process_id(void);
-
+void next_quit_roadmap(void)
+ 
 // 로드맵 함수
 void roadmap_main(void);
 
