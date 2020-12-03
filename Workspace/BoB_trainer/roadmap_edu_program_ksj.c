@@ -1,3 +1,5 @@
+#include "func.h"
+
 void roadmap_edu_program_ksj(void)
 {
       system("clear");
@@ -134,7 +136,7 @@ void roadmap_edu_program_ksj(void)
       printf("미협약기업 8개 : 10명\n\n");
       next_line();
       
-      printf("2020년 기준 작년에 수료를 완료한 1기의 취업률이 35%를 넘는 것을 확인할 수 있습니다.\n");
+      printf("2020년 기준 작년에 수료를 완료한 1기의 취업률이 35%%를 넘는 것을 확인할 수 있습니다.\n");
       next_line();
       
       system("clear");
