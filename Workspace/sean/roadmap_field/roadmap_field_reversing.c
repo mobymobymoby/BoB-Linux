@@ -84,7 +84,7 @@ void roadmap_field_reversing(void)
 	next_line();
 
 	printf("[크랙]\n");
-	print("패치와 의미는 같으나 나쁜 의도로 행하는 것을 말합니다.");
+	printf("패치와 의미는 같으나 나쁜 의도로 행하는 것을 말합니다.");
 	next_line();
 	
 	printf("공부할 때는 자신이 관심이 있거나 궁금한 것을 먼저 하는 것이 좋습니다.\n");
