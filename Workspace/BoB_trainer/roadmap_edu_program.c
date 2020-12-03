@@ -32,7 +32,7 @@ void roadmap_edu_program(void)
         }
         else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
         {
-            #roadmap_edu_program_ksj();
+            // roadmap_edu_program_ksj();
             next_quit();
         }    
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
