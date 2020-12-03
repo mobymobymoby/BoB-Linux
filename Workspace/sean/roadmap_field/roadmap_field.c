@@ -2,6 +2,7 @@
 
 void roadmap_field(void)
 {
+	char menu[20] = "";
 	system("clear");
 
 	
