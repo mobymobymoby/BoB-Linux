@@ -16,7 +16,7 @@ void roadmap_job(void)
         system("clear");
         printf("[보안 로드맵]\n");
         printf("└ [보안 직업군]\n\n");
-        printf("1 : 보안 관제\n2 : 모의 해킹\n3 : 보안 컨설턴트\n4 : 보안 제품 개발자\n5. : 디지털 포렌식\n6. : 악성코드 분석가\n7. : 보안 관리자\nq : 종료(quit)\n\n실행할 직업군을 선택하세요 : ");
+        printf("1 : 보안 관제\n2 : 모의 해킹 전문가\n3 : 보안 컨설턴트\n4 : 보안 제품 개발자\n5. : 디지털 포렌식\n6. : 악성코드 분석가\nq : 종료(quit)\n\n실행할 직업군을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
@@ -52,11 +52,6 @@ void roadmap_job(void)
         else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
         {
             roadmap_job_malware();
-            next_quit();
-        }
-         else if (!strncmp(menu, "7", strlen("7")) && strlen(menu) == strlen("7"))
-        {
-            roadmap_job_officer();
             next_quit();
         }
         else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
