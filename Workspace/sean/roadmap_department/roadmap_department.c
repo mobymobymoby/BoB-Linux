@@ -1,6 +1,6 @@
 #include "func.h"
 
-void training_department(void)
+void roadmap_department(void)
 {
 	char menu[20] = "";
 
@@ -88,67 +88,67 @@ void training_department(void)
 		
 		if (!strncmp(menu, "1", strlen("1")) && strlen(menu) == strlen("1"))
 	        {
-	            training_department_seoul();
+	            roadmap_department_seoul();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
 	        {
-	            training_department_gyeonggido();
+	            roadmap_department_gyeonggido();
 	            next_quit();
 	        }    
 	        else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
 	        {
-	            training_gangwondo();
+	            roadmap_gangwondo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
 	        {
-	            training_department_daejeon();
+	            roadmap_department_daejeon();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
 	        {
-	            training_department_chungcheongbukdo();
+	            roadmap_department_chungcheongbukdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
 	        {
-	            training_department_chungcheongnamdo();
+	            roadmap_department_chungcheongnamdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "7", strlen("7")) && strlen(menu) == strlen("7"))
 	        {
-	            training_department_busan();
+	            roadmap_department_busan();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "8", strlen("8")) && strlen(menu) == strlen("8"))
 	        {
-	            training_department_gyeongsangbukdo();
+	            roadmap_department_gyeongsangbukdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "9", strlen("9")) && strlen(menu) == strlen("9"))
 	        {
-	            training_department_gyeongsangnamdo();
+	            roadmap_department_gyeongsangnamdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "10", strlen("10")) && strlen(menu) == strlen("10"))
 	        {
-	            training_department_gwangju();
+	            roadmap_department_gwangju();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "11", strlen("11")) && strlen(menu) == strlen("11"))
 	        {
-	            training_department_jeollabukdo();
+	            roadmap_department_jeollabukdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "12", strlen("12")) && strlen(menu) == strlen("12"))
 	        {
-	            training_departmentjeollanamdo();
+	            roadmap_departmentjeollanamdo();
 	            next_quit();
 	        }
 	        else if (!strncmp(menu, "13", strlen("13")) && strlen(menu) == strlen("13"))
 	        {
-	            training_department_ma();
+	            roadmap_department_ma();
 	            next_quit();
 	        }
 	        else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
