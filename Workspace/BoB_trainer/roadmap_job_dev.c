@@ -122,6 +122,7 @@ void roadmap_job_dev(void)
 	next_line();
 	
 	// 마무리
+	system("clear");
 	printf("이처럼 \"보안 제품 개발자\"에게 요구되는 지식의 범위는 상당합니다.\n");
 	printf("그래서 \"보안 제품 개발자\"의 공부는 끝이 없다고 말하기도 합니다.\n");
 	next_line();
@@ -138,6 +139,6 @@ void roadmap_job_dev(void)
 	printf("만들어낼 수 있는 매력적인 직업군이라고 할 수 있습니다.\n");
 	next_line();
 	
-	printf("\"보안 제품 개발자\" 로드맵이 종료되었습니다.\n");	
+	printf("\"보안 제품 개발자\" 직업군 로드맵이 종료되었습니다.\n");	
 }
 
