@@ -5,7 +5,7 @@ void roadmap_edu_program_ksj(void)
       printf("  └ [보안 관련 교육 프로그램]\n");
       printf("      └ [K-Shield Jr.]\n\n");
 
-      printf("이번에 살펴볼 보안 관련 교육 프로그램은 \"케이쉴드 주니어\"입니다.\n\n");
+      printf("이번에 살펴볼 보안 관련 교육 프로그램은 \"K-Shield Jr.\"입니다.\n\n");
       next_line();
       
       // 케쉴주 인트로
