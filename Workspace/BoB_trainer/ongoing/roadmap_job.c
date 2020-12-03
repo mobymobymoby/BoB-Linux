@@ -4,7 +4,7 @@ void roadmap_job(void)
 {
     system("clear");
     printf("[보안 로드맵]\n");
-    printf("└ [보안 직업군]\n\n");
+    printf("  └ [보안 직업군]\n\n");
 
     printf("보안 직업군 파트입니다.\n\n");
     printf("해당 파트에서는 보안과 관련된 일을 하는 직업들을 소개합니다\n");
@@ -15,8 +15,8 @@ void roadmap_job(void)
     {
         system("clear");
         printf("[보안 로드맵]\n");
-        printf("└ [보안 직업군]\n\n");
-        printf("1 : 보안 관제\n2 : 모의 해킹 전문가\n3 : 보안 컨설턴트\n4 : 보안 제품 개발자\n5. : 디지털 포렌식\n6. : 악성코드 분석가\nq : 종료(quit)\n\n실행할 직업군을 선택하세요 : ");
+        printf("  └ [보안 직업군]\n\n");
+        printf("1 : 보안 관제\n2 : 모의 해킹 전문가\n3 : 보안 컨설턴트\n4 : 보안 제품 개발자\n5 : 디지털 포렌식\n6 : 악성코드 분석가\nq : 종료(quit)\n\n실행할 직업군을 선택하세요 : ");
 
         fgets(menu, sizeof(menu), stdin);
 
