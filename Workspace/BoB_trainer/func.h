@@ -60,6 +60,9 @@ void roadmap_job_forensic(void);
 void roadmap_job_malware(void);
 void roadmap_job_officer(void);
 
+// 보안 교육 프로그램
+void roadmap_edu_program_bob(void);
+void roadmap_edu_program_ksj(void);
 
 /* 함수 리스트 */
 // 김기서 명령어
