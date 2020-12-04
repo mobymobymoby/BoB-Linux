@@ -63,12 +63,24 @@ void roadmap_field_web(void)
 
 	printf("1. 프로그래밍\n");
 	printf("C언어와 Java를 공부하면 웹 프로그래밍과 DB를 쉽게 이해할 수 있습니다.\n\n");
+	next_line();
+
 	printf("2. 운영체제 기초, 네트워크 기초\n");
 	printf("운영체제와 네트워크를 공부하면 자신이 어떤 환경인지와 네트워크 상에서의 구조 등을 알 수 있습니다.\n\n");
+	next_line();
+
 	printf("3. 웹 애플리케이션\n");
+	next_line();
+	
 	printf("4. 웹 해킹 기초\n");
+	next_line();
+
 	printf("5. 웹 해킹 심화 또는 고급\n");
+	next_line();
+
 	printf("6. 워게임 사이트 이용\n");
+	next_line();
+
 	printf("7. 각종 대회나 이벤트에 참여\n");
 	next_line();
 	

@@ -13,7 +13,7 @@ void roadmap_field_digital_forensic(void)
 	printf("법정이나 수사기관에 제출할 수 있도록 디지털 증거를 수집하고 제출해야 합니다.\n");
 	next_line();
 
-	printf("최근에 나온 뉴스들에서도 언급된 적이 많은 분야입니다.\n");
+	printf("디지털 포렌식은 뉴스에서도 언급된 적이 많은 분야입니다.\n");
 	next_line();
 
 	printf("본래 '포렌식'은 '법의학'이라는 의미로 증거 수집, 분석이란 의미입니다\n");
@@ -41,7 +41,7 @@ void roadmap_field_digital_forensic(void)
 	printf("8. 해킹 공격 종류와 기법들\n");
 	next_line();
 
-	printf("위에서 8번 같은 경우는 워게임 같은 사이트를 이용하여 지식과 경험을 쌓을 수 있습니다\n");
+	printf("위에서 8번 같은 경우는 워게임 같은 사이트를 이용하여 지식과 경험을 쌓을 수 있습니다.\n");
 	next_line();
 
 	printf("지금까지 \"디지털 포렌식\"에 대해 알아보았습니다.\n");

@@ -9,7 +9,7 @@ void roadmap_field_network(void)
    	printf("  └ [보안 및 해킹 분야]\n");
    	printf("      └ [네트워크 해킹]\n\n\n");
 
-	printf("네트워크 상에서 발생되는 모든 해킹을 의미합니다.\n");
+	printf("네트워크 해킹은 네트워크 상에서 발생되는 모든 해킹을 의미합니다.\n");
 	next_line();
 
 	printf("네트워크 해킹에서 유명한 공격으로는 다음과 같습니다.\n\n");
@@ -32,7 +32,7 @@ void roadmap_field_network(void)
 	printf("5. 멀웨어 공격(피싱 메일, 악성 페이지, 악성 광고)\n");
 	next_line();
 	
-	printf("6. 웹 콩격\n");
+	printf("6. 웹 공격\n");
 	next_line();
 	
 	printf("7. 스캔 공격\n");

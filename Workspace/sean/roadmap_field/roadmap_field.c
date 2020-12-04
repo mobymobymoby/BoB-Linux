@@ -13,7 +13,7 @@ void roadmap_field(void)
 	next_line();
 
 	printf("보안속에 해킹이 포함되어 있지만 이러한 해킹에도\n");
-	printf("여러 가지 종류와 기법들이 나뉩니다.n");
+	printf("여러 가지 종류와 기법들이 나뉩니다.\n");
 	next_line();
 
 	printf("먼저 정보 보안 분야는 크게 7가지가 있습니다.\n\n");
@@ -36,7 +36,7 @@ void roadmap_field(void)
 		printf("1. 웹 해킹\n");
 		printf("2. 리버스 엔지니어링\n");
 		printf("3. 시스템 해킹\n");
-		printf("4. 포렌식\n");
+		printf("4. 디지털 포렌식\n");
 		printf("5. 네트워크 해킹\n");
 		printf("6. 암호학\n\n\n");
 		

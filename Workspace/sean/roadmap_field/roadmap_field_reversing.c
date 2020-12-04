@@ -56,7 +56,7 @@ void roadmap_field_reversing(void)
 	printf("프로그램의 동작 원리에 대한 예측을 해야 합니다.\n");
 	next_line();
 
-	printf("어떠한 프로그램이 생성되려면 컴파일 되기 전\n");
+	printf("어떠한 코드가 하나의 프로그램이 생성되려면 컴파일 되기 전\n");
 	printf("목표에 따른 CPU에 맞춰서 Binary Code로 변환됩니다.\n");
 	next_line();
 
@@ -80,11 +80,11 @@ void roadmap_field_reversing(void)
 	next_line();
 
 	printf("[패치]\n");
-	printf("프로그램의 파일 혹은 실행 중인 프로세스 메로리의 내용을 변경하는 작업을 의미합니다.\n\n");
+	printf("프로그램의 파일 혹은 실행 중인 프로세스 메모리의 내용을 변경하는 작업을 의미합니다.\n\n");
 	next_line();
 
 	printf("[크랙]\n");
-	printf("패치와 의미는 같으나 나쁜 의도로 행하는 것을 말합니다.");
+	printf("패치와 의미는 같으나 나쁜 의도로 행하는 것을 말합니다.\n");
 	next_line();
 	
 	printf("공부할 때는 자신이 관심이 있거나 궁금한 것을 먼저 하는 것이 좋습니다.\n");
