@@ -31,7 +31,7 @@ void roadmap_company(void)
 		}
 		else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
 		{
-		    roadmap_company_egloo();
+		    roadmap_company_igloo();
 		    next_quit_roadmap();
 		}    
 		else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))

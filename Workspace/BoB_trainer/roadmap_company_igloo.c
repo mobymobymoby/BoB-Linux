@@ -1,6 +1,6 @@
 #include "func.h"
 
-void roadmap_company_egloo(void)
+void roadmap_company_igloo(void)
 {
 	system("clear");
 	printf("[보안 로드맵]\n");
