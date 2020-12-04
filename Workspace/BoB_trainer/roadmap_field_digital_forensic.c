@@ -36,7 +36,7 @@ void roadmap_field_digital_forensic(void)
 	printf("3. 네트워크\n");
 	printf("4. 아키텍처\n");
 	printf("5. 파일 포맷\n");
-	printf("6. 물리 장비들\n");
+	printf("6. 물리 장비\n");
 	printf("7. 로그 분석\n");
 	printf("8. 해킹 공격 종류와 기법들\n");
 	next_line();
