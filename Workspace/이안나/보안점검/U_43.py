@@ -1,19 +1,32 @@
 #!/usr/bin/env python3
 #5.1 로그의 정기적 검토 및 보고
 
+import getpass
 import subprocess
 import sys
+import os
 
 def U_43(): 
     print("[U-43] 로그의 정기적 검토 및 보고")
     #out = subprocess.getoutput('')
     report = True
 
-    subprocess.call('last > wtmp_log.txt', shell=True)
-    subprocess.call('sudo lastb > btmp_log.txt', shell=True)
-    subprocess.call('w > utmp_log.txt', shell=True)
+    user = getpass.getuser()
+    cpath = "/home/" + user + "/LOG"
+    if not os.path.exists(cpath):
+        os.makedirs(cpath)
 
-    print("\t[검사 결과] \"\" 폴더 위치에 LOG 파일이 저장되었습니다.")
+    subprocess.call('last > ~/LOG/wtmp_log.txt', shell=True)
+    subprocess.call('sudo lastb > ~/LOG/btmp_log.txt', shell=True)
+    subprocess.call('w > ~/LOG/utmp_log.txt', shell=True)
+
+    if os.path.exists('/var/log/sulog'):
+        subprocess.call('cat /var/log/sulog > ~/LOG/sulog.txt', shell=True)
+
+    if os.path.exists('/var/log/xferlog'):
+        subprocess.call('cat /var/log/xferlog > ~/LOG/xferlog.txt', shell=True)
+
+    print("\t[검사 결과] \"~/LOG\" 폴더 위치에 log 파일이 저장되었습니다.")
     print("\t파일을 확인하여 조치 방법에 따라 정기적인 로그 점검 수행을 권장합니다.")
 
 ###########################################################################################
