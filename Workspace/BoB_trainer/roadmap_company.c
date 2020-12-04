@@ -7,7 +7,7 @@ void roadmap_company(void)
 	printf("  └ [보안 관련 기업]\n\n");
 
 	printf("보안 관련 기업 파트입니다.\n\n");
-	printf("해당 파트에서는 보안과 관련된 일을 하는 기업들을 소개합니다\n");
+	printf("해당 파트에서는 보안과 관련된 일을 하는 기업 및 기관들을 소개합니다\n");
 	next_line();
 
 	char menu[20] = "";
@@ -16,7 +16,7 @@ void roadmap_company(void)
 		system("clear");
 		printf("[보안 로드맵]\n");
 		printf("  └ [보안 관련 기업]\n\n");
-		printf("1 : 안랩(Ahnlab)\n2 : 이글루시큐리티\n3 : 이니텍\n4 : SK 인포섹\n5 : 국가정보원\n6 : 한국인터넷진흥원(KISA)\nq : 종료(quit)\n\n실행할 기업을 선택하세요 : ");
+		printf("1 : 안랩(Ahnlab)\n2 : 이글루시큐리티\n3 : 이니텍\n4 : SK 인포섹\n5 : 국가정보원(NIS)\n6 : 한국인터넷진흥원(KISA)\nq : 종료(quit)\n\n실행할 기업이나 기관을 선택하세요 : ");
 
 		fgets(menu, sizeof(menu), stdin);
 
