@@ -5,7 +5,7 @@ void roadmap_job_forensic(void)
 	system("clear");
 	printf("[보안 로드맵]\n");
 	printf("  └ [보안 직업군]\n");
-	printf("      └ [디지털 포렌식 전문가]\n\n");
+	printf("      └ [디지털 포렌식 전문가]\n\n\n");
 
 	// 모의 해킹 전문가 인트로 
 	printf("이번에 살펴볼 보안 직업군은 \"디지털 포렌식 전문가\" 입니다.\n\n");
@@ -13,7 +13,7 @@ void roadmap_job_forensic(void)
 	printf("여러분들은 \"디지털 포렌식\"에 대해 알고 있으신가요?\n");
 	next_line();
 	
-	printf("디지털 포렌식은 법과 아주 밀접한 관계입니다.\n");
+	printf("디지털 포렌식은 법과 아주 밀접한 관계입니다.\n\n");
 	printf("법정이나 수사기관에 제출할 수 있도록 디지털 증거를 수집하고 제출해야 합니다.\n");
 	next_line();
 
@@ -37,8 +37,7 @@ void roadmap_job_forensic(void)
 	
 	// 디지털 포렌식 전문가의 소양
 	system("clear");
-	printf("앞서 살펴본 것처럼 \"디지털 포렌식 전문가\"가 준수해야할 내용은\n");
-	printf("상당히 많습니다.\n");
+	printf("\"디지털 포렌식 전문가\"가 준수해야할 내용은 상당히 많습니다.\n");
 	next_line();
 	
 	printf("특히 \"포렌식\" 자체가 \"법과학\"이라는 의미를 담고 있기 때문에\n");
@@ -63,7 +62,7 @@ void roadmap_job_forensic(void)
 	printf("디지털 포렌식은 보안의 한 분야기도 하지만, 수사 기법 이기도 합니다.\n");
 	printf("따라서 다양한 수사 기법에 대한 내용을 숙지하는 것도 중요합니다.\n");
 	next_line();
-	
+
 	// 마무리
 	system("clear");
 	printf("지금까지 \"디지털 포렌식 전문가\"를 살펴보았습니다.\n");
@@ -73,8 +72,8 @@ void roadmap_job_forensic(void)
 	printf("상당한 영향을 미치게 됩니다.\n");
 	next_line();
 	
-	printf("매우 숙련된 디지털 포렌식 전문가는 사소한 증거까지 찾아내어\n");
-	printf("증거로 채택시킬 수 있지만\n");
+	printf("매우 숙련된 디지털 포렌식 전문가는\n");
+	printf("사소한 증거까지 찾아내어 증거로 채택시킬 수 있지만\n");
 	next_line();
 	
 	printf("비숙련자의 경우 중요한 증거를 눈 앞에 두고도\n");
@@ -82,9 +81,7 @@ void roadmap_job_forensic(void)
 	next_line();
 	
 	printf("범죄에 있어서 한 사람의 억울함이 풀릴 수도 있고\n");
-	printf("미제로 남을 만한 사건을 해결할 수도 있는 \"디지털 포렌식 전문가\"는\n");
-	next_line();
-	
+	printf("미제로 남을 만한 사건을 해결할 수도 있는 \"디지털 포렌식 전문가\"는\n\n");	
 	printf("까다로운 업무 조건을 가지고 있지만\n");
 	printf("많은 보람을 느낄 수 있고 꼭 필요한 직업군 입니다.\n");
 	next_line();
