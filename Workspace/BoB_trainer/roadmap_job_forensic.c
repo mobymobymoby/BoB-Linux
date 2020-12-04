@@ -41,7 +41,7 @@ void roadmap_job_forensic(void)
 	next_line();
 	
 	printf("특히 \"포렌식\" 자체가 \"법과학\"이라는 의미를 담고 있기 때문에\n");
-	printf("법에 대한 이해도가 필수적입니다.\n\n");
+	printf("법에 대한 이해도가 필수적입니다.\n");
 	next_line();
 	
 	printf("또한 디지털 증거가 될 데이터를 다루게 되므로\n");
