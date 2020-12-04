@@ -11,6 +11,13 @@ void roadmap_company_kisa(void)
 	printf("이번에 살펴볼 보안 관련 기관은 \"한국인터넷진흥원(KISA)\"입니다.\n\n");
 	printf("KISA는 인터넷 및 정보보호의 전문기관으로 보안과 매우 밀접한 기관입니다.\n");
 	next_line();
+	
+	printf("원래 이름은 \"한국인터넷진흥원\"이지만, \"KISA\"라는 명칭이\n");
+	printf("더 자주 쓰이기 때문에 해당 로드맵에서는 \"KISA\"라고 하겠습니다.\n");
+	next_line();
+	
+	printf("참고로 KISA는 Korea Internet & Security Agency의 약자입니다.\n\n");
+	next_line();
 
 	printf("KISA는 2009년 7월에 설립되어 대한민국의 인터넷 문화와\n");
 	printf("정보보안을 위한 '과학기술정보통신부' 산하 공공기관입니다.\n");
@@ -48,7 +55,7 @@ void roadmap_company_kisa(void)
 	next_line();
 
 	printf("대한민국의 대표적인 보안기관인 만큼 유용한 자료들이 상당히 많이 있고\n");
-	printf("보안에 대한 최신 트렌드와 공격 기법까지 알 수 있기 때문입니다.\n");
+	printf("보안에 대한 최신 트렌드와 공격 기법까지 알 수 있기 때문입니다.\n\n");
 	next_line();
 
 	printf("몇 가지 예시를 들자면, \"KISA Report\"라는 문서가 매달 발간되어\n");
@@ -84,6 +91,7 @@ void roadmap_company_kisa(void)
 	next_line();
 
 	// 침해사고 대응 : 보호나라 + KrCERT
+	system("clear");
 	printf("KISA는 국내에서 발생하는 다양한 해킹 사고에 대한 즉각적인 대응을 제공합니다.\n");
 	next_line();
 
@@ -92,7 +100,7 @@ void roadmap_company_kisa(void)
 	next_line();
 
 	printf("\"통합 보호나라\" & \"KrCERT\"는 국민들을 각종 사이버 위협으로부터\n");
-	printf("보호하고, 사고가 발생했을 때 즉각 대응할 수 있도록 정보를 제공합니다.\n");
+	printf("보호하고, 사고가 발생했을 때 즉각 대응할 수 있도록 정보를 제공합니다.\n\n");
 	next_line();
 
 	printf("특히 중소기업 같은 경우 DDoS가 발생하게 되면\n");
