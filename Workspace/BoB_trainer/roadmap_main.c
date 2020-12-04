@@ -13,7 +13,7 @@ void roadmap_main(void)
         system("clear");
         printf("[보안 로드맵]\n\n");
         printf("1 : 보안 직업\n");
-	printf("2 : 보안 세부 분야\n");
+	printf("2 : 보안 및 해킹 분야\n");
 	printf("3 : 보안 관련 학과\n");
 	printf("4 : 보안 관련 기업\n");
 	printf("5 : 보안 / 해킹 대회\n");
