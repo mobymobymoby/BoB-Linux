@@ -7,7 +7,7 @@ void roadmap_company(void)
 	printf("  └ [보안 관련 기업 & 기관]\n\n");
 
 	printf("보안 관련 기업 & 기관 파트입니다.\n\n");
-	printf("해당 파트에서는 보안과 관련된 일을 하는 기업 및 기관들을 소개합니다\n");
+	printf("해당 파트에서는 보안과 관련된 일을 하는 대표적인 기업 및 기관들을 소개합니다\n");
 	next_line();
 
 	char menu[20] = "";
