@@ -6,7 +6,7 @@ void roadmap_contest(void)
 
 	
 	printf("[보안 로드맵]\n");
-   	printf("  └ [국 내외 해킹 대회]\n\n\n");
+   	printf("  └ [국내ㆍ외 해킹 대회]\n\n\n");
 
 	printf("해킹을 실제 대상으로 실습하는 것은 법을 어기는 것이며\n");
 	printf("불법으로 행한 해킹에는 반드시 처벌이 따릅니다.\n");
@@ -110,13 +110,11 @@ void roadmap_contest(void)
 	printf("국내외 유명한 해킹 대회들은 다음과 같습니다.\n\n");
 	printf("1. Codegate(코드게이트)\n");
 	printf("2. Codegate Junior(코드게이트 주니어)\n");
-	printf("3. HDCON\n");
-	printf("4. ISEC\n");
-	printf("5. Secuinside(시큐인사이드)\n");
-	printf("6. Withcon(화이트햇 콘테스트)\n");
-	printf("7. Defcon CTF(데프콘 CTF)\n");
-	printf("8. PCTF(Plaid CTF)\n");
-	printf("9. NullCon CTF\n");
+	printf("3. ISEC\n");
+	printf("4. Secuinside(시큐인사이드)\n");
+	printf("5. Defcon CTF(데프콘 CTF)\n");
+	printf("6. PCTF(Plaid CTF)\n");
+	printf("7. NullCon CTF\n");
 	next_line();
 
 	printf("위의 대회들은 가장 유명하고 정기적으로 열리고 있는 대회들입니다.\n");
