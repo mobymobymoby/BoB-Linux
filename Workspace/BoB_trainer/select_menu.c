@@ -1,7 +1,7 @@
 #include "func.h"
 
 void select_menu(void)
-{
+{https://github.com/black6765/BoB-Linux/tree/master/Workspace/BoB_trainer
     char menu[20] = "";
     printf("본 트레이닝은 여러 가지 학습으로 나뉩니다.\n\n\n");
     
@@ -13,7 +13,12 @@ void select_menu(void)
     
     printf("[응용 명령어 학습]은 리눅스를 효율적으로 사용하기 위한\n");
     printf("다양한 응용 명령어들을 선택하여 학습할 수 있습니다.\n\n");
-    next_line();
+    
+    printf("[응용 명령어 학습]은 리눅스를 효율적으로 사용하기 위한\n");
+    printf("다양한 응용 명령어들을 선택하여 학습할 수 있습니다.\n\n");
+ 
+    printf("[보안 로드맵]은 보안 입문자를 위해 진로를 선택하는 것에 있어서\n");
+    printf("도움이 될 만한 정보를 선택하여 알아볼 수 있습니다.\n\n");
     
     while (1)
     {
