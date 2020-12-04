@@ -1,8 +1,9 @@
 #include "func.h"
 
 void select_menu(void)
-{https://github.com/black6765/BoB-Linux/tree/master/Workspace/BoB_trainer
+{
     char menu[20] = "";
+
     printf("본 트레이닝은 여러 가지 학습으로 나뉩니다.\n\n\n");
     
     printf("[리눅스 기본 지식]은 리눅스에 대한 기본적인 내용을 학습합니다.\n");
