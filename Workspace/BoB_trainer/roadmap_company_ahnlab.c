@@ -132,6 +132,7 @@ void roadmap_company_ahnlab(void)
 	
 	printf("아래의 URL로 방문하여 안랩에 대한 여러 정보를 확인해보세요!\n");
 	printf("https://www.ahnlab.com/kr/site/main.do\n");
-
+	next_line();
+	
 	printf("\"안랩\" 보안 관련 기업 로드맵이 종료되었습니다.\n");
 }
