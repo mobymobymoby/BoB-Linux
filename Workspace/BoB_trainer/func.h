@@ -12,10 +12,6 @@
 #define DIR_SIZE 60 // 최대 59개의 문자 입력
 #define BUF_SIZE 102400
 
-char def_dir[DIR_SIZE];
-char rst_dir[DIR_SIZE + 10];
-char rm_dir[DIR_SIZE + 10];
-
 void next_quit(void);
 void next_quit_roadmap(void);
 void next_line(void);
