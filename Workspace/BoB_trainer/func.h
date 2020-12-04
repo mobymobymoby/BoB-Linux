@@ -65,7 +65,7 @@ void roadmap_job_officer(void);
 void roadmap_edu_program_bob(void);
 void roadmap_edu_program_ksj(void);
 
-//보안 관련 학과
+// 보안 관련 학과
 void roadmap_department_seoul(void);
 void roadmap_department_gyeonggido(void);
 void roadmap_department_gangwondo(void);
@@ -79,6 +79,14 @@ void roadmap_department_gwangju(void);
 void roadmap_department_jeollabukdo(void);
 void roadmap_department_jeollanamdo(void);
 void roadmap_department_ma(void);
+
+// 보안 관련 기업
+void roadmap_company_ahnlab(void);
+void roadmap_company_wins(void);
+void roadmap_company_egloo(void);
+void roadmap_company_initech(void);
+void roadmap_company_infosec(void);
+void roadmap_company_kisa(void);
 
 /* 함수 리스트 */
 // 김기서 명령어
