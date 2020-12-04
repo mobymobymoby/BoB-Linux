@@ -9,7 +9,7 @@ void roadmap_field_digital_forensic(void)
    	printf("  └ [보안 및 해킹 분야]\n");
    	printf("      └ [디지털 포렌식]\n\n\n");
 
-	printf("디지털 포렌식은 법과 아주 밀접한 관계입니다.\n");
+	printf("디지털 포렌식은 법과 아주 밀접한 관계입니다.\n\n");
 	printf("법정이나 수사기관에 제출할 수 있도록 디지털 증거를 수집하고 제출해야 합니다.\n");
 	next_line();
 	
@@ -167,6 +167,34 @@ void roadmap_field_digital_forensic(void)
 	
 	printf("디지털 포렌식의 전 과정이 빠르게 진행되어야 한다는 원칙으로\n");
 	printf("정보에 대한 손실이 없도록 하기 위함입니다.\n");
+	next_line();
+	
+	system("clear");
+	printf("앞서 살펴본 것처럼 \"디지털 포렌식\"에서 준수해야할 내용은\n");
+	printf("상당히 많습니다.\n");
+	next_line();
+	
+	printf("특히 \"포렌식\" 자체가 \"법과학\"이라는 의미를 담고 있기 때문에\n");
+	printf("법에 대한 이해도가 필수적입니다.\n\n");
+	next_line();
+	
+	printf("또한 디지털 증거가 될 데이터를 다루게 되므로\n");
+	printf("데이터에 대한 이해도가 뛰어나야 합니다.\n");
+	next_line();
+	
+	printf("예를 들어 \"휘발성 메모리\"의 경우 시스템을 종료하면\n");
+	printf("그 내용이 삭제되므로 적절한 방법으로 데이터를 취급해야 합니다.\n");
+	next_line();
+	
+	printf("만약 이를 인지하지 못하고 시스템을 종료해버렸다면\n");
+	printf("중요한 정보들을 잃을 수도 있는 것입니다.\n\n");
+	next_line();
+	
+	printf("그리고 사건에 따라 인터넷 기록, DB, 암호에 대한 내용을 다룰 수도 있습니다.\n");
+	next_line();
+	
+	printf("디지털 포렌식은 보안의 한 분야기도 하지만, 수사 기법 이기도 합니다.\n");
+	printf("따라서 다양한 수사 기법에 대한 내용을 숙지하는 것도 중요합니다.\n");
 	next_line();
 	
 	printf("디지털 포렌식을 공부하려면 아래의 지식들을 필요로 합니다.\n\n");
