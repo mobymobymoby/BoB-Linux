@@ -2,44 +2,41 @@
 #3.29 at 파일 소유자 및 권한 설정
 
 import subprocess
+import os
+from os import stat
+from pwd import getpwuid
+
 def U_66(): 
     print("[U-66] at 파일 소유자 및 권한 설정")
-    def chek_mod(out) :
-        if len(out) <= 0 :
-            return False
+    report1 = False
+    report2 = False
+    def check_mod(out) :
+        st = os.stat(out)
+        perm = oct(st.st_mode)
 
-        num=0
-        mod=0
-        for i in range(1, 10) :
-            if out[i]=="r" :
-                num = num+4
-            elif out[i]=="w" :
-                num = num+2
-            elif out[i]=="x" :
-                num = num+1
+        perm = int(perm[5:8])
+        if perm > 640 :
+            re1 = True
+        else :
+            re1 = False
 
-            if i==3 :
-                num = num * 100
-                mod = mod + num
-                num=0
-            elif i==6 :
-                num = num * 10
-                mod = mod + num
-                num=0
-            elif i==9 :
-                mod = mod + num
-        
-            if mod > 640 :
-                return True
-            elif 'root' in out[11:18] :
-                return True
+        owner = getpwuid(stat(out).st_uid).pw_name
+        if owner == "root" :
+            re2 = True
+        else :
+            re2 = False
 
-        return False
+        return re1 and re2
 
     #ls -l /etc/at.allow
     #ls -l /etc/at.deny
-    report1 = chek_mod(subprocess.getoutput('ls -l /etc/at.allow 2>/dev/null'))
-    report2 = chek_mod(subprocess.getoutput('ls -l /etc/at.deny 2>/dev/null'))
+    out = '/etc/at.allow'
+    if os.path.exists(out):
+        report1 = check_mod(out)
+
+    out = '/etc/at.deny'
+    if os.path.exists(out):
+        report2 = check_mod(out)
 
     report = (report1) or (report2)
 
