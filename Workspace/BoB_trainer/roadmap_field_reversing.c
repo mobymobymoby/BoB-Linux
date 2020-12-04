@@ -53,30 +53,31 @@ void roadmap_field_reversing(void)
 	next_line();
 
 	printf("동적 분석에서는 정적 분석에서 얻은 정보를 바탕으로 \n");
-	printf("프로그램의 동작 원리에 대한 예측을 해야 합니다.\n");
+	printf("프로그램의 동작 원리에 대한 예측을 해야 합니다.\n\n");
 	next_line();
 
 	printf("어떠한 코드가 하나의 프로그램이 생성되려면 컴파일 되기 전\n");
 	printf("목표에 따른 CPU에 맞춰서 Binary Code로 변환됩니다.\n");
 	next_line();
 
+	system("clear");
 	printf("[소스 코드]\n");
 	printf("소스 코드는 프로그래머가 작성한 코드를 의미합니다.\n\n");
 	next_line();
 
-	printf("[헥스 코드]\n");
+	printf("[Hex 코드]\n");
 	printf("전문가여도 0과 1로 된 기계어는 이해하기 힘들 것입니다.\n");
-	printf("그리하여 2진수를 16진수로 변환한 파일이 헥스 코드입니다.\n");
+	printf("그리하여 2진수를 16진수로 변환한 파일이 Hex 코드입니다.\n\n");
 	next_line();
 
 	printf("[어셈블리 코드]\n");
 	printf("하지만 16진수로 변환된 파일도 사람이 이해하기 어렵기 때문에\n");
 	printf("어셈블리 코드로 된 파일입니다.\n\n");
 	printf("대부분은 이 어셈블리 코드로 리버싱을 합니다.\n");
-	printf("하지만 여러 디버깅 프로그램을 이용하면 어셈블리 코드와 헥스 코드를 같이 보여줍니다.\n");
+	printf("하지만 여러 디버깅 프로그램을 이용하면 어셈블리 코드와 Hex 코드를 같이 보여줍니다.\n\n");
 	next_line();
 
-	printf("리버싱에서 사용되는 용어 중 유명한 용어로 '패치'와 '크랙'이 있습니다.\n");
+	printf("리버싱에서 사용되는 용어 중 유명한 용어로 '패치'와 '크랙'이 있습니다.\n\n");
 	next_line();
 
 	printf("[패치]\n");
@@ -84,7 +85,7 @@ void roadmap_field_reversing(void)
 	next_line();
 
 	printf("[크랙]\n");
-	printf("패치와 의미는 같으나 나쁜 의도로 행하는 것을 말합니다.\n");
+	printf("패치와 의미는 같으나 나쁜 의도로 행하는 것을 말합니다.\n\n");
 	next_line();
 	
 	printf("공부할 때는 자신이 관심이 있거나 궁금한 것을 먼저 하는 것이 좋습니다.\n");
