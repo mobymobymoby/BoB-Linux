@@ -16,7 +16,7 @@ void roadmap_company(void)
 		system("clear");
 		printf("[보안 로드맵]\n");
 		printf("  └ [보안 관련 기업]\n\n");
-		printf("1 : 안랩(Ahnlab)\n2 : 윈스\n3 : 이글루시큐리티\n4 : 이니텍\n5 : SK 인포섹\n6 : 한국인터넷진흥원(KISA)\nq : 종료(quit)\n\n실행할 기업을 선택하세요 : ");
+		printf("1 : 안랩(Ahnlab)\n2 : 이글루시큐리티\n3 : 이니텍\n4 : SK 인포섹\n5 : 국가정보원\n6 : 한국인터넷진흥원(KISA)\nq : 종료(quit)\n\n실행할 기업을 선택하세요 : ");
 
 		fgets(menu, sizeof(menu), stdin);
 
@@ -31,22 +31,22 @@ void roadmap_company(void)
 		}
 		else if (!strncmp(menu, "2", strlen("2")) && strlen(menu) == strlen("2"))
 		{
-		    roadmap_company_wins();
+		    roadmap_company_egloo();
 		    next_quit_roadmap();
 		}    
 		else if (!strncmp(menu, "3", strlen("3")) && strlen(menu) == strlen("3"))
 		{
-		    roadmap_company_egloo();
+		    roadmap_company_initech();
 		    next_quit_roadmap();
 		}
 		else if (!strncmp(menu, "4", strlen("4")) && strlen(menu) == strlen("4"))
 		{
-		    roadmap_company_initech();
+		    roadmap_company_infosec();
 		    next_quit_roadmap();
 		}
 		else if (!strncmp(menu, "5", strlen("5")) && strlen(menu) == strlen("5"))
 		{
-		    roadmap_company_infosec();
+		    roadmap_company_nis();
 		    next_quit_roadmap();
 		}
 		else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
