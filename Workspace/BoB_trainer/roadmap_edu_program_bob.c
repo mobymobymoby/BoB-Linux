@@ -29,7 +29,7 @@ void roadmap_edu_program_bob(void)
 	printf("선발된 200명은 총 4개의 트랙으로 나누어집니다\n");
 	next_line();
 	
-	printf("\"보안 제품 개발\", \"디지털 포렌식\" \"보안 컨설팅\", \"취약점 분석\"으로 나뉘어\n");
+	printf("\"보안 제품 개발\", \"디지털 포렌식\", \"보안 컨설팅\", \"취약점 분석\"으로 나뉘어\n");
 	printf("공통 교육 이후에 각자 다른 교육을 받게 됩니다.\n\n");
 	next_line();
 
@@ -49,7 +49,7 @@ void roadmap_edu_program_bob(void)
 	// 멘토
 	system("clear");
 	printf("위에서 \"멘토\"님 이라는 표현을 사용했는데\n");
-	printf("\"멘토(mentor)\"님들은 \"BoB\" 교육생들을 가르치는 역할을 합니다.\n");
+	printf("\"멘토(mentor)\"님들은 \"BoB 교육생\"들을 가르치는 역할을 합니다.\n");
 	next_line();
 
 	printf("학교로 치자면 선생님이고, 대학교로 보면 교수님의 역할입니다.\n");
@@ -182,7 +182,7 @@ void roadmap_edu_program_bob(void)
 	next_line();
 
 	// 마무리
-	printf("지금까지 최고의 보안 교육 프로그램 중 하나인 \"BOb\"에 대해 알아보았습니다.\n");
+	printf("지금까지 최고의 보안 교육 프로그램 중 하나인 \"BoB\"에 대해 알아보았습니다.\n");
 	next_line();
 
 	printf("국내에는 다양한 컴퓨터 관련 교육 프로그램이 존재합니다.\n");
@@ -196,15 +196,15 @@ void roadmap_edu_program_bob(void)
 	printf("https://www.kitribob.kr\n\n");
 	next_line();
 
-	printf("또한 BoB에는 교육생들이 참여하여 만드는 \"BoB Wiki\"가 존재합니다.\n");
+	printf("또한 \"BoB\"에는 교육생들이 참여하여 만드는 \"BoB Wiki\"가 존재합니다.\n");
 	next_line();
 
-	printf("이곳에서는 BoB에 대한 다양한 정보들을 볼 수 있으며\n");
-	printf("이후 BoB 선발에 지원하거나 교육생이 되었을 때 유용한 정보가 많습니다.\n");
+	printf("이곳에서는 \"BoB\"에 대한 다양한 정보들을 볼 수 있으며\n");
+	printf("이후 \"BoB\" 선발에 지원하거나 교육생이 되었을 때 유용한 정보가 많습니다.\n");
 	next_line();
 
-	printf("또한 BoB 교육이 어떻게 진행되고 멘티들 간의 장난도 칠 수 있는\n");
-	printf("BoB 교육생들의 놀이터라고 할 수 있습니다.\n");
+	printf("또한 \"BoB\" 교육이 어떻게 진행되고 멘티들 간의 장난도 칠 수 있는\n");
+	printf("\"BoB 교육생\"들의 놀이터라고 할 수 있습니다.\n");
 	next_line();
 
 	printf("아래의 URL을 방문해서 BoB에 대한 다양한 정보를 확인해보세요.\n");
