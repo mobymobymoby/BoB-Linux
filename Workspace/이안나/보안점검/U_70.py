@@ -2,41 +2,34 @@
 #3.33 NFS 설정파일 접근권한
 
 import subprocess
+import os
+from os import stat
+from pwd import getpwuid
+
 def U_70(): 
     print("[U-70] NFS 설정파일 접근권한")
-    def chek_mod(out) :
-        if len(out) <= 0 :
-            return False
+    report = False
+    def check_mod(out) :
+        st = os.stat(out)
+        perm = oct(st.st_mode)
 
-        num=0
-        mod=0
-        for i in range(1, 10) :
-            if out[i]=="r" :
-                num = num+4
-            elif out[i]=="w" :
-                num = num+2
-            elif out[i]=="x" :
-                num = num+1
+        perm = int(perm[5:8])
+        if perm > 644 :
+            re1 = True
+        else :
+            re1 = False
 
-            if i==3 :
-                num = num * 100
-                mod = mod + num
-                num=0
-            elif i==6 :
-                num = num * 10
-                mod = mod + num
-                num=0
-            elif i==9 :
-                mod = mod + num
-        
-            if mod > 640 :
-                return True
-            elif 'root' in out[11:18] :
-                return True
+        owner = getpwuid(stat(out).st_uid).pw_name
+        if owner == "root" :
+            re2 = True
+        else :
+            re2 = False
 
-        return False
+        return re1 and re2
 
-    report = chek_mod(subprocess.getoutput('ls -al /etc/exports'))
+    out = '/etc/exports'
+    if os.path.exists(out):
+        report = check_mod(out)
 
     if (report) :
         print("\t[검사 결과] 보안 조치가 필요합니다.")
