@@ -18,7 +18,7 @@ void roadmap_job_forensic(void)
 	next_line();
 	
 	printf("이럴 때 마다 \"네이버\"와 같은 검색 포털에서\n");
-	printf("디지털 포렌식이 실시간 검색어에 오르곤 합니다.\n");
+	printf("\"디지털 포렌식\"이 실시간 검색어에 오르곤 합니다.\n");
 	next_line();
 	
 	printf("과거에는 디지털 포렌식이 사람들에게 매우 생소한 분야였습니다.\n");
@@ -72,6 +72,7 @@ void roadmap_job_forensic(void)
 	printf("디지털 증거를 수집할 때 부터 \"연계 보관 로그\"를 기록합니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("다음으로는 \"무결성\"입니다.\n");
 	next_line();
 	
@@ -94,6 +95,7 @@ void roadmap_job_forensic(void)
 	printf("원본과 동일함을 주장할 수 있어야 합니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("마지막으로 \"신뢰성\"입니다.\n");
 	next_line();
 	
@@ -127,6 +129,7 @@ void roadmap_job_forensic(void)
 	printf("디지털 포렌식에서도 당연히 이러한 원칙이 적용됩니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("다음으로 연계 보관성의 원칙입니다.\n");
 	next_line();
 	
@@ -142,6 +145,7 @@ void roadmap_job_forensic(void)
 	printf("연계 보관성의 원칙은 상당히 중요시 됩니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("다음으로는 무결성의 원칙입니다.\n");
 	printf("무결성의 원칙은 수집 증거가 위조 및 변조되지 않아야 함을 의미합니다.\n");
 	next_line();
@@ -149,6 +153,7 @@ void roadmap_job_forensic(void)
 	printf("이는 위에서 살펴본 디지털 정보의 증거 인정 요건과 일맥 상통합니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("그리고 재현성의 원칙입니다.\n");
 	next_line();
 	
@@ -156,6 +161,7 @@ void roadmap_job_forensic(void)
 	printf("동일한 결과가 나와야 한다는 원칙입니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("마지막으로 신속성의 원칙입니다.\n");
 	next_line();
 	
