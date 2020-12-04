@@ -90,7 +90,6 @@ void roadmap_field_reversing(void);
 void roadmap_field_system(void);
 void roadmap_field_digital_forensic(void);
 void roadmap_field_network(void);
-void roadmap_field_cryptography(void);
 
 /* 함수 리스트 */
 // 김기서 명령어
