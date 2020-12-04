@@ -88,6 +88,14 @@ void roadmap_company_infosec(void);
 void roadmap_company_nis(void);
 void roadmap_company_kisa(void);
 
+// 보안 관련 분야
+void roadmap_field_web(void);
+void roadmap_field_reversing(void);
+void roadmap_field_system(void);
+void roadmap_field_digital_forensic(void);
+void roadmap_field_network(void);
+void roadmap_field_cryptography(void);
+
 /* 함수 리스트 */
 // 김기서 명령어
 void training_clear(void);
