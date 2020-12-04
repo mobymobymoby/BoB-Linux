@@ -4,7 +4,7 @@ void roadmap_company_nis(void)
 {
 	system("clear");
 	printf("[보안 로드맵]\n");
-	printf("  └ [보안 관련 기업]\n");
+	printf("  └ [보안 관련 기관]\n");
 	printf("      └ [국가정보원]\n\n");
 
 	printf("이번에 살펴볼 보안 관련 기관은 \"국가정보원\"입니다.\n\n");

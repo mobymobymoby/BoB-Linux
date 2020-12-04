@@ -4,7 +4,7 @@ void roadmap_company_kisa(void)
 {
 	system("clear");
 	printf("[보안 로드맵]\n");
-	printf("  └ [보안 관련 기업]\n");
+	printf("  └ [보안 관련 기관]\n");
 	printf("      └ [한국인터넷진흥원 : KISA]\n\n");
 
 	// 인트로
