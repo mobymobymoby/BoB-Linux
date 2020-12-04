@@ -5,10 +5,10 @@ void roadmap_company_ahnlab(void)
 	system("clear");
 	printf("[보안 로드맵]\n");
 	printf("  └ [보안 관련 기업]\n");
-	printf("      └ [BoB - Best of the Best]\n\n");
+	printf("      └ [안랩 - AhnLab]\n\n");
 
-	// 안랩 인
-	printf("이번에 살펴볼 보안 관련 기업은 \"안랩(Ahnlab)\"입니다.\n\n");
+	// 인트로
+	printf("이번에 살펴볼 보안 관련 기업은 \"안랩(AhnLab)\"입니다.\n\n");
 	printf("\"안랩\"은 보안 종사자가 아니더라도 모두 알고 있는 유명한 기업입니다.\n");
 	next_line();
 
@@ -110,6 +110,7 @@ void roadmap_company_ahnlab(void)
 	printf("안랩에는 이외에도 수많은 보안 솔루션이 존재합니다.\n");
 	next_line();
 	
+	// 
 	system("clear");
 	printf("지금까지 국내의 보안 관련 기업인 \"안랩\"에 대해서 살펴보았습니다.\n");
 	next_line();
