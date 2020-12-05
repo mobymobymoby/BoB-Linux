@@ -14,10 +14,6 @@ def U_65():
     index = -1
     while True:
         index = out.find('root', index+1)
-        #print(index)
-        #print("--------------------------------------------")
-        #print(out[index-2:index+5])
-
         if 'root' in out :
             if ('#root' in out) or re.search('#\s+root', out):
                 report = False
