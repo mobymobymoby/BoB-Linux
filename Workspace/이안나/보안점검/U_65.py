@@ -5,23 +5,33 @@ import re
 import subprocess
 
 def U_65(): 
+    report = False
     print("[U-65] ftpusers 파일 설정")
     out = subprocess.getoutput('cat /etc/ftpusers 2>/dev/null')
     out + subprocess.getoutput('cat /etc/ftpd/ftpusers 2>/dev/null')
     #print(out)
     
-    if 'root' in out :
-        if ('#root' in out) or re.search('#\s+root', out):
-            print("\t[검사 결과] 안전합니다.")
-            report = False
+    index = -1
+    while True:
+        index = out.find('root', index+1)
+        #print(index)
+        #print("--------------------------------------------")
+        #print(out[index-2:index+5])
 
-        else :
-            print("\t[검사 결과] 보안 조치가 필요합니다.")
-            report = True
+        if 'root' in out :
+            if ('#root' in out) or re.search('#\s+root', out):
+                report = False
+            else :
+                print("\t[검사 결과] 보안 조치가 필요합니다.")
+                report = True
+                break
+        out = out[index:-1]
+        if index == -1:
+            break
 
-    else : 
+    if not (report) : 
         print("\t[검사 결과] 안전합니다.")
-        report = False
+
 ###########################################################################################
     if (report) :
         print("[U-65] 조치 방법")
