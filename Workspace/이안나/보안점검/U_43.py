@@ -26,7 +26,7 @@ def U_43():
     if os.path.exists('/var/log/xferlog'):
         subprocess.call('cat /var/log/xferlog > ~/LOG/xferlog.txt', shell=True)
 
-    print("\t[검사 결과] \"~/LOG\" 폴더 위치에 log 파일이 저장되었습니다.")
+    print("\t[검사 결과] \"/home/" + user + "/LOG\" 폴더 위치에 log 파일이 저장되었습니다.")
     print("\t파일을 확인하여 조치 방법에 따라 정기적인 로그 점검 수행을 권장합니다.")
 
 ###########################################################################################
