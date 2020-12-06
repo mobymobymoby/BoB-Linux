@@ -25,7 +25,7 @@ def U_70():
         else :
             re2 = False
 
-        return re1 and re2
+        return re1 or re2
 
     out = '/etc/exports'
     if os.path.exists(out):
