@@ -44,7 +44,7 @@ def U57() :
                         temp = temp[temp.find("UMASK")+5:len(temp)]
                         if (temp.isdecimal()):
                             if (int(temp) < 22) :
-                                f_output = f_output + C_YELLOW + "\t[경고] " + i + " : 설정된 UMASK 값이 22를 초과하였습니다.\n" + C_END 
+                                f_output = f_output + C_YELLOW + "\t[경고] " + i + " : 설정된 UMASK 값이 22 미만 입니다.\n" + C_END 
                                 f_output = f_output + C_YELLOW + "\t\t(설정된 UMASK 값 : " + str(int(temp)) + ")\n" + C_END 
                                 flag = True
                 temp = handle.readline()
