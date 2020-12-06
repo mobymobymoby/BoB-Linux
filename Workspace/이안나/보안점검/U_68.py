@@ -20,7 +20,13 @@ def U_68():
         out2=out[newindex:index+20]
         newindex = index
 
-        if ('#rocommunity' in out2) or re.search('#\s+rocommunity', out2):
+        if re.search('#rocommunity', out2) or re.search('#\s+rocommunity', out2):
+            index = out.find("rocommunity", index + 1)
+            if index == -1:
+                break
+            #print(out[newindex:index+20])
+            out2=out[newindex:index+20]
+            newindex = index
             continue
 
         if re.search('rocommunity\s+public', out2) :
