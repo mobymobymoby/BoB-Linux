@@ -25,8 +25,7 @@ def U_64():
             re2 = False
         else :
             re2 = True
-
-        print("\n")
+            
         #파일의 소유자가 root가 아니거나, 권한이 640이하가 아닌경우 취약
         return re1 or re2
 
