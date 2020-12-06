@@ -26,8 +26,9 @@ def U_64():
         else :
             re2 = True
 
+        print("\n")
         #파일의 소유자가 root가 아니거나, 권한이 640이하가 아닌경우 취약
-        return re1 and re2
+        return re1 or re2
 
     #ls -al /etc/ftpd/ftpusers 2>/dev/null
     #ls -al /etc/ftpusers 2>/dev/null
