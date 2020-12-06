@@ -26,7 +26,7 @@ def U_66():
         else :
             re2 = False
 
-        return re1 and re2
+        return re1 or re2
 
     #ls -l /etc/at.allow
     #ls -l /etc/at.deny
