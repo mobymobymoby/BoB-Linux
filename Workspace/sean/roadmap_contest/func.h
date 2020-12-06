@@ -12,10 +12,6 @@
 #define DIR_SIZE 60 // 최대 59개의 문자 입력
 #define BUF_SIZE 102400
 
-char def_dir[DIR_SIZE];
-char rst_dir[DIR_SIZE + 10];
-char rm_dir[DIR_SIZE + 10];
-
 void next_quit(void);
 void next_quit_roadmap(void);
 void next_line(void);
@@ -41,10 +37,31 @@ void training_linux_defdir(void);
 void training_device_file(void);
 void training_virtual_console(void);
 void training_process_id(void);
+ 
+// 로드맵 함수
+void roadmap_main(void);
 
-//로드맵
+void roadmap_job(void);
+void roadmap_field(void);
+void roadmap_department();
+void roadmap_company(void);
+void roadmap_contest(void);
+void roadmap_edu_program(void);
 
-void roadmap_department(void);
+// 직업군
+void roadmap_job_monitoring(void);
+void roadmap_job_pentest(void);
+void roadmap_job_consult(void);
+void roadmap_job_dev(void);
+void roadmap_job_forensic(void);
+void roadmap_job_malware(void);
+void roadmap_job_officer(void);
+
+// 보안 교육 프로그램
+void roadmap_edu_program_bob(void);
+void roadmap_edu_program_ksj(void);
+
+// 보안 관련 학과
 void roadmap_department_seoul(void);
 void roadmap_department_gyeonggido(void);
 void roadmap_department_gangwondo(void);
@@ -59,13 +76,20 @@ void roadmap_department_jeollabukdo(void);
 void roadmap_department_jeollanamdo(void);
 void roadmap_department_ma(void);
 
-void roadmap_field(void);
+// 보안 관련 기관
+void roadmap_company_ahnlab(void);
+void roadmap_company_fsec(void);
+void roadmap_company_initech(void);
+void roadmap_company_infosec(void);
+void roadmap_company_nis(void);
+void roadmap_company_kisa(void);
+
+// 보안 관련 분야
 void roadmap_field_web(void);
 void roadmap_field_reversing(void);
 void roadmap_field_system(void);
 void roadmap_field_digital_forensic(void);
 void roadmap_field_network(void);
-void roadmap_field_cryptography(void);
 
 /* 함수 리스트 */
 // 김기서 명령어

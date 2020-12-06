@@ -8,7 +8,7 @@ int main()
 {
     system("clear");
     
-    roadmap_department();
+    roadmap_contest();
     
     return 0;
 }

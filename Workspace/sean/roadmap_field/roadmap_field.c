@@ -33,12 +33,12 @@ void roadmap_field(void)
 	while(1)
 	{
 		printf("해킹 분야로는 크게 6가지로 나뉩니다.\n\n");
-		printf("1. 웹 해킹\n");
-		printf("2. 리버스 엔지니어링\n");
-		printf("3. 시스템 해킹\n");
-		printf("4. 디지털 포렌식\n");
-		printf("5. 네트워크 해킹\n");
-		printf("6. 암호학\n\n\n");
+		printf("1 : 웹 해킹\n");
+		printf("2 : 리버스 엔지니어링\n");
+		printf("3 : 시스템 해킹\n");
+		printf("4 : 디지털 포렌식\n");
+		printf("5 : 네트워크 해킹\n");
+		printf("q : 종료\n\n\n");
 		
 		printf("번호를 선택하여 분야들을 알아보세요 : ");
 	
@@ -70,12 +70,7 @@ void roadmap_field(void)
 		        roadmap_field_network();
 		        next_quit_roadmap();
 		}
-		else if (!strncmp(menu, "6", strlen("6")) && strlen(menu) == strlen("6"))
-		{
-		        roadmap_field_cryptography();
-		        next_quit_roadmap();
-		}
-		        else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
+		else if ( (!strncmp(menu, "q", strlen("q")) && strlen(menu) == strlen("q")) || (!strncmp(menu, "Q", strlen("Q")) && strlen(menu) == strlen("Q")) )
 		{
 		        break;
 		}

@@ -1,0 +1,162 @@
+1. FILE commands
+ls
+ls -al
+cd
+cd [dir_name]
+pwd
+mkdir [dir_name]
+rmdir [dir_name]
+rm [file_name]
+rm -r [dir_name]
+cp [file1_name] [file2_name]
+mv [file1_name] [file2_name]
+ln -s [file] [link]
+touch [file_name]
+cat > [file_name]
+echo
+more [file_name]
+less [file_name]
+head [file_name]
+tail [file_name]
+cmp [file1_name] [file2_name]
+diff [ file1_name] [file2_name]
+diff3 [file1_name] [file2_name] [file3_name]
+comm [file1_name] [fil2_name]
+dd
+split
+umask
+stat
+sed
+vi / vim
+
+
+2. SEARCH
+find [file_name]
+grep / egrep / fgrep
+locate
+wc
+
+
+3. INSTALLATION
+./configure
+make
+make install
+git
+
+
+4. NETWORK
+system-config-network(nmtui)
+ip
+ifup / ifdown
+ifconfig
+netstat
+nslookup
+traceroute
+route
+arp
+ethtool
+host
+hostname
+ping [hostname]
+whois [Domain]
+dig [Domain]
+wget [file]
+curl
+telnet
+ftp
+ssh
+mii-tool
+mtr
+top
+snoop
+inetd
+modprobe
+
+
+5. SYSTEM
+clear
+date
+cal
+uptime
+w
+users
+uname
+df / du
+free
+whereis [app]
+which [app]
+id / who / whoami
+shutdown / init / reboot / halt
+mount / umount
+cat /proc/cpuinfo
+cat /proc/meminfo
+expr / bc
+
+
+6. File System
+fdisk
+lsblk
+mkfs
+fsck
+
+
+7. Command Help
+type
+man
+info
+help
+aprpos
+manpath
+whatis
+whereis
+which
+history
+alias
+unalias
+!!
+!n
+![string]
+
+
+8. PROCESS
+ps
+pstree
+jobs
+kill
+killall
+bg
+fg
+nice / renice
+top
+nohup
+
+
+9. USER
+useradd / adduser
+group / groupadd / groupdel / groupmod
+change
+sudo / su
+chmod / chown / chroot
+10. 환경 변수
+set / unset
+env
+
+
+11. COMPRESSION
+tar
+gzip / gunzip
+bzip2 / bunzip2
+zip
+
+
+12. 중요 파일 경로
+1. /etc/apt/sources.list
+2. /etc/yum.repos.d
+3. /etc/default/useradd - useradd로 계정을 추가할 때의 기본값들
+4. /etc/passwd - 계정 정보를 가지고 있음. / 계정별 기본 쉘 확인 가능
+5. /etc/shadow - 패스워드 정보를 가지고 있음.
+6. /etc/login.defs - 계정 설정 기본값들
+7. /etc/group - 그룹들이 정의되어 있음.
+8. /etc/fstab - 파일 시스템 정보를 고정적으로 저장함
+9. /etc/shells 사용가능한 쉘 목록
+10. /etc/crontab - 주기적으로 수행할 작업 설정. crond에 의해 수행됨.

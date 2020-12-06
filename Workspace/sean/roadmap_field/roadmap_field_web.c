@@ -20,7 +20,7 @@ void roadmap_field_web(void)
 	printf("이 중 웹 애플리케이션을 통해 발생되는 해킹이 주로 일어납니다.\n");
 	next_line();
 
-	printf("그리하여 \"OWASP(The Open web Application Security Project) 에서는\"\n");
+	printf("그리하여 \"OWASP(The Open web Application Security Project)\"에서는\n");
 	printf("웹에 관한 정보 노출, 악성 파일 및 스크립트, 보안 취약점 등을 연구하며\n");
 	printf("10개의 웹 애플리케이션 취약점을 발표하였습니다.\n");
 	next_line();
@@ -30,7 +30,7 @@ void roadmap_field_web(void)
 	printf("2. 서버 안에 있는 정보 탈취\n");
 	printf("3. 기업 중요 정보 탈취\n");
 	printf("4. 고객 개인 정보 탈취\n\n");
-	printf("정도가 있습니다.\n");
+	printf("정도가 있습니다.\n\n");
 	next_line();
 
 	printf("유명한 웹 해킹의 기법들은 다음과 같습니다.\n\n");
@@ -43,7 +43,7 @@ void roadmap_field_web(void)
 	printf("7. File Download\n");
 	printf("8. 파라미터 변조\n");
 	printf("9. 페이지 내 중요 정보 노출\n");
-	printf("10. 프레임워크 취약점\n");
+	printf("10. 프레임워크 취약점\n\n");
 	next_line();
 
 	printf("웹 사이트의 보안을 향상시키기 위해서는\n\n");
@@ -51,9 +51,10 @@ void roadmap_field_web(void)
 	printf("2. 개발자 보안 교육을 실시한다.\n");
 	printf("3. 정기적으로 취약점 진단을 한다.\n");
 	printf("4. 보안 인력을 확보한다.\n\n");
-	printf("와 같은 방법이 있습니다.\n");
+	printf("와 같은 방법이 있습니다.\n\n");
 	next_line();
 	
+	system("clear");
 	printf("공부할 때는 자신이 관심이 있거나 궁금한 것을 먼저 하는 것이 좋습니다.\n");
 	next_line();
 
@@ -66,7 +67,8 @@ void roadmap_field_web(void)
 	next_line();
 
 	printf("2. 운영체제 기초, 네트워크 기초\n");
-	printf("운영체제와 네트워크를 공부하면 자신이 어떤 환경인지와 네트워크 상에서의 구조 등을 알 수 있습니다.\n\n");
+	printf("운영체제와 네트워크를 공부하면\n");
+	printf("자신이 어떤 환경인지와 네트워크 상에서의 구조 등을 알 수 있습니다.\n\n");
 	next_line();
 
 	printf("3. 웹 애플리케이션\n");
@@ -75,7 +77,7 @@ void roadmap_field_web(void)
 	printf("4. 웹 해킹 기초\n");
 	next_line();
 
-	printf("5. 웹 해킹 심화 또는 고급\n");
+	printf("5. 웹 해킹 심화 및 고급\n");
 	next_line();
 
 	printf("6. 워게임 사이트 이용\n");
@@ -84,7 +86,7 @@ void roadmap_field_web(void)
 	printf("7. 각종 대회나 이벤트에 참여\n");
 	next_line();
 	
-	printf("위의 공부 방법은 그저 추천드린 것일 뿐 정석은 아닙니다.\n");
+	printf("위의 공부 순서는 그저 추천드린 것일 뿐 정석은 아닙니다.\n");
 	next_line();
 
 	printf("무엇보다 중요한 점은 해커의 관점에서 바라보며 공부해야 합니다.\n");

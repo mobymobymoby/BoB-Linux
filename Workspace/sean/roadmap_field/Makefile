@@ -1,10 +1,10 @@
-trainer: *.o
-	gcc -o trainer *.o
+roadmap_field: *.o
+	gcc -o roadmap_field *.o
 	
 *.o: *.c
 	gcc -c *.c
 
-all: trainer
+all: roadmap_field
 
 clean:
-	rm -f *.o trainer
+	rm -f *.o roadmap_field

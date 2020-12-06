@@ -13,10 +13,12 @@ void roadmap_field_network(void)
 	next_line();
 
 	printf("네트워크 해킹에서 유명한 공격으로는 다음과 같습니다.\n\n");
+	next_line();
+	
 	printf("1. 브라우저 공격\n");
 	next_line();
 
-	printf("2. 브루트포스 공격\n");
+	printf("2. 브루트 포스 공격\n");
 	printf("   무차별 대입 공격이라고도 하며, 가장 1차원적이지만 성공 확률이 높습니다.\n");
 	printf("   하나 하나 값을 넣어보는 것입니다.\n");
 	next_line();

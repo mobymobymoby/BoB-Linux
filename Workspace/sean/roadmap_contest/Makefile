@@ -1,10 +1,10 @@
-trainer: *.o
-	gcc -o trainer *.o
+roadmap_contest: *.o
+	gcc -o roadmap_contest *.o
 	
 *.o: *.c
 	gcc -c *.c
 
-all: trainer
+all: roadmap_contest
 
 clean:
-	rm -f *.o trainer
+	rm -f *.o roadmap_contest

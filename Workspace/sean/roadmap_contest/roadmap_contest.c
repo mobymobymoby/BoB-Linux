@@ -6,21 +6,19 @@ void roadmap_contest(void)
 
 	
 	printf("[보안 로드맵]\n");
-   	printf("  └ [국 내외 해킹 대회]\n\n\n");
+   	printf("  └ [국내ㆍ외 해킹 대회]\n\n\n");
 
 	printf("해킹을 실제 대상으로 실습하는 것은 법을 어기는 것이며\n");
 	printf("불법으로 행한 해킹에는 반드시 처벌이 따릅니다.\n");
 	next_line();
 
 
-	printf("해킹을 실습하거나 경험을 쌓기 위해서는 실제 대상을 함부로\n");
-	printf("공격할 수는 없습니다.\n");
+	printf("해킹을 실습하거나 경험을 쌓기 위해서는 실제 대상을 함부로 공격할 수는 없습니다.\n");
 	next_line();
 
-	printf("그리하여 공개적으로 허가를 하고 일정 기간동안 해킹을 실습할 수 있도록 하고\n");
-	printf("다른 사람들과 경쟁을 하며 재미와 경험을 쌓을 수 있게 한 것이 바로 여러 대회입니다.\n");
+	printf("그리하여 공개적으로 허가를 하여 일정 기간동안 해킹을 실습할 수 있도록 하고\n");
+	printf("다른 사람들과 경쟁을 하며 재미와 경험을 쌓을 수 있게 한 것이 바로 해킹 대회입니다.\n");
 	next_line();
-
 
 	printf("먼저 대회들 중 \"CTF\"라는 대회가 있습니다.\n");
 	next_line();
@@ -39,7 +37,7 @@ void roadmap_contest(void)
 	printf("여러 해킹 기법들을 시도할 수 있는 대회입니다.\n");
 	next_line();
 
-	printf("대부분의 대회 방식은\"CTF\" 방식입니다.\n");
+	printf("대부분의 대회 방식은 \"CTF\" 방식입니다.\n");
 	next_line();
 
 	printf("해킹을 하여 답에 해당하는 값을 찾으면, 그 값을 제출하고\n");
@@ -93,7 +91,7 @@ void roadmap_contest(void)
 	printf("실력 향상은 물론이고, 여러 경험들을 쌓을 수 있을 것입니다.\n");
 	next_line();
 
-	printf("그리고 공부를 할 때는 구글에 검색해보는 슴관을 가져야 합니다.\n");
+	printf("그리고 공부를 할 때는 구글에 검색해보는 습관을 가져야 합니다.\n");
 	next_line();
 
 	printf("한글로 검색하셔도 되지만, 영어에 익숙해져서 영어로 검색하시는 것이 좋습니다.\n");
@@ -106,17 +104,15 @@ void roadmap_contest(void)
 	printf("해킹의 각 분야별로 학습도 가능하고 배운 것을 바탕으로 워게임도 가능합니다.\n");
 	next_line();
 
-	system("Clear");
-	printf("국내외 유명한 해킹 대회들은 다음과 같습니다.\n\n");
+	system("clear");
+	printf("국내ㆍ외 유명한 해킹 대회들은 다음과 같습니다.\n\n");
 	printf("1. Codegate(코드게이트)\n");
 	printf("2. Codegate Junior(코드게이트 주니어)\n");
-	printf("3. HDCON\n");
-	printf("4. ISEC\n");
-	printf("5. Secuinside(시큐인사이드)\n");
-	printf("6. Withcon(화이트햇 콘테스트)\n");
-	printf("7. Defcon CTF(데프콘 CTF)\n");
-	printf("8. PCTF(Plaid CTF)\n");
-	printf("9. NullCon CTF\n");
+	printf("3. ISEC\n");
+	printf("4. Secuinside(시큐인사이드)\n");
+	printf("5. Defcon CTF(데프콘 CTF)\n");
+	printf("6. PCTF(Plaid CTF)\n");
+	printf("7. NullCon CTF\n");
 	next_line();
 
 	printf("위의 대회들은 가장 유명하고 정기적으로 열리고 있는 대회들입니다.\n");
@@ -131,7 +127,8 @@ void roadmap_contest(void)
 	printf("학교에서 주최하는 대회도 있고, 어떤 팀에서 주최하는 대회들도 있습니다.\n");
 	next_line();
 
-	printf("\"ctftime.org\"라는 사이트를 이용하면 전 세계에서 열리고 있는 CTF 대회들을 볼 수 있습니다.\n");
+	printf("\"ctftime.org\"라는 사이트를 이용하면\n");
+	printf("전 세계에서 열리고 있는 CTF 대회들을 볼 수 있습니다.\n");
 	next_line();
 
 	printf("여러 CTF 대회에 참여하여 경험을 쌓고 블로그를 이용하여 기록을 남긴다면\n");
@@ -148,5 +145,4 @@ void roadmap_contest(void)
 
 	printf("지금까지 해킹 대회가 무엇이며 대표적으로 어떤 대회들이 있는지 알아보았습니다.\n");
 	next_line();
-
 }

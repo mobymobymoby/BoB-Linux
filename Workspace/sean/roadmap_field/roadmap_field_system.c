@@ -8,7 +8,8 @@ void roadmap_field_system(void)
    	printf("  └ [보안 및 해킹 분야]\n");
    	printf("      └ [시스템 해킹]\n\n\n");
 
-	printf("시스템 해킹은 OS(운영 체제)나 소프트웨어, 하드웨어 등의\n");
+	printf("시스템 해킹은\n");
+	printf("OS(운영 체제)나 소프트웨어, 하드웨어 등의\n");
 	printf("응용 프로그램 내부에 존재하는 취약점을 이용하여 해커가 원하는 코드를 실행하고\n");
 	printf("이를 통해 대상 시스템의 원격 접속 권한을 획득하거나\n");
 	printf("최고 관리자 권한을 획득하는 공격입니다.\n");
@@ -22,14 +23,13 @@ void roadmap_field_system(void)
 	next_line();
 
 	printf("그리고 이러한 기법들의 대표적인 대응 방안으로는\n");
-	printf("'스택 가드' 또는 'ASLR'을 이용하고\n");
-	printf("'취약한 함수'는 사용하지 않습니다\n");
+	printf("'스택 가드' 또는 'ASLR'을 이용하고, '취약한 함수'는 사용하지 않습니다\n");
 	next_line();
 
 	printf("시스템 해킹은 해킹 종류 중에서 가장 어려운 해킹입니다.\n");
 	next_line();
 
-	printf("마니아 층의 해커들 사이에서는 시스템 해킹 정도는 해줘야\n");
+	printf("매니아 층의 해커들 사이에서는 시스템 해킹 정도는 해줘야\n");
 	printf("해커라는 소리를 할 수 있다는 우스갯 소리도 존재합니다.\n");
 	next_line();
 
