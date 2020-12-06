@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-#3.15 DNS 보안 버전 패치
+#3.18 Apache 웹 프로세스 권한 제한
 
 import subprocess
 def U_36(): 
-    print("[U-36] DNS 보안 버전 패치")
+    print("[U-36] Apache 웹 프로세스 권한 제한")
     report = False
     out = subprocess.getoutput('apache2 -V | egrep "(HTTPD\_ROOT|SERVER\_CONFIG\_FILE)"')
 
