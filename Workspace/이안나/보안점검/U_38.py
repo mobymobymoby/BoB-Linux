@@ -40,7 +40,7 @@ def U_38():
         print("\t\trm -rf "+ apacheHome + "/manual")
         print("\t2. ls 명령어로 정상적으로 제거되었는지 확인합니다.")
         print("\t\tls -ld "+ apacheHome + "/htdocs/manual")
-        print("\t\tls -ld "+ apacheHome + "/manual"")
+        print("\t\tls -ld "+ apacheHome + "/manual")
         print("\t3. 다른 추가적인 웹서비스 운영에 불필요한 파일이나 디렉토리가 있을 시 제거합니다.")
 
 U_38()
