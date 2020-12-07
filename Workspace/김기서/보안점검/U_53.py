@@ -40,11 +40,11 @@ def U53():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-53] 조치 방법\n')
-        report.write('\t로그인이 필요하지 않은 계정에 대해 nologin 쉘로 변경하세요.\n')
-        report.write('\t\t텍스트 에디터를 이용하여 \"/etc/passwd\" 파일을 엽니다.\n')
-        report.write('\t\t해당 계정의 항목의 맨 마지막 필드인 로그인 쉘을.\n')
-        report.write('\t\t우분투 기준으로 \"/usr/sbin/nologin\"으로 변경하세요.\n')
+        pm.printSolution(report, '[U-53] 조치 방법\n')
+        pm.printSolution(report, '\t로그인이 필요하지 않은 계정에 대해 nologin 쉘로 변경하세요.')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/passwd\" 파일을 엽니다.')
+        pm.printSolution(report, '\t\t해당 계정의 항목의 맨 마지막 필드인 로그인 쉘을.')
+        pm.printSolution(report, '\t\t우분투 기준으로 \"/usr/sbin/nologin\"으로 변경하세요.\n')
 
     report.close()
 

@@ -50,10 +50,10 @@ def U11():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-11] 조치 방법\n')
-        report.write('\t' + filename + ' 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
-        report.write('\t\t#chown root ' + filename + '\n')
-        report.write('\t\t#chmod 644 ' + filename + '\n')
+        pm.printSolution(report, '[U-11] 조치 방법\n')
+        pm.printSolution(report, '\t' + filename + ' 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
+        pm.printSolution(report, '\t\t#chown root ' + filename + '\n')
+        pm.printSolution(report, '\t\t#chmod 644 ' + filename + '\n')
 
     report.close()
 

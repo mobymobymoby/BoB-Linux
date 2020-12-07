@@ -51,14 +51,14 @@ def U10():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-10] 조치 방법\n')
-        report.write('\t' + filename + ' 파일의 소유자를 root로 권한을 600으로 변경하세요.\n')
-        report.write('\t\t#chown root ' + filename + '\n')
-        report.write('\t\t#chmod 600 ' + filename + '\n')
+        pm.printSolution(report, '[U-10] 조치 방법\n')
+        pm.printSolution(report, '\t' + filename + ' 파일의 소유자를 root로 권한을 600으로 변경하세요.\n')
+        pm.printSolution(report, '\t\t#chown root ' + filename + '\n')
+        pm.printSolution(report, '\t\t#chmod 600 ' + filename + '\n')
 
     # xinetd.d 의 하위도 검사하도록 수정 필요
     if isXinetd:
-        report.write('\t/etc/xinetd.d 디렉터리 하위의 취약한 파일도 동일한 방법으로 조치하세요.\n')
+        pm.printSolution(report, '\t/etc/xinetd.d 디렉터리 하위의 취약한 파일도 동일한 방법으로 조치하세요.\n')
 
     report.close()
 

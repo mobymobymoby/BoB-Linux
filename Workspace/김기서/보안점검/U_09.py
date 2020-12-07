@@ -31,10 +31,10 @@ def U09():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-09] 조치 방법\n')
-        report.write('\t/etc/hosts 파일의 소유자를 root로 권한을 600으로 변경하세요.\n')
-        report.write('\t\t#chown root /etc/hosts\n')
-        report.write('\t\t#chmod 600 /etc/hosts\n')
+        pm.printSolution(report, '[U-09] 조치 방법\n')
+        pm.printSolution(report, '\t/etc/hosts 파일의 소유자를 root로 권한을 600으로 변경하세요.\n')
+        pm.printSolution(report, '\t\t#chown root /etc/hosts\n')
+        pm.printSolution(report, '\t\t#chmod 600 /etc/hosts\n')
 
     report.close()
 

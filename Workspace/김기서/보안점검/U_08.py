@@ -38,10 +38,10 @@ def U08():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-08] 조치 방법\n')
-        report.write('\t/etc/shadow 파일의 소유자를 root로 권한을 400으로 변경하세요.\n')
-        report.write('\t\t#chown root /etc/shadow\n')
-        report.write('\t\t#chmod 400 /etc/shadow\n')
+        pm.printSolution(report, '[U-08] 조치 방법\n')
+        pm.printSolution(report, '\t/etc/shadow 파일의 소유자를 root로 권한을 400으로 변경하세요.\n')
+        pm.printSolution(report, '\t\t#chown root /etc/shadow\n')
+        pm.printSolution(report, '\t\t#chmod 400 /etc/shadow\n')
 
     report.close()
 

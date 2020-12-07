@@ -39,9 +39,9 @@ def U50():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-50] 조치 방법\n')
-        report.write('\t관리자 그룹에 불필요한 계정은 제거하세요.\n')
-        report.write('\t\t# deluser <user_name> root\n')
+        pm.printSolution(report, '[U-50] 조치 방법\n')
+        pm.printSolution(report, '\t관리자 그룹에 불필요한 계정은 제거하세요.\n')
+        pm.printSolution(report, '\t\t# deluser <user_name> root\n')
 
     report.close()
 

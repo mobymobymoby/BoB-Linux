@@ -22,9 +22,9 @@ def U52():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-52] 조치 방법\n')
-        report.write('\t동일한 UID를 가진 사용자 계정의 UID를 변경하세요.\n')
-        report.write('\t\t#usermod -u <변경할 UID> <user_name>\n')
+        pm.printSolution(report, '[U-52] 조치 방법\n')
+        pm.printSolution(report, '\t동일한 UID를 가진 사용자 계정의 UID를 변경하세요.\n')
+        pm.printSolution(report, '\t\t#usermod -u <변경할 UID> <user_name>\n')
 
     report.close()
 

@@ -30,10 +30,10 @@ def U12():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-12] 조치 방법\n')
-        report.write('\t/etc/services 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
-        report.write('\t\t#chown root /etc/services\n')
-        report.write('\t\t#chmod 644 /etc/services\n')
+        pm.printSolution(report, '[U-12] 조치 방법\n')
+        pm.printSolution(report, '\t/etc/services 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
+        pm.printSolution(report, '\t\t#chown root /etc/services\n')
+        pm.printSolution(report, '\t\t#chmod 644 /etc/services\n')
 
     report.close()
 

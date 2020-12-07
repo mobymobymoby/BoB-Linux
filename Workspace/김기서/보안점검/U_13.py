@@ -46,10 +46,10 @@ def U13():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-13] 조치 방법\n')
-        report.write('\t주요 파일에 불필요한 SUID/SGID가 설정된 경우 SUID/SGID를 제거하세요.\n')
-        report.write('\t제거 시 OS 및 응용 프로그램 등 서비스가 정상작동 하는지 확인이 필요합니다.\n')
-        report.write('\t\t#chmod -s <file_name>\n')
+        pm.printSolution(report, '[U-13] 조치 방법\n')
+        pm.printSolution(report, '\t주요 파일에 불필요한 SUID/SGID가 설정된 경우 SUID/SGID를 제거하세요.\n')
+        pm.printSolution(report, '\t제거 시 OS 및 응용 프로그램 등 서비스가 정상작동 하는지 확인이 필요합니다.\n')
+        pm.printSolution(report, '\t\t#chmod -s <file_name>\n')
 
     report.close()
 

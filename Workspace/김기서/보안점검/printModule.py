@@ -28,4 +28,4 @@ def printNotice(report, string):
 
 def printSolution(report, string):
     print(string)
-    report.write(string)
+    report.write(string + '\n')
