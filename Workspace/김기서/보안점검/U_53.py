@@ -34,7 +34,7 @@ def U53():
                 isNologin = False
                 pm.printWarning(report, name + ' 계정의 로그인이 가능합니다.')
 
-    pm.printNotice(report, '일반적으로 UID 1000 미만 60000 이상의 시스템 계정(sync 제외)의 확인이 필요합니다.')
+    pm.printNotice(report, '일반적으로 UID 1000 미만 60000 이상의\n\t       시스템 계정(sync 제외)의 확인이 필요합니다.')
 
     if isNologin:
         pm.printSafe(report)
