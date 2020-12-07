@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
 #3.26 ftp 계정 shell 제한
-
+import sys
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_63(): 
+    sys.stdout = open('./U-63.txt', mode='w', encoding='utf-8')
     print("[U-63] ftp 계정 shell 제한")
     out = subprocess.getoutput('cat /etc/passwd | grep "ftp"')
 
     if 'ftp:/bin/false' in out :
             
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
         report = False
 
     else : 
-        print("\t[검사 결과] 보안 조치가 필요합니다.")
+        print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
         report = True
         
 ###########################################################################################
@@ -24,5 +29,6 @@ def U_63():
         print("\t\t(수정 후) ftp:x:500:100:Anonymous FTP USER:/var/ftp:/bin/flase")
         print("\t3. 위의 방법이 적용되지 않을 경우 usermod 명령을 사용하여 쉘을 변경할 수 있습니다.")
         print("\t\t#usermod -s /bin/flase [계정ID]")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-63.txt', shell=True)
 U_63()

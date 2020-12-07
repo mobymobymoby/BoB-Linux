@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 #3.17 Apache 디렉토리 리스팅 제거
-
+import sys
+import re
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_35(): 
+    sys.stdout = open('./U-35.txt', mode='w', encoding='utf-8')
     print("[U-35] Apache 디렉토리 리스팅 제거")
     report = False
     #Apache의 홈 디렉토리를 확인
@@ -17,7 +23,7 @@ def U_35():
         index1 = out.find('SERVER_CONFIG_FILE="')
         index2 = out.find('"', index1+21)
         apacheHome = apacheHome + "/" + out[index1+20:index2]
-        # print(apacheHome)
+        print(apacheHome)
 
         out = subprocess.getoutput('cat ' + apacheHome)
 
@@ -26,11 +32,14 @@ def U_35():
 
         index = 0
         for i in range(0, count) :
+
             #<Directory /> </Directory> 사이에 포함된 옵션
             index1 = out.find('<Directory', index)
 
             #주석 처리가 되어있다면 건너뜀
-            if out[index1-1] == '#':
+            #if out[index1-1] == '#':
+            if re.search('#<Directory', out[index:index1+10]) or re.search('#\s+<Directory', out[index:index1+10]):
+                index = out.find('</Directory>', index1+13)
                 continue
 
             index2 = out.find('</Directory>', index1+13)
@@ -42,13 +51,13 @@ def U_35():
                 break
             
         if (report) :
-            print("\t[검사 결과] 보안 조치가 필요합니다.\n")
+            print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다.\n" + C_END)
         else :
-            print("\t[검사 결과] 안전합니다.\n")
+            print(C_GREEN + "\t[검사 결과] 안전합니다.\n" + C_END)
 
     #Apache가 없음
     else :
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
         return False
 ###########################################################################################
     if (report) :
@@ -70,5 +79,6 @@ def U_35():
         print("\t\t\t Order allow, deny")
         print("\t\t\t Allow from all")
         print("\t\t </Direcotry>")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-35.txt', shell=True)
 U_35()

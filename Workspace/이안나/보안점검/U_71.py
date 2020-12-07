@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 #3.34 expn, vrfy 명령어 제한
-
+import sys
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_71(): 
+    sys.stdout = open('./U-71.txt', mode='w', encoding='utf-8')
     print("[U-71] expn, vrfy 명령어 제한")
     out = subprocess.getoutput('cat /etc/mail/sendmail.cf')
 
@@ -22,9 +27,9 @@ def U_71():
         report = True
 
     if (report) :
-        print("\t[검사 결과] 보안 조치가 필요합니다.")
+        print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
     else :
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
 
 ###########################################################################################
     if (report) :
@@ -46,5 +51,6 @@ def U_71():
         print("\t\tls 명령으로 위치를 확인합니다.")
         print("\t\t#mv /etc/rc2.d/S01sendmail /etc/rc2.d/_S01sendmail")
         print("\t\tmv 명령을 이용해 이름을 변경합니다.")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-71.txt', shell=True)
 U_71()

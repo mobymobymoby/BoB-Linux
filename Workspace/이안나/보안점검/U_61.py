@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 #3.24 ssh 원격접속 허용
-
+import sys
 import subprocess
 C_END       = "\033[0m"
 C_RED       = "\033[31m"
 C_GREEN     = "\033[32m"
 C_YELLOW    = "\033[33m"
 def U_61(): 
+    sys.stdout = open('./U-61.txt', mode='w', encoding='utf-8')
     print("[U-61] ssh 원격접속 허용")
     out = subprocess.getoutput('service ssh status')
     
@@ -28,5 +29,6 @@ def U_61():
         print("\t\t#service ssh restart")
         print("\t3. 설치가 잘 되었는지 확인합니다.")
         print("\t\t#service ssh status")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-61.txt', shell=True)
 U_61()

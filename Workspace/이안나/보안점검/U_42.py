@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 #4.1 최신 보안패치 및 벤더 권고사항 적용
-
+import sys
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_42(): 
+    sys.stdout = open('./U-42.txt', mode='w', encoding='utf-8')
     print("[U-42] 최신 보안패치 및 벤더 권고사항 적용")
     report = True
 
-    print("\t[검사 결과] 주기적인 최신 보안패치 적용을 통해, 이미 알려진 취약점에 의한\n\t시스템 침해사고 발생 가능성을 줄일 수 있습니다.")
+    print(C_YELLOW + "\t[검사 결과] 주기적인 최신 보안패치 적용을 통해, 이미 알려진 취약점에 의한\n\t시스템 침해사고 발생 가능성을 줄일 수 있습니다." + C_END)
 
 ###########################################################################################
     if (report) :
@@ -24,5 +29,7 @@ def U_42():
         print("\t\t#sudo dpkg-reconfigure unattended-upgrades")
         print("\t패키지가 설치되어있지 않다면 다음 명령으로 설치할 수 있습니다.")
         print("\t\t#sudo apt-get install unattended-upgrades")
-
+        #http://www.ubuntu.com/usn
+    sys.stdout.close()
+    subprocess.call('cat ./U-42.txt', shell=True)
 U_42()

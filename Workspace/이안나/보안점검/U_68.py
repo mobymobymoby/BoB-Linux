@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 #3.31 SNMP 서비스 Community String의 복잡성 설정
-
+import sys
 import re
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_68(): 
+    sys.stdout = open('./U-68.txt', mode='w', encoding='utf-8')
     print("[U-68] SNMP 서비스 Community String의 복잡성 설정")
     report = False
     #sudo 사용하지 않고 파일 조회
@@ -38,9 +43,9 @@ def U_68():
             break
 
     if (report) :
-        print("\t[검사 결과] 보안 조치가 필요합니다.")
+        print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
     else :
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
 
 ###########################################################################################
     if (report) :
@@ -54,5 +59,6 @@ def U_68():
         print("\t\t#service snmpd restert")
         # rocommunity public  default    -V systemonly
         # rocommunity6 public  default   -V systemonly
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-68.txt', shell=True)
 U_68()

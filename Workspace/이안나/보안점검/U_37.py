@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 #3.19 Apache 상위 디렉토리 접근 금지
-
+import sys
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_37(): 
+    sys.stdout = open('./U-37.txt', mode='w', encoding='utf-8')
     print("[U-37] Apache 상위 디렉토리 접근 금지")
     out = subprocess.getoutput('apache2 -V | egrep "(HTTPD\_ROOT|SERVER\_CONFIG\_FILE)"')
 
@@ -20,11 +25,11 @@ def U_37():
         out = subprocess.getoutput('cat ' + apacheHome)
 
         if 'AllowOverride None' in out :
-            print("\t[검사 결과] 보안 조치가 필요합니다.")
+            print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
             report = True
 
         else :
-            print("\t[검사 결과] 안전합니다.")
+            print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
             report = False
 ###########################################################################################
     if (report) :
@@ -47,5 +52,6 @@ def U_37():
         print("\t\tAuthType Basic")
         print("\t\tAuthUserFile /usr/local/apache/test/.auth")
         print("\t\tRequire vaild-user")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-37.txt', shell=True)
 U_37()

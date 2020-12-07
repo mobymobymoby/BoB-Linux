@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 #3.29 at 파일 소유자 및 권한 설정
-
+import sys
 import subprocess
 import os
 from os import stat
 from pwd import getpwuid
-
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_66(): 
+    sys.stdout = open('./U-66.txt', mode='w', encoding='utf-8')
     print("[U-66] at 파일 소유자 및 권한 설정")
     report1 = False
     report2 = False
@@ -41,9 +45,9 @@ def U_66():
     report = (report1) or (report2)
 
     if (report) :
-        print("\t[검사 결과] 보안 조치가 필요합니다.")
+        print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
     else :
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
 ###########################################################################################
     if (report) :
         print("[U-66] 조치 방법")
@@ -52,5 +56,6 @@ def U_66():
         print("\t\t#chmod 640 /etc/at.allow")
         print("\t\t#chown root /etc/at.deny")
         print("\t\t#chmod 640 /etc/at.deny")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-66.txt', shell=True)
 U_66()

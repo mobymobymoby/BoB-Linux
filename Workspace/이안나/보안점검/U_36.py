@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 #3.18 Apache 웹 프로세스 권한 제한
-
+import sys
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_36(): 
+    sys.stdout = open('./U-36.txt', mode='w', encoding='utf-8')
     print("[U-36] Apache 웹 프로세스 권한 제한")
     report = False
     out = subprocess.getoutput('apache2 -V | egrep "(HTTPD\_ROOT|SERVER\_CONFIG\_FILE)"')
@@ -27,12 +32,12 @@ def U_36():
             report = True
 
         if(report) :
-            print("\t[검사 결과] 보안 조치가 필요합니다.")
+            print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
         else :
-            print("\t[검사 결과] 안전합니다.")
+            print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
 
     else : 
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
         report = False
 ###########################################################################################
     if (report) :
@@ -42,5 +47,6 @@ def U_36():
         print("\t\t\t User [root가 아닌 별도의 계정명]]")
         print("\t\t\t Group [root가 아닌 별도의 계정명]")
         print("\t2. Apache 서비스를 재시작합니다.")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-36.txt', shell=True)
 U_36()

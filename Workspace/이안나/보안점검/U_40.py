@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 #3.22 Apache 파일 업로드 및 다운로드 제한
-
+import sys
 import re
 import subprocess
-
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_40(): 
+    sys.stdout = open('./U-40.txt', mode='w', encoding='utf-8')
     print("[U-40] Apache 파일 업로드 및 다운로드 제한")
     report = False
     #Apache의 홈 디렉토리를 확인
@@ -32,7 +36,8 @@ def U_40():
             index1 = out.find('<Directory', index)
 
             #주석 처리가 되어있다면 건너뜀
-            if out[index1-1] == '#':
+            if re.search('#<Directory', out[index:index1+10]) or re.search('#\s+<Directory', out[index:index1+10]):
+                index = out.find('</Directory>', index1+13)
                 continue
 
             index2 = out.find('</Directory>', index1+13)
@@ -55,12 +60,12 @@ def U_40():
                     continue
             
         if (report) :
-            print("\t[검사 결과] 보안 조치가 필요합니다.")
+            print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
         else :
-            print("\t[검사 결과] 안전합니다.")
+            print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
 
     else : 
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
         report = False
 ###########################################################################################
     if (report) :
@@ -72,5 +77,6 @@ def U_40():
         print("\t\t\tLimitRequestBody 5000000")
         print("\t\t</Directory>")
         print("\t(업로드 및 다운로드 파일이 5M를 넘지 않도록 설정하는 것을 권고합니다.)")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-40.txt', shell=True)
 U_40()

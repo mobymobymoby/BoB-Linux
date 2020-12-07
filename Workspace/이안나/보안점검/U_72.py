@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 #3.35 Apache 웹 서비스 정보 숨김
-
+import sys
 import re
 import subprocess
+C_END       = "\033[0m"
+C_RED       = "\033[31m"
+C_GREEN     = "\033[32m"
+C_YELLOW    = "\033[33m"
 def U_72(): 
+    sys.stdout = open('./U-72.txt', mode='w', encoding='utf-8')
     print("[U-72] Apache 웹 서비스 정보 숨김")
     report = False
     #Apache의 홈 디렉토리를 확인
@@ -31,7 +36,8 @@ def U_72():
             index1 = out.find('<Directory', index)
 
             #주석 처리가 되어있다면 건너뜀
-            if out[index1-1] == '#':
+            if re.search('#<Directory', out[index:index1+10]) or re.search('#\s+<Directory', out[index:index1+10]):
+                index = out.find('</Directory>', index1+13)
                 continue
 
             index2 = out.find('</Directory>', index1+13)
@@ -50,20 +56,20 @@ def U_72():
                 break;
 
         if (report) :
-            print("\t[검사 결과] 보안 조치가 필요합니다.")
+            print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)
         else :
-            print("\t[검사 결과] 안전합니다.")
+            print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
 
     #Apache가 없음
     else :
-        print("\t[검사 결과] 안전합니다.")
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
         return False
 ###########################################################################################
     if (report) :
         print("[U-72] 조치 방법")
         print("\t1. vi 편집기를 이용하여 " + apacheHome + "파일을 엽니다.")
         print("\t\t#vi " + apacheHome)
-        print("\t2. 설정된 모든 디렉토리의 ServerTokens 지시자에서 Prod 옵션 설정 및 ServerSignature Off 지시자에 Off 옵션을 설정합니다.")
+        print("\t2. 설정된 모든 디렉토리의 ServerTokens 지시자에서 Prod 옵션 설정 \n\t및 ServerSignature Off 지시자에 Off 옵션을 설정합니다.")
         print("\t(해당 옵션이 없다면 새로 삽입합니다.)")
         print("\t\t<Directory />")
         print("\t\t\tOptions Indexes FollowSymlinks")
@@ -71,5 +77,6 @@ def U_72():
         print("\t\t\tServerSignaure Off")
         print("\t\t\t...")
         print("\t\t</Directory>")
-
+    sys.stdout.close()
+    subprocess.call('cat ./U-72.txt', shell=True)
 U_72()
