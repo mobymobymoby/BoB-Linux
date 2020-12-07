@@ -34,7 +34,7 @@ def U54():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-54] 조치 방법\n')
+        pm.printSolution(report, '[U-54] 조치 방법')
         pm.printSolution(report, '\tSession Timeout을 10분 이하로 설정하세요.')
         pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"~/.bashrc\" 파일을 엽니다.')
         pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.')
