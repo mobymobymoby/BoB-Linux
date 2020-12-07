@@ -28,9 +28,9 @@ def U04():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-04] 조치 방법\n')
-        report.write('\tshadow 패스워드를 사용하거나 패스워드를 암호화하여 저장하세요.\n')
-        report.write('\t\t#pwconv\n')
+        pm.printSolution(report, '[U-04] 조치 방법\n')
+        pm.printSolution(report, '\tshadow 패스워드를 사용하거나 패스워드를 암호화하여 저장하세요.\n')
+        pm.printSolution(report, '\t\t#pwconv\n')
 
     report.close()
 

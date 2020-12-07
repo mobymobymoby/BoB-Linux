@@ -7,7 +7,7 @@ import printModule as pm
 def U02():
     report = open('./U-02.txt', mode='w', encoding='utf-8')
     pm.printTitle(report, '[U-02] 패스워드 복잡성 설정')
-    pm.printNotice(report, 'U-02의 점검은 기존에 설정 되어 있는 패스워드에 대해서는 점검할 수 없습니다.')
+    pm.printNotice(report, '기존에 설정 되어 있는 패스워드에 대해서는 점검할 수 없습니다.')
 
     isSafe = False
     output = subprocess.getoutput('dpkg -l | grep libpam-pwquality')
@@ -80,19 +80,20 @@ def U02():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        report.write('[U-02] 조치 방법\n')
-        report.write('\tlibpam-pwquality 패키지를 설치하세요.\n')
-        report.write('\t\t# apt install libpam-pwquality\n')
-        report.write('\t패스워드 복잡성 설정 파일의 내용을 내부 정책에 맞도록 수정하세요.\n')
-        report.write('\t\t텍스트 에디터를 이용하여 \"/etc/pam.d/common-password\" 파일을 엽니다.\n')
-        report.write('\t\t아래의 내용으로 수정하세요.\n')
-        report.write('\t\tpassword requisite pam_pwquality.so retry=3 minlen=8 lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1\n')
-        report.write('\t\t  lcredit=-1 : 소문자 최소 1자 이상 요구\n')
-        report.write('\t\t  ucredit=-1 : 대문자 최소 1자 이상 요구\n')
-        report.write('\t\t  dcredit=-1 : 숫자 최소 1자 이상 요구\n')
-        report.write('\t\t  ocredit=-1 : 특수문자 최소 1자 이상 요구\n')
-        report.write('\t\t  minlen=8   : 최소 8자리 이상 요구\n')
-        report.write('\t\t  retry=3    : 3번 재입력 가능\n')
+        pm.printSolution(report, '[U-02] 조치 방법\n')
+        pm.printSolution(report, '\tlibpam-pwquality 패키지를 설치하세요.\n')
+        pm.printSolution(report, '\t\t# apt install libpam-pwquality\n')
+        pm.printSolution(report, '\t패스워드 복잡성 설정 파일의 내용을 내부 정책에 맞도록 수정하세요.\n')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/pam.d/common-password\" 파일을 엽니다.\n')
+        pm.printSolution(report, '\t\t아래의 내용으로 수정하세요.\n')
+        pm.printSolution(report, '\t\tpassword requisite pam_pwquality.so retry=3 minlen=8 \n')
+        pm.printSolution(report, '\t\t\tlcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1\n')
+        pm.printSolution(report, '\t\t  lcredit=-1 : 소문자 최소 1자 이상 요구\n')
+        pm.printSolution(report, '\t\t  ucredit=-1 : 대문자 최소 1자 이상 요구\n')
+        pm.printSolution(report, '\t\t  dcredit=-1 : 숫자 최소 1자 이상 요구\n')
+        pm.printSolution(report, '\t\t  ocredit=-1 : 특수문자 최소 1자 이상 요구\n')
+        pm.printSolution(report, '\t\t  minlen=8   : 최소 8자리 이상 요구\n')
+        pm.printSolution(report, '\t\t  retry=3    : 3번 재입력 가능\n')
 
     report.close()
 
