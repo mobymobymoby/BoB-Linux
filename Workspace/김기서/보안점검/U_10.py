@@ -15,13 +15,13 @@ def U10():
     
     isInetd = path.isfile('/etc/inetd.conf')
     if not isInetd:
-        pm.printNotice(report, '/etc/inetd.conf 파일이 없습니다.')
+        pm.printNotice(report, '/etc/inetd.conf 파일이 없습니다.\n')
     else:
         filename = '/etc/inetd.conf'
 
     isXinetd = path.isfile('/etc/xinetd.conf')
     if not isXinetd:
-        pm.printNotice(report, '/etc/xinetd.conf 파일이 없습니다.')
+        pm.printNotice(report, '/etc/xinetd.conf 파일이 없습니다.\n')
     else:
         filename = '/etc/xinetd.conf'
 
