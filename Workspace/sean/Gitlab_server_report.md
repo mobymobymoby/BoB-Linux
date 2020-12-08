@@ -12,6 +12,7 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 
 # [제공된 기본 환경]
 
+
 1. __멘토님 서버의 https(443) 포트가 포트포워딩 되어 있다.__
 2. __내부 포트는 443이고, 외부 포트는 21443으로 되어있어서 외부에서 IP 또는 도메인 뒤에 ":21443"이라고 입력하면 자동으로 내부 포트의 443 포트로 연결된다.__
 3. __http(80) 포트는 아파치가 돌아가고 있지만, 포트포워딩이 되어 있지 않아 외부에서 접속은 안된다.__
@@ -34,9 +35,9 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 
     sudo apt-get install curl openssh-server ca-certificates
     
-    - postfix는 메일 발신 관련이여서 이용하지 않을 것이기에 설치하지 않았으므로 총 3개의 패키지만 설치.
-    - 만약 설치한다면, 설치 중 나오는 옵션은 No configuration으로 설정.
-    - sudo dpkg-reconfigure postfix 명령으로 변경 가능.
+- postfix는 메일 발신 관련이여서 이용하지 않을 것이기에 설치하지 않았으므로 총 3개의 패키지만 설치.
+- 만약 설치한다면, 설치 중 나오는 옵션은 No configuration으로 설정.
+- sudo dpkg-reconfigure postfix 명령으로 변경 가능.
 
 
 //gitlab 패키지 프로그램 저장소 추가
@@ -189,6 +190,7 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 
 [https://lunightstory.tistory.com/6](https://lunightstory.tistory.com/6)
 
+
 //openssl 설치 여부
 
 1. 
@@ -289,6 +291,7 @@ Email Address [] :
         sudo cp boblinux.fossa.kr.key /etc/gitlab/ssl/
 
 ![openssl_2](https://user-images.githubusercontent.com/68282265/101453610-f5555f80-3972-11eb-98be-8227a783497d.png)
+
 
 //gitlab 설정 적용 및 재시작
 
