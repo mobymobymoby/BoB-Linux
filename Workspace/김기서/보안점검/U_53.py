@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U53():
-    report = open('./U-53.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-53.txt')
     pm.printTitle(report, '[U-53] 사용자 shell 점검')
 
     names = ['daemon',   \
@@ -40,7 +40,7 @@ def U53():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-53] 조치 방법\n')
+        pm.printSolution(report, '[U-53] 조치 방법')
         pm.printSolution(report, '\t로그인이 필요하지 않은 계정에 대해 nologin 쉘로 변경하세요.')
         pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/passwd\" 파일을 엽니다.')
         pm.printSolution(report, '\t\t해당 계정의 항목의 맨 마지막 필드인 로그인 쉘을.')

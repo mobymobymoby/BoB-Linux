@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U44():
-    report = open('./U-44.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-44.txt')
     pm.printTitle(report, '[U-44] root 이외의 UID가 \'0\' 금지')
 
     f = open('/etc/passwd', 'r')
@@ -21,9 +21,9 @@ def U44():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-44] 조치 방법\n')
+        pm.printSolution(report, '[U-44] 조치 방법')
         # KISA 매뉴얼은 500 이상
-        pm.printSolution(report, '\tUID가 0인 일반 계정의 UID를 1000 이상으로 수정하세요.\n')
+        pm.printSolution(report, '\tUID가 0인 일반 계정의 UID를 1000 이상으로 수정하세요.')
         pm.printSolution(report, '\t\t#usermod -u <변경할 UID> <user_name>\n')
 
     report.close()

@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U48():
-    report = open('./U-48.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-48.txt')
     pm.printTitle(report, '[U-48] 패스워드 최소 사용기간 설정')
 
     isSafe = False
@@ -37,10 +37,10 @@ def U48():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-48] 조치 방법\n')
-        pm.printSolution(report, '\t패스워드 최소 사용기간을 1일로 설정하세요.\n')
-        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.\n')
-        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.\n')
+        pm.printSolution(report, '[U-48] 조치 방법')
+        pm.printSolution(report, '\t패스워드 최소 사용기간을 1일로 설정하세요.')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.')
+        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.')
         pm.printSolution(report, '\t\t  PASS_MIN_DAYS 1 (단위: 일)\n')
 
     report.close()

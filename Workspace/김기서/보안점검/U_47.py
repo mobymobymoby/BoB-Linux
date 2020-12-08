@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U47():
-    report = open('./U-47.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-47.txt')
     pm.printTitle(report, '[U-47] 패스워드 최대 사용기간 설정')
 
     isSafe = False
@@ -37,10 +37,10 @@ def U47():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-47] 조치 방법\n')
-        pm.printSolution(report, '\t패스워드 최대 사용기간을 90일로 설정하세요.\n')
-        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.\n')
-        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.\n')
+        pm.printSolution(report, '[U-47] 조치 방법')
+        pm.printSolution(report, '\t패스워드 최대 사용기간을 90일로 설정하세요.')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.')
+        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.')
         pm.printSolution(report, '\t\t  PASS_MAX_DAYS 90 (단위: 일)\n')
 
     report.close()

@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U46():
-    report = open('./U-46.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-46.txt')
     pm.printTitle(report, '[U-46] 패스워드 최소 길이 설정')
 
     isSafe = False
@@ -37,11 +37,11 @@ def U46():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-46] 조치 방법\n')
-        pm.printSolution(report, '\t패스워드 최소 길이를 8자 이상으로 설정하세요.\n')
-        pm.printSolution(report, '\t공공기관인 경우 9자 이상으로 설정하세요.\n')
-        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.\n')
-        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.\n')
+        pm.printSolution(report, '[U-46] 조치 방법')
+        pm.printSolution(report, '\t패스워드 최소 길이를 8자 이상으로 설정하세요.')
+        pm.printSolution(report, '\t공공기관인 경우 9자 이상으로 설정하세요.')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/login.defs\" 파일을 엽니다.')
+        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.')
         pm.printSolution(report, '\t\t  PASS_MIN_LEN 8\n')
 
     report.close()

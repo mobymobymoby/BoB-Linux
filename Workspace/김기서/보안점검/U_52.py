@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U52():
-    report = open('./U-52.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-52.txt')
     pm.printTitle(report, '[U-52] 동일한 UID 금지')
 
     f = open('/etc/passwd', 'r')
@@ -22,8 +22,8 @@ def U52():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-52] 조치 방법\n')
-        pm.printSolution(report, '\t동일한 UID를 가진 사용자 계정의 UID를 변경하세요.\n')
+        pm.printSolution(report, '[U-52] 조치 방법')
+        pm.printSolution(report, '\t동일한 UID를 가진 사용자 계정의 UID를 변경하세요.')
         pm.printSolution(report, '\t\t#usermod -u <변경할 UID> <user_name>\n')
 
     report.close()

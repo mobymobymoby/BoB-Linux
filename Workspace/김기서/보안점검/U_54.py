@@ -5,7 +5,7 @@ import subprocess
 import printModule as pm
 
 def U54():
-    report = open('./U-54.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-54.txt')
     pm.printTitle(report, '[U-54] Session Timeout 설정')
 
     # check bash

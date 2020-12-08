@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U51():
-    report = open('./U-51.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-51.txt')
     pm.printTitle(report, '[U-51] 계정이 존재하지 않는 GID 금지')
     pm.printNotice(report, 'U-51의 점검 및 조치는 시스템 관리자와 검토하여야 합니다.')
     pm.printNotice(report, 'U-51.txt를 참고하여 관리자와 사용자가 직접 수행바랍니다.')

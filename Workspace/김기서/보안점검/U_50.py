@@ -3,7 +3,7 @@
 import printModule as pm
 
 def U50():
-    report = open('./U-50.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-50.txt')
     pm.printTitle(report, '[U-50] 관리자 그룹에 최소한의 계정 포함')
 
     isSafe = True
@@ -39,8 +39,8 @@ def U50():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-50] 조치 방법\n')
-        pm.printSolution(report, '\t관리자 그룹에 불필요한 계정은 제거하세요.\n')
+        pm.printSolution(report, '[U-50] 조치 방법')
+        pm.printSolution(report, '\t관리자 그룹에 불필요한 계정은 제거하세요.')
         pm.printSolution(report, '\t\t# deluser <user_name> root\n')
 
     report.close()
