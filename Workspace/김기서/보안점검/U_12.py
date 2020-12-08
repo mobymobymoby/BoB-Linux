@@ -5,7 +5,7 @@ from os import stat
 import printModule as pm
 
 def U12():
-    report = open('./U-12.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-12.txt')
     pm.printTitle(report, '[U-12] /etc/services 파일 소유자 및 권한 설정')
 
     status = stat('/etc/services')
@@ -30,9 +30,9 @@ def U12():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-12] 조치 방법\n')
-        pm.printSolution(report, '\t/etc/services 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
-        pm.printSolution(report, '\t\t#chown root /etc/services\n')
+        pm.printSolution(report, '[U-12] 조치 방법')
+        pm.printSolution(report, '\t/etc/services 파일의 소유자를 root로 권한을 644로 변경하세요.')
+        pm.printSolution(report, '\t\t#chown root /etc/services')
         pm.printSolution(report, '\t\t#chmod 644 /etc/services\n')
 
     report.close()

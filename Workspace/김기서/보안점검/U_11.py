@@ -7,7 +7,7 @@ from os import stat
 import printModule as pm
 
 def U11():
-    report = open('./U-11.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-11.txt')
     pm.printTitle(report, '[U-11] /etc/(r)syslog.conf 파일 소유자 및 권한 설정')
 
     filename = ''
@@ -50,9 +50,9 @@ def U11():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-11] 조치 방법\n')
-        pm.printSolution(report, '\t' + filename + ' 파일의 소유자를 root로 권한을 644로 변경하세요.\n')
-        pm.printSolution(report, '\t\t#chown root ' + filename + '\n')
+        pm.printSolution(report, '[U-11] 조치 방법')
+        pm.printSolution(report, '\t' + filename + ' 파일의 소유자를 root로 권한을 644로 변경하세요.')
+        pm.printSolution(report, '\t\t#chown root ' + filename)
         pm.printSolution(report, '\t\t#chmod 644 ' + filename + '\n')
 
     report.close()

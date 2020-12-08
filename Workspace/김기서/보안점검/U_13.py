@@ -6,7 +6,7 @@ from os import stat
 import printModule as pm
 
 def U13():
-    report = open('./U-13.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-13.txt')
     pm.printTitle(report, '[U-13] SUID, SGID, sticky bit 설정 및 권한 설정')
 
     SUID = 0o4000
@@ -46,9 +46,9 @@ def U13():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-13] 조치 방법\n')
-        pm.printSolution(report, '\t주요 파일에 불필요한 SUID/SGID가 설정된 경우 SUID/SGID를 제거하세요.\n')
-        pm.printSolution(report, '\t제거 시 OS 및 응용 프로그램 등 서비스가 정상작동 하는지 확인이 필요합니다.\n')
+        pm.printSolution(report, '[U-13] 조치 방법')
+        pm.printSolution(report, '\t주요 파일에 불필요한 SUID/SGID가 설정된 경우 SUID/SGID를 제거하세요.')
+        pm.printSolution(report, '\t제거 시 OS 및 응용 프로그램 등 서비스가 정상작동 하는지 확인이 필요합니다.')
         pm.printSolution(report, '\t\t#chmod -s <file_name>\n')
 
     report.close()

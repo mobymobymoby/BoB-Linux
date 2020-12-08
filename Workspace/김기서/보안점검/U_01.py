@@ -5,7 +5,7 @@ from os import path
 import printModule as pm
 
 def U01():
-    report = open('./U-01.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-01.txt')
     pm.printTitle(report, '[U-01] root 계정 원격 접속 제한')
 
     isSafeLogin = False
@@ -61,15 +61,15 @@ def U01():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-01] 조치 방법\n')
-        pm.printSolution(report, '\troot 계정의 원격 접속을 차단하세요.\n')
-        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/pam.d/login\" 파일을 엽니다.\n')
-        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.\n')
-        pm.printSolution(report, '\t\tauth required pam_securetty.so\n')
-        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/securetty\" 파일을 엽니다.\n')
-        pm.printSolution(report, '\t\tpts 관련 내용을 제거하세요.\n')
-        pm.printSolution(report, '\tssh를 사용 중이라면 ssh를 통한 root 접속을 차단하세요.\n')
-        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/ssh/sshd_config\" 파일을 엽니다.\n')
+        pm.printSolution(report, '[U-01] 조치 방법')
+        pm.printSolution(report, '\troot 계정의 원격 접속을 차단하세요.')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/pam.d/login\" 파일을 엽니다.')
+        pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.')
+        pm.printSolution(report, '\t\tauth required pam_securetty.so')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/securetty\" 파일을 엽니다.')
+        pm.printSolution(report, '\t\tpts 관련 내용을 제거하세요.')
+        pm.printSolution(report, '\tssh를 사용 중이라면 ssh를 통한 root 접속을 차단하세요.')
+        pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/ssh/sshd_config\" 파일을 엽니다.')
         pm.printSolution(report, '\t\tPermitRootLogin 내용을 제거하세요.\n')
 
     report.close()

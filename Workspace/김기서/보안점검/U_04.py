@@ -6,7 +6,7 @@ from os import path
 import printModule as pm
 
 def U04():
-    report = open('./U-04.txt', mode='w', encoding='utf-8')
+    report = pm.openReport('U-04.txt')
     pm.printTitle(report, '[U-04] 패스워드 파일 보호')
 
     isShadow = path.isfile("/etc/shadow")
@@ -28,8 +28,8 @@ def U04():
         pm.printSafe(report)
     else:
         pm.printNotsafe(report)
-        pm.printSolution(report, '[U-04] 조치 방법\n')
-        pm.printSolution(report, '\tshadow 패스워드를 사용하거나 패스워드를 암호화하여 저장하세요.\n')
+        pm.printSolution(report, '[U-04] 조치 방법')
+        pm.printSolution(report, '\tshadow 패스워드를 사용하거나 패스워드를 암호화하여 저장하세요.')
         pm.printSolution(report, '\t\t#pwconv\n')
 
     report.close()
