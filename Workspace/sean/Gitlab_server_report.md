@@ -16,7 +16,7 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 2. __내부 포트는 443이고, 외부 포트는 21443으로 되어있어서 외부에서 IP 또는 도메인 뒤에 ":21443"이라고 입력하면 자동으로 내부 포트의 443 포트로 연결된다.__
 3. __http(80) 포트는 아파치가 돌아가고 있지만, 포트포워딩이 되어 있지 않아 외부에서 접속은 안된다.__
 4. __방화벽이 열려있지 않으므로 iptables로 열어야 한다.__
-5. __멘토님 서버 ip는 [boblinux.fossa.kr](http://boblinux.fossa.kr) 이라는 도메인으로 연결되어 있다.__
+5. __멘토님 서버 ip는 http://boblinux.fossa.kr 이라는 도메인으로 연결되어 있다.__
 6. __ubuntu 18.04.01__
 
 ---
@@ -27,39 +27,57 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 
 [https://teamlab.github.io/jekyllDecent/blog/tutorials/나만의-Git-서버-Gitlab-구축](https://teamlab.github.io/jekyllDecent/blog/tutorials/%EB%82%98%EB%A7%8C%EC%9D%98-Git-%EC%84%9C%EB%B2%84-Gitlab-%EA%B5%AC%EC%B6%95)
 
+
 //기본적인 패키지 설치
 
-1.      sudo apt-get install curl openssh-server ca-certificates
+1.
+
+    sudo apt-get install curl openssh-server ca-certificates
     - postfix는 메일 발신 관련이여서 이용하지 않을 것이기에 설치하지 않았으므로 총 3개의 패키지만 설치.
     - 만약 설치한다면, 설치 중 나오는 옵션은 No configuration으로 설정.
     - sudo dpkg-reconfigure postfix 명령으로 변경 가능.
 
-[//Gitlab](//gitlab) 패키지 프로그램 저장소 추가
 
-2.  $curl -sS [https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh](https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh) | sudo bash
+//gitlab 패키지 프로그램 저장소 추가
+
+2.
+
+    $curl -sS [https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh](https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh) | sudo bash
 
 - 약간의 시간이 걸릴 수 있음.
 
+
 //저장소 목록 업데이트
 
-3. sudo apt-get update
+3.
 
-[//Gitlab](//gitlab) community edition 설치
+    sudo apt-get update
 
-4. sudo apt-get install gitlab-ce
+
+//gitlab community edition 설치
+
+4.
+
+    sudo apt-get install gitlab-ce
 
 - 설치가 완료되면 노란 별 기호로 Gitlab 로고가 보임.
 
+
 // Gitlab 초기 설정
 
-5. sudo gitlab-ctl reconfigure
+5.
+
+    sudo gitlab-ctl reconfigure
 
 - Gitlab을 구성하는 gitlab.rb라는 루비 파일로 초기 설정.
 - /etc/gitlab/gitlab.rb
 
-[//](//url과)url등 Gitlab과 관련된 설정
 
-6. sudo vi /etc/gitlab/gitlab-rb
+//url과 nginx등 Gitlab과 관련된 설정
+
+6.
+
+    sudo vi /etc/gitlab/gitlab-rb
 
 - url과 업로드 크기를 변경함.
 - 위의 블로그에서는 gitlab_workhorse와 unicorn['port'] 부분을 바꾸라고 했지만 이 두 곳을 블로그에서 하라는 대로 같은 port로 했는데 내부 포트 충돌인 502 에러 코드 반환됨.
@@ -71,29 +89,39 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 ![nginx_clinet_max_body_size](https://user-images.githubusercontent.com/68282265/101453276-72340980-3972-11eb-9a12-7db7b7629436.jpeg)
 
 
-[//Gitlab](//gitlab) 적용 및 재시작
 
-7. sudo gitlab-ctl reconfigure
+//gitlab 적용 및 재시작
 
-8. sudo gitlab-ctl restart
+7.
+
+    sudo gitlab-ctl reconfigure
+
+8.
+
+    sudo gitlab-ctl restart
 
 - 7번의 명령은 파일을 조금이라도 수정하였다면 수행해주어야 적용됨.
 
-[//Gitlab](//gitlab) 상태 확인.
 
-9. sudo gitlab-ctl status
+//gitlab 상태 확인.
+
+9.
+
+    sudo gitlab-ctl status
 
 - 필수적인 명령은 아니지만 상태 확인을 할 때 쓰는 명령.
 
-[//https](//https) 방화벽 오픈
+
+//https 방화벽 오픈
 
 10.
 
-sudo iptables -A INPUT -p tcp -m tcp —sport 443 -j ACCEPT
+    sudo iptables -A INPUT -p tcp -m tcp —sport 443 -j ACCEPT
 
-sudo iptables -A OUTPUT -p tcp -m tcp —dport 443 -j ACCEPT
+    sudo iptables -A OUTPUT -p tcp -m tcp —dport 443 -j ACCEPT
 
 ![iptables](https://user-images.githubusercontent.com/68282265/101453352-8c6de780-3972-11eb-97f8-1143865c87d4.png)
+
 
 //접속 후 확인
 
@@ -114,12 +142,16 @@ sudo iptables -A OUTPUT -p tcp -m tcp —dport 443 -j ACCEPT
 
 ![boblinux_gitlab_server_4](https://user-images.githubusercontent.com/68282265/101453443-af989700-3972-11eb-9bc4-69c206a7e4ff.jpeg)
 
+
 // Gitlab 서버에 있는 레포지토리 clone
 
-12. git clone [https://boblinux.fossa.kr:2144](https://boblinux.fossa.kr:2144)3/blackmoon/bob-linux.git
+12.
+
+    git clone [https://boblinux.fossa.kr:2144](https://boblinux.fossa.kr:2144)3/blackmoon/bob-linux.git
 
 - 만약 ssl 관련 오류가 뜨면서 clone이 안된다면 아래의 명령어를 입력 후 clone 진행.
 - git config --global http.sslVerify false
+
 
 [//Gitlab](//gitlab) 삭제
 
@@ -127,23 +159,23 @@ sudo iptables -A OUTPUT -p tcp -m tcp —dport 443 -j ACCEPT
 
 13. 
 
-sudo gitlab-ctl uninstall
+        sudo gitlab-ctl uninstall
+        
+        sudo gitlab-ctl cleanse
 
-sudo gitlab-ctl cleanse
+        sudo gitlab-ctl remove-accounts
 
-sudo gitlab-ctl remove-accounts
-
-sudo dpkg -P gitlab-ce || sudo yum -y remove gitlab-ce
+        sudo dpkg -P gitlab-ce || sudo yum -y remove gitlab-ce
 
 - 데비안이면 앞의 명령이, 레드햇이면 뒤의 명령이 실행.
 
-sudo rm /opt/gitlab
+        sudo rm /opt/gitlab
 
-sudo rm /var/opt/gitlab
+        sudo rm /var/opt/gitlab
 
-sudo rm /etc/gitlab
+        sudo rm /etc/gitlab
 
-sudo rm /var/log/gitlab
+        sudo rm /var/log/gitlab
 
 ---
 
@@ -155,20 +187,28 @@ sudo rm /var/log/gitlab
 
 [https://lunightstory.tistory.com/6](https://lunightstory.tistory.com/6)
 
-[//openssl](//openssl) 설치 여부
+//openssl 설치 여부
 
-1. openssl version
+1. 
+        
+        openssl version
     - openssl이 설치되어 있지 않다면 설치 필요.
 
        ![openssl_version](https://user-images.githubusercontent.com/68282265/101453516-cd65fc00-3972-11eb-8e5a-8ebe6e1aa105.png)
 
+
 //개인키 생성
 
-2. opensslgenrsa -des3 -out boblinux_server.key 2048
+2.
+
+    opensslgenrsa -des3 -out boblinux_server.key 2048
+
 
 //인증서 요청 생성
 
-3. openssl req -new -key boblinux_server.key -out boblinux_server.csr
+3.
+
+    openssl req -new -key boblinux_server.key -out boblinux_server.csr
 
 Country Name ( 국가코드) [] : KR
 
@@ -186,47 +226,78 @@ Email Address [] :
 
 - 이 다음 항목은 전부 enter 입력
 
+
 // 개인키 암호를 제거
 
-4. cp boblinux_server.key boblinux_server.key.org
+4.
 
-5. openssl rsa -in boblinux_server.key.org -out boblinux_server.key
+    cp boblinux_server.key boblinux_server.key.org
+
+5.
+   
+    openssl rsa -in boblinux_server.key.org -out boblinux_server.key
+
 
 //인증서 생성
 
-6. openssl x509 -req -days 3650 -in boblinux_server.csr -signkey boblinux_server.key -out boblinux_server.crt
+6.
+        
+        openssl x509 -req -days 3650 -in boblinux_server.csr -signkey boblinux_server.key -out boblinux_server.crt
 
 //생성 확인
 
-7. cat boblinux_server.key | head -3
+7.
+        
+        cat boblinux_server.key | head -3
 
-8. cat boblinux_server.crt | head -3
+8. 
+        
+        cat boblinux_server.crt | head -3
 
 ![openssl_1](https://user-images.githubusercontent.com/68282265/101453607-f4bcc900-3972-11eb-8ed3-09ed5cd4c592.PNG)
 
-[//key](//key) 파일과 crt 파일의 이름을 도메인 이름으로 바꿔서 복사.
 
-9. mv boblinux_server.key boblinux.fossa.kr.key
+//key 파일과 crt 파일의 이름을 도메인 이름으로 바꿔서 복사.
 
-10. mv boblinux_server.crt boblinux.fossa.kr.crt
+9.
+
+        mv boblinux_server.key boblinux.fossa.kr.key
+
+10.
+
+        mv boblinux_server.crt boblinux.fossa.kr.crt
+
 
 //디렉토리 생성 후 인증서 파일 두개 복사
 
-11. sudo mkdir -p /etc/gitlab/ssl
+11.
 
-12. sudo chmod 700 /etc/gitlab/ssl
+        sudo mkdir -p /etc/gitlab/ssl
 
-13. sudo cp boblinux.fossa.kr.crt /etc/gitlab/ssl/
+12.
+        
+        sudo chmod 700 /etc/gitlab/ssl
 
-14. sudo cp boblinux.fossa.kr.key /etc/gitlab/ssl/
+13.
+        
+        sudo cp boblinux.fossa.kr.crt /etc/gitlab/ssl/
+
+14.
+        
+        sudo cp boblinux.fossa.kr.key /etc/gitlab/ssl/
 
 ![openssl_2](https://user-images.githubusercontent.com/68282265/101453610-f5555f80-3972-11eb-98be-8227a783497d.png)
 
-[//Gitlab](//gitlab) 설정 적용 및 재시작
+//gitlab 설정 적용 및 재시작
 
-15. sudo gitlab-ctl reconfigure
+15.
 
-16. sudo gitlab-ctl restart
+    sudo gitlab-ctl reconfigure
+
+16.
+
+    sudo gitlab-ctl restart
+
 
 //접속 확인
 
