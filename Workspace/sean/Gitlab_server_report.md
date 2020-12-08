@@ -33,9 +33,10 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 1.
 
     sudo apt-get install curl openssh-server ca-certificates
-    - postfix는 메일 발신 관련이여서 이용하지 않을 것이기에 설치하지 않았으므로 총 3개의 패키지만 설치.
-    - 만약 설치한다면, 설치 중 나오는 옵션은 No configuration으로 설정.
-    - sudo dpkg-reconfigure postfix 명령으로 변경 가능.
+    
+- postfix는 메일 발신 관련이여서 이용하지 않을 것이기에 설치하지 않았으므로 총 3개의 패키지만 설치.
+- 만약 설치한다면, 설치 중 나오는 옵션은 No configuration으로 설정.
+- sudo dpkg-reconfigure postfix 명령으로 변경 가능.
 
 
 //gitlab 패키지 프로그램 저장소 추가
@@ -45,6 +46,7 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
     $curl -sS [https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh](https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh) | sudo bash
 
 - 약간의 시간이 걸릴 수 있음.
+
 
 
 //저장소 목록 업데이트
