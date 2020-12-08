@@ -10,26 +10,26 @@ Gitlab은 프로젝트용으로 사용할 비공개 레포지토리를 무료로
 
 ---
 
-#[제공된 기본 환경]
+# [제공된 기본 환경]
 
-1. 멘토님 서버의 https(443) 포트가 포트포워딩 되어 있다.
-2. 내부 포트는 443이고, 외부 포트는 21443으로 되어있어서 외부에서 IP 또는 도메인 뒤에 ":21443"이라고 입력하면 자동으로 내부 포트의 443 포트로 연결된다.
-3. http(80) 포트는 아파치가 돌아가고 있지만, 포트포워딩이 되어 있지 않아 외부에서 접속은 안된다.
-4. 방화벽이 열려있지 않으므로 iptables로 열어야 한다.
-5. 멘토님 서버 ip는 [boblinux.fossa.kr](http://boblinux.fossa.kr) 이라는 도메인으로 연결되어 있다.
-6. ubuntu 18.04.01
-
----
+1. __멘토님 서버의 https(443) 포트가 포트포워딩 되어 있다.__
+2. __내부 포트는 443이고, 외부 포트는 21443으로 되어있어서 외부에서 IP 또는 도메인 뒤에 ":21443"이라고 입력하면 자동으로 내부 포트의 443 포트로 연결된다.__
+3. __http(80) 포트는 아파치가 돌아가고 있지만, 포트포워딩이 되어 있지 않아 외부에서 접속은 안된다.__
+4. __방화벽이 열려있지 않으므로 iptables로 열어야 한다.__
+5. __멘토님 서버 ip는 [boblinux.fossa.kr](http://boblinux.fossa.kr) 이라는 도메인으로 연결되어 있다.__
+6. __ubuntu 18.04.01__
 
 ---
 
-#[Giblab 설치 및 설정]
+---
+
+# [Giblab 설치 및 설정]
 
 [https://teamlab.github.io/jekyllDecent/blog/tutorials/나만의-Git-서버-Gitlab-구축](https://teamlab.github.io/jekyllDecent/blog/tutorials/%EB%82%98%EB%A7%8C%EC%9D%98-Git-%EC%84%9C%EB%B2%84-Gitlab-%EA%B5%AC%EC%B6%95)
 
 //기본적인 패키지 설치
 
-1.  sudo apt-get install curl openssh-server ca-certificates
+1.      sudo apt-get install curl openssh-server ca-certificates
     - postfix는 메일 발신 관련이여서 이용하지 않을 것이기에 설치하지 않았으므로 총 3개의 패키지만 설치.
     - 만약 설치한다면, 설치 중 나오는 옵션은 No configuration으로 설정.
     - sudo dpkg-reconfigure postfix 명령으로 변경 가능.
@@ -149,7 +149,7 @@ sudo rm /var/log/gitlab
 
 ---
 
-#[Gitlab 페이지에 ssl 적용]
+# [Gitlab 페이지에 ssl 적용]
 
 [https://yjunyoung.tistory.com/entry/8-Gitlab-SSL-적용](https://yjunyoung.tistory.com/entry/8-Gitlab-SSL-%EC%A0%81%EC%9A%A9)
 
@@ -236,14 +236,14 @@ Email Address [] :
 
 ---
 
-#[Issues]
+# [Issues]
 
-1. /etc/gitlab/gitlab.rb 파일의 http_to_https의 값을 true로 바꿨는데 502 반환.
-2. certbot(let's encrypt)를 이용하려 했지만, let's encrypt는 http(80) 포트를 기반으로 접속 여부를 확인하여 생성하는데 현재 서버의 http(80) 포트는 포트포워딩이 안되어 있어서 외부에서 접속이 불가능하므로 방화벽 오류가 뜨기 때문에 생성 불가.
-3. 서버에 80포트는 아파치 웹 서비스가 사용 중이여서, 아파치를 끄고 진행함.
+1. __/etc/gitlab/gitlab.rb 파일의 http_to_https의 값을 true로 바꿨는데 502 반환.__
+2. __certbot(let's encrypt)를 이용하려 했지만, let's encrypt는 http(80) 포트를 기반으로 접속 여부를 확인하여 생성하는데 현재 서버의 http(80) 포트는 포트포워딩이 안되어 있어서 외부에서 접속이 불가능하므로 방화벽 오류가 뜨기 때문에 생성 불가.__
+3. __서버에 80포트는 아파치 웹 서비스가 사용 중이여서, 아파치를 끄고 진행함.__
 
 
-#[참고 블로그]
+# [참고 블로그]
 
 1. [https://docs.gitlab.com/omnibus/settings/nginx.html#redirect-http-requests-to-https](https://docs.gitlab.com/omnibus/settings/nginx.html#redirect-http-requests-to-https)
 2. [https://docs.gitlab.com/omnibus/settings/ssl.html](https://docs.gitlab.com/omnibus/settings/ssl.html)
