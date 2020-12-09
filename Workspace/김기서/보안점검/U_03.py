@@ -51,7 +51,7 @@ def U03():
         pm.printSolution(report, '\t\t텍스트 에디터를 이용하여 \"/etc/pam.d/common-auth\" 파일을 엽니다.')
         pm.printSolution(report, '\t\t아래의 내용을 수정 또는 추가하세요.')
         pm.printSolution(report, '\t\t순서가 중요하므로 수행문 최상단에 입력해.')
-        pm.printSolution(report, '\t\tauth  required  pam_tally2.so )
+        pm.printSolution(report, '\t\tauth  required  pam_tally2.so ')
         pm.printSolution(report, '\t\t\tonerr=fail deny=5 unlock_time=120 no_magic_root')
         pm.printSolution(report, '\t\t  no_magic_root : root에게는 패스워드 잠금 설정을 적용하지 않음')
         pm.printSolution(report, '\t\t  deny=5        : 5회 입력 실패 시 계정 잠금')
