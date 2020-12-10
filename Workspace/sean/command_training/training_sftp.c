@@ -99,7 +99,7 @@ void training_sftp(void)
 	next_line();
 
 	printf("자신의 컴퓨터나 노트북에 리눅스를 설치하여\n");
-	printf("\"sftp\" 명령으로 파일을 업로드하거나 다운로드 해보세요.\n")
+	printf("\"sftp\" 명령으로 파일을 업로드하거나 다운로드 해보세요.\n");
 
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
     	printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
