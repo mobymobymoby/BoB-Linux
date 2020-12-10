@@ -124,6 +124,7 @@ void training_whereis(void);
 void training_which(void);
 void training_whoami(void);
 void training_ssh(void);
+void training_sftp(void);
 
 // 이안나 명령어
 void training_chmod(void);
