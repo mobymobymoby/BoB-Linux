@@ -60,8 +60,8 @@ void training_sftp(void)
 	printf("어떤 명령어를 이용하는지 알아보겠습니다.\n");
 	next_line();
 
-	printf("(원격지 서버에 접속하는 실습은 \"ssh\" 트레이닝을 이용해주세요.\n");
-	next_line();
+	printf("(원격지 서버에 접속하는 실습은 \"ssh\" 트레이닝에서 실습할 수 있습니다.)\n");
+	next_line;
 	
 	system("clear");
 
@@ -85,10 +85,13 @@ void training_sftp(void)
 	printf("\"sftp client\"인 상태에서 \"put\"은\n");
 	printf("자신의 컴퓨터에 있는 파일을 원격지 서버에 업로드합니다.\n");
 	next_line();
-
 	
 	printf("\"sftp client\"인 상태에서 \"get\"은\n");
 	printf("원격지 서버에 있는 파일을 자신의 컴퓨터에 다운로드합니다.\n");
+	next_line();
+
+	printf("또한 \"sftp>\" 프롬프트 상태에서\n");
+	printf("리눅스의 기본 명령어들의 옵션들도 동일하게 사용가능합니다.\n");
 	next_line();
 
 	system("clear");
@@ -100,6 +103,7 @@ void training_sftp(void)
 
 	printf("자신의 컴퓨터나 노트북에 리눅스를 설치하여\n");
 	printf("\"sftp\" 명령으로 파일을 업로드하거나 다운로드 해보세요.\n");
+	next_line();
 
 	printf("이후에 콘솔 혹은 터미널에 \"man\" 명령어나\n");
     	printf("\"[명령어] --help\"와 같이 '--help' 옵션을 통해\n");
