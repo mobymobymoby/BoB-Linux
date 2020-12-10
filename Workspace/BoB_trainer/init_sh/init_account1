@@ -5,7 +5,7 @@ trap "echo '\n[경고]\n인터럽트를 발생시키지 마세요.\n'" INT TSTP 
 
 printf "BoB Linux에서는 기본 계정인 'rookie'를 제공합니다.\n\n"
 printf "하지만 사용자가 원하는 계정을 생성할 수도 있습니다.\n"
-printf "새로운 계정 생성시 기본 계정인 'rookie'는 삭제됩니다.\n\n"
+printf "새로운 계정 생성시 기본 계정인 'rookie'는 유지됩니다.\n\n"
 
 # 계정 생성 여부를 선택하기 위한 반복문
 while :
@@ -66,14 +66,15 @@ sudo sed -i -e "\$a/home/${name}/init_account2" /home/${name}/.bashrc
 # sudo mv ./* /home/${name}/
 sudo mv ./init_account2 /home/${name}/
 sudo mv ./init_account3 /home/${name}/
-sudo mv ./README /home/${name}/
+sudo cp ./README /home/${name}/
 
 # bashrc에 있는 자동 시작 스크립트를 제거
 sudo sed -i '/init_account/d' /home/rookie/.bashrc
 rm -f /home/rookie/init_account1
 
-# rookie 계정을 잠금
-(echo "rookie"; echo "THISACCOUNTWASLOCKED"; echo "THISACCOUNTWASLOCKED"; ) | passwd > /dev/null 2>&1
+# rookie 계정 삭제 시 스크립트 : ssh 등 실습으로 계정 유지
+# # rookie 계정을 잠금
+# (echo "rookie"; echo "THISACCOUNTWASLOCKED"; echo "THISACCOUNTWASLOCKED"; ) | passwd > /dev/null 2>&1
 
 # 생성한 계정으로 su하며, ~/.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
 sudo su - ${name}
