@@ -3,10 +3,10 @@
 - 가상 머신을 부팅시키기까지의 전 과정에 대한 매뉴얼입니다.
 - 해당 매뉴얼만 잘 따라와도 손쉽게 BoB-Linux를 설치하고 시작할 수 있습니다.
 - 리눅스나 가상 머신 사용에 익숙하지 않은 분들은 꼭 참고하여 BoB-Linux를 시작하세요!
-=====
+-----
 ### Step 1. Virtual Box 설치하기
 - 먼저 BoB-Linux를 실행 시킬 가상 머신을 설치해야 합니다. 아래의 링크를 클릭하여 **VirtualBox 홈페이지**로 이동하세요
-  - https://www.virtualbox.org/
+  - [VirtualBox 홈페이지 링크]https://www.virtualbox.org/
 -----
 #### Step 1.1
 ![1](https://user-images.githubusercontent.com/67176669/101727951-d1238b00-3af8-11eb-8e33-f062ef75ac8c.PNG)
@@ -52,7 +52,7 @@
 - 이제 **BoB-Linux**를 실행하기 위한 가상 머신인 **VirtualBox** 설치를 완료했습니다.
 - 이번 과정에서는 VirtualBox에서 BoB-Linux를 간단하게 설치할 수 있는 BoB-Linux.ova 파일을 다운로드 받을 것입니다.
 - 아래의 링크를 클릭해서 **BoB-Linux.ova** 파일을 다운로드 받으세요.
-  - https://boblinux.fossa.kr:21443/blackmoon/boblinux/-/raw/master/BoB%20Linux%20Ver%200.2.4.ova
+  - [BoB-Linux.ova 다운로드 링크]https://boblinux.fossa.kr:21443/blackmoon/boblinux/-/raw/master/BoB%20Linux%20Ver%200.2.4.ova
 -----
 ### Step 3. VirtualBox에 BoB-Linux.ova 가져오기
 - 마지막 과정입니다. 이번 과정에서는 VirtualBox의 기능인 **가상 시스템 가져오기**를 이용하여 BoB Linux를 설치할 것입니다.
