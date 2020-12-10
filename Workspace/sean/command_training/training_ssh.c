@@ -82,12 +82,21 @@ void training_ssh(void)
 	printf("이 트레이닝에서는 자신의 컴퓨터를 대상으로 실습해보겠습니다.\n\n");
 	next_line();
 
+	printf("먼저, 기본적으로 알아야 할 것이 있는데\n");
+	printf("처음으로 \"ssh\"를 이용하여 접속한다면 'yes' 혹은 'no'를 입력받게 되어 있습니다.\n");
+	next_line();
+
+	printf("이 때는 'yes'를 입력하고 로그인 할 사용자의 비밀번호를 입력하면 됩니다.\n");
+	printf("반대로 'no'를 입력한다면 접속을 중지합니다.\n");
+	next_line();
+
 	printf("\"ssh\" 명령어를 이용하여 'rookie' 사용자로 '127.0.0.1'에 접속해보세요.\n");
 	printf("사용법 : ssh [사용자이름]@[원격지 서버]\n");
 	printf("나오고 싶을 때는 \"exit\"를 입력하면 됩니다.\n");
 	just_run_command("ssh rookie@127.0.0.1");
 
-	printf("성공적으로 접속을 하셨다면 CLI 환경의 Shell이 접속되었을 것입니다.\n");
+	printf("\n\n성공적으로 접속을 하셨다면 CLI 환경의 Shell(으)로 접속되고\n");
+	printf("프롬프트가 보이며 'hello' 라는 문구가 보일 것입니다.\n");
 	next_line();
 
 	printf("만약 원격지 서버에서 '22'번 포트가 아닌 '3421'포트로 지정하여 열어두었다면\n");
