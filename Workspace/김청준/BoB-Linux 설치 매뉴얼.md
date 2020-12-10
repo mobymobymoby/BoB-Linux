@@ -42,7 +42,7 @@
 #### Step 1.8
 ![8](https://user-images.githubusercontent.com/67176669/101729932-7855f180-3afc-11eb-9d28-f8e8ad9c455b.png)
 - 이제 설치할 준비가 되었습니다. **Install**을 클릭하시면 설치가 진행됩니다.
-  - 중간에 **이 앱이 디바이스를 변경할 수 있도록 허용하시겠어요**와 같은 메시지가 뜬다면 **예**를 눌러주세요.
+  - 중간에 **\"이 앱이 디바이스를 변경할 수 있도록 허용하시겠어요\?\"**와 같은 메시지가 뜬다면 **예**를 눌러주세요.
 -----
 #### Step 1.9
 ![9](https://user-images.githubusercontent.com/67176669/101729933-7855f180-3afc-11eb-8657-fb0d706285ec.png)
@@ -57,7 +57,7 @@
 ### Step 3. VirtualBox에 BoB-Linux.ova 가져오기
 - 마지막 과정입니다. 이번 과정에서는 VirtualBox의 기능인 **가상 시스템 가져오기**를 이용하여 BoB Linux를 설치할 것입니다.
 - 먼저 **BoB-Linux.ova** 파일이 다운로드된 위치를 확인해주세요.
-  - 본 가이드에서는 **C:\Users\user\Downloads**에 BoB-Linux.ova 파일이 존재한다고 가정하고 진행합니다.
+  - 본 가이드에서는 **C:\Users\user\Downloads**에 **BoB-Linux.ova** 파일이 존재한다고 가정하고 진행합니다.
 -----
 #### Step 3.1
 ![10](https://user-images.githubusercontent.com/67176669/101731358-e0a5d280-3afe-11eb-8ff1-c660e3d3e9f6.PNG)
