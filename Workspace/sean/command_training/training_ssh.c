@@ -53,7 +53,9 @@ void training_ssh(void)
 
 	printf("주의할 점은 \"ssh\"를 처음 접하게 되면 많이 혼란스러울 수 있습니다.\n");
 	printf("\"ssh\"는 프로토콜이며, ssh 프로토콜을 이용하여 접속하는 것입니다.\n");
-	printf("'putty'와 'Xshell' 같은 GUI 클라이언트들은 모두\n");
+	next_line();
+
+	printf("'putty'와 'Xshell' 같은 클라이언트들은 모두\n");
 	printf("ssh 프로토콜을 이용할 수 있는 프로그램들입니다.\n");
 	next_line();
 
@@ -83,7 +85,7 @@ void training_ssh(void)
 	next_line();
 
 	printf("먼저, 기본적으로 알아야 할 것이 있는데\n");
-	printf("처음으로 \"ssh\"를 이용하여 접속한다면 'yes' 혹은 'no'를 입력받게 되어 있습니다.\n");
+	printf("처음으로 \"ssh\"를 이용하여 접속한다면 'yes' 혹은 'no'를 입력받을 수 있습니다.\n");
 	next_line();
 
 	printf("이 때는 'yes'를 입력하고 로그인 할 사용자의 비밀번호를 입력하면 됩니다.\n");
@@ -95,7 +97,7 @@ void training_ssh(void)
 	printf("나오고 싶을 때는 \"exit\"를 입력하면 됩니다.\n");
 	just_run_command("ssh rookie@127.0.0.1");
 
-	printf("\n\n성공적으로 접속을 하셨다면 CLI 환경의 Shell(으)로 접속되고\n");
+	printf("\n\n성공적으로 접속을 하였다면 CLI 환경의 Shell(으)로 접속되고\n");
 	printf("프롬프트가 보이며 'hello' 라는 문구가 보일 것입니다.\n");
 	next_line();
 
@@ -106,7 +108,7 @@ void training_ssh(void)
 	printf("'rookie' 사용자로 '127.0.0.1'에 접속하는데\n");
 	printf("포트 번호는 '3421' 로 접속해보세요.\n");
 	printf("사용법 : ssh -p [포트번호] [사용자이름]@[원격지 서버]\n");
-	nothing_print_fake_run_command("ssh -p 3421 rookie@localhost");
+	nothing_print_fake_run_command("ssh -p 3421 rookie@127.0.0.1");
 
 	printf("\n\n명령어를 올바르게 입력하였다면\n");
 	printf("실제 시스템에서는 정상적으로 원격지 서버에 접속할 수 있을 것입니다.\n");
