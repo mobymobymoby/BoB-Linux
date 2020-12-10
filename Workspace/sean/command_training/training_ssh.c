@@ -8,7 +8,7 @@ void training_ssh(void)
 
 	printf("이번에 학습할 명령어는 \"ssh\" 입니다.\n\n");
 
-	printf("\"ssh\"는 프로토콜 이름이기도 하며, \"Secure Shell\"의 약자입니다.\n");
+	printf("\"ssh\"는 프로토콜 이름이며, \"Secure Shell\"의 약자입니다.\n");
 	next_line();
 
 	printf("\"ssh\" 명령어의 실행 파일은 \"/usr/bin/ssh\"(으)로 있습니다.\n");
@@ -31,7 +31,8 @@ void training_ssh(void)
 
 	printf("\"ssh\"는 \"secure\"이라는 단어가 들어가는데\n");
 	printf("이유는 위와 같은 상황이 벌어지더라도 암호화되어 데이터가 보호됩니다.\n");
-	printf("그렇기 때문에 중간에서 데이터를 가로채어 보더라도 암호문이 보이기 때문에 어떤 데이터인지 알 수 없습니다.\n");
+	printf("그렇기 때문에 중간에서 데이터를 가로채어 보더라도 암호문이 보이기 때문에\n");
+	printf("어떤 데이터인지 알 수 없습니다.\n");
 	next_line();
 
 	printf("'MacOS'와 'Linux'에는 기본적으로 \"ssh 클라이언트\"가 설치 되어 있습니다.\n");
@@ -52,7 +53,8 @@ void training_ssh(void)
 
 	printf("주의할 점은 \"ssh\"를 처음 접하게 되면 많이 혼란스러울 수 있습니다.\n");
 	printf("\"ssh\"는 프로토콜이며, ssh 프로토콜을 이용하여 접속하는 것입니다.\n");
-	printf("'putty'와 'Xshell' 같은 GUI 클라이언트들은 모두 ssh 프로토콜을 이용할 수 있는 프로그램들입니다.\n");
+	printf("'putty'와 'Xshell' 같은 GUI 클라이언트들은 모두\n");
+	printf("ssh 프로토콜을 이용할 수 있는 프로그램들입니다.\n");
 	next_line();
 
 	printf("이 트레이닝에서는 'CMD' 혹은 '터미널 창'이나 '콘솔'에서 이용할 수 있는\n");
@@ -80,10 +82,10 @@ void training_ssh(void)
 	printf("이 트레이닝에서는 자신의 컴퓨터를 대상으로 실습해보겠습니다.\n\n");
 	next_line();
 
-	printf("\"ssh\" 명령어를 이용하여 'rookie' 사용자로 'localhost'에 접속해보세요.\n");
+	printf("\"ssh\" 명령어를 이용하여 'rookie' 사용자로 '127.0.0.1'에 접속해보세요.\n");
 	printf("사용법 : ssh [사용자이름]@[원격지 서버]\n");
 	printf("나오고 싶을 때는 \"exit\"를 입력하면 됩니다.\n");
-	just_run_command("ssh rookie@localhost");
+	just_run_command("ssh rookie@127.0.0.1");
 
 	printf("성공적으로 접속을 하셨다면 CLI 환경의 Shell이 접속되었을 것입니다.\n");
 	next_line();
@@ -92,12 +94,13 @@ void training_ssh(void)
 	printf("'-p' 옵션을 이용하여 접속할 수 있습니다.\n");
 	next_line();
 
-	printf("'rookie' 사용자로 'localhost'에 접속하는데, 포트 번호는 '3421' 로 접속해보세요.\n");
+	printf("'rookie' 사용자로 '127.0.0.1'에 접속하는데\n");
+	printf("포트 번호는 '3421' 로 접속해보세요.\n");
 	printf("사용법 : ssh -p [포트번호] [사용자이름]@[원격지 서버]\n");
 	nothing_print_fake_run_command("ssh -p 3421 rookie@localhost");
 
-	printf("명령어를 올바르게 입력하였다면\n");
-	printf("실제 시스템에서는 정상적으로 원격지 서버에 접속할 수 있을 것입니다.\n")
+	printf("\n\n명령어를 올바르게 입력하였다면\n");
+	printf("실제 시스템에서는 정상적으로 원격지 서버에 접속할 수 있을 것입니다.\n");
 	next_line();
 
 	system("clear");
