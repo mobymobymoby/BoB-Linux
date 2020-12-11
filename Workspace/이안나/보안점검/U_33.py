@@ -9,7 +9,7 @@ C_YELLOW    = "\033[33m"
 def U_33(): 
     sys.stdout = open('./U-33.txt', mode='w', encoding='utf-8')
     print("[U-33] DNS 보안 버전 패치")
-    out = subprocess.getoutput('ps -ef | grep named')
+    out = subprocess.getoutput('ps -ef | grep named 2>/dev/null')
 
     if 'named' in out :
         print(C_RED + "\t[검사 결과] 보안 조치가 필요합니다." + C_END)

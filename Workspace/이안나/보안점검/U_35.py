@@ -23,7 +23,7 @@ def U_35():
         index1 = out.find('SERVER_CONFIG_FILE="')
         index2 = out.find('"', index1+21)
         apacheHome = apacheHome + "/" + out[index1+20:index2]
-        print(apacheHome)
+        #print(apacheHome)
 
         out = subprocess.getoutput('cat ' + apacheHome)
 
@@ -57,6 +57,7 @@ def U_35():
 
     #Apache가 없음
     else :
+        print(C_YELLOW + "\tApache 서비스를 사용하고 있지 않습니다." + C_END)
         print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
         return False
 ###########################################################################################

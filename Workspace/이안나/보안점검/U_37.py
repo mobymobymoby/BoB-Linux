@@ -31,6 +31,11 @@ def U_37():
         else :
             print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
             report = False
+            
+    else :
+        print(C_YELLOW + "\tApache 서비스를 사용하고 있지 않습니다." + C_END) 
+        print(C_GREEN + "\t[검사 결과] 안전합니다." + C_END)
+        report = False
 ###########################################################################################
     if (report) :
         print("[U-37] 조치 방법")
