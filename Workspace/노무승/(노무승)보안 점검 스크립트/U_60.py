@@ -21,11 +21,11 @@ def U60() :
         if (temp != ""):
             temp = temp.split("\n")
             if (i == "f") :
-                i = "파일이"
+                f_output = f_output + C_YELLOW + "\t[경고] 아래 경로에 숨김 파일이 존재합니다.\n" + C_END 
             else :
-                i = "폴더가"
+                f_output = f_output + C_YELLOW + "\t[경고] 아래 경로에 숨김 폴더가 존재합니다.\n" + C_END 
             for j in temp:
-                f_output = f_output + C_YELLOW + "\t[경고] "+ j + " : 숨김 " + i + " 존재합니다.\n" + C_END 
+                f_output = f_output + C_YELLOW + "\t\t" + j + "\n" + C_END 
             flag = True
 
     if (flag) :
