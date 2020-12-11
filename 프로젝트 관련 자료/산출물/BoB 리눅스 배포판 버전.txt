@@ -1,9 +1,0 @@
-[0.1 Ver (CLI)]
-https://drive.google.com/file/d/1u10yWXQ2QiZUi5CFVrNLU6FQpyO2UcQC/view?usp=sharing
-
-[0.2 Ver (GUI)]
-https://drive.google.com/file/d/1ZFC5V6oil7vLaeF4J1Q6wo0YhLQIU1It/view?usp=sharing
-
-[Notice]
-계정 root 패스워드 root 
-계정 user 패스워드 user
