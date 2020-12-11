@@ -101,18 +101,16 @@ def checkAll():
         print("=====================================================================================")
 
 def check():
-    num = input('점검할 항목을 입력하세요: ')
-    if (num.isdecimal()):
-        num = int(num)
-        if (num >= 1) and (num <= 73):
-            command = 'python3 U_{0:02d}.py'.format(num)
-            os.system(command)
-        else:
-            print("1~73 사이 숫자만 입력해주세요.\n")
-            check()
-    else:
+    while True:
+        num = input('점검할 항목을 입력하세요: ')
+        if num.isdecimal():
+            num = int(num)
+            if (num >= 1) and (num <= 73):
+                break
         print("1~73 사이 숫자만 입력해주세요.\n")
-        check()
+
+    command = 'python3 U_{0:02d}.py'.format(num)
+    os.system(command)
 
 def printList():
     print("\t1. 계정 관리 관련")
