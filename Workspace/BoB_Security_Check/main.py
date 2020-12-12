@@ -126,8 +126,10 @@ def check():
                 break
         print("1~73 사이 숫자만 입력해주세요.\n")
 
+    print("=====================================================================================")
     command = 'python3 ' + os.path.dirname(os.path.abspath(__file__)) + '/U_{0:02d}.py'.format(num)
     os.system(command)
+    print("=====================================================================================")
 
 def printList():
     print("\t1. 계정 관리 관련")
