@@ -129,6 +129,13 @@ int convert_name(char select[])
         training_set_unset();
     else if (!strncmp(select, "users", strlen("users")) && strlen(select) == strlen("users"))
         training_users();
+    
+    else if (!strncmp(select, "bg", strlen("bg")) && strlen(select) == strlen("bg"))
+        training_bg_fg_jobs();
+    else if (!strncmp(select, "ssh", strlen("ssh")) && strlen(select) == strlen("ssh"))
+        training_ssh();
+    else if (!strncmp(select, "sftp", strlen("sftp")) && strlen(select) == strlen("sftp"))
+        training_sftp();
     else
     {
         printf("\n잘못된 값을 입력하셨습니다.\n");
