@@ -132,21 +132,23 @@ def check():
     print("=====================================================================================")
 
 def printList():
+    print("=====================================================================================")
     print("\t1. 계정 관리 관련")
     for key in checkList_1:
         print('\t\t[U-{}] {}'.format(key, checkList_1[key]))
-    print("\t2. 파일 및 디렉터리 관련")
+    print("\n\t2. 파일 및 디렉터리 관련")
     for key in checkList_2:
         print('\t\t[U-{}] {}'.format(key, checkList_2[key]))
-    print("\t3. 서비스 관리 관련")
+    print("\n\t3. 서비스 관리 관련")
     for key in checkList_3:
         print('\t\t[U-{}] {}'.format(key, checkList_3[key]))
-    print("\t4. 패치 관리 관련")
+    print("\n\t4. 패치 관리 관련")
     for key in checkList_4:
         print('\t\t[U-{}] {}'.format(key, checkList_4[key]))
-    print("\t5. 로그 관리 관련")
+    print("\n\t5. 로그 관리 관련")
     for key in checkList_5:
         print('\t\t[U-{}] {}'.format(key, checkList_5[key]))
+    print("=====================================================================================")
     print("")
 
 def main():
