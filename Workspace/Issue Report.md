@@ -4,6 +4,7 @@
 - 따라서 main.py의 경로가 필요함(main.py는 항상 U_X.py 파일과 같이 있다고 가정함)
 - ```command = 'python3 ' + os.path.dirname(os.path.abspath(__file__)) + '/U_{0:02d}.py'.format(i)```와 같이 수정해서 사용
 - main.py를 실행시켰을 때 main.py의 경로가 os.path.dirname(os.path.abspath(__file__))에 의해 붙여짐
+- /usr/local/bin/에 두어 명령어 형태로 실행 시킬 때는 쉘 스크립트를 이용하여 실행시키면 됨
 
 ### 부팅 시 오류메시지 
 ![image](https://user-images.githubusercontent.com/67176669/100335410-50ed2800-3018-11eb-9f4d-9af3305140ed.png)
