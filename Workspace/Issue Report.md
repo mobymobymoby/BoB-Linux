@@ -1,3 +1,10 @@
+### 보안 점검 프로그램 현재 실행 디렉토리에 관계 없이 하기
+- 사용자가 U_X.py 파일들과 main.py 파일이 존재하는 디렉토리에 있을 때는 문제가 안됨
+- 하지만 다른 디렉토리에서 절대경로/상대경로를 이용해 main.py를 실행시킬 때 파일의 존재 유무를 pwd 기준으로 하게 됨
+- 따라서 main.py의 경로가 필요함(main.py는 항상 U_X.py 파일과 같이 있다고 가정함)
+- ```command = 'python3 ' + os.path.dirname(os.path.abspath(__file__)) + '/U_{0:02d}.py'.format(i)```와 같이 수정해서 사용
+- main.py를 실행시켰을 때 main.py의 경로가 os.path.dirname(os.path.abspath(__file__))에 의해 붙여짐
+
 ### 부팅 시 오류메시지 
 ![image](https://user-images.githubusercontent.com/67176669/100335410-50ed2800-3018-11eb-9f4d-9af3305140ed.png)
 - 커널을 업데이트하여 해결
