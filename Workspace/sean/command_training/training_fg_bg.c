@@ -1,6 +1,6 @@
 #include "func.h"
 
-void training_fg_bg(void)
+void training_bg_fg_jobs(void)
 {
 	create_defdir();
 
@@ -60,8 +60,8 @@ void training_fg_bg(void)
 	printf("100초 동안 다른 어떠한 동작도 할 수 없을 것입니다.\n");
 	next_line();
 
-	printf("위의 명령처럼 포그라운드에서의 작업 시간이 오래 걸리는 명령을 실행하면\n");
-	printf("해당 작업이 완료될 때까지 멈춰있어야 할 것입니다.\n");
+	printf("위의 명령처럼 포그라운드에서의 작업 시간이 오래 걸리는 명령을\n");
+	printf("포그라운드에서 실행하면 해당 작업이 완료될 때까지 멈춰있어야 할 것입니다.\n");
 	next_line();
 
 	printf("\"bg\" 명령어를 이용하여 백그라운드 작업으로 전환할 때는\n");
@@ -86,18 +86,17 @@ void training_fg_bg(void)
 	printf("[실습] \"sleep 150\"을 입력해보세요.\n");
 	nothing_print_fake_run_command("sleep 150");
 
-	printf("\n\n위의 명령은 150초 동안 멈춘 것과 같은 효과를\n");
-	printf("포그라운드에서 실행하는 것입니다.\n");
-	printf("(트레이닝에서는 학습 진행을 위해 적용되지 않습니다.\n");
+	printf("\n\n위의 명령은 150초 동안 멈춘 것과 같은 효과를 포그라운드에서 실행하는 것입니다.\n");
+	printf("(트레이닝에서는 학습 진행을 위해 적용되지 않습니다.\n\n");
 	next_line();
 
 	printf("[실습] \"jobs\" 명령을 통해 포그라운드에서 동작 중인 \"sleep\" 명령은\n");
 	printf("몇 번째인지 확인해보세요.\n");
 	nothing_print_fake_run_command("jobs");
 	printf("\n[1]+ 실행중	sleep 100 &\n");
-	printf("[2]+ 완료      sleep 150\n");
+	printf("[2]+ 완료       sleep 150\n");
 	
-	printf("포그라운드에서 동작 중인 \"sleep\" 명령은 2번째 입니다.\n");
+	printf("\n\n포그라운드에서 동작 중인 \"sleep\" 명령은 2번째 입니다.\n");
 	next_line();
 
 	printf("[실습] \"bg %%2\"(을)를 입력해보세요.\n");
@@ -120,14 +119,14 @@ void training_fg_bg(void)
 	printf("\"bg\" 명령어의 사용법과 같습니다.\n\n");
 	next_line();
 
-	printf("[실습] \"fg %%1\"(을)를 입력해보세요.\n");
-	nothing_print_fake_run_command("fg %1");
+	printf("[실습] \"fg %%2\"(을)를 입력해보세요.\n");
+	nothing_print_fake_run_command("fg %2");
 
 	printf("\n\n\"bg\" 명령어에서처럼 숫자를 이용하여 백그라운드에서 동작 중인 작업을\n");
 	printf("포그라운드로 전환할 수 있습니다.\n");
 	next_line();
 
-	printf("포그라운드에서 동작 중인 작업을 종료할 때는 \"Ctrl + c\"를 이용하면 되지만\n");
+	printf("동작 중인 작업을 종료할 때는 \"Ctrl + c\"를 이용하면 되지만\n");
 	printf("\"kill\" 명령어를 이용하여 종료할 수 있습니다.\n");
 	next_line();
 
@@ -136,7 +135,7 @@ void training_fg_bg(void)
 	next_line();
 
 	printf("또한 포그라운드에서 \"Ctrl + z\"를 이용하면 동작 중인 작업을\n");
-	printf("종료하는 것이 아닌, 일시 정지 하도록 합니다.\n");
+	printf("종료하는 것이 아닌, 일시 정지 할 수 있습니다.\n");
 	next_line();
 
 	printf("일시 정지 된 작업은 \"jobs\" 명령어로 확인할 수 있으며\n");
