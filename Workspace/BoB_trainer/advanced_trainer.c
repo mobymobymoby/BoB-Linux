@@ -14,7 +14,7 @@ void advanced_trainer()
         system("clear");
         printf("명령어 목록입니다.\n\n");
         printf("입력 방법 : [23. head](+tail) -> '23' 또는 'head' 입력\n\n");
-        printf(" [1. alias] \t\t [2. apt] \t\t [3. bg](+fg) \n [4. chmod] \t\t [5. chown] \t\t [6. chroot] \n [7. chsh] \t\t [8. cmp] \t\t [9. comm] \n [10. curl]\t\t");
+        printf(" [1. alias] \t\t [2. apt] \t\t [3. bg](+fg, jobs) \n [4. chmod] \t\t [5. chown] \t\t [6. chroot] \n [7. chsh] \t\t [8. cmp] \t\t [9. comm] \n [10. curl]\t\t");
         
         printf(" [11. dd] \t\t [12. diff] \n [13. echo] \t\t [14. env] \t\t [15. export] \n [16. file] \t\t [17. find] \t\t [18. fsck] \n [19. git] \t\t [20. grep] \t\t");
 
