@@ -101,7 +101,7 @@ def logo():
     time.sleep(0.1)
     print("     |____/ \___|\___|\__,_|_|  |_|\__|\__, |   \____|_| |_|\___|\___|_|\_\\")
     time.sleep(0.1)
-    print("                                        |___/                               \n")
+    print("                                        |___/                               \n\n")
     time.sleep(0.3)
     print("BoB Linux Security Check에 오신것을 환영합니다.\n")
     print("본 프로그램은 KISA의 \"주요통신기반시설 기술적 취약점 진단 및 평가 가이드\"를 토대로")
