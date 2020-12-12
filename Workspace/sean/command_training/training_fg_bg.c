@@ -7,7 +7,6 @@ void training_fg_bg(void)
 	system("clear");
 
 	printf("이번에 학습할 명령어는 \"bg\"와 \"fg\" 그리고 \"jobs\" 입니다.\n\n");
-	next_line();
 
 	printf("리눅스는 멀티태스킹 시스템이므로 리눅스의 모든 프로세스는\n");
 	printf("백그라운드 혹은 포그라운드 둘 중 하나의 모드로 동작합니다.\n");
@@ -46,11 +45,11 @@ void training_fg_bg(void)
 	printf("'&' 기호를 실행하고자 하는 명령어 뒤에 입력해주면 됩니다.\n\n");
 	next_line();
 
-	printf("[실습] \"sleep 10 &\"을 입력해보세요.\n");
-	just_run_command("sleep 10 &");
+	printf("[실습] \"sleep 100 &\"을 입력해보세요.\n");
+	just_run_command("sleep 100 &");
 	
-	printf("\n\n위의 \"sleep 10\" 명령은\n");
-	printf("10초 동안 잠시 멈춘것과 같은 효과가 나타납니다.\n");
+	printf("\n\n위의 \"sleep 100\" 명령은\n");
+	printf("100초 동안 잠시 멈춘것과 같은 효과가 나타납니다.\n");
 	next_line();
 
 	printf("방금 실행한 명령은 백그라운드에서 동작했기 때문에\n");
@@ -58,7 +57,7 @@ void training_fg_bg(void)
 	next_line();
 
 	printf("만약 포그라운드에서 동작하도록 한다면\n");
-	printf("10초 동안 어떠한 명령도 내릴 수 없을 것입니다.\n");
+	printf("100초 동안 다른 어떠한 동작도 할 수 없을 것입니다.\n");
 	next_line();
 
 	printf("위의 명령처럼 포그라운드에서의 작업 시간이 오래 걸리는 명령을 실행하면\n");
@@ -71,7 +70,8 @@ void training_fg_bg(void)
 	next_line();
 
 	printf("[실습] \"jobs\"를 입력해보세요.\n");
-	just_run_command("jobs");
+	nothing_print_fake_run_command("jobs");
+	printf("\n[1]+ 실행중	sleep 100 &\n");
 
 	printf("\n\n현재 어떤 프로세스들이 동작 중인지가 보여질 것입니다.\n");
 	next_line();
@@ -81,16 +81,37 @@ void training_fg_bg(void)
 	next_line();
 
 	printf("\"bg\" 명령을 사용할 때는 해당 숫자를 이용하여 백그라운드로 전환할 수 있습니다.\n\n");
+	next_line();
 
-	printf("[실습] \"bg %%1\"(을)를 입력해보세요.\n");
-	just_run_command("bg %1");
+	printf("[실습] \"sleep 150\"을 입력해보세요.\n");
+	nothing_print_fake_run_command("sleep 150");
+
+	printf("\n\n위의 명령은 150초 동안 멈춘 것과 같은 효과를\n");
+	printf("포그라운드에서 실행하는 것입니다.\n");
+	printf("(트레이닝에서는 학습 진행을 위해 적용되지 않습니다.\n");
+	next_line();
+
+	printf("[실습] \"jobs\" 명령을 통해 포그라운드에서 동작 중인 \"sleep\" 명령은\n");
+	printf("몇 번째인지 확인해보세요.\n");
+	nothing_print_fake_run_command("jobs");
+	printf("\n[1]+ 실행중	sleep 100 &\n");
+	printf("[2]+ 완료      sleep 150\n");
 	
+	printf("포그라운드에서 동작 중인 \"sleep\" 명령은 2번째 입니다.\n");
+	next_line();
+
+	printf("[실습] \"bg %%2\"(을)를 입력해보세요.\n");
+	nothing_print_fake_run_command("bg %2");
+	printf("[2]+ sleep 150 &\n");
+
 	printf("\n\n이제 다시 \"jobs\" 명령어로 확인해보면\n");
-	printf("아까 1번에 해당하는 명령이 백그라운드로 실행되고 있을 것입니다.\n\n");
+	printf("아까 2번에 해당하는 명령이 백그라운드로 실행되고 있을 것입니다.\n\n");
 	next_line();
 
 	printf("[실습] \"jobs\"를 입력해보세요.\n");
-	just_run_command("jobs");
+	nothing_print_fake_run_command("jobs");
+	printf("[1]+ 완료	sleep 100 &\n");
+	printf("[2]+ 실행중 	sleep 150 &\n");
 
 	printf("\n\n위의 출력 결과를 보면 상태 부분에 '실행중'이 보일 것입니다.\n");
 	next_line();
@@ -100,7 +121,7 @@ void training_fg_bg(void)
 	next_line();
 
 	printf("[실습] \"fg %%1\"(을)를 입력해보세요.\n");
-	just_run_command("fg %1");
+	nothing_print_fake_run_command("fg %1");
 
 	printf("\n\n\"bg\" 명령어에서처럼 숫자를 이용하여 백그라운드에서 동작 중인 작업을\n");
 	printf("포그라운드로 전환할 수 있습니다.\n");
