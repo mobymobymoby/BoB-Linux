@@ -113,7 +113,7 @@ def logo():
 
 def checkAll():
     for i in range(1, 74):
-        command = 'python3 U_{0:02d}.py'.format(i)
+        command = 'python3 ' + os.path.dirname(os.path.abspath(__file__)) + '/U_{0:02d}.py'.format(i)
         os.system(command)
         print("=====================================================================================")
 
@@ -126,7 +126,7 @@ def check():
                 break
         print("1~73 사이 숫자만 입력해주세요.\n")
 
-    command = 'python3 U_{0:02d}.py'.format(num)
+    command = 'python3 ' + os.path.dirname(os.path.abspath(__file__)) + '/U_{0:02d}.py'.format(num)
     os.system(command)
 
 def printList():
