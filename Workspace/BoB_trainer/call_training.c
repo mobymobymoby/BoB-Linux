@@ -15,174 +15,183 @@ int call_training(char select[])
         training_apt();
         break;
     case 3:
-        training_chmod();
+        training_bg_fg_jobs();
         break;
     case 4:
-        training_chown();
+        training_chmod();
         break;
     case 5:
-        training_chroot();
+        training_chown();
         break;
     case 6:
-        training_chsh();
+        training_chroot();
         break;
     case 7:
-        training_cmp();
+        training_chsh();
         break;
     case 8:
-        training_comm();
+        training_cmp();
         break;
     case 9:
-        training_curl();
+        training_comm();
         break;
     case 10:
-        training_dd();
+        training_curl();
         break;
     case 11:
-        training_diff();
+        training_dd();
         break;
     case 12:
-        training_echo();
+        training_diff();
         break;
     case 13:
-        training_env();
+        training_echo();
         break;
     case 14:
-        training_export();
+        training_env();
         break;
     case 15:
-        training_file();
+        training_export();
         break;
     case 16:
-        training_find();
+        training_file();
         break;
     case 17:
-        training_fsck();
+        training_find();
         break;
     case 18:
-        training_git();
+        training_fsck();
         break;
     case 19:
-        training_grep();
+        training_git();
         break;
     case 20:
-        training_group();
+        training_grep();
         break;
     case 21:
-        training_halt();
+        training_group();
         break;
     case 22:
-        training_head_tail();
+        training_halt();
         break;
     case 23:
-        training_history();
+        training_head_tail();
         break;
     case 24:
-        training_ifconfig();
+        training_history();
         break;
     case 25:
-        training_init();
+        training_ifconfig();
         break;
     case 26:
-        training_kill();
+        training_init();
         break;
     case 27:
-        training_ln();
+        training_kill();
         break;
     case 28:
-        training_locate();
+        training_ln();
         break;
     case 29:
-        training_lsblk();
+        training_locate();
         break;
     case 30:
-        training_make();
+        training_lsblk();
         break;
     case 31:
-        training_man();
+        training_make();
         break;
     case 32:
-        training_mkfs();
+        training_man();
         break;
     case 33:
-        training_more_less();
+        training_mkfs();
         break;
     case 34:
-        training_mount();
+        training_more_less();
         break;
     case 35:
-        training_nano();
+        training_mount();
         break;
     case 36:
-        training_netstat();
+        training_nano();
         break;
     case 37:
-        training_ping();
+        training_netstat();
         break;
     case 38:
-        training_pipe();
+        training_ping();
         break;
     case 39:
-        training_poweroff();
+        training_pipe();
         break;
     case 40:
-        training_ps();
+        training_poweroff();
         break;
     case 41:
-        training_reboot();
+        training_ps();
         break;
     case 42:
-        training_redirection();
+        training_reboot();
         break;
     case 43:
+        training_redirection();
+        break;
+    case 44:
         training_runlevel();
         break;
-    case 44:        
+    case 45:        
         training_sed();
         break;
-    case 45:
+    case 46:
         training_set_unset();
         break;
-    case 46:
-        training_shutdown();
-        break;
     case 47:
-        training_sort();
+        training_sftp();
         break;
     case 48:
-        training_su();
+        training_shutdown();
         break;
     case 49:
-        training_sudo();
+        training_sort();
         break;
     case 50:
-        training_tar();
+        training_sftp();
         break;
     case 51:
-        training_top();
+        training_su();
         break;
     case 52:
-        training_umask();
+        training_sudo();
         break;
     case 53:
-        training_uname();
+        training_tar();
         break;
     case 54:
-        training_user_passwd();
+        training_top();
         break;
     case 55:
-        training_users();
+        training_umask();
         break;
     case 56:
-        training_vi();
+        training_uname();
         break;
     case 57:
-        training_wget();
+        training_user_passwd();
         break;
     case 58:
-        training_whereis();
+        training_users();
         break;
     case 59:
+        training_vi();
+        break;
+    case 60:
+        training_wget();
+        break;
+    case 61:
+        training_whereis();
+        break;
+    case 62:
         training_which();
         break;
     default:
