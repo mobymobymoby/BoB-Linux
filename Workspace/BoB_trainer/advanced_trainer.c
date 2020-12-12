@@ -18,11 +18,11 @@ void advanced_trainer()
         
         printf(" [11. dd] \t\t [12. diff] \n [13. echo] \t\t [14. env] \t\t [15. export] \n [16. file] \t\t [17. find] \t\t [18. fsck] \n [19. git] \t\t [20. grep] \t\t");
 
-        printf(" [21. group] \n [22. halt] \t [23. head](+tail) \t\t [24. history] \n [25. ifconfig] \t\t [26. init] \t\t [27. kill] \n [28. ln] \t\t [29. locate] \t\t [30. lsblk] \n [31. make] \t\t [32. man] \t\t [33. mkfs] \n [34. more](+less) \t\t");
+        printf(" [21. group] \n [22. halt] \t\t [23. head](+tail) \t\t [24. history] \n [25. ifconfig] \t [26. init] \t\t [27. kill] \n [28. ln] \t\t [29. locate] \t\t [30. lsblk] \n [31. make] \t\t [32. man] \t\t [33. mkfs] \n [34. more](+less) \t");
         
-        printf(" [35. mount] \t\t [36. nano] \n [37. netstat] \t\t [38. ping] \t\t [39. pipe] \n [40. poweroff] \t\t [41. ps] \t\t [42. reboot] \n [43. redirection] \t [44. runlevel] \t\t [45. sed] \n [46. set](+unset) \t [47. sftp] \t\t [48. shutdown] \n");
+        printf(" [35. mount] \t\t [36. nano] \n [37. netstat] \t\t [38. ping] \t\t [39. pipe] \n [40. poweroff] \t [41. ps] \t\t [42. reboot] \n [43. redirection] \t [44. runlevel] \t [45. sed] \n [46. set](+unset) \t [47. sftp] \t\t [48. shutdown] \n");
         
-        printf(" [49. sort] \t\t [50. ssh] \t\t [51. su] \n [52. sudo] \t\t [53. tar] \t\t [54. top] \n [55. umask] \t\t [56. uname] \t\t [57. user](+관련 명령어) \n [58. users] \t\t [59. vi] \n [60. wget] \t\t [61. whereis] \t\t [62. which] \n [q. 종료]\n");
+        printf(" [49. sort] \t\t [50. ssh] \t\t [51. su] \n [52. sudo] \t\t [53. tar] \t\t [54. top] \n [55. umask] \t\t [56. uname] \t\t [57. user](+관련 명령어) \n [58. users] \t\t [59. vi] \t\t [60. wget] \n [61. whereis] \t\t [62. which] \n [q. 종료]\n");
 
         printf("\n명령어의 번호 또는 이름을 입력하세요 : ");
 
