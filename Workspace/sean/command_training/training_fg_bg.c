@@ -18,7 +18,7 @@ void training_fg_bg(void)
 
 	printf("사용자가 흔히 터미널이나 콘솔 창에서 명령을 입력하면\n");
 	printf("그 명령은 포그라운드로 실행됩니다.\n");
-	next_ilne();
+	next_line();
 
 	printf("백그라운드와 포그라운드의 유용한 점은\n");
 	printf("포그라운드에서의 작업 진행 시간이 오래 걸릴 때\n");
@@ -82,7 +82,7 @@ void training_fg_bg(void)
 
 	printf("\"bg\" 명령을 사용할 때는 해당 숫자를 이용하여 백그라운드로 전환할 수 있습니다.\n\n");
 
-	printf("[실습] \"bg %1\"(을)를 입력해보세요.\n");
+	printf("[실습] \"bg %%1\"(을)를 입력해보세요.\n");
 	just_run_command("bg %1");
 	
 	printf("\n\n이제 다시 \"jobs\" 명령어로 확인해보면\n");
@@ -99,7 +99,7 @@ void training_fg_bg(void)
 	printf("\"bg\" 명령어의 사용법과 같습니다.\n\n");
 	next_line();
 
-	printf("[실습] \"fg %1\"(을)를 입력해보세요.\n");
+	printf("[실습] \"fg %%1\"(을)를 입력해보세요.\n");
 	just_run_command("fg %1");
 
 	printf("\n\n\"bg\" 명령어에서처럼 숫자를 이용하여 백그라운드에서 동작 중인 작업을\n");
@@ -111,7 +111,7 @@ void training_fg_bg(void)
 	next_line();
 
 	printf("먼저 \"jobs\" 명령어로 종료하고자 하는 명령의 번호를 확인하고\n");
-	printf("\"kill %1\"과 같이 명령하면 동작 중인 명령은 종료됩니다.\n");
+	printf("\"kill %%1\"과 같이 명령하면 동작 중인 명령은 종료됩니다.\n");
 	next_line();
 
 	printf("또한 포그라운드에서 \"Ctrl + z\"를 이용하면 동작 중인 작업을\n");
@@ -120,7 +120,7 @@ void training_fg_bg(void)
 
 	printf("일시 정지 된 작업은 \"jobs\" 명령어로 확인할 수 있으며\n");
 	printf("\"bg\" 혹은 \"fg\" 명령어와 일시 정지된 명령의 숫자를 조합하여 다시 실행할 수 있습니다.\n");
-	printf("ex) fg %1 혹은 bg %1\n");
+	printf("ex) fg %%1 혹은 bg %%1\n");
 	next_line();
 
 	printf("\"bg\"와 \"fg\" 그리고 \"jobs\" 명령어의 학습이 끝났습니다.\n");
