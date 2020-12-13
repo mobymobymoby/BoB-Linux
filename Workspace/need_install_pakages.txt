@@ -1,0 +1,9 @@
+gdb
+tshark
+at
+apache
+ftp
+nginx
+mysql
+curl
+wget
