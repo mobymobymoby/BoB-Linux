@@ -315,3 +315,9 @@ BoB 리눅스의 해상도와 글자 크기 및 색상 그리고 한글 설정�
 
 ### 12월12일 토요일
 - training_bg_fg_jobs.c 완료.
+- 멘토링
+
+### 12월 13일 일요일
+- Blackmoon 팀 회의.
+- need_install_packages.md 업로드.
+- 칼라리눅스 내장 툴 CUI와 GUI로 구분하여 분류 완료.
