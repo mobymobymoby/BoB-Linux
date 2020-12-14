@@ -16,7 +16,10 @@
 
 ### 자세한 사항은 아래의 배포 URL을 참고하세요
 ### https://boblinux.fossa.kr:21443/blackmoon/boblinux
-### 
+### chrome 접속 시 "연결이 비공개로 설정되어 있지 않습니다" 메시지가 뜰 때
+### 아래의 "고급"을 눌러 boblinux.fossa.kr(안전하지 않음)(으)로 이동을 누르세요.
+
+
 
 # 1. 트레이닝 진행 방법
 # BoB Linux에는 /usr/local/bin/trainer에 트레이너 파일이 존재합니다.
