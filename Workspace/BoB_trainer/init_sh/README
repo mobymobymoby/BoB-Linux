@@ -16,7 +16,7 @@
 
 ### 자세한 사항은 아래의 배포 URL을 참고하세요
 ### https://boblinux.fossa.kr:21443/blackmoon/boblinux
-
+### 
 
 # 1. 트레이닝 진행 방법
 # BoB Linux에는 /usr/local/bin/trainer에 트레이너 파일이 존재합니다.
