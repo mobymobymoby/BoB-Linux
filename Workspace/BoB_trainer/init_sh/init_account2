@@ -20,6 +20,7 @@ name=$(whoami)
 
 sudo sed -i '/init_account/d' /home/${name}/.bashrc
 sudo sed -i "/font-size/ c\font-size=20" ~/.fbtermrc
+sudo sed -i "/history-lines/ c\history-lines=2000" ~/.fbtermrc
 rm -f ./init_account2
 
 # 다음 쉘 스크립트를 실행하기 위한 문장
