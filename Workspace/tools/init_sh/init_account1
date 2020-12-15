@@ -80,8 +80,10 @@ rm -f /home/rookie/init_account1
 # 생성한 계정으로 su하며, ~/.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
 sudo su - ${name}
 
-# Test
+# 계정 생성에 실패했을 때 실행
 sudo sed -i '/init_account/d' /home/rookie/.bashrc
 sudo sed -i "s,\(\User privilege specification\),\1\nrookie\tALL=(ALL:ALL) ALL,g" /etc/sudoers
 sudo sed -i '/NOPASSWD/d' /etc/sudoers
 rm -f init_account*
+printf "계정 생성에 실패했습니다. 이름에 잘못된 문자가 포함되었습니다.\n"
+printf "기본 계정인 'rookie'로 이용해 주세요\n"
