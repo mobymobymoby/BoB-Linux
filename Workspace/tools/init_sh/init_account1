@@ -31,7 +31,7 @@ done
 # 이미 있는 계정인 root와 rookie 등 몇 개의 계정명은 비허용
 
 printf "\n새로운 계정 생성 시 'root', 'rookie', 'admin'을 제외한 계정 이름으로 설정해주세요.\n"
-printf "또한 영문 소문자로 이름을 설정해주세요.\n\n"
+printf "또한 영문 소문자로 이름을 설정해주세요. 잘못된 이름 설정시 계정 생성이 실패합니다.\n\n"
 while :
 do
 	printf "새로 생성할 계정 이름을 입력하세요 : "
@@ -79,3 +79,9 @@ rm -f /home/rookie/init_account1
 
 # 생성한 계정으로 su하며, ~/.bashrc에 등록된 쉘 스크립트 파일(init_account2)이 실행됨
 sudo su - ${name}
+
+# Test
+sudo sed -i '/init_account/d' /home/rookie/.bashrc
+sudo sed -i "s,\(\User privilege specification\),\1\nrookie\tALL=(ALL:ALL) ALL,g" /etc/sudoers
+sudo sed -i '/NOPASSWD/d' /etc/sudoers
+rm -f init_account*
