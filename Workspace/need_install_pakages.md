@@ -8,6 +8,21 @@
 - curl
 - wget
 
+- vim
+- bison
+- ssh
+- ifup
+- ifdown
+- net-tools
+- isc-dhcp-server
+- iputils-ping
+- nano
+- make
+- binwalk
+- grub2
+- fbterm
+- language-pack-ko
+- (apt-get)fonts-nanum*
 ---
 
 ### Information Gathering
