@@ -10,32 +10,32 @@
 - Mentee
   - PM : 김청준
   - Member : 김기서, 노무승, 백송선, 이안나
-
+-----
 #### BoB Linux tools
-- trainer 소스 코드
+##### Trainer
+- 소스 코드
   - \"trainer\" 디렉토리 위치
   - make 명령어로 빌드
 - BoB Linux에서 사용
   - 콘솔 창에 'trainer' 입력
   - \"/usr/local/bin/trainer\"에 위치
 - SSH로 접속
-  - 35.225.126.131 
+  - 35.225.126.131(22번 포트)
   - 계정 이름 : trainer 
   - 패스워드 : boblinux-trainer1!
------
-- 보안 점검 프로그램 소스 코드
+##### Security Check
+- 소스 코드
   - \"security_check\" 디렉토리 위치
 - BoB Linux에서 사용
   - 콘솔 창에 'secucheck' 입력
- 
+-----
  #### BoB Linux 배포
  - 배포 링크
    - https://boblinux.fossa.kr:21443/blackmoon/boblinux
  - BoB Linux에는 트레이닝 기능, 보안 점검 프로그램이 기본적으로 내장
  - 초기 계정 : rookie / rookie
  - 한글 입력 : [Ctrl + Space Bar]
-
-
+-----
 ### BoB Linux Repository 정보
 <!-- 방문자 수 -->
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fblack6765%2FBoB-Linux&count_bg=%231E1F1D&title_bg=%23555555&icon=github.svg&icon_color=%230B0A0A&title=number+of+visitors&edge_flat=false)](https://hits.seeyoufarm.com)
