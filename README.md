@@ -11,14 +11,22 @@
   - PM : 김청준
   - Member : 김기서, 노무승, 백송선, 이안나
 
-#### 트레이닝 기능 사용법
-- 트레이닝 기능만 사용
-  - BoB-Linux/Workspace/BoB Trainer 디렉토리에서 make all
-  - 그 후 생성된 trainer 파일을 실행하면 됨
-  
+#### BoB Linux tools
+- trainer 소스 코드
+  - \"trainer\" 디렉토리 위치
+  - make 명령어로 빌드
 - BoB Linux에서 사용
-  - 콘솔 창에 'trainer'를 입력하면 트레이닝 기능 실행
+  - 콘솔 창에 'trainer' 입력
   - \"/usr/local/bin/trainer\"에 위치
+- SSH로 접속
+  - 35.225.126.131 
+  - 계정 이름 : trainer 
+  - 패스워드 : boblinux-trainer1!
+-----
+- 보안 점검 프로그램 소스 코드
+  - \"security_check\" 디렉토리 위치
+- BoB Linux에서 사용
+  - 콘솔 창에 'secucheck' 입력
  
  #### BoB Linux 배포
  - 배포 링크
