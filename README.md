@@ -20,7 +20,7 @@
   - 콘솔 창에 'trainer' 입력
   - \"/usr/local/bin/trainer\"에 위치
 - SSH로 접속
-  - 35.225.126.131(22번 포트)
+  - 35.225.126.131(22)
   - 계정 이름 : trainer 
   - 패스워드 : boblinux-trainer1!
 ##### Security Check
