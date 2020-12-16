@@ -1,3 +1,6 @@
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
 sudo apt install apt-utils -y
 sudo apt install gdb -y
 sudo apt install at -y
