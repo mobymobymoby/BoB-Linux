@@ -163,7 +163,7 @@ def main():
         print('4. 종료\n')
         select = input('실행할 명령을 선택하세요: ')
 
-        if select == '4':
+        if select == '4' or select == 'q':
             print('프로그램을 종료합니다.\n')
             break
         elif select == '1':
